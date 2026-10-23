@@ -14,7 +14,7 @@ const apiError = (status: number, code: string) => json(status, { error: { code,
 function setup(...responses: Array<Response | ((url: string) => Response)>) {
   const queue = [...responses];
   const calls: string[] = [];
-  const fetchMock = vi.fn(async (input: RequestInfo | URL) => {
+  const fetchMock = vi.fn<typeof fetch>(async (input) => {
     const url = String(input).replace('http://api.test/api/v1', '');
     calls.push(url);
     const next = queue.shift();
@@ -99,7 +99,7 @@ describe('refresh on 401', () => {
     const gate = new Promise<void>((resolve) => (release = resolve));
     const calls: string[] = [];
     let slowOnce = true;
-    const fetchMock = vi.fn(async (input: RequestInfo | URL) => {
+    const fetchMock = vi.fn<typeof fetch>(async (input) => {
       const url = String(input).replace('http://api.test/api/v1', '');
       calls.push(url);
       if (url === '/slow' && slowOnce) {

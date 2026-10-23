@@ -25,8 +25,10 @@ const REFRESH_LOCK = 'cmfe-auth-refresh';
 type RefreshResult = 'ok' | 'conflict' | 'expired';
 
 // Chạy `run` dưới khóa của trình duyệt để các tab không refresh cùng lúc; không có Web Locks (test, trình duyệt cũ) thì chạy thẳng.
-const withTabLock = <T>(run: () => Promise<T>): Promise<T> =>
-  typeof navigator !== 'undefined' && navigator.locks ? navigator.locks.request(REFRESH_LOCK, run) : run();
+const withTabLock = async <T>(run: () => Promise<T>): Promise<T> => {
+  if (typeof navigator === 'undefined' || !navigator.locks) return run();
+  return await navigator.locks.request(REFRESH_LOCK, run);
+};
 
 export function createApiClient({ baseUrl, fetch: fetchImpl = (...args) => fetch(...args) }: ApiClientOptions) {
   // Mỗi lần refresh xong tăng một nấc. Request gửi trước nấc đó mang cookie cũ nên chỉ cần thử lại, không refresh nữa.
