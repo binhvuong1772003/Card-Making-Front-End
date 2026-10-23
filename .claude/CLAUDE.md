@@ -10,9 +10,12 @@ Giao diện CHƯA chốt. Hiện chỉ là giao diện cơ bản để test các
 
 ## Trạng thái hiện tại
 
-- Đã có: project Next.js trống (scaffold bằng create-next-app), chạy ở cổng 3001.
-- Chưa cài: các thư viện trong mục Stack bên dưới. Chỉ cài khi bắt đầu dùng.
-- Chưa có trang nào ngoài `/` rỗng. Việc tiếp theo: trang đăng nhập thô để test backend.
+- Đã làm: giao diện test xác thực, cổng 3001, dùng mặc định của shadcn (chưa có design system, đừng chỉnh style kỹ).
+  - `/register`, `/verify-email`, `/login` (kèm nút Google), `/` (hiện `GET /auth/me`, đăng xuất, đăng xuất mọi thiết bị).
+  - `lib/api/` là `apiFetch` (có refresh một lần, test bằng Vitest), `lib/auth/` là hàm gọi auth, schema Zod, thông báo lỗi tiếng Việt.
+- Đã cài: Tailwind v4, shadcn/ui (`button`, `input`, `label`, `card`, `alert`, `sonner`, `field`, `separator`), TanStack Query, Zod, Vitest, `sonner` cho thông báo.
+- Chưa cài, chờ khi cần: Zustand, `graphql-request`, `react-hook-form`.
+- Chạy: tạo `.env.local` từ `.env.example` (`NEXT_PUBLIC_API_URL`), rồi `npm run dev`. Test: `npm test`.
 - Backend mới xong phần xác thực. Cards, GraphQL, publications, assets và collab còn trống bên CMBE, nên chưa có gì để gọi ngoài `/api/v1/auth/*`.
 
 ## Stack đã chốt
@@ -29,7 +32,7 @@ Giao diện CHƯA chốt. Hiện chỉ là giao diện cơ bản để test các
 | Gọi GraphQL | `graphql-request` bọc trong TanStack Query. Không dùng Apollo Client |
 | State phía client | Zustand |
 | Validation | Zod |
-| Form | Form thường; thêm `react-hook-form` khi form phức tạp lên |
+| Form | Form thường + Zod + component `Field` của shadcn; thêm `react-hook-form` khi form phức tạp lên (hiện cài `@hookform/resolvers` bị xung đột peer với `effect`) |
 | Lint | ESLint |
 | Test | Vitest + Testing Library; Playwright cho luồng đăng nhập sau |
 
@@ -44,6 +47,7 @@ Không thêm gì ngoài bảng này khi chưa hỏi người dùng: không thư 
 - Không bao giờ lưu token ở `localStorage`/`sessionStorage` hay đọc cookie bằng JS: cookie `access` và `refresh` là httpOnly do backend đặt.
 - Validate dữ liệu vào/ra bằng Zod; không dùng `any`.
 - Import dùng alias `@/*` (đã cấu hình trong `tsconfig.json`).
+- `next.config.ts` bật `cacheComponents`: đọc `searchParams`/`params`/cookie ở Server Component phải nằm trong `<Suspense>`, nếu không `next build` lỗi. Xem `app/login/page.tsx` làm mẫu.
 - Mặc định component là Server Component; chỉ thêm `"use client"` khi cần state, effect hoặc sự kiện.
 - Trang sau đăng nhập chạy ở client (cần cookie của người dùng, không cần SEO). Trang công khai của thiệp đã publish mới cần render phía server.
 
