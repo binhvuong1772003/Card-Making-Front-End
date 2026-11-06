@@ -1,11 +1,14 @@
 "use client";
 
+// TRANG CHỦ MẪU, XÀI ĐỠ. Chỉ là chỗ để có nút Tạo thiệp và danh sách thiệp trong lúc giao diện thật chưa được thiết kế.
+// Khi có thiết kế trang chủ thì thay cả trang này; đừng chỉnh style kỹ ở đây. Ảnh nhỏ của thiệp cũng chỉ là ô giữ chỗ.
+
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { AuthShell } from "@/components/auth/auth-shell";
-import { CardList } from "@/components/cards/card-list";
+import { CardGrid, CreateCardButton } from "@/components/cards/card-list";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { isApiError } from "@/lib/api";
@@ -54,33 +57,30 @@ export function Home() {
     );
   }
 
-  const user = me.data;
-  const rows: Array<[string, string]> = [
-    ["ID", user.id],
-    ["Email", user.email],
-    ["Tên", user.name ?? "(chưa có)"],
-    ["Ảnh đại diện", user.avatarUrl ?? "(chưa có)"],
-    ["Đã xác minh email", user.emailVerified ? "Có" : "Chưa"],
-    ["Tạo lúc", new Date(user.createdAt).toLocaleString("vi-VN")],
-  ];
-
   return (
-    <AuthShell title="Đã đăng nhập" description="Dữ liệu từ GET /auth/me.">
-      <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
-        {rows.map(([label, value]) => (
-          <div key={label} className="contents">
-            <dt className="text-muted-foreground">{label}</dt>
-            <dd className="break-all">{value}</dd>
+    <div className="min-h-screen">
+      <header className="flex h-14 items-center justify-between gap-4 border-b px-6">
+        <span className="font-semibold">CardMaking</span>
+        <div className="flex items-center gap-2 text-sm">
+          <span className="hidden text-muted-foreground sm:inline">{me.data.email}</span>
+          <Button variant="outline" size="sm" disabled={logout.isPending} onClick={() => logout.mutate()}>
+            Đăng xuất
+          </Button>
+          <Button variant="ghost" size="sm" disabled={logoutAll.isPending} onClick={() => logoutAll.mutate()}>
+            Đăng xuất mọi thiết bị
+          </Button>
+        </div>
+      </header>
+      <main className="mx-auto flex max-w-5xl flex-col gap-8 px-6 py-10">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div className="flex flex-col gap-1">
+            <h1 className="text-2xl font-semibold">Thiệp của tôi</h1>
+            <p className="text-sm text-muted-foreground">Tạo thiệp mới hoặc mở thiệp đã làm.</p>
           </div>
-        ))}
-      </dl>
-      <CardList />
-      <Button variant="outline" disabled={logout.isPending} onClick={() => logout.mutate()}>
-        Đăng xuất
-      </Button>
-      <Button variant="destructive" disabled={logoutAll.isPending} onClick={() => logoutAll.mutate()}>
-        Đăng xuất mọi thiết bị
-      </Button>
-    </AuthShell>
+          <CreateCardButton />
+        </div>
+        <CardGrid />
+      </main>
+    </div>
   );
 }
