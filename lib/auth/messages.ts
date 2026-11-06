@@ -7,6 +7,8 @@ const MESSAGES: Partial<Record<ApiErrorCode, string>> = {
   TOKEN_INVALID: 'Liên kết không hợp lệ.',
   TOKEN_EXPIRED: 'Liên kết đã hết hạn.',
   FORBIDDEN: 'Yêu cầu bị từ chối. Kiểm tra CORS_ORIGINS của backend có chứa địa chỉ trang này không.',
+  NOT_FOUND: 'Không tìm thấy thiệp này.',
+  CONFLICT: 'Thiệp đã được sửa ở nơi khác. Hãy tải lại trang để lấy bản mới nhất.',
   RATE_LIMITED: 'Thử quá nhiều lần, hãy đợi vài phút rồi thử lại.',
   NETWORK: 'Không kết nối được máy chủ.',
   INTERNAL: 'Máy chủ gặp lỗi, thử lại sau.',
