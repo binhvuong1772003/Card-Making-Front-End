@@ -22,6 +22,9 @@ const NO_REFRESH = new Set([
 
 const REFRESH_LOCK = 'cmfe-auth-refresh';
 
+// GraphQL nằm ở gốc, không dưới /api/v1, và trả HTTP 200 kèm `errors` (xem `graphql` bên dưới).
+const GRAPHQL_PATH = '/graphql';
+
 type RefreshResult = 'ok' | 'conflict' | 'expired';
 
 // Chạy `run` dưới khóa của trình duyệt để các tab không refresh cùng lúc; không có Web Locks (test, trình duyệt cũ) thì chạy thẳng.
@@ -38,7 +41,7 @@ export function createApiClient({ baseUrl, fetch: fetchImpl = (...args) => fetch
   async function send(path: string, init: ApiRequestInit): Promise<Response> {
     const hasBody = init.body !== undefined;
     try {
-      return await fetchImpl(`${baseUrl}/api/v1${path}`, {
+      return await fetchImpl(path === GRAPHQL_PATH ? `${baseUrl}${path}` : `${baseUrl}/api/v1${path}`, {
         method: init.method ?? (hasBody ? 'POST' : 'GET'),
         credentials: 'include',
         headers: hasBody ? { 'Content-Type': 'application/json' } : undefined,
@@ -96,5 +99,25 @@ export function createApiClient({ baseUrl, fetch: fetchImpl = (...args) => fetch
     return (await res.json()) as T;
   }
 
-  return apiFetch;
+  interface GraphqlResponse<T> {
+    data?: T | null;
+    errors?: { message: string; extensions?: { code?: ApiErrorCode } }[];
+  }
+
+  // Lỗi GraphQL đi kèm HTTP 200, nên UNAUTHENTICATED nằm trong `errors`: refresh một lần rồi thử lại, như `apiFetch` với 401.
+  async function graphql<T>(query: string, variables?: Record<string, unknown>, signal?: AbortSignal): Promise<T> {
+    const run = () => apiFetch<GraphqlResponse<T>>(GRAPHQL_PATH, { body: { query, variables }, signal });
+    const startedAt = epoch;
+    let result = await run();
+    if (result.errors?.[0]?.extensions?.code === 'UNAUTHENTICATED') {
+      const refreshed = epoch !== startedAt ? 'ok' : await refresh();
+      if (refreshed !== 'expired') result = await run();
+    }
+    const first = result.errors?.[0];
+    if (first) throw new ApiError(200, first.extensions?.code ?? 'UNKNOWN', first.message);
+    if (!result.data) throw new ApiError(200, 'UNKNOWN', 'No data');
+    return result.data;
+  }
+
+  return Object.assign(apiFetch, { graphql });
 }

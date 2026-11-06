@@ -147,3 +147,32 @@ describe('refresh on 401', () => {
     },
   );
 });
+
+describe('apiFetch.graphql', () => {
+  const ok = (data: unknown) => json(200, { data });
+  const gqlError = (code: string) => json(200, { errors: [{ message: code, extensions: { code } }] });
+
+  it('posts to /graphql, outside /api/v1, and returns data', async () => {
+    const { apiFetch, fetchMock } = setup(ok({ card: { id: '1' } }));
+    await expect(apiFetch.graphql('query { card { id } }', { id: '1' })).resolves.toEqual({ card: { id: '1' } });
+    expect(String(fetchMock.mock.calls[0][0])).toBe('http://api.test/graphql');
+    expect(fetchMock.mock.calls[0][1]).toMatchObject({ method: 'POST', credentials: 'include' });
+    expect(JSON.parse(String(fetchMock.mock.calls[0][1]?.body))).toEqual({ query: 'query { card { id } }', variables: { id: '1' } });
+  });
+
+  it('refreshes once on UNAUTHENTICATED in errors and retries', async () => {
+    const { apiFetch, calls } = setup(gqlError('UNAUTHENTICATED'), json(200, {}), ok({ me: 1 }));
+    await expect(apiFetch.graphql('query { me }')).resolves.toEqual({ me: 1 });
+    expect(calls).toEqual(['http://api.test/graphql', '/auth/refresh', 'http://api.test/graphql']);
+  });
+
+  it('throws an ApiError with the code of the first error', async () => {
+    const { apiFetch } = setup(gqlError('CONFLICT'));
+    await expect(apiFetch.graphql('mutation { x }')).rejects.toMatchObject({ code: 'CONFLICT', name: 'ApiError' });
+  });
+
+  it('gives up with UNAUTHENTICATED when the refresh says the session is over', async () => {
+    const { apiFetch } = setup(gqlError('UNAUTHENTICATED'), apiError(401, 'UNAUTHENTICATED'));
+    await expect(apiFetch.graphql('query { me }')).rejects.toMatchObject({ code: 'UNAUTHENTICATED' });
+  });
+});
