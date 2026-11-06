@@ -11,12 +11,14 @@ Giao diện CHƯA chốt. Hiện chỉ là giao diện cơ bản để test các
 ## Trạng thái hiện tại
 
 - Đã làm: giao diện test xác thực, cổng 3001, dùng mặc định của shadcn (chưa có design system, đừng chỉnh style kỹ).
-  - `/register`, `/verify-email`, `/login` (kèm nút Google), `/` (hiện `GET /auth/me`, đăng xuất, đăng xuất mọi thiết bị).
+  - `/register`, `/verify-email`, `/login` (kèm nút Google).
+  - `/` là TRANG CHỦ MẪU, XÀI ĐỠ (`app/home.tsx`): đầu trang có đăng xuất, nút Tạo thiệp và lưới thiệp. Thay cả trang khi có thiết kế trang chủ, đừng chỉnh style kỹ.
+  - `/cards/[id]` là trang soạn thiệp thật: Miditor với giao diện trắng và đỏ đô (bản vẽ F), tự lưu cả bản nháp.
   - `lib/api/` là `apiFetch` (có refresh một lần, test bằng Vitest), `lib/auth/` là hàm gọi auth, schema Zod, thông báo lỗi tiếng Việt.
 - Đã cài: Tailwind v4, shadcn/ui (`button`, `input`, `label`, `card`, `alert`, `sonner`, `field`, `separator`), TanStack Query, Zod, Vitest, `sonner` cho thông báo.
 - Chưa cài, chờ khi cần: Zustand, `graphql-request`, `react-hook-form`.
 - Chạy: tạo `.env.local` từ `.env.example` (`NEXT_PUBLIC_API_URL`), rồi `npm run dev`. Test: `npm test`.
-- Backend mới xong phần xác thực. Cards, GraphQL, publications, assets và collab còn trống bên CMBE, nên chưa có gì để gọi ngoài `/api/v1/auth/*`.
+- Backend đã có xác thực, thiệp (tạo, đọc, đổi tiêu đề, xóa, lưu cả bản nháp qua GraphQL `saveCardDocument`). Publications, assets và collab còn trống.
 
 ## Stack đã chốt
 
