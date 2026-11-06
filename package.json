@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
+    "@miditor/core": "file:/Users/doubleb/miditor-packs/miditor-core-0.0.0.tgz",
+    "@miditor/editor": "file:/Users/doubleb/miditor-packs/miditor-editor-0.0.0.tgz",
+    "@miditor/render": "file:/Users/doubleb/miditor-packs/miditor-render-0.0.0.tgz",
     "@tailwindcss/postcss": "^4.3.3",
     "@tanstack/react-query": "^5.104.5",
     "class-variance-authority": "^0.7.1",
@@ -35,5 +38,9 @@
     "eslint-config-next": "16.4.2",
     "typescript": "^5",
     "vitest": "^5.0.5"
+  },
+  "overrides": {
+    "@miditor/core": "file:/Users/doubleb/miditor-packs/miditor-core-0.0.0.tgz",
+    "@miditor/render": "file:/Users/doubleb/miditor-packs/miditor-render-0.0.0.tgz"
   }
 }
