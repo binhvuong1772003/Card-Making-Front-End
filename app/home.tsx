@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { AuthShell } from "@/components/auth/auth-shell";
+import { CardList } from "@/components/cards/card-list";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { isApiError } from "@/lib/api";
@@ -73,6 +74,7 @@ export function Home() {
           </div>
         ))}
       </dl>
+      <CardList />
       <Button variant="outline" disabled={logout.isPending} onClick={() => logout.mutate()}>
         Đăng xuất
       </Button>
