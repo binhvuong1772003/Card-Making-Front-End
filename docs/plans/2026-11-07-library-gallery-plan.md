@@ -1,6 +1,6 @@
 # Kế hoạch code: thư viện thiệp, xuất bản, thư viện công khai, admin
 
-Bản thiết kế: bảng Design (https://claude.ai/artifact/1G5j6ijo1mV4gfzkzbGous), các bản G đến M. Trạng thái: CHƯA CODE, chờ duyệt kế hoạch.
+Bản thiết kế: bảng Design (https://claude.ai/artifact/1G5j6ijo1mV4gfzkzbGous), các bản G đến M. Trạng thái: kế hoạch và bốn quyết định đã được duyệt (2026-11-07); tài liệu "CMBE system" đã sửa cho khớp; đang code từ bước 0.
 
 ## Hiện trạng (đã kiểm trong mã)
 
@@ -16,7 +16,7 @@ Bản thiết kế: bảng Design (https://claude.ai/artifact/1G5j6ijo1mV4gfzkzb
 3. `Card.occasion` (`WEDDING` | `BIRTHDAY` | `EVENT` | `OTHER`), gán lúc tạo thiệp từ ô chọn dịp.
 4. `Publication.listInGallery` (bật "Hiện trong thư viện công khai").
 
-## Quyết định đề xuất (chờ người dùng gật)
+## Quyết định (đã duyệt)
 
 - **Ảnh khi dùng làm mẫu:** lúc admin duyệt, sao chép ảnh của thiệp sang thư mục dùng chung `cardmaking/templates/<templateId>` (một lần, phía backend, cần secret). Bản chụp của mẫu trỏ vào thư mục này; người dùng mẫu giữ nguyên địa chỉ đó. Sau này job dọn ảnh coi thư mục này là được bảo vệ. Không phải sao chép ảnh mỗi lần dùng.
 - **Sửa sau khi được duyệt:** bản đang hiện giữ nguyên; xuất bản lại với công tắc bật tạo một bản chụp mới ở trạng thái chờ duyệt (`version` + 1). Duyệt xong thì thay bản đang hiện.
