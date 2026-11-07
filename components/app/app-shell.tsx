@@ -71,7 +71,7 @@ export function AppShell({ active, search, children }: { active: "home" | "cards
   return (
     <div className="flex min-h-screen flex-wrap bg-page text-foreground">
       <nav aria-label="Điều hướng" className="flex w-[92px] flex-none flex-col items-center gap-5 bg-background px-3 py-5 shadow-[1px_0_0_#f0e7e9]">
-        <button type="button" onClick={() => create.mutate()} disabled={create.isPending} className="group flex flex-col items-center gap-1.5 text-xs font-semibold disabled:opacity-60">
+        <button type="button" onClick={() => create.mutate(undefined)} disabled={create.isPending} className="group flex flex-col items-center gap-1.5 text-xs font-semibold disabled:opacity-60">
           <span className="inline-flex size-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_6px_16px_rgba(123,30,43,0.25)] transition-colors group-hover:bg-primary/90">
             <PlusIcon className="size-6" />
           </span>

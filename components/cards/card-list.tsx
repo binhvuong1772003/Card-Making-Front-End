@@ -12,7 +12,7 @@ import { useCreateCard } from "@/lib/cards/use-create-card";
 export function CreateCardButton({ variant = "default" }: { variant?: "default" | "outline" }) {
   const create = useCreateCard();
   return (
-    <Button variant={variant} disabled={create.isPending} onClick={() => create.mutate()}>
+    <Button variant={variant} disabled={create.isPending} onClick={() => create.mutate(undefined)}>
       Tạo thiệp
     </Button>
   );
@@ -20,7 +20,7 @@ export function CreateCardButton({ variant = "default" }: { variant?: "default" 
 
 // Lưới thiệp của người dùng. Ảnh nhỏ chỉ là ô giữ chỗ (chưa có ảnh chụp thiệp).
 export function CardGrid() {
-  const cards = useQuery({ queryKey: ["cards"], queryFn: ({ signal }) => cardsApi.list(signal), staleTime: 0 });
+  const cards = useQuery({ queryKey: ["cards"], queryFn: ({ signal }) => cardsApi.list({}, signal), staleTime: 0 });
 
   if (cards.isError) return <p className="text-sm text-destructive">{errorMessage(cards.error)}</p>;
   if (cards.isPending) return <p className="text-sm text-muted-foreground">Đang tải...</p>;
