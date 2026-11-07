@@ -9,6 +9,8 @@ const MESSAGES: Partial<Record<ApiErrorCode, string>> = {
   FORBIDDEN: 'Yêu cầu bị từ chối. Kiểm tra CORS_ORIGINS của backend có chứa địa chỉ trang này không.',
   NOT_FOUND: 'Không tìm thấy thiệp này.',
   CONFLICT: 'Thiệp đã được sửa ở nơi khác. Hãy tải lại trang để lấy bản mới nhất.',
+  PROVIDER_FAILED: 'Không sao chép được ảnh sang kho chung, thử lại sau.',
+  PROVIDER_UNAVAILABLE: 'Kho ảnh chưa được cấu hình.',
   RATE_LIMITED: 'Thử quá nhiều lần, hãy đợi vài phút rồi thử lại.',
   NETWORK: 'Không kết nối được máy chủ.',
   INTERNAL: 'Máy chủ gặp lỗi, thử lại sau.',

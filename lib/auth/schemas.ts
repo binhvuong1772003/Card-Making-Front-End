@@ -23,6 +23,7 @@ export const userSchema = z.object({
   name: z.string().nullable(),
   avatarUrl: z.string().nullable(),
   emailVerified: z.boolean(),
+  role: z.enum(['USER', 'ADMIN']),
   createdAt: z.string(),
 });
 
