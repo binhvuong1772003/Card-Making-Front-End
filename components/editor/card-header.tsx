@@ -2,9 +2,11 @@
 
 import { useEditor } from "@miditor/editor";
 import Link from "next/link";
-import { toast } from "sonner";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { usePublication } from "@/lib/cards/use-publication";
 import { Button } from "@/components/ui/button";
 import { PhosphorIcon } from "./phosphor-icons";
+import { PublishDialog } from "./publish-dialog";
 import { StatusSeal, type SealState } from "./status-seal";
 
 // Đầu trang của CardMaking (bản vẽ F): tên hiệu, tên thiệp, con dấu | hoàn tác, làm lại, máy tính hoặc điện thoại | xem trước, xuất bản.
@@ -12,12 +14,56 @@ import { StatusSeal, type SealState } from "./status-seal";
 const FRAME_BUTTON =
   "h-9 gap-2 rounded-none px-4 text-[13px] font-medium aria-pressed:bg-accent aria-pressed:font-semibold aria-pressed:text-accent-foreground";
 
-export function CardHeader({ title, seal }: { title: string; seal: { state: SealState; label: string } }) {
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+export function CardHeader({
+  title,
+  seal,
+  cardId,
+  isOwner,
+  idle,
+}: {
+  title: string;
+  seal: { state: SealState; label: string };
+  cardId: string;
+  isOwner: boolean;
+  /** Chờ tới khi bộ lưu không còn gì đang ghi. */
+  idle: () => Promise<void>;
+}) {
   const editor = useEditor();
+  const status = useEditor((view) => view.status);
+  const data = useEditor((view) => view.data) as { root?: { children?: unknown[] } } | undefined;
+  const hasContent = (data?.root?.children?.length ?? 0) > 0;
+  const [publishing, setPublishing] = useState(false);
+  const publication = usePublication(cardId);
+
+  // Bản nháp đang gõ dở (chưa tới hạn lưu tự động) phải lưu xong trước khi xuất bản hoặc xem trước.
+  const statusRef = useRef(status);
+  useEffect(() => {
+    statusRef.current = status;
+  }, [status]);
+  const flushDraft = useCallback(async () => {
+    await editor.save();
+    const deadline = Date.now() + 3000;
+    while (statusRef.current === "unsaved" && Date.now() < deadline) await sleep(100);
+    await idle();
+  }, [editor, idle]);
+
+  // Mở tab ngay trong lúc bấm (không bị chặn cửa sổ bật lên), rồi chuyển tab tới trang xem trước khi bản nháp đã lưu xong.
+  const preview = async () => {
+    const tab = window.open("about:blank", "_blank");
+    try {
+      await flushDraft();
+    } catch {
+      // vẫn mở bản đã lưu gần nhất
+    }
+    const url = `/cards/${cardId}/preview`;
+    if (tab) tab.location.href = url;
+    else window.open(url, "_blank");
+  };
   const canUndo = useEditor((view) => view.canUndo);
   const canRedo = useEditor((view) => view.canRedo);
   const frame = useEditor((view) => view.frame);
-  const soon = () => toast.info("Tính năng này chưa có.");
 
   const frameButton = (value: "desktop" | "phone", label: string, icon: "monitorIcon" | "phoneIcon") => (
     <Button variant="ghost" aria-pressed={frame === value} onClick={() => editor.setFrame(value)} className={FRAME_BUTTON}>
@@ -34,6 +80,12 @@ export function CardHeader({ title, seal }: { title: string; seal: { state: Seal
         </Link>
         <span className="min-w-0 truncate text-[15px] font-medium">{title}</span>
         <StatusSeal title={title} state={seal.state} label={seal.label} />
+        {publication.data && (
+          <a href={`/thiep/${publication.data.slug}`} target="_blank" rel="noreferrer" className="inline-flex h-[26px] flex-none items-center gap-1.5 rounded-full bg-muted px-3 text-xs font-semibold text-primary">
+            <span aria-hidden="true" className="size-[7px] rounded-full bg-primary" />
+            Đã xuất bản
+          </a>
+        )}
       </div>
 
       <div className="flex flex-none items-center gap-4">
@@ -52,14 +104,15 @@ export function CardHeader({ title, seal }: { title: string; seal: { state: Seal
       </div>
 
       <div className="flex flex-[1_1_260px] items-center justify-end gap-2.5">
-        <Button variant="outline" onClick={soon} className="h-9 gap-2 border-input px-4 text-[13px]">
+        <Button variant="outline" onClick={preview} className="h-9 gap-2 border-input px-4 text-[13px]">
           <PhosphorIcon name="eye" />
           Xem trước
         </Button>
-        <Button onClick={soon} className="h-9 px-5 text-[13px] font-semibold">
+        <Button onClick={() => setPublishing(true)} className="h-9 px-5 text-[13px] font-semibold">
           Xuất bản
         </Button>
       </div>
+      <PublishDialog cardId={cardId} open={publishing} onOpenChange={setPublishing} isOwner={isOwner} hasContent={hasContent} flushDraft={flushDraft} />
     </header>
   );
 }

@@ -81,7 +81,7 @@ export function CardEditor({ card }: { card: CardDetail }) {
       config={config}
     >
       <div className="card-editor" style={{ display: "grid", gridTemplateRows: "auto minmax(0, 1fr)", blockSize: "100%" }}>
-        <CardHeader title={card.title} seal={seal} />
+        <CardHeader title={card.title} seal={seal} cardId={card.id} isOwner={card.role === "OWNER"} idle={() => saver.idle()} />
         <div style={{ display: "grid", gridTemplateColumns: "auto 292px minmax(0, 1fr) auto", minBlockSize: 0 }}>
           <Editor.Rail />
           <div style={cell}>
