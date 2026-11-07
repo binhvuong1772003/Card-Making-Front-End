@@ -27,7 +27,7 @@ Bản thiết kế: bảng Design (https://claude.ai/artifact/1G5j6ijo1mV4gfzkzb
 
 0. **[xong] Nền chung (CMFE).** Cài `@phosphor-icons/react`, đổi `iconLibrary` của shadcn; gom token mềm (bo góc 12 đến 28, bóng nhẹ) thành lớp dùng chung cho các trang ngoài editor; khung chung (cột trái, đầu trang có ô tìm) dùng cho `/`, `/cards`, thư viện.
 1. **[xong] Trang quản lý thiệp `/cards` (bản G, H).** Backend: `Card.occasion`, truy vấn danh sách có trạng thái xuất bản, tìm theo tên, lọc theo dịp; `duplicateCard`. Frontend: lưới và danh sách, chip lọc, menu ⋯, đổi tên, xoá có xác nhận. Ô chọn dịp ở trang chủ tạo thiệp kèm dịp.
-2. **Xuất bản và xem trước (bản K, một phần).** Backend: `publishCard` (slug duy nhất, bản chụp), `unpublishCard`, kiểm slug. Frontend: hộp thoại xuất bản, nút Xem trước, trang công khai `/thiep/[slug]` dựng phía server bằng `Render`, con dấu "đã xuất bản" ở editor.
+2. **[xong] Xuất bản và xem trước (bản K, một phần).** Backend: `publishCard` (slug duy nhất, bản chụp), `unpublishCard`, kiểm slug. Frontend: hộp thoại xuất bản, nút Xem trước, trang công khai `/thiep/[slug]` dựng phía server bằng `Render`, con dấu "đã xuất bản" ở editor.
 3. **Thư viện công khai, phần backend.** Gửi duyệt (từ xuất bản có bật công tắc), danh sách mẫu đã duyệt theo loại có phân trang con trỏ, `useTemplate` (tạo Card từ bản chụp, `sourceTemplateId`, `useCount`), sao chép ảnh sang thư mục mẫu lúc duyệt, vai trò admin, duyệt và từ chối kèm lý do.
 4. **Trang chủ, loại thiệp, xem một thiệp (bản I, J, L).** Frontend: khám phá theo loại, các kệ, trang loại có lọc phong cách (cần nhãn `tags`, hoặc bỏ hàng này), hộp xem thiệp, Dùng làm mẫu.
 5. **Trang admin (bản M).** Hàng chờ, chi tiết, Duyệt, Từ chối kèm lý do, Gỡ khỏi thư viện.
