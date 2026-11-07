@@ -1,22 +1,16 @@
 "use client";
 
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { errorMessage } from "@/lib/auth/messages";
 import { cardsApi } from "@/lib/cards/api";
 import { initials } from "@/lib/cards/initials";
+import { useCreateCard } from "@/lib/cards/use-create-card";
 
 // Nút tạo thiệp: tạo một thiệp trống rồi mở thẳng trang soạn thiệp.
 export function CreateCardButton({ variant = "default" }: { variant?: "default" | "outline" }) {
-  const router = useRouter();
-  const create = useMutation({
-    mutationFn: () => cardsApi.create("Thiệp chưa đặt tên"),
-    onSuccess: (id) => router.push(`/cards/${id}`),
-    onError: (err) => toast.error(errorMessage(err)),
-  });
+  const create = useCreateCard();
   return (
     <Button variant={variant} disabled={create.isPending} onClick={() => create.mutate()}>
       Tạo thiệp
