@@ -4,10 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-body {
-  font-family: system-ui, sans-serif;
-}
-
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
@@ -42,6 +38,7 @@ body {
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-page: var(--page);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -52,30 +49,31 @@ body {
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: #ffffff;
+  --foreground: #2a2224;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: #7b1e2b;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --muted: #f4e6e9;
+  --muted-foreground: #6e6063;
+  --accent: #f4e6e9;
+  --accent-foreground: #7b1e2b;
+  --destructive: #b3261e;
+  --border: #ece3e5;
+  --input: #d9cdd0;
+  --ring: #2f6bff;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0.75rem;
+  --page: #fbf6f7;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -132,19 +130,7 @@ body {
   }
 }
 
-/* Giao diện của editor CardMaking (bản vẽ F): trắng và đỏ đô. Chỉ áp trong .card-editor, các trang khác giữ giao diện shadcn mặc định. */
+/* Editor CardMaking: bo góc nhỏ hơn các trang ngoài (bản vẽ F), màu lấy từ :root. */
 .card-editor {
-  --background: #ffffff;
-  --foreground: #2a2224;
-  --primary: #7b1e2b;
-  --primary-foreground: #ffffff;
-  --muted: #f4e6e9;
-  --muted-foreground: #6e6063;
-  --accent: #f4e6e9;
-  --accent-foreground: #7b1e2b;
-  --destructive: #b3261e;
-  --border: #ece3e5;
-  --input: #d9cdd0;
-  --ring: #2f6bff;
   --radius: 0.5rem;
 }
