@@ -12,7 +12,7 @@ Giao diện CHƯA chốt. Hiện chỉ là giao diện cơ bản để test các
 
 - Đã làm: giao diện test xác thực, cổng 3001, dùng mặc định của shadcn (chưa có design system, đừng chỉnh style kỹ).
   - `/register`, `/verify-email`, `/login` (kèm nút Google).
-  - `/` là TRANG CHỦ MẪU, XÀI ĐỠ (`app/home.tsx`): đầu trang có đăng xuất, nút Tạo thiệp và lưới thiệp. Thay cả trang khi có thiết kế trang chủ, đừng chỉnh style kỹ.
+  - `/` là trang chủ thật (bản vẽ I): chọn dịp để tạo thiệp, khám phá theo loại (3 thẻ), tiếp tục thiệp của mình, các kệ thiệp công khai. `/kham-pha/[slug]` (dam-cuoi, sinh-nhat, su-kien) là trang một loại (bản vẽ L); `/mau/[id]` xem một thiệp công khai và Dùng làm mẫu (bản vẽ J). Ảnh mẫu dựng bằng `Render` thu nhỏ (`components/gallery/page-thumb.tsx`), ảnh thiệp của mình vẫn là ô màu theo dịp. Chưa có: ô tìm trang chủ, lọc theo phong cách, trang admin.
   - `/cards` là trang quản lý thiệp thật (bản vẽ G, H): lưới và danh sách, lọc theo dịp, tìm theo tên, đổi tên, nhân bản, xoá. Dùng khung chung `components/app/app-shell.tsx`. Ảnh thu nhỏ còn là ô màu theo dịp (chưa có ảnh chụp thiệp); chưa có sắp xếp, xem trước, sao chép liên kết.
   - `/thiep/[slug]` là trang công khai của thiệp đã xuất bản (dựng phía server bằng `Render`, không cần đăng nhập). Slug không có trả nội dung 404 nhưng mã HTTP là 200 (đang stream trong Suspense).
   - `/cards/[id]/preview` xem trước bản nháp đã lưu ở khổ máy tính hoặc điện thoại. Hộp thoại xuất bản nằm trong header editor (chỉ owner xuất bản; chưa có công tắc thư viện công khai).
