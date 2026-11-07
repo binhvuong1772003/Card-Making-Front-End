@@ -35,7 +35,7 @@ function GallerySwitch({ checked, onChange, disabled }: { checked: boolean; onCh
           Admin duyệt trước khi thiệp xuất hiện. Người khác có thể xem và Dùng làm mẫu: chữ và ảnh sẽ được sao chép về kho của họ. Hãy kiểm tra tên thật, số điện thoại và địa chỉ trong thiệp.
         </p>
       </div>
-      <Switch checked={checked} onCheckedChange={onChange} disabled={disabled} aria-labelledby="gallery-switch" />
+      <Switch checked={checked} onCheckedChange={onChange} disabled={disabled} aria-label="Hiện trong thư viện công khai" />
     </div>
   );
 }
