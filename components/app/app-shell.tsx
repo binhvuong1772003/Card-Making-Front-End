@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { CardsIcon, HouseIcon, MagnifyingGlassIcon, PlusIcon, SignOutIcon } from "@phosphor-icons/react";
+import { CardsIcon, HouseIcon, MagnifyingGlassIcon, PlusIcon, SealCheckIcon, SignOutIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
@@ -29,7 +29,7 @@ function RailLink({ href, label, icon, on }: { href: string; label: string; icon
   );
 }
 
-export function AppShell({ active, search, children }: { active: "home" | "cards"; search?: Search; children: ReactNode }) {
+export function AppShell({ active, search, children }: { active: "home" | "cards" | "admin"; search?: Search; children: ReactNode }) {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { me, signedOut } = useMe();
@@ -79,6 +79,7 @@ export function AppShell({ active, search, children }: { active: "home" | "cards
         </button>
         <RailLink href="/" label="Trang chủ" icon={<HouseIcon className="size-[22px]" />} on={active === "home"} />
         <RailLink href="/cards" label="Thiệp" icon={<CardsIcon className="size-[22px]" />} on={active === "cards"} />
+        {me.data.role === "ADMIN" && <RailLink href="/admin" label="Duyệt" icon={<SealCheckIcon className="size-[22px]" />} on={active === "admin"} />}
       </nav>
 
       <div className="flex min-w-0 flex-[999_1_560px] flex-col">
