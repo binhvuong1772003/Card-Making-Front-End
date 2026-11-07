@@ -30,7 +30,7 @@ Bản thiết kế: bảng Design (https://claude.ai/artifact/1G5j6ijo1mV4gfzkzb
 2. **[xong] Xuất bản và xem trước (bản K, một phần).** Backend: `publishCard` (slug duy nhất, bản chụp), `unpublishCard`, kiểm slug. Frontend: hộp thoại xuất bản, nút Xem trước, trang công khai `/thiep/[slug]` dựng phía server bằng `Render`, con dấu "đã xuất bản" ở editor.
 3. **[xong] Thư viện công khai, phần backend.** Gửi duyệt (từ xuất bản có bật công tắc), danh sách mẫu đã duyệt theo loại có phân trang con trỏ, `useTemplate` (tạo Card từ bản chụp, `sourceTemplateId`, `useCount`), sao chép ảnh sang thư mục mẫu lúc duyệt, vai trò admin, duyệt và từ chối kèm lý do.
 4. **[xong] Trang chủ, loại thiệp, xem một thiệp (bản I, J, L), công tắc thư viện trong hộp thoại xuất bản, chọn dịp khi tạo.** Frontend: khám phá theo loại, các kệ, trang loại có lọc phong cách (cần nhãn `tags`, hoặc bỏ hàng này), hộp xem thiệp, Dùng làm mẫu.
-5. **Trang admin (bản M).** Hàng chờ, chi tiết, Duyệt, Từ chối kèm lý do, Gỡ khỏi thư viện.
+5. **[xong] Trang admin (bản M).** Hàng chờ, chi tiết, Duyệt, Từ chối kèm lý do, Gỡ khỏi thư viện.
 6. **Củng cố.** Kiểm tra `PageData` phía server (`@miditor/core`), giới hạn tải ảnh và dọn ảnh mồ côi (đã hoãn), giới hạn tốc độ cho các endpoint mới, kiểm thử luồng đầy đủ (xuất bản, gửi duyệt, duyệt, dùng làm mẫu).
 
 ## Ngoài phạm vi lần này
