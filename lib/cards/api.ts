@@ -24,7 +24,14 @@ const cardDetail = z.object({
   document: z.record(z.string(), z.unknown()),
 });
 
-const publicationInfo = z.object({ slug: z.string(), publishedAt: z.string() });
+const publicationInfo = z.object({
+  slug: z.string(),
+  publishedAt: z.string(),
+  listInGallery: z.boolean(),
+  // NONE: không gửi; PENDING: có bản chờ duyệt; REJECTED: bị từ chối (xem lý do); LIVE: đang hiện trong thư viện.
+  galleryStatus: z.enum(['NONE', 'PENDING', 'REJECTED', 'LIVE']),
+  galleryRejectReason: z.string().nullable(),
+});
 export type PublicationInfo = z.infer<typeof publicationInfo>;
 export type CardSummary = z.infer<typeof cardSummary>;
 export type CardDetail = z.infer<typeof cardDetail>;
@@ -35,8 +42,9 @@ const GET = 'query($id: ID!) { card(id: $id) { id title revision role document }
 const CREATE = 'mutation($input: CreateCardInput!) { createCard(input: $input) { id } }';
 const RENAME = 'mutation($id: ID!, $title: String!) { updateCardTitle(id: $id, title: $title) { id title } }';
 const REMOVE = 'mutation($id: ID!) { deleteCard(id: $id) }';
-const PUBLICATION = 'query($cardId: ID!) { publication(cardId: $cardId) { slug publishedAt } }';
-const PUBLISH = 'mutation($id: ID!, $slug: String) { publishCard(id: $id, slug: $slug) { slug publishedAt } }';
+const PUBLICATION_FIELDS = 'slug publishedAt listInGallery galleryStatus galleryRejectReason';
+const PUBLICATION = `query($cardId: ID!) { publication(cardId: $cardId) { ${PUBLICATION_FIELDS} } }`;
+const PUBLISH = `mutation($id: ID!, $slug: String, $gallery: Boolean) { publishCard(id: $id, slug: $slug, listInGallery: $gallery) { ${PUBLICATION_FIELDS} } }`;
 const UNPUBLISH = 'mutation($id: ID!) { unpublishCard(id: $id) }';
 const DUPLICATE = 'mutation($id: ID!) { duplicateCard(id: $id) { id } }';
 const SAVE =
@@ -71,8 +79,9 @@ export const cardsApi = {
     z.object({ publication: publicationInfo.nullable() }).parse(await apiFetch.graphql(PUBLICATION, { cardId }, signal)).publication,
 
   // Xuất bản (hoặc xuất bản lại) bản nháp đã lưu; `slug` bỏ trống thì giữ slug cũ hoặc tự đặt từ tiêu đề.
-  publish: async (id: string, slug?: string): Promise<PublicationInfo> =>
-    z.object({ publishCard: publicationInfo }).parse(await apiFetch.graphql(PUBLISH, { id, slug: slug || undefined })).publishCard,
+  // `listInGallery` bật thì gửi vào hàng chờ duyệt của thư viện công khai, tắt thì rút khỏi thư viện.
+  publish: async (id: string, slug?: string, listInGallery = false): Promise<PublicationInfo> =>
+    z.object({ publishCard: publicationInfo }).parse(await apiFetch.graphql(PUBLISH, { id, slug: slug || undefined, gallery: listInGallery })).publishCard,
 
   unpublish: async (id: string): Promise<void> => {
     await apiFetch.graphql(UNPUBLISH, { id });

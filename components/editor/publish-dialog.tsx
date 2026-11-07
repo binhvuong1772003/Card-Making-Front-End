@@ -5,6 +5,7 @@ import { CopyIcon } from "@phosphor-icons/react";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { isApiError } from "@/lib/api";
 import { errorMessage } from "@/lib/auth/messages";
@@ -12,7 +13,7 @@ import { cardsApi } from "@/lib/cards/api";
 import { isValidSlug } from "@/lib/cards/slug";
 import { publicationKey, usePublication } from "@/lib/cards/use-publication";
 
-// Hộp thoại xuất bản (bản vẽ K, chưa có công tắc thư viện công khai: chờ bước duyệt). Chưa xuất bản: chọn đường dẫn rồi xuất bản.
+// Hộp thoại xuất bản (bản vẽ K). Chưa xuất bản: chọn đường dẫn rồi xuất bản.
 // Đã xuất bản: hiện liên kết để sao chép, xuất bản lại (cập nhật trang theo bản nháp mới nhất) hoặc gỡ.
 const SLUG_HELP = "Đường dẫn chỉ gồm chữ thường không dấu, số và gạch nối, dài 3 đến 60 ký tự.";
 
@@ -20,6 +21,39 @@ function publishError(err: unknown): string {
   if (isApiError(err, "CONFLICT")) return "Đường dẫn này đã có người dùng, hãy chọn tên khác.";
   if (isApiError(err, "VALIDATION")) return SLUG_HELP;
   return errorMessage(err);
+}
+
+// Công tắc "Hiện trong thư viện công khai" (bản vẽ K): admin duyệt trước, người khác xem được và Dùng làm mẫu.
+function GallerySwitch({ checked, onChange, disabled }: { checked: boolean; onChange: (value: boolean) => void; disabled?: boolean }) {
+  return (
+    <div className="flex items-start gap-4 rounded-[20px] bg-page p-4">
+      <div className="min-w-0 flex-1">
+        <div id="gallery-switch" className="text-sm font-semibold">
+          Hiện trong thư viện công khai
+        </div>
+        <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">
+          Admin duyệt trước khi thiệp xuất hiện. Người khác có thể xem và Dùng làm mẫu: chữ và ảnh sẽ được sao chép về kho của họ. Hãy kiểm tra tên thật, số điện thoại và địa chỉ trong thiệp.
+        </p>
+      </div>
+      <Switch checked={checked} onCheckedChange={onChange} disabled={disabled} aria-labelledby="gallery-switch" />
+    </div>
+  );
+}
+
+// Trạng thái của thiệp trong thư viện, hiện sau khi xuất bản.
+function GalleryStatusNote({ status, reason }: { status: "NONE" | "PENDING" | "REJECTED" | "LIVE"; reason: string | null }) {
+  if (status === "NONE") return null;
+  const note = {
+    PENDING: { title: "Đang chờ admin duyệt", text: "Thiệp vẫn gửi được cho khách bằng liên kết. Khi được duyệt, thiệp sẽ hiện trong thư viện công khai.", tone: "text-foreground" },
+    LIVE: { title: "Đang hiện trong thư viện", text: "Đã được duyệt, ai cũng xem được và dùng làm mẫu.", tone: "text-primary" },
+    REJECTED: { title: "Cần sửa để được hiện trong thư viện", text: reason ?? "", tone: "text-destructive" },
+  }[status];
+  return (
+    <div className="rounded-[20px] bg-page px-4 py-3.5">
+      <div className={`text-sm font-semibold ${note.tone}`}>{note.title}</div>
+      {note.text && <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{note.text}</p>}
+    </div>
+  );
 }
 
 export function PublishDialog({
@@ -42,19 +76,23 @@ export function PublishDialog({
   const publication = usePublication(cardId, open);
   const [slug, setSlug] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [galleryChoice, setGalleryChoice] = useState<boolean | null>(null);
   const origin = typeof window === "undefined" ? "" : window.location.origin;
   const live = publication.data;
   const link = live ? `${origin}/thiep/${live.slug}` : "";
+  // Công tắc thư viện: theo lựa chọn của người dùng, chưa chọn thì theo trạng thái đang có.
+  const gallery = galleryChoice ?? live?.listInGallery ?? false;
 
   const refresh = () => queryClient.invalidateQueries({ queryKey: publicationKey(cardId) });
   const publish = useMutation({
     mutationFn: async () => {
       await flushDraft();
-      return cardsApi.publish(cardId, slug.trim() || undefined);
+      return cardsApi.publish(cardId, slug.trim() || undefined, gallery);
     },
     onSuccess: () => {
       setError(null);
-      toast.success("Đã xuất bản thiệp.");
+      setGalleryChoice(null);
+      toast.success(gallery ? "Đã xuất bản và gửi duyệt." : "Đã xuất bản thiệp.");
       return refresh();
     },
     onError: (err) => setError(publishError(err)),
@@ -63,6 +101,7 @@ export function PublishDialog({
     mutationFn: () => cardsApi.unpublish(cardId),
     onSuccess: () => {
       setSlug("");
+      setGalleryChoice(null);
       toast.success("Đã gỡ trang công khai.");
       return refresh();
     },
@@ -105,6 +144,8 @@ export function PublishDialog({
                 <CopyIcon className="size-[18px]" /> Sao chép
               </Button>
             </div>
+            {isOwner && <GallerySwitch checked={gallery} onChange={setGalleryChoice} disabled={publish.isPending} />}
+            <GalleryStatusNote status={live.galleryStatus} reason={live.galleryRejectReason} />
             {error && <p className="text-sm text-destructive">{error}</p>}
             {isOwner ? (
               <DialogFooter className="mx-0 mb-0 border-0 bg-transparent p-0 sm:justify-between">
@@ -112,7 +153,7 @@ export function PublishDialog({
                   Gỡ xuất bản
                 </Button>
                 <Button type="button" disabled={publish.isPending || !hasContent} className="h-11 rounded-full px-5 font-semibold" onClick={() => publish.mutate()}>
-                  Xuất bản lại
+                  {gallery && live.galleryStatus !== "LIVE" ? "Xuất bản lại và gửi duyệt" : "Xuất bản lại"}
                 </Button>
               </DialogFooter>
             ) : (
@@ -151,12 +192,13 @@ export function PublishDialog({
               {error ? <p className="text-sm text-destructive">{error}</p> : <p className="text-[13px] text-muted-foreground">Bỏ trống để tự đặt theo tên thiệp.</p>}
               {!hasContent && <p className="text-sm text-destructive">Thêm nội dung vào thiệp trước khi xuất bản.</p>}
             </div>
+            <GallerySwitch checked={gallery} onChange={setGalleryChoice} disabled={publish.isPending} />
             <DialogFooter className="mx-0 mb-0 border-0 bg-transparent p-0">
               <Button type="button" variant="secondary" className="h-11 rounded-full px-5" onClick={() => onOpenChange(false)}>
                 Huỷ
               </Button>
               <Button type="submit" disabled={publish.isPending || !hasContent} className="h-11 rounded-full px-5 font-semibold">
-                Xuất bản
+                {gallery ? "Xuất bản và gửi duyệt" : "Xuất bản"}
               </Button>
             </DialogFooter>
           </form>
