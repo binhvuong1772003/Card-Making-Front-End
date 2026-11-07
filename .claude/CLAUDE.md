@@ -18,6 +18,7 @@ Giao diện CHƯA chốt. Hiện chỉ là giao diện cơ bản để test các
   - `/cards/[id]/preview` xem trước bản nháp đã lưu ở khổ máy tính hoặc điện thoại. Hộp thoại xuất bản nằm trong header editor (chỉ owner xuất bản; chưa có công tắc thư viện công khai).
   - `/admin` là trang admin duyệt thiệp công khai (bản vẽ M): hàng chờ, xem trước đầy đủ, Duyệt, Từ chối kèm lý do, Gỡ. Lối vào "Duyệt" ở cột trái chỉ hiện cho tài khoản có `role: ADMIN` (từ `/auth/me`). Cấp admin: `npm run grant-admin -- <email>` ở CMBE. Chỉ tải tối đa 50 mẫu mỗi hàng chờ.
   - `/cards/[id]` là trang soạn thiệp thật: Miditor với giao diện trắng và đỏ đô (bản vẽ F), tự lưu cả bản nháp. Phần của CardMaking trong editor (`card-header`, `zoom-pill`, `status-seal`) viết bằng shadcn `Button` + Tailwind, màu lấy từ lớp `.card-editor` trong `globals.css` (trắng, đỏ đô). Phần bên trong của Miditor vẫn chỉnh qua `appearance` và `editor-overrides.css`.
+  - Tải ảnh (`lib/assets/upload-image.ts`) gửi kèm `transformation` do backend ký (ảnh quá lớn bị thu nhỏ khi vào kho); backend giới hạn số lần xin ký theo người dùng.
   - `lib/api/` là `apiFetch` (có refresh một lần, test bằng Vitest), `lib/auth/` là hàm gọi auth, schema Zod, thông báo lỗi tiếng Việt.
 - Đã cài: Tailwind v4, shadcn/ui (`button`, `input`, `label`, `card`, `alert`, `sonner`, `field`, `separator`), TanStack Query, Zod, Vitest, `sonner` cho thông báo.
 - Chưa cài, chờ khi cần: Zustand, `graphql-request`, `react-hook-form`.
