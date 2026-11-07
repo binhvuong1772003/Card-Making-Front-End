@@ -10,6 +10,7 @@ const signature = z.object({
   timestamp: z.number(),
   folder: z.string(),
   allowedFormats: z.string(),
+  transformation: z.string(), // do backend ký (thu nhỏ ảnh quá lớn); phải gửi đúng nguyên văn, đổi là chữ ký sai
   signature: z.string(),
 });
 export type UploadSignature = z.infer<typeof signature>;
@@ -32,6 +33,7 @@ export function createUploadImage({ sign, fetch: send }: UploadDeps) {
     form.set('timestamp', String(s.timestamp));
     form.set('folder', s.folder);
     form.set('allowed_formats', s.allowedFormats);
+    form.set('transformation', s.transformation);
     form.set('signature', s.signature);
     const res = await send(`https://api.cloudinary.com/v1_1/${s.cloudName}/image/upload`, { method: 'POST', body: form });
     const reply = cloudinaryReply.safeParse(await res.json().catch(() => null));

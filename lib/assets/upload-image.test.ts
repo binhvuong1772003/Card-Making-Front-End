@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { createUploadImage, MAX_IMAGE_BYTES, type UploadSignature } from './upload-image';
 
-const signed: UploadSignature = { cloudName: 'demo', apiKey: 'key', timestamp: 1_700_000_000, folder: 'cardmaking/u1', allowedFormats: 'jpg,png', signature: 'abc' };
+const signed: UploadSignature = { cloudName: 'demo', apiKey: 'key', timestamp: 1_700_000_000, folder: 'cardmaking/u1', allowedFormats: 'jpg,png', transformation: 'c_limit,h_4000,w_4000', signature: 'abc' };
 const picture = () => new File([new Uint8Array(10)], 'a.png', { type: 'image/png' });
 const reply = (status: number, body: unknown) => new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
 
@@ -14,7 +14,7 @@ describe('uploadImage', () => {
     expect(String(send.mock.calls[0]![0])).toBe('https://api.cloudinary.com/v1_1/demo/image/upload');
     const form = send.mock.calls[0]![1]!.body as FormData;
     expect(Object.fromEntries([...form.entries()].filter(([k]) => k !== 'file'))).toEqual({
-      api_key: 'key', timestamp: '1700000000', folder: 'cardmaking/u1', allowed_formats: 'jpg,png', signature: 'abc',
+      api_key: 'key', timestamp: '1700000000', folder: 'cardmaking/u1', allowed_formats: 'jpg,png', transformation: 'c_limit,h_4000,w_4000', signature: 'abc',
     });
     expect(form.get('file')).toBeInstanceOf(File);
   });
