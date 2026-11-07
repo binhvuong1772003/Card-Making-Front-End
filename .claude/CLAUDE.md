@@ -13,7 +13,7 @@ Giao diện CHƯA chốt. Hiện chỉ là giao diện cơ bản để test các
 - Đã làm: giao diện test xác thực, cổng 3001, dùng mặc định của shadcn (chưa có design system, đừng chỉnh style kỹ).
   - `/register`, `/verify-email`, `/login` (kèm nút Google).
   - `/` là TRANG CHỦ MẪU, XÀI ĐỠ (`app/home.tsx`): đầu trang có đăng xuất, nút Tạo thiệp và lưới thiệp. Thay cả trang khi có thiết kế trang chủ, đừng chỉnh style kỹ.
-  - `/cards/[id]` là trang soạn thiệp thật: Miditor với giao diện trắng và đỏ đô (bản vẽ F), tự lưu cả bản nháp.
+  - `/cards/[id]` là trang soạn thiệp thật: Miditor với giao diện trắng và đỏ đô (bản vẽ F), tự lưu cả bản nháp. Phần của CardMaking trong editor (`card-header`, `zoom-pill`, `status-seal`) viết bằng shadcn `Button` + Tailwind, màu lấy từ lớp `.card-editor` trong `globals.css` (trắng, đỏ đô). Phần bên trong của Miditor vẫn chỉnh qua `appearance` và `editor-overrides.css`.
   - `lib/api/` là `apiFetch` (có refresh một lần, test bằng Vitest), `lib/auth/` là hàm gọi auth, schema Zod, thông báo lỗi tiếng Việt.
 - Đã cài: Tailwind v4, shadcn/ui (`button`, `input`, `label`, `card`, `alert`, `sonner`, `field`, `separator`), TanStack Query, Zod, Vitest, `sonner` cho thông báo.
 - Chưa cài, chờ khi cần: Zustand, `graphql-request`, `react-hook-form`.
