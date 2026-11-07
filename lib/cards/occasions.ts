@@ -17,3 +17,12 @@ export const THUMB_TONE: Record<Occasion, { bg: string; ink: string }> = {
   EVENT: { bg: "#1F2A44", ink: "#FFFFFF" },
   OTHER: { bg: "#F4E6E9", ink: "#7B1E2B" },
 };
+
+// Đường dẫn của trang một loại thiệp: /kham-pha/<slug>. OTHER không có trang riêng.
+const SLUG: Partial<Record<Occasion, string>> = { WEDDING: "dam-cuoi", BIRTHDAY: "sinh-nhat", EVENT: "su-kien" };
+
+export const occasionSlug = (occasion: Occasion): string => SLUG[occasion] ?? "";
+
+export function occasionFromSlug(slug: string): Occasion | undefined {
+  return FILTER_OCCASIONS.find((occasion) => SLUG[occasion] === slug);
+}
