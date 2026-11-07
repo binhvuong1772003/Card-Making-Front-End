@@ -24,6 +24,8 @@ const cardDetail = z.object({
   document: z.record(z.string(), z.unknown()),
 });
 
+const publicationInfo = z.object({ slug: z.string(), publishedAt: z.string() });
+export type PublicationInfo = z.infer<typeof publicationInfo>;
 export type CardSummary = z.infer<typeof cardSummary>;
 export type CardDetail = z.infer<typeof cardDetail>;
 
@@ -33,6 +35,9 @@ const GET = 'query($id: ID!) { card(id: $id) { id title revision role document }
 const CREATE = 'mutation($input: CreateCardInput!) { createCard(input: $input) { id } }';
 const RENAME = 'mutation($id: ID!, $title: String!) { updateCardTitle(id: $id, title: $title) { id title } }';
 const REMOVE = 'mutation($id: ID!) { deleteCard(id: $id) }';
+const PUBLICATION = 'query($cardId: ID!) { publication(cardId: $cardId) { slug publishedAt } }';
+const PUBLISH = 'mutation($id: ID!, $slug: String) { publishCard(id: $id, slug: $slug) { slug publishedAt } }';
+const UNPUBLISH = 'mutation($id: ID!) { unpublishCard(id: $id) }';
 const DUPLICATE = 'mutation($id: ID!) { duplicateCard(id: $id) { id } }';
 const SAVE =
   'mutation($id: ID!, $revision: Int!, $document: JSON!) { saveCardDocument(id: $id, revision: $revision, document: $document) { revision } }';
@@ -59,6 +64,18 @@ export const cardsApi = {
 
   remove: async (id: string): Promise<void> => {
     await apiFetch.graphql(REMOVE, { id });
+  },
+
+  // Liên kết đang công khai của thiệp, hoặc null nếu chưa xuất bản hoặc đã gỡ.
+  publication: async (cardId: string, signal?: AbortSignal): Promise<PublicationInfo | null> =>
+    z.object({ publication: publicationInfo.nullable() }).parse(await apiFetch.graphql(PUBLICATION, { cardId }, signal)).publication,
+
+  // Xuất bản (hoặc xuất bản lại) bản nháp đã lưu; `slug` bỏ trống thì giữ slug cũ hoặc tự đặt từ tiêu đề.
+  publish: async (id: string, slug?: string): Promise<PublicationInfo> =>
+    z.object({ publishCard: publicationInfo }).parse(await apiFetch.graphql(PUBLISH, { id, slug: slug || undefined })).publishCard,
+
+  unpublish: async (id: string): Promise<void> => {
+    await apiFetch.graphql(UNPUBLISH, { id });
   },
 
   // Nhân bản vào thư viện của mình; trả id thiệp mới.
