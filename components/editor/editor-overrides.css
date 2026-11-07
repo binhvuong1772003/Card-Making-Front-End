@@ -1,0 +1,115 @@
+/*
+ * Chỉnh giao diện panel khối của Miditor cho giống bản vẽ F: hai cột bằng nhau, thẻ nằm ngang, icon trong ô màu nhạt cùng họ màu.
+ * Miditor đặt tên lớp theo mẫu `miditor-<tệp>-<tên>` (xem tsdown.config.ts của Miditor), nên chọn theo phần tên lớp. Đây không phải API
+ * chính thức: nếu Miditor đổi tên lớp thì chỉ mất phần chỉnh này, panel vẫn dùng được.
+ */
+[class*="miditor-BlocksPanel-module-heading"] {
+  font-size: 12px;
+  color: var(--miditor-muted);
+}
+
+[class*="miditor-BlocksPanel-module-grid"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+[class*="miditor-BlocksPanel-module-card"] {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  block-size: auto;
+  min-block-size: 54px;
+  padding: 7px 8px;
+  font-size: 13px;
+  line-height: 1.25;
+  text-align: left;
+  --tile-bg: #f7e6e9;
+  --tile-fg: #7b1e2b;
+}
+
+/* Ô icon: nền nhạt và nét icon cùng họ màu, đậm hơn. */
+[class*="miditor-BlocksPanel-module-card"] > :first-child {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 38px;
+  block-size: 38px;
+  border-radius: 11px;
+  background: var(--tile-bg);
+  color: var(--tile-fg);
+}
+
+[class*="miditor-BlocksPanel-module-card"] > :first-child svg {
+  inline-size: 24px;
+  block-size: 24px;
+}
+
+[class*="miditor-BlocksPanel-module-card"]:nth-child(5n + 2) { --tile-bg: #f5e8df; --tile-fg: #8b4a2b; }
+[class*="miditor-BlocksPanel-module-card"]:nth-child(5n + 3) { --tile-bg: #eee5f0; --tile-fg: #5f3b6e; }
+[class*="miditor-BlocksPanel-module-card"]:nth-child(5n + 4) { --tile-bg: #f1e3ec; --tile-fg: #7a2d5a; }
+[class*="miditor-BlocksPanel-module-card"]:nth-child(5n + 5) { --tile-bg: #f3e4e1; --tile-fg: #8e3b3b; }
+
+/* Thanh công cụ bên trái: rộng hơn, icon lớn hơn, mục đang chọn là viên hồng nhạt chữ đỏ đô (bỏ vạch tối bên trái). */
+[class~="miditor-Editor-module-rail"] {
+  box-sizing: border-box;
+  inline-size: 76px;
+  padding: 12px 8px;
+  gap: 4px;
+}
+
+[class~="miditor-Editor-module-railButton"] {
+  block-size: 64px;
+  gap: 6px;
+  font-size: 12px;
+}
+
+[class~="miditor-Editor-module-railButton"] svg {
+  inline-size: 24px;
+  block-size: 24px;
+}
+
+[class~="miditor-Editor-module-railButton"][aria-current="true"] {
+  background: var(--miditor-soft);
+  color: var(--miditor-accent);
+  font-weight: 600;
+  box-shadow: none;
+}
+
+/* Trang trống: ô icon màu nhạt, nút chính màu đỏ đô. */
+[class*="miditor-EmptyPage-module-card"] > :first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 44px;
+  block-size: 44px;
+  border-radius: 12px;
+  background: #f4e4e7;
+  color: var(--miditor-accent);
+}
+
+[class*="miditor-EmptyPage-module-card"] > :first-child svg {
+  inline-size: 24px;
+  block-size: 24px;
+}
+
+[class*="miditor-EmptyPage-module-title"] {
+  font-size: 19px;
+}
+
+[class*="miditor-EmptyPage-module-primary"] {
+  border-color: var(--miditor-accent);
+  background: var(--miditor-accent);
+  color: var(--miditor-on-accent);
+  font-weight: 600;
+}
+
+/* Panel thuộc tính: tiêu đề trang 15px, tên mục nhỏ và nhạt như bản vẽ. */
+[class*="miditor-PropertiesPanel-module-title"] {
+  font-size: 15px;
+}
+
+[class*="miditor-PropertiesPanel-module-fold"] {
+  font-size: 12px;
+  color: var(--miditor-muted);
+}

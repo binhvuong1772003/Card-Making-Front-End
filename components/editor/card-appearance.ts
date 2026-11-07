@@ -8,7 +8,7 @@ export const cardAppearance: Appearance = {
     chrome: "#FFFFFF",
     workspace: "#F6F1F2",
     canvas: "#FFFFFF",
-    soft: "#F8F2F3",
+    soft: "#F4E6E9",
     border: "#ECE3E5",
     borderInput: "#D9CDD0",
     text: "#2A2224",
