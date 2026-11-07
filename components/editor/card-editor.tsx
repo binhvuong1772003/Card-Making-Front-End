@@ -80,7 +80,7 @@ export function CardEditor({ card }: { card: CardDetail }) {
       i18n={i18n}
       config={config}
     >
-      <div style={{ display: "grid", gridTemplateRows: "auto minmax(0, 1fr)", blockSize: "100%" }}>
+      <div className="card-editor" style={{ display: "grid", gridTemplateRows: "auto minmax(0, 1fr)", blockSize: "100%" }}>
         <CardHeader title={card.title} seal={seal} />
         <div style={{ display: "grid", gridTemplateColumns: "auto 292px minmax(0, 1fr) auto", minBlockSize: 0 }}>
           <Editor.Rail />

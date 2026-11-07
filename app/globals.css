@@ -131,3 +131,20 @@ body {
     @apply font-sans;
   }
 }
+
+/* Giao diện của editor CardMaking (bản vẽ F): trắng và đỏ đô. Chỉ áp trong .card-editor, các trang khác giữ giao diện shadcn mặc định. */
+.card-editor {
+  --background: #ffffff;
+  --foreground: #2a2224;
+  --primary: #7b1e2b;
+  --primary-foreground: #ffffff;
+  --muted: #f4e6e9;
+  --muted-foreground: #6e6063;
+  --accent: #f4e6e9;
+  --accent-foreground: #7b1e2b;
+  --destructive: #b3261e;
+  --border: #ece3e5;
+  --input: #d9cdd0;
+  --ring: #2f6bff;
+  --radius: 0.5rem;
+}
