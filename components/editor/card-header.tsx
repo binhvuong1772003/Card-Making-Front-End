@@ -1,6 +1,7 @@
 "use client";
 
 import { useEditor } from "@miditor/editor";
+import { ChatCircleTextIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePublication } from "@/lib/cards/use-publication";
@@ -21,12 +22,15 @@ export function CardHeader({
   seal,
   cardId,
   isOwner,
+  canReadResponses,
   idle,
 }: {
   title: string;
   seal: { state: SealState; label: string };
   cardId: string;
   isOwner: boolean;
+  /** Owner và editor mới xem được phản hồi; `VIEWER` không thấy lối vào. */
+  canReadResponses: boolean;
   /** Chờ tới khi bộ lưu không còn gì đang ghi. */
   idle: () => Promise<void>;
 }) {
@@ -104,6 +108,12 @@ export function CardHeader({
       </div>
 
       <div className="flex flex-[1_1_260px] items-center justify-end gap-2.5">
+        {canReadResponses && publication.data && (
+          <Button variant="outline" render={<Link href={`/cards/${cardId}/responses`} />} className="h-9 gap-2 border-input px-4 text-[13px]">
+            <ChatCircleTextIcon size={18} />
+            Phản hồi
+          </Button>
+        )}
         <Button variant="outline" onClick={preview} className="h-9 gap-2 border-input px-4 text-[13px]">
           <PhosphorIcon name="eye" />
           Xem trước

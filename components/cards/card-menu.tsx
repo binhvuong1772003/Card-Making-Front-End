@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { ArrowSquareOutIcon, CopyIcon, DotsThreeIcon, PencilSimpleIcon, TrashIcon } from "@phosphor-icons/react";
+import { ArrowSquareOutIcon, ChatCircleTextIcon, CopyIcon, DotsThreeIcon, PencilSimpleIcon, TrashIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
@@ -14,7 +14,7 @@ import { errorMessage } from "@/lib/auth/messages";
 import { cardsApi, type CardSummary } from "@/lib/cards/api";
 import { cn } from "@/lib/utils";
 
-// Menu ⋯ của một thiệp (bản vẽ G, H): mở, đổi tên, nhân bản, xoá. Đổi tên cho owner và editor, xoá chỉ cho owner:
+// Menu ⋯ của một thiệp (bản vẽ G, H): mở, xem phản hồi, đổi tên, nhân bản, xoá. Đổi tên cho owner và editor, xoá chỉ cho owner:
 // ẩn mục không đủ quyền cho gọn, còn việc chặn thật nằm ở backend.
 export function CardMenu({ card, triggerClassName }: { card: CardSummary; triggerClassName?: string }) {
   const queryClient = useQueryClient();
@@ -76,6 +76,11 @@ export function CardMenu({ card, triggerClassName }: { card: CardSummary; trigge
           <DropdownMenuItem render={<Link href={`/cards/${card.id}`} />}>
             <ArrowSquareOutIcon /> Mở để sửa
           </DropdownMenuItem>
+          {card.published && card.role !== "VIEWER" && (
+            <DropdownMenuItem render={<Link href={`/cards/${card.id}/responses`} />}>
+              <ChatCircleTextIcon /> Phản hồi
+            </DropdownMenuItem>
+          )}
           {canRename && (
             <DropdownMenuItem
               onClick={() => {
