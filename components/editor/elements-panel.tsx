@@ -76,14 +76,14 @@ const CSS = `
 .cm-tpl-back{display:inline-flex;align-items:center;gap:4px;border:0;background:transparent;padding:4px 6px 4px 2px;margin-bottom:8px;border-radius:6px;color:var(--miditor-text,#2a2224);font:inherit;font-size:14px;font-weight:600;cursor:pointer}
 .cm-tpl-back:hover{background:var(--miditor-soft,#f4e6e9)}
 .cm-tpl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:start}
-.cm-tpl-card{display:grid;gap:6px;padding:6px;border:1px solid transparent;border-radius:10px;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
+.cm-tpl-card{display:grid;gap:6px;padding:6px;border:1px solid transparent;border-radius:10px;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:background-color .15s ease,border-color .15s ease;user-select:none;-webkit-user-select:none}
 .cm-tpl-card:hover{background:var(--miditor-soft,#f4e6e9);border-color:var(--miditor-border,#ece3e5)}
 .cm-tpl-card:focus-visible{outline:2px solid var(--miditor-focus,#2f6bff);outline-offset:1px}
 .cm-tpl-name{font-size:12px;font-weight:500;line-height:1.3}
 @media (prefers-reduced-motion:reduce){.cm-tpl-card{transition:none}}
 `;
 
-function Card({ type, def, editor }: { type: string; def: ComponentDef; editor: HostToolPanelProps["editor"] }) {
+function Card({ type, def, editor, drag }: { type: string; def: ComponentDef; editor: HostToolPanelProps["editor"]; drag: HostToolPanelProps["drag"] }) {
   // Thẻ là div có vai trò nút, không phải <button>: hình xem trước chứa nút thật (mũi tên, chấm của album), và nút không được lồng trong nút.
   return (
     <div
@@ -91,7 +91,12 @@ function Card({ type, def, editor }: { type: string; def: ComponentDef; editor: 
       tabIndex={0}
       className="cm-tpl-card"
       aria-label={`Thêm ${def.label}`}
-      onClick={() => editor.addBlock(type)}
+      // Bấm thì thêm; kéo ra canvas thì thả ở đâu khối vào đó (Miditor lo phần kéo, kể cả bỏ qua cú bấm kết thúc cú kéo).
+      onPointerDown={(event) => drag.press(event, type, def.label)}
+      onClick={() => {
+        if (drag.wasDragged()) return;
+        editor.addBlock(type);
+      }}
       onKeyDown={(event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
@@ -107,7 +112,7 @@ function Card({ type, def, editor }: { type: string; def: ComponentDef; editor: 
 
 const LEFT = "M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z";
 
-export function ElementsPanel({ editor }: HostToolPanelProps) {
+export function ElementsPanel({ editor, drag }: HostToolPanelProps) {
   const [open, setOpen] = useState<string | null>(null);
   const group = open === null ? undefined : GROUPS.find(([category]) => category === open);
 
@@ -123,7 +128,7 @@ export function ElementsPanel({ editor }: HostToolPanelProps) {
         </button>
         <div className="cm-tpl-grid">
           {group[1].map(([type, def]) => (
-            <Card key={type} type={type} def={def} editor={editor} />
+            <Card key={type} type={type} def={def} editor={editor} drag={drag} />
           ))}
         </div>
       </div>
@@ -145,7 +150,7 @@ export function ElementsPanel({ editor }: HostToolPanelProps) {
           </div>
           <div className="cm-tpl-grid">
             {items.slice(0, FEATURED).map(([type, def]) => (
-              <Card key={type} type={type} def={def} editor={editor} />
+              <Card key={type} type={type} def={def} editor={editor} drag={drag} />
             ))}
           </div>
         </section>
