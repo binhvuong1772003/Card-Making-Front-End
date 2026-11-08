@@ -7,8 +7,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
-import { isApiError } from "@/lib/api";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { API_URL, isApiError } from "@/lib/api";
 import { errorMessage } from "@/lib/auth/messages";
 import { cardsApi } from "@/lib/cards/api";
 import { answerText, chipTone, columnsOf, isChipType, sentAt, summaryLine, type CardForm, type FormResponse, type ResponseColumn, type ResponseStatus } from "@/lib/cards/forms/responses";
@@ -198,9 +198,16 @@ export function CardResponses({ id }: { id: string }) {
               ))}
             </div>
           )}
-          <Button type="button" variant="outline" disabled className="h-11 rounded-full px-4" title="Sắp có" onClick={undefined}>
+          {/* Tải tệp bằng liên kết thường, không qua `apiFetch` (nó chỉ đọc JSON). Trình duyệt tự gửi cookie `access`:
+              ở dev hai bên cùng site localhost, và đây là điều hướng cấp trang nên cookie SameSite=Lax vẫn đi. Tên tệp
+              do backend đặt qua `Content-Disposition`, nên `download` không cần mang tên. */}
+          <a
+            href={`${API_URL}/api/v1/cards/${id}/forms/${encodeURIComponent(selected.blockId)}/responses.csv`}
+            download
+            className={cn(buttonVariants({ variant: "outline" }), "h-11 rounded-full px-4")}
+          >
             <DownloadSimpleIcon className="size-[18px]" /> Tải về CSV
-          </Button>
+          </a>
         </div>
 
         <div className={cn(CARD, "mt-4 overflow-x-auto")}>
