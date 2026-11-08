@@ -4,9 +4,11 @@ import { AlbumView, type AlbumMode } from "@/components/blocks/album-view";
 import { AlbumGridView, AlbumPolaroidView, AlbumStripView } from "@/components/blocks/album-layouts";
 import { CalendarView } from "@/components/blocks/calendar-view";
 import { MapView } from "@/components/blocks/map-view";
+import { RsvpView } from "@/components/blocks/rsvp-view";
 import { albumBlock, cleanImages } from "./album";
 import { cardDefinitions } from "./definitions";
 import { calendarDefinitions, MARK_SHAPES } from "./calendar";
+import { rsvpBlock } from "./rsvp";
 
 // Các khối riêng của CardMaking: định nghĩa (dữ liệu thuần, cho editor và backend) và cách vẽ (cho Render).
 export const cardComponents = cardDefinitions;
@@ -18,6 +20,12 @@ export const STATIC_METADATA = { mode: "static" } as const;
 const modeOf = (metadata: unknown): AlbumMode => {
   const mode = metadata && typeof metadata === "object" ? (metadata as { mode?: unknown }).mode : undefined;
   return mode === "edit" || mode === "static" ? mode : "live";
+};
+
+// Slug của thiệp, chỉ trang công khai truyền vào; không có thì khối form vẽ dạng xem thử, khoá ô và nút.
+const slugOf = (metadata: unknown): string => {
+  const slug = metadata && typeof metadata === "object" ? (metadata as { slug?: unknown }).slug : undefined;
+  return typeof slug === "string" ? slug : "";
 };
 
 const number = (value: unknown, fallback: number, min: number, max: number): number =>
@@ -96,6 +104,26 @@ const renderAlbumPolaroid: Renderer = ({ props, metadata, theme }) => (
   <AlbumPolaroidView {...common(props, metadata, 2)} columns={Math.round(number(props.columns, 2, 1, 3))} tilt={number(props.tilt, 5, 0, 12)} frameColor={paint(props.frameColor, "#ffffff", theme)} />
 );
 
+// Form gửi thẳng lên CMBE nên cần biết mình là khối nào (`id` của nút) và thiệp nào (`slug` chỉ có ở trang công khai).
+const renderRsvp: Renderer = ({ id, props, metadata, theme }) => (
+  <RsvpView
+    blockId={id}
+    slug={slugOf(metadata)}
+    heading={text(props.heading, rsvpBlock.defaultProps.heading as string)}
+    intro={text(props.intro, rsvpBlock.defaultProps.intro as string)}
+    button={text(props.button, rsvpBlock.defaultProps.button as string)}
+    askGuests={props.askGuests !== false}
+    askPhone={props.askPhone === true}
+    askNote={props.askNote !== false}
+    askMaybe={props.askMaybe !== false}
+    deadline={text(props.deadline, "")}
+    maxGuests={Math.round(number(props.maxGuests, rsvpBlock.defaultProps.maxGuests as number, 1, 20))}
+    color={paint(props.color, rsvpBlock.defaultProps.color as string, theme)}
+    padding={number(props.padding, rsvpBlock.defaultProps.padding as number, 0, 40)}
+    mode={modeOf(metadata)}
+  />
+);
+
 // Mỗi kiểu lịch là một loại khối riêng nhưng cùng một cách vẽ.
 const calendarRenderers = Object.fromEntries(Object.keys(calendarDefinitions).map((type) => [type, renderCalendar]));
 
@@ -105,5 +133,6 @@ export const cardRenderers = {
   AlbumStrip: renderAlbumStrip,
   AlbumPolaroid: renderAlbumPolaroid,
   Map: renderMap,
+  Rsvp: renderRsvp,
   ...calendarRenderers,
 };
