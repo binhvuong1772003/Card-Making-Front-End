@@ -127,7 +127,8 @@ export function PublishDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="rounded-3xl p-8 sm:max-w-[460px]">
+      {/* `min-w-0` cho con của hộp (là lưới): không có thì dòng liên kết dài không xuống dòng làm cột rộng hơn hộp và nội dung tràn ra ngoài. */}
+      <DialogContent className="rounded-3xl p-8 sm:max-w-[460px] [&>*]:min-w-0">
         {publication.isPending ? (
           <p className="py-8 text-center text-sm text-muted-foreground">Đang tải...</p>
         ) : live ? (
