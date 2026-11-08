@@ -43,7 +43,7 @@ function Thumb({ type, def }: { type: string; def: ComponentDef }) {
   return (
     <div ref={box} style={{ position: "relative", width: "100%", height: h * scale, overflow: "hidden", borderRadius: 8, background: "#fff", boxShadow: "inset 0 0 0 1px var(--miditor-border, #ece3e5)" }}>
       <div aria-hidden="true" inert style={{ position: "absolute", left: 0, top: 0, width: w, height: h, boxSizing: "border-box", transform: `scale(${scale})`, transformOrigin: "top left", pointerEvents: "none", ...nodeStyleCss(def.defaultStyles) }}>
-        {draw?.({ props: sampleProps(type, def) as never, device: "desktop", responsive: false, theme: undefined, metadata: STATIC_METADATA, children: null })}
+        {draw?.({ id: type, props: sampleProps(type, def) as never, device: "desktop", responsive: false, theme: undefined, metadata: STATIC_METADATA, children: null })}
       </div>
     </div>
   );
