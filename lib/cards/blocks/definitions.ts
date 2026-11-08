@@ -2,6 +2,7 @@ import type { ComponentDef } from "@miditor/core";
 import { albumDefinitions } from "./album";
 import { calendarDefinitions, RETIRED_CALENDAR_PROPS } from "./calendar";
 import { mapBlock, RETIRED_MAP_PROPS } from "./map";
+import { guestbookBlock } from "./guestbook";
 import { rsvpBlock } from "./rsvp";
 
 // Mọi loại khối riêng của CardMaking (dữ liệu thuần, không có React): thứ tự ở đây là thứ tự trong bảng "Thành phần". Editor dùng nó, và CMBE nhận
@@ -12,6 +13,7 @@ const raw: Record<string, ComponentDef> = {
   ...albumDefinitions,
   Map: mapBlock,
   Rsvp: rsvpBlock,
+  Guestbook: guestbookBlock,
   ...calendarDefinitions,
 };
 

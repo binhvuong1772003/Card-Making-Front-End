@@ -3,11 +3,13 @@ import type { Renderer } from "@miditor/render";
 import { AlbumView, type AlbumMode } from "@/components/blocks/album-view";
 import { AlbumGridView, AlbumPolaroidView, AlbumStripView } from "@/components/blocks/album-layouts";
 import { CalendarView } from "@/components/blocks/calendar-view";
+import { GuestbookView } from "@/components/blocks/guestbook-view";
 import { MapView } from "@/components/blocks/map-view";
 import { RsvpView } from "@/components/blocks/rsvp-view";
 import { albumBlock, cleanImages } from "./album";
 import { cardDefinitions } from "./definitions";
 import { calendarDefinitions, MARK_SHAPES } from "./calendar";
+import { guestbookBlock } from "./guestbook";
 import { rsvpBlock } from "./rsvp";
 
 // Các khối riêng của CardMaking: định nghĩa (dữ liệu thuần, cho editor và backend) và cách vẽ (cho Render).
@@ -124,6 +126,21 @@ const renderRsvp: Renderer = ({ id, props, metadata, theme }) => (
   />
 );
 
+const renderGuestbook: Renderer = ({ id, props, metadata, theme }) => (
+  <GuestbookView
+    blockId={id}
+    slug={slugOf(metadata)}
+    heading={text(props.heading, guestbookBlock.defaultProps.heading as string)}
+    intro={text(props.intro, guestbookBlock.defaultProps.intro as string)}
+    button={text(props.button, guestbookBlock.defaultProps.button as string)}
+    moderation={props.moderation === true}
+    pageSize={Math.round(number(props.pageSize, guestbookBlock.defaultProps.pageSize as number, 3, 20))}
+    color={paint(props.color, guestbookBlock.defaultProps.color as string, theme)}
+    padding={number(props.padding, guestbookBlock.defaultProps.padding as number, 0, 40)}
+    mode={modeOf(metadata)}
+  />
+);
+
 // Mỗi kiểu lịch là một loại khối riêng nhưng cùng một cách vẽ.
 const calendarRenderers = Object.fromEntries(Object.keys(calendarDefinitions).map((type) => [type, renderCalendar]));
 
@@ -134,5 +151,6 @@ export const cardRenderers = {
   AlbumPolaroid: renderAlbumPolaroid,
   Map: renderMap,
   Rsvp: renderRsvp,
+  Guestbook: renderGuestbook,
   ...calendarRenderers,
 };
