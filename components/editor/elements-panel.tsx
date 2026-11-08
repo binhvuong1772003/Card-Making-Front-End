@@ -5,11 +5,14 @@ import type { HostToolPanelProps } from "@miditor/editor";
 import { useEffect, useRef, useState } from "react";
 import { cardRenderers, STATIC_METADATA } from "@/lib/cards/blocks";
 import { cardDefinitions } from "@/lib/cards/blocks/definitions";
+import { formBlock } from "@/lib/cards/blocks/form";
+import { formPresets, type FormPreset } from "@/lib/cards/blocks/form-presets";
 import { nodeStyleCss } from "@/lib/cards/blocks/node-style";
 
 // Công cụ "Thành phần" trên thanh trái: các kiểu khối của CardMaking (lịch, album, bản đồ) dưới dạng thẻ có hình xem trước thật, bấm để thêm vào trang.
-// Mỗi nhóm chỉ hiện vài kiểu đầu (FEATURED) kèm nút "Xem tất cả" mở trang riêng của nhóm đó, để bảng không tràn khi có nhiều kiểu. Tên "Mẫu" để
-// dành cho mẫu cả tấm thiệp.
+// Nhóm "Biểu mẫu" khác các nhóm còn lại: chỉ có MỘT loại khối `Form` với ba bộ câu hỏi dựng sẵn (`formPresets`), nên thẻ của nhóm này là các mẫu chứ
+// không phải các loại. Mỗi nhóm khác chỉ hiện vài kiểu đầu (FEATURED) kèm nút "Xem tất cả" mở trang riêng của nhóm đó; nhóm mẫu hiện đủ ba thẻ.
+// Tên "Mẫu" để dành cho mẫu cả tấm thiệp.
 // Hình xem trước là chính khối đó vẽ ở chế độ "static" (không chạy hoạt ảnh, không tải bản đồ) rồi thu nhỏ vừa thẻ. Thư viện "Khối" mặc định của
 // Miditor chỉ có chữ và icon; bảng này không thay nó, chỉ thêm một cách chọn bằng mắt. Thêm kiểu mới vào `cardDefinitions` là bảng tự có thẻ.
 const SAMPLE_IMAGES = ["sample", "cld-sample", "cld-sample-2", "cld-sample-3", "cld-sample-4", "cld-sample-5"].map(
@@ -24,7 +27,10 @@ function sampleProps(type: string, def: ComponentDef) {
   return props;
 }
 
-function Thumb({ type, def }: { type: string; def: ComponentDef }) {
+// Một chỗ trong bảng: một loại khối, hoặc một bộ câu hỏi dựng sẵn của khối `Form`.
+type PanelItem = { kind: "block"; type: string; def: ComponentDef } | { kind: "preset"; preset: FormPreset };
+
+function Thumb({ type, def, props }: { type: string; def: ComponentDef; props: Record<string, unknown> }) {
   const { w, h } = def.size ?? { w: 340, h: 300 };
   const box = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.4);
@@ -43,18 +49,22 @@ function Thumb({ type, def }: { type: string; def: ComponentDef }) {
   return (
     <div ref={box} style={{ position: "relative", width: "100%", height: h * scale, overflow: "hidden", borderRadius: 8, background: "#fff", boxShadow: "inset 0 0 0 1px var(--miditor-border, #ece3e5)" }}>
       <div aria-hidden="true" inert style={{ position: "absolute", left: 0, top: 0, width: w, height: h, boxSizing: "border-box", transform: `scale(${scale})`, transformOrigin: "top left", pointerEvents: "none", ...nodeStyleCss(def.defaultStyles) }}>
-        {draw?.({ id: type, props: sampleProps(type, def) as never, device: "desktop", responsive: false, theme: undefined, metadata: STATIC_METADATA, children: null })}
+        {draw?.({ id: type, props: props as never, device: "desktop", responsive: false, theme: undefined, metadata: STATIC_METADATA, children: null })}
       </div>
     </div>
   );
 }
 
-// Các nhóm theo thứ tự xuất hiện đầu tiên trong `cardDefinitions`.
-function groups() {
-  const byCategory = new Map<string, [string, ComponentDef][]>();
+// Các nhóm theo thứ tự xuất hiện đầu tiên trong `cardDefinitions`. Gặp `Form` thì thay bằng nhóm mẫu: cùng một loại, ba bộ câu hỏi khác nhau.
+function groups(): [string, PanelItem[]][] {
+  const byCategory = new Map<string, PanelItem[]>();
   for (const [type, def] of Object.entries(cardDefinitions)) {
     const category = def.category ?? "Khác";
-    byCategory.set(category, [...(byCategory.get(category) ?? []), [type, def]]);
+    if (type === "Form") {
+      byCategory.set(category, formPresets.map((preset) => ({ kind: "preset", preset })));
+      continue;
+    }
+    byCategory.set(category, [...(byCategory.get(category) ?? []), { kind: "block", type, def }]);
   }
   return [...byCategory];
 }
@@ -83,29 +93,38 @@ const CSS = `
 @media (prefers-reduced-motion:reduce){.cm-tpl-card{transition:none}}
 `;
 
-function Card({ type, def, editor, drag }: { type: string; def: ComponentDef; editor: HostToolPanelProps["editor"]; drag: HostToolPanelProps["drag"] }) {
+function Card({ item, editor, drag }: { item: PanelItem; editor: HostToolPanelProps["editor"]; drag: HostToolPanelProps["drag"] }) {
+  const preset = item.kind === "preset" ? item.preset : null;
+  const type = item.kind === "preset" ? "Form" : item.type;
+  const def = item.kind === "preset" ? formBlock : item.def;
+  const label = item.kind === "preset" ? item.preset.label : item.def.label;
+  const props: Record<string, unknown> = item.kind === "preset" ? { ...def.defaultProps, ...item.preset.props } : sampleProps(type, def);
   // Thẻ là div có vai trò nút, không phải <button>: hình xem trước chứa nút thật (mũi tên, chấm của album), và nút không được lồng trong nút.
   return (
     <div
       role="button"
       tabIndex={0}
       className="cm-tpl-card"
-      aria-label={`Thêm ${def.label}`}
+      aria-label={`Thêm ${label}`}
+      title={preset?.description}
       // Bấm thì thêm; kéo ra canvas thì thả ở đâu khối vào đó (Miditor lo phần kéo, kể cả bỏ qua cú bấm kết thúc cú kéo).
-      onPointerDown={(event) => drag.press(event, type, def.label)}
+      // Thẻ mẫu chỉ bấm được: `drag.press` chỉ mang tên loại, kéo thả sẽ ra form mặc định chứ không phải bộ câu hỏi của mẫu.
+      onPointerDown={preset ? undefined : (event) => drag.press(event, type, label)}
       onClick={() => {
-        if (drag.wasDragged()) return;
-        editor.addBlock(type);
+        if (!preset && drag.wasDragged()) return;
+        if (preset) editor.addBlock("Form", { props: preset.props });
+        else editor.addBlock(type);
       }}
       onKeyDown={(event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          editor.addBlock(type);
+          if (preset) editor.addBlock("Form", { props: preset.props });
+          else editor.addBlock(type);
         }
       }}
     >
-      <Thumb type={type} def={def} />
-      <span className="cm-tpl-name">{def.label}</span>
+      <Thumb type={type} def={def} props={props} />
+      <span className="cm-tpl-name">{label}</span>
     </div>
   );
 }
@@ -127,8 +146,8 @@ export function ElementsPanel({ editor, drag }: HostToolPanelProps) {
           {group[0]}
         </button>
         <div className="cm-tpl-grid">
-          {group[1].map(([type, def]) => (
-            <Card key={type} type={type} def={def} editor={editor} drag={drag} />
+          {group[1].map((item) => (
+            <Card key={item.kind === "block" ? item.type : `preset-${item.preset.id}`} item={item} editor={editor} drag={drag} />
           ))}
         </div>
       </div>
@@ -138,23 +157,28 @@ export function ElementsPanel({ editor, drag }: HostToolPanelProps) {
   return (
     <div className="cm-tpl">
       <style>{CSS}</style>
-      {GROUPS.map(([category, items]) => (
-        <section key={category} aria-label={category}>
-          <div className="cm-tpl-head">
-            <h3>{category}</h3>
-            {items.length > FEATURED && (
-              <button type="button" className="cm-tpl-all" aria-label={`Xem tất cả ${items.length} kiểu ${category}`} onClick={() => setOpen(category)}>
-                Xem tất cả ({items.length})
-              </button>
-            )}
-          </div>
-          <div className="cm-tpl-grid">
-            {items.slice(0, FEATURED).map(([type, def]) => (
-              <Card key={type} type={type} def={def} editor={editor} drag={drag} />
-            ))}
-          </div>
-        </section>
-      ))}
+      {GROUPS.map(([category, items]) => {
+        // Nhóm mẫu biểu mẫu có đúng ba thẻ: hiện đủ, không có "Xem tất cả".
+        const presets = items.every((item) => item.kind === "preset");
+        const shown = presets ? items : items.slice(0, FEATURED);
+        return (
+          <section key={category} aria-label={category}>
+            <div className="cm-tpl-head">
+              <h3>{category}</h3>
+              {!presets && items.length > FEATURED && (
+                <button type="button" className="cm-tpl-all" aria-label={`Xem tất cả ${items.length} kiểu ${category}`} onClick={() => setOpen(category)}>
+                  Xem tất cả ({items.length})
+                </button>
+              )}
+            </div>
+            <div className="cm-tpl-grid">
+              {shown.map((item) => (
+                <Card key={item.kind === "block" ? item.type : `preset-${item.preset.id}`} item={item} editor={editor} drag={drag} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }
