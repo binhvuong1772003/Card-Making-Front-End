@@ -56,6 +56,23 @@ function GalleryStatusNote({ status, reason }: { status: "NONE" | "PENDING" | "R
   );
 }
 
+// Ô đặt đường dẫn, dùng cả lúc xuất bản lần đầu và khi đã xuất bản (đổi đường dẫn thì xuất bản lại).
+function SlugField({ id, value, onChange, placeholder, origin }: { id: string; value: string; onChange: (value: string) => void; placeholder: string; origin: string }) {
+  return (
+    <div className="flex h-12 items-center overflow-hidden rounded-2xl border border-input bg-page focus-within:ring-3 focus-within:ring-ring/50">
+      <span className="pr-1 pl-4 text-sm whitespace-nowrap text-muted-foreground">{origin.replace(/^https?:\/\//, "")}/thiep/</span>
+      <input
+        id={id}
+        value={value}
+        onChange={(event) => onChange(event.target.value.toLowerCase())}
+        placeholder={placeholder}
+        maxLength={60}
+        className="h-full min-w-0 flex-1 bg-transparent pr-3 text-[15px] outline-none placeholder:text-muted-foreground"
+      />
+    </div>
+  );
+}
+
 export function PublishDialog({
   cardId,
   open,
@@ -75,6 +92,8 @@ export function PublishDialog({
   const queryClient = useQueryClient();
   const publication = usePublication(cardId, open);
   const [slug, setSlug] = useState("");
+  // Đã xuất bản: đường dẫn đang sửa (null là chưa đụng tới, giữ đường dẫn hiện có).
+  const [liveSlug, setLiveSlug] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [galleryChoice, setGalleryChoice] = useState<boolean | null>(null);
   const origin = typeof window === "undefined" ? "" : window.location.origin;
@@ -82,16 +101,22 @@ export function PublishDialog({
   const link = live ? `${origin}/thiep/${live.slug}` : "";
   // Công tắc thư viện: theo lựa chọn của người dùng, chưa chọn thì theo trạng thái đang có.
   const gallery = galleryChoice ?? live?.listInGallery ?? false;
+  const wantedLiveSlug = (liveSlug ?? live?.slug ?? "").trim();
+  const liveSlugChanged = !!live && wantedLiveSlug !== live.slug;
+  const liveSlugOk = !liveSlugChanged || isValidSlug(wantedLiveSlug);
 
   const refresh = () => queryClient.invalidateQueries({ queryKey: publicationKey(cardId) });
   const publish = useMutation({
     mutationFn: async () => {
       await flushDraft();
-      return cardsApi.publish(cardId, slug.trim() || undefined, gallery);
+      // Đã xuất bản thì chỉ gửi đường dẫn khi nó đổi (gửi lại chính đường dẫn cũ không cần thiết).
+      const wanted = live ? (liveSlugChanged ? wantedLiveSlug : undefined) : slug.trim() || undefined;
+      return cardsApi.publish(cardId, wanted, gallery);
     },
     onSuccess: () => {
       setError(null);
       setGalleryChoice(null);
+      setLiveSlug(null);
       toast.success(gallery ? "Đã xuất bản và gửi duyệt." : "Đã xuất bản thiệp.");
       return refresh();
     },
@@ -101,6 +126,7 @@ export function PublishDialog({
     mutationFn: () => cardsApi.unpublish(cardId),
     onSuccess: () => {
       setSlug("");
+      setLiveSlug(null);
       setGalleryChoice(null);
       toast.success("Đã gỡ trang công khai.");
       return refresh();
@@ -145,6 +171,30 @@ export function PublishDialog({
                 <CopyIcon className="size-[18px]" /> Sao chép
               </Button>
             </div>
+            {isOwner && (
+              <div className="flex flex-col gap-2">
+                <label htmlFor="live-slug" className="text-[13px] font-semibold">
+                  Đường dẫn
+                </label>
+                <SlugField
+                  id="live-slug"
+                  value={liveSlug ?? live.slug}
+                  onChange={(value) => {
+                    setLiveSlug(value);
+                    setError(null);
+                  }}
+                  placeholder={live.slug}
+                  origin={origin}
+                />
+                {!liveSlugOk ? (
+                  <p className="text-sm text-destructive">{SLUG_HELP}</p>
+                ) : liveSlugChanged ? (
+                  <p className="text-[13px] text-muted-foreground">Đổi đường dẫn thì liên kết cũ ngừng mở được. Khách đã nhận liên kết cũ cần liên kết mới.</p>
+                ) : (
+                  <p className="text-[13px] text-muted-foreground">Sửa rồi bấm Xuất bản lại để đổi đường dẫn.</p>
+                )}
+              </div>
+            )}
             {isOwner && <GallerySwitch checked={gallery} onChange={setGalleryChoice} disabled={publish.isPending} />}
             <GalleryStatusNote status={live.galleryStatus} reason={live.galleryRejectReason} />
             {error && <p className="text-sm text-destructive">{error}</p>}
@@ -153,7 +203,7 @@ export function PublishDialog({
                 <Button type="button" variant="ghost" disabled={unpublish.isPending} className="h-11 rounded-full px-5 text-destructive hover:bg-destructive/10" onClick={() => unpublish.mutate()}>
                   Gỡ xuất bản
                 </Button>
-                <Button type="button" disabled={publish.isPending || !hasContent} className="h-11 rounded-full px-5 font-semibold" onClick={() => publish.mutate()}>
+                <Button type="button" disabled={publish.isPending || !hasContent || !liveSlugOk} className="h-11 rounded-full px-5 font-semibold" onClick={() => publish.mutate()}>
                   {gallery && live.galleryStatus !== "LIVE" ? "Xuất bản lại và gửi duyệt" : "Xuất bản lại"}
                 </Button>
               </DialogFooter>
@@ -176,20 +226,16 @@ export function PublishDialog({
               <label htmlFor="publish-slug" className="text-[13px] font-semibold">
                 Đường dẫn
               </label>
-              <div className="flex h-12 items-center overflow-hidden rounded-2xl border border-input bg-page focus-within:ring-3 focus-within:ring-ring/50">
-                <span className="pr-1 pl-4 text-sm whitespace-nowrap text-muted-foreground">{origin.replace(/^https?:\/\//, "")}/thiep/</span>
-                <input
-                  id="publish-slug"
-                  value={slug}
-                  onChange={(event) => {
-                    setSlug(event.target.value.toLowerCase());
-                    setError(null);
-                  }}
-                  placeholder="tự đặt theo tên thiệp"
-                  maxLength={60}
-                  className="h-full min-w-0 flex-1 bg-transparent pr-3 text-[15px] outline-none placeholder:text-muted-foreground"
-                />
-              </div>
+              <SlugField
+                id="publish-slug"
+                value={slug}
+                onChange={(value) => {
+                  setSlug(value);
+                  setError(null);
+                }}
+                placeholder="tự đặt theo tên thiệp"
+                origin={origin}
+              />
               {error ? <p className="text-sm text-destructive">{error}</p> : <p className="text-[13px] text-muted-foreground">Bỏ trống để tự đặt theo tên thiệp.</p>}
               {!hasContent && <p className="text-sm text-destructive">Thêm nội dung vào thiệp trước khi xuất bản.</p>}
             </div>
