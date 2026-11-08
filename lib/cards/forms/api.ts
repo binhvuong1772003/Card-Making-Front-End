@@ -2,8 +2,7 @@ import { API_URL } from "@/lib/api/config";
 import { ApiError, type ApiErrorCode } from "@/lib/api/errors";
 
 // Form công khai của thiệp gọi thẳng CMBE bằng JSON, không cookie: không dùng `apiFetch` vì hàm đó gắn /api/v1 cho các API đăng nhập và
-// refresh 401. Dùng chung một chỗ đọc lỗi để câu tiếng Việt của hai khối form khớp nhau.
-export type FieldErrors = Partial<Record<string, string>>;
+// refresh 401. Dùng chung một chỗ đọc lỗi để câu tiếng Việt của khối Biểu mẫu khớp nhau.
 
 interface ErrorBody {
   error?: { code?: ApiErrorCode; message?: string; details?: unknown };
@@ -31,26 +30,6 @@ export async function requestJson<T>(path: string, init: RequestInit, fetchImpl:
   }
 
   return (await res.json()) as T;
-}
-
-// Câu cạnh ô nhập khi CMBE báo đầu vào sai (400 kèm details dạng [{ path, message }]); đường dẫn lạ thì bỏ qua.
-const FIELD_MESSAGES: Record<string, string> = {
-  name: "Tên chưa đúng.",
-  attending: "Chọn một câu trả lời.",
-  guests: "Số khách chưa đúng.",
-  phone: "Số điện thoại chưa đúng.",
-  note: "Lời nhắn chưa đúng.",
-  message: "Lời chúc chưa đúng.",
-};
-
-export function formFieldErrors(err: unknown): FieldErrors {
-  if (!(err instanceof ApiError) || err.code !== "VALIDATION" || !Array.isArray(err.details)) return {};
-  const errors: FieldErrors = {};
-  for (const item of err.details as Array<{ path?: unknown }>) {
-    const path = item?.path;
-    if (typeof path === "string" && FIELD_MESSAGES[path]) errors[path] = FIELD_MESSAGES[path];
-  }
-  return errors;
 }
 
 // Câu chung cho một lần gửi hỏng. 409 mang lý do trong `details.reason` để phân biệt thiệp đã đủ chỗ với form đã hết hạn.

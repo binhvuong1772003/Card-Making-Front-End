@@ -3,10 +3,12 @@ import type { Renderer } from "@miditor/render";
 import { AlbumView, type AlbumMode } from "@/components/blocks/album-view";
 import { AlbumGridView, AlbumPolaroidView, AlbumStripView } from "@/components/blocks/album-layouts";
 import { CalendarView } from "@/components/blocks/calendar-view";
+import { FormView } from "@/components/blocks/form-view";
 import { MapView } from "@/components/blocks/map-view";
 import { albumBlock, cleanImages } from "./album";
 import { cardDefinitions } from "./definitions";
 import { calendarDefinitions, MARK_SHAPES } from "./calendar";
+import { cleanFields, cleanPublicList } from "../forms/fields";
 
 // Các khối riêng của CardMaking: định nghĩa (dữ liệu thuần, cho editor và backend) và cách vẽ (cho Render).
 export const cardComponents = cardDefinitions;
@@ -18,6 +20,12 @@ export const STATIC_METADATA = { mode: "static" } as const;
 const modeOf = (metadata: unknown): AlbumMode => {
   const mode = metadata && typeof metadata === "object" ? (metadata as { mode?: unknown }).mode : undefined;
   return mode === "edit" || mode === "static" ? mode : "live";
+};
+
+// Slug của thiệp: chỉ trang công khai mới truyền vào metadata; nơi khác (editor, trang mẫu, ảnh thu nhỏ) form chỉ để xem.
+const slugOf = (metadata: unknown): string => {
+  const slug = metadata && typeof metadata === "object" ? (metadata as { slug?: unknown }).slug : undefined;
+  return typeof slug === "string" ? slug : "";
 };
 
 const number = (value: unknown, fallback: number, min: number, max: number): number =>
@@ -96,21 +104,22 @@ const renderAlbumPolaroid: Renderer = ({ props, metadata, theme }) => (
   <AlbumPolaroidView {...common(props, metadata, 2)} columns={Math.round(number(props.columns, 2, 1, 3))} tilt={number(props.tilt, 5, 0, 12)} frameColor={paint(props.frameColor, "#ffffff", theme)} />
 );
 
-// Form gửi thẳng lên CMBE nên cuối cùng sẽ cần biết mình là khối nào (`id` của nút) và thiệp nào (`slug` chỉ có ở trang công khai).
-// Bước 9 thay chỗ này bằng `FormView` thật; trước đó giữ một khung tối thiểu để bảng Thành phần và ảnh thu nhỏ vẫn có hình.
-const renderForm: Renderer = ({ props, theme }) => (
-  <div
-    style={{
-      color: paint(props.color, "#511419", theme),
-      padding: number(props.padding, 16, 0, 40),
-      font: "inherit",
-      textAlign: "center",
-      fontWeight: 600,
-      lineHeight: 1.3,
-    }}
-  >
-    {text(props.heading, "Biểu mẫu")}
-  </div>
+// Form gửi thẳng lên CMBE nên cần biết mình là khối nào (`id` của nút) và thiệp nào (`slug` chỉ có trên trang công khai).
+const renderForm: Renderer = ({ id, props, metadata, theme }) => (
+  <FormView
+    blockId={id}
+    slug={slugOf(metadata)}
+    heading={text(props.heading, "Biểu mẫu")}
+    intro={text(props.intro, "")}
+    button={text(props.button, "Gửi")}
+    success={text(props.success, "Cảm ơn bạn đã gửi.")}
+    deadline={text(props.deadline, "")}
+    fields={cleanFields(props.fields)}
+    publicList={cleanPublicList(props.publicList)}
+    color={paint(props.color, "#511419", theme)}
+    padding={number(props.padding, 16, 0, 40)}
+    mode={modeOf(metadata)}
+  />
 );
 
 // Mỗi kiểu lịch là một loại khối riêng nhưng cùng một cách vẽ.

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ApiError } from "@/lib/api/errors";
-import { formErrorMessage, formFieldErrors } from "./api";
+import { formErrorMessage } from "./api";
 
 const error = (status: number, code: string, details?: unknown) =>
   new ApiError(status, code as ApiError["code"], code, details);
@@ -27,21 +27,5 @@ describe("formErrorMessage", () => {
   it("keeps a general sentence for bad input or an unknown failure", () => {
     expect(formErrorMessage(error(400, "VALIDATION"))).toBe("Thông tin chưa đúng, bạn kiểm tra lại.");
     expect(formErrorMessage(new Error("boom"))).toBe("Chưa gửi được, thử lại sau.");
-  });
-});
-
-describe("formFieldErrors", () => {
-  it("puts a server validation error beside the field it names", () => {
-    const err = error(400, "VALIDATION", [
-      { path: "name", message: "Too small" },
-      { path: "attending", message: "Invalid enum value" },
-    ]);
-    expect(formFieldErrors(err)).toEqual({ name: "Tên chưa đúng.", attending: "Chọn một câu trả lời." });
-  });
-
-  it("leaves out paths it does not know and errors that are not validation errors", () => {
-    expect(formFieldErrors(error(400, "VALIDATION", [{ path: "blockId", message: "x" }]))).toEqual({});
-    expect(formFieldErrors(error(429, "RATE_LIMITED"))).toEqual({});
-    expect(formFieldErrors(new Error("boom"))).toEqual({});
   });
 });

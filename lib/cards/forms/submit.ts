@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { ApiError } from "@/lib/api/errors";
-import { requestJson, type FieldErrors } from "./api";
-import type { Answers, Field } from "./fields";
+import { requestJson } from "./api";
+import type { Answers, AnswerErrors, Field } from "./fields";
 
 // Gửi câu trả lời của khối Form lên CMBE và tải sổ công khai. Hàm thuần (nhận `fetch` tiêm vào) để test được; phần vẽ ở
 // `components/blocks/form-view.tsx`. Backend đã kiểm lại mọi câu trả lời, phần này chỉ để khách thấy lỗi ngay.
@@ -63,9 +63,9 @@ export async function fetchEntries(input: FormEntriesRequest, fetchImpl: typeof 
 
 // Lỗi 400 của CMBE mang `details` là `[{ path: mã ô, message: câu tiếng Anh }]`. Chỉ lấy mã ô (để hiện đúng dưới ô đó) và
 // dùng câu tiếng Việt của mình; câu của backend có thể đổi mà giao diện thì không nên đổi theo.
-export function serverFieldErrors(err: unknown, fields: readonly Field[]): FieldErrors {
+export function serverFieldErrors(err: unknown, fields: readonly Field[]): AnswerErrors {
   if (!(err instanceof ApiError) || err.code !== "VALIDATION" || !Array.isArray(err.details)) return {};
-  const errors: FieldErrors = {};
+  const errors: AnswerErrors = {};
   for (const item of err.details as Array<{ path?: unknown }>) {
     const path = item?.path;
     if (typeof path === "string" && fields.some((field) => field.id === path)) errors[path] = "Chưa đúng, bạn kiểm tra lại.";
