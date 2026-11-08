@@ -127,6 +127,16 @@ export function cleanFields(raw: unknown): Field[] {
   return fields;
 }
 
+/** Đọc prop `publicList` (đối tượng lồng, có thể đến từ thiệp lưu từ bản cũ): thiếu hay hỏng thì về trạng thái tắt. */
+export function cleanPublicList(raw: unknown): PublicList {
+  const record = isRecord(raw) ? raw : {};
+  return {
+    enabled: record.enabled === true,
+    nameFieldId: typeof record.nameFieldId === "string" ? record.nameFieldId : "",
+    textFieldId: typeof record.textFieldId === "string" ? record.textFieldId : "",
+  };
+}
+
 /** Một ô mới dùng được ngay, với mã chưa trùng ô nào trong form. */
 export function newField(type: FieldType, existingIds: readonly string[]): Field {
   const taken = new Set(existingIds);

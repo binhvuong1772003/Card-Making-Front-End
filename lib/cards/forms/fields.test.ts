@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   answerPayload,
   cleanFields,
+  cleanPublicList,
   duplicateField,
   isClosed,
   moveField,
@@ -53,6 +54,14 @@ describe("cleanFields", () => {
   it("stops at twenty questions", () => {
     const raw = Array.from({ length: 25 }, (_, i) => ({ id: `q${i}`, type: "text", label: `Câu ${i}`, required: false }));
     expect(cleanFields(raw)).toHaveLength(20);
+  });
+});
+
+describe("cleanPublicList", () => {
+  it("reads a public list and falls back to off when the prop is missing or broken", () => {
+    expect(cleanPublicList({ enabled: true, nameFieldId: "name", textFieldId: "message" })).toEqual({ enabled: true, nameFieldId: "name", textFieldId: "message" });
+    expect(cleanPublicList(undefined)).toEqual({ enabled: false, nameFieldId: "", textFieldId: "" });
+    expect(cleanPublicList({ enabled: "yes", nameFieldId: 3 })).toEqual({ enabled: false, nameFieldId: "", textFieldId: "" });
   });
 });
 

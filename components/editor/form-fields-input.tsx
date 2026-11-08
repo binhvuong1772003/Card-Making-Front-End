@@ -9,6 +9,7 @@ import { useEditor } from "@miditor/editor";
 import { useMemo, useState } from "react";
 import {
   cleanFields,
+  cleanPublicList,
   duplicateField,
   FIELD_TYPES,
   MAX_FIELDS,
@@ -113,15 +114,6 @@ function blockProps(node: TreeNode, id: string): Record<string, unknown> | null 
     if (found) return found;
   }
   return null;
-}
-
-function publicListOf(raw: unknown): PublicList {
-  const record = typeof raw === "object" && raw !== null ? (raw as Record<string, unknown>) : {};
-  return {
-    enabled: record.enabled === true,
-    nameFieldId: typeof record.nameFieldId === "string" ? record.nameFieldId : "",
-    textFieldId: typeof record.textFieldId === "string" ? record.textFieldId : "",
-  };
 }
 
 interface RowProps {
@@ -297,7 +289,7 @@ function QuestionRow({ field, index, count, earlier, open, readOnly, blocked, on
 
 export function FormFieldsInput({ label, value, onChange, readOnly, nodeId }: CustomFieldProps) {
   const data = useEditor((view) => view.data);
-  const publicList = useMemo(() => publicListOf(blockProps(data.root, nodeId)?.publicList), [data, nodeId]);
+  const publicList = useMemo(() => cleanPublicList(blockProps(data.root, nodeId)?.publicList), [data, nodeId]);
 
   const [rows, setRows] = useState<Field[]>(() => cleanFields(value));
   const [openId, setOpenId] = useState<string | null>(null);
@@ -422,7 +414,7 @@ export function FormFieldsInput({ label, value, onChange, readOnly, nodeId }: Cu
 export function PublicListInput({ label, value, onChange, readOnly, nodeId }: CustomFieldProps) {
   const data = useEditor((view) => view.data);
   const choices = useMemo(() => cleanFields(blockProps(data.root, nodeId)?.fields).filter((field) => field.type === "text" || field.type === "longtext"), [data, nodeId]);
-  const list = publicListOf(value);
+  const list = cleanPublicList(value);
   const commit = (changes: Partial<PublicList>) => onChange({ ...list, ...changes } as unknown as JsonValue);
   const gone = (id: string) => id !== "" && !choices.some((field) => field.id === id);
 
