@@ -27,7 +27,15 @@ async function PublishedCard({ params }: Pick<PageProps<"/thiep/[slug]">, "param
   const { slug } = await params;
   const page = await getPage(slug);
   if (!page) notFound();
-  return <Render data={page.document as unknown as PageData} renderers={cardRenderers} responsive={{ scale: true }} />;
+  // `slug` cho khối form biết gửi lên thiệp nào; nơi khác (editor, trang mẫu, ảnh thu nhỏ) không truyền nên form chỉ để xem.
+  return (
+    <Render
+      data={page.document as unknown as PageData}
+      renderers={cardRenderers}
+      responsive={{ scale: true }}
+      metadata={{ mode: "live", slug }}
+    />
+  );
 }
 
 export default function PublishedRoute({ params }: PageProps<"/thiep/[slug]">) {
