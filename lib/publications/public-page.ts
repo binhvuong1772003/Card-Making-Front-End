@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { API_URL } from "../api/config";
+import { upgradePageDocument } from "../cards/forms/legacy";
 
 // Trang công khai của một thiệp đã xuất bản (REST không cần đăng nhập). `document` là PageData; Miditor tự kiểm khi dựng.
 const publicPage = z.object({
@@ -11,9 +12,11 @@ const publicPage = z.object({
 export type PublicPage = z.infer<typeof publicPage>;
 
 // Gọi từ máy chủ Next. 404 là "không có trang này" (null); lỗi khác ném ra để không nhầm một lần lỗi mạng với trang đã gỡ.
+// Trang xuất bản từ trước khi có khối `Form` còn khối `Rsvp`/`Guestbook`: nâng cấp ngay lúc đọc để Render không gặp loại lạ.
 export async function fetchPublicPage(slug: string, fetchImpl: typeof fetch = fetch): Promise<PublicPage | null> {
   const res = await fetchImpl(`${API_URL}/api/v1/publications/${encodeURIComponent(slug)}`, { cache: "no-store" });
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(`Public page request failed with ${res.status}`);
-  return publicPage.parse(await res.json());
+  const page = publicPage.parse(await res.json());
+  return { ...page, document: upgradePageDocument(page.document) };
 }

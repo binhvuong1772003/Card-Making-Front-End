@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { apiFetch } from '@/lib/api';
+import { upgradePageDocument } from './forms/legacy';
 import type { Occasion } from './occasions';
 
 const role = z.enum(['OWNER', 'EDITOR', 'VIEWER']);
@@ -60,7 +61,9 @@ export const cardsApi = {
   get: async (id: string, signal?: AbortSignal): Promise<CardDetail> => {
     const { card } = z.object({ card: cardDetail.nullable() }).parse(await apiFetch.graphql(GET, { id }, signal));
     if (!card) throw new Error('Card not found');
-    return card;
+    // Editor và trang xem trước đều tải thiệp qua đây: thiệp lưu từ trước khi có khối `Form` được nâng cấp (Rsvp/Guestbook → Form)
+    // ngay khi mở, để Miditor không gặp loại khối lạ.
+    return { ...card, document: upgradePageDocument(card.document) };
   },
 
   create: async (title: string, occasion?: Occasion): Promise<string> =>
