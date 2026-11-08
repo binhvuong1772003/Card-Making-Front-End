@@ -2,8 +2,7 @@ import type { ComponentDef } from "@miditor/core";
 import { albumDefinitions } from "./album";
 import { calendarDefinitions, RETIRED_CALENDAR_PROPS } from "./calendar";
 import { mapBlock, RETIRED_MAP_PROPS } from "./map";
-import { guestbookBlock } from "./guestbook";
-import { rsvpBlock } from "./rsvp";
+import { formBlock } from "./form";
 
 // Mọi loại khối riêng của CardMaking (dữ liệu thuần, không có React): thứ tự ở đây là thứ tự trong bảng "Thành phần". Editor dùng nó, và CMBE nhận
 // bản sinh ra từ đây bằng `npm run blocks:export` để kiểm trang; bài test `definitions.test.ts` báo nếu bản của CMBE đã cũ.
@@ -12,8 +11,7 @@ import { rsvpBlock } from "./rsvp";
 const raw: Record<string, ComponentDef> = {
   ...albumDefinitions,
   Map: mapBlock,
-  Rsvp: rsvpBlock,
-  Guestbook: guestbookBlock,
+  Form: formBlock,
   ...calendarDefinitions,
 };
 
