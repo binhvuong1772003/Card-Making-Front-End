@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { cardRenderers, STATIC_METADATA } from "@/lib/cards/blocks";
 import { cardDefinitions } from "@/lib/cards/blocks/definitions";
 import { formBlock } from "@/lib/cards/blocks/form";
+import { newFormId } from "@/lib/cards/forms/form-id";
 import { formPresets, type FormPreset } from "@/lib/cards/blocks/form-presets";
 import { nodeStyleCss } from "@/lib/cards/blocks/node-style";
 
@@ -112,13 +113,13 @@ function Card({ item, editor, drag }: { item: PanelItem; editor: HostToolPanelPr
       onPointerDown={preset ? undefined : (event) => drag.press(event, type, label)}
       onClick={() => {
         if (!preset && drag.wasDragged()) return;
-        if (preset) editor.addBlock("Form", { props: preset.props });
+        if (preset) editor.addBlock("Form", { props: { ...preset.props, formId: newFormId() } });
         else editor.addBlock(type);
       }}
       onKeyDown={(event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          if (preset) editor.addBlock("Form", { props: preset.props });
+          if (preset) editor.addBlock("Form", { props: { ...preset.props, formId: newFormId() } });
           else editor.addBlock(type);
         }
       }}

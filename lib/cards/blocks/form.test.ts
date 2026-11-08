@@ -13,6 +13,7 @@ function pageWith(props: Record<string, unknown> = {}): PageData {
 
 // CMBE (`responses.config.ts` + `form-fields.ts`) đọc đúng những thuộc tính này từ bản đã xuất bản.
 const READ_BY_SERVER = {
+  formId: "custom",
   heading: "text",
   intro: "text",
   button: "text",
@@ -26,6 +27,11 @@ const READ_BY_SERVER = {
 } as const;
 
 describe("the Form block", () => {
+  it("keeps a page with a formId valid, and starts with none (the elements panel fills it in)", () => {
+    expect(formBlock.defaultProps.formId).toBe("");
+    expect(validatePage(registry, pageWith({ formId: "f0a1b2c3d4" }))).toEqual([]);
+  });
+
   it("has a definition the registry check accepts", () => {
     expect(validateRegistry(registry)).toEqual([]);
   });

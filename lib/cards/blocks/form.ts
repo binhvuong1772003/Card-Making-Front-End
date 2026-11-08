@@ -16,6 +16,9 @@ const publicList = {
   help: "Bật thì lời trả lời hiện công khai dưới form.",
 } as const;
 
+// Mã ẩn của form (xem `lib/cards/forms/form-id.ts`): rỗng trong mặc định, bảng Thành phần điền mã ngẫu nhiên khi thêm form.
+const formId = { type: "custom", kind: "form-id", label: "Mã form", group: "Nội dung" } as const;
+
 const DEFAULT_FIELDS: Field[] = [{ id: "name", type: "text", label: "Họ và tên", required: true }];
 
 export const formBlock: ComponentDef = {
@@ -27,6 +30,7 @@ export const formBlock: ComponentDef = {
   size: { w: 380, h: 560 },
   canContain: false,
   defaultProps: {
+    formId: "",
     heading: "Biểu mẫu",
     intro: "",
     button: "Gửi",
@@ -40,6 +44,7 @@ export const formBlock: ComponentDef = {
   },
   defaultStyles: { borderWidth: 1, borderColor: "#511419", borderRadius: 4 },
   fields: {
+    formId,
     heading: { type: "text", label: "Tiêu đề", maxLength: 80, group: "Nội dung", help: "Để trống thì ẩn." },
     intro: { type: "text", label: "Lời dẫn", maxLength: 300, multiline: true, group: "Nội dung", help: "Để trống thì ẩn." },
     button: { type: "text", label: "Chữ nút", maxLength: 40, group: "Nội dung" },

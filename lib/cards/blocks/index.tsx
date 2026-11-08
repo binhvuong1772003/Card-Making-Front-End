@@ -8,6 +8,7 @@ import { MapView } from "@/components/blocks/map-view";
 import { albumBlock, cleanImages } from "./album";
 import { cardDefinitions } from "./definitions";
 import { calendarDefinitions, MARK_SHAPES } from "./calendar";
+import { formKeyOf } from "@/lib/cards/forms/form-id";
 import { cleanFields, cleanPublicList } from "../forms/fields";
 
 // Các khối riêng của CardMaking: định nghĩa (dữ liệu thuần, cho editor và backend) và cách vẽ (cho Render).
@@ -104,10 +105,10 @@ const renderAlbumPolaroid: Renderer = ({ props, metadata, theme }) => (
   <AlbumPolaroidView {...common(props, metadata, 2)} columns={Math.round(number(props.columns, 2, 1, 3))} tilt={number(props.tilt, 5, 0, 12)} frameColor={paint(props.frameColor, "#ffffff", theme)} />
 );
 
-// Form gửi thẳng lên CMBE nên cần biết mình là khối nào (`id` của nút) và thiệp nào (`slug` chỉ có trên trang công khai).
+// Form gửi thẳng lên CMBE nên cần biết mình là form nào (khoá `formId`, không có thì id của nút) và thiệp nào (`slug` chỉ có trên trang công khai).
 const renderForm: Renderer = ({ id, props, metadata, theme }) => (
   <FormView
-    blockId={id}
+    blockId={formKeyOf(props.formId, id)}
     slug={slugOf(metadata)}
     heading={text(props.heading, "Biểu mẫu")}
     intro={text(props.intro, "")}
