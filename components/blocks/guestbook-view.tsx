@@ -47,7 +47,8 @@ export function GuestbookView(props: GuestbookViewProps) {
   const [entries, setEntries] = useState<GuestbookEntry[]>([]);
   const [cursor, setCursor] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // Bắt đầu ở trạng thái "đang tải": tránh đặt state ngay trong effect và tránh nháy "chưa có lời chúc" trước lần tải đầu.
+  const [loading, setLoading] = useState(true);
   const [more, setMore] = useState(false);
   const [sending, setSending] = useState(false);
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -58,9 +59,6 @@ export function GuestbookView(props: GuestbookViewProps) {
   useEffect(() => {
     if (!live) return;
     let cancelled = false;
-    setLoading(true);
-    setNotice("");
-    setFailed(false);
     fetchGuestbook({ slug: props.slug, blockId: props.blockId, first: props.pageSize })
       .then((page) => {
         if (cancelled) return;

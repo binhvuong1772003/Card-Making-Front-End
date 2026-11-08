@@ -65,6 +65,7 @@ export function RsvpView(props: RsvpViewProps) {
 
   // Hạn và lời nhắc "đã gửi" đọc sau khi gắn vào trình duyệt: đọc lúc dựng phía server thì giờ máy chủ khác giờ khách và React báo lệch hydration.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- hạn và lời nhắc chỉ đọc được trong trình duyệt; đặt vào state sau khi gắn là cách duy nhất không lệch hydration.
     if (live) setClosed(isClosed(props.deadline, new Date()));
   }, [live, props.deadline]);
 
@@ -72,6 +73,7 @@ export function RsvpView(props: RsvpViewProps) {
     if (!live) return;
     try {
       const saved = window.localStorage.getItem(storageKey(props.slug, props.blockId));
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage không có phía server: đọc sau khi gắn để server và trình duyệt dựng giống nhau.
       if (isAnswer(saved)) setSent(saved);
     } catch {
       // Trình duyệt chặn localStorage: chỉ mất lời nhắc, form vẫn chạy.
@@ -245,7 +247,6 @@ export function RsvpView(props: RsvpViewProps) {
                   checked={values.attending === answer.value}
                   onChange={() => set("attending", answer.value)}
                   disabled={!live || sending}
-                  aria-invalid={errors.attending ? true : undefined}
                   aria-describedby={describedBy("attending")}
                   style={{ accentColor: color, width: 18, height: 18, margin: 0 }}
                 />

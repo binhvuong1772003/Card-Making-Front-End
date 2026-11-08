@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from "vitest";
-import { ApiError } from "@/lib/api/errors";
 import { API_URL } from "@/lib/api/config";
 import { isClosed, submitRsvp, validateRsvp, type RsvpConfig, type RsvpValues } from "./rsvp";
 
