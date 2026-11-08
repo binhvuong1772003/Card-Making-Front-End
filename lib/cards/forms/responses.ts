@@ -38,6 +38,8 @@ export type StoredAnswer = z.infer<typeof answer>;
 export const formResponse = z.object({
   id: z.string(),
   blockId: z.string(),
+  // Bản xuất bản mà khách đã điền qua; null với phản hồi từ trước khi có nhiều bản.
+  publicationId: z.string().nullable(),
   answers: z.array(answer),
   status: responseStatus,
   createdAt: z.string(),
@@ -111,4 +113,17 @@ export function columnsOf(form: CardForm | undefined, rows: readonly FormRespons
 /** Ô câu hỏi trong bảng có phải loại nên tô chip không (đáp án ngắn, đếm được). */
 export function isChipType(type: string): boolean {
   return type === "choice" || type === "yesno";
+}
+
+/** Giá trị của bộ lọc liên kết khi không lọc. */
+export const ALL_LINKS = "ALL";
+
+/** Tên một liên kết (bản xuất bản) để hiện cho chủ thiệp: tên bản, không có thì slug. */
+export const linkName = (version: { label: string | null; slug: string }): string => version.label || version.slug;
+
+/** Liên kết mà một câu trả lời đến từ: tên bản; bản đã gỡ thì "Bản đã gỡ"; phản hồi cũ chưa ghi bản thì "—". */
+export function linkOfResponse(publicationId: string | null, versions: { id: string; label: string | null; slug: string }[]): string {
+  if (!publicationId) return "—";
+  const version = versions.find((item) => item.id === publicationId);
+  return version ? linkName(version) : "Bản đã gỡ";
 }

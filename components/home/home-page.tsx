@@ -130,7 +130,7 @@ function Recent() {
               </Link>
               <span className={cn("absolute top-3 left-3 inline-flex h-[26px] items-center gap-1.5 rounded-full bg-white/95 px-3 text-xs font-semibold", card.published ? "text-primary" : "text-muted-foreground")}>
                 <span aria-hidden="true" className={cn("size-[7px] rounded-full", card.published ? "bg-primary" : "bg-[#b9abae]")} />
-                {card.published ? "Đã xuất bản" : "Bản nháp"}
+                {card.published ? (card.publicationCount > 1 ? `Đã xuất bản · ${card.publicationCount} liên kết` : "Đã xuất bản") : "Bản nháp"}
               </span>
             </div>
             <div className="px-1">

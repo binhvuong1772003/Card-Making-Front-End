@@ -19,11 +19,12 @@ import { cn } from "@/lib/utils";
 const SHADOW = "shadow-[0_1px_2px_rgba(42,34,36,0.04),0_8px_24px_rgba(42,34,36,0.07)]";
 const PILL_BUTTON = "inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-[0_6px_16px_rgba(123,30,43,0.22)] transition-colors hover:bg-primary/90 disabled:opacity-60";
 
-function Status({ published, className }: { published: boolean; className?: string }) {
+// `count`: số bản đang công khai; từ hai bản trở lên thì nói rõ số liên kết.
+function Status({ published, count = 0, className }: { published: boolean; count?: number; className?: string }) {
   return (
     <span className={cn("inline-flex items-center gap-1.5 text-xs font-semibold", published ? "text-primary" : "text-muted-foreground", className)}>
       <span aria-hidden="true" className={cn("size-[7px] rounded-full", published ? "bg-primary" : "bg-[#b9abae]")} />
-      {published ? "Đã xuất bản" : "Bản nháp"}
+      {published ? (count > 1 ? `Đã xuất bản · ${count} liên kết` : "Đã xuất bản") : "Bản nháp"}
     </span>
   );
 }
@@ -35,7 +36,7 @@ function GridCard({ card }: { card: CardSummary }) {
         <Link href={`/cards/${card.id}`} aria-label={`Mở ${card.title}`} className={cn("block h-[280px] overflow-hidden rounded-[20px] transition-shadow group-hover:shadow-[0_2px_4px_rgba(42,34,36,0.06),0_18px_40px_rgba(42,34,36,0.14)]", SHADOW)}>
           <CardThumb title={card.title} occasion={card.occasion} className="size-full" />
         </Link>
-        <Status published={card.published} className="absolute top-3 left-3 h-[26px] rounded-full bg-white/95 px-3" />
+        <Status published={card.published} count={card.publicationCount} className="absolute top-3 left-3 h-[26px] rounded-full bg-white/95 px-3" />
         <div className="absolute top-3 right-3">
           <CardMenu card={card} triggerClassName="opacity-0 transition-opacity group-hover:opacity-100 focus-visible:opacity-100 aria-expanded:opacity-100" />
         </div>
@@ -62,7 +63,7 @@ function ListRow({ card }: { card: CardSummary }) {
         {card.title}
       </Link>
       <span className="w-24 flex-none text-[13px] text-muted-foreground">{OCCASION_LABEL[card.occasion]}</span>
-      <Status published={card.published} className="w-32 flex-none text-[13px]" />
+      <Status published={card.published} count={card.publicationCount} className="w-32 flex-none text-[13px]" />
       <span className="w-32 flex-none text-[13px] text-muted-foreground">{formatEdited(card.updatedAt)}</span>
       <CardMenu card={card} triggerClassName="bg-muted shadow-none" />
     </div>

@@ -14,6 +14,8 @@ const cardSummary = z.object({
   role,
   occasion,
   published: z.boolean(),
+  // Số bản xuất bản đang công khai (0 khi chưa xuất bản).
+  publicationCount: z.number().int(),
   updatedAt: z.string(),
 });
 
@@ -27,7 +29,12 @@ const cardDetail = z.object({
 });
 
 const publicationInfo = z.object({
+  id: z.string(),
   slug: z.string(),
+  // Tên bản do chủ thiệp đặt (chỉ chủ thiệp thấy).
+  label: z.string().nullable(),
+  // Bản chính: bản đang mở đầu tiên; thư viện công khai chỉ lấy bản này.
+  isMain: z.boolean(),
   publishedAt: z.string(),
   listInGallery: z.boolean(),
   // NONE: không gửi; PENDING: có bản chờ duyệt; REJECTED: bị từ chối (xem lý do); LIVE: đang hiện trong thư viện.
@@ -39,15 +46,16 @@ export type CardSummary = z.infer<typeof cardSummary>;
 export type CardDetail = z.infer<typeof cardDetail>;
 
 const LIST =
-  'query($occasion: CardOccasion, $search: String) { cards(first: 50, occasion: $occasion, search: $search) { nodes { id title revision role occasion published updatedAt } } }';
+  'query($occasion: CardOccasion, $search: String) { cards(first: 50, occasion: $occasion, search: $search) { nodes { id title revision role occasion published publicationCount updatedAt } } }';
 const GET = 'query($id: ID!) { card(id: $id) { id title revision role document } }';
 const CREATE = 'mutation($input: CreateCardInput!) { createCard(input: $input) { id } }';
 const RENAME = 'mutation($id: ID!, $title: String!) { updateCardTitle(id: $id, title: $title) { id title } }';
 const REMOVE = 'mutation($id: ID!) { deleteCard(id: $id) }';
-const PUBLICATION_FIELDS = 'slug publishedAt listInGallery galleryStatus galleryRejectReason';
-const PUBLICATION = `query($cardId: ID!) { publication(cardId: $cardId) { ${PUBLICATION_FIELDS} } }`;
-const PUBLISH = `mutation($id: ID!, $slug: String, $gallery: Boolean) { publishCard(id: $id, slug: $slug, listInGallery: $gallery) { ${PUBLICATION_FIELDS} } }`;
-const UNPUBLISH = 'mutation($id: ID!) { unpublishCard(id: $id) }';
+const PUBLICATION_FIELDS = 'id slug label isMain publishedAt listInGallery galleryStatus galleryRejectReason';
+const PUBLICATIONS = `query($cardId: ID!) { publications(cardId: $cardId) { ${PUBLICATION_FIELDS} } }`;
+const PUBLISH = `mutation($id: ID!, $slug: String, $gallery: Boolean, $publicationId: ID, $label: String) { publishCard(id: $id, slug: $slug, listInGallery: $gallery, publicationId: $publicationId, label: $label) { ${PUBLICATION_FIELDS} } }`;
+const UNPUBLISH_ONE = 'mutation($cardId: ID!, $publicationId: ID!) { unpublishPublication(cardId: $cardId, publicationId: $publicationId) }';
+const RESTORE_DRAFT = 'mutation($cardId: ID!, $publicationId: ID!) { restoreDraftFromPublication(cardId: $cardId, publicationId: $publicationId) }';
 const DUPLICATE = 'mutation($id: ID!) { duplicateCard(id: $id) { id } }';
 const SAVE =
   'mutation($id: ID!, $revision: Int!, $document: JSON!) { saveCardDocument(id: $id, revision: $revision, document: $document) { revision } }';
@@ -55,7 +63,7 @@ const SAVE =
 const CARD_HEADER = 'query($id: ID!) { card(id: $id) { id title role } }';
 const CARD_FORMS = 'query($cardId: ID!) { cardForms(cardId: $cardId) { blockId heading fields { id label type options } publicList moderation removed total pending } }';
 const FORM_RESPONSES =
-  'query($cardId: ID!, $blockId: String, $status: EntryStatus, $search: String, $first: Int, $after: String) { formResponses(cardId: $cardId, blockId: $blockId, status: $status, search: $search, first: $first, after: $after) { nodes { id blockId answers { id label type value } status createdAt } pageInfo { hasNextPage endCursor } summary { fieldId label type answered counts { option count } total } counts { visible hidden pending } } }';
+  'query($cardId: ID!, $blockId: String, $publicationId: ID, $status: EntryStatus, $search: String, $first: Int, $after: String) { formResponses(cardId: $cardId, blockId: $blockId, publicationId: $publicationId, status: $status, search: $search, first: $first, after: $after) { nodes { id blockId publicationId answers { id label type value } status createdAt } pageInfo { hasNextPage endCursor } summary { fieldId label type answered counts { option count } total } counts { visible hidden pending } } }';
 const DELETE_RESPONSE = 'mutation($id: ID!) { deleteFormResponse(id: $id) }';
 const SET_RESPONSE_STATUS = 'mutation($id: ID!, $status: EntryStatus!) { setFormResponseStatus(id: $id, status: $status) { id } }';
 
@@ -90,7 +98,7 @@ export const cardsApi = {
   // Một trang câu trả lời của một form, đã lọc và tìm phía server; `summary` và `counts` tính trên mọi dòng.
   responses: async (
     cardId: string,
-    args: { blockId: string; status?: ResponseStatus; search?: string; first?: number; after?: string },
+    args: { blockId: string; publicationId?: string; status?: ResponseStatus; search?: string; first?: number; after?: string },
     signal?: AbortSignal,
   ): Promise<ResponsesPage> =>
     z.object({ formResponses: responsesPage }).parse(await apiFetch.graphql(FORM_RESPONSES, { cardId, ...args }, signal)).formResponses,
@@ -114,18 +122,26 @@ export const cardsApi = {
     await apiFetch.graphql(REMOVE, { id });
   },
 
-  // Liên kết đang công khai của thiệp, hoặc null nếu chưa xuất bản hoặc đã gỡ.
-  publication: async (cardId: string, signal?: AbortSignal): Promise<PublicationInfo | null> =>
-    z.object({ publication: publicationInfo.nullable() }).parse(await apiFetch.graphql(PUBLICATION, { cardId }, signal)).publication,
+  // Các bản đang công khai của thiệp, bản chính đứng đầu; rỗng nếu chưa xuất bản hoặc đã gỡ hết.
+  publications: async (cardId: string, signal?: AbortSignal): Promise<PublicationInfo[]> =>
+    z.object({ publications: z.array(publicationInfo) }).parse(await apiFetch.graphql(PUBLICATIONS, { cardId }, signal)).publications,
 
-  // Xuất bản (hoặc xuất bản lại) bản nháp đã lưu; `slug` bỏ trống thì giữ slug cũ hoặc tự đặt từ tiêu đề.
-  // `listInGallery` bật thì gửi vào hàng chờ duyệt của thư viện công khai, tắt thì rút khỏi thư viện.
-  publish: async (id: string, slug?: string, listInGallery = false): Promise<PublicationInfo> =>
-    z.object({ publishCard: publicationInfo }).parse(await apiFetch.graphql(PUBLISH, { id, slug: slug || undefined, gallery: listInGallery })).publishCard,
+  // Chụp bản nháp đã lưu thành một bản công khai: có `publicationId` thì cập nhật bản đó (xuất bản lại, giữ slug nếu không đổi),
+  // không có thì tạo bản mới (tối đa 5 bản đang mở). `label` rỗng là bỏ tên, bỏ trống là giữ tên cũ. `listInGallery` chỉ có nghĩa
+  // với bản chính: bật thì gửi vào hàng chờ duyệt của thư viện công khai, tắt thì rút khỏi thư viện.
+  publish: async (id: string, options: { publicationId?: string; slug?: string; label?: string; listInGallery?: boolean } = {}): Promise<PublicationInfo> =>
+    z
+      .object({ publishCard: publicationInfo })
+      .parse(await apiFetch.graphql(PUBLISH, { id, slug: options.slug || undefined, label: options.label, publicationId: options.publicationId, gallery: options.listInGallery ?? false })).publishCard,
 
-  unpublish: async (id: string): Promise<void> => {
-    await apiFetch.graphql(UNPUBLISH, { id });
+  // Gỡ một bản: liên kết đó trả 404, các bản khác không đổi.
+  unpublish: async (cardId: string, publicationId: string): Promise<void> => {
+    await apiFetch.graphql(UNPUBLISH_ONE, { cardId, publicationId });
   },
+
+  // Nạp nội dung của một bản vào bản nháp (thay cả bản nháp). Trả `revision` mới.
+  restoreDraft: async (cardId: string, publicationId: string): Promise<number> =>
+    z.object({ restoreDraftFromPublication: z.number().int() }).parse(await apiFetch.graphql(RESTORE_DRAFT, { cardId, publicationId })).restoreDraftFromPublication,
 
   // Nhân bản vào thư viện của mình; trả id thiệp mới.
   duplicate: async (id: string): Promise<string> =>

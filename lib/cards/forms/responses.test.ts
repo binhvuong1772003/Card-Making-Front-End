@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { answerText, cardForm, chipTone, columnsOf, responsesPage, sentAt, summaryLine, type CardForm, type FormResponse } from "./responses";
+import { answerText, cardForm, chipTone, columnsOf, linkName, linkOfResponse, responsesPage, sentAt, summaryLine, type CardForm, type FormResponse } from "./responses";
 
 const form = (overrides: Partial<CardForm> = {}): CardForm => ({
   blockId: "b1",
@@ -19,6 +19,7 @@ const form = (overrides: Partial<CardForm> = {}): CardForm => ({
 const row = (id: string, answers: FormResponse["answers"], createdAt = "2026-11-07T03:04:00.000Z"): FormResponse => ({
   id,
   blockId: "b1",
+  publicationId: null,
   answers,
   status: "VISIBLE",
   createdAt,
@@ -116,5 +117,24 @@ describe("the GraphQL shapes", () => {
       }),
     ).not.toThrow();
     expect(() => responsesPage.parse({ nodes: [{ ...row("r1", []), status: "MAYBE" }], pageInfo: { hasNextPage: false, endCursor: null }, summary: [], counts: { visible: 0, hidden: 0, pending: 0 } })).toThrow();
+  });
+});
+
+describe("links of a card with several versions", () => {
+  const versions = [
+    { id: "p1", label: "Nhà trai", slug: "nha-trai" },
+    { id: "p2", label: null, slug: "ban-phu" },
+  ];
+
+  it("names a version by its label, or by its slug when it has none", () => {
+    expect(linkName(versions[0]!)).toBe("Nhà trai");
+    expect(linkName(versions[1]!)).toBe("ban-phu");
+  });
+
+  it("names the version an answer came through, and says so when it was taken down or never recorded", () => {
+    expect(linkOfResponse("p1", versions)).toBe("Nhà trai");
+    expect(linkOfResponse("p2", versions)).toBe("ban-phu");
+    expect(linkOfResponse("p9", versions)).toBe("Bản đã gỡ");
+    expect(linkOfResponse(null, versions)).toBe("—");
   });
 });

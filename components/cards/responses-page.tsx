@@ -11,8 +11,8 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { API_URL, isApiError } from "@/lib/api";
 import { errorMessage } from "@/lib/auth/messages";
 import { cardsApi } from "@/lib/cards/api";
-import { answerText, chipTone, columnsOf, isChipType, sentAt, summaryLine, type CardForm, type FormResponse, type ResponseColumn, type ResponseStatus } from "@/lib/cards/forms/responses";
-import { usePublication } from "@/lib/cards/use-publication";
+import { ALL_LINKS, answerText, chipTone, columnsOf, isChipType, linkName, linkOfResponse, sentAt, summaryLine, type CardForm, type FormResponse, type ResponseColumn, type ResponseStatus } from "@/lib/cards/forms/responses";
+import { usePublications } from "@/lib/cards/use-publication";
 import { cn } from "@/lib/utils";
 
 // Trang Phản hồi (bảng U): chủ thiệp và người sửa thiệp đọc, tìm, duyệt và xoá câu trả lời của mọi khối `Form`. Cần đăng nhập;
@@ -46,6 +46,8 @@ export function CardResponses({ id }: { id: string }) {
   const [typed, setTyped] = useState("");
   const [search, setSearch] = useState("");
   const [deleting, setDeleting] = useState<FormResponse | null>(null);
+  // Lọc theo liên kết (bản xuất bản): ALL_LINKS là mọi liên kết.
+  const [link, setLink] = useState<string>(ALL_LINKS);
 
   const header = useQuery({ queryKey: ["card-header", id], queryFn: ({ signal }) => cardsApi.header(id, signal), retry: false, refetchOnWindowFocus: false });
   const signedOut = isApiError(header.error, "UNAUTHENTICATED");
@@ -54,7 +56,9 @@ export function CardResponses({ id }: { id: string }) {
   }, [signedOut, router, id]);
 
   const canRead = header.data ? header.data.role !== "VIEWER" : false;
-  const publication = usePublication(id, canRead);
+  const publication = usePublications(id, canRead);
+  const versions = publication.data ?? [];
+  const hasManyLinks = versions.length > 1;
   const forms = useQuery({ queryKey: ["card-forms", id], queryFn: ({ signal }) => cardsApi.forms(id, signal), enabled: canRead, retry: false, refetchOnWindowFocus: false });
 
   const list = forms.data ?? [];
@@ -67,12 +71,13 @@ export function CardResponses({ id }: { id: string }) {
   }, [typed]);
 
   const responses = useInfiniteQuery({
-    queryKey: ["form-responses", id, selected?.blockId ?? "", status, search],
+    queryKey: ["form-responses", id, selected?.blockId ?? "", link, status, search],
     queryFn: ({ pageParam, signal }) =>
       cardsApi.responses(
         id,
         {
           blockId: selected!.blockId,
+          ...(link === ALL_LINKS ? {} : { publicationId: link }),
           ...(status === "ALL" ? {} : { status }),
           ...(search ? { search } : {}),
           first: PAGE,
@@ -124,7 +129,7 @@ export function CardResponses({ id }: { id: string }) {
     if (header.data.role === "VIEWER") return <p className="text-sm text-muted-foreground">Bạn chỉ có quyền xem thiệp này, không xem được phản hồi.</p>;
     if (publication.isPending) return <p className="text-sm text-muted-foreground">Đang tải...</p>;
     if (publication.isError) return <p className="text-sm text-destructive">{errorMessage(publication.error)}</p>;
-    if (!publication.data)
+    if (versions.length === 0)
       return (
         <div className={cn(CARD, "p-6 text-sm")}>
           <p className="font-semibold">Thiệp chưa được xuất bản.</p>
@@ -178,6 +183,22 @@ export function CardResponses({ id }: { id: string }) {
           )}
         </div>
 
+        {hasManyLinks && (
+          <div role="group" aria-label="Lọc theo liên kết" className="mt-4 inline-flex flex-wrap rounded-full border border-input bg-background p-0.5">
+            {[{ id: ALL_LINKS, name: "Mọi liên kết" }, ...versions.map((version) => ({ id: version.id, name: linkName(version) }))].map((option) => (
+              <button
+                key={option.id}
+                type="button"
+                aria-pressed={link === option.id}
+                onClick={() => setLink(option.id)}
+                className={cn("inline-flex h-10 max-w-[200px] items-center rounded-full px-3.5 text-sm", link === option.id ? "bg-muted font-semibold text-accent-foreground" : "font-medium hover:bg-muted")}
+              >
+                <span className="truncate">{option.name}</span>
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="mt-4 flex flex-wrap items-center gap-2">
           <label className="flex h-11 min-w-[220px] flex-1 items-center gap-2 rounded-full bg-background px-4 text-muted-foreground shadow-[0_1px_2px_rgba(42,34,36,0.04)]">
             <MagnifyingGlassIcon className="size-[18px] flex-none" />
@@ -202,7 +223,7 @@ export function CardResponses({ id }: { id: string }) {
               ở dev hai bên cùng site localhost, và đây là điều hướng cấp trang nên cookie SameSite=Lax vẫn đi. Tên tệp
               do backend đặt qua `Content-Disposition`, nên `download` không cần mang tên. */}
           <a
-            href={`${API_URL}/api/v1/cards/${id}/forms/${encodeURIComponent(selected.blockId)}/responses.csv`}
+            href={`${API_URL}/api/v1/cards/${id}/forms/${encodeURIComponent(selected.blockId)}/responses.csv${link === ALL_LINKS ? "" : `?publicationId=${link}`}`}
             download
             className={cn(buttonVariants({ variant: "outline" }), "h-11 rounded-full px-4")}
           >
@@ -219,6 +240,11 @@ export function CardResponses({ id }: { id: string }) {
                     {column.label}
                   </th>
                 ))}
+                {hasManyLinks && (
+                  <th scope="col" className="px-4 py-3 font-semibold whitespace-nowrap">
+                    Liên kết
+                  </th>
+                )}
                 <th scope="col" className="px-4 py-3 font-semibold whitespace-nowrap">
                   Gửi lúc
                 </th>
@@ -235,6 +261,7 @@ export function CardResponses({ id }: { id: string }) {
                       <Answer column={column} row={row} />
                     </td>
                   ))}
+                  {hasManyLinks && <td className="max-w-[180px] truncate px-4 py-3 align-top whitespace-nowrap">{linkOfResponse(row.publicationId, versions)}</td>}
                   <td className="px-4 py-3 align-top whitespace-nowrap text-muted-foreground">
                     {sentAt(row.createdAt)}
                     {selected.publicList && <span className={cn("ml-2 rounded-full px-2 py-0.5 text-xs font-semibold", stateLabel(row.status) ? "bg-muted text-primary" : "bg-[#eef4ec] text-[#3f6b46]")}>{stateLabel(row.status) ?? "Hiện"}</span>}

@@ -2,26 +2,22 @@
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { CopyIcon } from "@phosphor-icons/react";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { isApiError } from "@/lib/api";
 import { errorMessage } from "@/lib/auth/messages";
-import { cardsApi } from "@/lib/cards/api";
-import { isValidSlug } from "@/lib/cards/slug";
-import { publicationKey, usePublication } from "@/lib/cards/use-publication";
+import { cardsApi, type PublicationInfo } from "@/lib/cards/api";
+import { LIMIT_TEXT, SLUG_HELP, canAddVersion, publishErrorMessage, slugAllowed, versionTitle } from "@/lib/cards/publish-form";
+import { publicationKey, usePublications } from "@/lib/cards/use-publication";
+import { cn } from "@/lib/utils";
 
-// Hộp thoại xuất bản (bản vẽ K), hai bước. Bước 1 "form": điền đường dẫn (đã xuất bản thì có sẵn đường dẫn hiện tại, đổi được) rồi bấm Xuất bản.
-// Bước 2 "done": hiện liên kết để sao chép. Mở lại hộp thoại luôn bắt đầu ở bước 1; muốn lấy lại liên kết mà không xuất bản thì dùng dòng liên kết hiện tại.
-const SLUG_HELP = "Đường dẫn chỉ gồm chữ thường không dấu, số và gạch nối, dài 3 đến 60 ký tự.";
-
-function publishError(err: unknown): string {
-  if (isApiError(err, "CONFLICT")) return "Đường dẫn này đã có người dùng, hãy chọn tên khác.";
-  if (isApiError(err, "VALIDATION")) return SLUG_HELP;
-  return errorMessage(err);
-}
+// Hộp thoại xuất bản (bản vẽ K, V). Một thiệp có tới 5 bản, mỗi bản một liên kết và một bản chụp riêng của bản nháp lúc xuất bản.
+// Bước "list": danh sách các bản (sao chép liên kết, xuất bản lại một bản, gỡ, dùng làm bản nháp) và nút thêm bản mới.
+// Bước "form": xuất bản bản mới (chưa có bản nào thì vào thẳng đây). Bước "done": liên kết của bản vừa xuất bản để sao chép.
+// Bước "restore": xác nhận nạp một bản vào bản nháp. Mở lại hộp thoại luôn bắt đầu từ danh sách (hoặc từ form khi chưa có bản nào).
+type Step = "list" | "form" | "done" | "restore";
 
 // Công tắc "Hiện trong thư viện công khai" (bản vẽ K): admin duyệt trước, người khác xem được và Dùng làm mẫu.
 function GallerySwitch({ checked, onChange, disabled }: { checked: boolean; onChange: (value: boolean) => void; disabled?: boolean }) {
@@ -95,6 +91,106 @@ function LinkRow({ link }: { link: string }) {
   );
 }
 
+const siteOf = () => (typeof window === "undefined" ? "" : window.location.origin);
+const linkOf = (version: { slug: string }) => `${siteOf()}/thiep/${version.slug}`;
+
+const fieldBox = "h-12 w-full rounded-2xl border border-input bg-page px-4 text-[15px] outline-none focus-visible:ring-3 focus-visible:ring-ring/50 placeholder:text-muted-foreground";
+
+// Một bản trong danh sách. Mở ra (xuất bản lại) thì hiện ô tên, đường dẫn và hai việc phụ.
+function VersionRow({
+  version,
+  index,
+  open,
+  label,
+  slug,
+  slugChanged,
+  slugOk,
+  busy,
+  onLabel,
+  onSlug,
+  onOpen,
+  onRestore,
+  onUnpublish,
+  onCopy,
+}: {
+  version: PublicationInfo;
+  index: number;
+  open: boolean;
+  label: string;
+  slug: string;
+  slugChanged: boolean;
+  slugOk: boolean;
+  busy: boolean;
+  onLabel: (value: string) => void;
+  onSlug: (value: string) => void;
+  onOpen: () => void;
+  onRestore: () => void;
+  onUnpublish: () => void;
+  onCopy: () => void;
+}) {
+  const origin = siteOf();
+  return (
+    <div className={cn("flex flex-col gap-3 rounded-2xl border bg-background px-4 py-3.5", open ? "border-foreground" : "border-border")}>
+      <div className="flex flex-col gap-0.5">
+        <div className="flex flex-wrap items-center gap-2">
+          <b className="text-[15px]">{versionTitle(version, index)}</b>
+          {version.isMain && version.label && <span className="rounded-full bg-muted px-2 py-0.5 text-[11px] font-semibold text-primary">Bản chính</span>}
+        </div>
+        <span className="truncate text-[13px] text-muted-foreground">{`${origin.replace(/^https?:\/\//, "")}/thiep/${version.slug}`}</span>
+      </div>
+      {open ? (
+        <div className="flex flex-col gap-3.5 border-t border-border pt-3.5">
+          <div className="flex flex-col gap-1.5">
+            <label className="text-[13px] font-semibold" htmlFor={`label-${version.id}`}>
+              Tên bản
+            </label>
+            <input id={`label-${version.id}`} value={label} onChange={(event) => onLabel(event.target.value)} maxLength={40} placeholder="Ví dụ: Nhà trai" className={fieldBox} />
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <label className="text-[13px] font-semibold" htmlFor={`slug-${version.id}`}>
+              Đường dẫn
+            </label>
+            <SlugField id={`slug-${version.id}`} value={slug} onChange={onSlug} placeholder={version.slug} origin={origin} />
+            {!slugOk ? (
+              <p className="text-sm text-destructive">{SLUG_HELP}</p>
+            ) : slugChanged ? (
+              <p className="text-[13px] text-[#7a4a00]">Đổi đường dẫn thì liên kết cũ ngừng mở được. Khách đã nhận liên kết cũ cần liên kết mới.</p>
+            ) : (
+              <p className="text-[13px] text-muted-foreground">Giữ nguyên thì liên kết không đổi.</p>
+            )}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Button type="button" variant="outline" className="h-9 rounded-full px-3.5" disabled={busy} onClick={onRestore}>
+              Dùng làm bản nháp
+            </Button>
+            <Button type="button" variant="outline" className="h-9 rounded-full px-3.5 text-destructive hover:text-destructive" disabled={busy} onClick={onUnpublish}>
+              Gỡ bản này
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <div className="flex flex-wrap gap-2">
+          <Button type="button" variant="outline" className="h-9 gap-1.5 rounded-full px-3.5" onClick={onCopy}>
+            <CopyIcon className="size-4" /> Sao chép liên kết
+          </Button>
+          <Button type="button" variant="outline" className="h-9 rounded-full px-3.5" onClick={onOpen}>
+            Xuất bản lại
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Title({ title, text }: { title: string; text: ReactNode }) {
+  return (
+    <DialogHeader>
+      <DialogTitle className="text-xl font-bold">{title}</DialogTitle>
+      <DialogDescription>{text}</DialogDescription>
+    </DialogHeader>
+  );
+}
+
 export function PublishDialog({
   cardId,
   open,
@@ -112,147 +208,269 @@ export function PublishDialog({
   flushDraft: () => Promise<void>;
 }) {
   const queryClient = useQueryClient();
-  const publication = usePublication(cardId, open);
-  const [step, setStep] = useState<"form" | "done">("form");
-  // Đường dẫn đang gõ; null là chưa đụng tới (đã xuất bản thì giữ đường dẫn hiện có).
+  const publications = usePublications(cardId, open);
+  const versions = publications.data ?? [];
+  const [step, setStep] = useState<Step | null>(null);
+  // Bản đang mở ra để xuất bản lại; các ô tên và đường dẫn là của bản đó (hoặc của bản mới ở bước "form"). null: chưa đụng tới.
+  const [openId, setOpenId] = useState<string | null>(null);
+  const [label, setLabel] = useState<string | null>(null);
   const [slug, setSlug] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const [galleryChoice, setGalleryChoice] = useState<boolean | null>(null);
-  // Mỗi lần mở hộp thoại bắt đầu lại từ bước 1 (chỉnh state ngay lúc vẽ, cách React khuyên thay cho effect).
+  const [error, setError] = useState<string | null>(null);
+  const [done, setDone] = useState<PublicationInfo | null>(null);
+  const [restoring, setRestoring] = useState<PublicationInfo | null>(null);
+
+  const clear = () => {
+    setOpenId(null);
+    setLabel(null);
+    setSlug(null);
+    setGalleryChoice(null);
+    setError(null);
+  };
+  // Mỗi lần mở hộp thoại bắt đầu lại (chỉnh state ngay lúc vẽ, cách React khuyên thay cho effect).
   const [wasOpen, setWasOpen] = useState(open);
   if (open !== wasOpen) {
     setWasOpen(open);
     if (open) {
-      setStep("form");
-      setSlug(null);
-      setError(null);
-      setGalleryChoice(null);
+      setStep(null);
+      setDone(null);
+      setRestoring(null);
+      clear();
     }
   }
-  const origin = typeof window === "undefined" ? "" : window.location.origin;
-  const live = publication.data;
-  const link = live ? `${origin}/thiep/${live.slug}` : "";
-  // Công tắc thư viện: theo lựa chọn của người dùng, chưa chọn thì theo trạng thái đang có.
-  const gallery = galleryChoice ?? live?.listInGallery ?? false;
-  const slugValue = (slug ?? live?.slug ?? "").trim();
-  const slugChanged = !!live && slugValue !== live.slug;
-  // Chưa xuất bản: để trống là tự đặt theo tên thiệp. Đã xuất bản: luôn phải có đường dẫn.
-  const slugOk = live ? isValidSlug(slugValue) : slugValue === "" || isValidSlug(slugValue);
+
+  // Chưa có bản nào thì không có danh sách để hiện: vào thẳng form.
+  const shown: Step = step === "done" || step === "restore" ? step : versions.length === 0 ? "form" : (step ?? "list");
+  const target = versions.find((version) => version.id === openId) ?? null;
+  const canAdd = canAddVersion(versions.length);
+
+  const labelValue = label ?? target?.label ?? "";
+  const slugValue = (slug ?? target?.slug ?? "").trim();
+  const slugChanged = !!target && slugValue !== target.slug;
+  const slugOk = slugAllowed(slugValue, !!target);
+  // Thư viện công khai chỉ gắn với bản chính: bản chính đang mở, hoặc bản đầu tiên khi chưa có bản nào.
+  const galleryApplies = target ? target.isMain : versions.length === 0;
+  const gallery = galleryChoice ?? target?.listInGallery ?? false;
+  const galleryOf = target ?? versions[0] ?? null;
 
   const refresh = () => queryClient.invalidateQueries({ queryKey: publicationKey(cardId) });
   const publish = useMutation({
     mutationFn: async () => {
       await flushDraft();
-      // Đã xuất bản thì chỉ gửi đường dẫn khi nó đổi (gửi lại chính đường dẫn cũ không cần thiết).
-      const wanted = live ? (slugChanged ? slugValue : undefined) : slugValue || undefined;
-      return cardsApi.publish(cardId, wanted, gallery);
+      return cardsApi.publish(cardId, {
+        ...(target ? { publicationId: target.id } : {}),
+        // Bản đã có chỉ gửi đường dẫn khi nó đổi; bản mới để trống thì tự đặt theo tên thiệp.
+        ...(target ? (slugChanged ? { slug: slugValue } : {}) : slugValue ? { slug: slugValue } : {}),
+        // Tên: bản đã có gửi khi đã sửa (rỗng là bỏ tên); bản mới gửi khi có gõ.
+        ...(label !== null ? { label: label.trim() } : {}),
+        listInGallery: galleryApplies ? gallery : false,
+      });
     },
-    onSuccess: () => {
-      setError(null);
-      setGalleryChoice(null);
-      setSlug(null);
+    onSuccess: async (result) => {
+      toast.success(galleryApplies && gallery ? "Đã xuất bản và gửi duyệt." : "Đã xuất bản thiệp.");
+      clear();
+      setDone(result);
       setStep("done");
-      toast.success(gallery ? "Đã xuất bản và gửi duyệt." : "Đã xuất bản thiệp.");
-      return refresh();
+      await refresh();
     },
-    onError: (err) => setError(publishError(err)),
+    onError: (err) => setError(publishErrorMessage(err)),
   });
   const unpublish = useMutation({
-    mutationFn: () => cardsApi.unpublish(cardId),
+    mutationFn: (version: PublicationInfo) => cardsApi.unpublish(cardId, version.id),
+    onSuccess: async () => {
+      clear();
+      setStep("list");
+      toast.success("Đã gỡ bản này.");
+      await refresh();
+    },
+    onError: (err) => toast.error(errorMessage(err)),
+  });
+  const restore = useMutation({
+    mutationFn: (version: PublicationInfo) => cardsApi.restoreDraft(cardId, version.id),
     onSuccess: () => {
-      setSlug(null);
-      setGalleryChoice(null);
-      setStep("form");
-      toast.success("Đã gỡ trang công khai.");
-      return refresh();
+      toast.success("Đã nạp bản này vào bản nháp.");
+      // Bản nháp trong trình soạn đã cũ: tải lại để mở đúng nội dung vừa nạp.
+      window.location.reload();
     },
     onError: (err) => toast.error(errorMessage(err)),
   });
 
+  const copy = async (version: PublicationInfo) => {
+    try {
+      await navigator.clipboard.writeText(linkOf(version));
+      toast.success("Đã sao chép liên kết.");
+    } catch {
+      toast.error("Không sao chép được, hãy chọn và sao chép liên kết bằng tay.");
+    }
+  };
   const submit = (event: FormEvent) => {
     event.preventDefault();
     if (!slugOk) return setError(SLUG_HELP);
     setError(null);
     publish.mutate();
   };
+  const toList = () => {
+    clear();
+    setStep("list");
+  };
 
+  const footerSplit = "mx-0 mb-0 border-0 bg-transparent p-0 sm:justify-between";
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       {/* `min-w-0` cho con của hộp (là lưới): không có thì dòng liên kết dài không xuống dòng làm cột rộng hơn hộp và nội dung tràn ra ngoài. */}
       <DialogContent className="rounded-3xl p-8 sm:max-w-[460px] [&>*]:min-w-0">
-        {publication.isPending ? (
+        {publications.isPending ? (
           <p className="py-8 text-center text-sm text-muted-foreground">Đang tải...</p>
         ) : !isOwner ? (
           <div className="flex flex-col gap-6">
-            <DialogHeader>
-              <DialogTitle className="text-xl font-bold">{live ? "Thiệp đã xuất bản" : "Xuất bản thiệp"}</DialogTitle>
-              <DialogDescription>{live ? "Chỉ chủ thiệp mới xuất bản lại hoặc gỡ được. Liên kết để gửi cho khách:" : "Chỉ chủ thiệp mới xuất bản được."}</DialogDescription>
-            </DialogHeader>
-            {live && <LinkRow link={link} />}
+            <Title title={versions.length ? "Thiệp đã xuất bản" : "Xuất bản thiệp"} text={versions.length ? "Chỉ chủ thiệp mới xuất bản lại hoặc gỡ được. Liên kết để gửi cho khách:" : "Chỉ chủ thiệp mới xuất bản được."} />
+            {versions.map((version, index) => (
+              <div key={version.id} className="flex flex-col gap-1.5">
+                {versions.length > 1 && <span className="text-[13px] font-semibold">{versionTitle(version, index)}</span>}
+                <LinkRow link={linkOf(version)} />
+              </div>
+            ))}
           </div>
-        ) : live && step === "done" ? (
+        ) : shown === "done" && done ? (
           <div className="flex flex-col gap-6">
-            <DialogHeader>
-              <DialogTitle className="text-xl font-bold">Thiệp đã xuất bản</DialogTitle>
-              <DialogDescription>Gửi liên kết này cho khách. Sửa thiệp xong, mở lại Xuất bản để cập nhật trang.</DialogDescription>
-            </DialogHeader>
-            <LinkRow link={link} />
-            <GalleryStatusNote status={live.galleryStatus} reason={live.galleryRejectReason} />
-            <DialogFooter className="mx-0 mb-0 border-0 bg-transparent p-0 sm:justify-between">
-              <Button type="button" variant="ghost" className="h-11 rounded-full px-5" onClick={() => setStep("form")}>
-                Sửa đường dẫn
+            <Title title={`Đã xuất bản${done.label ? ` bản ${done.label}` : ""}`} text="Gửi liên kết này cho khách. Bản này giữ nội dung lúc vừa xuất bản." />
+            <LinkRow link={linkOf(done)} />
+            {done.isMain && <GalleryStatusNote status={done.galleryStatus} reason={done.galleryRejectReason} />}
+            <DialogFooter className={footerSplit}>
+              <Button type="button" variant="ghost" className="h-11 rounded-full px-5" onClick={toList}>
+                Về danh sách
               </Button>
               <Button type="button" className="h-11 rounded-full px-5 font-semibold" onClick={() => onOpenChange(false)}>
                 Xong
               </Button>
             </DialogFooter>
           </div>
+        ) : shown === "restore" && restoring ? (
+          <div className="flex flex-col gap-6">
+            <Title title={`Thay bản nháp bằng bản ${restoring.label || "này"}?`} text="Nội dung bản nháp hiện tại sẽ bị thay bằng nội dung đã xuất bản của bản này. Những thay đổi chưa xuất bản trong bản nháp sẽ mất." />
+            <p role="alert" className="rounded-2xl bg-[#fff1d6] px-4 py-3 text-sm leading-relaxed">
+              Muốn giữ bản nháp hiện tại, hãy xuất bản nó thành một bản mới trước. Các bản đã xuất bản không bị đụng tới.
+            </p>
+            <DialogFooter className={footerSplit}>
+              <Button type="button" variant="secondary" className="h-11 rounded-full px-5" disabled={restore.isPending} onClick={toList}>
+                Huỷ
+              </Button>
+              <Button type="button" className="h-11 rounded-full px-5 font-semibold" disabled={restore.isPending} onClick={() => restore.mutate(restoring)}>
+                Thay bản nháp
+              </Button>
+            </DialogFooter>
+          </div>
+        ) : shown === "list" ? (
+          <form onSubmit={submit} className="flex flex-col gap-6">
+            <Title title="Các bản đã xuất bản" text="Mỗi bản có liên kết riêng và giữ nguyên nội dung lúc xuất bản. Sửa thiệp xong, bấm Xuất bản lại ở bản muốn cập nhật." />
+            <div className="flex flex-col gap-2.5">
+              {versions.map((version, index) => (
+                <VersionRow
+                  key={version.id}
+                  version={version}
+                  index={index}
+                  open={version.id === openId}
+                  label={version.id === openId ? labelValue : ""}
+                  slug={version.id === openId ? (slug ?? version.slug) : version.slug}
+                  slugChanged={version.id === openId && slugChanged}
+                  slugOk={version.id !== openId || slugOk}
+                  busy={publish.isPending || unpublish.isPending || restore.isPending}
+                  onLabel={setLabel}
+                  onSlug={(value) => {
+                    setSlug(value);
+                    setError(null);
+                  }}
+                  onOpen={() => {
+                    clear();
+                    setOpenId(version.id);
+                  }}
+                  onRestore={() => {
+                    setRestoring(version);
+                    setStep("restore");
+                  }}
+                  onUnpublish={() => unpublish.mutate(version)}
+                  onCopy={() => void copy(version)}
+                />
+              ))}
+            </div>
+            {target?.isMain && <GallerySwitch checked={gallery} onChange={setGalleryChoice} disabled={publish.isPending} />}
+            {target && galleryOf && <GalleryStatusNote status={galleryOf.galleryStatus} reason={galleryOf.galleryRejectReason} />}
+            {error && <p className="text-sm text-destructive">{error}</p>}
+            {!hasContent && target && <p className="text-sm text-destructive">Thêm nội dung vào thiệp trước khi xuất bản.</p>}
+            {!canAdd && !target && <p className="text-[13px] text-muted-foreground">{LIMIT_TEXT}</p>}
+            <DialogFooter className={footerSplit}>
+              {target ? (
+                <>
+                  <Button type="button" variant="secondary" className="h-11 rounded-full px-5" onClick={toList}>
+                    Quay lại
+                  </Button>
+                  <Button type="submit" disabled={publish.isPending || !hasContent || !slugOk} className="h-11 rounded-full px-5 font-semibold">
+                    {target.isMain && gallery && target.galleryStatus !== "LIVE" ? "Xuất bản lại và gửi duyệt" : "Xuất bản lại bản này"}
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button type="button" variant="ghost" className="h-11 rounded-full px-5" onClick={() => onOpenChange(false)}>
+                    Xong
+                  </Button>
+                  <Button
+                    type="button"
+                    disabled={!canAdd}
+                    className="h-11 rounded-full px-5 font-semibold"
+                    onClick={() => {
+                      clear();
+                      setStep("form");
+                    }}
+                  >
+                    + Xuất bản bản mới
+                  </Button>
+                </>
+              )}
+            </DialogFooter>
+          </form>
         ) : (
           <form onSubmit={submit} className="flex flex-col gap-6">
-            <DialogHeader>
-              <DialogTitle className="text-xl font-bold">{live ? "Xuất bản lại" : "Xuất bản thiệp"}</DialogTitle>
-              <DialogDescription>
-                {live ? "Cập nhật trang công khai theo bản nháp mới nhất. Muốn thì đổi đường dẫn." : "Thiệp sẽ có một liên kết công khai để gửi cho khách."}
-              </DialogDescription>
-            </DialogHeader>
-            {live && <LinkRow link={link} />}
+            <Title
+              title={versions.length ? "Xuất bản bản mới" : "Xuất bản thiệp"}
+              text={versions.length ? "Bản mới chụp nội dung bản nháp hiện tại. Các bản đã xuất bản không bị đổi." : "Thiệp sẽ có một liên kết công khai để gửi cho khách."}
+            />
+            <div className="flex flex-col gap-2">
+              <label htmlFor="publish-label" className="text-[13px] font-semibold">
+                Tên bản
+              </label>
+              <input id="publish-label" value={label ?? ""} onChange={(event) => setLabel(event.target.value)} maxLength={40} placeholder="Ví dụ: Nhà trai" className={fieldBox} />
+              <p className="text-[13px] text-muted-foreground">Không bắt buộc. Chỉ chủ thiệp thấy, khách không thấy.</p>
+            </div>
             <div className="flex flex-col gap-2">
               <label htmlFor="publish-slug" className="text-[13px] font-semibold">
                 Đường dẫn
               </label>
               <SlugField
                 id="publish-slug"
-                value={slug ?? live?.slug ?? ""}
+                value={slug ?? ""}
                 onChange={(value) => {
                   setSlug(value);
                   setError(null);
                 }}
-                placeholder={live ? live.slug : "tự đặt theo tên thiệp"}
-                origin={origin}
+                placeholder="tự đặt theo tên thiệp"
+                origin={siteOf()}
               />
-              {error || !slugOk ? (
-                <p className="text-sm text-destructive">{error ?? SLUG_HELP}</p>
-              ) : slugChanged ? (
-                <p className="text-[13px] text-muted-foreground">Đổi đường dẫn thì liên kết cũ ngừng mở được. Khách đã nhận liên kết cũ cần liên kết mới.</p>
-              ) : (
-                <p className="text-[13px] text-muted-foreground">{live ? "Giữ nguyên thì liên kết không đổi." : "Bỏ trống để tự đặt theo tên thiệp."}</p>
-              )}
+              {error || !slugOk ? <p className="text-sm text-destructive">{error ?? SLUG_HELP}</p> : <p className="text-[13px] text-muted-foreground">Bỏ trống để tự đặt theo tên thiệp.</p>}
               {!hasContent && <p className="text-sm text-destructive">Thêm nội dung vào thiệp trước khi xuất bản.</p>}
             </div>
-            <GallerySwitch checked={gallery} onChange={setGalleryChoice} disabled={publish.isPending} />
-            {live && <GalleryStatusNote status={live.galleryStatus} reason={live.galleryRejectReason} />}
-            <DialogFooter className="mx-0 mb-0 border-0 bg-transparent p-0 sm:justify-between">
-              {live ? (
-                <Button type="button" variant="ghost" disabled={unpublish.isPending} className="h-11 rounded-full px-5 text-destructive hover:bg-destructive/10" onClick={() => unpublish.mutate()}>
-                  Gỡ xuất bản
+            {galleryApplies && <GallerySwitch checked={gallery} onChange={setGalleryChoice} disabled={publish.isPending} />}
+            <DialogFooter className={footerSplit}>
+              {versions.length ? (
+                <Button type="button" variant="secondary" className="h-11 rounded-full px-5" onClick={toList}>
+                  Quay lại
                 </Button>
               ) : (
                 <Button type="button" variant="secondary" className="h-11 rounded-full px-5" onClick={() => onOpenChange(false)}>
                   Huỷ
                 </Button>
               )}
-              <Button type="submit" disabled={publish.isPending || !hasContent || !slugOk} className="h-11 rounded-full px-5 font-semibold">
-                {live ? (gallery && live.galleryStatus !== "LIVE" ? "Xuất bản lại và gửi duyệt" : "Xuất bản lại") : gallery ? "Xuất bản và gửi duyệt" : "Xuất bản"}
+              <Button type="submit" disabled={publish.isPending || !hasContent || !slugOk || !canAdd} className="h-11 rounded-full px-5 font-semibold">
+                {galleryApplies && gallery ? "Xuất bản và gửi duyệt" : "Xuất bản"}
               </Button>
             </DialogFooter>
           </form>
