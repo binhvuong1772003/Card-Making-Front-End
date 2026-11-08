@@ -2,6 +2,7 @@
 
 import type { PageData } from "@miditor/core";
 import { Render } from "@miditor/render";
+import { cardRenderers } from "@/lib/cards/blocks";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeftIcon, DeviceMobileIcon, MonitorIcon } from "@phosphor-icons/react";
 import Link from "next/link";
@@ -55,7 +56,7 @@ export function CardPreview({ id }: { id: string }) {
           <p className="text-sm text-muted-foreground">Thiệp chưa có nội dung để xem trước.</p>
         ) : (
           <div className={cn("w-full overflow-hidden bg-white shadow-[0_1px_2px_rgba(42,34,36,0.06),0_14px_36px_rgba(42,34,36,0.14)]", device === "phone" ? "max-w-[375px] rounded-[28px]" : "max-w-[960px] rounded-lg")}>
-            <Render data={document} device={device} />
+            <Render data={document} renderers={cardRenderers} device={device} />
           </div>
         )}
       </main>

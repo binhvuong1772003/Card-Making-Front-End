@@ -1,4 +1,5 @@
 import { Render, pageMeta } from "@miditor/render";
+import { cardRenderers } from "@/lib/cards/blocks";
 import type { PageData } from "@miditor/core";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -26,7 +27,7 @@ async function PublishedCard({ params }: Pick<PageProps<"/thiep/[slug]">, "param
   const { slug } = await params;
   const page = await getPage(slug);
   if (!page) notFound();
-  return <Render data={page.document as unknown as PageData} responsive={{ scale: true }} />;
+  return <Render data={page.document as unknown as PageData} renderers={cardRenderers} responsive={{ scale: true }} />;
 }
 
 export default function PublishedRoute({ params }: PageProps<"/thiep/[slug]">) {
