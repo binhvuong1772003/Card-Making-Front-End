@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { apiFetch } from '@/lib/api';
 import { upgradePageDocument } from './forms/legacy';
+import { cardForm, responsesPage, type ResponseStatus, type ResponsesPage } from './forms/responses';
 import type { Occasion } from './occasions';
 
 const role = z.enum(['OWNER', 'EDITOR', 'VIEWER']);
@@ -50,6 +51,13 @@ const UNPUBLISH = 'mutation($id: ID!) { unpublishCard(id: $id) }';
 const DUPLICATE = 'mutation($id: ID!) { duplicateCard(id: $id) { id } }';
 const SAVE =
   'mutation($id: ID!, $revision: Int!, $document: JSON!) { saveCardDocument(id: $id, revision: $revision, document: $document) { revision } }';
+// Trang Phản hồi (chủ thiệp và người sửa thiệp). `cardForms` đọc từ bản xuất bản và cộng các khối đã gỡ còn câu trả lời.
+const CARD_HEADER = 'query($id: ID!) { card(id: $id) { id title role } }';
+const CARD_FORMS = 'query($cardId: ID!) { cardForms(cardId: $cardId) { blockId heading fields { id label type options } publicList moderation removed total pending } }';
+const FORM_RESPONSES =
+  'query($cardId: ID!, $blockId: String, $status: EntryStatus, $search: String, $first: Int, $after: String) { formResponses(cardId: $cardId, blockId: $blockId, status: $status, search: $search, first: $first, after: $after) { nodes { id blockId answers { id label type value } status createdAt } pageInfo { hasNextPage endCursor } summary { fieldId label type answered counts { option count } total } counts { visible hidden pending } } }';
+const DELETE_RESPONSE = 'mutation($id: ID!) { deleteFormResponse(id: $id) }';
+const SET_RESPONSE_STATUS = 'mutation($id: ID!, $status: EntryStatus!) { setFormResponseStatus(id: $id, status: $status) { id } }';
 
 export const cardsApi = {
   // Danh sách của người đang gọi, mới sửa nhất lên đầu; lọc theo dịp và tìm trong tiêu đề (phía server). Tối đa 50 thiệp.
@@ -64,6 +72,35 @@ export const cardsApi = {
     // Editor và trang xem trước đều tải thiệp qua đây: thiệp lưu từ trước khi có khối `Form` được nâng cấp (Rsvp/Guestbook → Form)
     // ngay khi mở, để Miditor không gặp loại khối lạ.
     return { ...card, document: upgradePageDocument(card.document) };
+  },
+
+  // Chỉ tên và quyền, không kèm cả `document`: trang Phản hồi không cần tải cả thiệp.
+  header: async (id: string, signal?: AbortSignal): Promise<{ id: string; title: string; role: CardSummary["role"] }> => {
+    const { card } = z
+      .object({ card: z.object({ id: z.string(), title: z.string(), role }).nullable() })
+      .parse(await apiFetch.graphql(CARD_HEADER, { id }, signal));
+    if (!card) throw new Error('Card not found');
+    return card;
+  },
+
+  // Các form của thiệp cho trang Phản hồi: theo thứ tự trong bản xuất bản, khối đã gỡ còn câu trả lời xếp sau.
+  forms: async (cardId: string, signal?: AbortSignal) =>
+    z.object({ cardForms: z.array(cardForm) }).parse(await apiFetch.graphql(CARD_FORMS, { cardId }, signal)).cardForms,
+
+  // Một trang câu trả lời của một form, đã lọc và tìm phía server; `summary` và `counts` tính trên mọi dòng.
+  responses: async (
+    cardId: string,
+    args: { blockId: string; status?: ResponseStatus; search?: string; first?: number; after?: string },
+    signal?: AbortSignal,
+  ): Promise<ResponsesPage> =>
+    z.object({ formResponses: responsesPage }).parse(await apiFetch.graphql(FORM_RESPONSES, { cardId, ...args }, signal)).formResponses,
+
+  deleteResponse: async (id: string): Promise<void> => {
+    await apiFetch.graphql(DELETE_RESPONSE, { id });
+  },
+
+  setResponseStatus: async (id: string, status: ResponseStatus): Promise<void> => {
+    await apiFetch.graphql(SET_RESPONSE_STATUS, { id, status });
   },
 
   create: async (title: string, occasion?: Occasion): Promise<string> =>
