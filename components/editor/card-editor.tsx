@@ -9,8 +9,13 @@ import { toast } from "sonner";
 import { uploadImage } from "@/lib/assets/upload-image";
 import { errorMessage } from "@/lib/auth/messages";
 import type { CardDetail } from "@/lib/cards/api";
+import { cardComponents, cardRenderers, EDIT_METADATA } from "@/lib/cards/blocks";
+import { CARD_FONTS } from "@/lib/cards/fonts";
 import { createCardSaver } from "@/lib/cards/card-saver";
 import { cardAppearance } from "./card-appearance";
+import { DateInput } from "./date-input";
+import { ImageListInput } from "./image-list-input";
+import { ElementsPanel } from "./elements-panel";
 import { phosphorIcons } from "./phosphor-icons";
 import { CardHeader } from "./card-header";
 import type { SealState } from "./status-seal";
@@ -28,7 +33,15 @@ const i18n = {
     "empty.open": "Mở thư viện khối",
   },
 };
-const config = { icons: phosphorIcons, uploadImage };
+const config = {
+  icons: phosphorIcons,
+  uploadImage,
+  components: cardComponents,
+  renderers: cardRenderers,
+  fonts: CARD_FONTS,
+  tools: [{ id: "elements", label: "Thành phần", icon: "shape" as const, panel: ElementsPanel }],
+  customFields: { "image-list": ImageListInput, date: DateInput },
+};
 const VIEW_ONLY = { canEdit: false, canDelete: false, canDuplicate: false, canDrag: false, canAdd: false };
 
 const SEAL: Record<SaveStatus, { state: SealState; label: string }> = {
@@ -37,6 +50,10 @@ const SEAL: Record<SaveStatus, { state: SealState; label: string }> = {
   unsaved: { state: "pending", label: "Có thay đổi chưa lưu" },
   error: { state: "error", label: "Không lưu được" },
 };
+
+// Bề rộng cố định của bảng thuộc tính bên phải (rộng hơn bảng Trang lúc đầu, 277 px, cho thoải mái). Để `auto` thì cột phình theo nội dung của khối được chọn
+// (khối Album làm nó rộng 633 px và đè lên canvas), nên mọi khối đều giữ cột này nguyên.
+const PROPERTIES_WIDTH = 320;
 
 // Ô chứa một phần của Miditor: lưới một hàng để phần đó (panel, canvas) giãn đủ chiều cao.
 const cell = { minBlockSize: 0, minInlineSize: 0, overflow: "hidden", display: "grid", gridTemplateRows: "minmax(0, 1fr)" } as const;
@@ -79,10 +96,11 @@ export function CardEditor({ card }: { card: CardDetail }) {
       appearance={cardAppearance}
       i18n={i18n}
       config={config}
+      metadata={EDIT_METADATA}
     >
       <div className="card-editor" style={{ display: "grid", gridTemplateRows: "auto minmax(0, 1fr)", blockSize: "100%" }}>
         <CardHeader title={card.title} seal={seal} cardId={card.id} isOwner={card.role === "OWNER"} idle={() => saver.idle()} />
-        <div style={{ display: "grid", gridTemplateColumns: "auto 292px minmax(0, 1fr) auto", minBlockSize: 0 }}>
+        <div style={{ display: "grid", gridTemplateColumns: `auto 292px minmax(0, 1fr) ${PROPERTIES_WIDTH}px`, minBlockSize: 0 }}>
           <Editor.Rail />
           <div style={cell}>
             <Editor.StartPanel />
