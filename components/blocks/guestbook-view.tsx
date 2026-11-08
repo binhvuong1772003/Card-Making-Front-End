@@ -15,7 +15,6 @@ export interface GuestbookViewProps {
   heading: string;
   intro: string;
   button: string;
-  moderation: boolean;
   pageSize: number;
   color: string;
   padding: number;

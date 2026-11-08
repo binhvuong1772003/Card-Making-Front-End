@@ -133,7 +133,6 @@ const renderGuestbook: Renderer = ({ id, props, metadata, theme }) => (
     heading={text(props.heading, guestbookBlock.defaultProps.heading as string)}
     intro={text(props.intro, guestbookBlock.defaultProps.intro as string)}
     button={text(props.button, guestbookBlock.defaultProps.button as string)}
-    moderation={props.moderation === true}
     pageSize={Math.round(number(props.pageSize, guestbookBlock.defaultProps.pageSize as number, 3, 20))}
     color={paint(props.color, guestbookBlock.defaultProps.color as string, theme)}
     padding={number(props.padding, guestbookBlock.defaultProps.padding as number, 0, 40)}
