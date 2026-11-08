@@ -49,11 +49,25 @@ export function validateRsvp(values: RsvpValues, config: RsvpConfig): FieldError
   const note = values.note?.trim() ?? "";
   if (config.askNote && note.length > 500) errors.note = "Lời nhắn dài quá 500 ký tự.";
 
-  // Điện thoại là ô tuỳ chọn: bỏ trống được, nhưng nếu điền thì phải đúng dạng backend nhận.
+  // Điện thoại là ô tuỳ chọn: bỏ trống được, nhưng nếu điền thì phải đúng dạng backend nhận. Chỉ kiểm khi ô đang hiện
+  // (Có hoặc Chưa chắc), kẻo khách bị chặn bởi một lỗi ở ô đã ẩn sau khi đổi đáp án.
   const phone = values.phone?.trim() ?? "";
-  if (config.askPhone && phone && (!PHONE.test(phone) || phone.length < 6 || phone.length > 20)) errors.phone = "Số điện thoại chưa đúng.";
+  if (config.askPhone && (values.attending === "YES" || values.attending === "MAYBE") && phone && (!PHONE.test(phone) || phone.length < 6 || phone.length > 20)) {
+    errors.phone = "Số điện thoại chưa đúng.";
+  }
 
   return errors;
+}
+
+// Phần trả lời đi kèm, chỉ gồm những ô khách đã thấy với đáp án đã chọn: đổi từ Có sang Không thì số khách và điện thoại đã gõ
+// không được gửi lén.
+export function rsvpAnswer(values: RsvpValues, config: RsvpConfig): { guests?: number; phone?: string; note?: string } {
+  const yes = values.attending === "YES";
+  return {
+    guests: yes && config.askGuests ? (values.guests ?? 1) : undefined,
+    phone: config.askPhone && values.attending !== "NO" ? values.phone?.trim() || undefined : undefined,
+    note: config.askNote ? values.note?.trim() || undefined : undefined,
+  };
 }
 
 export interface RsvpSubmission {

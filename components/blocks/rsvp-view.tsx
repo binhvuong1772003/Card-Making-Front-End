@@ -3,7 +3,7 @@
 import { type CSSProperties, type FormEvent, useEffect, useId, useState } from "react";
 import { ApiError } from "@/lib/api/errors";
 import { type FieldErrors, formErrorMessage, formFieldErrors } from "@/lib/cards/forms/api";
-import { isClosed, type RsvpAnswer, type RsvpConfig, type RsvpValues, submitRsvp, validateRsvp } from "@/lib/cards/forms/rsvp";
+import { isClosed, rsvpAnswer, type RsvpAnswer, type RsvpConfig, type RsvpValues, submitRsvp, validateRsvp } from "@/lib/cards/forms/rsvp";
 
 // Vẽ khối Xác nhận tham dự. `mode` như khối Bản đồ; chỉ trang thật (`live`) có `slug` mới gọi mạng, còn editor, ảnh thu nhỏ và trang mẫu
 // thấy form khoá để chủ thiệp biết nó trông thế nào. Nền, viền, bo góc, bóng là của Miditor nên ở đây không có; kiểu viết inline vì Render
@@ -103,9 +103,7 @@ export function RsvpView(props: RsvpViewProps) {
         blockId: props.blockId,
         name: values.name.trim(),
         attending: values.attending,
-        guests: values.attending === "YES" && props.askGuests ? (values.guests ?? 1) : undefined,
-        phone: props.askPhone ? values.phone?.trim() || undefined : undefined,
-        note: props.askNote ? values.note?.trim() || undefined : undefined,
+        ...rsvpAnswer(values, config),
       });
       try {
         window.localStorage.setItem(storageKey(props.slug, props.blockId), values.attending);

@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { API_URL } from "@/lib/api/config";
-import { isClosed, submitRsvp, validateRsvp, type RsvpConfig, type RsvpValues } from "./rsvp";
+import { isClosed, rsvpAnswer, submitRsvp, validateRsvp, type RsvpConfig, type RsvpValues } from "./rsvp";
 
 const config = (overrides: Partial<RsvpConfig> = {}): RsvpConfig => ({
   askGuests: true,
@@ -74,6 +74,19 @@ describe("validateRsvp", () => {
     expect(validateRsvp(values({ phone: "123" }), asked)).toHaveProperty("phone");
     expect(validateRsvp(values({ phone: "090 123 4567" }), asked)).toEqual({});
     expect(validateRsvp(values({ phone: "abc" }), config())).toEqual({});
+  });
+
+  it("does not check the phone while the field is hidden", () => {
+    const asked = config({ askPhone: true });
+    // Ô điện thoại chỉ hiện khi khách chọn Có hoặc Chưa chắc; lỗi ở ô đang ẩn thì khách không thấy đường sửa.
+    expect(validateRsvp(values({ attending: "NO", phone: "abc" }), asked)).toEqual({});
+    expect(validateRsvp(values({ attending: null, phone: "abc" }), asked)).toEqual({ attending: "Chọn một câu trả lời." });
+  });
+
+  it("sends only the answers the guest could see", () => {
+    const asked = config({ askPhone: true });
+    expect(rsvpAnswer(values({ attending: "NO", phone: "090 123 4567", note: "Không đến được" }), asked)).toEqual({ note: "Không đến được" });
+    expect(rsvpAnswer(values({ attending: "YES", guests: 3, phone: "090 123 4567" }), asked)).toEqual({ guests: 3, phone: "090 123 4567", note: "Hẹn gặp" });
   });
 });
 
