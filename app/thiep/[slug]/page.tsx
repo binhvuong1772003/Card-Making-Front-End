@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache, Suspense } from "react";
 import { fetchPublicPage } from "@/lib/publications/public-page";
+import styles from "./published-card.module.css";
 
 // Trang công khai của thiệp đã xuất bản: dựng phía server từ bản chụp lúc xuất bản. cacheComponents bật: đọc params
 // phải nằm trong Suspense. Một lần tải dùng chung cho nội dung và metadata.
@@ -29,12 +30,16 @@ async function PublishedCard({ params }: Pick<PageProps<"/thiep/[slug]">, "param
   if (!page) notFound();
   // `slug` cho khối form biết gửi lên thiệp nào; nơi khác (editor, trang mẫu, ảnh thu nhỏ) không truyền nên form chỉ để xem.
   return (
-    <Render
-      data={page.document as unknown as PageData}
-      renderers={cardRenderers}
-      responsive={{ scale: true }}
-      metadata={{ mode: "live", slug }}
-    />
+    <main className={styles.viewport}>
+      <div className={styles.paper}>
+        <Render
+          data={page.document as unknown as PageData}
+          renderers={cardRenderers}
+          responsive={{ scale: true }}
+          metadata={{ mode: "live", slug }}
+        />
+      </div>
+    </main>
   );
 }
 

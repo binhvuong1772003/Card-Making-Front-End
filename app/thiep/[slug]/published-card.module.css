@@ -1,0 +1,20 @@
+.viewport {
+  min-height: 100dvh;
+  background: #fff;
+  container-type: inline-size;
+}
+
+.paper {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  overflow-x: clip;
+}
+
+@media (max-width: 640px) {
+  .paper {
+    width: 375px;
+    max-width: none;
+    zoom: min(1, calc(100cqw / 375px));
+  }
+}
