@@ -37,6 +37,11 @@ describe("the Photo frame block", () => {
     expect(validatePage(registry, pageWith({ frameWidth: 25 })).length).toBeGreaterThan(0);
   });
 
+  it("picks the picture with the card editor's own input, since Miditor draws no field of type image", () => {
+    expect(photoFrameDefinitions.PhotoFrameArch!.fields.src).toMatchObject({ type: "custom", kind: "single-image", group: "Ảnh" });
+    expect(photoFrameDefinitions.PhotoFrameArch!.defaultProps.src).toBe("");
+  });
+
   it("is a rectangle block by default with no ring and no frame of its own from the library's sections", () => {
     const def = photoFrameDefinitions.PhotoFrameArch!;
     expect(def.defaultProps.frameWidth).toBe(0);

@@ -40,6 +40,9 @@ export function frameGeometry(value: unknown): ShapeGeometry {
 export const FRAME_ZOOM = { min: 100, max: 300 } as const;
 export const FRAME_WIDTH_MAX = 24;
 
+// Ảnh chọn bằng ô riêng vì Miditor không vẽ trường kiểu `image` ở bảng thuộc tính. Giá trị phải là địa chỉ ảnh hợp lệ hoặc rỗng: CMBE kiểm
+// (`cards/page-document.ts`) vì trường `custom` không bị Miditor kiểm.
+const srcField = { type: "custom", kind: "single-image", label: "Ảnh", group: "Ảnh" } as const;
 const shapeField = { type: "custom", kind: "frame-shape", label: "Hình dạng", group: "Hình dạng" } as const;
 
 const base: ComponentDef = {
@@ -51,7 +54,7 @@ const base: ComponentDef = {
   canContain: false,
   defaultProps: { src: "", alt: "", shape: "arch", zoom: 100, posX: 50, posY: 50, frameWidth: 0, frameColor: "#511419" },
   fields: {
-    src: { type: "image", label: "Ảnh", group: "Ảnh" },
+    src: srcField,
     alt: { type: "text", label: "Mô tả ảnh", maxLength: 500, group: "Ảnh", help: "Cho người đọc màn hình và khi ảnh không tải được." },
     shape: shapeField,
     zoom: { type: "number", label: "Phóng", min: FRAME_ZOOM.min, max: FRAME_ZOOM.max, unit: "%", group: "Cắt ảnh", help: "Phóng to ảnh trong khung, từ 100% đến 300%." },
