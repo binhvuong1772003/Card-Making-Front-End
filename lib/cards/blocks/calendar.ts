@@ -63,7 +63,7 @@ const base: ComponentDef = {
     eventButton: { type: "text", label: "Chữ nút", maxLength: 40, group: "Thêm vào lịch", help: "Nút cho khách thêm ngày này vào Google Calendar hoặc tải tệp .ics. Để trống thì ẩn nút." },
     eventTitle: { type: "text", label: "Tên sự kiện", maxLength: 120, group: "Thêm vào lịch", help: "Tên hiện trong lịch của khách. Để trống thì là \"Sự kiện\"." },
     eventTime: { type: "custom", kind: "time", label: "Giờ bắt đầu", group: "Thêm vào lịch", help: "Giờ Việt Nam. Để trống thì là sự kiện cả ngày." },
-    eventMinutes: { type: "number", label: "Kéo dài", min: 15, max: 1440, unit: "phút", group: "Thêm vào lịch", help: "Chỉ dùng khi có giờ bắt đầu." },
+    eventMinutes: { type: "number", label: "Dài", min: 15, max: 1440, unit: "phút", group: "Thêm vào lịch", help: "Sự kiện kéo dài bao nhiêu phút. Chỉ dùng khi có giờ bắt đầu." },
     eventPlace: { type: "text", label: "Địa điểm", maxLength: 200, group: "Thêm vào lịch" },
     eventNote: { type: "text", label: "Ghi chú", maxLength: 500, multiline: true, group: "Thêm vào lịch" },
   },
