@@ -14,6 +14,7 @@ import { CARD_FONTS } from "@/lib/cards/fonts";
 import { createCardSaver } from "@/lib/cards/card-saver";
 import { cardAppearance } from "./card-appearance";
 import { DateInput } from "./date-input";
+import { TimeInput } from "./time-input";
 import { FormFieldsInput, PublicListInput } from "./form-fields-input";
 import { FormIdInput } from "./form-id-input";
 import { ImageListInput } from "./image-list-input";
@@ -42,7 +43,7 @@ const config = {
   renderers: cardRenderers,
   fonts: CARD_FONTS,
   tools: [{ id: "elements", label: "Thành phần", icon: "shape" as const, panel: ElementsPanel }],
-  customFields: { "image-list": ImageListInput, date: DateInput, "form-fields": FormFieldsInput, "form-public-list": PublicListInput, "form-id": FormIdInput },
+  customFields: { "image-list": ImageListInput, date: DateInput, time: TimeInput, "form-fields": FormFieldsInput, "form-public-list": PublicListInput, "form-id": FormIdInput },
 };
 const VIEW_ONLY = { canEdit: false, canDelete: false, canDuplicate: false, canDrag: false, canAdd: false };
 

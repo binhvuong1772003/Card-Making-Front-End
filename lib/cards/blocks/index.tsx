@@ -87,6 +87,13 @@ const renderCalendar: Renderer = ({ props, metadata, theme }) => (
     innerFrame={props.innerFrame === true}
     padding={number(props.padding, 0, 0, 32)}
     editing={modeOf(metadata) === "edit"}
+    live={modeOf(metadata) === "live"}
+    eventButton={text(props.eventButton, "")}
+    eventTitle={text(props.eventTitle, "")}
+    eventTime={text(props.eventTime, "")}
+    eventMinutes={number(props.eventMinutes, 180, 15, 1440)}
+    eventPlace={text(props.eventPlace, "")}
+    eventNote={text(props.eventNote, "")}
   />
 );
 

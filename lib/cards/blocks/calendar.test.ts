@@ -26,6 +26,27 @@ describe("the Calendar block", () => {
   });
 });
 
+describe("the add to calendar button of the Calendar block", () => {
+  it("is off by default, so calendars saved before it keep their look", () => {
+    expect(calendarBlock.defaultProps.eventButton).toBe("");
+    for (const def of Object.values(calendarDefinitions)) expect(def.defaultProps.eventButton, def.label).toBe("");
+  });
+
+  it("keeps a page with the event filled in valid, and refuses numbers and texts out of range", () => {
+    const event = { eventButton: "Thêm vào lịch", eventTitle: "Tiệc cưới", eventTime: "18:00", eventMinutes: 180, eventPlace: "Gala Center", eventNote: "Khai tiệc 18:00" };
+    expect(validatePage(registry, pageWith(event))).toEqual([]);
+    expect(validatePage(registry, pageWith({ eventMinutes: 5 })).length).toBeGreaterThan(0);
+    expect(validatePage(registry, pageWith({ eventMinutes: 2000 })).length).toBeGreaterThan(0);
+    expect(validatePage(registry, pageWith({ eventButton: "x".repeat(41) })).length).toBeGreaterThan(0);
+    expect(validatePage(registry, pageWith({ eventTitle: "x".repeat(121) })).length).toBeGreaterThan(0);
+  });
+
+  it("asks for the start time with the time input of the card editor, in its own group", () => {
+    expect(calendarBlock.fields.eventTime).toMatchObject({ type: "custom", kind: "time", group: "Thêm vào lịch" });
+    for (const key of ["eventButton", "eventTitle", "eventMinutes", "eventPlace", "eventNote"]) expect(calendarBlock.fields[key]).toMatchObject({ group: "Thêm vào lịch" });
+  });
+});
+
 describe("the Calendar kinds", () => {
   it("have no frame of their own: nền, viền and bo góc come from the library's sections, and a kind that needs them carries default styles", () => {
     for (const [type, def] of Object.entries(calendarDefinitions)) {

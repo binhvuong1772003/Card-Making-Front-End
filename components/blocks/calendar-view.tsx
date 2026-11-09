@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { type MarkShape, monthGrid, weekOnly } from "@/lib/cards/blocks/calendar";
+import { CalendarEventButton } from "./calendar-event-button";
 
 // Vẽ khối Lịch (mọi kiểu lịch dùng chung). Không có trạng thái nên không cần "use client": cùng một kết quả ở máy chủ, trình duyệt, editor
 // và ảnh thu nhỏ. Kiểu dáng viết thẳng (inline) vì Render đặt lại kiểu của các khối bên trong.
@@ -21,6 +22,15 @@ export interface CalendarViewProps {
   padding: number;
   /** Trong editor, ngày sai hoặc trống hiện lời nhắc; ở trang thật thì không hiện gì. */
   editing: boolean;
+  /** Trang thật: nút thêm vào lịch nhận chuột. Trong editor và ảnh thu nhỏ chỉ là hình cái nút. */
+  live: boolean;
+  /** Chữ nút Thêm vào lịch; rỗng thì không có nút. Các thuộc tính `event*` là sự kiện nút đó thêm (ngày lấy từ `date`). */
+  eventButton: string;
+  eventTitle: string;
+  eventTime: string;
+  eventMinutes: number;
+  eventPlace: string;
+  eventNote: string;
 }
 
 // Phosphor "heart" và "star" (đặc, MIT).
@@ -42,7 +52,7 @@ function Mark({ shape, color }: { shape: MarkShape; color: string }) {
 }
 
 export function CalendarView(props: CalendarViewProps) {
-  const { date, sundayFirst, showTitle, lines, innerFrame, markShape, markColor, markTextColor, color, weekColor, size, font, titleFont, padding, editing } = props;
+  const { date, sundayFirst, showTitle, lines, innerFrame, markShape, markColor, markTextColor, color, weekColor, size, font, titleFont, padding, editing, live, eventButton } = props;
   const whole = monthGrid(date, sundayFirst);
   if (!whole) {
     if (!editing) return null;
@@ -115,6 +125,18 @@ export function CalendarView(props: CalendarViewProps) {
           );
         })}
       </div>
+      {eventButton.trim() && (
+        <div style={{ flex: "none", paddingTop: size * 0.8 }}>
+          <CalendarEventButton
+            event={{ date, time: props.eventTime, minutes: props.eventMinutes, title: props.eventTitle, place: props.eventPlace, note: props.eventNote }}
+            label={eventButton.trim()}
+            background={markColor}
+            color={markTextColor}
+            size={size}
+            live={live}
+          />
+        </div>
+      )}
     </div>
   );
 }
