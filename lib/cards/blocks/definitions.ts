@@ -2,6 +2,7 @@ import type { ComponentDef } from "@miditor/core";
 import { albumDefinitions } from "./album";
 import { calendarDefinitions, RETIRED_CALENDAR_PROPS } from "./calendar";
 import { mapBlock, RETIRED_MAP_PROPS } from "./map";
+import { photoFrameDefinitions } from "./photo-frame";
 import { formBlock } from "./form";
 
 // Mọi loại khối riêng của CardMaking (dữ liệu thuần, không có React): thứ tự ở đây là thứ tự trong bảng "Thành phần". Editor dùng nó, và CMBE nhận
@@ -13,6 +14,7 @@ const raw: Record<string, ComponentDef> = {
   Map: mapBlock,
   Form: formBlock,
   ...calendarDefinitions,
+  ...photoFrameDefinitions,
 };
 
 export const cardDefinitions: Record<string, ComponentDef> = Object.fromEntries(Object.entries(raw).map(([type, def]) => [type, { ...def, hidden: true }]));

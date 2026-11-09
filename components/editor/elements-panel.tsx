@@ -24,6 +24,7 @@ const SAMPLE_IMAGES = ["sample", "cld-sample", "cld-sample-2", "cld-sample-3", "
 function sampleProps(type: string, def: ComponentDef) {
   const props: Record<string, unknown> = { ...def.defaultProps };
   if ("images" in props) props.images = SAMPLE_IMAGES;
+  if (type.startsWith("PhotoFrame")) props.src = SAMPLE_IMAGES[0];
   if (type === "Map") Object.assign(props, { name: "Trung tâm Hội nghị White Palace", address: "194 Hoàng Văn Thụ, Phú Nhuận" });
   return props;
 }

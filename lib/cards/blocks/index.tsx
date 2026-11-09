@@ -1,13 +1,15 @@
-import { isFontStack, resolveColor } from "@miditor/core";
+import { isFontStack, isImageUrl, resolveColor } from "@miditor/core";
 import type { Renderer } from "@miditor/render";
 import { AlbumView, type AlbumMode } from "@/components/blocks/album-view";
 import { AlbumGridView, AlbumPolaroidView, AlbumStripView } from "@/components/blocks/album-layouts";
 import { CalendarView } from "@/components/blocks/calendar-view";
 import { FormView } from "@/components/blocks/form-view";
 import { MapView } from "@/components/blocks/map-view";
+import { PhotoFrameView } from "@/components/blocks/photo-frame-view";
 import { albumBlock, cleanImages } from "./album";
 import { cardDefinitions } from "./definitions";
 import { calendarDefinitions, MARK_SHAPES } from "./calendar";
+import { FRAME_WIDTH_MAX, FRAME_ZOOM, photoFrameDefinitions } from "./photo-frame";
 import { formKeyOf } from "@/lib/cards/forms/form-id";
 import { cleanFields, cleanPublicList } from "../forms/fields";
 
@@ -97,6 +99,21 @@ const renderCalendar: Renderer = ({ props, metadata, theme }) => (
   />
 );
 
+// Địa chỉ ảnh phải qua `isImageUrl` (chỉ địa chỉ, không CSS); sai thì coi như chưa có ảnh.
+const renderPhotoFrame: Renderer = ({ props, metadata, theme }) => (
+  <PhotoFrameView
+    src={isImageUrl(props.src) ? props.src : ""}
+    alt={text(props.alt, "")}
+    shape={text(props.shape, "rectangle")}
+    zoom={number(props.zoom, 100, FRAME_ZOOM.min, FRAME_ZOOM.max)}
+    posX={number(props.posX, 50, 0, 100)}
+    posY={number(props.posY, 50, 0, 100)}
+    frameWidth={number(props.frameWidth, 0, 0, FRAME_WIDTH_MAX)}
+    frameColor={paint(props.frameColor, "#511419", theme)}
+    editing={modeOf(metadata) === "edit"}
+  />
+);
+
 const common = (props: Record<string, unknown>, metadata: unknown, defaultRadius: number) => ({
   images: cleanImages(props.images),
   radius: number(props.radius, defaultRadius, 0, 48),
@@ -132,6 +149,7 @@ const renderForm: Renderer = ({ id, props, metadata, theme }) => (
 
 // Mỗi kiểu lịch là một loại khối riêng nhưng cùng một cách vẽ.
 const calendarRenderers = Object.fromEntries(Object.keys(calendarDefinitions).map((type) => [type, renderCalendar]));
+const photoFrameRenderers = Object.fromEntries(Object.keys(photoFrameDefinitions).map((type) => [type, renderPhotoFrame]));
 
 export const cardRenderers = {
   Album: renderAlbum,
@@ -141,4 +159,5 @@ export const cardRenderers = {
   Map: renderMap,
   Form: renderForm,
   ...calendarRenderers,
+  ...photoFrameRenderers,
 };
