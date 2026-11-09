@@ -14,7 +14,7 @@ export const albumBlock: ComponentDef = {
   category: "Album",
   icon: "img",
   keywords: ["album", "ảnh", "gallery", "carousel", "coverflow", "xoay"],
-  size: { w: 380, h: 360 },
+  size: { w: 680, h: 440 },
   canContain: false,
   defaultProps: { images: [], autoplay: true, interval: 1.5, lightbox: true, radius: 16, dotColor: ALBUM_DOT_COLOR },
   fields: {
@@ -23,7 +23,7 @@ export const albumBlock: ComponentDef = {
     interval: { type: "number", label: "Mỗi ảnh", min: 0.5, max: 10, unit: "s", group: "Chuyển ảnh" },
     lightbox,
     radius: { type: "number", label: "Bo góc ảnh", min: 0, max: 48, unit: "px", group: "Kiểu dáng" },
-    dotColor: { type: "color", label: "Màu chấm", group: "Kiểu dáng" },
+    dotColor: { type: "color", label: "Màu chỉ số ảnh", group: "Kiểu dáng" },
   },
 };
 

@@ -1,6 +1,6 @@
 import { builtInRegistry, emptyPage, insertNode, newNode, validatePage, validateRegistry, type PageData, type TreeNode } from "@miditor/core";
 import { describe, expect, it } from "vitest";
-import { albumBlock, cleanImages, MAX_ALBUM_IMAGES } from "./album";
+import { albumBlock, albumDefinitions, cleanImages, MAX_ALBUM_IMAGES } from "./album";
 
 const registry = { ...builtInRegistry, Album: albumBlock };
 const IMG = "https://res.cloudinary.com/demo/image/upload/v1/sample.jpg";
@@ -13,6 +13,9 @@ function pageWith(images: unknown): PageData {
 }
 
 describe("the Album block", () => {
+  it("offers the 3D album first in the album library", () => {
+    expect(Object.keys(albumDefinitions)[0]).toBe("Album");
+  });
   it("has a definition the registry check accepts", () => {
     expect(validateRegistry(registry)).toEqual([]);
   });
