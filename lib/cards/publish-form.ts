@@ -16,7 +16,10 @@ export function publishErrorMessage(err: unknown): string {
     const reason = (err.details as { reason?: unknown } | undefined)?.reason;
     return reason === "LIMIT" ? LIMIT_TEXT : "Đường dẫn này đã có người dùng, hãy chọn tên khác.";
   }
-  if (isApiError(err, "VALIDATION")) return SLUG_HELP;
+  if (isApiError(err, "VALIDATION")) {
+    const reason = (err.details as { reason?: unknown } | undefined)?.reason;
+    return reason === 'DOCUMENT' ? 'Nội dung thiệp chưa hợp lệ. Kiểm tra các trang, liên kết và biểu mẫu rồi thử lại.' : SLUG_HELP;
+  }
   return errorMessage(err);
 }
 

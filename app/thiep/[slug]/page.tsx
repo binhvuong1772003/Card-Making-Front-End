@@ -1,6 +1,6 @@
-import { Render, pageMeta } from "@miditor/render";
-import { cardRenderers } from "@/lib/cards/blocks";
-import type { PageData } from "@miditor/core";
+import { pageMeta } from "@miditor/render";
+import { CardPlayer } from "@/components/cards/card-player";
+import { normalizeCardDocument, getStartPage } from "@/lib/cards/document";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache, Suspense } from "react";
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps<"/thiep/[slug]">): 
   const { slug } = await params;
   const page = await getPage(slug);
   if (!page) return { title: "Không tìm thấy thiệp" };
-  const meta = pageMeta(page.document as unknown as PageData);
+  const meta = pageMeta(getStartPage(normalizeCardDocument(page.document)).data);
   const title = meta.title ?? page.title;
   return {
     title,
@@ -32,12 +32,7 @@ async function PublishedCard({ params }: Pick<PageProps<"/thiep/[slug]">, "param
   return (
     <main className={styles.viewport}>
       <div className={styles.paper}>
-        <Render
-          data={page.document as unknown as PageData}
-          renderers={cardRenderers}
-          responsive={{ scale: true }}
-          metadata={{ mode: "live", slug }}
-        />
+        <CardPlayer document={normalizeCardDocument(page.document)} mode="published" historyKey={`public:${slug}`} metadata={{ mode: "live", slug }} />
       </div>
     </main>
   );

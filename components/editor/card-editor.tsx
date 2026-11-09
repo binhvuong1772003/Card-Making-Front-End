@@ -1,10 +1,10 @@
 "use client";
 
-import { Editor, EditorProvider, type PageData, type SaveStatus } from "@miditor/editor";
+import { Editor, EditorProvider, createEditor, useEditor, type RailTool, type SaveStatus } from "@miditor/editor";
 import { vi } from "@miditor/editor/locales/vi";
 import "@miditor/editor/style.css";
 import "./editor-overrides.css";
-import { useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { toast } from "sonner";
 import { uploadImage } from "@/lib/assets/upload-image";
 import { errorMessage } from "@/lib/auth/messages";
@@ -25,6 +25,102 @@ import { phosphorIcons } from "./phosphor-icons";
 import { CardHeader } from "./card-header";
 import type { SealState } from "./status-seal";
 import { ZoomPill } from "./zoom-pill";
+import { createCardSession, unreachablePageNames, type CardSession } from "./card-session";
+import { normalizeCardDocument, type CardDocument } from "@/lib/cards/document";
+import { PagesPanel } from "./pages-panel";
+import { PageInteractionPanel } from "./page-interaction-panel";
+import type { TreeNode } from "@miditor/core";
+import { CardPlayer } from "@/components/cards/card-player";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+
+const SessionContext = createContext<{ session: CardSession; readOnly: boolean } | null>(null);
+const toolMemory = new WeakMap<CardSession, string>();
+function KeepTool({ tools, children }: { tools: readonly RailTool[]; children: ReactNode }) {
+  const { session } = useCardSession();
+  const restored = useRef(false);
+  useEffect(() => {
+    if (!restored.current) {
+      restored.current = true;
+      const previous = toolMemory.get(session);
+      const tool = tools.find(tool => tool.id === previous);
+      if (tool && !tool.active) { tool.pick(); return; }
+    }
+    const active = tools.find(tool => tool.active);
+    if (active) toolMemory.set(session, active.id);
+  }, [tools, session]);
+  return children;
+}
+const editorOverrides = { rail: KeepTool };
+const findNode = (node: TreeNode, id: string): TreeNode | undefined => node.id === id ? node : node.children.map(child => findNode(child, id)).find(Boolean);
+function useCardSession() {
+  const value = useContext(SessionContext);
+  if (!value) throw new Error("Thiếu phiên thiết kế.");
+  useSyncExternalStore(value.session.subscribe, value.session.getSnapshot, value.session.getSnapshot);
+  return value;
+}
+function PagesTool() {
+  const { session, readOnly } = useCardSession();
+  const editor = useEditor();
+  const frame = useEditor(v => v.frame);
+  const zoom = useEditor(v => v.zoom);
+  const flush = () => {
+    const data = editor.flush();
+    if (!data) throw new Error('Chưa lấy được nội dung đang sửa. Hãy thử lại.');
+    session.receivePage(session.activePageId, data);
+    session.captureHistory(session.activePageId, editor.getHistory());
+    session.setView(session.activePageId, { frame, zoom });
+    return data;
+  };
+  const safely = (action: () => void) => { try { action(); } catch (error) { toast.error(errorMessage(error)); } };
+  const select = (id: string) => safely(() => session.switchPage(id, flush));
+  return <PagesPanel pages={session.document.pages} activePageId={session.activePageId} startPageId={session.document.startPageId}
+    readOnly={readOnly}
+    onSelectPage={select}
+    onRenamePage={(id, name) => safely(() => { if (!readOnly) session.renamePage(id, name); })}
+    onAddPage={() => safely(() => { if (!readOnly) { flush(); select(session.addPage()); } })}
+    onDuplicatePage={id => safely(() => { if (!readOnly) { const data = flush(); if (data) session.receivePage(session.activePageId, data); select(session.duplicatePage(id)); } })}
+    onMovePage={(id, direction) => safely(() => { if (!readOnly) {
+      const ids = session.document.pages.map(page => page.id); const index = ids.indexOf(id); const next = index + direction;
+      if (next >= 0 && next < ids.length) { [ids[index], ids[next]] = [ids[next]!, ids[index]!]; session.reorderPages(ids); }
+    } })}
+    onSetStartPage={id => safely(() => { if (!readOnly) session.setStartPage(id); })}
+    onDeletePage={id => safely(() => { if (!readOnly) {
+      const data = flush(); if (data) session.receivePage(session.activePageId, data);
+      session.deletePage(id); toast("Đã xóa trang", { id: "page-deleted", action: { label: "Hoàn tác", onClick: () => safely(() => session.undoDelete()) } });
+    } })}
+  />;
+}
+function InteractionControls() {
+  const { session, readOnly } = useCardSession();
+  const editor = useEditor();
+  const selected = useEditor(v => v.selection.id);
+  const data = useEditor(v => v.data);
+  const [previewing, setPreviewing] = useState(false);
+  const page = session.document.pages.find(page => page.id === session.activePageId)!;
+  const node = selected ? findNode(data.root, selected) : undefined;
+  if (!node || readOnly) return null;
+  return <><PageInteractionPanel pages={session.document.pages} sourceNode={node} value={page.interactions[node.id]} onPreview={() => { editor.flush(); setPreviewing(true); }} onChange={action => {
+    try { const snapshot = editor.checkpoint(); if (snapshot) session.setInteraction(node.id, action ?? null, snapshot); }
+    catch (error) { toast.error(errorMessage(error)); }
+  }} />
+    <Dialog open={previewing} onOpenChange={setPreviewing}><DialogContent className="sm:max-w-[1000px] max-h-[90dvh] overflow-y-auto">
+      <DialogTitle>Thử liên kết — bấm thành phần trong thiệp</DialogTitle>
+      {previewing && <CardPlayer document={{ ...session.document, startPageId: page.id }} mode="preview" historyKey={`test:${page.id}`} device="desktop" />}
+    </DialogContent></Dialog>
+  </>;
+}
+function RestorePage({ session, pageId }: { session: CardSession; pageId: string }) {
+  const editor = useEditor();
+  const data = useEditor(v => v.data);
+  useEffect(() => {
+    session.aliasHistory(pageId, editor.getHistory(), data);
+    const view = session.viewFor(pageId);
+    if (view) { editor.setFrame(view.frame); editor.setZoom(view.zoom); }
+    // Only restore when this keyed provider mounts.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session, pageId, editor]);
+  return null;
+}
 
 // Giữ tham chiếu ổn định: Miditor đọc lại các prop này ở mỗi lần dựng.
 // Lời của trang trống theo bản vẽ; các câu còn lại là bản tiếng Việt có sẵn của Miditor.
@@ -38,13 +134,13 @@ const i18n = {
     "empty.open": "Mở thư viện khối",
   },
 };
-const config = {
+export const cardEditorConfig = {
   icons: phosphorIcons,
   uploadImage,
   components: cardComponents,
   renderers: cardRenderers,
   fonts: CARD_FONTS,
-  tools: [{ id: "elements", label: "Thành phần", icon: "shape" as const, panel: ElementsPanel }],
+  tools: [{ id: "elements", label: "Thành phần", icon: "shape" as const, panel: ElementsPanel }, { id: "pages", label: "Trang", icon: "layers" as const, panel: PagesTool }],
   customFields: { "image-list": ImageListInput, date: DateInput, time: TimeInput, "frame-shape": FrameShapeInput, "single-image": SingleImageInput, "form-fields": FormFieldsInput, "form-public-list": PublicListInput, "form-id": FormIdInput },
 };
 const VIEW_ONLY = { canEdit: false, canDelete: false, canDuplicate: false, canDrag: false, canAdd: false };
@@ -67,58 +163,66 @@ const DOT_GRID = "radial-gradient(color-mix(in srgb, var(--miditor-accent) 10%, 
 
 
 // Trang soạn thiệp: Miditor với giao diện, icon, tiếng Việt và các chỗ cắm của CardMaking. Tự lưu cả bản nháp sau mỗi thay đổi.
-export function CardEditor({ card }: { card: CardDetail }) {
+export function CardEditor({ card, onDocumentChange, onFlushReady }: { card: CardDetail; onDocumentChange?: (document: CardDocument) => void; onFlushReady?: (flush: (() => CardDocument) | null) => void }) {
   const [status, setStatus] = useState<SaveStatus>("saved");
   const viewOnly = card.role === "VIEWER";
-
-  const saver = useMemo(
-    () =>
-      createCardSaver<PageData>(card.id, card.revision, (next, error) => {
-        setStatus(next);
-        if (next === "error") toast.error(errorMessage(error));
-      }),
-    [card.id, card.revision],
-  );
-
-  // Đang lưu dở hoặc lỗi thì báo trước khi rời trang.
+  const [runtime] = useState(() => {
+    let saveError: unknown;
+    const saver = onDocumentChange ? {
+      save: (document: CardDocument) => onDocumentChange(document), idle: async () => {},
+    } : createCardSaver<CardDocument>(card.id, card.revision, (next, error) => {
+      saveError = next === "error" ? error ?? new Error("Không lưu được thiệp.") : undefined;
+      setStatus(next);
+      if (next === "error") toast.error(errorMessage(error));
+    });
+    const session = createCardSession(normalizeCardDocument(card.document), {
+      changed: document => { if (!viewOnly) saver.save(document); },
+      idle: async () => { await saver.idle(); if (saveError) throw saveError; },
+      failed: () => saveError !== undefined,
+    });
+    return { session, controller: createEditor() };
+  });
+  const { session, controller } = runtime;
+  const { document, activePageId } = useSyncExternalStore(session.subscribe, session.getSnapshot, session.getSnapshot);
+  const page = document.pages.find(page => page.id === activePageId)!;
   useEffect(() => {
-    if (status !== "saving" && status !== "error") return;
+    if (!onFlushReady) return;
+    onFlushReady(() => {
+      const current = controller.flush();
+      if (current) session.receivePage(session.activePageId, current);
+      return session.document;
+    });
+    return () => onFlushReady(null);
+  }, [controller, session, onFlushReady]);
+  const context = useMemo(() => ({ session, readOnly: viewOnly }), [session, viewOnly]);
+  useEffect(() => {
+    if (status !== "saving" && status !== "error" && status !== "unsaved") return;
     const warn = (event: BeforeUnloadEvent) => event.preventDefault();
     window.addEventListener("beforeunload", warn);
     return () => window.removeEventListener("beforeunload", warn);
   }, [status]);
-
-  const page = card.document.root ? (card.document as unknown as PageData) : undefined; // {} là thiệp mới: mở trang trống
-  const seal = SEAL[status];
-
   return (
-    <EditorProvider
-      data={page}
-      onChange={viewOnly ? undefined : saver.save}
-      onChangeDebounce={800}
-      status={status}
-      permissions={viewOnly ? VIEW_ONLY : undefined}
-      appearance={cardAppearance}
-      i18n={i18n}
-      config={config}
-      metadata={EDIT_METADATA}
-    >
+    <SessionContext.Provider value={context}>
+    <EditorProvider key={page.id} data={page.data} controller={controller} initialHistory={session.historyFor(page.id)}
+      onChange={viewOnly ? undefined : data => session.receivePage(page.id, data)}
+      onAction={viewOnly ? undefined : (_action, data) => session.receivePage(page.id, data)}
+      onChangeDebounce={500} status={status} permissions={viewOnly ? VIEW_ONLY : undefined}
+      appearance={cardAppearance} i18n={i18n} config={cardEditorConfig} overrides={editorOverrides} metadata={EDIT_METADATA}>
+      <RestorePage session={session} pageId={page.id} />
       <div className="card-editor" style={{ display: "grid", gridTemplateRows: "auto minmax(0, 1fr)", blockSize: "100%" }}>
-        <CardHeader title={card.title} seal={seal} cardId={card.id} isOwner={card.role === "OWNER"} canReadResponses={card.role !== "VIEWER"} idle={() => saver.idle()} />
+        {onDocumentChange ? <Editor.Header /> : <CardHeader title={card.title} seal={SEAL[status]} cardId={card.id} isOwner={card.role === "OWNER"} canReadResponses={!viewOnly}
+          idle={() => session.flushAndSave(() => controller.flush())} hasCardContent={document.pages.some(page => page.data.root.children.length > 0)} unreachablePages={unreachablePageNames(document)} />}
         <div style={{ display: "grid", gridTemplateColumns: `auto 292px minmax(0, 1fr) ${PROPERTIES_WIDTH}px`, minBlockSize: 0 }}>
           <Editor.Rail />
-          <div style={cell}>
-            <Editor.StartPanel />
-          </div>
-          <div style={{ ...cell, position: "relative", background: DOT_GRID }}>
-            <Editor.Canvas />
-            <ZoomPill />
-          </div>
-          <div style={cell}>
-            <Editor.Properties />
+          <div style={cell}><Editor.StartPanel /></div>
+          <div style={{ ...cell, position: "relative", background: DOT_GRID }}><Editor.Canvas /><ZoomPill /></div>
+          <div style={{ ...cell, display: "flex", flexDirection: "column" }}>
+            <div style={{ flex: "1 1 auto", minHeight: 0, display: "grid" }}><Editor.Properties /></div>
+            <div style={{ flex: "0 1 auto", maxHeight: "45%", overflowY: "auto" }}><InteractionControls /></div>
           </div>
         </div>
       </div>
     </EditorProvider>
+    </SessionContext.Provider>
   );
 }

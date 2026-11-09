@@ -103,6 +103,13 @@ function upgradeNode(node: TreeNode): TreeNode {
 
 // Áp cho cả PageData đọc từ server, dạng `{ root, ... }`. `root` không phải khối thì trả lại nguyên vẹn.
 export function upgradePageDocument(document: Record<string, unknown>): Record<string, unknown> {
+  if (document.kind === 'card' && Array.isArray(document.pages)) {
+    return { ...document, pages: document.pages.map((page) => {
+      if (!page || typeof page !== 'object') return page;
+      const value = page as Record<string, unknown>;
+      return value.data && typeof value.data === 'object' ? { ...value, data: upgradePageDocument(value.data as Record<string, unknown>) } : value;
+    }) };
+  }
   const root = document.root;
   if (typeof root !== "object" || root === null || !Array.isArray((root as { children?: unknown }).children)) return document;
   const upgraded = upgradeLegacyForms(root as unknown as TreeNode);

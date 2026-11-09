@@ -1,0 +1,97 @@
+.viewport {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  container-type: inline-size;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 0;
+}
+
+.viewport[data-auto-desktop] .stage {
+  min-height: 640px;
+}
+
+.viewport[data-device="phone"] .stage {
+  min-height: 0;
+}
+
+.viewport[data-device="phone"][data-auto-phone] .stage {
+  min-height: 812px;
+}
+
+@container (max-width: 640px) {
+  .viewport:not([data-device]):not([data-auto-phone]) .stage {
+    min-height: 0;
+  }
+
+  .viewport:not([data-device])[data-auto-phone] .stage {
+    min-height: 812px;
+  }
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  outline: none;
+}
+
+.page[data-layer="outgoing"] {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.page[data-layer="incoming"][data-transition="fade"] {
+  animation: fade-in var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="outgoing"][data-transition="fade"] {
+  animation: fade-out var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="incoming"][data-transition="slide-left"] {
+  animation: from-right var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="outgoing"][data-transition="slide-left"] {
+  animation: to-left var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="incoming"][data-transition="slide-right"] {
+  animation: from-left var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="outgoing"][data-transition="slide-right"] {
+  animation: to-right var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="incoming"][data-transition="slide-up"] {
+  animation: from-below var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="outgoing"][data-transition="slide-up"] {
+  animation: to-above var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="incoming"][data-transition="zoom"] {
+  animation: zoom-in var(--page-duration, 450ms) ease both;
+}
+.page[data-layer="outgoing"][data-transition="zoom"] {
+  animation: zoom-out var(--page-duration, 450ms) ease both;
+}
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes from-right { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes to-left { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+@keyframes from-left { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes to-right { from { transform: translateX(0); } to { transform: translateX(100%); } }
+@keyframes from-below { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes to-above { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+@keyframes zoom-in { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+@keyframes zoom-out { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(1.04); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .page[data-layer] { animation: none !important; }
+}

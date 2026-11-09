@@ -3,7 +3,8 @@
 import { useEditor } from "@miditor/editor";
 import { ChatCircleTextIcon } from "@phosphor-icons/react";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
+import { toast } from "sonner";
 import { usePublication } from "@/lib/cards/use-publication";
 import { Button } from "@/components/ui/button";
 import { PhosphorIcon } from "./phosphor-icons";
@@ -15,7 +16,6 @@ import { StatusSeal, type SealState } from "./status-seal";
 const FRAME_BUTTON =
   "h-9 gap-2 rounded-none px-4 text-[13px] font-medium aria-pressed:bg-accent aria-pressed:font-semibold aria-pressed:text-accent-foreground";
 
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export function CardHeader({
   title,
@@ -24,6 +24,8 @@ export function CardHeader({
   isOwner,
   canReadResponses,
   idle,
+  hasCardContent,
+  unreachablePages = [],
 }: {
   title: string;
   seal: { state: SealState; label: string };
@@ -33,25 +35,17 @@ export function CardHeader({
   canReadResponses: boolean;
   /** Chờ tới khi bộ lưu không còn gì đang ghi. */
   idle: () => Promise<void>;
+  hasCardContent?: boolean;
+  unreachablePages?: string[];
 }) {
   const editor = useEditor();
-  const status = useEditor((view) => view.status);
   const data = useEditor((view) => view.data) as { root?: { children?: unknown[] } } | undefined;
-  const hasContent = (data?.root?.children?.length ?? 0) > 0;
+  const hasContent = hasCardContent ?? (data?.root?.children?.length ?? 0) > 0;
   const [publishing, setPublishing] = useState(false);
   const publication = usePublication(cardId);
 
   // Bản nháp đang gõ dở (chưa tới hạn lưu tự động) phải lưu xong trước khi xuất bản hoặc xem trước.
-  const statusRef = useRef(status);
-  useEffect(() => {
-    statusRef.current = status;
-  }, [status]);
-  const flushDraft = useCallback(async () => {
-    await editor.save();
-    const deadline = Date.now() + 3000;
-    while (statusRef.current === "unsaved" && Date.now() < deadline) await sleep(100);
-    await idle();
-  }, [editor, idle]);
+  const flushDraft = useCallback(() => idle(), [idle]);
 
   // Mở tab ngay trong lúc bấm (không bị chặn cửa sổ bật lên), rồi chuyển tab tới trang xem trước khi bản nháp đã lưu xong.
   const preview = async () => {
@@ -59,7 +53,9 @@ export function CardHeader({
     try {
       await flushDraft();
     } catch {
-      // vẫn mở bản đã lưu gần nhất
+      tab?.close();
+      toast.error("Chưa lưu được bản sửa. Hãy thử lại trước khi xem trước.");
+      return;
     }
     const url = `/cards/${cardId}/preview`;
     if (tab) tab.location.href = url;
@@ -118,7 +114,10 @@ export function CardHeader({
           <PhosphorIcon name="eye" />
           Xem trước
         </Button>
-        <Button onClick={() => setPublishing(true)} className="h-9 px-5 text-[13px] font-semibold">
+        <Button onClick={() => {
+          if (unreachablePages.length) toast.warning(`${unreachablePages.length} trang chưa có liên kết từ trang bắt đầu: ${unreachablePages.join(', ')}.`);
+          setPublishing(true);
+        }} className="h-9 px-5 text-[13px] font-semibold">
           Xuất bản
         </Button>
       </div>

@@ -1,8 +1,7 @@
 "use client";
 
-import type { PageData } from "@miditor/core";
-import { Render } from "@miditor/render";
-import { cardRenderers } from "@/lib/cards/blocks";
+import { normalizeCardDocument } from "@/lib/cards/document";
+import { CardPlayer } from "@/components/cards/card-player";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import { useState } from "react";
@@ -60,7 +59,7 @@ function Detail({ template, onDone }: { template: AdminTemplate; onDone: () => v
   return (
     <aside aria-label="Chi tiết thiệp" className={cn("flex w-full max-w-[460px] min-w-[320px] flex-[1_1_380px] flex-col gap-5 rounded-[28px] bg-background p-6", SHADOW)}>
       <div className="mx-auto h-[380px] w-[300px] max-w-full overflow-y-auto rounded-[28px] bg-white shadow-[0_0_0_8px_#F6EEF0,0_1px_2px_rgba(42,34,36,0.06)]">
-        <Render data={template.snapshot as unknown as PageData} renderers={cardRenderers} device="phone" links="inert" />
+        <CardPlayer document={normalizeCardDocument(template.snapshot)} mode="preview" historyKey={`admin:${template.id}`} device="phone" />
       </div>
       <div>
         <h2 className="text-xl font-bold tracking-tight">{template.title}</h2>

@@ -15,8 +15,8 @@
     "@dnd-kit/dom": "0.5.3",
     "@dnd-kit/react": "0.5.3",
     "@miditor/core": "file:/Users/doubleb/miditor-packs/miditor-core-0.0.0.tgz",
-    "@miditor/editor": "file:vendor/miditor-editor-0.0.0-panel-labels.tgz",
-    "@miditor/render": "file:/Users/doubleb/miditor-packs/miditor-render-0.0.0.tgz",
+    "@miditor/editor": "file:vendor/miditor-editor-0.0.0-multipage-20261109b.tgz",
+    "@miditor/render": "file:vendor/miditor-render-0.0.0-multipage-20261109b.tgz",
     "@phosphor-icons/react": "^2.1.10",
     "@tailwindcss/postcss": "^4.3.3",
     "@tanstack/react-query": "^5.104.5",
@@ -44,6 +44,6 @@
   },
   "overrides": {
     "@miditor/core": "file:/Users/doubleb/miditor-packs/miditor-core-0.0.0.tgz",
-    "@miditor/render": "file:/Users/doubleb/miditor-packs/miditor-render-0.0.0.tgz"
+    "@miditor/render": "file:vendor/miditor-render-0.0.0-multipage-20261109b.tgz"
   }
 }

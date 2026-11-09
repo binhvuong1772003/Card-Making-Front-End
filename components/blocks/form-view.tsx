@@ -2,6 +2,7 @@
 
 import { type CSSProperties, type FormEvent, useEffect, useId, useState } from "react";
 import { ApiError } from "@/lib/api/errors";
+import { useFormDraft } from "./form-drafts";
 import { formErrorMessage } from "@/lib/cards/forms/api";
 import {
   MAX_LONG,
@@ -367,7 +368,8 @@ export function FormView(props: FormViewProps) {
   const live = props.mode === "live" && props.slug !== "";
   const uid = useId();
   const fields = props.fields;
-  const [values, setValues] = useState<Answers>(() => initialValues(fields));
+  const [draft, setDraft] = useFormDraft(props.blockId);
+  const [values, setValues] = useState<Answers>(() => draft ?? initialValues(fields));
   const [website, setWebsite] = useState("");
   // Bắt đầu ở "đang tải" khi có sổ công khai: tránh nháy "chưa ai gửi" trước lần tải đầu.
   const [loading, setLoading] = useState(props.publicList.enabled);
@@ -425,12 +427,11 @@ export function FormView(props: FormViewProps) {
   }, [live, props.publicList.enabled, props.slug, props.blockId]);
 
   const set = (id: string, value: unknown) => {
-    setValues((old) => {
-      const next = { ...old };
-      if (value === undefined || value === "") delete next[id];
-      else next[id] = value;
-      return next;
-    });
+    const next = { ...values };
+    if (value === undefined || value === "") delete next[id];
+    else next[id] = value;
+    setValues(next);
+    setDraft(next);
   };
 
   const loadMore = async () => {
@@ -493,7 +494,9 @@ export function FormView(props: FormViewProps) {
     }
     setDone(false);
     setPending(false);
-    setValues(initialValues(fields));
+    const initial = initialValues(fields);
+    setValues(initial);
+    setDraft(undefined);
     setErrors({});
     setNotice("");
   };

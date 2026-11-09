@@ -7,6 +7,7 @@ describe("publish form rules", () => {
     expect(publishErrorMessage(new ApiError(409, "CONFLICT", "x", { reason: "LIMIT" }))).toBe(LIMIT_TEXT);
     expect(publishErrorMessage(new ApiError(409, "CONFLICT", "x"))).toMatch(/đã có người dùng/);
     expect(publishErrorMessage(new ApiError(400, "VALIDATION", "x"))).toBe(SLUG_HELP);
+    expect(publishErrorMessage(new ApiError(400, "VALIDATION", "x", { reason: 'DOCUMENT' }))).toMatch(/các trang, liên kết/);
   });
 
   it("lets a new version leave the link empty but not a version that already has one", () => {

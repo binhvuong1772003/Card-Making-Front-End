@@ -1,8 +1,7 @@
 "use client";
 
-import type { PageData } from "@miditor/core";
-import { Render } from "@miditor/render";
-import { cardRenderers } from "@/lib/cards/blocks";
+import { normalizeCardDocument } from "@/lib/cards/document";
+import { CardPlayer } from "./card-player";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeftIcon, DeviceMobileIcon, MonitorIcon } from "@phosphor-icons/react";
 import Link from "next/link";
@@ -24,8 +23,8 @@ export function CardPreview({ id }: { id: string }) {
     if (signedOut) router.replace(`/login?returnTo=${encodeURIComponent(`/cards/${id}/preview`)}`);
   }, [signedOut, router, id]);
 
-  const document = card.data?.document as unknown as PageData | undefined;
-  const empty = !document?.root;
+  const document = card.data ? normalizeCardDocument(card.data.document) : undefined;
+  const empty = !document?.pages.some(page => page.data.root.children.length > 0);
 
   const tab = (value: "desktop" | "phone", label: string, icon: React.ReactNode) => (
     <button type="button" aria-pressed={device === value} onClick={() => setDevice(value)} className={cn("inline-flex h-9 items-center gap-2 rounded-full px-4 text-sm", device === value ? "bg-muted font-semibold text-accent-foreground" : "font-medium hover:bg-muted")}>
@@ -56,7 +55,7 @@ export function CardPreview({ id }: { id: string }) {
           <p className="text-sm text-muted-foreground">Thiệp chưa có nội dung để xem trước.</p>
         ) : (
           <div className={cn("w-full overflow-hidden bg-white shadow-[0_1px_2px_rgba(42,34,36,0.06),0_14px_36px_rgba(42,34,36,0.14)]", device === "phone" ? "max-w-[375px] rounded-[28px]" : "max-w-[960px] rounded-lg")}>
-            <Render data={document} renderers={cardRenderers} device={device} />
+            <CardPlayer key={device} document={document!} mode="preview" historyKey={`preview:${id}:${device}`} device={device} />
           </div>
         )}
       </main>
