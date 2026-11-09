@@ -15,16 +15,17 @@ describe("the Photo frame block", () => {
     expect(validateRegistry(registry)).toEqual([]);
   });
 
-  it("offers six kinds in the Photo frame group, each opening on its own shape", () => {
+  it("offers all 13 shapes as blocks in the Photo frame group", () => {
     const kinds = Object.entries(photoFrameDefinitions);
-    expect(kinds).toHaveLength(6);
+    expect(kinds).toHaveLength(13);
     expect(new Set(kinds.map(([, def]) => def.category))).toEqual(new Set(["Khung ảnh"]));
-    expect(kinds.map(([, def]) => def.defaultProps.shape)).toEqual(["arch", "ellipse", "heart", "scallop", "seal", "rounded"]);
+    expect(new Set(kinds.map(([, def]) => def.defaultProps.shape))).toEqual(new Set(FRAME_SHAPES));
     for (const [, def] of kinds) expect(FRAME_SHAPES).toContain(def.defaultProps.shape);
   });
 
-  it("keeps the shapes Miditor has, plus the heart, each with a name and a place in the picker", () => {
-    expect(FRAME_SHAPES).toHaveLength(14);
+  it("offers every Miditor shape except crescent, plus heart, with a name and a place in the picker", () => {
+    expect(FRAME_SHAPES).toHaveLength(13);
+    expect(FRAME_SHAPES).not.toContain("crescent");
     expect([...FRAME_SHAPE_ORDER].sort()).toEqual([...FRAME_SHAPES].sort());
     for (const shape of FRAME_SHAPES) expect(FRAME_SHAPE_LABELS[shape], shape).toBeTruthy();
   });

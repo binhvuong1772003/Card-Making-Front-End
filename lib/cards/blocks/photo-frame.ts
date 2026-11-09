@@ -5,7 +5,7 @@ import { SHAPE_NAMES, shapeGeometry, type ComponentDef, type ShapeGeometry } fro
 // Nhóm Viền và Hiệu ứng chung của Miditor chỉ viền, đổ bóng hình chữ nhật của khối, không khớp hình đã cắt, nên khối có viền riêng
 // (`frameWidth`, `frameColor`). Mỗi kiểu trong thư viện là một loại khối riêng cùng nhóm "Khung ảnh" và cùng cách vẽ, chỉ khác hình
 // mặc định; đổi hình lúc nào cũng được. Dữ liệu thuần, không có React: CMBE nhận bản sinh ra từ đây (`npm run blocks:export`).
-export const FRAME_SHAPES = [...SHAPE_NAMES, "heart"] as const;
+export const FRAME_SHAPES = [...SHAPE_NAMES.filter((shape) => shape !== "crescent"), "heart"] as const;
 export type FrameShape = (typeof FRAME_SHAPES)[number];
 
 /** Tên hình bằng tiếng Việt, theo thứ tự hiện trong lưới chọn hình. */
@@ -22,10 +22,9 @@ export const FRAME_SHAPE_LABELS: Record<FrameShape, string> = {
   hexagon: "Lục giác",
   scallop: "Viền sóng",
   seal: "Tem răng cưa",
-  crescent: "Trăng khuyết",
   heart: "Tim",
 };
-export const FRAME_SHAPE_ORDER: readonly FrameShape[] = ["rectangle", "rounded", "ellipse", "pill", "arch", "semicircle", "triangle", "diamond", "pentagon", "hexagon", "scallop", "seal", "crescent", "heart"];
+export const FRAME_SHAPE_ORDER: readonly FrameShape[] = ["rectangle", "rounded", "ellipse", "pill", "arch", "semicircle", "triangle", "diamond", "pentagon", "hexagon", "scallop", "seal", "heart"];
 
 // Hình tim: đường viền vẽ trong khung 100 x 100, khối kéo giãn theo cỡ của nó (cùng cách với các hình dùng mặt nạ của Miditor).
 const HEART_PATH = "M50 92C12 62 0 40 0 24C0 9 12 0 26 0C37 0 46 6 50 14C54 6 63 0 74 0C88 0 100 9 100 24C100 40 88 62 50 92Z";
@@ -67,12 +66,26 @@ const base: ComponentDef = {
 
 const variant = (label: string, shape: FrameShape, size: { w: number; h: number }): ComponentDef => ({ ...base, label, size, defaultProps: { ...base.defaultProps, shape } });
 
-// Các kiểu trong thư viện, theo thứ tự hiện. Khoá là `type` lưu trong thiệp: đổi tên khoá là làm hỏng các thiệp đã lưu.
-export const photoFrameDefinitions: Record<string, ComponentDef> = {
-  PhotoFrameArch: variant("Khung vòm", "arch", { w: 240, h: 300 }),
-  PhotoFrameCircle: variant("Khung tròn", "ellipse", { w: 240, h: 240 }),
-  PhotoFrameHeart: variant("Khung tim", "heart", { w: 240, h: 220 }),
-  PhotoFrameScallop: variant("Viền sóng", "scallop", { w: 240, h: 240 }),
-  PhotoFrameSeal: variant("Tem răng cưa", "seal", { w: 240, h: 240 }),
-  PhotoFrameRounded: variant("Bo góc", "rounded", { w: 240, h: 300 }),
+// Các kiểu trong thư viện; giữ khoá cũ để thiệp đã lưu tiếp tục mở đúng.
+const FRAME_VARIANTS: Record<FrameShape, { type: string; label: string; size: { w: number; h: number } }> = {
+  rectangle: { type: "PhotoFrameRectangle", label: "Khung chữ nhật", size: { w: 240, h: 300 } },
+  rounded: { type: "PhotoFrameRounded", label: "Bo góc", size: { w: 240, h: 300 } },
+  ellipse: { type: "PhotoFrameCircle", label: "Khung tròn", size: { w: 240, h: 240 } },
+  pill: { type: "PhotoFramePill", label: "Khung viên thuốc", size: { w: 240, h: 140 } },
+  arch: { type: "PhotoFrameArch", label: "Khung vòm", size: { w: 240, h: 300 } },
+  semicircle: { type: "PhotoFrameSemicircle", label: "Khung bán nguyệt", size: { w: 240, h: 240 } },
+  triangle: { type: "PhotoFrameTriangle", label: "Khung tam giác", size: { w: 240, h: 240 } },
+  diamond: { type: "PhotoFrameDiamond", label: "Khung thoi", size: { w: 240, h: 240 } },
+  pentagon: { type: "PhotoFramePentagon", label: "Khung ngũ giác", size: { w: 240, h: 240 } },
+  hexagon: { type: "PhotoFrameHexagon", label: "Khung lục giác", size: { w: 240, h: 240 } },
+  scallop: { type: "PhotoFrameScallop", label: "Viền sóng", size: { w: 240, h: 240 } },
+  seal: { type: "PhotoFrameSeal", label: "Tem răng cưa", size: { w: 240, h: 240 } },
+  heart: { type: "PhotoFrameHeart", label: "Khung tim", size: { w: 240, h: 220 } },
 };
+
+export const photoFrameDefinitions: Record<string, ComponentDef> = Object.fromEntries(
+  FRAME_SHAPE_ORDER.map((shape) => {
+    const { type, label, size } = FRAME_VARIANTS[shape];
+    return [type, variant(label, shape, size)];
+  }),
+);
