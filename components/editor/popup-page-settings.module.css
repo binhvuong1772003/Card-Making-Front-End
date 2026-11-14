@@ -1,0 +1,20 @@
+.panel {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--miditor-border, #e5ddd9);
+  background: var(--miditor-panel, #fff);
+  color: var(--miditor-foreground, #352f2d);
+  font: 12px/1.4 var(--miditor-font, inherit);
+}
+
+.enable { display: flex; align-items: flex-start; gap: 9px; cursor: pointer; }
+.enable input { margin: 2px 0 0; accent-color: var(--miditor-accent, #842a36); }
+.enable span, .settings label { display: grid; gap: 5px; }
+.enable strong { font-size: 12px; font-weight: 600; }
+.enable small, .settings p { color: var(--miditor-muted, #756b68); font-size: 11px; }
+.settings { display: grid; gap: 9px; margin: 12px 0 0 22px; }
+.settings select, .settings input[type="number"] { width: 100%; min-height: 32px; padding: 5px 8px; border: 1px solid var(--miditor-border, #d9cfca); border-radius: 7px; background: var(--miditor-input, #fff); color: inherit; font: inherit; }
+.backdrop { display: flex; align-items: center; gap: 8px; }
+.backdrop input[type="color"] { width: 30px; height: 30px; padding: 2px; border: 1px solid var(--miditor-border, #d9cfca); border-radius: 6px; background: transparent; }
+.backdrop input[type="range"] { flex: 1; min-width: 0; accent-color: var(--miditor-accent, #842a36); }
+.backdrop span { min-width: 32px; text-align: right; font-variant-numeric: tabular-nums; }
+.settings p { margin: 0; line-height: 1.45; }

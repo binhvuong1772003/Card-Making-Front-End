@@ -6,6 +6,7 @@ import { canNavigateFrom, normalizePageNavigation } from "@/lib/cards/page-actio
 import styles from "./page-interaction-panel.module.css";
 
 const EFFECTS: [PageTransition, string][] = [["fade", "Mờ dần"], ["slide-left", "Trượt sang trái"], ["slide-right", "Trượt sang phải"], ["slide-up", "Trượt lên"], ["zoom", "Thu phóng"], ["none", "Không hiệu ứng"]];
+const ACTIONS = [["go-to-page", "Chuyển đến trang"], ["open-popup", "Mở dạng popup"]] as const;
 
 export type PageInteractionPanelProps = {
   pages: CardPage[];
@@ -16,10 +17,14 @@ export type PageInteractionPanelProps = {
 };
 
 export function PageInteractionPanel({ pages, sourceNode, value, onChange, onPreview }: PageInteractionPanelProps) {
-  if (!sourceNode || !canNavigateFrom(sourceNode)) return <section className={styles.panel}><h3>Tương tác</h3><p>Chọn văn bản, ảnh, hình, nút hoặc nhóm không chứa biểu mẫu để thêm liên kết trang.</p></section>;
-  const update = (patch: Partial<PageNavigation>) => onChange(normalizePageNavigation({ type: "go-to-page", targetPageId: value?.targetPageId ?? "", transition: value?.transition ?? "fade", durationMs: value?.durationMs ?? 450, ...patch }, pages));
-  return <section className={styles.panel} aria-label="Tương tác">
-    <h3>Tương tác</h3><label className={styles.label} htmlFor="page-link-target">Chuyển đến trang</label>
+  if (!sourceNode || !canNavigateFrom(sourceNode)) return <section data-card-navigation="" className={styles.panel}><p>Chọn văn bản, ảnh, hình, nút hoặc nhóm không chứa biểu mẫu để thêm liên kết trang.</p></section>;
+  const update = (patch: Partial<PageNavigation>) => onChange(normalizePageNavigation({ type: value?.type ?? "go-to-page", targetPageId: value?.targetPageId ?? "", transition: value?.transition ?? "fade", durationMs: value?.durationMs ?? 450, ...patch }, pages));
+  return <section data-card-navigation="" className={styles.panel} aria-label="Tương tác">
+    <label className={styles.label} htmlFor="page-link-action">Khi bấm</label>
+    <select id="page-link-action" value={value?.type ?? "go-to-page"} onChange={(event) => update({ type: event.target.value as PageNavigation["type"] })}>
+      {ACTIONS.map(([id, label]) => <option key={id} value={id}>{label}</option>)}
+    </select>
+    <label className={styles.label} htmlFor="page-link-target">Trang đích</label>
     <select id="page-link-target" value={value?.targetPageId ?? ""} onChange={(event) => update({ targetPageId: event.target.value })}>
       <option value="">Không liên kết</option>{pages.map((page) => <option key={page.id} value={page.id}>{page.name}</option>)}
     </select>

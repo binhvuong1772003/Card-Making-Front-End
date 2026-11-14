@@ -67,3 +67,7 @@ export function SingleImageInput({ label, value, onChange, readOnly }: CustomFie
     </div>
   );
 }
+
+export function FixedImageInput(props: CustomFieldProps) {
+  return <SingleImageInput {...props} readOnly />;
+}
