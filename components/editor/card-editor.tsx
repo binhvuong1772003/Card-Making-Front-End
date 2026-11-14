@@ -1,6 +1,6 @@
 "use client";
 
-import { Editor, EditorProvider, createEditor, useEditor, type RailTool, type SaveStatus } from "@miditor/editor";
+import { Editor, EditorProvider, createEditor, useEditor, type RailTool, type SaveStatus, type CustomFieldProps } from "@miditor/editor";
 import { vi } from "@miditor/editor/locales/vi";
 import "@miditor/editor/style.css";
 import "./editor-overrides.css";
@@ -9,29 +9,35 @@ import { toast } from "sonner";
 import { uploadImage } from "@/lib/assets/upload-image";
 import { errorMessage } from "@/lib/auth/messages";
 import type { CardDetail } from "@/lib/cards/api";
-import { cardComponents, cardRenderers, EDIT_METADATA } from "@/lib/cards/blocks";
+import { cardRenderers, EDIT_METADATA } from "@/lib/cards/blocks";
 import { CARD_FONTS } from "@/lib/cards/fonts";
 import { createCardSaver } from "@/lib/cards/card-saver";
 import { cardAppearance } from "./card-appearance";
 import { DateInput } from "./date-input";
 import { FrameShapeInput } from "./frame-shape-input";
-import { SingleImageInput } from "./single-image-input";
+import { FixedImageInput, SingleImageInput } from "./single-image-input";
 import { TimeInput } from "./time-input";
 import { FormFieldsInput, PublicListInput } from "./form-fields-input";
 import { FormIdInput } from "./form-id-input";
+import { TextEffectsInput } from "./text-effects-input";
 import { ImageListInput } from "./image-list-input";
 import { ElementsPanel } from "./elements-panel";
+import { DecorationsPanel } from "./decorations-panel";
 import { phosphorIcons } from "./phosphor-icons";
 import { CardHeader } from "./card-header";
 import type { SealState } from "./status-seal";
 import { ZoomPill } from "./zoom-pill";
 import { createCardSession, unreachablePageNames, type CardSession } from "./card-session";
-import { normalizeCardDocument, type CardDocument } from "@/lib/cards/document";
+import { normalizeCardDocument, type CardDocument, type PageNavigation } from "@/lib/cards/document";
 import { PagesPanel } from "./pages-panel";
 import { PageInteractionPanel } from "./page-interaction-panel";
+import { PageLayoutSettings } from "./page-layout-settings";
+import { PopupPageSettings } from "./popup-page-settings";
 import type { TreeNode } from "@miditor/core";
 import { CardPlayer } from "@/components/cards/card-player";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { navigationComponents, toEditorPage } from "@/lib/cards/editor-navigation";
+import { canNavigateFrom, normalizePageNavigation } from "@/lib/cards/page-actions";
 
 const SessionContext = createContext<{ session: CardSession; readOnly: boolean } | null>(null);
 const toolMemory = new WeakMap<CardSession, string>();
@@ -90,22 +96,21 @@ function PagesTool() {
     } })}
   />;
 }
-function InteractionControls() {
-  const { session, readOnly } = useCardSession();
-  const editor = useEditor();
-  const selected = useEditor(v => v.selection.id);
+function NavigationField({ value, onChange, nodeId, editor, readOnly }: CustomFieldProps) {
+  const { session, readOnly: viewOnly } = useCardSession();
   const data = useEditor(v => v.data);
   const [previewing, setPreviewing] = useState(false);
   const page = session.document.pages.find(page => page.id === session.activePageId)!;
-  const node = selected ? findNode(data.root, selected) : undefined;
-  if (!node || readOnly) return null;
-  return <><PageInteractionPanel pages={session.document.pages} sourceNode={node} value={page.interactions[node.id]} onPreview={() => { editor.flush(); setPreviewing(true); }} onChange={action => {
-    try { const snapshot = editor.checkpoint(); if (snapshot) session.setInteraction(node.id, action ?? null, snapshot); }
-    catch (error) { toast.error(errorMessage(error)); }
-  }} />
+  const node = findNode(data.root, nodeId);
+  if (!node || !canNavigateFrom(node) || readOnly || viewOnly) return null;
+  const action = value && typeof value === "object" && !Array.isArray(value)
+    ? normalizePageNavigation(value as Partial<PageNavigation>, session.document.pages) : undefined;
+  return <><PageInteractionPanel pages={session.document.pages} sourceNode={node} value={action}
+    onPreview={() => { editor.flush(); setPreviewing(true); }}
+    onChange={next => onChange(next ?? null)} />
     <Dialog open={previewing} onOpenChange={setPreviewing}><DialogContent className="sm:max-w-[1000px] max-h-[90dvh] overflow-y-auto">
       <DialogTitle>Thử liên kết — bấm thành phần trong thiệp</DialogTitle>
-      {previewing && <CardPlayer document={{ ...session.document, startPageId: page.id }} mode="preview" historyKey={`test:${page.id}`} device="desktop" />}
+      {previewing && <CardPlayer document={{ ...session.document, startPageId: page.id }} mode="preview" historyKey={`test:${page.id}`} device="desktop" embedded />}
     </DialogContent></Dialog>
   </>;
 }
@@ -124,6 +129,7 @@ function RestorePage({ session, pageId }: { session: CardSession; pageId: string
 
 // Giữ tham chiếu ổn định: Miditor đọc lại các prop này ở mỗi lần dựng.
 // Lời của trang trống theo bản vẽ; các câu còn lại là bản tiếng Việt có sẵn của Miditor.
+const SparkleIcon = phosphorIcons.sparkle;
 const i18n = {
   locale: "vi",
   messages: {
@@ -137,11 +143,11 @@ const i18n = {
 export const cardEditorConfig = {
   icons: phosphorIcons,
   uploadImage,
-  components: cardComponents,
+  components: navigationComponents,
   renderers: cardRenderers,
   fonts: CARD_FONTS,
-  tools: [{ id: "elements", label: "Thành phần", icon: "shape" as const, panel: ElementsPanel }, { id: "pages", label: "Trang", icon: "layers" as const, panel: PagesTool }],
-  customFields: { "image-list": ImageListInput, date: DateInput, time: TimeInput, "frame-shape": FrameShapeInput, "single-image": SingleImageInput, "form-fields": FormFieldsInput, "form-public-list": PublicListInput, "form-id": FormIdInput },
+  tools: [{ id: "elements", label: "Thành phần", icon: "shape" as const, panel: ElementsPanel }, { id: "decorations", label: "Trang trí", icon: <SparkleIcon size={18} />, panel: DecorationsPanel }, { id: "pages", label: "Trang", icon: "layers" as const, panel: PagesTool }],
+  customFields: { "card-navigation": NavigationField, "image-list": ImageListInput, date: DateInput, time: TimeInput, "frame-shape": FrameShapeInput, "single-image": SingleImageInput, "fixed-image": FixedImageInput, "form-fields": FormFieldsInput, "form-public-list": PublicListInput, "form-id": FormIdInput, "text-effects": TextEffectsInput },
 };
 const VIEW_ONLY = { canEdit: false, canDelete: false, canDuplicate: false, canDrag: false, canAdd: false };
 
@@ -203,7 +209,7 @@ export function CardEditor({ card, onDocumentChange, onFlushReady }: { card: Car
   }, [status]);
   return (
     <SessionContext.Provider value={context}>
-    <EditorProvider key={page.id} data={page.data} controller={controller} initialHistory={session.historyFor(page.id)}
+    <EditorProvider key={page.id} data={toEditorPage(page)} controller={controller} initialHistory={session.historyFor(page.id)}
       onChange={viewOnly ? undefined : data => session.receivePage(page.id, data)}
       onAction={viewOnly ? undefined : (_action, data) => session.receivePage(page.id, data)}
       onChangeDebounce={500} status={status} permissions={viewOnly ? VIEW_ONLY : undefined}
@@ -216,10 +222,7 @@ export function CardEditor({ card, onDocumentChange, onFlushReady }: { card: Car
           <Editor.Rail />
           <div style={cell}><Editor.StartPanel /></div>
           <div style={{ ...cell, position: "relative", background: DOT_GRID }}><Editor.Canvas /><ZoomPill /></div>
-          <div style={{ ...cell, display: "flex", flexDirection: "column" }}>
-            <div style={{ flex: "1 1 auto", minHeight: 0, display: "grid" }}><Editor.Properties /></div>
-            <div style={{ flex: "0 1 auto", maxHeight: "45%", overflowY: "auto" }}><InteractionControls /></div>
-          </div>
+          <div style={{ ...cell, display: "grid", gridTemplateRows: "auto minmax(0, 1fr)" }}><div><PageLayoutSettings key={`layout:${page.id}`} session={session} pageId={page.id} readOnly={viewOnly} /><PopupPageSettings key={page.id} session={session} pageId={page.id} readOnly={viewOnly} /></div><div style={cell}><Editor.Properties /></div></div>
         </div>
       </div>
     </EditorProvider>

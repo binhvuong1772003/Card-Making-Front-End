@@ -1,5 +1,6 @@
 import type { PageData, TreeNode } from '@miditor/core';
 import { blankCardPage, type CardDocument, type CardPage, type PageNavigation } from '@/lib/cards/document';
+import { fromEditorPage } from '@/lib/cards/editor-navigation';
 import { formKeyOf, newFormId } from '@/lib/cards/forms/form-id';
 
 export type PageHistory = { past: PageData[]; future: PageData[]; index: number };
@@ -25,14 +26,12 @@ export function createCardSession(initial: CardDocument, saver: { changed(docume
   let snapshot = { document, activePageId };
   let lastEnqueued: CardDocument | null = null;
   const listeners = new Set<() => void>();
-  const bindings = new WeakMap<PageData, Record<string, PageNavigation>>();
   const canonical = new WeakMap<PageData, PageData>();
   const identities = new WeakMap<PageData, Map<string, symbol>>();
   const histories = new Map<string, PageHistory>();
   const views = new Map<string, { frame: 'desktop' | 'phone'; zoom: number }>();
   let deleted: { page: CardPage; index: number; startPageId: string; activePageId: string; fallback: string; incoming: Record<string, Record<string, PageNavigation>>; sources: Map<string, Map<string, symbol>> } | null = null;
   for (const page of document.pages) {
-    bindings.set(page.data, page.interactions);
     identities.set(page.data, new Map(nodes(page.data.root).map(node => [node.id, Symbol(node.id)])));
   }
 
@@ -77,21 +76,20 @@ export function createCardSession(initial: CardDocument, saver: { changed(docume
     getSnapshot: () => snapshot,
     receivePage(pageId: string, incoming: PageData) {
       const page = document.pages.find(p => p.id === pageId);
-      if (!page || page.data === incoming) return;
-      const known = bindings.get(incoming);
-      const data = canonical.get(incoming) ?? (known ? incoming : rekeyForms(incoming, page.data));
+      if (!page) return;
+      const decoded = fromEditorPage(incoming, document.pages);
+      const data = canonical.get(incoming) ?? rekeyForms(decoded.data, page.data);
       const ids = new Set(nodes(data.root).map(n => n.id));
-      const livePages = new Set(document.pages.map(p => p.id));
-      const interactions = Object.fromEntries(Object.entries(known ?? page.interactions).filter(([id, action]) => ids.has(id) && livePages.has(action.targetPageId)));
-      bindings.set(data, interactions);
-      canonical.set(incoming, data);
       const previousIdentities = identities.get(page.data);
       const identity = identities.get(incoming) ?? new Map(nodes(data.root).map(node => [node.id, previousIdentities?.get(node.id) ?? Symbol(node.id)]));
+      const interactions = Object.fromEntries(Object.entries(decoded.interactions).filter(([id]) => ids.has(id)));
+      canonical.set(incoming, data);
       identities.set(data, identity); identities.set(incoming, identity);
-      // Retain aliases when form normalization produced a new immutable object.
-      bindings.set(incoming, interactions);
+      if (JSON.stringify(page.data) === JSON.stringify(data) && Object.keys(interactions).length === Object.keys(page.interactions).length && Object.entries(interactions).every(([id, action]) => JSON.stringify(page.interactions[id]) === JSON.stringify(action))) return;
       replace(pageId, { data, interactions });
     },
+    setPopupSettings(pageId: string, popup: CardPage['popup']) { requirePage(pageId); replace(pageId, { popup }); },
+    setPageLayout(pageId: string, layout: CardPage['layout']) { requirePage(pageId); replace(pageId, { layout }); },
     switchPage(pageId: string, flush: () => PageData | null) {
       requirePage(pageId);
       if (pageId === activePageId) return;
@@ -111,7 +109,6 @@ export function createCardSession(initial: CardDocument, saver: { changed(docume
     addPage() {
       if (document.pages.length >= 50) throw new Error('Mỗi thiệp có tối đa 50 trang.');
       const page = blankCardPage(freshId(), `Trang ${document.pages.length + 1}`);
-      bindings.set(page.data, page.interactions);
       identities.set(page.data, new Map(nodes(page.data.root).map(node => [node.id, Symbol(node.id)])));
       document = { ...document, pages: [...document.pages, page] }; emit(); return page.id;
     },
@@ -122,7 +119,6 @@ export function createCardSession(initial: CardDocument, saver: { changed(docume
       const data = rekeyForms(structuredClone(original.data), undefined, true);
       const interactions = Object.fromEntries(Object.entries(original.interactions).map(([key, action]) => [key, { ...action, targetPageId: action.targetPageId === pageId ? id : action.targetPageId }]));
       const page = { ...original, id, name: `${original.name.slice(0, 70)} (bản sao)`, data, interactions };
-      bindings.set(data, interactions);
       identities.set(data, new Map(nodes(data.root).map(node => [node.id, Symbol(node.id)])));
       const index = document.pages.indexOf(original);
       document = { ...document, pages: [...document.pages.slice(0, index + 1), page, ...document.pages.slice(index + 1)] }; emit(); return id;
@@ -148,7 +144,6 @@ export function createCardSession(initial: CardDocument, saver: { changed(docume
       deleted = { page: removed, index, startPageId: document.startPageId, activePageId, fallback, incoming, sources: new Map(document.pages.map(page => [page.id, identities.get(page.data) ?? new Map()])) };
       document = { ...document, pages, startPageId: document.startPageId === pageId ? fallback : document.startPageId };
       if (activePageId === pageId) activePageId = fallback;
-      for (const page of pages) bindings.set(page.data, page.interactions);
       emit();
     },
     undoDelete() {
@@ -166,19 +161,7 @@ export function createCardSession(initial: CardDocument, saver: { changed(docume
       pages.splice(Math.min(undo.index, pages.length), 0, page);
       document = { ...document, pages, startPageId: document.startPageId === undo.fallback ? undo.startPageId : document.startPageId };
       if (activePageId === undo.fallback) activePageId = undo.activePageId;
-      for (const page of document.pages) bindings.set(page.data, page.interactions);
       emit();
-    },
-    setInteraction(nodeId: string, action: PageNavigation | null, checkpoint?: PageData) {
-      const page = requirePage(activePageId);
-      if (!nodes(page.data.root).some(node => node.id === nodeId)) throw new Error('Không tìm thấy thành phần.');
-      if (action) requirePage(action.targetPageId);
-      const interactions = { ...page.interactions };
-      if (action) interactions[nodeId] = action; else delete interactions[nodeId];
-      const data = checkpoint ?? page.data;
-      bindings.set(data, interactions);
-      identities.set(data, identities.get(page.data) ?? new Map());
-      replace(activePageId, { data, interactions });
     },
     captureHistory(pageId: string, history: PageHistory) { histories.set(pageId, history); },
     historyFor(pageId: string) { return histories.get(pageId); },
@@ -187,12 +170,14 @@ export function createCardSession(initial: CardDocument, saver: { changed(docume
       if (old) for (const side of ['past', 'future'] as const) {
         const original = side === 'past' ? old[side].slice(-history[side].length) : old[side].slice(0, history[side].length);
         history[side].forEach((data, i) => {
-          bindings.set(data, bindings.get(original[i]!) ?? {});
-          if (original[i]) canonical.set(data, canonical.get(original[i]!) ?? original[i]!);
-          if (original[i]) identities.set(data, identities.get(original[i]!) ?? new Map());
+          if (original[i]) canonical.set(data, canonical.get(original[i]!) ?? fromEditorPage(original[i]!, document.pages).data);
+          if (original[i]) {
+            const source = identities.get(original[i]!) ?? identities.get(requirePage(pageId).data);
+            identities.set(data, new Map(nodes(data.root).map(node => [node.id, source?.get(node.id) ?? Symbol(node.id)])));
+          }
         });
       }
-      bindings.set(present, requirePage(pageId).interactions);
+      canonical.set(present, requirePage(pageId).data);
       identities.set(present, identities.get(requirePage(pageId).data) ?? new Map());
       histories.set(pageId, history);
     },

@@ -3,6 +3,15 @@ import { emptyPage } from "@miditor/core";
 import { blankCardPage, getStartPage, normalizeCardDocument } from "./document";
 
 describe("card document", () => {
+  it("keeps a full-width page, drops the default column layout and rejects unknown layouts", () => {
+    const pages = (layouts: unknown[]) => ({ kind: "card", version: 1, startPageId: "a", pages: layouts.map((layout, i) => ({ ...blankCardPage(["a", "b", "c"][i]!), ...(layout === undefined ? {} : { layout }) })) });
+    const result = normalizeCardDocument(pages(["full", "column", undefined]));
+    expect(result.pages[0]).toMatchObject({ layout: "full" });
+    expect(result.pages[1]).not.toHaveProperty("layout");
+    expect(result.pages[2]).not.toHaveProperty("layout");
+    expect(() => normalizeCardDocument(pages(["wide"]))).toThrow("Bố cục trang không hợp lệ.");
+  });
+
   it("wraps legacy page data without changing it", () => {
     const page = { ...emptyPage(), root: { ...emptyPage().root, id: "legacy-root" } };
     const result = normalizeCardDocument(page);
@@ -69,5 +78,11 @@ describe("card document", () => {
     const document = { kind: "card" as const, version: 1 as const, startPageId: "b", pages: [blankCardPage("a"), blankCardPage("b")] };
     expect(normalizeCardDocument(normalizeCardDocument(document))).toEqual(normalizeCardDocument(document));
     expect(getStartPage(document).id).toBe("b");
+  });
+  it("preserves popup settings and rejects widths outside the supported range", () => {
+    const page = blankCardPage("popup");
+    const configured = { ...page, popup: { width: 640, effect: "slide-up", backdropColor: "#17251e", backdropOpacity: 56 } };
+    expect(normalizeCardDocument({ kind: "card", version: 1, startPageId: "popup", pages: [configured] }).pages[0]?.popup).toEqual(configured.popup);
+    expect(() => normalizeCardDocument({ kind: "card", version: 1, startPageId: "popup", pages: [{ ...configured, popup: { ...configured.popup, width: 200 } }] })).toThrow(/popup/i);
   });
 });

@@ -2,11 +2,15 @@ import { emptyPage, migratePage, type PageData, type TreeNode } from "@miditor/c
 import { upgradePageDocument } from "./forms/legacy";
 import { formKeyOf } from "./forms/form-id";
 import { canNavigateFrom } from "./page-actions";
+import { upgradeLegacyPhotoFrames } from "./blocks/photo-frame";
+import { upgradeLegacyDressCodeColors } from "./blocks/dress-code";
+import { upgradeLegacyDecorations } from "./blocks/decoration";
 
 export type PageTransition = "none" | "fade" | "slide-left" | "slide-right" | "slide-up" | "zoom";
+export type PopupSettings = { width: number; effect: "none" | "fade" | "slide-up" | "zoom"; backdropColor: string; backdropOpacity: number };
 
 export type PageNavigation = {
-  type: "go-to-page";
+  type: "go-to-page" | "open-popup";
   targetPageId: string;
   transition: PageTransition;
   durationMs: number;
@@ -17,6 +21,9 @@ export type CardPage = {
   name: string;
   data: PageData;
   interactions: Record<string, PageNavigation>;
+  popup?: PopupSettings;
+  /** Bố cục: "full" trải hết bề ngang màn hình; vắng mặt là cột giữa 960 px (mặc định). */
+  layout?: "full";
 };
 
 export type CardDocument = {
@@ -51,7 +58,15 @@ export function normalizeCardDocument(input: unknown): CardDocument {
       const upgraded = upgradePageDocument(page.data as unknown as Record<string, unknown>);
       const opened = migratePage(upgraded);
       if (!opened.ok) throw new Error("Cây thành phần trang không hợp lệ.");
-      return { ...page, name: page.name.trim(), data: opened.page };
+      if (page.popup && (
+        !Number.isInteger(page.popup.width) || page.popup.width < 280 || page.popup.width > 1200 ||
+        !["none", "fade", "slide-up", "zoom"].includes(page.popup.effect) ||
+        !/^#[0-9a-f]{6}$/i.test(page.popup.backdropColor) || !Number.isInteger(page.popup.backdropOpacity) || page.popup.backdropOpacity < 0 || page.popup.backdropOpacity > 80
+      )) throw new Error("Cấu hình popup không hợp lệ.");
+      if (page.layout !== undefined && (page.layout as string) !== "column" && page.layout !== "full") throw new Error("Bố cục trang không hợp lệ.");
+      // "column" là mặc định nên không lưu; chỉ giữ "full".
+      const { layout, ...rest } = page;
+      return { ...rest, ...(layout === "full" ? { layout } : {}), name: page.name.trim(), data: { ...opened.page, root: upgradeLegacyDecorations(upgradeLegacyDressCodeColors(upgradeLegacyPhotoFrames(opened.page.root))) } };
     });
     if (new Set(pages.map((page) => page.id)).size !== pages.length || typeof value.startPageId !== "string" || !pages.some((page) => page.id === value.startPageId)) throw new Error("Mã trang hoặc trang bắt đầu không hợp lệ.");
     if (pages.some((page) => !page.name.trim() || page.name.trim().length > 80)) throw new Error("Tên trang phải dài từ 1 đến 80 ký tự.");
@@ -73,7 +88,7 @@ export function normalizeCardDocument(input: unknown): CardDocument {
       collect(page.data.root);
       for (const [sourceId, link] of Object.entries(page.interactions)) {
         const source = nodes.get(sourceId);
-        if (!source || !canNavigateFrom(source) || !link || link.type !== "go-to-page" || !pages.some((target) => target.id === link.targetPageId) || !TRANSITIONS.includes(link.transition) || !Number.isInteger(link.durationMs) || (link.transition === "none" ? link.durationMs !== 0 : link.durationMs < 100 || link.durationMs > 1200)) throw new Error("Liên kết trang không hợp lệ.");
+        if (!source || !canNavigateFrom(source) || !link || !["go-to-page", "open-popup"].includes(link.type) || !pages.some((target) => target.id === link.targetPageId) || !TRANSITIONS.includes(link.transition) || !Number.isInteger(link.durationMs) || (link.transition === "none" ? link.durationMs !== 0 : link.durationMs < 100 || link.durationMs > 1200)) throw new Error("Liên kết trang không hợp lệ.");
       }
     }
     if (new TextEncoder().encode(JSON.stringify(input)).byteLength > 800 * 1024) throw new Error("Thiệp vượt quá giới hạn 800 KiB.");
@@ -85,7 +100,7 @@ export function normalizeCardDocument(input: unknown): CardDocument {
   let data = isPageData ? (upgradePageDocument(input as Record<string, unknown>) as unknown as PageData) : blankCardPage().data;
   const opened = migratePage(data);
   if (!opened.ok) throw new Error("Cây thành phần trang không hợp lệ.");
-  data = opened.page;
+  data = { ...opened.page, root: upgradeLegacyDecorations(upgradeLegacyDressCodeColors(upgradeLegacyPhotoFrames(opened.page.root))) };
   const used = new Set<string>();
   const materializeForms = (node: PageData["root"]): PageData["root"] => {
     let next = node;
