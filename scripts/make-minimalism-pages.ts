@@ -8,7 +8,9 @@ import { formPresets } from "../lib/cards/blocks/form-presets";
 
 const registry = { ...builtInRegistry, ...cardDefinitions };
 const COLUMN = 900;
-const PAGE_H = 6716;
+// Lời chúc nằm trong khung cuộn cao tối đa 420px bắt đầu ở y 5200 (xem form-view.tsx), nên mục Hộp quà mừng chỉ cách đó 440px thay vì 900px của trang gốc.
+const GIFT_SHIFT = 440;
+const PAGE_H = 6716 - GIFT_SHIFT;
 const SIZE = { w: 960, h: PAGE_H };
 const dir = resolve(__dirname, "../public/demo/minimalism-do-dam");
 
@@ -172,12 +174,12 @@ function invitation(): FreeNode[] {
   nodes.push(put("Form", "guestbook", { x: 290, y: 4820, w: 380, h: 270 }, { ...(cardDefinitions.Form!.defaultProps as Record<string, JsonValue>), ...(wishes.props as Record<string, JsonValue>), formId: "guestbook-mdd", color: INK, heading: "", intro: "", compact: true, padding: 0 }, { borderWidth: 0, borderRadius: 0 }));
 
   // Hộp quà mừng (6153-6628) + chân trang.
-  nodes.push(image("gift-background", "/demo/minimalism-do-dam/paper.webp", { x: 0, y: 6100, w: 900, h: PAGE_H - 6100 }, { opacity: 35 }));
-  nodes.push(deco("gift-castle", RED_CASTLE, { x: 0, y: 6100, w: 900, h: PAGE_H - 6100 }, { opacity: 14 }));
-  nodes.push(title("gift-title", "HỘP QUÀ MỪNG", 6145, 360, 180, false));
-  nodes.push(put("Decoration", "wedding-gift", { x: 175, y: 6180, w: 550, h: 414 }, { src: GIFT_ENVELOPES, alt: "Hai bao lì xì hoa đỏ", fit: "contain", motion: true, motionStyle: "Bao lì xì", motionTarget: "" }));
-  nodes.push(text("footer-thanks", "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!", { x: 150, y: 6640, w: 600, h: 24 }, 14, INK, body, { opacity: 80 }));
-  nodes.push(text("footer-brand", "♡ CardMaking", { x: 380, y: 6690, w: 140, h: 22 }, 13, INK, body, { opacity: 60 }));
+  nodes.push(image("gift-background", "/demo/minimalism-do-dam/paper.webp", { x: 0, y: 6100 - GIFT_SHIFT, w: 900, h: PAGE_H - (6100 - GIFT_SHIFT) }, { opacity: 35 }));
+  nodes.push(deco("gift-castle", RED_CASTLE, { x: 0, y: 6100 - GIFT_SHIFT, w: 900, h: PAGE_H - (6100 - GIFT_SHIFT) }, { opacity: 14 }));
+  nodes.push(title("gift-title", "HỘP QUÀ MỪNG", 6145 - GIFT_SHIFT, 360, 180, false));
+  nodes.push(put("Decoration", "wedding-gift", { x: 175, y: 6180 - GIFT_SHIFT, w: 550, h: 414 }, { src: GIFT_ENVELOPES, alt: "Hai bao lì xì hoa đỏ", fit: "contain", motion: true, motionStyle: "Bao lì xì", motionTarget: "" }));
+  nodes.push(text("footer-thanks", "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!", { x: 150, y: 6640 - GIFT_SHIFT, w: 600, h: 24 }, 14, INK, body, { opacity: 80 }));
+  nodes.push(text("footer-brand", "♡ CardMaking", { x: 380, y: 6690 - GIFT_SHIFT, w: 140, h: 22 }, 13, INK, body, { opacity: 60 }));
   return nodes;
 }
 

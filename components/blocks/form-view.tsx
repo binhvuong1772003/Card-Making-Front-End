@@ -629,7 +629,7 @@ export function FormView(props: FormViewProps) {
       )}
 
       {showList && (!live || loading || entries.length > 0) && (
-        <div style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "left", marginTop: guestbook ? 110 : 32 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "left", marginTop: guestbook ? 110 : 32, ...(guestbook ? { maxHeight: 420, overflowY: "auto", overscrollBehavior: "contain" } : {}) }}>
           {!live ? (
             <>
               {SAMPLES.slice(0, PAGE).map((entry) => (
