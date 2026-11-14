@@ -41,6 +41,7 @@ export const formBlock: ComponentDef = {
     moderation: false,
     color: "#511419",
     padding: 16,
+    compact: false,
   },
   defaultStyles: { borderWidth: 1, borderColor: "#511419", borderRadius: 4 },
   fields: {
@@ -55,5 +56,6 @@ export const formBlock: ComponentDef = {
     moderation: { type: "boolean", label: "Duyệt trước", group: "Sổ công khai", help: "Chỉ có nghĩa khi bật sổ công khai: lời mới chờ chủ thiệp duyệt mới hiện." },
     color: { type: "color", label: "Màu chữ và nút", group: "Giao diện" },
     padding: { type: "number", label: "Đệm", min: 0, max: 40, unit: "px", group: "Giao diện" },
+    compact: { type: "boolean", label: "Bố cục gọn", group: "Giao diện" },
   },
 };

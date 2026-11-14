@@ -36,6 +36,7 @@ export interface FormViewProps {
   publicList: PublicList;
   color: string;
   padding: number;
+  compact: boolean;
   mode: FormMode;
 }
 
@@ -45,7 +46,7 @@ const SAMPLES = [
   { id: "mau-2", name: "Gia đình cô Hoa", text: "Chúc mừng ngày trọng đại của hai con.", time: "01/01 10:30" },
 ];
 
-const PAGE = 5;
+const PAGE = 10;
 const STORAGE_PREFIX = "cmfe-form:";
 
 const pad = (value: number) => String(value).padStart(2, "0");
@@ -67,6 +68,19 @@ const FADE = `
 .cm-fv-in{animation:cm-fv-fade .18s ease}
 @keyframes cm-fv-fade{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.cm-fv-in{animation:none}}
+/* A guestbook has its own paper panel behind the form. Keep the editor block from
+   drawing a second, page-height border around both the form and the messages. */
+[data-miditor-type="Form"]:has(> .cm-fv-guestbook){height:auto!important;overflow:visible!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+/* Chung Đôi uses one transparent image for the note, its shadow, and the flowers. */
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]){overflow-x:clip!important;background-color:#f5ecdf!important;background-image:linear-gradient(rgba(248,240,228,.6),rgba(248,240,228,.6)),url("/demo/minimalism-do-dam/paper.webp")!important;background-position:center top!important;background-size:100% 100%,100% auto!important;background-repeat:no-repeat,repeat-y!important;background-blend-mode:normal!important}
+[data-miditor-id="note-paper"]{z-index:0;width:650px!important;height:592px!important;left:calc(50% - 325px)!important}
+[data-miditor-id="note-paper"] img{display:none!important}
+[data-miditor-id="note-paper"]::before{content:"";position:absolute;inset:0;background:url("/demo/minimalism-do-dam/papernote-background.webp") center/contain no-repeat;filter:drop-shadow(4px 4px 4px rgba(0,0,0,.25));pointer-events:none}
+[data-miditor-id="note-flowers"]{display:none!important}
+[data-miditor-id="note-title"]{top:4771px!important}
+[data-miditor-id="guestbook"]{width:380px!important;left:calc(50% - 190px)!important;top:4820px!important}
+.cm-fv-guestbook input,.cm-fv-guestbook textarea{font-size:14px!important}
+.cm-fv-guestbook input::placeholder,.cm-fv-guestbook textarea::placeholder{color:#9c7775;opacity:1}
 `;
 
 interface PartProps {
@@ -81,10 +95,12 @@ interface PartProps {
   labelStyle: CSSProperties;
   error: string | undefined;
   describedBy: string | undefined;
+  compact: boolean;
+  guestbook: boolean;
 }
 
 // Một câu hỏi, chọn cách vẽ theo loại ô. Tách khỏi view để phần gửi và sổ công khai đọc được liền mạch.
-function Question({ field, value, set, live, sending, uid, color, fieldStyle, labelStyle, error, describedBy }: PartProps) {
+function Question({ field, value, set, live, sending, uid, color, fieldStyle, labelStyle, error, describedBy, compact, guestbook }: PartProps) {
   const disabled = !live || sending;
   const id = `${uid}-${field.id}`;
   const label = (
@@ -93,9 +109,10 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
       {field.required && " *"}
     </>
   );
-  const hint = field.hint ? <div style={{ fontSize: 11, opacity: 0.7, marginTop: 2, textAlign: "left" }}>{field.hint}</div> : null;
+  const placeholder = `Nhập ${field.id === "name" ? "tên" : field.label.toLocaleLowerCase()}${field.required ? "*" : ""}`;
+  const hint = field.hint ? <div style={{ fontSize: 13, marginTop: 2, textAlign: "left" }}>{field.hint}</div> : null;
   const problem = error ? (
-    <div id={`${id}-error`} role="alert" style={{ color: "#b3261e", fontSize: 12, marginTop: 4, textAlign: "left" }}>
+    <div id={`${id}-error`} role="alert" style={{ color: "#b3261e", fontSize: 14, marginTop: 4, textAlign: "left" }}>
       {error}
     </div>
   ) : null;
@@ -106,7 +123,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
     case "date":
       return (
         <div>
-          <label htmlFor={id} style={labelStyle}>
+          <label htmlFor={id} style={compact ? { ...labelStyle, position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0, 0, 0, 0)", whiteSpace: "nowrap", border: 0 } : labelStyle}>
             {label}
           </label>
           {hint}
@@ -116,6 +133,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
             inputMode={field.type === "phone" ? "tel" : undefined}
             autoComplete={field.type === "phone" ? "tel" : field.type === "text" ? "off" : undefined}
             maxLength={field.type === "text" ? MAX_TEXT : field.type === "phone" ? 20 : undefined}
+            placeholder={compact ? placeholder : undefined}
             value={typeof value === "string" ? value : ""}
             onChange={(event) => set(event.target.value)}
             disabled={disabled}
@@ -131,7 +149,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
       const text = typeof value === "string" ? value : "";
       return (
         <div>
-          <label htmlFor={id} style={labelStyle}>
+          <label htmlFor={id} style={compact ? { ...labelStyle, position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0, 0, 0, 0)", whiteSpace: "nowrap", border: 0 } : labelStyle}>
             {label}
           </label>
           {hint}
@@ -139,16 +157,17 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
             id={id}
             rows={3}
             maxLength={MAX_LONG}
+            placeholder={compact ? placeholder : undefined}
             value={text}
             onChange={(event) => set(event.target.value)}
             disabled={disabled}
             aria-required={field.required || undefined}
             aria-invalid={error ? true : undefined}
             aria-describedby={describedBy}
-            style={{ ...fieldStyle, minHeight: 72, resize: "vertical" }}
+            style={{ ...fieldStyle, minHeight: guestbook ? 110 : compact ? 110 : 120, resize: compact ? "none" : "vertical" }}
           />
           {text.length > MAX_LONG - 40 && (
-            <div style={{ fontSize: 11, opacity: 0.7, textAlign: "right", marginTop: 2 }}>
+            <div style={{ fontSize: 13, textAlign: "right", marginTop: 2 }}>
               {text.length}/{MAX_LONG}
             </div>
           )}
@@ -176,7 +195,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
                       gap: 6,
                       minHeight: 40,
                       boxSizing: "border-box",
-                      border: `1px solid ${picked ? color : `${color}73`}`,
+                      border: `1px solid ${picked ? color : `${color}99`}`,
                       borderRadius: 9999,
                       padding: "6px 12px",
                       background: picked ? `${color}14` : "transparent",
@@ -193,7 +212,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
                       aria-describedby={describedBy}
                       style={{ accentColor: color, width: 16, height: 16, margin: 0 }}
                     />
-                    <span style={{ fontSize: 14 }}>{option}</span>
+                    <span style={{ fontSize: 16 }}>{option}</span>
                   </label>
                 );
               })}
@@ -246,7 +265,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
                   onChange={() => set(picked.includes(option) ? picked.filter((item) => item !== option) : [...picked, option])}
                   style={{ accentColor: color, width: 16, height: 16, margin: 0 }}
                 />
-                <span style={{ fontSize: 14 }}>{option}</span>
+                <span style={{ fontSize: 16 }}>{option}</span>
               </label>
             ))}
           </div>
@@ -287,7 +306,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
                 +
               </button>
             </div>
-            <div style={{ fontSize: 11, opacity: 0.7 }}>
+            <div style={{ fontSize: 13 }}>
               Từ {min} đến {max}
             </div>
             {problem}
@@ -314,7 +333,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
             aria-describedby={describedBy}
             style={fieldStyle}
           />
-          <div style={{ fontSize: 11, opacity: 0.7 }}>
+          <div style={{ fontSize: 13 }}>
             Từ {min} đến {max}
           </div>
           {problem}
@@ -344,12 +363,12 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
                   style={{
                     flex: 1,
                     minHeight: 40,
-                    border: `1px solid ${picked ? color : `${color}73`}`,
+                    border: `1px solid ${picked ? color : `${color}99`}`,
                     borderRadius: 9999,
                     background: picked ? color : "transparent",
                     color: picked ? "#fff" : color,
                     font: "inherit",
-                    fontSize: 14,
+                    fontSize: 16,
                     cursor: disabled ? "default" : "pointer",
                   }}
                 >
@@ -374,8 +393,6 @@ export function FormView(props: FormViewProps) {
   // Bắt đầu ở "đang tải" khi có sổ công khai: tránh nháy "chưa ai gửi" trước lần tải đầu.
   const [loading, setLoading] = useState(props.publicList.enabled);
   const [entries, setEntries] = useState<FormEntry[]>([]);
-  const [cursor, setCursor] = useState<string | null>(null);
-  const [more, setMore] = useState(false);
   const [closed, setClosed] = useState(false);
   const [done, setDone] = useState(false);
   const [pending, setPending] = useState(false);
@@ -409,8 +426,7 @@ export function FormView(props: FormViewProps) {
     fetchEntries({ slug: props.slug, blockId: props.blockId, first: PAGE })
       .then((page) => {
         if (cancelled) return;
-        setEntries(page.entries);
-        setCursor(page.nextCursor);
+        setEntries(page.entries.slice(0, PAGE));
       })
       .catch((err) => {
         if (!cancelled) {
@@ -434,25 +450,6 @@ export function FormView(props: FormViewProps) {
     setDraft(next);
   };
 
-  const loadMore = async () => {
-    if (!cursor || more) return;
-    setMore(true);
-    setNotice("");
-    try {
-      const page = await fetchEntries({ slug: props.slug, blockId: props.blockId, first: PAGE, after: cursor });
-      setEntries((old) => {
-        const seen = new Set(old.map((entry) => entry.id));
-        return [...old, ...page.entries.filter((entry) => !seen.has(entry.id))];
-      });
-      setCursor(page.nextCursor);
-    } catch (err) {
-      setNotice(formErrorMessage(err));
-      setFailed(true);
-    } finally {
-      setMore(false);
-    }
-  };
-
   const onSubmit = async (event: FormEvent) => {
     event.preventDefault();
     if (sending || !live) return;
@@ -466,7 +463,7 @@ export function FormView(props: FormViewProps) {
     try {
       const result = await submitForm({ slug: props.slug, blockId: props.blockId, answers: answerPayload(fields, values), website });
       // Lời vừa duyệt sẵn thì chèn ngay lên đầu sổ; lời chờ duyệt chưa có gì để chèn.
-      if (result.status === "VISIBLE" && result.entry) setEntries((old) => [result.entry as FormEntry, ...old]);
+      if (result.status === "VISIBLE" && result.entry) setEntries((old) => [result.entry as FormEntry, ...old].slice(0, PAGE));
       setPending(result.status === "PENDING");
       try {
         window.localStorage.setItem(key, "1");
@@ -502,18 +499,22 @@ export function FormView(props: FormViewProps) {
   };
 
   const color = props.color;
-  const labelStyle: CSSProperties = { display: "block", fontSize: 13, opacity: 0.85, marginBottom: 4, textAlign: "left" };
+  const guestbook = props.publicList.enabled;
+  const compact = props.compact || guestbook;
+  const labelStyle: CSSProperties = { display: "block", fontSize: 16, fontWeight: 500, marginBottom: 6, textAlign: "left" };
   const fieldStyle: CSSProperties = {
     width: "100%",
     boxSizing: "border-box",
-    minHeight: 44,
-    border: `1px solid ${color}73`,
-    borderRadius: 8,
+    minHeight: guestbook ? 46 : compact ? 46 : 48,
+    border: `1px solid ${color}99`,
+    borderRadius: compact ? 9 : 8,
     background: "transparent",
     color,
-    padding: "10px 12px",
+    padding: compact ? "10px 16px" : "10px 12px",
     font: "inherit",
-    fontSize: 15,
+    fontSize: compact ? guestbook ? 16 : 14 : 16,
+    opacity: 1,
+    WebkitTextFillColor: color,
     outlineColor: color,
   };
   const visible = visibleFields(fields, values);
@@ -524,21 +525,26 @@ export function FormView(props: FormViewProps) {
       style={{
         position: "relative",
         width: "100%",
-        height: "100%",
+        height: showList ? "auto" : "100%",
         boxSizing: "border-box",
-        padding: props.padding,
+    padding: guestbook ? 16 : props.padding,
+        fontFamily: compact ? "'Times New Roman', serif" : "'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif",
+        fontSize: 16,
+        fontWeight: 400,
+        lineHeight: 1.5,
         color,
         display: "flex",
         flexDirection: "column",
-        gap: 10,
-        overflowY: "auto",
+        gap: compact ? 14 : 10,
+        overflowY: showList ? "visible" : compact ? "hidden" : "auto",
         overscrollBehavior: "contain",
         textAlign: "center",
         pointerEvents: live ? "auto" : "none",
       }}
+      className={guestbook ? "cm-fv-guestbook" : undefined}
     >
       <style>{FADE}</style>
-      {props.heading.trim() && <div style={{ fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase" }}>{props.heading}</div>}
+      {props.heading.trim() && <div style={{ fontSize: 14, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>{props.heading}</div>}
 
       {live && closed ? (
         <div role="status" style={{ fontSize: 15, lineHeight: 1.6, padding: "12px 0" }}>
@@ -549,7 +555,7 @@ export function FormView(props: FormViewProps) {
           <div role="status" style={{ fontSize: 15, lineHeight: 1.6, padding: "8px 0", whiteSpace: "pre-wrap" }}>
             {props.success.trim() || "Cảm ơn bạn đã gửi."}
           </div>
-          {pending && <div style={{ fontSize: 13, opacity: 0.85 }}>Lời trả lời sẽ hiện sau khi chủ thiệp duyệt.</div>}
+          {pending && <div style={{ fontSize: 14 }}>Lời trả lời sẽ hiện sau khi chủ thiệp duyệt.</div>}
           <button
             type="button"
             onClick={again}
@@ -559,8 +565,8 @@ export function FormView(props: FormViewProps) {
           </button>
         </>
       ) : (
-        <form onSubmit={onSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {props.intro.trim() && <div style={{ fontSize: 13, lineHeight: 1.5, opacity: 0.85, whiteSpace: "pre-wrap" }}>{props.intro}</div>}
+        <form onSubmit={onSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: guestbook ? 16 : compact ? 14 : 12 }}>
+          {!guestbook && props.intro.trim() && <div style={{ fontSize: 16, lineHeight: 1.6, whiteSpace: "pre-wrap" }}>{props.intro}</div>}
 
           {visible.map((field) => (
             <div key={field.id} className="cm-fv-in">
@@ -576,6 +582,8 @@ export function FormView(props: FormViewProps) {
                 labelStyle={labelStyle}
                 error={errors[field.id]}
                 describedBy={errors[field.id] ? `${uid}-${field.id}-error` : undefined}
+                compact={compact}
+                guestbook={guestbook}
               />
             </div>
           ))}
@@ -591,16 +599,19 @@ export function FormView(props: FormViewProps) {
             type="submit"
             disabled={!live || sending}
             style={{
-              minHeight: 44,
-              width: "100%",
+              minHeight: guestbook ? 40 : compact ? 40 : 48,
+              width: guestbook ? 150 : compact ? 150 : "100%",
+              alignSelf: compact ? "flex-end" : undefined,
               border: 0,
               borderRadius: 9999,
               background: color,
               color: "#fff",
               font: "inherit",
-              fontSize: 15,
-              fontWeight: 500,
+              fontSize: compact ? 14 : 16,
+              fontWeight: 600,
+              WebkitTextFillColor: "#fff",
               padding: "10px 16px",
+              textTransform: compact ? "uppercase" : undefined,
               cursor: sending ? "default" : "pointer",
               opacity: sending ? 0.7 : 1,
             }}
@@ -613,45 +624,36 @@ export function FormView(props: FormViewProps) {
               {notice}
             </div>
           )}
-          {props.mode === "edit" && <div style={{ fontSize: 11, opacity: 0.7 }}>Khách sẽ điền form này trên thiệp đã xuất bản.</div>}
+          {props.mode === "edit" && <div style={{ fontSize: 13 }}>Khách sẽ điền form này trên thiệp đã xuất bản.</div>}
         </form>
       )}
 
-      {showList && (
-        <div style={{ display: "flex", flexDirection: "column", gap: 10, textAlign: "left", marginTop: 4 }}>
+      {showList && (!live || loading || entries.length > 0) && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "left", marginTop: guestbook ? 110 : 32 }}>
           {!live ? (
             <>
-              <div style={{ fontSize: 11, opacity: 0.6 }}>Ví dụ</div>
-              {SAMPLES.map((entry) => (
-                <div key={entry.id}>
-                  <div style={{ fontSize: 14, fontWeight: 600 }}>{entry.name}</div>
-                  <div style={{ fontSize: 11, opacity: 0.6 }}>{entry.time}</div>
-                  <div style={{ fontSize: 14, lineHeight: 1.5, whiteSpace: "pre-wrap" }}>{entry.text}</div>
+              {SAMPLES.slice(0, PAGE).map((entry) => (
+                <div key={entry.id} style={{ padding: "18px 22px", border: `1px solid ${color}44`, borderRadius: 12, background: "rgba(255,252,247,.72)", boxShadow: "0 2px 8px rgba(62,30,24,.04)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12 }}>
+                    <div style={{ fontSize: 16, fontWeight: 700 }}>{entry.name}</div>
+                    <div style={{ fontSize: 13, opacity: 0.72, whiteSpace: "nowrap" }}>{entry.time}</div>
+                  </div>
+                  <div style={{ fontSize: 16, lineHeight: 1.65, whiteSpace: "pre-wrap", marginTop: 12 }}>{entry.text}</div>
                 </div>
               ))}
             </>
           ) : loading ? (
             <div style={{ fontSize: 13, opacity: 0.7, textAlign: "center" }}>Đang tải lời trả lời…</div>
-          ) : entries.length === 0 ? (
-            <div style={{ fontSize: 13, opacity: 0.7, textAlign: "center" }}>{failed ? "Chưa tải được lời trả lời." : "Hãy là người đầu tiên."}</div>
           ) : (
-            entries.map((entry) => (
-              <div key={entry.id}>
-                <div style={{ fontSize: 14, fontWeight: 600 }}>{entry.name}</div>
-                <div style={{ fontSize: 11, opacity: 0.6 }}>{timeOf(entry.createdAt)}</div>
-                <div style={{ fontSize: 14, lineHeight: 1.5, whiteSpace: "pre-wrap" }}>{entry.text}</div>
+            entries.slice(0, PAGE).map((entry) => (
+              <div key={entry.id} style={{ padding: "18px 22px", border: `1px solid ${color}44`, borderRadius: 12, background: "rgba(255,252,247,.72)", boxShadow: "0 2px 8px rgba(62,30,24,.04)" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12 }}>
+                  <div style={{ fontSize: 16, fontWeight: 700 }}>{entry.name}</div>
+                  <div style={{ fontSize: 13, opacity: 0.72, whiteSpace: "nowrap" }}>{timeOf(entry.createdAt)}</div>
+                </div>
+                <div style={{ fontSize: 16, lineHeight: 1.65, whiteSpace: "pre-wrap", marginTop: 12 }}>{entry.text}</div>
               </div>
             ))
-          )}
-          {live && cursor && (
-            <button
-              type="button"
-              onClick={loadMore}
-              disabled={more}
-              style={{ minHeight: 44, border: `1px solid ${color}`, borderRadius: 9999, background: "transparent", color, font: "inherit", fontSize: 14, padding: "8px 16px", cursor: more ? "default" : "pointer", opacity: more ? 0.7 : 1 }}
-            >
-              {more ? "Đang tải…" : "Xem thêm"}
-            </button>
           )}
         </div>
       )}
