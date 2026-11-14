@@ -4,14 +4,25 @@ import { AlbumView, type AlbumMode } from "@/components/blocks/album-view";
 import { AlbumGridView, AlbumPolaroidView, AlbumStripView } from "@/components/blocks/album-layouts";
 import { CalendarView } from "@/components/blocks/calendar-view";
 import { FormView } from "@/components/blocks/form-view";
+import { DressCodeView } from "@/components/blocks/dress-code-view";
 import { MapView } from "@/components/blocks/map-view";
 import { PhotoFrameView } from "@/components/blocks/photo-frame-view";
 import { albumBlock, cleanImages } from "./album";
 import { cardDefinitions } from "./definitions";
 import { calendarDefinitions, MARK_SHAPES } from "./calendar";
 import { FRAME_WIDTH_MAX, FRAME_ZOOM, photoFrameDefinitions } from "./photo-frame";
+import { DRESS_CODE_DEFAULT_COLORS, DRESS_CODE_MAX_COLORS } from "./dress-code";
 import { formKeyOf } from "@/lib/cards/forms/form-id";
 import { cleanFields, cleanPublicList } from "../forms/fields";
+import { CurvedText, renderText } from "./text-effects";
+import { CURVE_LIMITS } from "./curved-text";
+import { DecorationView } from "@/components/blocks/decoration-view";
+import { ParticlesView } from "@/components/blocks/particles-view";
+import { BurstView } from "@/components/blocks/burst-view";
+import { GradientView } from "@/components/blocks/gradient-view";
+import { readGradient } from "./gradient";
+import { BURST_PALETTE_NAMES, readBurstConfig } from "./burst";
+import { PARTICLE_LIMITS, PARTICLE_SHAPES } from "./particles";
 
 // Các khối riêng của CardMaking: định nghĩa (dữ liệu thuần, cho editor và backend) và cách vẽ (cho Render).
 export const cardComponents = cardDefinitions;
@@ -100,19 +111,22 @@ const renderCalendar: Renderer = ({ props, metadata, theme }) => (
 );
 
 // Địa chỉ ảnh phải qua `isImageUrl` (chỉ địa chỉ, không CSS); sai thì coi như chưa có ảnh.
-const renderPhotoFrame: Renderer = ({ props, metadata, theme }) => (
-  <PhotoFrameView
+const renderPhotoFrame: Renderer = ({ props, metadata, theme }) => {
+  const shape = typeof props.shape === "object" && props.shape !== null ? props.shape as Record<string, unknown> : {};
+  return <PhotoFrameView
     src={isImageUrl(props.src) ? props.src : ""}
     alt={text(props.alt, "")}
-    shape={text(props.shape, "rectangle")}
+    shape={text(shape.id ?? props.shape, "rectangle")}
+    shapeGeometry={text(shape.geometry, "rectangle")}
+    shapeMaskPath={text(shape.maskPath, "")}
     zoom={number(props.zoom, 100, FRAME_ZOOM.min, FRAME_ZOOM.max)}
     posX={number(props.posX, 50, 0, 100)}
     posY={number(props.posY, 50, 0, 100)}
     frameWidth={number(props.frameWidth, 0, 0, FRAME_WIDTH_MAX)}
     frameColor={paint(props.frameColor, "#511419", theme)}
     editing={modeOf(metadata) === "edit"}
-  />
-);
+  />;
+};
 
 const common = (props: Record<string, unknown>, metadata: unknown, defaultRadius: number) => ({
   images: cleanImages(props.images),
@@ -143,21 +157,90 @@ const renderForm: Renderer = ({ id, props, metadata, theme }) => (
     publicList={cleanPublicList(props.publicList)}
     color={paint(props.color, "#511419", theme)}
     padding={number(props.padding, 16, 0, 40)}
+    compact={props.compact === true}
     mode={modeOf(metadata)}
   />
 );
+
+const renderDressCode: Renderer = ({ props, theme }) => (
+  <DressCodeView
+    heading={text(props.heading, "DRESS CODE")}
+    subtitle={text(props.subtitle, "Trang phục dự tiệc")}
+    headingColor={paint(props.headingColor, "#203b29", theme)}
+    subtitleColor={paint(props.subtitleColor, "#6d705f", theme)}
+    shape={pick(["circle", "square", "diamond"] as const, props.swatchShape, "circle")}
+    size={number(props.swatchSize, 48, 24, 88)}
+    gap={number(props.swatchGap, 24, 0, 48)}
+    colors={(Array.isArray(props.colors) ? props.colors.slice(0, DRESS_CODE_MAX_COLORS) : [props.swatch1, props.swatch2, props.swatch3])
+      .map((color, index) => paint(color, DRESS_CODE_DEFAULT_COLORS[index % DRESS_CODE_DEFAULT_COLORS.length]!, theme))}
+  />
+);
+
+const renderDecoration: Renderer = ({ id, props, metadata }) => {
+  const openingId = metadata && typeof metadata === "object" && !Array.isArray(metadata)
+    ? (metadata as Record<string, unknown>).giftOpeningId
+    : undefined;
+  return <DecorationView
+    src={isImageUrl(props.src) ? props.src : ""}
+    alt={text(props.alt, "")}
+    fit={text(props.fit, "contain")}
+    motion={props.motion === true}
+    motionStyle={props.motionStyle === "Bao lì xì" ? "envelope" : "box"}
+    floatMotion={props.floatMotion === true}
+    opening={openingId === id}
+  />;
+};
+
+// Hạt trôi: mọi số đo bị kẹp vào giới hạn, hình lạ thành Vuông; ở editor chỉ vẽ khung nét đứt và nhãn để tìm thấy khối.
+const renderParticles: Renderer = ({ props, metadata, theme }) => (
+  <ParticlesView
+    shape={pick(PARTICLE_SHAPES, props.shape, "Vuông")}
+    direction={props.direction === "Rơi xuống" ? "Rơi xuống" : "Bay lên"}
+    color={paint(props.color, "#e8f0e4", theme)}
+    count={Math.round(number(props.count, 14, PARTICLE_LIMITS.count.min, PARTICLE_LIMITS.count.max))}
+    size={number(props.size, 8, PARTICLE_LIMITS.size.min, PARTICLE_LIMITS.size.max)}
+    speed={number(props.speed, 100, PARTICLE_LIMITS.speed.min, PARTICLE_LIMITS.speed.max)}
+    opacity={number(props.opacity, 50, PARTICLE_LIMITS.opacity.min, PARTICLE_LIMITS.opacity.max)}
+    drift={number(props.drift, 20, PARTICLE_LIMITS.drift.min, PARTICLE_LIMITS.drift.max)}
+    char={typeof props.char === "string" && props.char ? [...props.char].slice(0, 2).join("") : "囍"}
+    palette={BURST_PALETTE_NAMES.includes(props.palette as never) ? props.palette as (typeof BURST_PALETTE_NAMES)[number] : undefined}
+    editing={modeOf(metadata) === "edit"}
+  />
+);
+
+// Pháo mở thiệp: trên trang thật không vẽ gì (trình phát bắn pháo khi mở thiệp), trong editor là một nhãn nét đứt.
+const renderBurst: Renderer = ({ props, metadata }) => <BurstView config={readBurstConfig(props)} editing={modeOf(metadata) === "edit"} />;
+
+const renderCurvedText: Renderer = ({ props, theme }) => (
+  <div style={{ position: "relative", width: "100%", height: "100%", color: paint(props.color, "#511419", theme), fontFamily: stackOf(props.font) || "inherit" }}>
+    <CurvedText value={text(props.text, "")} amount={number(props.amount, 60, CURVE_LIMITS.amount.min, CURVE_LIMITS.amount.max)} size={number(props.size, 18, CURVE_LIMITS.size.min, CURVE_LIMITS.size.max)} bold={props.bold === true} italic={props.italic === true} underline={false} />
+  </div>
+);
+
+// Thẻ thiệp: chỉ cắt phần tràn của các khối con theo bo góc của khối (nền, viền do Miditor vẽ trên khung ngoài).
+const renderCardPanel: Renderer = ({ children }) => <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden", borderRadius: "inherit" }}>{children}</div>;
+
+const renderGradient: Renderer = ({ props, theme }) => <GradientView config={readGradient(props, (value, fallback) => paint(value, fallback, theme))} />;
 
 // Mỗi kiểu lịch là một loại khối riêng nhưng cùng một cách vẽ.
 const calendarRenderers = Object.fromEntries(Object.keys(calendarDefinitions).map((type) => [type, renderCalendar]));
 const photoFrameRenderers = Object.fromEntries(Object.keys(photoFrameDefinitions).map((type) => [type, renderPhotoFrame]));
 
 export const cardRenderers = {
+  Text: renderText,
   Album: renderAlbum,
   AlbumGrid: renderAlbumGrid,
   AlbumStrip: renderAlbumStrip,
   AlbumPolaroid: renderAlbumPolaroid,
   Map: renderMap,
   Form: renderForm,
+  DressCode: renderDressCode,
+  Decoration: renderDecoration,
+  Particles: renderParticles,
+  Burst: renderBurst,
+  Gradient: renderGradient,
+  CardPanel: renderCardPanel,
+  CurvedText: renderCurvedText,
   ...calendarRenderers,
   ...photoFrameRenderers,
 };

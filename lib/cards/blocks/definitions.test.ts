@@ -14,7 +14,9 @@ describe("the blocks of CardMaking", () => {
   });
 
   it("are all drawn: every type has a renderer and every renderer a type", () => {
-    expect(Object.keys(cardRenderers).sort()).toEqual([...types].sort());
+    // Khối có sẵn của Miditor (Shape, Image) do Miditor tự vẽ; CardMaking chỉ thêm ô thuộc tính vào định nghĩa của chúng.
+    const drawnByMiditor = types.filter((type) => type in builtInRegistry && !(type in cardRenderers));
+    expect(Object.keys(cardRenderers).sort()).toEqual(types.filter((type) => !drawnByMiditor.includes(type)).sort());
     expect(cardComponents).toBe(cardDefinitions);
   });
 
