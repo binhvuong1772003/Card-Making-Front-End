@@ -18,6 +18,11 @@ import {
 } from "@/lib/cards/page-navigation";
 import { FormDraftProvider } from "@/components/blocks/form-drafts";
 import { cardRenderers } from "@/lib/cards/blocks";
+import { openCss, openDurationMs } from "@/lib/cards/blocks/open-effect";
+import { readBurstConfig, type BurstConfig } from "@/lib/cards/blocks/burst";
+import { BurstOverlay } from "./burst-overlay";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { normalizePopupSettings } from "@/lib/cards/page-actions";
 import styles from "./card-player.module.css";
 
 export type CardPlayerProps = {
@@ -26,6 +31,8 @@ export type CardPlayerProps = {
   historyKey: string;
   device?: "desktop" | "phone";
   metadata?: JsonValue;
+  immersive?: boolean;
+  embedded?: boolean;
 };
 
 type Motion = { transition: PageNavigation["transition"]; durationMs: number };
@@ -34,25 +41,50 @@ type MoveSource = "activate" | "popstate";
 const reducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const pageMapOf = (document: CardDocument) => new Map(document.pages.map((page) => [page.id, page]));
 const isTreeNode = (value: TreeNode): value is TreeNode => Boolean(value && Array.isArray(value.children));
+const findNode = (node: TreeNode, match: (node: TreeNode) => boolean): TreeNode | undefined =>
+  match(node) ? node : node.children.map((child) => findNode(child, match)).find(Boolean);
+const hasNode = (node: TreeNode, id: string): boolean => node.id === id || node.children.some((child) => hasNode(child, id));
+
+// CSS của "Khi mở thiệp" cho một trang; không có hiệu ứng nào thì không vẽ gì.
+function OpenEffectStyle({ root }: { root: TreeNode }) {
+  const css = useMemo(() => openCss(root), [root]);
+  return css ? <style>{css}</style> : null;
+}
 
 export function CardPlayer(props: CardPlayerProps) {
   return <Player key={props.historyKey} {...props} />;
 }
 
-function Player({ document, mode, historyKey, device, metadata }: CardPlayerProps) {
+function Player({ document, mode, historyKey, device, metadata, immersive = false, embedded = false }: CardPlayerProps) {
   const initialPage = getStartPage(document);
   const [currentPageId, setCurrentPageId] = useState(initialPage.id);
   const pageMap = useMemo(() => pageMapOf(document), [document]);
   const currentPage = pageMap.get(currentPageId) ?? initialPage;
   const [outgoingPage, setOutgoingPage] = useState<CardPage | null>(null);
+  const immersiveCover = (mode === "published" || immersive) && device !== "phone" && initialPage.id === "cover" && (currentPage.id === "cover" || outgoingPage?.id === "cover");
+  // Màn bìa toàn màn hình lấy màu nền từ chính trang bìa (hex), và chỉ mẫu cũ có thẻ "hero-card" mới có các trái tim trôi.
+  const coverBackground = /^#[0-9a-f]{6}$/i.test(initialPage.data.root.styles.background ?? "") ? initialPage.data.root.styles.background : undefined;
+  const coverHearts = hasNode(initialPage.data.root, "hero-card-background");
   const [motion, setMotion] = useState<Motion | null>(null);
+  const [popupPage, setPopupPage] = useState<CardPage | null>(null);
+  const [giftOpeningId, setGiftOpeningId] = useState<string | null>(null);
+  const [openingNodeId, setOpeningNodeId] = useState<string | null>(null);
+  // Trang bìa vừa chạy xong hiệu ứng mở: lớp "đi ra" của nó giữ nguyên trạng thái cuối thay vì hiện lại rồi mờ.
+  const [openedPageId, setOpenedPageId] = useState<string | null>(null);
+  // Pháo bắn khi mở thiệp: lớp phủ riêng, sống tiếp khi trang chuyển.
+  const [burst, setBurst] = useState<{ key: number; config: BurstConfig } | null>(null);
+  const [viewportWidth, setViewportWidth] = useState(1280);
+  const popupTriggerRef = useRef<HTMLElement | null>(null);
   const currentRef = useRef(currentPage);
+  const embeddedRef = useRef(embedded);
   const guardRef = useRef(createTransitionGuard());
   const currentEntryRef = useRef<PageHistoryEntry>({ pageId: initialPage.id, scrollY: 0, transition: "none", durationMs: 0, index: 0 });
   const stageRef = useRef<HTMLDivElement>(null);
   const currentElementRef = useRef<HTMLDivElement>(null);
   const outgoingElementRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<number | null>(null);
+  const giftOpenTimerRef = useRef<number | null>(null);
+  const pageOpenTimerRef = useRef<number | null>(null);
   const scrollFrameRef = useRef<number | null>(null);
   const pendingScrollRef = useRef(0);
   const lastFocusedPageRef = useRef(initialPage.id);
@@ -61,6 +93,12 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
     setCurrentPageId(page.id);
   }, []);
   useLayoutEffect(() => { currentRef.current = currentPage; }, [currentPage]);
+  useEffect(() => {
+    const measure = () => setViewportWidth(window.document.documentElement.clientWidth);
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
 
   const measureStage = useCallback(() => {
     const stage = stageRef.current;
@@ -82,30 +120,45 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
     timeoutRef.current = null;
     guardRef.current.finish();
   }, []);
+  useEffect(() => () => {
+    if (giftOpenTimerRef.current !== null) window.clearTimeout(giftOpenTimerRef.current);
+    if (pageOpenTimerRef.current !== null) window.clearTimeout(pageOpenTimerRef.current);
+  }, []);
   const finishTransition = useCallback(() => {
     clearTransition();
     setOutgoingPage(null);
     setMotion(null);
+    setOpenedPageId(null);
   }, [clearTransition]);
 
   const moveTo = useCallback((nav: PageNavigation, source: MoveSource, entry?: ReturnType<typeof pageEntryFromState>) => {
+    if (giftOpenTimerRef.current !== null) window.clearTimeout(giftOpenTimerRef.current);
+    giftOpenTimerRef.current = null;
+    if (pageOpenTimerRef.current !== null) window.clearTimeout(pageOpenTimerRef.current);
+    pageOpenTimerRef.current = null;
+    setOpeningNodeId(null);
+    setGiftOpeningId(null);
     const current = currentRef.current;
     const target = pageMap.get(nav.targetPageId);
     if (!target) return;
     const plan = navigationPlan(current.id, target.id, nav, reducedMotion());
     if (!canStartNavigation(current.id, target.id, false)) return;
+    popupTriggerRef.current = null;
+    setPopupPage(null);
     if (source === "popstate") finishTransition();
     if (!guardRef.current.start(plan)) return;
 
     if (source === "activate") {
       const previousEntry = currentEntryRef.current;
-      writePageHistoryState(window.history, historyKey, {
-        pageId: current.id,
-        scrollY: window.scrollY,
-        transition: previousEntry.transition,
-        durationMs: previousEntry.durationMs,
-        index: previousEntry.index,
-      }, "replace");
+      if (!embeddedRef.current) {
+        writePageHistoryState(window.history, historyKey, {
+          pageId: current.id,
+          scrollY: window.scrollY,
+          transition: previousEntry.transition,
+          durationMs: previousEntry.durationMs,
+          index: previousEntry.index,
+        }, "replace");
+      }
       const nextEntry = {
         pageId: target.id,
         scrollY: 0,
@@ -113,7 +166,7 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
         durationMs: nav.durationMs,
         index: (previousEntry.index ?? 0) + 1,
       };
-      writePageHistoryState(window.history, historyKey, nextEntry, "push");
+      if (!embeddedRef.current) writePageHistoryState(window.history, historyKey, nextEntry, "push");
       currentEntryRef.current = nextEntry;
       pendingScrollRef.current = 0;
     } else {
@@ -130,6 +183,10 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
   }, [finishTransition, historyKey, pageMap, showPage]);
 
   useEffect(() => {
+    if (embedded) {
+      currentEntryRef.current = { pageId: initialPage.id, scrollY: 0, transition: "none", durationMs: 0, index: 0 };
+      return;
+    }
     const history = window.history;
     const previousRestoration = history.scrollRestoration;
     history.scrollRestoration = "manual";
@@ -142,7 +199,7 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
     }, "replace");
     currentEntryRef.current = { pageId: initialPage.id, scrollY: window.scrollY, transition: "none", durationMs: 0, index: 0 };
     return () => { history.scrollRestoration = previousRestoration; };
-  }, [historyKey, initialPage.id]);
+  }, [embedded, historyKey, initialPage.id]);
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -152,19 +209,20 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
       if (!entry || !target || target.id === currentRef.current.id) return;
       moveTo({ type: "go-to-page", targetPageId: target.id, transition: entry.transition, durationMs: entry.durationMs }, "popstate", entry);
     };
-    window.addEventListener("popstate", onPopState);
+    if (!embedded) window.addEventListener("popstate", onPopState);
     const onAnimationCancel = (event: Event) => {
       if (event.target instanceof Element && event.target.matches("[data-card-player-page]")) finishTransition();
     };
     stage?.addEventListener("animationcancel", onAnimationCancel);
     return () => {
-      window.removeEventListener("popstate", onPopState);
+      if (!embedded) window.removeEventListener("popstate", onPopState);
       stage?.removeEventListener("animationcancel", onAnimationCancel);
       clearTransition();
     };
-  }, [clearTransition, finishTransition, historyKey, moveTo, pageMap]);
+  }, [clearTransition, embedded, finishTransition, historyKey, moveTo, pageMap]);
 
   useEffect(() => {
+    if (embedded) return;
     const history = window.history;
     const onScroll = () => {
       if (scrollFrameRef.current !== null) return;
@@ -183,7 +241,7 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
       window.removeEventListener("scroll", onScroll);
       if (scrollFrameRef.current !== null) window.cancelAnimationFrame(scrollFrameRef.current);
     };
-  }, [historyKey]);
+  }, [embedded, historyKey]);
 
   useLayoutEffect(() => {
     measureStage();
@@ -207,52 +265,106 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
       return;
     }
     if (lastFocusedPageRef.current === currentPage.id) return;
-    window.scrollTo(0, pendingScrollRef.current);
+    let scrollParent = currentElementRef.current?.parentElement;
+    while (scrollParent && scrollParent !== window.document.body) {
+      const overflowY = window.getComputedStyle(scrollParent).overflowY;
+      if ((overflowY === "auto" || overflowY === "scroll") && scrollParent.scrollHeight > scrollParent.clientHeight) {
+        scrollParent.scrollTop = 0;
+        break;
+      }
+      scrollParent = scrollParent.parentElement;
+    }
+    if (!embedded) window.scrollTo(0, pendingScrollRef.current);
     currentElementRef.current?.focus({ preventScroll: true });
     lastFocusedPageRef.current = currentPage.id;
-  }, [currentPage.id, measureStage, outgoingPage]);
+  }, [currentPage.id, embedded, measureStage, outgoingPage]);
 
-  const nodeActions = useMemo(() => {
+  const actionsForPage = useCallback((page: CardPage) => {
     const actions: Record<string, { label: string; onActivate: () => void }> = {};
     const visit = (node: TreeNode) => {
-      const interaction = currentPage.interactions[node.id];
+      const interaction = page.interactions[node.id];
       if (interaction && isTreeNode(node) && canNavigateFrom(node)) {
         const valid = normalizePageNavigation(interaction, document.pages);
         const target = valid && pageMap.get(valid.targetPageId);
-        if (valid && target) actions[node.id] = { label: target.name, onActivate: () => moveTo(valid, "activate") };
+        if (valid && target) actions[node.id] = { label: target.name, onActivate: () => {
+          if (pageOpenTimerRef.current !== null) return;
+          if (valid.type === "open-popup") {
+            const openPopup = () => {
+              popupTriggerRef.current = window.document.activeElement instanceof HTMLElement ? window.document.activeElement : null;
+              setGiftOpeningId(null);
+              setPopupPage(target);
+              giftOpenTimerRef.current = null;
+            };
+            if (node.type === "Decoration" && node.props.motion === true) {
+              if (giftOpenTimerRef.current !== null) window.clearTimeout(giftOpenTimerRef.current);
+              if (reducedMotion()) { openPopup(); return; }
+              setGiftOpeningId(node.id);
+              giftOpenTimerRef.current = window.setTimeout(openPopup, 560);
+            } else openPopup();
+          } else {
+            const motionTarget = typeof node.props.motionTarget === "string" ? node.props.motionTarget : null;
+            if (motionTarget && !reducedMotion()) {
+              setOpeningNodeId(motionTarget);
+              const burstNode = findNode(page.data.root, (candidate) => candidate.type === "Burst");
+              if (burstNode) setBurst({ key: Date.now(), config: readBurstConfig(burstNode.props) });
+              // Chờ hiệu ứng dài nhất của trang ("Khi mở thiệp"), tối thiểu 520ms của hiệu ứng cũ.
+              pageOpenTimerRef.current = window.setTimeout(() => {
+                pageOpenTimerRef.current = null;
+                setOpeningNodeId(null);
+                setOpenedPageId(page.id);
+                moveTo(valid, "activate");
+              }, Math.max(520, openDurationMs(page.data.root)));
+            } else moveTo(valid, "activate");
+          }
+        } };
       }
       node.children.forEach(visit);
     };
-    visit(currentPage.data.root);
+    visit(page.data.root);
     return actions;
-  }, [currentPage, document.pages, moveTo, pageMap]);
+  }, [document.pages, moveTo, pageMap]);
+  const nodeActions = useMemo(() => actionsForPage(currentPage), [actionsForPage, currentPage]);
+  const popupActions = useMemo(() => popupPage ? actionsForPage(popupPage) : undefined, [actionsForPage, popupPage]);
+
+  useEffect(() => {
+    if (popupPage) return;
+    const trigger = popupTriggerRef.current;
+    popupTriggerRef.current = null;
+    if (trigger?.isConnected) requestAnimationFrame(() => trigger.focus());
+  }, [popupPage]);
 
   const onAnimation = (event: AnimationEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) finishTransition();
   };
-  const renderPage = (page: CardPage, layer: "current" | "outgoing") => (
+  const renderPage = (page: CardPage, layer: "current" | "outgoing" | "popup", actions = nodeActions) => (
     <div
       key={`${historyKey}:${page.id}:${layer}`}
       ref={layer === "current" ? currentElementRef : outgoingElementRef}
       className={styles.page}
+      data-cover-page={initialPage.id === "cover" && page.id === "cover" ? "" : undefined}
+      data-page-layout={page.layout === "full" ? "full" : undefined}
       data-layer={motion && layer === "current" ? "incoming" : layer === "outgoing" ? "outgoing" : undefined}
       data-card-player-page=""
+      data-gift-motion={page.interactions["wedding-gift"]?.type === "open-popup" ? "" : undefined}
+      data-opening-target={layer === "current" ? openingNodeId ?? undefined : undefined}
+      data-opening-done={layer === "outgoing" && openedPageId === page.id ? "" : undefined}
       data-transition={motion?.transition}
       style={motion ? { animationDuration: `${motion.durationMs}ms` } : undefined}
-      aria-hidden={layer === "outgoing" || undefined}
-      inert={layer === "outgoing" || undefined}
+      aria-hidden={layer === "outgoing" || (layer === "current" && Boolean(popupPage)) || undefined}
+      inert={layer === "outgoing" || (layer === "current" && Boolean(popupPage)) || undefined}
       tabIndex={layer === "current" ? -1 : undefined}
-      role={layer === "current" ? "region" : undefined}
-      aria-label={layer === "current" ? page.name : undefined}
+      role={layer === "outgoing" ? undefined : "region"}
+      aria-label={layer === "outgoing" ? undefined : page.name}
       onAnimationEnd={onAnimation}
     >
+      {layer !== "popup" && <OpenEffectStyle root={page.data.root} />}
       <Render
         data={page.data}
         renderers={cardRenderers}
-        metadata={metadata ?? (mode === "preview" ? { mode: "preview" } : undefined)}
-        device={device}
-        responsive={device ? undefined : { scale: true }}
-        nodeActions={layer === "current" ? nodeActions : undefined}
+        metadata={{ ...(metadata && typeof metadata === "object" && !Array.isArray(metadata) ? metadata as Record<string, JsonValue> : metadata ? {} : mode === "preview" ? { mode: "preview" } : {}), giftOpeningId }}
+        device={layer === "popup" ? undefined : device}
+        responsive={layer === "popup" || !device ? { scale: true } : undefined}
+        nodeActions={layer === "outgoing" ? undefined : actions}
       />
     </div>
   );
@@ -266,11 +378,35 @@ function Player({ document, mode, historyKey, device, metadata }: CardPlayerProp
         data-auto-desktop={pageStageFloor(currentPage, "desktop", 960) > 0 ? "" : undefined}
         data-auto-phone={pageStageFloor(currentPage, "phone", 375) > 0 ? "" : undefined}
       >
-        <div ref={stageRef} className={styles.stage}>
+        <div ref={stageRef} className={styles.stage} data-immersive-cover={immersiveCover ? "" : undefined} style={immersiveCover && coverBackground ? { "--cover-bg": coverBackground } as React.CSSProperties : undefined}>
+          {immersiveCover && coverHearts && <div className={styles.coverHearts} aria-hidden="true">
+            {[
+              ["9%", "6%", "#a33b43", 18, "0s"], ["34%", "4%", "#a33b43", 21, "1.8s"], ["84%", "2%", "#c18b4c", 18, "3.1s"],
+              ["92%", "13%", "#b17c46", 15, "2.4s"], ["17%", "47%", "#d5c1b4", 20, "4s"], ["71%", "46%", "#c18b4c", 16, "1.1s"], ["27%", "78%", "#b27b45", 20, "3.6s"],
+            ].map(([left, top, color, size, delay], index) => <span key={index} className={styles.coverHeart} style={{ left: left as string, top: top as string, color: color as string, fontSize: `${size}px`, animationDelay: delay as string }}>♥</span>)}
+          </div>}
           {renderPage(currentPage, "current")}
           {outgoingPage && renderPage(outgoingPage, "outgoing")}
         </div>
       </div>
+      {burst && <BurstOverlay key={burst.key} config={burst.config} seed={burst.key} onDone={() => setBurst(null)} />}
+      <Dialog open={Boolean(popupPage)} onOpenChange={open => { if (!open) setPopupPage(null); }}>
+        {popupPage && (() => {
+          const popup = normalizePopupSettings(popupPage.popup);
+          const canvasWidth = viewportWidth <= 640 || popup.width <= 640 ? 375 : 960;
+          const pageScale = Math.min(1, Math.max(0.1, (Math.min(popup.width, viewportWidth - 32)) / canvasWidth));
+          const [red, green, blue] = popup.backdropColor.slice(1).match(/.{2}/g)!.map(value => Number.parseInt(value, 16));
+          return <DialogContent
+            data-popup-effect={popup.effect}
+            className={`${styles.popupMotion} grid max-w-none gap-0 overflow-hidden rounded-xl border border-black/10 bg-white p-0 shadow-2xl`}
+            style={{ width: `min(${popup.width}px, calc(100vw - 32px))`, maxWidth: "calc(100vw - 32px)", maxHeight: "calc(100dvh - 32px)", zIndex: 111 }}
+            backdropStyle={{ backgroundColor: `rgba(${red}, ${green}, ${blue}, ${popup.backdropOpacity / 100})`, zIndex: 110 }}
+          >
+            <DialogTitle className="sr-only">{popupPage.name}</DialogTitle>
+            <div className={styles.popupScroll}><div style={{ width: canvasWidth, zoom: pageScale, marginInline: "auto" }}><div className={styles.viewport} data-card-player="" data-auto-desktop="" data-auto-phone=""><div className={styles.stage}>{renderPage(popupPage, "popup", popupActions)}</div></div></div></div>
+          </DialogContent>;
+        })()}
+      </Dialog>
     </FormDraftProvider>
   );
 }

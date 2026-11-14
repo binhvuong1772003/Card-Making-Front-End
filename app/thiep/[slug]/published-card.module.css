@@ -4,9 +4,9 @@
   container-type: inline-size;
 }
 
+/* Cột 960 px do chính trang quyết định (card-player), nên trang "Toàn màn hình" mới trải được hết bề ngang. */
 .paper {
   width: 100%;
-  max-width: 960px;
   margin-inline: auto;
   overflow-x: clip;
 }

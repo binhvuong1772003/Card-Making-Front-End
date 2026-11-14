@@ -5,6 +5,15 @@
   container-type: inline-size;
 }
 
+.popupMotion[data-popup-effect="fade"] { animation: popup-fade-in 220ms cubic-bezier(.16, 1, .3, 1) both; }
+.popupMotion[data-popup-effect="slide-up"] { animation: popup-rise-in 280ms cubic-bezier(.16, 1, .3, 1) both; }
+.popupMotion[data-popup-effect="zoom"] { animation: popup-zoom-in 240ms cubic-bezier(.16, 1, .3, 1) both; }
+.popupMotion[data-popup-effect="none"] { animation: none !important; }
+@keyframes popup-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popup-rise-in { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
+@keyframes popup-zoom-in { from { opacity: 0; scale: .96; } to { opacity: 1; scale: 1; } }
+@media (prefers-reduced-motion: reduce) { .popupMotion[data-popup-effect] { animation-duration: 1ms; } }
+
 .stage {
   position: relative;
   width: 100%;
@@ -12,6 +21,109 @@
   overflow: hidden;
   isolation: isolate;
   min-height: 0;
+}
+
+.stage[data-immersive-cover] {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  min-height: 100dvh !important;
+  max-width: none;
+  overflow: hidden;
+  background: var(--cover-bg, #611820);
+}
+.stage[data-immersive-cover] > .page {
+  width: min(100%, 960px);
+  height: 100dvh;
+  min-height: 100dvh;
+  margin-inline: auto;
+  overflow: hidden;
+}
+.stage[data-immersive-cover] > .page[data-cover-page] {
+  background: var(--cover-bg, #611820);
+}
+.stage[data-immersive-cover] > .page[data-cover-page] [data-miditor-id="root"] { min-height: 100dvh !important; }
+.coverHearts { position: absolute; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; }
+.coverHeart { position: absolute; line-height: 1; opacity: .72; animation: cover-heart-drift 6.5s ease-in-out infinite; }
+@keyframes cover-heart-drift { 0%, 100% { translate: 0 0; rotate: -5deg; } 50% { translate: 0 -13px; rotate: 7deg; } }
+.stage[data-immersive-cover] > .page[data-cover-page] [data-miditor-id^="hero-card-"]:not([data-miditor-id="hero-card-background"]):not([data-miditor-id*="heart-float"]) {
+  translate: 0 max(0px, calc((100dvh - 900px) / 2));
+}
+.page[data-cover-page] [data-miditor-id="hero-card-flower-right"] { transform: scaleX(-1) !important; }
+.page[data-cover-page] [data-miditor-id="hero-card-heart-disc"] > [aria-hidden="true"] { filter: drop-shadow(0 6px 10px rgb(44 8 12 / 28%)); }
+.page[data-cover-page] [data-miditor-id="hero-card-open-button"] {
+  background: none !important;
+  box-shadow: none;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+.page[data-cover-page] [data-miditor-id="hero-card-open-button"] > [aria-hidden="true"] {
+  background: linear-gradient(105deg, #55131a 0%, #7d222a 84%, #a94c4b 100%) !important;
+  box-shadow: 0 8px 14px rgb(44 8 12 / 28%);
+  transition: filter 180ms ease, box-shadow 180ms ease;
+}
+.page[data-cover-page] [data-miditor-id="hero-card-open-button"]:hover,
+.page[data-cover-page] [data-miditor-id="hero-card-open-label"]:hover {
+  filter: brightness(1.12);
+}
+.page[data-cover-page] [data-miditor-id="hero-card-open-button"]:hover > [aria-hidden="true"] {
+  box-shadow: 0 10px 18px rgb(44 8 12 / 34%);
+}
+.page[data-opening-target] [data-miditor-id^="hero-card-"]:not([data-miditor-id="hero-card-background"]):not([data-miditor-id*="heart-float"]) {
+  animation: welcome-card-open 520ms cubic-bezier(.16, 1, .3, 1) both;
+}
+@keyframes welcome-card-open { to { opacity: 0; filter: blur(2px); transform: scale(.94) translateY(10px); } }
+@container (max-width: 640px) {
+  .stage[data-immersive-cover] > .page[data-cover-page] [data-miditor-id^="hero-card-"]:not([data-miditor-id="hero-card-background"]):not([data-miditor-id*="heart-float"]) {
+    translate: 0 max(0px, calc((100dvh - 812px) / 2));
+  }
+}
+
+.popupScroll { max-height: calc(100dvh - 32px); overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; }
+
+.page [data-miditor-id="hero-paper-texture"] { mix-blend-mode: multiply; pointer-events: none; }
+.page [data-miditor-id="hero-date-label"] { letter-spacing: .16em; }
+
+.page[data-gift-motion] [data-miditor-id="wedding-gift"] {
+  animation: gift-float 3s ease-in-out infinite !important;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 8px 12px rgb(33 47 29 / 22%));
+  transition: filter 220ms ease;
+}
+.page[data-gift-motion] [data-miditor-id="wedding-gift"]:hover,
+.page[data-gift-motion] [data-miditor-id="wedding-gift"]:focus-visible {
+  animation: gift-lift 560ms cubic-bezier(.16, 1, .3, 1) forwards !important;
+  filter: drop-shadow(0 15px 18px rgb(33 47 29 / 28%));
+}
+.page[data-opening-target] [data-miditor-id="hero-envelope-flap"] {
+  transform-origin: 50% 3%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation: envelope-flap-open 520ms cubic-bezier(.2, .75, .25, 1) both;
+}
+.page [data-decoration-motion="gift"] {
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 8px 12px rgb(33 47 29 / 22%));
+}
+.page [data-decoration-motion="gift"] > [data-gift-bob] { animation: gift-float 3s ease-in-out infinite; transform-origin: 50% 100%; }
+.page [data-decoration-motion="envelope"] > [data-gift-bob] { animation: envelope-float 4.5s ease-in-out infinite; transform-origin: 50% 100%; }
+@keyframes gift-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+@keyframes envelope-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -3px; } }
+@keyframes gift-lift { 0% { translate: 0 0; scale: 1; } 62% { translate: 0 -14px; scale: 1.035; } 100% { translate: 0 -8px; scale: 1.025; } }
+@keyframes envelope-flap-open { from { transform: perspective(700px) rotateX(0); } to { transform: perspective(700px) rotateX(-165deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .coverHeart { animation: none; }
+  .page[data-opening-target] [data-miditor-id^="hero-card-"] { animation-duration: 1ms; }
+  .page[data-gift-motion] [data-miditor-id="wedding-gift"] { animation: none !important; transition: filter 180ms ease; }
+.page [data-decoration-motion="gift"] > [data-gift-bob] { animation: none; }
+.page [data-decoration-motion="envelope"] > [data-gift-bob] { animation: none; }
+.page [data-decoration-motion="gift"] { transition: filter 180ms ease; }
+  .page[data-gift-motion] [data-miditor-id="wedding-gift"]:hover,
+  .page[data-gift-motion] [data-miditor-id="wedding-gift"]:focus-visible { translate: none; scale: 1; }
+  .page[data-opening-target] [data-miditor-id="hero-envelope-flap"] { animation-duration: 1ms; }
+  .page [data-decoration-motion="gift"] { filter: drop-shadow(0 10px 16px rgb(33 47 29 / 32%)); }
 }
 
 .viewport[data-auto-desktop] .stage {
@@ -39,10 +151,14 @@
 .page {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: min(100%, 960px);
+  margin-inline: auto;
   min-width: 0;
   outline: none;
 }
+/* "Toàn màn hình": trang phủ hết bề ngang thay vì cột 960 px giữa màn hình. Khối neo trái, phải hay giữa tự dính mép tương ứng. */
+.page[data-page-layout="full"] { max-width: none; }
+.stage[data-immersive-cover] > .page[data-page-layout="full"] { width: 100%; }
 
 .page[data-layer="outgoing"] {
   position: absolute;
