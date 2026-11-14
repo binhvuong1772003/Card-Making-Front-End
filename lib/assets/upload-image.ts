@@ -48,3 +48,27 @@ export const uploadImage = createUploadImage({
   sign: async () => signature.parse(await apiFetch('/assets/sign', { method: 'POST' })),
   fetch: (...args) => fetch(...args),
 });
+
+const catalogSignature = signature;
+const catalogUploadReply = z.object({
+  secure_url: z.string().url(), public_id: z.string().min(1), width: z.number().int().positive(), height: z.number().int().positive(),
+  error: z.object({ message: z.string() }).optional(),
+});
+
+/** Upload a shared decorative asset; only admins can obtain this folder's signature. */
+export async function uploadCatalogImage(file: File) {
+  if (file.size > MAX_IMAGE_BYTES) throw new Error('ảnh lớn hơn 8 MB');
+  const s = catalogSignature.parse(await apiFetch('/assets/catalog/sign', { method: 'POST' }));
+  const form = new FormData();
+  form.set('file', file);
+  form.set('api_key', s.apiKey);
+  form.set('timestamp', String(s.timestamp));
+  form.set('folder', s.folder);
+  form.set('allowed_formats', s.allowedFormats);
+  form.set('transformation', s.transformation);
+  form.set('signature', s.signature);
+  const res = await fetch(`https://api.cloudinary.com/v1_1/${s.cloudName}/image/upload`, { method: 'POST', body: form });
+  const reply = catalogUploadReply.safeParse(await res.json().catch(() => null));
+  if (!res.ok || !reply.success) throw new Error(reply.success ? reply.data.error?.message ?? 'máy chủ ảnh không nhận ảnh này' : 'máy chủ ảnh trả dữ liệu không hợp lệ');
+  return { url: reply.data.secure_url, publicId: reply.data.public_id, width: reply.data.width, height: reply.data.height };
+}

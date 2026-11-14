@@ -1,11 +1,11 @@
 import { builtInRegistry, emptyPage, insertNode, newNode, validatePage, validateRegistry, shapeGeometry, type PageData, type TreeNode } from "@miditor/core";
 import { describe, expect, it } from "vitest";
-import { FRAME_SHAPE_LABELS, FRAME_SHAPE_ORDER, FRAME_SHAPES, frameGeometry, photoFrameDefinitions } from "./photo-frame";
+import { FRAME_SHAPE_LABELS, FRAME_SHAPE_ORDER, FRAME_SHAPES, frameGeometry, photoFrameBlock, photoFrameDefinitions } from "./photo-frame";
 
-const registry = { ...builtInRegistry, PhotoFrameArch: photoFrameDefinitions.PhotoFrameArch! };
+const registry = { ...builtInRegistry, ...photoFrameDefinitions };
 
 function pageWith(props: Record<string, unknown>): PageData {
-  const node = newNode(registry, "PhotoFrameArch", "p1", { w: 680, h: 788 }) as TreeNode;
+  const node = newNode(registry, "PhotoFrame", "p1", { w: 680, h: 788 }) as TreeNode;
   const page = emptyPage();
   return { ...page, root: insertNode(page.root, "root", { ...node, props: { ...node.props, ...props } } as TreeNode) };
 }
@@ -15,12 +15,11 @@ describe("the Photo frame block", () => {
     expect(validateRegistry(registry)).toEqual([]);
   });
 
-  it("offers all 13 shapes as blocks in the Photo frame group", () => {
-    const kinds = Object.entries(photoFrameDefinitions);
-    expect(kinds).toHaveLength(13);
-    expect(new Set(kinds.map(([, def]) => def.category))).toEqual(new Set(["Khung ảnh"]));
-    expect(new Set(kinds.map(([, def]) => def.defaultProps.shape))).toEqual(new Set(FRAME_SHAPES));
-    for (const [, def] of kinds) expect(FRAME_SHAPES).toContain(def.defaultProps.shape);
+  it("exposes one PhotoFrame block and keeps all silhouettes in the catalog", () => {
+    expect(Object.keys(photoFrameDefinitions)).toEqual(["PhotoFrame"]);
+    expect(photoFrameBlock.category).toBe("Khung ảnh");
+    expect(FRAME_SHAPES).toHaveLength(13);
+    expect(FRAME_SHAPES).toContain("heart");
   });
 
   it("offers every Miditor shape except crescent, plus heart, with a name and a place in the picker", () => {
@@ -39,12 +38,12 @@ describe("the Photo frame block", () => {
   });
 
   it("picks the picture with the card editor's own input, since Miditor draws no field of type image", () => {
-    expect(photoFrameDefinitions.PhotoFrameArch!.fields.src).toMatchObject({ type: "custom", kind: "single-image", group: "Ảnh" });
-    expect(photoFrameDefinitions.PhotoFrameArch!.defaultProps.src).toBe("");
+    expect(photoFrameDefinitions.PhotoFrame!.fields.src).toMatchObject({ type: "custom", kind: "single-image", group: "Ảnh" });
+    expect(photoFrameDefinitions.PhotoFrame!.defaultProps.src).toBe("");
   });
 
   it("is a rectangle block by default with no ring and no frame of its own from the library's sections", () => {
-    const def = photoFrameDefinitions.PhotoFrameArch!;
+    const def = photoFrameDefinitions.PhotoFrame!;
     expect(def.defaultProps.frameWidth).toBe(0);
     expect(def.defaultStyles).toBeUndefined();
     expect(Object.keys(def.fields)).not.toContain("borderWidth");

@@ -1,39 +1,53 @@
-import { SHAPE_NAMES, shapeGeometry, type ComponentDef, type ShapeGeometry } from "@miditor/core";
+import { shapeGeometry, type ComponentDef, type ShapeGeometry, type TreeNode } from "@miditor/core";
+import PHOTO_FRAME_CATALOG from "./photo-frame-catalog.json";
+
+export type FrameShape = (typeof PHOTO_FRAME_CATALOG)[number]["id"];
+export type FrameShapeValue = { id: string; geometry: string; maskPath?: string };
 
 // Khối Khung ảnh: một tấm ảnh cắt theo hình dạng chọn được (vòm, tròn, tim, viền sóng, tem...), có viền vẽ đúng theo hình đó. Cách cắt là của
 // Miditor (`shapeGeometry`, cùng bộ hình với khối Hình khối) cộng một hình riêng của CardMaking là Tim, nên một hình trông y nhau ở hai nơi.
 // Nhóm Viền và Hiệu ứng chung của Miditor chỉ viền, đổ bóng hình chữ nhật của khối, không khớp hình đã cắt, nên khối có viền riêng
-// (`frameWidth`, `frameColor`). Mỗi kiểu trong thư viện là một loại khối riêng cùng nhóm "Khung ảnh" và cùng cách vẽ, chỉ khác hình
-// mặc định; đổi hình lúc nào cũng được. Dữ liệu thuần, không có React: CMBE nhận bản sinh ra từ đây (`npm run blocks:export`).
-export const FRAME_SHAPES = [...SHAPE_NAMES.filter((shape) => shape !== "crescent"), "heart"] as const;
-export type FrameShape = (typeof FRAME_SHAPES)[number];
+// (`frameWidth`, `frameColor`). Mọi hình dùng chung một block `PhotoFrame`; catalog riêng giữ tên, kích cỡ, hình cắt và mã chuyển đổi.
+// Dữ liệu khối thuần được CMBE nhận từ đây (`npm run blocks:export`).
+export const FRAME_SHAPES = PHOTO_FRAME_CATALOG.map(({ id }) => id);
 
 /** Tên hình bằng tiếng Việt, theo thứ tự hiện trong lưới chọn hình. */
-export const FRAME_SHAPE_LABELS: Record<FrameShape, string> = {
-  rectangle: "Chữ nhật",
-  rounded: "Bo góc",
-  ellipse: "Tròn",
-  pill: "Viên thuốc",
-  arch: "Vòm",
-  semicircle: "Bán nguyệt",
-  triangle: "Tam giác",
-  diamond: "Thoi",
-  pentagon: "Ngũ giác",
-  hexagon: "Lục giác",
-  scallop: "Viền sóng",
-  seal: "Tem răng cưa",
-  heart: "Tim",
-};
-export const FRAME_SHAPE_ORDER: readonly FrameShape[] = ["rectangle", "rounded", "ellipse", "pill", "arch", "semicircle", "triangle", "diamond", "pentagon", "hexagon", "scallop", "seal", "heart"];
+export const FRAME_SHAPE_LABELS = Object.fromEntries(PHOTO_FRAME_CATALOG.map(({ id, label }) => [id, label])) as Record<FrameShape, string>;
+export const FRAME_SHAPE_ORDER = FRAME_SHAPES;
 
-// Hình tim: đường viền vẽ trong khung 100 x 100, khối kéo giãn theo cỡ của nó (cùng cách với các hình dùng mặt nạ của Miditor).
-const HEART_PATH = "M50 92C12 62 0 40 0 24C0 9 12 0 26 0C37 0 46 6 50 14C54 6 63 0 74 0C88 0 100 9 100 24C100 40 88 62 50 92Z";
-const HEART_MASK = `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="#fff" d="${HEART_PATH}"/></svg>`)}")`;
+const legacyShapeByType = Object.fromEntries(PHOTO_FRAME_CATALOG.map(({ id, legacyType }) => [legacyType, id])) as Record<string, FrameShape>;
+const shapeIds = new Set<string>(FRAME_SHAPES);
+export const isFrameShape = (value: unknown): value is FrameShape => typeof value === "string" && shapeIds.has(value);
 
 /** Cách một giá trị `shape` cắt khối. Giá trị lạ hoặc thiếu là hình chữ nhật, để thiệp lưu từ bản nào cũng vẽ được. */
-export function frameGeometry(value: unknown): ShapeGeometry {
-  if (value === "heart") return { ...shapeGeometry("rectangle"), maskImage: HEART_MASK };
-  return shapeGeometry(value);
+export function frameGeometry(value: unknown, geometryOverride?: unknown, maskPathOverride?: unknown): ShapeGeometry {
+  const snapshot = typeof value === "object" && value !== null ? value as Partial<FrameShapeValue> : undefined;
+  const id = snapshot?.id ?? value;
+  const shape = PHOTO_FRAME_CATALOG.find((item) => item.id === id);
+  const geometry = typeof geometryOverride === "string" ? geometryOverride : snapshot?.geometry ?? shape?.geometry;
+  const candidatePath = typeof maskPathOverride === "string" && maskPathOverride ? maskPathOverride : snapshot?.maskPath || shape?.maskPath;
+  const maskPath = typeof candidatePath === "string" && candidatePath.length <= 4000 && /^[MmLlHhVvCcSsQqTtAaZz0-9+.,\-\s]+$/.test(candidatePath) ? candidatePath : undefined;
+  if (maskPath) {
+    const maskImage = `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="#fff" d="${maskPath}"/></svg>`)}")`;
+    return { ...shapeGeometry("rectangle"), maskImage };
+  }
+  return shapeGeometry(geometry ?? "rectangle");
+}
+
+export function upgradeLegacyPhotoFrames(node: TreeNode): TreeNode {
+  const legacyShape = legacyShapeByType[node.type];
+  const rawShape = node.props.shape;
+  const shapeId = typeof rawShape === "object" && rawShape !== null && "id" in rawShape && typeof rawShape.id === "string"
+    ? rawShape.id
+    : typeof rawShape === "string" && isFrameShape(rawShape) ? rawShape : legacyShape;
+  const catalogShape = PHOTO_FRAME_CATALOG.find(({ id }) => id === shapeId) ?? PHOTO_FRAME_CATALOG[0]!;
+  const shape = typeof rawShape === "object" && rawShape !== null && "geometry" in rawShape
+    ? rawShape
+    : { id: catalogShape.id, geometry: catalogShape.geometry, maskPath: catalogShape.maskPath ?? "" };
+  const props = legacyShape || node.type === "PhotoFrame" ? { ...node.props, shape } : node.props;
+  const children = node.children.map(upgradeLegacyPhotoFrames);
+  if (!legacyShape && children.every((child, index) => child === node.children[index])) return node;
+  return { ...node, ...(legacyShape ? { type: "PhotoFrame" } : {}), props, children };
 }
 
 export const FRAME_ZOOM = { min: 100, max: 300 } as const;
@@ -51,7 +65,7 @@ const base: ComponentDef = {
   keywords: ["khung ảnh", "ảnh", "hình", "vòm", "tròn", "tim", "viền sóng", "tem", "photo", "frame"],
   size: { w: 240, h: 300 },
   canContain: false,
-  defaultProps: { src: "", alt: "", shape: "arch", zoom: 100, posX: 50, posY: 50, frameWidth: 0, frameColor: "#511419" },
+  defaultProps: { src: "", alt: "", shape: { id: "rectangle", geometry: "rectangle", maskPath: "" }, zoom: 100, posX: 50, posY: 50, frameWidth: 0, frameColor: "#511419" },
   fields: {
     src: srcField,
     alt: { type: "text", label: "Mô tả ảnh", maxLength: 500, group: "Ảnh", help: "Cho người đọc màn hình và khi ảnh không tải được." },
@@ -64,28 +78,5 @@ const base: ComponentDef = {
   },
 };
 
-const variant = (label: string, shape: FrameShape, size: { w: number; h: number }): ComponentDef => ({ ...base, label, size, defaultProps: { ...base.defaultProps, shape } });
-
-// Các kiểu trong thư viện; giữ khoá cũ để thiệp đã lưu tiếp tục mở đúng.
-const FRAME_VARIANTS: Record<FrameShape, { type: string; label: string; size: { w: number; h: number } }> = {
-  rectangle: { type: "PhotoFrameRectangle", label: "Khung chữ nhật", size: { w: 240, h: 300 } },
-  rounded: { type: "PhotoFrameRounded", label: "Bo góc", size: { w: 240, h: 300 } },
-  ellipse: { type: "PhotoFrameCircle", label: "Khung tròn", size: { w: 240, h: 240 } },
-  pill: { type: "PhotoFramePill", label: "Khung viên thuốc", size: { w: 240, h: 140 } },
-  arch: { type: "PhotoFrameArch", label: "Khung vòm", size: { w: 240, h: 300 } },
-  semicircle: { type: "PhotoFrameSemicircle", label: "Khung bán nguyệt", size: { w: 240, h: 240 } },
-  triangle: { type: "PhotoFrameTriangle", label: "Khung tam giác", size: { w: 240, h: 240 } },
-  diamond: { type: "PhotoFrameDiamond", label: "Khung thoi", size: { w: 240, h: 240 } },
-  pentagon: { type: "PhotoFramePentagon", label: "Khung ngũ giác", size: { w: 240, h: 240 } },
-  hexagon: { type: "PhotoFrameHexagon", label: "Khung lục giác", size: { w: 240, h: 240 } },
-  scallop: { type: "PhotoFrameScallop", label: "Viền sóng", size: { w: 240, h: 240 } },
-  seal: { type: "PhotoFrameSeal", label: "Tem răng cưa", size: { w: 240, h: 240 } },
-  heart: { type: "PhotoFrameHeart", label: "Khung tim", size: { w: 240, h: 220 } },
-};
-
-export const photoFrameDefinitions: Record<string, ComponentDef> = Object.fromEntries(
-  FRAME_SHAPE_ORDER.map((shape) => {
-    const { type, label, size } = FRAME_VARIANTS[shape];
-    return [type, variant(label, shape, size)];
-  }),
-);
+export const photoFrameBlock: ComponentDef = { ...base, label: "Khung ảnh", size: { w: 240, h: 300 }, defaultProps: { ...base.defaultProps, shape: "rectangle" } };
+export const photoFrameDefinitions: Record<string, ComponentDef> = { PhotoFrame: photoFrameBlock };

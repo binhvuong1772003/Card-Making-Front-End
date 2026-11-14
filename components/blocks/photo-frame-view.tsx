@@ -10,6 +10,8 @@ export interface PhotoFrameViewProps {
   src: string;
   alt: string;
   shape: string;
+  shapeGeometry?: string;
+  shapeMaskPath?: string;
   zoom: number;
   posX: number;
   posY: number;
@@ -34,9 +36,9 @@ export function cutStyle(geometry: ShapeGeometry): CSSProperties {
   };
 }
 
-export function PhotoFrameView({ src, alt, shape, zoom, posX, posY, frameWidth, frameColor, editing }: PhotoFrameViewProps) {
+export function PhotoFrameView({ src, alt, shape, shapeGeometry, shapeMaskPath, zoom, posX, posY, frameWidth, frameColor, editing }: PhotoFrameViewProps) {
   if (!src && !editing) return null;
-  const cut = cutStyle(frameGeometry(shape));
+  const cut = cutStyle(frameGeometry(shape, shapeGeometry, shapeMaskPath));
   return (
     <div style={{ position: "relative", width: "100%", height: "100%", boxSizing: "border-box", background: frameWidth > 0 ? frameColor : "transparent", ...cut }}>
       <div style={{ position: "absolute", inset: frameWidth, overflow: "hidden", background: src ? "transparent" : "#ede3e5", ...cut }}>
