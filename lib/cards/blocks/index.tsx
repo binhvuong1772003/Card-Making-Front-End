@@ -9,6 +9,7 @@ import { MapView } from "@/components/blocks/map-view";
 import { PhotoFrameView } from "@/components/blocks/photo-frame-view";
 import { albumBlock, cleanImages } from "./album";
 import { cardDefinitions } from "./definitions";
+import { DECORATION_IDLE_EFFECTS } from "./decoration";
 import { calendarDefinitions, MARK_SHAPES } from "./calendar";
 import { FRAME_WIDTH_MAX, FRAME_ZOOM, photoFrameDefinitions } from "./photo-frame";
 import { DRESS_CODE_DEFAULT_COLORS, DRESS_CODE_MAX_COLORS } from "./dress-code";
@@ -187,6 +188,8 @@ const renderDecoration: Renderer = ({ id, props, metadata }) => {
     motion={props.motion === true}
     motionStyle={props.motionStyle === "Bao lì xì" ? "envelope" : "box"}
     floatMotion={props.floatMotion === true}
+    idle={DECORATION_IDLE_EFFECTS.includes(props.idleEffect as never) ? props.idleEffect as (typeof DECORATION_IDLE_EFFECTS)[number] : "Không"}
+    shineRadius={number(props.shineRadius, 24, 0, 200)}
     opening={openingId === id}
   />;
 };

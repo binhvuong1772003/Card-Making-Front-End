@@ -54,7 +54,7 @@ function Artwork({ preset }: { preset: AnimatedPreset }) {
   }
   const p = preset.props;
   return <div style={{ width: p.motion ? "78%" : "64%", aspectRatio: `${preset.size.w} / ${preset.size.h}` }}>
-    <DecorationView src={String(p.src)} alt="" fit="contain" motion={p.motion === true} />
+    <DecorationView src={String(p.src)} alt="" fit="contain" motion={p.motion === true} idle={p.idleEffect === "Đập" || p.idleEffect === "Ánh sáng quét" ? p.idleEffect : "Không"} shineRadius={typeof p.shineRadius === "number" ? p.shineRadius : 24} />
   </div>;
 }
 

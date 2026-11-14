@@ -35,3 +35,23 @@ describe("the gift box (Decoration with motion)", () => {
     expect(plain).toContain('alt="Hộp quà"');
   });
 });
+
+describe("idle effects of a Decoration", () => {
+  const view = (idle: "Đập" | "Ánh sáng quét", src = "https://res.cloudinary.com/demo/image/upload/seal.png") =>
+    renderToStaticMarkup(createElement(DecorationView, { src, alt: "", fit: "contain", motion: false, idle, shineRadius: 24 }));
+
+  it("beats twice in 1.3s with a pulsing glow", () => {
+    const out = view("Đập");
+    expect(out).toContain("cm-heartbeat 1.3s ease-in-out infinite");
+    expect(out).toContain("cm-heartbeat-glow 1.3s ease-in-out infinite");
+    expect(out).toContain("14% { scale: 1.16; }");
+  });
+
+  it("sweeps a 23% wide light stripe every 3s inside the rounded box, with or without a picture", () => {
+    const out = view("Ánh sáng quét", "");
+    expect(out).toContain("cm-shine-sweep 3s linear infinite");
+    expect(out).toContain("width:23%");
+    expect(out).toContain("border-radius:24px");
+    expect(out).not.toContain("<img");
+  });
+});
