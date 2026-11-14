@@ -85,6 +85,8 @@ function buildCover(t: Theme) {
   const FADE = t.flowers ? OPEN("Bay lên rồi biến mất", 0.8, 0.25) : OPEN("Mờ dần", 0.7, 0.9);
   const decoration = (id: string, file: string, box: Parameters<typeof put>[2], open: Open | undefined, styles: NodeStyles = {}) =>
     put("Decoration", id, box, { src: `/demo/song-hy/${file}`, alt: "", fit: "contain", motion: false, motionTarget: "" }, open, styles);
+  // Con dấu tim đập nhịp tim; nút có vệt sáng quét (gốc: shine 3s, vệt 32px trên nút 140x48).
+  const beat = (node: FreeNode): FreeNode => { if (t.sealKind === "heart") node.props = { ...node.props, idleEffect: "Đập" }; return node; };
   const text = (id: string, value: string, box: { x: number; y: number; w: number; h: number }, size: number, color: string, font: string, extra: Record<string, JsonValue> = {}) =>
     put("Text", id, box, { text: value, size, color, font, bold: false, italic: false, underline: false, align: "center", ...extra }, FADE);
   const rule = (id: string, side: "left" | "right") => t.ruleKind === "fade"
@@ -121,7 +123,7 @@ function buildCover(t: Theme) {
     ...flowerClones,
     decoration("open-ring", `ring-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Gợn sóng lan ra", 0.6)),
     // Con dấu tim có quầng bóng mềm cùng màu (gốc: 0 5px 27px #511419 @.5); bo tròn để bóng không thành ô vuông.
-    decoration("open-seal", `seal-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Thu nhỏ rồi biến mất", 0.6), t.sealKind === "heart" ? { borderRadius: 28, shadow: { x: 0, y: 5, blur: 27, spread: 0, color: "#511419", opacity: 50 } } : {}),
+    beat(decoration("open-seal", `seal-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Thu nhỏ rồi biến mất", 0.6), t.sealKind === "heart" ? { borderRadius: 28, shadow: { x: 0, y: 5, blur: 27, spread: 0, color: "#511419", opacity: 50 } } : {})),
     text("open-name1", t.name1, { x: 0, y: -91, w: 500, h: 44 }, 36, t.ink, t.nameFont),
     text("open-amp", "&", { x: 0, y: -60, w: 100, h: 26 }, 20, t.ink, baskerville),
     text("open-name2", t.name2, { x: 0, y: -26, w: 500, h: 44 }, 36, t.ink, t.nameFont),
@@ -131,6 +133,7 @@ function buildCover(t: Theme) {
     text("open-date", t.date, { x: 0, y: 46, w: 400, h: 30 }, 18, t.dim, lora),
     text("open-invite", "Thân Mời", { x: 0, y: 93, w: 300, h: 30 }, 18, t.dim, lora),
     decoration("open-button", `button-${t.key}.svg`, { x: 0, y: 154, w: 180, h: 88 }, FADE),
+    ...(t.flowers ? [(() => { const shine = decoration("open-button-shine", "", { x: 0, y: 154, w: 140, h: 48 }, FADE); shine.props = { ...shine.props, src: "", idleEffect: "Ánh sáng quét", shineRadius: 24 }; return shine; })()] : []),
     text("open-label", "Mở thiệp", { x: 0, y: 154, w: 140, h: 48 }, 18, t.buttonText, lora, { motionTarget: "cover" }),
     put("Burst", "open-burst", { x: 0, y: 235, w: 96, h: 40 }, { char: t.burstChar, count: 32, spread: 420, delay: 0.5, palette: t.palette }, undefined),
   ];
