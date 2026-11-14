@@ -1,6 +1,6 @@
 "use client";
 
-import { type CSSProperties, type FormEvent, useEffect, useId, useState } from "react";
+import { type CSSProperties, type FormEvent, useEffect, useId, useRef, useState } from "react";
 import { ApiError } from "@/lib/api/errors";
 import { useFormDraft } from "./form-drafts";
 import { formErrorMessage } from "@/lib/cards/forms/api";
@@ -47,6 +47,8 @@ const SAMPLES = [
 ];
 
 const PAGE = 10;
+// Sổ lưu bút: khung danh sách cao tối đa 420px; phần chưa dùng đến (`--cm-gb-slack`) kéo các khối bên dưới lên, xem CSS bên dưới.
+const GUESTBOOK_LIST_MAX = 420;
 const STORAGE_PREFIX = "cmfe-form:";
 
 const pad = (value: number) => String(value).padStart(2, "0");
@@ -63,6 +65,17 @@ const initialValues = (fields: readonly Field[]): Answers => {
   for (const field of fields) if (field.type === "number" && field.required) values[field.id] = field.min ?? 0;
   return values;
 };
+
+// Các khối dưới sổ lưu bút của mẫu Minimalism nằm ở toạ độ cố định (đã chừa đủ chỗ cho khung danh sách đầy). Biến `--cm-gb-slack` (px) trên trang là chỗ chừa chưa dùng:
+// không có lời chúc thì bằng cả khung, có hai lời chúc thì bằng phần còn lại; các khối bên dưới và chiều cao trang trừ đi đúng số đó nên không để trống.
+const GUESTBOOK_FOLLOW = `
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="gift-background"],
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="gift-castle"]{top:calc(5660px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="gift-title"]{top:calc(5705px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="wedding-gift"]{top:calc(5740px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="footer-thanks"]{top:calc(6200px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="footer-brand"]{top:calc(6250px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]){min-height:calc(6276px - var(--cm-gb-slack,0px))!important}`;
 
 const FADE = `
 .cm-fv-in{animation:cm-fv-fade .18s ease}
@@ -393,6 +406,20 @@ export function FormView(props: FormViewProps) {
   // Bắt đầu ở "đang tải" khi có sổ công khai: tránh nháy "chưa ai gửi" trước lần tải đầu.
   const [loading, setLoading] = useState(props.publicList.enabled);
   const [entries, setEntries] = useState<FormEntry[]>([]);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [listEl, setListEl] = useState<HTMLDivElement | null>(null);
+  // Báo cho trang biết khung danh sách đang dùng bao nhiêu chỗ (không làm trong editor: ở đó bố cục giữ nguyên để dễ sửa).
+  const trackSlack = props.publicList.enabled && props.mode !== "edit";
+  useEffect(() => {
+    const page = rootRef.current?.closest<HTMLElement>('[data-miditor-type="Page"]');
+    if (!trackSlack || !page) return;
+    const set = (used: number) => page.style.setProperty("--cm-gb-slack", `${Math.max(0, GUESTBOOK_LIST_MAX - Math.min(GUESTBOOK_LIST_MAX, used))}px`);
+    if (!listEl) { set(0); return () => page.style.removeProperty("--cm-gb-slack"); }
+    set(listEl.offsetHeight);
+    const watcher = typeof ResizeObserver === "undefined" ? undefined : new ResizeObserver(() => set(listEl.offsetHeight));
+    watcher?.observe(listEl);
+    return () => { watcher?.disconnect(); page.style.removeProperty("--cm-gb-slack"); };
+  }, [trackSlack, listEl]);
   const [closed, setClosed] = useState(false);
   const [done, setDone] = useState(false);
   const [pending, setPending] = useState(false);
@@ -522,6 +549,7 @@ export function FormView(props: FormViewProps) {
 
   return (
     <div
+      ref={rootRef}
       style={{
         position: "relative",
         width: "100%",
@@ -543,7 +571,7 @@ export function FormView(props: FormViewProps) {
       }}
       className={guestbook ? "cm-fv-guestbook" : undefined}
     >
-      <style>{FADE}</style>
+      <style>{FADE}{guestbook ? GUESTBOOK_FOLLOW : ""}</style>
       {props.heading.trim() && <div style={{ fontSize: 14, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>{props.heading}</div>}
 
       {live && closed ? (
@@ -629,7 +657,7 @@ export function FormView(props: FormViewProps) {
       )}
 
       {showList && (!live || loading || entries.length > 0) && (
-        <div style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "left", marginTop: guestbook ? 110 : 32, ...(guestbook ? { maxHeight: 420, overflowY: "auto", overscrollBehavior: "contain" } : {}) }}>
+        <div ref={guestbook ? setListEl : undefined} style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "left", marginTop: guestbook ? 110 : 32, ...(guestbook ? { maxHeight: GUESTBOOK_LIST_MAX, overflowY: "auto", overscrollBehavior: "contain" } : {}) }}>
           {!live ? (
             <>
               {SAMPLES.slice(0, PAGE).map((entry) => (
