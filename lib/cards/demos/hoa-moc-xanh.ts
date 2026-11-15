@@ -57,7 +57,7 @@ decoration("flower-left-lower", "flowers", [-315, 3880, 400, 400], [-131.25, 406
 decoration("flower-right-lower", "flowers", [700, 3150, 390, 390], [227, 2960, 290, 290], {}, -36, true, true);
 decoration("flower-bottom-right", "flowers", [520, 6020, 780, 780], [175, 6200, 600, 600], { opacity: 20 }, 139, true);
 // Dải nằm trong hero wrapper: top 280px từ md, 170px trên mobile.
-decoration("hero-floral-band", "floral-band", [0, 610, 900, 150], [0, 380, 375, 100]);
+decoration("hero-floral-band", "floral-band", [0, 536, 900, 150], [0, 380, 375, 100]);
 
 // Source XPath: /html/body/div[3]/div/div[1]/main/div/div/header/div[3]
 // Source /header/div[3]: 500×640 at md, 320×440 on mobile; labels center beside each print.
@@ -158,10 +158,48 @@ text("gift-instruction", "Nhấn để mở", [300, 6665, 300, 30], [80, 6805, 2
 text("thank-you", "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!", [150, 6740, 660, 50], [20, 6850, 335, 50], 20, 15);
 text("footer-brand", "♡ CardMaking", [300, 6796, 300, 24], [20, 6902, 335, 22], 14, 12, { color: muted });
 
+// Số đo đọc trực tiếp từ DOM trang mẫu (getBoundingClientRect của từng đoạn chữ so với cột 900px + computed style), thay cho số ước lượng bằng mắt.
+// [x, y, w, cỡ chữ, độ đậm, giãn chữ]; nút chữ rộng thêm một đoạn để không bị xuống dòng khi phông của mình rộng hơn.
+type Measured = [x: number, y: number, w: number, size: number, weight: number, spacing: number, extra?: Record<string, JsonValue>];
+const SANS = "'Gotham', system-ui, sans-serif";
+const MEASURED: Record<string, Measured> = {
+  "groom-role": [476, 415, 90, 14, 300, 1.4], "groom-name": [476, 434, 160, 32, 400, 0], "bride-role": [375, 735, 45, 14, 300, 1.4], "bride-name": [315, 754, 105, 32, 400, 0],
+  "ceremony-heading": [318, 1156, 263, 24, 700, 1], "groom-family-role": [197, 1222, 51, 16, 300, 0], "bride-family-role": [652, 1222, 51, 16, 300, 0],
+  "groom-family-father": [140, 1252, 165, 23, 600, 0], "bride-family-father": [585, 1252, 186, 23, 600, 0], "groom-family-mother": [151, 1293, 143, 23, 600, 0], "bride-family-mother": [588, 1293, 178, 23, 600, 0],
+  "groom-family-address": [45, 1334, 354, 10, 300, 0], "bride-family-address": [500, 1334, 354, 10, 300, 0], "ceremony-invite": [170, 1381, 560, 20, 300, 0],
+  "ceremony-groom": [1, 1473, 898, 64, 400, 0], "ceremony-groom-role": [409, 1570, 82, 10, 300, 1], "ceremony-and": [438, 1598, 24, 42, 300, 0, { font: "'Ms Madi', cursive" }],
+  "ceremony-bride": [1, 1677, 898, 64, 400, 0], "ceremony-bride-role": [431, 1774, 38, 10, 300, 1], "ceremony-place": [267, 1819, 366, 20, 400, 0],
+  "ceremony-time-label": [409, 1887, 82, 18, 400, 0], "ceremony-time": [416, 1942, 68, 30, 300, 0], "ceremony-date-day": [434, 2007, 40, 40, 300, 0],
+  "ceremony-day-divider-left": [396, 2023, 14, 28, 300, 0], "ceremony-day-divider-right": [498, 2023, 14, 28, 300, 0], "ceremony-day": [284, 2028, 88, 16, 300, 0], "ceremony-month": [536, 2028, 79, 16, 300, 0],
+  "ceremony-year": [426, 2087, 48, 24, 300, 0], "ceremony-lunar": [257, 2143, 386, 14, 300, 3.5],
+  "album-heading": [371, 2224, 158, 24, 700, 1], "party-heading": [304, 2932, 291, 24, 700, 1], "party-invite": [287, 2995, 326, 20, 400, 0, { font: SANS }], "party-time": [416, 3045, 68, 30, 300, 0],
+  "party-lunar": [257, 3246, 386, 14, 300, 3.5], "venue-heading": [258, 3870, 383, 26, 700, 1], "venue-address": [200, 3921, 500, 16, 300, 0.4],
+  "dress-heading": [369, 4570, 163, 24, 700, 1], "dress-note": [388, 4608, 124, 16, 300, 0], "timeline-heading": [294, 4798, 312, 24, 700, 1], "wishes-heading": [372, 5263, 156, 24, 700, 1],
+  "gift-heading": [347, 6283, 206, 24, 700, 1], "gift-instruction": [415, 6599, 69, 12, 500, 0, { font: SANS }], "thank-you": [196, 6671, 508, 18, 300, 0], "footer-brand": [403, 6731, 94, 12, 300, 0, { font: SANS }],
+  ...Object.fromEntries([0, 1, 2, 3, 4].flatMap((i) => [[`timeline-time-${i}`, [220, 4863 + 68 * i, 190, 17, 300, 0.425]], [`timeline-label-${i}`, [490, [4865, 4933, 5001, 5070, 5138][i]!, 200, 19, 500, 0]]])),
+  ...Object.fromEntries([[5644, 0], [5741, 1], [5837, 2], [5934, 3], [6031, 4], [6128, 5]].flatMap(([y, i]) => [[`wish-${i! + 1}-name`, [167, y!, 360, 14, 600, 0]], [`wish-${i! + 1}-date`, [631, y!, 94, 12, 300, 0]], [`wish-${i! + 1}-message`, [167, y! + 28, 558, 14, 300, 0]]])),
+};
+function applyMeasured() {
+  for (const node of children) {
+    const m = MEASURED[node.id];
+    if (!m || node.type !== "Text") continue;
+    const [x, y, w, size, weight, spacing, extra] = m;
+    const align = String(node.props.align ?? "center");
+    const wide = w >= 800 ? 0 : 24;
+    const left = align === "right" ? x - wide : align === "left" ? x : x - wide / 2;
+    node.position = { mode: "free", x: { anchor: "start", offset: left }, y: { anchor: "start", offset: y } };
+    const was = Number((node.size.h as { v: number }).v);
+    // Đoạn nhiều dòng (khung cũ cao hơn hai dòng chữ) giữ chiều cao cũ; một dòng thì cao 1,4 lần cỡ chữ.
+    node.size = { w: { kind: "px", v: w + wide }, h: { kind: "px", v: was > size * 2.6 ? was : Math.round(size * 1.4) } };
+    node.props = { ...node.props, size, bold: false, fontWeight: String(weight), letterSpacing: spacing, ...(extra ?? {}) };
+  }
+}
+applyMeasured();
+
 const paperColumn = newNode(registry, "CardPanel", "paper-column", { w: 960, h: 6900 }) as FreeNode;
-paperColumn.position = { mode: "free", x: { anchor: "center", offset: -450 }, y: { anchor: "start", offset: 0 } };
+paperColumn.position = { mode: "free", x: { anchor: "center", offset: 0 }, y: { anchor: "start", offset: 0 } };
 paperColumn.size = { w: { kind: "px", v: 900 }, h: { kind: "px", v: 6900 } };
-paperColumn.phone = { x: { anchor: "center", offset: -187.5 }, y: { anchor: "start", offset: 0 }, w: { kind: "px", v: 375 }, h: { kind: "px", v: 7100 }, rotation: 0 };
+paperColumn.phone = { x: { anchor: "center", offset: 0 }, y: { anchor: "start", offset: 0 }, w: { kind: "px", v: 375 }, h: { kind: "px", v: 7100 }, rotation: 0 };
 paperColumn.styles = { ...paperColumn.styles, background: paper, borderWidth: 1, borderColor: "#d9e2d4", borderRadius: 0 };
 paperColumn.children = children;
 
