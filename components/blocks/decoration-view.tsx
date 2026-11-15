@@ -12,7 +12,7 @@ const GIFT_CSS = `
 @keyframes cm-decoration-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -4%; } }
 @keyframes cm-heartbeat { 0%, 70%, 100% { scale: 1; } 14% { scale: 1.16; } 28% { scale: 1; } 42% { scale: 1.1; } }
 @keyframes cm-heartbeat-glow { 0%, 70%, 100% { filter: drop-shadow(0 4px 12px rgb(81 20 25 / 45%)); } 14% { filter: drop-shadow(0 6px 26px rgb(81 20 25 / 70%)); } 42% { filter: drop-shadow(0 5px 20px rgb(81 20 25 / 60%)); } }
-@keyframes cm-soft-pulse { 0%, 100% { scale: 1; } 50% { scale: 1.025; } }
+@keyframes cm-soft-pulse { 0%, 100% { scale: 1; } 50% { scale: 1.06; } }
 @keyframes cm-shine-sweep { 0% { left: -100%; } 50%, 100% { left: 100%; } }
 @media (prefers-reduced-motion: reduce) { [data-decoration-idle] { animation: none !important; } [data-decoration-idle] span { animation: none !important; } [data-decoration-idle="Ánh sáng quét"] span { left: 38% !important; transform: none !important; opacity: .75 !important; } [data-gift-shadow], [data-gift-hint], [data-decoration-motion] svg, [data-decoration-float] { animation: none !important; } [data-gift-hint] { opacity: 1; } }`;
 
