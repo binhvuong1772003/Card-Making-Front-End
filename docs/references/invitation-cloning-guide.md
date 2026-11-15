@@ -275,3 +275,10 @@ window.__all = window.__dump(-200, 7100);
 Bổ sung cho ảnh xoay hay lật: với mỗi `<img>` in thêm `offsetWidth x offsetHeight`, `rotate`, `scale` của nó và 3 cấp cha (xem mục 15 về `flipX`).
 
 Hai điều đã làm sai ở lần đầu và cần nhớ: (1) mọi y của bản đầu thiếu 104,5 và nhiều cỡ chữ to gấp rưỡi vì được ước lượng; (2) bản dựng bỏ sót hoa và lá cạnh panel, rồi đặt chúng sau panel.
+
+## 17. Nền trang, cột 900px và chữ giãn (Minimalism Nâu)
+
+- Gốc: cột 900px nền #fff7f3 phủ giấy `paper.webp` 40% (lặp dọc), ngoài cột trắng, mọi thứ cắt ở mép cột. Bản dựng: ảnh `page-paper.webp` (900x7120, trộn sẵn bằng sharp) + một `CardPanel` 900px chứa toàn bộ khối + nền trắng ở trang, chủ đề và `<main>` của demo.
+- Quét nền CSS: duyệt mọi phần tử (cả `::before`, `::after`) lấy `backgroundImage`, `backgroundSize`, `opacity`; ảnh nền không nằm trong danh sách `<img>`.
+- Giãn chữ: `lib/cards/blocks/text-style.ts` + `TextStyle` trong `card-player.tsx`. Số đo của mẫu: ngày âm 3,5px; tiêu đề mục 0,5-0,6px; "THE WEDDING OF" 2,6px; nhãn nhỏ 1,4px.
+- Đo màu bằng ảnh chụp: `computer screenshot save_to_disk`, rồi `sharp(...).extract(...)` lấy trung bình; so cùng vùng giữa bản gốc và bản dựng ở cùng cỡ cửa sổ.

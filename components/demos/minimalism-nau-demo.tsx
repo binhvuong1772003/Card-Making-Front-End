@@ -33,7 +33,7 @@ export function MinimalismNauDemo({ document }: { document: CardDocument }) {
   }
 
   return (
-    <main className="relative min-h-dvh overflow-hidden bg-[#fff7f3]">
+    <main className="relative min-h-dvh overflow-hidden bg-white">
       <CardPlayer document={document} mode="preview" historyKey={`demo:minimalism-nau:${phone ? "phone" : "desktop"}`} device={phone ? "phone" : undefined} immersive={!phone} />
       <nav aria-label="Tùy chọn mẫu thiệp" className="fixed bottom-5 right-5 z-[120] flex items-center gap-2 rounded-full border border-[#d6c7bc] bg-[#fffaf5] p-1.5 text-sm text-[#563d35] shadow-lg">
         <button type="button" onClick={() => setPhone(value => !value)} className="rounded-full px-3 py-2 font-medium hover:bg-[#f4eadd] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#563d35]">

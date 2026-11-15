@@ -2,6 +2,7 @@
 
 import { useAutoScroll } from "./use-auto-scroll";
 import { parallaxCss } from "@/lib/cards/blocks/parallax";
+import { textStyleCss } from "@/lib/cards/blocks/text-style";
 import type { JsonValue, TreeNode } from "@miditor/core";
 import { Render } from "@miditor/render";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type AnimationEvent } from "react";
@@ -50,6 +51,12 @@ const hasNode = (node: TreeNode, id: string): boolean => node.id === id || node.
 // CSS của "Khi mở thiệp" cho một trang; không có hiệu ứng nào thì không vẽ gì.
 function OpenEffectStyle({ root }: { root: TreeNode }) {
   const css = useMemo(() => openCss(root), [root]);
+  return css ? <style>{css}</style> : null;
+}
+
+// Giãn chữ, chiều cao dòng, độ đậm và bóng của khối Chữ (Miditor chưa vẽ các thuộc tính này): một luật CSS cho mỗi khối có đặt chúng.
+function TextStyle({ root }: { root: TreeNode }) {
+  const css = useMemo(() => textStyleCss(root), [root]);
   return css ? <style>{css}</style> : null;
 }
 
@@ -389,6 +396,7 @@ function Player({ document, mode, historyKey, device, metadata, immersive = fals
     >
       {layer !== "popup" && <OpenEffectStyle root={page.data.root} />}
       {layer === "current" && !embedded && <ParallaxStyle root={page.data.root} active />}
+      {layer === "current" && <TextStyle root={page.data.root} />}
       {layer !== "outgoing" && <PointerStyle ids={Object.keys(page.interactions)} />}
       <Render
         data={page.data}

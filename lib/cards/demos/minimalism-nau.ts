@@ -78,6 +78,9 @@ const panel = (id: string, rect: Rect, radius: number, asset: string) => {
   art(`${id}-paper`, "", [rect[0], rect[1], rect[2], rect[3]], { src: `${root}/panel-${asset}.webp`, fit: "cover", phone: [8, Math.round(rect[1] * 0.86), 359, Math.round(rect[3] * 0.82)] });
 };
 
+// Nền cả cột 900px: màu #fff7f3 phủ ảnh giấy 40% (gốc là lớp phủ giấy lặp theo chiều dọc), đã trộn sẵn thành một ảnh cao 7120px.
+art("page-paper", "", [0, 0, 900, 7120], { src: `${root}/page-paper.webp`, fit: "cover", phone: [0, 0, 375, 6200] });
+
 // Lớp nền chung: lá và nhà nền hoà vào trang (gốc nhân màu, độ mờ 8-12%).
 art("leaf-paper-backdrop", "leaf-background", [-215, Y(-82), 467, 1328], { opacity: 12, float: true, phone: [-50, 5, 230, 850] });
 art("house-paper-backdrop", "house-background", [-134, Y(214), 1167, 1151], { opacity: 8, phone: [-60, 260, 490, 730] });
@@ -254,10 +257,25 @@ text("gift-open-hint", "Nhấn để mở", [GIFT_LEFT + 95 - 35, GIFT_TOP + 264
 tc("footer-brand", "♡ cardmaking.com", 450, Y(6881), 160, 16, { size: 12, font: "system-ui, sans-serif" });
 tc("thank-you", "Sự hiện diện của quý khách là niềm vui của gia đình chúng tôi!", 450, Y(6821), 520, 20, { size: 13 });
 
+function column(): FreeNode {
+  const node = newNode(registry, "CardPanel", "page-column", { w: 900, h: 7120 }, { props: {} }) as FreeNode;
+  node.position = { mode: "free", x: { anchor: "center", offset: 0 }, y: { anchor: "start", offset: 0 } };
+  node.size = { w: { kind: "px", v: 900 }, h: { kind: "px", v: 7120 } };
+  node.phone = { x: { anchor: "center", offset: 0 }, y: { anchor: "start", offset: 0 }, w: { kind: "px", v: 375 }, h: { kind: "px", v: 6200 }, rotation: 0 };
+  const styles = node.styles as Record<string, unknown>;
+  delete styles.background;
+  delete styles.borderWidth;
+  delete styles.borderColor;
+  node.styles = { ...node.styles, borderRadius: 0 };
+  node.children = nodes;
+  return node;
+}
+
 const pageData: PageData = {
   ...emptyPage(),
-  root: nameLayers({ ...emptyPage().root, styles: { background: paper, minHeight: 7120, phoneMinHeight: 6200 }, children: nodes }),
-  theme: { colors: { primary: dark, secondary: ink, paper }, fonts: { body: bodyFont, heading: titleFont } },
+  // Mọi khối nằm trong một khung 900px cắt phần tràn (gốc: cột 900px overflow hidden trên nền trắng), nên lá, nhà và ảnh băng không lấn ra ngoài cột.
+  root: nameLayers({ ...emptyPage().root, styles: { background: "#ffffff", minHeight: 7120, phoneMinHeight: 6200 }, children: [column()] }),
+  theme: { colors: { primary: dark, secondary: ink, paper: "#ffffff" }, fonts: { body: bodyFont, heading: titleFont } },
   meta: { title: "Minimalism Nâu · Nguyễn Hoàng Nam & Trần Thảo Vy", description: "Thiệp cưới phong cách Minimalism Nâu." },
 };
 
