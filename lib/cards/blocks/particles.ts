@@ -3,7 +3,7 @@ import { BURST_PALETTE_NAMES } from "./burst";
 
 // Khối "Hạt trôi": các hạt nhỏ bay chậm từ dưới lên trong khung của khối (như ô xanh ở màn bìa thiệp Song Hỷ).
 // Số đo lấy từ trang mẫu: mỗi hạt chạy 18-26 giây, lệch ngang tối đa ~20px, xoay tối đa ~8 độ, độ mờ 0 -> 0,45 -> 0,55 -> 0,35 -> 0.
-export const PARTICLE_SHAPES = ["Vuông", "Tròn", "Tim", "Cánh hoa", "Thoi", "Sao", "Chữ"] as const;
+export const PARTICLE_SHAPES = ["Vuông", "Tròn", "Tim", "Cánh hoa", "Thoi", "Sao", "Lá", "Chữ"] as const;
 export const PARTICLE_DIRECTIONS = ["Bay lên", "Rơi xuống"] as const;
 /** Một màu (ô Màu) hoặc mỗi hạt một màu lấy từ bảng màu của Pháo. */
 export const PARTICLE_PALETTES = ["Một màu", ...BURST_PALETTE_NAMES] as const;

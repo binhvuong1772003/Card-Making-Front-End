@@ -20,6 +20,9 @@ export type ParticlesViewProps = {
 
 const HEART_MASK = `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></svg>')}")`;
 
+// Chiếc lá của mẫu Hoa Mộc Xanh (viewBox 24x24); hạt hình Lá còn xoay trọn một vòng khi rơi (nguồn: ambient-fall, 0 -> 180 -> 360 độ).
+const LEAF_MASK = `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>')}")`;
+
 // Cắt hạt theo hình; Vuông không cắt gì.
 export function particleCut(shape: ParticleShape): CSSProperties {
   switch (shape) {
@@ -28,6 +31,7 @@ export function particleCut(shape: ParticleShape): CSSProperties {
     case "Thoi": return { clipPath: "polygon(50% 0, 100% 50%, 50% 100%, 0 50%)" };
     case "Sao": return { clipPath: "polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)" };
     case "Tim": return { WebkitMaskImage: HEART_MASK, maskImage: HEART_MASK, WebkitMaskSize: "contain", maskSize: "contain", WebkitMaskRepeat: "no-repeat", maskRepeat: "no-repeat", WebkitMaskPosition: "center", maskPosition: "center" };
+    case "Lá": return { WebkitMaskImage: LEAF_MASK, maskImage: LEAF_MASK, WebkitMaskSize: "contain", maskSize: "contain", WebkitMaskRepeat: "no-repeat", maskRepeat: "no-repeat", WebkitMaskPosition: "center", maskPosition: "center" };
     default: return {};
   }
 }
@@ -40,14 +44,14 @@ const KEYFRAMES = `
   12% { opacity: calc(var(--cm-o) * 0.82); }
   55% { transform: translate(var(--cm-dx), calc(-0.46 * (100cqh + 80px) + 80px)) rotate(var(--cm-rot)); opacity: var(--cm-o); }
   92% { opacity: calc(var(--cm-o) * 0.64); }
-  100% { transform: translate(0, calc(-100cqh - 80px)); opacity: 0; }
+  100% { transform: translate(0, calc(-100cqh - 80px)) rotate(var(--cm-end, 0deg)); opacity: 0; }
 }
 @keyframes cm-particles-fall {
   0% { transform: translate(0, -80px) rotate(0deg); opacity: 0; }
   12% { opacity: calc(var(--cm-o) * 0.82); }
   55% { transform: translate(var(--cm-dx), calc(0.46 * (100cqh + 80px) - 80px)) rotate(var(--cm-rot)); opacity: var(--cm-o); }
   92% { opacity: calc(var(--cm-o) * 0.64); }
-  100% { transform: translate(0, calc(100cqh + 80px)); opacity: 0; }
+  100% { transform: translate(0, calc(100cqh + 80px)) rotate(var(--cm-end, 0deg)); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   [data-cm-particle] { animation: none !important; opacity: calc(var(--cm-o) * 0.6) !important; transform: translateY(calc(-1 * var(--cm-rest))) !important; }
@@ -73,7 +77,8 @@ export function ParticlesView({ shape, color, count, size, speed, opacity, drift
           ...(glyph ? { color: tint, fontSize: side, lineHeight: 1, fontWeight: 300, textShadow: `0 0 10px ${tint}` } : { width: side, height: side, background: tint }),
           "--cm-o": ((opacity / 100) * 0.55 * 2 * particle.fade).toFixed(3),
           "--cm-dx": `${(particle.sway * drift).toFixed(1)}px`,
-          "--cm-rot": `${(particle.turn * 8).toFixed(1)}deg`,
+          "--cm-rot": `${shape === "Lá" ? 180 : (particle.turn * 8).toFixed(1)}deg`,
+          "--cm-end": shape === "Lá" ? "360deg" : "0deg",
           "--cm-rest": `${Math.round(particle.left * 4) * (falling ? -1 : 1)}px`,
           animation: `cm-particles-${falling ? "fall" : "rise"} ${(particle.duration / rate).toFixed(2)}s ease-in-out ${(particle.delay / rate).toFixed(2)}s infinite`,
           ...cut,
