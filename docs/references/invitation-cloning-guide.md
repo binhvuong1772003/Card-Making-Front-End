@@ -58,7 +58,7 @@ Trước khi ghép, map từng element nguồn sang loại khối và ghi đư�
 | Panel, nền màu, đường kẻ, chấm màu | Shape/panel hoặc preset có thuộc tính chỉnh được | Đổi màu, kích thước, bo góc, bóng và thứ tự lớp |
 | Ảnh của người dùng, ảnh trong album/khung | Image, PhotoFrame, Album | Thay từng ảnh, crop và chỉnh khung |
 | Hoa, biểu tượng, texture, phong bì trang trí | Decoration từ catalog | Thêm, di chuyển, xoay, opacity; bật/tắt chuyển động; đổi màu với asset hỗ trợ |
-| Lịch, bản đồ, biểu mẫu | Thành phần tương tác sẵn có | Sửa ngày, địa chỉ, câu hỏi và nội dung; dùng được khi xuất bản |
+| Lịch, bản đồ, biểu mẫu | Thành phần tương tác sẵn có | Sửa ngày, địa chỉ, câu hỏi và nội dung; dùng được khi xuất bản. Form cần điều khiển riêng cho màu nút, màu chữ input và màu viền input khi nguồn dùng màu khác nhau |
 | Nút mở thiệp/quà mừng | Phần hiển thị + hành động chuyển trang/mở popup | Chọn trang đích và hiệu ứng bằng giao diện |
 
 Artwork trang trí có thể là một entity cố định. Nhưng chữ, hình tròn nền, artwork và bóng cần tách thành các khối hoặc preset có thuộc tính tương ứng nếu người dùng phải chỉnh riêng chúng. Không gộp cả form, chữ, nền và hoa thành một ảnh.
@@ -78,6 +78,9 @@ Làm từ ngoài vào trong: nền trang → cột nội dung → panel → ch�
 - Flower cần đúng file, kích thước, offset, góc xoay, lật, opacity và phần bị cắt ở mép panel; thay một trong các giá trị đó có thể đổi hẳn cảm giác của cụm hoa.
 - Kiểm tra font đang render thay vì chỉ đọc tên font trong CSS. Thêm font vào kho font và bảo đảm nó tải trong editor, preview và public page. Font hệ thống và font fallback có thể khác nét/cỡ; ghi lại nếu chưa khớp.
 - Giữ thống nhất tọa độ trang/cột; không trộn vị trí tuyệt đối theo viewport với offset theo tâm canvas. Điều chỉnh theo số đo, không thêm hàng loạt CSS `!important` theo ID để bù sai tài liệu.
+- Đo cả hộp node và vùng chữ thực tế. Hộp Text quá hẹp làm câu tự xuống dòng; hộp quá thấp hoặc line-height sai làm chữ tràn và chồng node cạnh bên. Số trong JSON có vẻ hợp lý không thay screenshot ở kích thước render thật.
+- Với bố cục ngày/giờ hai cột, đặt số ngày về một phía divider, tháng/năm phía kia; kiểm tra cùng lúc thứ, ngày, tháng, năm và giờ. Không suy ra vị trí chỉ từ tâm của panel.
+- Form cần tách màu nhấn của nút khỏi màu chữ và viền input. Nếu mẫu không có khung ngoài, bỏ viền mặc định của node Form; không tô input theo màu nút chỉ vì cả hai cùng nằm trong một component.
 
 ## 6. Dựng hiệu ứng theo đúng phần tử và thời gian
 
@@ -106,6 +109,18 @@ Số đo đã dùng:
 | Con dấu thở | `seal-pulse` 2s ease-in-out infinite; scale 1 → 1.06 → 1; bóng `0 4px 20px` → `0 6px 35px`, màu `#e8f0e4` 50% | Decoration `idleEffect: "Thở nhẹ"`, scale 1 → 1.06 |
 | Con dấu tim | Dựng riêng, nhịp hai lần phình rồi nghỉ (không có trên nguồn) | `idleEffect: "Đập"`, 1.3s |
 
+### Hiệu ứng khi rê chuột (hộp quà Song Hỷ Xanh)
+
+Trên nguồn, cả hộp quà là một `button.group`; mọi hiệu ứng nằm trong luật `.group:hover .igb-*`. Cách đo: lọc `styleSheets` theo selector chứa `hover` và `igb`, đọc `x.style.animation` của từng luật và `@keyframes` tương ứng (đọc từng nhóm nhỏ, kết quả dài bị cắt). Bản local: các khối Decoration cùng `hoverGroup` phản ứng cùng lúc khi rê vào bất kỳ khối nào (CSS `body:has([data-cm-hg="nhóm"]:hover)`), nên người dùng tự ghép được ở bất kỳ mẫu nào.
+
+| Phần | Nguồn | Khối local |
+| --- | --- | --- |
+| Hộp chính | `igbBoxPop` 0,7s `cubic-bezier(.34,1.56,.64,1)` 1 lần, giữ trạng thái cuối, gốc xoay ở đáy: 0% → 45% (lên 14px, phóng 1,08, nghiêng -3°) → 100% (lên 8px, phóng 1,05) | `hoverEffect: "Nảy lên"`, `hoverTime: 0.7` |
+| 7 vật nhỏ | `igbDecorFlyUp1-7`: 55% bay nửa đường, 80% bay hết và mờ, 81% về chỗ cũ, 100% hiện lại; lặp; mỗi vật có độ cao 55-80px, lệch ngang -14..14px, 1,3-1,9s, trễ 0-0,45s | `hoverEffect: "Bay lên rồi hiện lại"` kèm `hoverRise`, `hoverSway`, `hoverTime`, `hoverDelay` |
+| 8 mảnh giấy | `igbConfettiFly1-8` 0,9-1,2s ease-out lặp, trễ 0,05-0,55s; mỗi mảnh bay 88-170px lên, lệch ngang -55..58px, xoay 240-620°, mờ 0 → 1 (15%) → 0 | `hoverEffect: "Pháo giấy"`, một khối đặt ở mép trên hộp |
+
+Chưa khớp: trên nguồn các vật nhỏ dịch theo `translate` ngoài phép xoay, bản local dịch bên trong khối đã xoay nên hướng lệch đi vài độ; mảnh giấy thứ 6 có màu không đọc được trên nguồn nên dùng vàng `#facc15`. Hộp "Hộp quà" cũ (`motion: true`, Hoa Mộc Xanh) vẫn dùng hiệu ứng riêng, khác nguồn này.
+
 Ghi cả hành vi khi giảm chuyển động của hệ thống. Nếu chưa đo được keyframes nguồn, đánh dấu hiệu ứng đang gần đúng; không tuyên bố giống hoàn toàn.
 
 ## 7. Nội dung thay đổi phải tự co giãn
@@ -126,6 +141,8 @@ Các nơi sau có thể lấy dữ liệu khác nhau:
 | Editor → xem trước → xuất bản | Cùng dữ liệu sau khi lưu; cùng font, nền, độ rộng, trang bắt đầu và tương tác |
 
 Lần sửa “không thấy khác” phải kiểm tra URL, template ID, snapshot, revision và đường tải asset trước khi tiếp tục chỉnh CSS. Khi sửa generator, cập nhật file được sinh; khi cập nhật template, cập nhật đúng snapshot được gallery sử dụng. Không ghi đè bản thiệp người dùng đã chỉnh chỉ để cập nhật mẫu thư viện.
+
+Sau mỗi lần đổi vị trí hoặc kiểu chữ, render lại route demo và đọc computed style/rect của node vừa sửa cùng các node sát cạnh. Đối chiếu `fontSize`, `fontWeight`, `lineHeight`, `letterSpacing`, màu, bounding box và số dòng thực tế. Sau khi cập nhật MongoDB, xác nhận đúng homepage popup, preview hoặc route đang xem; lệnh sinh JSON, typecheck và lưu snapshot đều chưa chứng minh hình thức đã đúng.
 
 Thực hiện một lượt đối chiếu desktop/mobile theo cùng viewport/zoom/trạng thái với nguồn, ghi sai khác và sửa cùng đợt; sau đó xác nhận phần đã sửa. Kiểm tra bìa, mở thiệp, hover, popup, form và phần cuối trang. Không dùng phần trăm “giống” khi chưa có đối chiếu; nói rõ phần đã kiểm tra và phần còn thiếu.
 
