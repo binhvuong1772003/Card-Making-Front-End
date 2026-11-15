@@ -49,7 +49,7 @@ describe("idle effects of a Decoration", () => {
 
   it("sweeps a 23% wide light stripe every 3s inside the rounded box, with or without a picture", () => {
     const out = view("Ánh sáng quét", "");
-    expect(out).toContain("cm-shine-sweep 3s linear infinite");
+    expect(out).toContain("cm-shine-sweep 3s ease-in-out infinite");
     expect(out).toContain("width:23%");
     expect(out).toContain("border-radius:24px");
     expect(out).not.toContain("<img");

@@ -12,10 +12,11 @@ const GIFT_CSS = `
 @keyframes cm-decoration-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -4%; } }
 @keyframes cm-heartbeat { 0%, 70%, 100% { scale: 1; } 14% { scale: 1.16; } 28% { scale: 1; } 42% { scale: 1.1; } }
 @keyframes cm-heartbeat-glow { 0%, 70%, 100% { filter: drop-shadow(0 4px 12px rgb(81 20 25 / 45%)); } 14% { filter: drop-shadow(0 6px 26px rgb(81 20 25 / 70%)); } 42% { filter: drop-shadow(0 5px 20px rgb(81 20 25 / 60%)); } }
+@keyframes cm-soft-pulse { 0%, 100% { scale: 1; } 50% { scale: 1.025; } }
 @keyframes cm-shine-sweep { 0% { left: -100%; } 50%, 100% { left: 100%; } }
-@media (prefers-reduced-motion: reduce) { [data-decoration-idle] { animation: none !important; } [data-decoration-idle] span { animation: none !important; } [data-gift-shadow], [data-gift-hint], [data-decoration-motion] svg, [data-decoration-float] { animation: none !important; } [data-gift-hint] { opacity: 1; } }`;
+@media (prefers-reduced-motion: reduce) { [data-decoration-idle] { animation: none !important; } [data-decoration-idle] span { animation: none !important; } [data-decoration-idle="Ánh sáng quét"] span { left: 38% !important; transform: none !important; opacity: .75 !important; } [data-gift-shadow], [data-gift-hint], [data-decoration-motion] svg, [data-decoration-float] { animation: none !important; } [data-gift-hint] { opacity: 1; } }`;
 
-export function DecorationView({ src, alt, fit, motion, motionStyle = "box", floatMotion = false, opening = false, idle = "Không", shineRadius = 24 }: { src: string; alt: string; fit: string; motion: boolean; motionStyle?: "box" | "envelope"; floatMotion?: boolean; opening?: boolean; idle?: "Không" | "Đập" | "Ánh sáng quét"; shineRadius?: number }) {
+export function DecorationView({ src, alt, fit, motion, motionStyle = "box", floatMotion = false, opening = false, idle = "Không", shineRadius = 24 }: { src: string; alt: string; fit: string; motion: boolean; motionStyle?: "box" | "envelope"; floatMotion?: boolean; opening?: boolean; idle?: "Không" | "Đập" | "Thở nhẹ" | "Ánh sáng quét"; shineRadius?: number }) {
   const [hovered, setHovered] = useState(false);
   const imageRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -29,14 +30,16 @@ export function DecorationView({ src, alt, fit, motion, motionStyle = "box", flo
     return () => animation.cancel();
   }, [motion, opening]);
 
-  // Nhịp tim: hai nhịp phình (1,16 rồi 1,1) trong 1,3s rồi nghỉ, kèm quầng bóng đập theo. Vệt sáng: 32/140 bề rộng nút, chạy nửa đầu của 3s rồi nghỉ (số đo từ nút Mở thiệp của trang mẫu).
-  if (idle !== "Không" && !motion) return <div data-decoration-idle={idle} style={{ position: "relative", width: "100%", height: "100%", overflow: idle === "Ánh sáng quét" ? "hidden" : undefined, borderRadius: idle === "Ánh sáng quét" ? shineRadius : undefined, pointerEvents: "none" }}>
+  // Nhịp tim: hai nhịp phình (1,16 rồi 1,1) trong 1,3s rồi nghỉ, kèm quầng bóng đập theo. Vệt sáng: 32/140 bề rộng nút, chạy nửa đầu của 3s (ease-in-out, trắng 40%) rồi nghỉ (số đo từ nút Mở thiệp của trang mẫu).
+  if (idle !== "Không" && !motion) return <div data-decoration-idle={idle} style={{ position: "relative", width: "100%", height: "100%", overflow: idle === "Ánh sáng quét" ? "hidden" : undefined, borderRadius: idle === "Ánh sáng quét" ? shineRadius : undefined, animation: idle === "Thở nhẹ" ? "cm-soft-pulse 2s ease-in-out infinite" : undefined, pointerEvents: "none" }}>
     <style>{GIFT_CSS}</style>
     {idle === "Đập"
       ? src ? <img src={src} alt={alt} draggable={false} style={{ display: "block", width: "100%", height: "100%", objectFit: fit === "cover" ? "cover" : "contain", transformOrigin: "50% 50%", animation: "cm-heartbeat 1.3s ease-in-out infinite, cm-heartbeat-glow 1.3s ease-in-out infinite" }} /> : null
-      : <>
+      : idle === "Thở nhẹ"
+        ? src ? <img src={src} alt={alt} draggable={false} style={{ display: "block", width: "100%", height: "100%", objectFit: fit === "cover" ? "cover" : "contain" }} /> : null
+        : <>
         {src ? <img src={src} alt={alt} draggable={false} style={{ display: "block", width: "100%", height: "100%", objectFit: fit === "cover" ? "cover" : "contain" }} /> : null}
-        <span aria-hidden="true" style={{ position: "absolute", top: 0, height: "100%", width: "23%", left: "-100%", background: "linear-gradient(90deg, rgb(0 0 0 / 0%), rgb(255 255 255 / 40%), rgb(0 0 0 / 0%))", animation: "cm-shine-sweep 3s linear infinite" }} />
+        <span aria-hidden="true" style={{ position: "absolute", top: 0, height: "100%", width: "23%", left: "-100%", background: "linear-gradient(90deg, transparent, rgb(255 255 255 / 40%), transparent)", animation: "cm-shine-sweep 3s ease-in-out infinite" }} />
       </>}
   </div>;
 
