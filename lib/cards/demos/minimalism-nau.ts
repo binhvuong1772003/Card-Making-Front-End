@@ -93,12 +93,12 @@ nodes[nodes.length - 1]!.props = { ...nodes[nodes.length - 1]!.props, italic: tr
 add("Image", "hero-photo", [250, 249, 374, 569], { src: `${root}/photo-1.webp`, alt: "Ảnh cưới của Hoàng Nam và Thảo Vy", fit: "cover" }, { background: "#ffffff" }, -4.78, [58, 155, 194, 295]);
 art("hero-avatar-frame", "frame-avatar", [190, Y(86), 520, 739], { phone: [27, 112, 270, 384] });
 art("hero-flower-left", "flower2-decoration", [164, Y(449), 177, 411], { float: true, phone: [9, 346, 104, 242] });
-// Hoa và lá cạnh panel đầu (đọc tâm và góc xoay từ DOM: hoa lật ngang bên phải, lá xoay 10,57 độ bên trái).
-art("details-flower-right", "flower2-decoration", [646, 1683, 179, 416], { float: true, flipX: true, phone: [290, 1330, 100, 238] });
-art("details-leaf-left", "leaf-background", [80, 1378, 157, 446], { rotation: 10.57, phone: [-5, 1040, 90, 255] });
 
 // Thông tin lễ cưới: panel #f6eadd bo 13, đổ bóng 4px 4px 8px.
 panel("details", [170, Y(953), 560, 992], 13, "details");
+// Hoa và lá cạnh panel đầu (nằm trên panel (z cao hơn), đọc tâm và góc xoay từ DOM: hoa lật ngang bên phải, lá xoay 10,57 độ bên trái).
+art("details-flower-right", "flower2-decoration", [646, 1683, 179, 416], { float: true, flipX: true, phone: [290, 1330, 100, 238] });
+art("details-leaf-left", "leaf-background", [80, 1378, 157, 446], { rotation: 10.57, phone: [-5, 1040, 90, 255] });
 tc("families-heading", "THÔNG TIN LỄ CƯỚI", 450, Y(993), 260, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.5 });
 const family = (side: "groom" | "bride", cx: number, father: string, mother: string, address: string) => {
   tc(`${side}-family-label`, "Ông Bà", cx, Y(1045), 80, 14, { size: 12, color: MUTED });
@@ -176,10 +176,10 @@ add("DressCode", "dress-code", [280, Y(4223), 340, 125], {
   heading: "DRESS CODE", subtitle: "Trang phục dự tiệc", headingColor: ink, subtitleColor: MUTED,
   swatchShape: "circle", swatchSize: 48, swatchGap: 24, colors: ["#001a08", "#e1bc7c", "#3b5d3b", "#f5e6c8"],
 }, {}, 0, [18, 3660, 339, 150]);
-art("schedule-flower", "flower2-decoration", [674, 4452, 151, 351], { float: true, flipX: true, rotation: -6.94, phone: [296, 3730, 77, 195] });
 
 // Lịch trình: bốn mốc giờ canh phải đến x=410, biểu tượng bên trái, nhãn bên phải đường dọc có chấm.
 panel("schedule", [170, Y(4409), 560, 405], 10, "schedule");
+art("schedule-flower", "flower2-decoration", [674, 4452, 151, 351], { float: true, flipX: true, rotation: -6.94, phone: [296, 3730, 77, 195] });
 tc("schedule-heading", "LỊCH TRÌNH NGÀY CƯỚI", 450, Y(4449), 300, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
 shape("schedule-line", [450, Y(4503), 1, 262], "#7c6a60", { opacity: 40 }, "rectangle", [187, 3730, 1, 230]);
 const schedule = [
