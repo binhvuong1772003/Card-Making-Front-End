@@ -187,6 +187,30 @@ Rút từ lần dọn ngày 14/11/2026 (tham khảo tab Thành phần của Canv
 - Tên kệ ngắn, một hai chữ. Hình do phát hành sẵn nên đổi tên nhóm ở cả mã lẫn danh mục trên cơ sở dữ liệu cùng lúc, và sửa script nạp để lần nạp sau không trả lại tên cũ.
 - Khi clone một mẫu mới có vật trang trí động (hộp quà, bao lì xì, con dấu), thêm nó thành mẫu động trong tab Trang trí để người dùng kéo một lần là đủ hiệu ứng.
 
+## 13. Bảng Lớp gọn: đặt tên và gom nhóm (15/11/2026)
+
+Mẫu dựng xong mà bảng Lớp là một danh sách dài toàn "Trang trí", "Hình khối" thì người dùng không tìm được gì. Mỗi mẫu phải được sắp lớp trước khi gọi là hoàn thành.
+
+- **Tên lớp.** Mọi khối riêng của CardMaking có ô "Tên lớp" (thuộc tính `layerName`, nhóm "Lớp"); bảng Lớp hiện tên này thay cho tên loại khối (Miditor: `ComponentDef.nameProp`, nhánh `feat/layer-names`). Khối Chữ không cần tên vì bảng Lớp đã hiện chính chữ. Tên lấy từ mã khối bằng `layerLabel` (`lib/cards/layers.ts`: "gift-mini-3" thành "Quà nhỏ 3"); đặt mã khối có nghĩa ngay từ bộ sinh thì tên tự có.
+- **Nhóm.** `groupSections` (cùng tệp) gom từng đoạn liền nhau của một mục (Đầu trang, Thông tin gia đình, Lễ cưới, Tiệc cưới, Lịch, Địa điểm, Dress code, Lịch trình, Sổ lưu bút, Hộp quà mừng) vào một khối Nhóm có tên, dùng `groupNodes` của Miditor. Chỉ gom khi từ 3 khối trở lên. Khối Nhóm có ô "Tên lớp" riêng (`name`).
+- **Quy trình.** Chạy các bộ sinh (`make-*.ts`) rồi `npx tsx scripts/tidy-layers.ts`: nó đặt tên và gom nhóm cho bìa và các trang trong `public/demo/`, chạy lại nhiều lần vẫn ra cùng kết quả. Sau đó cập nhật mẫu trong cơ sở dữ liệu.
+- **Bẫy.**
+  - `groupNodes` **bỏ số đo điện thoại riêng** (`phone`) của các khối được gom. Mẫu Hoa Mộc Xanh có số đo điện thoại cho từng khối nên chỉ đặt tên, không gom.
+  - CSS "sổ lưu bút tự co" của Minimalism đặt `top` theo toạ độ trang cho `gift-*`, `footer-*`, `bg-*`; khối trong nhóm có toạ độ theo nhóm nên các khối này phải ở ngoài nhóm (đã loại trong `tidy-layers.ts`).
+  - Hiệu ứng khi mở, rê chuột theo nhóm, lướt và bấm đều tìm khối theo mã nên vẫn chạy bên trong nhóm (đã thử: bấm hộp quà trong nhóm mở được popup, vị trí các khối không đổi sau khi gom).
+  - Tên lớp phải là chuỗi không rỗng; khối `Button` và `Container` của Miditor không có ô này nên bỏ qua.
+
+## 14. Các mẫu đã dựng xong và cách sinh lại
+
+| Mẫu | Nguồn | Bìa | Trang trong | Popup | Ghi chú |
+| --- | --- | --- | --- | --- | --- |
+| Song Hỷ Xanh | `song-hy-xanh/demo` | `make-song-hy-covers.ts` (`xanh`) | `make-song-hy-xanh-pages.ts` | quà mừng (QR từ nguồn), RSVP | demo `/demo/song-hy-xanh` |
+| Song Hỷ Đỏ | `song-hy-do/demo` | `make-song-hy-covers.ts` (`do`) | `make-song-hy-do-pages.ts` | quà mừng, RSVP | demo `/demo/song-hy-do`; hộp quà 7 vật nhỏ, sao chớp, pháo giấy |
+| Minimalism Đỏ Đậm | `minimalism-do-dam/demo` | `make-minimalism-pages.ts` + covers (`mdd`) | `make-minimalism-pages.ts` | quà mừng, RSVP | cặp bao lì xì (một khối hai lớp); sổ lưu bút tự co |
+| Hoa Mộc Xanh | `hoa-moc-xanh/demo` | `make-song-hy-covers.ts` (`hmx`, lá rơi, pháo lá) | `lib/cards/demos/hoa-moc-xanh.ts` (số đo trong bảng `MEASURED`) | `make-hoa-moc-xanh-gift.ts` | lịch trái tim, album, trôi theo cuộn; chỉ đặt tên lớp |
+
+Mỗi mẫu xong khi đủ: hình (ảnh lấy từ element), chữ và vị trí đo từ DOM, hiệu ứng mở và rê chuột, popup, bảng Lớp đã sắp, mẫu trong cơ sở dữ liệu đã cập nhật, và các phần chưa khớp được ghi rõ.
+
 ## Mẫu ghi nhận cho một section mới
 
 ```text

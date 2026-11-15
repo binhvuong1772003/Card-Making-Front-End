@@ -2,6 +2,7 @@ import { builtInRegistry, emptyPage, newNode, type FreeNode, type JsonValue, typ
 import { cardDefinitions } from "../blocks/definitions";
 import { formPresets } from "../blocks/form-presets";
 import type { CardDocument, CardPage } from "../document";
+import { nameLayers } from "../layers";
 import coverJson from "../../../public/demo/song-hy/cover-hmx.json";
 import giftJson from "../../../public/demo/hoa-moc-xanh/gift-details.json";
 
@@ -212,6 +213,14 @@ const MEASURED: Record<string, Measured> = {
   ...Object.fromEntries([0, 1, 2, 3, 4].flatMap((i) => [[`timeline-time-${i}`, [220, 4863 + 68 * i, 190, 17, 300, 0.425]], [`timeline-label-${i}`, [490, [4865, 4933, 5001, 5070, 5138][i]!, 200, 19, 500, 0]]])),
   ...Object.fromEntries([[5644, 0], [5741, 1], [5837, 2], [5934, 3], [6031, 4], [6128, 5]].flatMap(([y, i]) => [[`wish-${i! + 1}-name`, [167, y!, 360, 14, 600, 0]], [`wish-${i! + 1}-date`, [631, y!, 94, 12, 300, 0]], [`wish-${i! + 1}-message`, [167, y! + 28, 558, 14, 300, 0]]])),
 };
+// Trôi theo cuộn đo từ trang mẫu (‰ quãng cuộn, [ngang, dọc]) bằng hai lần đo ở cách nhau 1000px cuộn; "flower-fixed-left" đứng yên.
+const PARALLAX: Record<string, [number, number]> = {"flower-hero-main": [1, 100], "flower-hero-left": [0, 130], "flower-right-upper": [-37, -71], "flower-left-upper": [-82, -73], "flower-left-album": [0, 50], "flower-right-middle": [-51, -32], "flower-right-ceremony": [24, -32], "flower-left-middle": [-55, -43], "flower-left-lower": [-2, -29], "flower-right-lower": [24, -32], "flower-bottom-right": [-59, -68]};
+function applyParallax() {
+  for (const node of children) {
+    const p = PARALLAX[node.id];
+    if (p) node.props = { ...node.props, parallaxX: p[0], parallaxY: p[1] };
+  }
+}
 function applyMeasured() {
   for (const node of children) {
     const m = MEASURED[node.id];
@@ -228,6 +237,7 @@ function applyMeasured() {
   }
 }
 applyMeasured();
+applyParallax();
 
 const paperColumn = newNode(registry, "CardPanel", "paper-column", { w: 960, h: 6900 }) as FreeNode;
 paperColumn.position = { mode: "free", x: { anchor: "center", offset: 0 }, y: { anchor: "start", offset: 0 } };
@@ -238,7 +248,8 @@ paperColumn.children = children;
 
 export const hoaMocXanhDemo: PageData = {
   ...emptyPage(),
-  root: { ...emptyPage().root, styles: { background: "#ffffff", minHeight: 6900, phoneMinHeight: 7100 }, children: [paperColumn] },
+  // Bảng Lớp: khối không phải chữ mang tên đọc được. Không gom nhóm vì gom nhóm bỏ số đo điện thoại riêng của từng khối.
+  root: nameLayers({ ...emptyPage().root, styles: { background: "#ffffff", minHeight: 6900, phoneMinHeight: 7100 }, children: [paperColumn] }),
   theme: { colors: { primary: green, secondary: muted, paper }, fonts: { body: serif, heading: serif } },
   meta: { title: "Minh Quân & Thu Hà · Hoa Mộc Xanh", description: "Thiệp cưới Hoa Mộc Xanh, dựng bằng thành phần chỉnh sửa được của CardMaking." },
 };

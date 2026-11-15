@@ -1,6 +1,7 @@
 "use client";
 
 import { useAutoScroll } from "./use-auto-scroll";
+import { parallaxCss } from "@/lib/cards/blocks/parallax";
 import type { JsonValue, TreeNode } from "@miditor/core";
 import { Render } from "@miditor/render";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type AnimationEvent } from "react";
@@ -50,6 +51,28 @@ const hasNode = (node: TreeNode, id: string): boolean => node.id === id || node.
 function OpenEffectStyle({ root }: { root: TreeNode }) {
   const css = useMemo(() => openCss(root), [root]);
   return css ? <style>{css}</style> : null;
+}
+
+// Trôi theo cuộn: biến `--cm-scroll` (px đã cuộn) đặt trên <html> khi trang đang hiện có khối trôi; mỗi khối tự dịch theo luật CSS riêng.
+function ParallaxStyle({ root, active }: { root: TreeNode; active: boolean }) {
+  const css = useMemo(() => parallaxCss(root), [root]);
+  useEffect(() => {
+    if (!css || !active || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let frame: number | null = null;
+    const update = () => {
+      frame = null;
+      document.documentElement.style.setProperty("--cm-scroll", String(window.scrollY));
+    };
+    const onScroll = () => { if (frame === null) frame = requestAnimationFrame(update); };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame !== null) cancelAnimationFrame(frame);
+      document.documentElement.style.removeProperty("--cm-scroll");
+    };
+  }, [css, active]);
+  return css && active ? <style>{css}</style> : null;
 }
 
 // Khối nào có hành động bấm (chuyển trang, mở popup...) thì hiện con trỏ bàn tay khi rê vào, kể cả các lớp con của nó.
@@ -370,6 +393,7 @@ function Player({ document, mode, historyKey, device, metadata, immersive = fals
       onAnimationEnd={onAnimation}
     >
       {layer !== "popup" && <OpenEffectStyle root={page.data.root} />}
+      {layer === "current" && !embedded && <ParallaxStyle root={page.data.root} active />}
       {layer !== "outgoing" && <PointerStyle ids={Object.keys(page.interactions)} />}
       <Render
         data={page.data}

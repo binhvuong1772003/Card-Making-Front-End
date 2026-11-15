@@ -45,7 +45,15 @@ const raw: Record<string, ComponentDef> = {
 // Khối vẽ ở trang bìa mang thêm ô "Khi mở thiệp" (open-effect.ts); Image là khối có sẵn của Miditor, vốn đã ẩn khỏi thư viện.
 const withEffects = (type: string, def: ComponentDef): ComponentDef => ((OPEN_EFFECT_TYPES as readonly string[]).includes(type) ? withOpenEffect(def) : def);
 
-export const cardDefinitions: Record<string, ComponentDef> = Object.fromEntries(Object.entries(raw).map(([type, def]) => [type, withEffects(type, type === "Text" || type === "Shape" ? def : { ...def, hidden: true })]));
+// Mọi khối riêng mang ô "Tên lớp" (nhóm "Lớp"): tên hiện trong bảng Lớp thay cho tên loại khối, để thiệp nhiều khối Trang trí hay Hình khối vẫn tìm được từng cái.
+const withLayerName = (def: ComponentDef): ComponentDef => ({
+  ...def,
+  nameProp: "layerName",
+  defaultProps: { ...def.defaultProps, layerName: "" },
+  fields: { ...def.fields, layerName: { type: "text", label: "Tên lớp", maxLength: 60, group: "Lớp", help: "Tên hiện trong bảng Lớp thay cho tên loại khối, ví dụ \"Hoa góc trái\"." } },
+});
+
+export const cardDefinitions: Record<string, ComponentDef> = Object.fromEntries(Object.entries(raw).map(([type, def]) => [type, withLayerName(withEffects(type, type === "Text" || type === "Shape" || type === "CurvedText" ? def : { ...def, hidden: true }))]));
 
 // Thuộc tính đã bỏ khỏi từng loại khối. Thiệp đã lưu có thể còn giữ chúng; CMBE bỏ chúng khi kiểm trang (`retired-props.json` do `blocks:export` sinh).
 export const retiredProps: Record<string, readonly string[]> = {
