@@ -174,6 +174,10 @@ Không phải hiệu ứng nào cũng gắn vào một khối nhìn thấy. Khi 
 - Lỗi đỏ trong console của trình duyệt có thể là lỗi cũ lúc máy chủ dev đang nạp lại; tải lại trang rồi đọc console với `pattern` trước khi kết luận trang đang hỏng, và kiểm bằng `curl` mã trả về của vài đường dẫn.
 - Đổi định nghĩa khối thì chạy `npm run blocks:export` và commit cả hai repo; thêm thuộc tính mới mà quên bước này làm `definitions.test.ts` đỏ.
 
+**Không tự vẽ hình: lấy từ element.** Mọi hình của mẫu (ảnh hoa, biểu tượng, chiếc lá, trái tim con dấu, mã QR) phải lấy từ chính phần tử trên trang nguồn: `<img>` thì tải tệp (mục trên), `<svg>` thì đọc `viewBox` cùng `d` của `<path>` và màu `fill`, rồi đặt nguyên vào bản dựng (thu theo tỉ lệ của khung nguồn). Lần dựng đầu của con dấu tim Minimalism dùng trái tim tự vẽ và bị bạn bắt lỗi; đường dẫn đúng là `M12 21.35l-1.45-1.32C5.4 15.36 …` (Material, 24×24, hiển thị 28px trong vòng 56px). Hạt lá của Hoa Mộc Xanh cũng là một path 24×24 (`M17 8C8 10 5.9 16.17 …`), dùng chung cho hạt trôi và pháo.
+
+**Đo hiệu ứng lúc mở bằng `document.getAnimations()`.** Bấm "Mở thiệp" rồi lấy mẫu mỗi 60ms trong 2,5 giây: tên animation, phần tử đích, thời lượng và độ trễ cho biết trình tự (con dấu `seal-break` 0,5s, vòng `seal-ring` 0,6s, hoa nhân đôi `dragon-fly-forward` 1,2s, pháo `particle-burst` 1,4s từ 0,5s, thẻ `envelope-away` 0,8s). Hạt pháo biến mất sau 1,4s nên phải đọc nội dung chúng trong khoảng 0,7s đầu.
+
 ## 11. Thành phần và Trang trí: quy tắc tổ chức để người dùng tìm được
 
 Rút từ lần dọn ngày 14/11/2026 (tham khảo tab Thành phần của Canva): một tab, một ô tìm chung, kệ theo **loại**, chủ đề là chip lọc.
