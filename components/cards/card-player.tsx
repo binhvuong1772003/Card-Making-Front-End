@@ -1,5 +1,6 @@
 "use client";
 
+import { useAutoScroll } from "./use-auto-scroll";
 import type { JsonValue, TreeNode } from "@miditor/core";
 import { Render } from "@miditor/render";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type AnimationEvent } from "react";
@@ -51,6 +52,13 @@ function OpenEffectStyle({ root }: { root: TreeNode }) {
   return css ? <style>{css}</style> : null;
 }
 
+// Khối nào có hành động bấm (chuyển trang, mở popup...) thì hiện con trỏ bàn tay khi rê vào, kể cả các lớp con của nó.
+function PointerStyle({ ids }: { ids: string[] }) {
+  const safe = ids.filter((id) => /^[\w-]+$/.test(id));
+  if (!safe.length) return null;
+  return <style>{safe.map((id) => `[data-miditor-id="${id}"], [data-miditor-id="${id}"] * { cursor: pointer !important; }`).join("\n")}</style>;
+}
+
 export function CardPlayer(props: CardPlayerProps) {
   return <Player key={props.historyKey} {...props} />;
 }
@@ -67,6 +75,10 @@ function Player({ document, mode, historyKey, device, metadata, immersive = fals
   const coverHearts = hasNode(initialPage.data.root, "hero-card-background");
   const [motion, setMotion] = useState<Motion | null>(null);
   const [popupPage, setPopupPage] = useState<CardPage | null>(null);
+  // Tự lướt (bấm để cuộn, bấm lại để dừng) chỉ chạy ở trang thật, sau khi qua bìa, khi không có popup hay chuyển trang.
+  const interactiveIds = useMemo(() => new Set(Object.keys(currentPage.interactions)), [currentPage]);
+  const autoScroll = !embedded && !immersiveCover && !popupPage && !motion;
+  useAutoScroll({ enabled: autoScroll, interactiveIds });
   const [giftOpeningId, setGiftOpeningId] = useState<string | null>(null);
   const [openingNodeId, setOpeningNodeId] = useState<string | null>(null);
   // Trang bìa vừa chạy xong hiệu ứng mở: lớp "đi ra" của nó giữ nguyên trạng thái cuối thay vì hiện lại rồi mờ.
@@ -358,6 +370,7 @@ function Player({ document, mode, historyKey, device, metadata, immersive = fals
       onAnimationEnd={onAnimation}
     >
       {layer !== "popup" && <OpenEffectStyle root={page.data.root} />}
+      {layer !== "outgoing" && <PointerStyle ids={Object.keys(page.interactions)} />}
       <Render
         data={page.data}
         renderers={cardRenderers}
@@ -378,7 +391,7 @@ function Player({ document, mode, historyKey, device, metadata, immersive = fals
         data-auto-desktop={pageStageFloor(currentPage, "desktop", 960) > 0 ? "" : undefined}
         data-auto-phone={pageStageFloor(currentPage, "phone", 375) > 0 ? "" : undefined}
       >
-        <div ref={stageRef} className={styles.stage} data-immersive-cover={immersiveCover ? "" : undefined} style={immersiveCover && coverBackground ? { "--cover-bg": coverBackground } as React.CSSProperties : undefined}>
+        <div ref={stageRef} className={styles.stage} data-autoscroll={autoScroll ? "" : undefined} data-immersive-cover={immersiveCover ? "" : undefined} style={immersiveCover && coverBackground ? { "--cover-bg": coverBackground } as React.CSSProperties : undefined}>
           {immersiveCover && coverHearts && <div className={styles.coverHearts} aria-hidden="true">
             {[
               ["9%", "6%", "#a33b43", 18, "0s"], ["34%", "4%", "#a33b43", 21, "1.8s"], ["84%", "2%", "#c18b4c", 18, "3.1s"],

@@ -211,3 +211,7 @@
 @media (prefers-reduced-motion: reduce) {
   .page[data-layer] { animation: none !important; }
 }
+
+/* Tự lướt: con trỏ bàn tay khắp trang như thiệp mẫu (ô nhập chữ giữ con trỏ riêng). */
+.stage[data-autoscroll] .page, .stage[data-autoscroll] .page * { cursor: pointer !important; }
+.stage[data-autoscroll] .page :is(input, textarea, select) { cursor: text !important; }
