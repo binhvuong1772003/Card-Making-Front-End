@@ -124,7 +124,7 @@ tc("ceremony-date-day", "03", 447, Y(1749), 70, 60, { size: 40 });
 tc("ceremony-bar-2", "|", 497, Y(1767), 20, 24, { size: 24, opacity: 40 });
 tc("ceremony-month", "THÁNG 01", 566, Y(1770), 120, 18, { size: 16 });
 tc("ceremony-year", "2026", 450, Y(1829), 80, 36, { size: 24 });
-tc("ceremony-lunar", "(TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ)", 450, Y(1885), 420, 20, { size: 14, color: MUTED, letterSpacing: 3.5 });
+tc("ceremony-lunar", "( TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ )", 450, Y(1885), 420, 20, { size: 14, color: MUTED, letterSpacing: 3.5 });
 
 // Album: băng ảnh 3D rộng hơn khối (ảnh hai bên tràn ra), mũi tên ở mép khối 600px.
 // Lá lớn nền xoay 38 độ (tâm 854, 2491; gốc 413x1175 độ mờ 10%).
@@ -148,7 +148,7 @@ tc("reception-date-day", "03", 448, Y(2832), 70, 60, { size: 40 });
 tc("reception-bar-2", "|", 504, Y(2850), 20, 24, { size: 24, opacity: 40 });
 tc("reception-month", "THÁNG 01", 556, Y(2853), 110, 18, { size: 16 });
 tc("reception-year", "2026", 450, Y(2912), 80, 36, { size: 24 });
-tc("reception-lunar", "(TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ)", 450, Y(2968), 420, 20, { size: 14, color: MUTED, letterSpacing: 3.5 });
+tc("reception-lunar", "( TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ )", 450, Y(2968), 420, 20, { size: 14, color: MUTED, letterSpacing: 3.5 });
 tc("arrival-label", "ĐÓN KHÁCH", 400, Y(3025), 110, 14, { size: 12, color: MUTED, letterSpacing: 0.6 });
 tc("arrival-time", "17:30", 400, Y(3044), 70, 28, { size: 20 });
 tc("banquet-label", "KHAI TIỆC", 507, Y(3025), 100, 14, { size: 12, color: MUTED, letterSpacing: 0.6 });
