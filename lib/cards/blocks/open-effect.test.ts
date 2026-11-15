@@ -53,7 +53,7 @@ describe("openCss", () => {
 
   it("targets each block by id, only while the page is opening", () => {
     const css = openCss(page(block("seal", { openEffect: "Thu nhỏ rồi biến mất", openTime: 0.7 }), block("xi", { openEffect: "Phóng ra rồi mờ dần", openTime: 1.3, openDelay: 0.1 })));
-    expect(css).toContain('[data-card-player-page][data-opening-target] [data-miditor-id="seal"] { animation: cm-open-shrink 0.7s ease-out 0s both !important; }');
+    expect(css).toContain('[data-card-player-page][data-opening-target] [data-miditor-id="seal"] { animation: cm-open-shrink 0.7s cubic-bezier(.4, 0, .2, 1) 0s both !important; }');
     expect(css).toContain('[data-miditor-id="xi"] { animation: cm-open-burst 1.3s cubic-bezier(.45, .1, .85, .7) 0.1s both !important; }');
   });
 

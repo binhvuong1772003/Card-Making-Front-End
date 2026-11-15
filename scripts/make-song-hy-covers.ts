@@ -147,7 +147,7 @@ function buildCover(t: Theme) {
     ...flowerClones,
     decoration("open-ring", `ring-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Gợn sóng lan ra", 0.6)),
     // Con dấu tim có quầng bóng mềm cùng màu (gốc: 0 5px 27px #511419 @.5); bo tròn để bóng không thành ô vuông.
-    beat(decoration("open-seal", `seal-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Thu nhỏ rồi biến mất", 0.6), t.sealKind === "heart"
+    beat(decoration("open-seal", `seal-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Thu nhỏ rồi biến mất", 0.5), t.sealKind === "heart"
       ? { borderRadius: 28, shadow: { x: 0, y: 5, blur: 27, spread: 0, color: t.sealFrom ?? "#511419", opacity: 50 } }
       : t.sealKind === "mask" ? { borderRadius: 28, shadow: { x: 0, y: 4, blur: 20, spread: 0, color: "#e8f0e4", opacity: 50 } } : {})),
     text("open-name1", t.name1, { x: 0, y: -91, w: 500, h: 44 }, 36, t.ink, t.nameFont),

@@ -61,13 +61,13 @@ const ANIMATION = {
   "Bay lên rồi biến mất": "cm-open-rise",
   "Gợn sóng lan ra": "cm-open-ring",
 } as const;
-const EASING = { "Mờ dần": "linear", "Thu nhỏ rồi biến mất": "ease-out", "Phóng ra rồi mờ dần": "cubic-bezier(.45, .1, .85, .7)", "Phóng to rồi nhoè": "linear", "Bay lên rồi biến mất": "linear", "Gợn sóng lan ra": "ease-out" } as const;
+const EASING = { "Mờ dần": "linear", "Thu nhỏ rồi biến mất": "cubic-bezier(.4, 0, .2, 1)", "Phóng ra rồi mờ dần": "cubic-bezier(.45, .1, .85, .7)", "Phóng to rồi nhoè": "ease-in", "Bay lên rồi biến mất": "ease-in", "Gợn sóng lan ra": "ease-out" } as const;
 
 // `!important`: Miditor đặt sẵn `animation: revert` trong style của mỗi khối, nên luật thường không thắng được.
 // "Phóng to rồi nhoè" (hoa góc, 1,2s) và "Bay lên rồi biến mất" (cả tấm thẻ, 0,8s) là keyframe `dragon-fly-forward` và `envelope-away` của trang mẫu, đo trực tiếp.
 // Khối đã lật ngang (Miditor đặt `scale: -1 1` và `--cm-flip: -1`) giữ nguyên lật trong lúc chạy vì keyframe nhân với `--cm-flip`.
 // Dùng thuộc tính `scale` riêng (không phải `transform`) để không đè góc xoay mà Miditor đặt trong `transform`.
-// "Thu nhỏ rồi biến mất" và "Gợn sóng lan ra" là keyframe `seal-break` và `seal-ring` của trang mẫu (0,6s ease-out).
+// "Thu nhỏ rồi biến mất" và "Gợn sóng lan ra" là keyframe `seal-break` và `seal-ring` của trang mẫu (seal-break 0,5s cubic-bezier(.4,0,.2,1), seal-ring 0,6s ease-out; hoa dragon-fly-forward 1,2s ease-in và thẻ envelope-away 0,8s ease-in, đọc từ animation tính toán của Hoa Mộc Xanh).
 const KEYFRAMES = `
 @keyframes cm-open-fade { to { opacity: 0; } }
 @keyframes cm-open-shrink { 30% { scale: calc(var(--cm-flip, 1) * 1.15) 1.15; rotate: 5deg; opacity: .9; filter: brightness(1.3); } 60% { scale: calc(var(--cm-flip, 1) * 1.05) 1.05; rotate: -3deg; opacity: .5; filter: brightness(1.5); } 100% { scale: calc(var(--cm-flip, 1) * 0) 0; rotate: 15deg; opacity: 0; filter: brightness(2); } }
