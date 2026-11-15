@@ -19,6 +19,7 @@ export type AnimatedPreset = {
   stage: string;
 };
 
+const ENVELOPE_SINGLE = "/demo/minimalism-do-dam/envelope-single.webp";
 const GIFT_BOX = "https://res.cloudinary.com/djrcgraqq/image/upload/v1794281150/cardmaking/decorations/starter-wedding-gift-box.webp";
 const DARK_GREEN = "#164d3c";
 const SOFT = "#fbf3f0";
@@ -64,6 +65,8 @@ export const animatedPresets: readonly AnimatedPreset[] = [
     props: { src: "", alt: "", fit: "contain", motion: false, motionTarget: "", idleEffect: "Ánh sáng quét", shineRadius: 24 } },
   { id: "gift-box", group: "Hộp quà", name: "Hộp quà mừng", hint: "Lấp lánh, bóng thở, “Nhấn để mở”", keywords: ["quà", "hộp quà", "mừng cưới", "phong bì"], type: "Decoration", size: { w: 180, h: 185 }, stage: SOFT,
     props: { src: GIFT_BOX, alt: "Hộp quà mừng", fit: "contain", motion: true, motionTarget: "" } },
+  { id: "envelope-pair", group: "Hộp quà", name: "Cặp bao lì xì đỏ", hint: "Hai bao lì xì, rê chuột thì phóng to và lắc", keywords: ["bao lì xì", "phong bì", "quà", "mừng cưới", "minimalism", "đỏ"], type: "Decoration", size: { w: 250, h: 357 }, stage: SOFT,
+    props: { src: ENVELOPE_SINGLE, alt: "Hai bao lì xì hoa đỏ", fit: "contain", motion: true, motionStyle: "Cặp bao lì xì", motionTarget: "" } },
 ];
 
 /** Lọc theo ô tìm: khớp tên, mô tả, nhóm hoặc từ khoá, bỏ dấu và không phân biệt hoa thường. */

@@ -23,7 +23,7 @@ const body = "'Baskerville', 'Libre Baskerville', 'Times New Roman', serif";
 const viaoda = "'Viaoda Libre', 'The Nautigal', cursive";
 const script = "'Ms Madi', cursive";
 const nautigal = "'The Nautigal', cursive";
-const GIFT_ENVELOPES = "/demo/minimalism-do-dam/red-envelope-pair.webp";
+const GIFT_ENVELOPES = "/demo/minimalism-do-dam/envelope-single.webp";
 const RED_FLOWER = "/demo/minimalism-do-dam/flower.svg";
 const RED_CASTLE = "/demo/minimalism-do-dam/castle.svg";
 const HERO_PHOTO = "/demo/minimalism-do-dam/photo-1.svg";
@@ -177,7 +177,7 @@ function invitation(): FreeNode[] {
   nodes.push(image("gift-background", "/demo/minimalism-do-dam/paper.webp", { x: 0, y: 6100 - GIFT_SHIFT, w: 900, h: PAGE_H - (6100 - GIFT_SHIFT) }, { opacity: 35 }));
   nodes.push(deco("gift-castle", RED_CASTLE, { x: 0, y: 6100 - GIFT_SHIFT, w: 900, h: PAGE_H - (6100 - GIFT_SHIFT) }, { opacity: 14 }));
   nodes.push(title("gift-title", "HỘP QUÀ MỪNG", 6145 - GIFT_SHIFT, 360, 180, false));
-  nodes.push(put("Decoration", "wedding-gift", { x: 175, y: 6180 - GIFT_SHIFT, w: 550, h: 414 }, { src: GIFT_ENVELOPES, alt: "Hai bao lì xì hoa đỏ", fit: "contain", motion: true, motionStyle: "Bao lì xì", motionTarget: "" }));
+  nodes.push(put("Decoration", "wedding-gift", { x: 325, y: 6216 - GIFT_SHIFT, w: 250, h: 357 }, { src: GIFT_ENVELOPES, alt: "Hai bao lì xì hoa đỏ", fit: "contain", motion: true, motionStyle: "Cặp bao lì xì", motionTarget: "" }));
   nodes.push(text("footer-thanks", "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!", { x: 150, y: 6640 - GIFT_SHIFT, w: 600, h: 24 }, 14, INK, body, { opacity: 80 }));
   nodes.push(text("footer-brand", "♡ CardMaking", { x: 380, y: 6690 - GIFT_SHIFT, w: 140, h: 22 }, 13, INK, body, { opacity: 60 }));
   return nodes;

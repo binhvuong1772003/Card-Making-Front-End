@@ -10,13 +10,18 @@ const GIFT_CSS = `
 @keyframes cm-gift-shadow { 0%, 100% { scale: 1 1; opacity: .3; } 50% { scale: .9 1; opacity: .18; } }
 @keyframes cm-gift-hint { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
 @keyframes cm-decoration-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -4%; } }
+@keyframes cm-env-bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -7px; } }
+@keyframes cm-env-bob-main { 0%, 100% { translate: -15% 0; } 50% { translate: -15% -7px; } }
+@keyframes cm-env-grow { 0% { transform: scale(1); } 100% { transform: scale(1.12); } }
+@keyframes cm-env-wave { 0% { transform: scale(1.12) rotate(0deg); } 20% { transform: scale(1.12) rotate(-6deg); } 40% { transform: scale(1.12) rotate(4.5deg); } 60% { transform: scale(1.12) rotate(-3deg); } 80% { transform: scale(1.12) rotate(1.5deg); } 100% { transform: scale(1.12) rotate(0deg); } }
+@keyframes cm-env-back-wave { 0%, 100% { rotate: 0deg; } 20% { rotate: -1deg; } 40% { rotate: 2deg; } 60% { rotate: -2.5deg; } 80% { rotate: 1.5deg; } }
 @keyframes cm-heartbeat { 0%, 70%, 100% { scale: 1; } 14% { scale: 1.16; } 28% { scale: 1; } 42% { scale: 1.1; } }
 @keyframes cm-heartbeat-glow { 0%, 70%, 100% { filter: drop-shadow(0 4px 12px rgb(81 20 25 / 45%)); } 14% { filter: drop-shadow(0 6px 26px rgb(81 20 25 / 70%)); } 42% { filter: drop-shadow(0 5px 20px rgb(81 20 25 / 60%)); } }
 @keyframes cm-soft-pulse { 0%, 100% { scale: 1; } 50% { scale: 1.06; } }
 @keyframes cm-shine-sweep { 0% { left: -100%; } 50%, 100% { left: 100%; } }
-@media (prefers-reduced-motion: reduce) { [data-decoration-idle] { animation: none !important; } [data-decoration-idle] span { animation: none !important; } [data-decoration-idle="Ánh sáng quét"] span { left: 38% !important; transform: none !important; opacity: .75 !important; } [data-gift-shadow], [data-gift-hint], [data-decoration-motion] svg, [data-decoration-float] { animation: none !important; } [data-gift-hint] { opacity: 1; } }`;
+@media (prefers-reduced-motion: reduce) { [data-decoration-idle] { animation: none !important; } [data-decoration-idle] span { animation: none !important; } [data-decoration-idle="Ánh sáng quét"] span { left: 38% !important; transform: none !important; opacity: .75 !important; } [data-gift-shadow], [data-gift-hint], [data-decoration-motion] svg, [data-decoration-motion="pair"] img, [data-decoration-float] { animation: none !important; } [data-gift-hint] { opacity: 1; } }`;
 
-function DecorationBase({ src, alt, fit, motion, motionStyle = "box", floatMotion = false, opening = false, idle = "Không", shineRadius = 24, tintColor = "" }: { src: string; alt: string; fit: string; motion: boolean; motionStyle?: "box" | "envelope"; floatMotion?: boolean; opening?: boolean; idle?: "Không" | "Đập" | "Thở nhẹ" | "Ánh sáng quét"; shineRadius?: number; tintColor?: string }) {
+function DecorationBase({ src, alt, fit, motion, motionStyle = "box", floatMotion = false, opening = false, idle = "Không", shineRadius = 24, tintColor = "" }: { src: string; alt: string; fit: string; motion: boolean; motionStyle?: "box" | "envelope" | "pair"; floatMotion?: boolean; opening?: boolean; idle?: "Không" | "Đập" | "Thở nhẹ" | "Ánh sáng quét"; shineRadius?: number; tintColor?: string }) {
   const [hovered, setHovered] = useState(false);
   const imageRef = useRef<HTMLDivElement>(null);
   const artwork = (style: CSSProperties) => tintColor && /^#[0-9a-f]{6}$/i.test(tintColor)
@@ -45,6 +50,25 @@ function DecorationBase({ src, alt, fit, motion, motionStyle = "box", floatMotio
         <span aria-hidden="true" style={{ position: "absolute", top: 0, height: "100%", width: "23%", left: "-100%", background: "linear-gradient(90deg, transparent, rgb(255 255 255 / 40%), transparent)", animation: "cm-shine-sweep 3s ease-in-out infinite" }} />
       </>}
   </div>;
+
+  // Cặp bao lì xì (số đo từ trang mẫu Minimalism): một ảnh vẽ hai lần. Lớp sau lật ngang, thu 0,8, nghiêng 15 độ, nhấp nhô 5,2s; lớp trước nghiêng -10 độ, nhấp nhô 3s.
+  // Rê chuột: lớp trước phóng 1,12 trong 0,35s rồi lắc ±6 độ (1,1s, lặp), lớp sau lắc ±2,5 độ (2,2s, lặp). Khung hiển thị 250x357, cặp phong bì 190x275 nằm giữa, chừa 48px dưới cho dòng gợi ý.
+  if (motion && motionStyle === "pair") {
+    const sparkle = (style: CSSProperties, index: number) => <span key={index} aria-hidden="true" style={{ position: "absolute", pointerEvents: "none", zIndex: 20, color: "#b58b2f", lineHeight: 1, animation: `cm-gift-sparkle 2s ease-in-out ${[0, 0.6, 1.2, 1.7][index]}s infinite`, ...style }}>✦</span>;
+    const layer: CSSProperties = { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", objectPosition: "center bottom", pointerEvents: "none" };
+    return <div ref={imageRef} data-decoration-motion="pair" onPointerEnter={() => setHovered(true)} onPointerLeave={() => setHovered(false)} style={{ position: "relative", width: "100%", height: "100%" }}>
+      <style>{GIFT_CSS}</style>
+      {sparkle({ top: "6%", left: "12%", fontSize: 21 }, 0)}{sparkle({ top: "14%", right: "8%", fontSize: 15 }, 1)}{sparkle({ top: "34%", left: "3%", fontSize: 13 }, 2)}{sparkle({ top: "24%", right: "3%", fontSize: 13 }, 3)}
+      <div style={{ position: "absolute", left: "50%", bottom: "13.4%", width: "76%", height: "77%", transform: "translateX(-50%)" }}>
+        <span aria-hidden="true" data-gift-shadow="" style={{ position: "absolute", left: "17%", right: "17%", bottom: -6, height: 11, borderRadius: "50%", background: "rgb(0 0 0 / 45%)", filter: "blur(4px)", zIndex: 0, animation: "cm-gift-shadow 3s ease-in-out infinite" }} />
+        {src ? <>
+          <img src={src} alt="" aria-hidden="true" draggable={false} style={{ ...layer, zIndex: 1, transformOrigin: "50% 100%", transform: "translateX(20%) translateY(-10%) scale(-0.8, 0.8) rotate(-15deg)", filter: "drop-shadow(0 8px 14px rgb(0 0 0 / 18%))", animation: `cm-env-bob 5.2s ease-in-out .5s infinite${hovered ? ", cm-env-back-wave 2.2s ease-in-out infinite" : ""}` }} />
+          <img src={src} alt={alt} draggable={false} style={{ ...layer, zIndex: 2, rotate: "-10deg", transformOrigin: "50% 92%", filter: "drop-shadow(0 10px 18px rgb(0 0 0 / 22%))", animation: `cm-env-bob-main 3s ease-in-out infinite${hovered ? ", cm-env-grow .35s ease forwards, cm-env-wave 1.1s ease-in-out .35s infinite" : ""}` }} />
+        </> : null}
+      </div>
+      <span data-gift-hint="" style={{ position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 4, textAlign: "center", color: "#511419", font: "500 12px/1.2 system-ui, sans-serif", animation: "cm-gift-hint 2s ease-in-out infinite" }}>Nhấn để mở</span>
+    </div>;
+  }
 
   return <div
     ref={imageRef}

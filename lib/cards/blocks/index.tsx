@@ -188,7 +188,7 @@ const renderDecoration: Renderer = ({ id, props, metadata, theme }) => {
     alt={text(props.alt, "")}
     fit={text(props.fit, "contain")}
     motion={props.motion === true}
-    motionStyle={props.motionStyle === "Bao lì xì" ? "envelope" : "box"}
+    motionStyle={props.motionStyle === "Cặp bao lì xì" ? "pair" : props.motionStyle === "Bao lì xì" ? "envelope" : "box"}
     floatMotion={props.floatMotion === true}
     idle={DECORATION_IDLE_EFFECTS.includes(props.idleEffect as never) ? props.idleEffect as (typeof DECORATION_IDLE_EFFECTS)[number] : "Không"}
     shineRadius={number(props.shineRadius, 24, 0, 200)}

@@ -52,3 +52,12 @@ Các script trên là điểm truy vết, không phải cam kết chúng cùng d
 - Còn các xử lý CSS theo ID trong renderer/form của bản dựng hiện tại. Chúng không chứng minh một người có thể tạo thiết kế bất kỳ bằng editor. Trước khi xác nhận dựng lại đầy đủ, phải thử từ trang trắng và ghi những điều khiển chưa có.
 
 Giữ các điểm chưa đo hoặc chưa thử dưới dạng giới hạn mở; không coi việc bổ sung tài liệu này là đã sửa chúng.
+
+## Red envelope pair: measured hover and idle effects (14/11/2026)
+
+Source: `/images/envelope/minimalism_darkred.webp` (one 420×659 envelope drawn twice, saved locally as `public/demo/minimalism-do-dam/envelope-single.webp`; local study asset only). Button 250×357, envelope box 190×275, 48px below it for the hint "Nhấn để mở".
+
+- Back layer: flipped, `translateX(20%) translateY(-10%) scale(-0.8, 0.8) rotate(-15deg)`, origin 50% 100%, bob 5.2s (0 → -7px). Hover adds `rotate` sway 2.2s infinite: 0, -1°, 2°, -2.5°, 1.5° at 0/20/40/60/80%.
+- Front layer: `rotate: -10deg`, origin 50% 92%, bob 3s (translate -15% 0 → -15% -7px). Hover adds grow 0.35s forwards (scale 1 → 1.12) then wave 1.1s infinite after 0.35s: ±6°, 4.5°, -3°, 1.5°.
+- Shadow ellipse 125×11, black 45%, blur 4px; four gold ✦ sparkles; hint text pulse.
+- Local: Decoration with `motionStyle: "Cặp bao lì xì"` (one block, two layers, effects built in) and the animated preset "Cặp bao lì xì đỏ" in the Trang trí tab. Not matched: the shadow pulse keyframes were not read (uses the gift-box shadow pulse), sparkle glyph assumed `✦`. The catalog still holds the old flat pair image; the new single image is served from the app's `public/`, not Cloudinary.

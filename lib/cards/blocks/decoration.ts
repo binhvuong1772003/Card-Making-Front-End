@@ -48,7 +48,7 @@ export const decorationBlock: ComponentDef = {
     tintColor: { type: "color", label: "Màu trang trí", group: "Nội dung" },
     fit: { type: "select", label: "Cách hiển thị", options: ["contain", "cover"], group: "Nội dung" },
     motion: { type: "boolean", label: "Hiệu ứng hộp quà", group: "Hiệu ứng" },
-    motionStyle: { type: "select", label: "Kiểu quà", options: ["Hộp quà", "Bao lì xì"], group: "Hiệu ứng" },
+    motionStyle: { type: "select", label: "Kiểu quà", help: "Cặp bao lì xì: dùng một ảnh phong bì, vẽ hai lớp, rê chuột thì phóng to và lắc.", options: ["Hộp quà", "Bao lì xì", "Cặp bao lì xì"], group: "Hiệu ứng" },
     floatMotion: { type: "boolean", label: "Trôi nhẹ", help: "Tắt để giữ trang trí đứng yên.", group: "Hiệu ứng" },
     idleEffect: { type: "select", label: "Hiệu ứng lặp", options: DECORATION_IDLE_EFFECTS, group: "Hiệu ứng", help: "Đập: nhịp tim. Thở nhẹ: phóng to thu nhỏ chậm. Ánh sáng quét: vệt sáng chạy ngang, đặt lên nút." },
     shineRadius: { type: "number", label: "Bo góc vệt sáng", min: 0, max: 200, unit: "px", group: "Hiệu ứng", help: "Vệt sáng chỉ hiện trong khung này; đặt bằng nửa chiều cao nút để bo tròn." },
