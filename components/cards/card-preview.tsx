@@ -34,7 +34,7 @@ export function CardPreview({ id }: { id: string }) {
   );
 
   return (
-    <div className="flex min-h-dvh flex-col bg-page text-foreground">
+    <div className={cn("flex min-h-dvh flex-col text-foreground", device === "desktop" ? "bg-white" : "bg-page")}>
       <header className="flex flex-wrap items-center gap-3 bg-background px-5 py-3 shadow-[0_1px_0_#f0e7e9]">
         <Link href={`/cards/${id}`} className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
           <ArrowLeftIcon className="size-[18px]" /> Quay lại sửa
@@ -46,7 +46,7 @@ export function CardPreview({ id }: { id: string }) {
           {tab("phone", "Điện thoại", <DeviceMobileIcon className="size-[18px]" />)}
         </div>
       </header>
-      <main className="flex flex-1 justify-center px-4 py-8">
+      <main className={cn("flex flex-1 justify-center", device === "desktop" ? "" : "px-4 py-8")}>
         {card.isError && !signedOut ? (
           <p className="text-sm text-destructive">{errorMessage(card.error)}</p>
         ) : card.isPending ? (
@@ -54,7 +54,7 @@ export function CardPreview({ id }: { id: string }) {
         ) : empty ? (
           <p className="text-sm text-muted-foreground">Thiệp chưa có nội dung để xem trước.</p>
         ) : (
-          <div className={cn("w-full overflow-hidden bg-white shadow-[0_1px_2px_rgba(42,34,36,0.06),0_14px_36px_rgba(42,34,36,0.14)]", device === "phone" ? "max-w-[375px] rounded-[28px]" : "max-w-[1440px] rounded-lg")}>
+          <div className={cn("w-full overflow-hidden bg-white", device === "phone" && "shadow-[0_1px_2px_rgba(42,34,36,0.06),0_14px_36px_rgba(42,34,36,0.14)]", device === "phone" ? "max-w-[375px] rounded-[28px]" : "max-w-none rounded-none shadow-none")}>
             <CardPlayer key={device} document={document!} mode="preview" historyKey={`preview:${id}:${device}`} device={device} immersive />
           </div>
         )}
