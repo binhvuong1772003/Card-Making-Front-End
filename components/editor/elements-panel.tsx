@@ -202,7 +202,9 @@ function Card({ item, editor, drag }: { item: PanelItem; editor: HostToolPanelPr
 const LEFT = "M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z";
 const itemKey = (item: PanelItem) => item.kind === "block" ? item.type : item.kind === "frame" ? `frame-${item.shape.id}` : `preset-${item.preset.id}`;
 
-export function ElementsPanel({ editor, drag }: HostToolPanelProps) {
+const itemText = (item: PanelItem) => (item.kind === "block" ? `${item.def.label} ${(item.def.keywords ?? []).join(" ")} ${item.def.category ?? ""}` : item.kind === "preset" ? item.preset.label : `${item.shape.label ?? ""} khung ảnh`).toLowerCase();
+
+export function ElementsPanel({ editor, drag, search = "" }: HostToolPanelProps & { search?: string }) {
   const [open, setOpen] = useState<string | null>(null);
   const [pages, setPages] = useState<Record<string, number>>({});
   const [framePage, setFramePage] = useState<Awaited<ReturnType<typeof catalogApi.frames>> | null>(null);
@@ -210,7 +212,8 @@ export function ElementsPanel({ editor, drag }: HostToolPanelProps) {
   const [loadingMore, setLoadingMore] = useState(false);
   const [moreError, setMoreError] = useState("");
   const frames = framePage?.nodes ?? [];
-  const GROUPS = groups(frames);
+  const query = search.trim().toLowerCase();
+  const GROUPS = groups(frames).map(([category, items]): [string, PanelItem[]] => [category, query ? items.filter((item) => itemText(item).includes(query) || category.toLowerCase().includes(query)) : items]).filter(([, items]) => !query || items.length > 0);
   const group = open === null ? undefined : GROUPS.find(([category]) => category === open);
 
   useEffect(() => {

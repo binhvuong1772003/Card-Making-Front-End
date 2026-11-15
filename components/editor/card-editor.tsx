@@ -21,8 +21,7 @@ import { FormFieldsInput, PublicListInput } from "./form-fields-input";
 import { FormIdInput } from "./form-id-input";
 import { TextEffectsInput } from "./text-effects-input";
 import { ImageListInput } from "./image-list-input";
-import { ElementsPanel } from "./elements-panel";
-import { DecorationsPanel } from "./decorations-panel";
+import { ComponentsPanel } from "./components-panel";
 import { phosphorIcons } from "./phosphor-icons";
 import { CardHeader } from "./card-header";
 import type { SealState } from "./status-seal";
@@ -129,7 +128,6 @@ function RestorePage({ session, pageId }: { session: CardSession; pageId: string
 
 // Giữ tham chiếu ổn định: Miditor đọc lại các prop này ở mỗi lần dựng.
 // Lời của trang trống theo bản vẽ; các câu còn lại là bản tiếng Việt có sẵn của Miditor.
-const SparkleIcon = phosphorIcons.sparkle;
 const i18n = {
   locale: "vi",
   messages: {
@@ -146,7 +144,7 @@ export const cardEditorConfig = {
   components: navigationComponents,
   renderers: cardRenderers,
   fonts: CARD_FONTS,
-  tools: [{ id: "elements", label: "Thành phần", icon: "shape" as const, panel: ElementsPanel }, { id: "decorations", label: "Trang trí", icon: <SparkleIcon size={18} />, panel: DecorationsPanel }, { id: "pages", label: "Trang", icon: "layers" as const, panel: PagesTool }],
+  tools: [{ id: "elements", label: "Thành phần", icon: "shape" as const, panel: ComponentsPanel }, { id: "pages", label: "Trang", icon: "layers" as const, panel: PagesTool }],
   customFields: { "card-navigation": NavigationField, "image-list": ImageListInput, date: DateInput, time: TimeInput, "frame-shape": FrameShapeInput, "single-image": SingleImageInput, "fixed-image": FixedImageInput, "form-fields": FormFieldsInput, "form-public-list": PublicListInput, "form-id": FormIdInput, "text-effects": TextEffectsInput },
 };
 const VIEW_ONLY = { canEdit: false, canDelete: false, canDuplicate: false, canDrag: false, canAdd: false };

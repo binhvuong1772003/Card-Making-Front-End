@@ -94,9 +94,11 @@ function DecorationCard({ asset, editor, drag, activeTintId, setActiveTintId }: 
 type PreviewState = { search: string; groups: Record<string, CatalogPage<CatalogDecoration>> };
 type AllState = { key: string; nodes: CatalogDecoration[]; pageInfo: CatalogPage<CatalogDecoration>["pageInfo"] };
 
-export function DecorationsPanel({ editor, drag }: HostToolPanelProps) {
+export function DecorationsPanel({ editor, drag, search: externalSearch }: HostToolPanelProps & { search?: string }) {
+  const embedded = externalSearch !== undefined;
   const [searchInput, setSearchInput] = useState("");
-  const [search, setSearch] = useState("");
+  const [ownSearch, setSearch] = useState("");
+  const search = embedded ? externalSearch.trim() : ownSearch;
   const [retry, setRetry] = useState(0);
   const [previewState, setPreviewState] = useState<PreviewState | null>(null);
   const [previewError, setPreviewError] = useState<string | null>(null);
@@ -160,9 +162,11 @@ export function DecorationsPanel({ editor, drag }: HostToolPanelProps) {
   return (
     <div className="cm-deco">
       <style>{CSS}</style>
-      <h2>Trang trí</h2>
-      <p className="cm-deco-intro">Kéo hoặc bấm để thêm vào thiệp.</p>
-      <input type="search" className="cm-deco-search" aria-label="Tìm trang trí" placeholder="Tìm trang trí" value={searchInput} onChange={(event) => setSearchInput(event.target.value)} />
+      {!embedded && <>
+        <h2>Trang trí</h2>
+        <p className="cm-deco-intro">Kéo hoặc bấm để thêm vào thiệp.</p>
+        <input type="search" className="cm-deco-search" aria-label="Tìm trang trí" placeholder="Tìm trang trí" value={searchInput} onChange={(event) => setSearchInput(event.target.value)} />
+      </>}
 
       {openCategory ? <>
         <button type="button" className="cm-deco-back" onClick={() => { setOpenCategory(null); setMoreError(false); }}>
