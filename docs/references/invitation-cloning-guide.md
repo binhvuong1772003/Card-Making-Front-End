@@ -251,3 +251,27 @@ Bản dựng đầu chỉ ước lượng nên sai ở các điểm sau; bản s
 - **Lịch:** thẻ nâu `#7c6a60` 362x306 bo 10, chữ `#ded9d7`, tên tháng Nautigal 24px, ngày chọn là tim trắng số `#333`; nút xác nhận 202x36 nền nâu chữ `#ded9d7` 14px.
 - **Lịch trình:** giờ canh phải đến x=410, biểu tượng 36px ở x=303 (hàng 2-4), đường dọc x=450 có chấm 10px, nhãn bên phải x=490.
 - **Album:** khối 600px, mũi tên ở mép khối, ảnh hai bên tràn ra ngoài (thuộc tính `spread`).
+
+## 16. Hàm dump DOM dùng được ngay
+
+Dán vào console của trang gốc (Claude in Chrome, tab đã mở mẫu). Trả mảng dòng ở `window.__all`; in từng đoạn bằng `window.__all.slice(a, b).join("\n")` để khỏi bị cắt ở ~2000 ký tự.
+
+```js
+const root = document.querySelector('[data-testid="minimalism-brown-template"]'); // đổi theo mẫu
+const o = root.getBoundingClientRect(), L = o.x + o.width / 2 - 450;
+const hex = c => { const m = c.match(/[\d.]+/g); return m ? "#" + [0, 1, 2].map(i => (+m[i]).toString(16).padStart(2, "0")).join("") + (m[3] && +m[3] < 1 ? "@" + (+m[3]).toFixed(2) : "") : c; };
+window.__dump = (a, b) => { const out = []; root.querySelectorAll("*").forEach(e => {
+  if (e.closest("dialog")) return;
+  const r = e.getBoundingClientRect(), y = Math.round(r.y - o.y); if (y < a || y >= b || r.width < 3) return;
+  const cs = getComputedStyle(e), x = Math.round(r.x - L), sz = Math.round(r.width) + "x" + Math.round(r.height);
+  const own = [...e.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join(" ").trim();
+  if (own) out.push(`T ${x},${y} ${sz} ${parseFloat(cs.fontSize)} ${hex(cs.color)} ${cs.fontFamily.split(",")[0]} "${own.slice(0, 30)}"`);
+  else if (e.tagName === "IMG") out.push(`I ${x},${y} ${sz} op${cs.opacity} ${cs.mixBlendMode} ${e.getAttribute("src").split("/").pop().slice(0, 24)}`);
+  else if (cs.backgroundColor !== "rgba(0, 0, 0, 0)" || cs.boxShadow !== "none") out.push(`B ${x},${y} ${sz} ${hex(cs.backgroundColor)} r${cs.borderRadius}`);
+}); return out; };
+window.__all = window.__dump(-200, 7100);
+```
+
+Bổ sung cho ảnh xoay hay lật: với mỗi `<img>` in thêm `offsetWidth x offsetHeight`, `rotate`, `scale` của nó và 3 cấp cha (xem mục 15 về `flipX`).
+
+Hai điều đã làm sai ở lần đầu và cần nhớ: (1) mọi y của bản đầu thiếu 104,5 và nhiều cỡ chữ to gấp rưỡi vì được ước lượng; (2) bản dựng bỏ sót hoa và lá cạnh panel, rồi đặt chúng sau panel.
