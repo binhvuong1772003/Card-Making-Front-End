@@ -46,7 +46,7 @@ export function createApiClient({ baseUrl, fetch: fetchImpl = (...args) => fetch
         credentials: 'include',
         headers: hasBody ? { 'Content-Type': 'application/json' } : undefined,
         body: hasBody ? JSON.stringify(init.body) : undefined,
-        signal: init.signal,
+        // Không truyền tín hiệu hủy xuống fetch: TanStack Query hủy truy vấn khi màn hình bị gỡ hoặc ẩn đi (Next giữ trang cũ ở chế độ ẩn), và lúc đó fetch ném AbortError nổi lên lớp phủ lỗi của Next dù không có lỗi thật. Kết quả của truy vấn đã hủy vẫn bị bỏ.
       });
     } catch (err) {
       if (err instanceof DOMException && err.name === 'AbortError') throw err;
