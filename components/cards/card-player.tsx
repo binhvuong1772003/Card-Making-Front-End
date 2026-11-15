@@ -411,6 +411,7 @@ function Player({ document, mode, historyKey, device, metadata, immersive = fals
           const [red, green, blue] = popup.backdropColor.slice(1).match(/.{2}/g)!.map(value => Number.parseInt(value, 16));
           return <DialogContent
             data-popup-effect={popup.effect}
+            data-popup-page={popupPage.id}
             className={`${styles.popupMotion} grid max-w-none gap-0 overflow-hidden rounded-xl border border-black/10 bg-white p-0 shadow-2xl`}
             style={{ width: `min(${popup.width}px, calc(100vw - 32px))`, maxWidth: "calc(100vw - 32px)", maxHeight: "calc(100dvh - 32px)", zIndex: 111 }}
             backdropStyle={{ backgroundColor: `rgba(${red}, ${green}, ${blue}, ${popup.backdropOpacity / 100})`, zIndex: 110 }}

@@ -200,3 +200,13 @@ Sai khác, phần gần đúng và điều khiển còn thiếu:
 ```
 
 Một section chỉ được ghi “hoàn thành” khi có bằng chứng về cả hình thức, thao tác dựng lại, và bản dữ liệu thực tế đến tay người dùng.
+
+## 12. Cửa sổ popup: dựng đúng khung và số đo (quà mừng, 14/11/2026)
+
+Popup của nguồn là một hộp riêng (`modal-box`), không phải một trang thiệp: đo bằng `dialog[open] .modal-box`, đọc từng phần tử con (vị trí tương đối so với hộp, nền, bo góc, cỡ chữ) rồi dựng lại theo từng số.
+
+- **Mở popup mà không cần cuộn tới nút:** gọi `.click()` trên nút trong trang nguồn (trang cuộn chậm và có tự lướt đè lên thao tác cuộn); cửa sổ là `position: fixed` nên chụp được ngay.
+- **Số đo đã dùng (Minimalism / Song Hỷ Xanh):** hộp 576×404 / 576×410, bo 16, thanh đầu cao 70 / 76 (đỏ `#511419` / xanh `#1f3a25`, tiêu đề chữ hoa trắng đậm 20px Times / 24px Baskerville), nền thân `#fff7eb` / `#dcebde`, lề 24, hai cột 256 cách 16; nhãn 12px; thẻ QR trắng 160×160 bo 12, ảnh QR 140×140 cách mép 10; ba dòng ngân hàng 10px (thường, số tài khoản đơn cách, tên đậm); nút "Lưu QR" 68×23, nền màu thương hiệu 8%.
+- **Mã QR của nguồn** sinh ở `/api/qr-png?d=<chuỗi VietQR>` (PNG 1024px). Lấy bằng cách tải trong trình duyệt như mục 10 và dùng làm mã minh hoạ; mã này chứa tài khoản mẫu của nguồn, không dùng khi phát hành.
+- **Quy tắc khung popup của CardMaking (dễ sai):** popup rộng từ 640px trở xuống dùng canvas 375, trên 640px dùng canvas 960 thu theo `zoom = rộng / 960`. Muốn một popup có thanh đầu tràn mép, thiết kế trên canvas 960, nhân số đo gốc với 960/rộng gốc, và đặt `popup.width` từ 641.
+- **Chưa làm:** nút "Lưu QR" mới là hình, chưa tải ảnh; nút đóng của khung đổi sang trắng bằng CSS theo mã trang `gift-details` (hạn chế đã biết).

@@ -215,3 +215,7 @@
 /* Tự lướt: con trỏ bàn tay khắp trang như thiệp mẫu (ô nhập chữ giữ con trỏ riêng). */
 .stage[data-autoscroll] .page, .stage[data-autoscroll] .page * { cursor: pointer !important; }
 .stage[data-autoscroll] .page :is(input, textarea, select) { cursor: text !important; }
+
+/* Cửa sổ quà mừng có thanh đầu màu đậm: nút đóng của khung đổi sang trắng cho thấy được. */
+.popupMotion[data-popup-page="gift-details"] [data-slot="dialog-close"] { color: #fff; top: 12px; right: 12px; }
+.popupMotion[data-popup-page="gift-details"] [data-slot="dialog-close"]:hover { background: rgb(255 255 255 / 12%); color: #fff; }

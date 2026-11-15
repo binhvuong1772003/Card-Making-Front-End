@@ -236,9 +236,9 @@ function invitation() {
   } };
 }
 
-function popupPage(id: string, name: string, children: FreeNode[], size: { w: number; h: number }, width: number) {
+function popupPage(id: string, name: string, children: FreeNode[], size: { w: number; h: number }, width: number, background = PAPER) {
   const page = emptyPage();
-  const data = { ...page, root: { ...page.root, styles: { ...page.root.styles, background: PAPER, minHeight: size.h, phoneMinHeight: size.h }, children } };
+  const data = { ...page, root: { ...page.root, styles: { ...page.root.styles, background, minHeight: size.h, phoneMinHeight: size.h }, children } };
   return { id, name, data, interactions: {}, popup: { width, effect: "fade" as const, backdropColor: GREEN, backdropOpacity: 68 } };
 }
 
@@ -254,21 +254,37 @@ function rsvp() {
   ], { w: PAGE_W, h: 760 }, 560);
 }
 
+// Cửa sổ quà mừng theo số đo gốc 576x410: thanh đầu xanh 76px (tiêu đề Baskerville 24px, chữ hoa, trắng), nền #dcebde, hai cột 256px cách nhau 16px.
+// Mỗi cột: nhãn 12px, thẻ QR trắng 160x160 bo 12 (ảnh 140x140), ba dòng ngân hàng 10px (thường, số tài khoản, tên đậm), nút "Lưu QR" 68x23. Số đo nhân K để vừa khung 960.
 function giftDetails() {
-  return popupPage("gift-details", "Hộp quà mừng", [
-    shape("gift-popup-paper", "rectangle", { x: 20, y: 20, w: 920, h: 700 }, PAPER, { borderRadius: 16, shadow: { x: 0, y: 12, blur: 32, spread: 0, color: "#17331e", opacity: 25 } }),
-    text("gift-popup-title", "HỘP QUÀ MỪNG", { x: 260, y: 48, w: 440, h: 44 }, 28, GREEN, TIMES, { bold: true }),
-    text("gift-popup-intro", "Cảm ơn bạn đã chung vui cùng chúng mình", { x: 240, y: 105, w: 480, h: 32 }, 17, MUTED),
-    shape("gift-popup-groom-card", "rectangle", { x: 160, y: 165, w: 280, h: 460 }, LIGHT, { borderRadius: 12, borderWidth: 1, borderColor: "#d5dfd1" }),
-    shape("gift-popup-bride-card", "rectangle", { x: 480, y: 165, w: 280, h: 460 }, LIGHT, { borderRadius: 12, borderWidth: 1, borderColor: "#d5dfd1" }),
-    text("gift-popup-groom-label", "Chú rể · Võ Hải Nam", { x: 180, y: 185, w: 240, h: 32 }, 19, GREEN, BASKERVILLE, { bold: true }),
-    text("gift-popup-bride-label", "Cô dâu · Huỳnh Khánh Linh", { x: 500, y: 185, w: 240, h: 32 }, 19, GREEN, BASKERVILLE, { bold: true }),
-    image("gift-popup-qr-groom", "/demo/song-hy-xanh/qr-groom.png", { x: 220, y: 245, w: 160, h: 160 }, "Mã QR mừng cưới chú rể"),
-    image("gift-popup-qr-bride", "/demo/song-hy-xanh/qr-bride.png", { x: 540, y: 245, w: 160, h: 160 }, "Mã QR mừng cưới cô dâu"),
-    text("gift-popup-bank-groom", "Vietcombank\n123456789\nVõ Hải Nam", { x: 180, y: 430, w: 240, h: 100 }, 16, GREEN),
-    text("gift-popup-bank-bride", "Techcombank\n987654321\nHuỳnh Khánh Linh", { x: 500, y: 430, w: 240, h: 100 }, 16, GREEN),
-    text("gift-popup-note", "Thông tin minh họa · Có thể thay đổi trong editor", { x: 260, y: 580, w: 440, h: 24 }, 13, MUTED),
-  ], { w: PAGE_W, h: 760 }, 720);
+  const K = 960 / 576;
+  const n = (v: number) => Math.round(v * K);
+  const at = (left: number, top: number, w: number, h: number): Box => ({ x: n(left) - 30, y: n(top), w: n(w), h: n(h) });
+  const sans = "'Gotham', system-ui, sans-serif";
+  const mono = "ui-monospace, 'SF Mono', Menlo, monospace";
+  const INK = "#464646";
+  const nodes: FreeNode[] = [
+    shape("gift-popup-header", "rectangle", at(0, 0, 576, 76), GREEN),
+    text("gift-popup-title", "HỘP QUÀ MỪNG", at(24, 24, 528, 36), n(24), "#ffffff", BASKERVILLE, { bold: true }),
+  ];
+  const columns = [
+    { key: "groom", left: 24, title: "Chú Rể - Võ Hải Nam", bank: "Vietcombank", number: "123456789", holder: "VÕ HẢI NAM", qr: "/demo/song-hy-xanh/qr-groom.png" },
+    { key: "bride", left: 296, title: "Cô Dâu - Huỳnh Khánh Linh", bank: "Techcombank", number: "987654321", holder: "HUỲNH KHÁNH LINH", qr: "/demo/song-hy-xanh/qr-bride.png" },
+  ];
+  for (const c of columns) {
+    const mid = c.left + 128;
+    nodes.push(
+      text(`gift-popup-${c.key}-label`, c.title, at(mid - 128, 100, 256, 20), n(12), GREEN, sans),
+      shape(`gift-popup-${c.key}-qr-card`, "rectangle", at(mid - 80, 140, 160, 160), "#ffffff", { borderRadius: n(12) }),
+      image(`gift-popup-qr-${c.key}`, c.qr, at(mid - 70, 150, 140, 140), `Mã QR mừng cưới ${c.key === "groom" ? "chú rể" : "cô dâu"}`),
+      text(`gift-popup-${c.key}-bank`, c.bank, at(mid - 128, 308, 256, 15), n(10), INK, sans),
+      text(`gift-popup-${c.key}-number`, c.number, at(mid - 128, 325, 256, 15), n(10), INK, mono),
+      text(`gift-popup-${c.key}-holder`, c.holder, at(mid - 128, 342, 256, 15), n(10), INK, sans, { bold: true }),
+      shape(`gift-popup-${c.key}-save`, "rectangle", at(mid - 34, 363, 68, 23), "#ccdccf", { borderRadius: n(12) }),
+      text(`gift-popup-${c.key}-save-label`, "↓ Lưu QR", at(mid - 34, 367, 68, 15), n(10), GREEN, sans),
+    );
+  }
+  return popupPage("gift-details", "Hộp quà mừng", nodes, { w: PAGE_W, h: n(410) }, 641, "#dcebde");
 }
 
 const built = { invitation: invitation(), rsvp: rsvp(), giftDetails: giftDetails() };
