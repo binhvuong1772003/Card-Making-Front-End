@@ -55,7 +55,7 @@ const renderAlbum: Renderer = ({ props, metadata }) => (
     radius={number(props.radius, 16, 0, 48)}
     dotColor={typeof props.dotColor === "string" ? props.dotColor : albumBlock.defaultProps.dotColor as string}
     startAt={number(props.startAt, 1, 1, 30)}
-    spread={props.spread === true}
+    spread={number(props.spread, 0, 0, 600)}
     mode={modeOf(metadata)}
   />
 );
@@ -109,6 +109,9 @@ const renderCalendar: Renderer = ({ props, metadata, theme }) => (
     weekGap={number(props.weekGap, 0, 0, 80)}
     dayWeight={fontWeightOf(props.dayWeight, 400)}
     eventGap={number(props.eventGap, 0, 0, 160)}
+    eventLink={props.eventStyle === "Liên kết"}
+    eventColor={paint(props.eventColor, "#7c6a60", theme)}
+    weekLine={props.weekLine === true}
     markWeight={fontWeightOf(props.markWeight, 600)}
     markSize={number(props.markSize, 0, 0, 40)}
     font={stackOf(props.font)}

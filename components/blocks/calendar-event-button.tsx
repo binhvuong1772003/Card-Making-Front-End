@@ -13,9 +13,11 @@ export interface CalendarEventButtonProps {
   color: string;
   size: number;
   live: boolean;
+  /** Màu chữ khi vẽ thành liên kết gạch chân (không nền). */
+  link?: string;
 }
 
-export function CalendarEventButton({ event, label, background, color, size, live }: CalendarEventButtonProps) {
+export function CalendarEventButton({ event, label, background, color, size, live, link }: CalendarEventButtonProps) {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const google = googleCalendarUrl(event);
@@ -60,7 +62,7 @@ export function CalendarEventButton({ event, label, background, color, size, liv
         aria-expanded={open}
         disabled={!live || !google}
         onClick={() => setOpen((value) => !value)}
-        style={{ border: 0, borderRadius: 9999, background, color, font: "inherit", fontSize: Math.max(12, size * 0.85), fontWeight: 600, padding: "8px 18px", cursor: live ? "pointer" : "default" }}
+        style={link ? { border: 0, background: "transparent", color: link, font: "inherit", fontSize: Math.max(12, size * 0.85), fontWeight: 400, padding: 0, textDecoration: "underline", cursor: live ? "pointer" : "default" } : { border: 0, borderRadius: 9999, background, color, font: "inherit", fontSize: Math.max(12, size * 0.85), fontWeight: 600, padding: "8px 18px", cursor: live ? "pointer" : "default" }}
       >
         {label}
       </button>

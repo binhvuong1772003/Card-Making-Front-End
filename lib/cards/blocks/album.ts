@@ -16,7 +16,7 @@ export const albumBlock: ComponentDef = {
   keywords: ["album", "ảnh", "gallery", "carousel", "coverflow", "xoay"],
   size: { w: 680, h: 440 },
   canContain: false,
-  defaultProps: { images: [], autoplay: true, interval: 1.5, lightbox: true, radius: 16, dotColor: ALBUM_DOT_COLOR, startAt: 1, spread: false },
+  defaultProps: { images: [], autoplay: true, interval: 1.5, lightbox: true, radius: 16, dotColor: ALBUM_DOT_COLOR, startAt: 1, spread: 0 },
   fields: {
     images,
     autoplay: { type: "boolean", label: "Tự chạy", group: "Chuyển ảnh" },
@@ -24,7 +24,7 @@ export const albumBlock: ComponentDef = {
     startAt: { type: "number", label: "Ảnh bắt đầu", min: 1, max: 30, group: "Chuyển ảnh" },
     lightbox,
     radius: { type: "number", label: "Bo góc ảnh", min: 0, max: 48, unit: "px", group: "Kiểu dáng" },
-    spread: { type: "boolean", label: "Ảnh bên tràn ra ngoài", group: "Kiểu dáng", help: "Bật thì các ảnh hai bên được thấy hết, kể cả phần ngoài khung khối (đến mép trang), như băng ảnh của mẫu Minimalism Nâu." },
+    spread: { type: "number", label: "Ảnh tràn ra hai bên", min: 0, max: 600, unit: "px", group: "Kiểu dáng", help: "Các ảnh hai bên được thấy thêm bấy nhiêu px ngoài khung khối (đặt bằng quãng tới mép trang). 0 thì cắt đúng khung khối." },
     dotColor: { type: "color", label: "Màu chỉ số ảnh", group: "Kiểu dáng" },
   },
 };

@@ -19,7 +19,7 @@ export interface AlbumViewProps {
   dotColor: string;
   startAt: number;
   /** Ảnh hai bên tràn ra ngoài khung khối (gốc: băng ảnh Minimalism Nâu rộng hơn khối 600px). */
-  spread?: boolean;
+  spread?: number;
   mode: AlbumMode;
 }
 
@@ -55,7 +55,7 @@ const arrowButton = (side: "left" | "right"): CSSProperties => ({
   cursor: "pointer",
 });
 
-export function AlbumView({ images, autoplay, interval, lightbox, radius, dotColor, startAt, spread = false, mode }: AlbumViewProps) {
+export function AlbumView({ images, autoplay, interval, lightbox, radius, dotColor, startAt, spread = 0, mode }: AlbumViewProps) {
   const live = mode === "live";
   const pictures = albumPictures(images, live, 7);
   const count = pictures.length;
@@ -101,7 +101,7 @@ export function AlbumView({ images, autoplay, interval, lightbox, radius, dotCol
   };
 
   return (
-    <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", overflow: spread ? "visible" : "hidden", pointerEvents: live ? "auto" : "none" }}>
+    <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", overflow: spread > 0 ? "visible" : "hidden", clipPath: spread > 0 ? `inset(-60px ${-spread}px -60px ${-spread}px)` : undefined, pointerEvents: live ? "auto" : "none" }}>
       <style>{ARROWS_CSS}</style>
       <div
         onPointerDown={onPointerDown}

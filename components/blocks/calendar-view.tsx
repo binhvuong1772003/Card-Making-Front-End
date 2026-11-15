@@ -28,6 +28,9 @@ export interface CalendarViewProps {
   weekGap: number;
   dayWeight: number;
   eventGap: number;
+  eventLink?: boolean;
+  eventColor?: string;
+  weekLine?: boolean;
   markWeight: number;
   markSize: number;
   innerFrame: boolean;
@@ -74,7 +77,7 @@ function Mark({ shape, color }: { shape: MarkShape; color: string }) {
 }
 
 export function CalendarView(props: CalendarViewProps) {
-  const { date, sundayFirst, showTitle, lines, innerFrame, markShape, markColor, markTextColor, color, weekColor, size, font, titleFont, padding, editing, live, eventButton, titleSize, titleWeight, titleSpacing, titleGap, weekSize, weekWeight, weekGap, dayWeight, eventGap, markWeight, markSize } = props;
+  const { date, sundayFirst, showTitle, lines, innerFrame, markShape, markColor, markTextColor, color, weekColor, size, font, titleFont, padding, editing, live, eventButton, titleSize, titleWeight, titleSpacing, titleGap, weekSize, weekWeight, weekGap, dayWeight, eventGap, markWeight, markSize, eventLink = false, eventColor = "#7c6a60", weekLine = false } = props;
   const whole = monthGrid(date, sundayFirst);
   if (!whole) {
     if (!editing) return null;
@@ -108,7 +111,7 @@ export function CalendarView(props: CalendarViewProps) {
       {showTitle && (
         <div style={{ fontFamily: titleFont || bodyFont, fontSize: titleSize || size * 1.5, fontWeight: titleWeight, letterSpacing: titleSpacing || undefined, lineHeight: 1.2, paddingBottom: titleGap || size * 0.6 }}>{grid.title}</div>
       )}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", color: weekColor, fontSize: weekSize || size * 0.8, fontWeight: weekWeight, letterSpacing: weekSize ? 0 : "0.04em", paddingBottom: weekGap || size * 0.3 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", color: weekColor, fontSize: weekSize || size * 0.8, fontWeight: weekWeight, letterSpacing: weekSize ? 0 : "0.04em", paddingBottom: weekGap || size * 0.3, ...(weekLine ? { borderBottom: `2px solid ${weekColor}`, marginBottom: size * 0.5 } : {}) }}>
         {grid.weekdays.map((name) => (
           <div key={name}>{name}</div>
         ))}
@@ -154,6 +157,7 @@ export function CalendarView(props: CalendarViewProps) {
             label={eventButton.trim()}
             background={markColor}
             color={markTextColor}
+            link={eventLink ? eventColor : undefined}
             size={size}
             live={live}
           />
