@@ -93,6 +93,9 @@ nodes[nodes.length - 1]!.props = { ...nodes[nodes.length - 1]!.props, italic: tr
 add("Image", "hero-photo", [250, 249, 374, 569], { src: `${root}/photo-1.webp`, alt: "Ảnh cưới của Hoàng Nam và Thảo Vy", fit: "cover" }, { background: "#ffffff" }, -4.78, [58, 155, 194, 295]);
 art("hero-avatar-frame", "frame-avatar", [190, Y(86), 520, 739], { phone: [27, 112, 270, 384] });
 art("hero-flower-left", "flower2-decoration", [164, Y(449), 177, 411], { float: true, phone: [9, 346, 104, 242] });
+// Hoa và lá cạnh panel đầu (đọc tâm và góc xoay từ DOM: hoa lật ngang bên phải, lá xoay 10,57 độ bên trái).
+art("details-flower-right", "flower2-decoration", [646, 1683, 179, 416], { float: true, flipX: true, phone: [290, 1330, 100, 238] });
+art("details-leaf-left", "leaf-background", [80, 1378, 157, 446], { rotation: 10.57, phone: [-5, 1040, 90, 255] });
 
 // Thông tin lễ cưới: panel #f6eadd bo 13, đổ bóng 4px 4px 8px.
 panel("details", [170, Y(953), 560, 992], 13, "details");
@@ -124,7 +127,8 @@ tc("ceremony-year", "2026", 450, Y(1829), 80, 36, { size: 24 });
 tc("ceremony-lunar", "(TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ)", 450, Y(1885), 420, 20, { size: 14, color: MUTED, letterSpacing: 3.5 });
 
 // Album: băng ảnh 3D rộng hơn khối (ảnh hai bên tràn ra), mũi tên ở mép khối 600px.
-art("album-leaf-background", "leaf-background", [330, Y(1901), 1049, 1180], { opacity: 10, phone: [150, 1700, 500, 560] });
+// Lá lớn nền xoay 38 độ (tâm 854, 2491; gốc 413x1175 độ mờ 10%).
+art("album-leaf-background", "leaf-background", [647, 2008, 413, 1175], { opacity: 10, rotation: 38, phone: [150, 1700, 500, 560] });
 tc("album-heading", "ALBUM ẢNH", 450, Y(1989), 200, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
 add("Album", "wedding-album", [150, Y(2035), 600, 552], {
   images: Array.from({ length: 8 }, (_, index) => `${root}/photo-${index + 1}.webp`),
@@ -133,7 +137,7 @@ add("Album", "wedding-album", [150, Y(2035), 600, 552], {
 
 // Tiệc cưới: panel, ngày giờ, lịch nền nâu, nút xác nhận.
 panel("reception", [170, Y(2627), 560, 935], 10, "reception");
-art("reception-leaf-accent", "leaf-background", [623, Y(2748), 236, 467], { phone: [287, 2370, 90, 210] });
+art("reception-leaf-accent", "leaf-background", [662, 2862, 157, 446], { flipX: true, rotation: -10.57, phone: [287, 2370, 90, 210] });
 art("reception-flowers", "flower2-decoration", [52, Y(3201), 179, 416], { float: true, phone: [0, 2650, 90, 210] });
 tc("reception-heading", "THÔNG TIN TIỆC CƯỚI", 450, Y(2667), 300, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
 tc("reception-intro", "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:", 450, Y(2717), 400, 28, { size: 20 });
@@ -172,7 +176,7 @@ add("DressCode", "dress-code", [280, Y(4223), 340, 125], {
   heading: "DRESS CODE", subtitle: "Trang phục dự tiệc", headingColor: ink, subtitleColor: MUTED,
   swatchShape: "circle", swatchSize: 48, swatchGap: 24, colors: ["#001a08", "#e1bc7c", "#3b5d3b", "#f5e6c8"],
 }, {}, 0, [18, 3660, 339, 150]);
-art("schedule-flower", "flower2-decoration", [653, Y(4341), 193, 367], { float: true, flipX: true, phone: [296, 3730, 77, 195] });
+art("schedule-flower", "flower2-decoration", [674, 4452, 151, 351], { float: true, flipX: true, rotation: -6.94, phone: [296, 3730, 77, 195] });
 
 // Lịch trình: bốn mốc giờ canh phải đến x=410, biểu tượng bên trái, nhãn bên phải đường dọc có chấm.
 panel("schedule", [170, Y(4409), 560, 405], 10, "schedule");
@@ -190,7 +194,7 @@ schedule.forEach(([time, label, icon, ty, ly, dot], i) => {
 });
 
 // Sổ lưu bút: giấy ghi chú, ô nhập và 10 lời chúc mẫu (thẻ trắng 55%, viền nâu 33%, bo 8).
-art("guestbook-leaf-background", "leaf-background", [-429, Y(4700), 1003, 1129], { opacity: 10, phone: [-60, 4240, 485, 670] });
+art("guestbook-leaf-background", "leaf-background", [-125, 4807, 395, 1124], { opacity: 10, rotation: 38, phone: [-60, 4240, 485, 670] });
 art("guestbook-paper-note", "paper-note", [125, Y(4915), 650, 478], { opacity: 95, fit: "cover", phone: [10, 4315, 355, 330] });
 tc("guestbook-heading", "SỔ LƯU BÚT", 450, Y(4982), 200, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
 const wishes = formPresets.find(({ id }) => id === "wishes")!;
