@@ -11,6 +11,8 @@ export const BURST_PALETTES = {
   "Đỏ rượu": ["#a8323b", "#ece4d8", "#c9a24a", "#7a1f26"],
   // Bốn màu lá của trang Hoa Mộc Xanh (đọc từ 32 hạt pháo của trang mẫu).
   "Lá xanh": ["#6b8040", "#8bc34a", "#a5c862", "#c8dfa0"],
+  // Bốn màu pháo của trang Minimalism Nâu (đọc từ 32 hạt của trang mẫu).
+  "Nâu be": ["#c9a97e", "#917f77", "#b89b78", "#e6d6c4"],
 } as const;
 export type BurstPalette = keyof typeof BURST_PALETTES;
 export const BURST_PALETTE_NAMES = Object.keys(BURST_PALETTES) as BurstPalette[];
