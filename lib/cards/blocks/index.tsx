@@ -55,6 +55,7 @@ const renderAlbum: Renderer = ({ props, metadata }) => (
     radius={number(props.radius, 16, 0, 48)}
     dotColor={typeof props.dotColor === "string" ? props.dotColor : albumBlock.defaultProps.dotColor as string}
     startAt={number(props.startAt, 1, 1, 30)}
+    spread={props.spread === true}
     mode={modeOf(metadata)}
   />
 );
