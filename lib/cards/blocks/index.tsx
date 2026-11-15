@@ -9,7 +9,7 @@ import { MapView } from "@/components/blocks/map-view";
 import { PhotoFrameView } from "@/components/blocks/photo-frame-view";
 import { albumBlock, cleanImages } from "./album";
 import { cardDefinitions } from "./definitions";
-import { DECORATION_IDLE_EFFECTS } from "./decoration";
+import { DECORATION_HOVER_EFFECTS, DECORATION_IDLE_EFFECTS, hoverGroupId } from "./decoration";
 import { calendarDefinitions, MARK_SHAPES } from "./calendar";
 import { FRAME_WIDTH_MAX, FRAME_ZOOM, photoFrameDefinitions } from "./photo-frame";
 import { DRESS_CODE_DEFAULT_COLORS, DRESS_CODE_MAX_COLORS } from "./dress-code";
@@ -157,6 +157,8 @@ const renderForm: Renderer = ({ id, props, metadata, theme }) => (
     fields={cleanFields(props.fields)}
     publicList={cleanPublicList(props.publicList)}
     color={paint(props.color, "#511419", theme)}
+    fieldColor={paint(props.fieldColor, "#666666", theme)}
+    fieldBorderColor={paint(props.fieldBorderColor, "#d1d5db", theme)}
     padding={number(props.padding, 16, 0, 40)}
     compact={props.compact === true}
     mode={modeOf(metadata)}
@@ -177,7 +179,7 @@ const renderDressCode: Renderer = ({ props, theme }) => (
   />
 );
 
-const renderDecoration: Renderer = ({ id, props, metadata }) => {
+const renderDecoration: Renderer = ({ id, props, metadata, theme }) => {
   const openingId = metadata && typeof metadata === "object" && !Array.isArray(metadata)
     ? (metadata as Record<string, unknown>).giftOpeningId
     : undefined;
@@ -190,6 +192,13 @@ const renderDecoration: Renderer = ({ id, props, metadata }) => {
     floatMotion={props.floatMotion === true}
     idle={DECORATION_IDLE_EFFECTS.includes(props.idleEffect as never) ? props.idleEffect as (typeof DECORATION_IDLE_EFFECTS)[number] : "Không"}
     shineRadius={number(props.shineRadius, 24, 0, 200)}
+    hoverEffect={DECORATION_HOVER_EFFECTS.includes(props.hoverEffect as never) ? props.hoverEffect as (typeof DECORATION_HOVER_EFFECTS)[number] : "Không"}
+    hoverGroup={hoverGroupId(props.hoverGroup) || hoverGroupId(id)}
+    hoverTime={number(props.hoverTime, 1.6, 0.3, 5)}
+    hoverDelay={number(props.hoverDelay, 0, 0, 3)}
+    hoverRise={number(props.hoverRise, 55, 10, 200)}
+    hoverSway={number(props.hoverSway, 14, -60, 60)}
+    tintColor={props.tint === true ? paint(props.tintColor, "#e8f0e4", theme) : ""}
     opening={openingId === id}
   />;
 };
@@ -216,7 +225,7 @@ const renderBurst: Renderer = ({ props, metadata }) => <BurstView config={readBu
 
 const renderCurvedText: Renderer = ({ props, theme }) => (
   <div style={{ position: "relative", width: "100%", height: "100%", color: paint(props.color, "#511419", theme), fontFamily: stackOf(props.font) || "inherit" }}>
-    <CurvedText value={text(props.text, "")} amount={number(props.amount, 60, CURVE_LIMITS.amount.min, CURVE_LIMITS.amount.max)} size={number(props.size, 18, CURVE_LIMITS.size.min, CURVE_LIMITS.size.max)} bold={props.bold === true} italic={props.italic === true} underline={false} />
+    <CurvedText value={text(props.text, "")} amount={number(props.amount, 60, CURVE_LIMITS.amount.min, CURVE_LIMITS.amount.max)} size={number(props.size, 18, CURVE_LIMITS.size.min, CURVE_LIMITS.size.max)} bold={props.bold === true} italic={props.italic === true} underline={false} circular={props.layout === "Nửa tròn"} radius={number(props.radius, 105, 100, 300)} letterSpacing={number(props.letterSpacing, 0, 0, 1)} />
   </div>
 );
 

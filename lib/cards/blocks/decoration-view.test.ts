@@ -5,6 +5,14 @@ import { DecorationView } from "@/components/blocks/decoration-view";
 
 const html = (motion: boolean) => renderToStaticMarkup(createElement(DecorationView, { src: "https://res.cloudinary.com/demo/image/upload/gift.png", alt: "Hộp quà", fit: "contain", motion }));
 
+it("recolors the asset's alpha mask and keeps its description", () => {
+  const out = renderToStaticMarkup(createElement(DecorationView, { src: "/demo/song-hy-xanh/chu-hy.webp", alt: "Chữ Song Hỷ", fit: "contain", motion: false, tintColor: "#d8efd5" }));
+  expect(out).toContain('aria-label="Chữ Song Hỷ"');
+  expect(out).toContain("background:#d8efd5");
+  expect(out).toContain("mask-image:url(");
+  expect(out).not.toContain("<img");
+});
+
 describe("the gift box (Decoration with motion)", () => {
   const out = html(true);
 
@@ -53,5 +61,33 @@ describe("idle effects of a Decoration", () => {
     expect(out).toContain("width:23%");
     expect(out).toContain("border-radius:24px");
     expect(out).not.toContain("<img");
+  });
+});
+
+describe("hover effects of a Decoration", () => {
+  const view = (hoverEffect: "Không" | "Nảy lên" | "Bay lên rồi hiện lại" | "Pháo giấy", hoverGroup = "qua") =>
+    renderToStaticMarkup(createElement(DecorationView, { src: "https://res.cloudinary.com/demo/image/upload/box.png", alt: "", fit: "contain", motion: false, hoverEffect, hoverGroup }));
+
+  it("adds nothing when the effect is off", () => {
+    expect(view("Không")).not.toContain("data-cm-hg");
+  });
+
+  it("pops the box like the template, shared by group", () => {
+    const out = view("Nảy lên");
+    expect(out).toContain('data-cm-hg="qua"');
+    expect(out).toContain("cubic-bezier(.34, 1.56, .64, 1)");
+    expect(out).toContain('body:has([data-cm-hg="qua"]:hover)');
+  });
+
+  it("flies small pieces up and back", () => {
+    expect(view("Bay lên rồi hiện lại")).toContain("cm-hover-fly");
+  });
+
+  it("shoots eight confetti pieces", () => {
+    expect(view("Pháo giấy").match(/--cm-cx:/g)).toHaveLength(8);
+  });
+
+  it("keeps only safe characters in the group name", () => {
+    expect(view("Nảy lên", 'a"]{x')).toContain('data-cm-hg="ax"');
   });
 });
