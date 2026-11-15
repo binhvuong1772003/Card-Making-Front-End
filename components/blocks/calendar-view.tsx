@@ -18,6 +18,16 @@ export interface CalendarViewProps {
   size: number;
   font: string;
   titleFont: string;
+  /** Chữ riêng của từng phần; 0 thì tính theo `size` như cũ. */
+  titleSize: number;
+  titleWeight: number;
+  titleSpacing: number;
+  titleGap: number;
+  weekSize: number;
+  weekWeight: number;
+  weekGap: number;
+  dayWeight: number;
+  eventGap: number;
   innerFrame: boolean;
   padding: number;
   /** Trong editor, ngày sai hoặc trống hiện lời nhắc; ở trang thật thì không hiện gì. */
@@ -52,7 +62,7 @@ function Mark({ shape, color }: { shape: MarkShape; color: string }) {
 }
 
 export function CalendarView(props: CalendarViewProps) {
-  const { date, sundayFirst, showTitle, lines, innerFrame, markShape, markColor, markTextColor, color, weekColor, size, font, titleFont, padding, editing, live, eventButton } = props;
+  const { date, sundayFirst, showTitle, lines, innerFrame, markShape, markColor, markTextColor, color, weekColor, size, font, titleFont, padding, editing, live, eventButton, titleSize, titleWeight, titleSpacing, titleGap, weekSize, weekWeight, weekGap, dayWeight, eventGap } = props;
   const whole = monthGrid(date, sundayFirst);
   if (!whole) {
     if (!editing) return null;
@@ -84,9 +94,9 @@ export function CalendarView(props: CalendarViewProps) {
     >
       {innerFrame && <span aria-hidden="true" style={{ position: "absolute", inset: 6, border: `1px solid ${color}73`, pointerEvents: "none" }} />}
       {showTitle && (
-        <div style={{ fontFamily: titleFont || bodyFont, fontSize: size * 1.5, lineHeight: 1.2, paddingBottom: size * 0.6 }}>{grid.title}</div>
+        <div style={{ fontFamily: titleFont || bodyFont, fontSize: titleSize || size * 1.5, fontWeight: titleWeight, letterSpacing: titleSpacing || undefined, lineHeight: 1.2, paddingBottom: titleGap || size * 0.6 }}>{grid.title}</div>
       )}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", color: weekColor, fontSize: size * 0.8, fontWeight: 600, letterSpacing: "0.04em", paddingBottom: size * 0.3 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", color: weekColor, fontSize: weekSize || size * 0.8, fontWeight: weekWeight, letterSpacing: weekSize ? 0 : "0.04em", paddingBottom: weekGap || size * 0.3 }}>
         {grid.weekdays.map((name) => (
           <div key={name}>{name}</div>
         ))}
@@ -115,7 +125,7 @@ export function CalendarView(props: CalendarViewProps) {
                 fontSize: size,
                 fontVariantNumeric: "tabular-nums",
                 color: marked ? markTextColor : color,
-                fontWeight: marked ? 600 : 400,
+                fontWeight: marked ? 600 : dayWeight,
                 ...(lines ? { boxShadow: `inset -1px -1px 0 ${line}` } : {}),
               }}
             >
@@ -126,7 +136,7 @@ export function CalendarView(props: CalendarViewProps) {
         })}
       </div>
       {eventButton.trim() && (
-        <div style={{ flex: "none", paddingTop: size * 0.8 }}>
+        <div style={{ flex: "none", paddingTop: eventGap || size * 0.8 }}>
           <CalendarEventButton
             event={{ date, time: props.eventTime, minutes: props.eventMinutes, title: props.eventTitle, place: props.eventPlace, note: props.eventNote }}
             label={eventButton.trim()}

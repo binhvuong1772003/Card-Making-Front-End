@@ -84,6 +84,8 @@ const renderMap: Renderer = ({ props, metadata, theme }) => (
   />
 );
 
+const fontWeightOf = (value: unknown, fallback: number): number => { const n = Number(value); return Number.isFinite(n) && n >= 100 && n <= 900 ? n : fallback; };
+
 const renderCalendar: Renderer = ({ props, metadata, theme }) => (
   <CalendarView
     date={text(props.date, "")}
@@ -97,6 +99,15 @@ const renderCalendar: Renderer = ({ props, metadata, theme }) => (
     color={paint(props.color, "#511419", theme)}
     weekColor={paint(props.weekColor, "#8a5a5e", theme)}
     size={number(props.size, 16, 10, 32)}
+    titleSize={number(props.titleSize, 0, 0, 60)}
+    titleWeight={fontWeightOf(props.titleWeight, 400)}
+    titleSpacing={number(props.titleSpacing, 0, 0, 8)}
+    titleGap={number(props.titleGap, 0, 0, 80)}
+    weekSize={number(props.weekSize, 0, 0, 40)}
+    weekWeight={fontWeightOf(props.weekWeight, 600)}
+    weekGap={number(props.weekGap, 0, 0, 80)}
+    dayWeight={fontWeightOf(props.dayWeight, 400)}
+    eventGap={number(props.eventGap, 0, 0, 160)}
     font={stackOf(props.font)}
     titleFont={stackOf(props.titleFont)}
     innerFrame={props.innerFrame === true}
