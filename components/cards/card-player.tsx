@@ -58,17 +58,12 @@ function ParallaxStyle({ root, active }: { root: TreeNode; active: boolean }) {
   const css = useMemo(() => parallaxCss(root), [root]);
   useEffect(() => {
     if (!css || !active || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let frame: number | null = null;
-    const update = () => {
-      frame = null;
-      document.documentElement.style.setProperty("--cm-scroll", String(window.scrollY));
-    };
-    const onScroll = () => { if (frame === null) frame = requestAnimationFrame(update); };
+    // Sự kiện cuộn đã tới theo từng khung hình nên đặt biến thẳng trong bộ nghe, không cần requestAnimationFrame.
+    const update = () => document.documentElement.style.setProperty("--cm-scroll", String(window.scrollY));
     update();
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", update, { passive: true });
     return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (frame !== null) cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", update);
       document.documentElement.style.removeProperty("--cm-scroll");
     };
   }, [css, active]);
