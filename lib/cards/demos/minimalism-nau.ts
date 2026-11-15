@@ -132,7 +132,7 @@ art("album-leaf-background", "leaf-background", [647, 2008, 413, 1175], { opacit
 tc("album-heading", "ALBUM ẢNH", 450, Y(1989), 200, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
 add("Album", "wedding-album", [150, Y(2035), 600, 552], {
   images: Array.from({ length: 8 }, (_, index) => `${root}/photo-${index + 1}.webp`),
-  autoplay: false, interval: 3, startAt: 1, lightbox: true, radius: 16, dotColor: ink, spread: true,
+  autoplay: false, interval: 3, startAt: 1, lightbox: true, radius: 16, dotColor: ink, spread: 150,
 }, {}, 0, [10, 1825, 355, 360]);
 
 // Tiệc cưới: panel, ngày giờ, lịch nền nâu, nút xác nhận.
@@ -158,7 +158,7 @@ add("Calendar", "wedding-calendar", [269, Y(3104), 362, 380], {
   date: "2026-01-03", color: LIGHT, weekColor: LIGHT, markColor: "#ffffff", markTextColor: "#333333",
   markShape: "Tim đầy", markWeight: "700", markSize: 12, font: bodyFont, titleFont: scriptFont, size: 13, titleSize: 24,
   titleWeight: "400", titleSpacing: 0.6, titleGap: 0, weekSize: 11, weekWeight: "400", weekGap: 0,
-  dayWeight: "400", padding: 16, lines: false, innerFrame: false, showTitle: true,
+  dayWeight: "400", padding: 16, lines: false, weekLine: true, eventStyle: "Liên kết", eventColor: "#7c6a60", innerFrame: false, showTitle: true,
   eventButton: "Thêm vào lịch", eventTitle: "Đám cưới Nguyễn Hoàng Nam & Trần Thảo Vy", eventTime: "18:00", eventGap: 40,
   eventPlace: "Trung Tâm Hội Nghị White Palace, TP. Hồ Chí Minh",
 }, {}, 0, [26, 2710, 323, 360]);
@@ -224,7 +224,8 @@ sampleWishes.forEach(([name, message], i) => {
 });
 
 // Gift section. Every decorative present remains its own node and can be moved or removed.
-art("gift-house-background", "house-background", [-179, Y(6455), 1257, 1239], { opacity: 8, phone: [-45, 5660, 465, 320] });
+// Nhà nền cuối trang: gốc bị cắt ở mép dưới trang (cao 1239, chỉ thấy 561px đầu), nên dùng ảnh đã cắt để trang không dài thêm.
+art("gift-house-background", "house-background", [-179, Y(6455), 1257, 561], { opacity: 8, src: `${root}/house-background-bottom.webp`, phone: [-45, 5660, 465, 320] });
 tc("gift-heading", "HỘP QUÀ MỪNG", 450, Y(6455), 240, 30, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
 // Hộp quà: số đo đọc từ nút "Nhấn để mở" (260x280, trái x=320, trên y=6605). Hộp chính và bảy hộp nhỏ tách riêng,
 // rê chuột cả nhóm "qua" (hộp nảy lên, hộp nhỏ bay lên rồi hiện lại, pháo giấy), bóng thở và bốn ngôi sao chớp lệch pha 0 / 0,6 / 1,2 / 1,7s.
@@ -250,11 +251,12 @@ GIFT_MINIS.slice(4).forEach(([id, asset, cx, cy, w, h, rotation, phone, extra]) 
   star.props = { ...star.props, alt: "Ngôi sao" };
 });
 text("gift-open-hint", "Nhấn để mở", [GIFT_LEFT + 95 - 35, GIFT_TOP + 264, 139, 15], { size: 12, color: ink, font: "system-ui, 'Gotham', sans-serif", phone: [118, 5985, 140, 18] });
+tc("footer-brand", "♡ cardmaking.com", 450, Y(6881), 160, 16, { size: 12, font: "system-ui, sans-serif" });
 tc("thank-you", "Sự hiện diện của quý khách là niềm vui của gia đình chúng tôi!", 450, Y(6821), 520, 20, { size: 13 });
 
 const pageData: PageData = {
   ...emptyPage(),
-  root: nameLayers({ ...emptyPage().root, styles: { background: paper, minHeight: 7200, phoneMinHeight: 6200 }, children: nodes }),
+  root: nameLayers({ ...emptyPage().root, styles: { background: paper, minHeight: 7120, phoneMinHeight: 6200 }, children: nodes }),
   theme: { colors: { primary: dark, secondary: ink, paper }, fonts: { body: bodyFont, heading: titleFont } },
   meta: { title: "Minimalism Nâu · Nguyễn Hoàng Nam & Trần Thảo Vy", description: "Thiệp cưới phong cách Minimalism Nâu." },
 };
