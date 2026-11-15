@@ -238,3 +238,16 @@ Popup của nguồn là một hộp riêng (`modal-box`), không phải một tr
 - **Mã QR của nguồn** sinh ở `/api/qr-png?d=<chuỗi VietQR>` (PNG 1024px). Lấy bằng cách tải trong trình duyệt như mục 10 và dùng làm mã minh hoạ; mã này chứa tài khoản mẫu của nguồn, không dùng khi phát hành.
 - **Quy tắc khung popup của CardMaking (dễ sai):** popup rộng từ 640px trở xuống dùng canvas 375, trên 640px dùng canvas 960 thu theo `zoom = rộng / 960`. Muốn một popup có thanh đầu tràn mép, thiết kế trên canvas 960, nhân số đo gốc với 960/rộng gốc, và đặt `popup.width` từ 641.
 - **Chưa làm:** nút "Lưu QR" mới là hình, chưa tải ảnh; nút đóng của khung đổi sang trắng bằng CSS theo mã trang `gift-details` (hạn chế đã biết).
+
+
+## 15. Trang trong Minimalism Nâu: những chỗ dễ sai
+
+Bản dựng đầu chỉ ước lượng nên sai ở các điểm sau; bản sửa đọc mọi số đo từ DOM (cột 900px, y trang = y khung nội dung + 104,5).
+
+- **Ảnh đôi ở đầu trang:** ảnh 374x569 xoay -4,78 độ trong khung bọc nền trắng, tâm lệch (-13, -26) so với tâm khung `frame-avatar` 520x739 vẽ đè lên. Không dùng bbox 420x598 (đã gồm góc xoay).
+- **Chữ tên đầu trang:** "THE WEDDING OF" 16px Cormorant, "Hoàng Nam & Thảo Vy" Times nghiêng 46px, ở y -55 đến 54 của khung nội dung (nằm trên khung ảnh).
+- **Panel giấy:** nền `#f6eadd`, bo 13 (panel đầu) hoặc 10, bóng `4px 4px 8px rgba(0,0,0,.18)`, ảnh giấy nhân màu 50%. Trộn sẵn thành `panel-details/reception/schedule.webp` bằng sharp; hai lớp lá và nhà nền hoà vào trang, không phủ khối đặc lên.
+- **Cỡ chữ thật:** tên cha mẹ 12px, địa chỉ 10px, tiêu đề mục 20px Times đậm giãn 0,6; tên cô dâu chú rể 46px EB Garamond; giờ 30px; ngày 40px.
+- **Lịch:** thẻ nâu `#7c6a60` 362x306 bo 10, chữ `#ded9d7`, tên tháng Nautigal 24px, ngày chọn là tim trắng số `#333`; nút xác nhận 202x36 nền nâu chữ `#ded9d7` 14px.
+- **Lịch trình:** giờ canh phải đến x=410, biểu tượng 36px ở x=303 (hàng 2-4), đường dọc x=450 có chấm 10px, nhãn bên phải x=490.
+- **Album:** khối 600px, mũi tên ở mép khối, ảnh hai bên tràn ra ngoài (thuộc tính `spread`).

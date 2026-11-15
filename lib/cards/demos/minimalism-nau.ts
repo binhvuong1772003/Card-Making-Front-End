@@ -59,141 +59,169 @@ function heading(id: string, value: string, y: number, width = 850, size = 28) {
   text(id, value, [(900 - width) / 2, y, width, 42], { size, font: titleFont, bold: true, color: ink });
 }
 
-// Shared botanical and architecture backdrops remain separately selectable.
-art("leaf-paper-backdrop", "leaf-background", [-216, 20, 467, 1328], { opacity: 12, float: true, phone: [-50, 5, 230, 850] });
-art("house-paper-backdrop", "house-background", [-135, 320, 1170, 1150], { opacity: 8, phone: [-60, 260, 490, 730] });
+// Số đo đọc trực tiếp từ DOM trang gốc (cột 900px; y gốc tính từ khung nội dung, trang bắt đầu cao hơn 104,5px). Mọi y bên dưới là y của trang.
+const Y = (v: number) => Math.round(v + 104.5);
+const KICK = "#827771";
+const MUTED = "#918077";
+const LIGHT = "#ded9d7";
+const corm = "'Cormorant Garamond', serif";
+const madi = "'Ms Madi', cursive";
+// Chữ căn giữa theo tâm cx của bản gốc; điện thoại giữ tâm lệch theo tỉ lệ 375/900.
+const tc = (id: string, value: string, cx: number, y: number, w: number, h: number, o: Parameters<typeof text>[3] = {}) => {
+  const pw = Math.min(w, 345);
+  return text(id, value, [Math.round(cx - w / 2), y, w, h], { ...o, phone: o.phone ?? [Math.round(187.5 + (cx - 450) * 0.42 - pw / 2), Math.round(y * 0.86), pw, h] });
+};
+const panelShadow = { x: 4, y: 4, blur: 8, spread: 0, color: "#000000", opacity: 18 };
+const panel = (id: string, rect: Rect, radius: number, asset: string) => {
+  shape(`${id}-panel`, rect, "#f6eadd", { borderRadius: radius, shadow: panelShadow }, "rectangle", [8, Math.round(rect[1] * 0.86), 359, Math.round(rect[3] * 0.82)]);
+  // Gốc: ảnh giấy nhân màu 50% lên nền #f6eadd; ở đây hoạ tiết đã trộn sẵn thành một ảnh để người dùng thay được.
+  art(`${id}-paper`, "", [rect[0], rect[1], rect[2], rect[3]], { src: `${root}/panel-${asset}.webp`, fit: "cover", phone: [8, Math.round(rect[1] * 0.86), 359, Math.round(rect[3] * 0.82)] });
+};
 
-// Hero image + decorative surround (the photo/frame can each be replaced independently).
-shape("hero-paper", [0, 0, 900, 1055], paper);
-add("Image", "hero-photo", [226, 234, 420, 598], { src: `${root}/photo-1.webp`, alt: "Ảnh cưới của Hoàng Nam và Thảo Vy", fit: "cover" }, {}, 0, [47, 152, 245, 350]);
-art("hero-avatar-frame", "frame-avatar", [189, 190, 520, 739], { phone: [27, 112, 270, 408] });
-art("hero-flower-left", "flower2-decoration", [163, 553, 177, 411], { float: true, rotation: -4, phone: [9, 346, 104, 242] });
-art("hero-leaf-accent", "leaf-background", [620, 200, 180, 380], { opacity: 14, phone: [284, 125, 78, 220] });
-text("hero-kicker", "THE WEDDING OF", [200, 22, 500, 34], { size: 17, color: ink, font: bodyFont, letterSpacing: 5 });
+// Lớp nền chung: lá và nhà nền hoà vào trang (gốc nhân màu, độ mờ 8-12%).
+art("leaf-paper-backdrop", "leaf-background", [-215, Y(-82), 467, 1328], { opacity: 12, float: true, phone: [-50, 5, 230, 850] });
+art("house-paper-backdrop", "house-background", [-134, Y(214), 1167, 1151], { opacity: 8, phone: [-60, 260, 490, 730] });
 
-// Wedding details panel. Original page measurements: panel y≈1057, 560×992; headline y≈1093.
-shape("details-panel", [170, 1057, 560, 992], "#fffaf5", { borderRadius: 2, shadow: { x: 0, y: 12, blur: 28, spread: 0, color: dark, opacity: 12 } }, "rectangle", [8, 910, 359, 810]);
-art("details-paper-texture", "paper", [170, 1057, 560, 992], { opacity: 50, fit: "cover", phone: [8, 910, 359, 810] });
-art("details-flower-left", "flower2-decoration", [55, 1250, 175, 425], { float: true, phone: [-5, 1040, 104, 245] });
-art("details-flower-right", "flower2-decoration", [645, 1682, 179, 416], { float: true, phone: [290, 1330, 100, 238] });
-heading("families-heading", "THÔNG TIN LỄ CƯỚI", 1093, 500, 29);
-text("groom-family-label", "Ông Bà", [205, 1164, 210, 26], { size: 16, phone: [15, 1000, 165, 24] });
-text("groom-family-father", "Trần Quốc Hưng", [205, 1190, 210, 30], { size: 18, bold: true, color: dark, phone: [10, 1025, 170, 28] });
-text("groom-family-mother", "Nguyễn Thị Hồng", [205, 1220, 210, 30], { size: 18, bold: true, color: dark, phone: [10, 1055, 170, 28] });
-text("groom-family-address", "Quận 1, TP. Hồ Chí Minh", [195, 1255, 230, 25], { size: 13, phone: [8, 1088, 175, 34] });
-shape("family-divider", [449, 1160, 1, 112], "#c7b7a8", {}, "rectangle", [187, 1000, 1, 120]);
-text("bride-family-label", "Ông Bà", [485, 1164, 210, 26], { size: 16, phone: [195, 1000, 165, 24] });
-text("bride-family-father", "Lê Văn Thành", [485, 1190, 210, 30], { size: 18, bold: true, color: dark, phone: [190, 1025, 170, 28] });
-text("bride-family-mother", "Phạm Thị Lan", [485, 1220, 210, 30], { size: 18, bold: true, color: dark, phone: [190, 1055, 170, 28] });
-text("bride-family-address", "Quận 3, TP. Hồ Chí Minh", [475, 1255, 230, 25], { size: 13, phone: [190, 1088, 175, 34] });
-text("invite-copy", "TRÂN TRỌNG BÁO TIN\nLỄ THÀNH HÔN CỦA CON CHÚNG TÔI", [220, 1320, 460, 70], { size: 23, font: titleFont, color: dark, phone: [20, 1145, 335, 60] });
-text("groom-name", "Nguyễn Hoàng Nam", [205, 1415, 490, 80], { size: 58, font: displayFont, color: dark, phone: [15, 1220, 345, 68] });
-text("groom-role", "TRƯỞNG NAM", [300, 1505, 300, 24], { size: 13, letterSpacing: 2, phone: [70, 1295, 235, 20] });
-text("couple-ampersand", "&", [380, 1550, 140, 45], { size: 36, font: scriptFont, color: dark, phone: [137, 1335, 100, 38] });
-text("bride-name", "Trần Thảo Vy", [205, 1600, 490, 80], { size: 58, font: displayFont, color: dark, phone: [15, 1372, 345, 68] });
-text("bride-role", "ÚT NỮ", [300, 1690, 300, 24], { size: 13, letterSpacing: 2, phone: [70, 1445, 235, 20] });
-text("ceremony-place", "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA", [245, 1735, 410, 66], { size: 23, font: titleFont, color: dark, phone: [25, 1480, 325, 54] });
-text("ceremony-time-label", "VÀO LÚC 09:00", [220, 1820, 220, 30], { size: 16, phone: [25, 1540, 155, 28] });
-text("ceremony-day", "THỨ BẢY", [475, 1820, 200, 30], { size: 16, phone: [195, 1540, 155, 28] });
-text("ceremony-date", "03  │  THÁNG 01\n       2026", [300, 1870, 300, 92], { size: 28, font: bodyFont, color: dark, phone: [90, 1580, 195, 76] });
-text("ceremony-lunar", "(TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ)", [230, 1970, 440, 28], { size: 15, letterSpacing: 1, phone: [25, 1660, 325, 26] });
+// Đầu trang: chữ tên phía trên, ảnh đôi trong khung polaroid, hoa khô.
+tc("hero-kicker", "THE WEDDING OF", 450, Y(-55), 240, 24, { size: 16, color: KICK, font: corm, bold: true, letterSpacing: 2.6 });
+tc("hero-name-1", "Hoàng Nam", 345, Y(-15), 260, 69, { size: 46, color: KICK, font: titleFont });
+nodes[nodes.length - 1]!.props = { ...nodes[nodes.length - 1]!.props, italic: true };
+tc("hero-amp", "&", 486, Y(-7), 60, 54, { size: 54, color: MUTED, font: scriptFont });
+tc("hero-name-2", "Thảo Vy", 592, Y(-15), 190, 69, { size: 46, color: KICK, font: titleFont });
+nodes[nodes.length - 1]!.props = { ...nodes[nodes.length - 1]!.props, italic: true };
+// Ảnh 374x569 xoay -4,78 độ (nền trắng, cắt theo khung), tâm lệch (-13, -26) so với tâm khung 520x739; khung nằm trên ảnh.
+add("Image", "hero-photo", [250, 249, 374, 569], { src: `${root}/photo-1.webp`, alt: "Ảnh cưới của Hoàng Nam và Thảo Vy", fit: "cover" }, { background: "#ffffff" }, -4.78, [58, 155, 194, 295]);
+art("hero-avatar-frame", "frame-avatar", [190, Y(86), 520, 739], { phone: [27, 112, 270, 384] });
+art("hero-flower-left", "flower2-decoration", [164, Y(449), 177, 411], { float: true, phone: [9, 346, 104, 242] });
 
-// Source HTML shows one 3D coverflow Album with 8 photos; keep the gallery as one editable Album block.
-heading("album-heading", "ALBUM ẢNH", 2089);
-add("Album", "wedding-album", [150, 2159, 600, 552], {
+// Thông tin lễ cưới: panel #f6eadd bo 13, đổ bóng 4px 4px 8px.
+panel("details", [170, Y(953), 560, 992], 13, "details");
+tc("families-heading", "THÔNG TIN LỄ CƯỚI", 450, Y(993), 260, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.5 });
+const family = (side: "groom" | "bride", cx: number, father: string, mother: string, address: string) => {
+  tc(`${side}-family-label`, "Ông Bà", cx, Y(1045), 80, 14, { size: 12, color: MUTED });
+  tc(`${side}-family-father`, father, cx, Y(1066), 150, 14, { size: 12, bold: true });
+  tc(`${side}-family-mother`, mother, cx, Y(1087), 150, 14, { size: 12, bold: true });
+  tc(`${side}-family-address`, address, cx, Y(1110), 170, 13, { size: 10, color: MUTED });
+};
+family("groom", 382, "Trần Quốc Hưng", "Nguyễn Thị Hồng", "Quận 1, TP. Hồ Chí Minh");
+family("bride", 518, "Lê Văn Thành", "Phạm Thị Lan", "Quận 3, TP. Hồ Chí Minh");
+shape("family-divider", [450, Y(1040), 1, 90], "#7c6a60", { opacity: 30 }, "rectangle", [187, 1000, 1, 100]);
+tc("invite-copy", "TRÂN TRỌNG BÁO TIN\nLỄ THÀNH HÔN CỦA CON CHÚNG TÔI", 450, Y(1146), 440, 60, { size: 20 });
+tc("groom-name", "Nguyễn Hoàng Nam", 450, Y(1230), 480, 80, { size: 46, font: displayFont });
+tc("groom-role", "TRƯỞNG NAM", 450, Y(1327), 140, 12, { size: 10, color: MUTED, font: corm, letterSpacing: 1.4 });
+tc("couple-ampersand", "&", 450, Y(1357), 60, 53, { size: 35, font: madi });
+tc("bride-name", "Trần Thảo Vy", 450, Y(1426), 480, 80, { size: 46, font: displayFont });
+tc("bride-role", "ÚT NỮ", 450, Y(1523), 100, 12, { size: 10, color: MUTED, font: corm, letterSpacing: 1.4 });
+tc("ceremony-place", "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA", 450, Y(1561), 420, 60, { size: 20, color: MUTED });
+tc("ceremony-time-label", "VÀO LÚC", 450, Y(1629), 120, 27, { size: 18, color: MUTED });
+tc("ceremony-time", "09:00", 450, Y(1684), 100, 45, { size: 30 });
+tc("ceremony-day", "THỨ BẢY", 330, Y(1770), 110, 18, { size: 16 });
+tc("ceremony-bar-1", "|", 397, Y(1767), 20, 24, { size: 24, opacity: 40 });
+tc("ceremony-date-day", "03", 447, Y(1749), 70, 60, { size: 40 });
+tc("ceremony-bar-2", "|", 497, Y(1767), 20, 24, { size: 24, opacity: 40 });
+tc("ceremony-month", "THÁNG 01", 566, Y(1770), 120, 18, { size: 16 });
+tc("ceremony-year", "2026", 450, Y(1829), 80, 36, { size: 24 });
+tc("ceremony-lunar", "(TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ)", 450, Y(1885), 420, 20, { size: 14, color: MUTED, letterSpacing: 3.5 });
+
+// Album: băng ảnh 3D rộng hơn khối (ảnh hai bên tràn ra), mũi tên ở mép khối 600px.
+art("album-leaf-background", "leaf-background", [330, Y(1901), 1049, 1180], { opacity: 10, phone: [150, 1700, 500, 560] });
+tc("album-heading", "ALBUM ẢNH", 450, Y(1989), 200, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
+add("Album", "wedding-album", [150, Y(2035), 600, 552], {
   images: Array.from({ length: 8 }, (_, index) => `${root}/photo-${index + 1}.webp`),
-  autoplay: false, interval: 3, startAt: 1, lightbox: true, radius: 16, dotColor: ink,
+  autoplay: false, interval: 3, startAt: 1, lightbox: true, radius: 16, dotColor: ink, spread: true,
 }, {}, 0, [10, 1825, 355, 360]);
 
-// Reception, calendar and RSVP.
-shape("reception-panel", [170, 2731, 560, 935], "#fffaf5", { borderRadius: 2, shadow: { x: 0, y: 10, blur: 24, spread: 0, color: dark, opacity: 12 } }, "rectangle", [8, 2345, 359, 760]);
-art("reception-paper-texture", "paper", [170, 2731, 560, 935], { opacity: 50, fit: "cover", phone: [8, 2345, 359, 760] });
-art("reception-leaf-accent", "leaf-background", [675, 2850, 235, 465], { opacity: 14, phone: [287, 2370, 90, 210] });
-art("reception-flowers", "flower2-decoration", [65, 3260, 175, 420], { float: true, phone: [0, 2650, 90, 210] });
-heading("reception-heading", "THÔNG TIN TIỆC CƯỚI", 2767, 500);
-text("reception-intro", "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:", [280, 2821, 340, 42], { size: 24, font: bodyFont });
-text("reception-time", "18:00", [350, 2875, 200, 42], { size: 26, bold: true, color: dark });
-text("reception-date", "THỨ BẢY     │     03     │     THÁNG 01\n2026", [260, 2930, 380, 80], { size: 24, color: dark });
-text("reception-lunar", "(TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ)", [265, 3025, 370, 26], { size: 14, letterSpacing: 1 });
-text("arrival", "ĐÓN KHÁCH\n17:30", [280, 3090, 145, 58], { size: 17, color: dark });
-text("banquet", "KHAI TIỆC\n18:00", [475, 3090, 145, 58], { size: 17, color: dark });
-add("Calendar", "wedding-calendar", [280, 3170, 340, 345], {
-  date: "2026-01-03", color: dark, weekColor: ink, markColor: dark, markTextColor: "#fffaf5",
-  markShape: "Tròn", font: bodyFont, titleFont: scriptFont, size: 14, titleSize: 22,
-  titleWeight: "400", titleSpacing: 0, titleGap: 14, weekSize: 12, weekWeight: "400", weekGap: 12,
-  dayWeight: "400", padding: 10, lines: true, innerFrame: false,
-  eventButton: "Thêm vào lịch", eventTitle: "Đám cưới Nguyễn Hoàng Nam & Trần Thảo Vy", eventTime: "18:00",
+// Tiệc cưới: panel, ngày giờ, lịch nền nâu, nút xác nhận.
+panel("reception", [170, Y(2627), 560, 935], 10, "reception");
+art("reception-leaf-accent", "leaf-background", [623, Y(2748), 236, 467], { phone: [287, 2370, 90, 210] });
+art("reception-flowers", "flower2-decoration", [52, Y(3201), 179, 416], { float: true, phone: [0, 2650, 90, 210] });
+tc("reception-heading", "THÔNG TIN TIỆC CƯỚI", 450, Y(2667), 300, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
+tc("reception-intro", "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:", 450, Y(2717), 400, 28, { size: 20 });
+tc("reception-time", "18:00", 450, Y(2767), 100, 45, { size: 30 });
+tc("reception-day", "THỨ BẢY", 342, Y(2853), 100, 18, { size: 16 });
+tc("reception-bar-1", "|", 394, Y(2850), 20, 24, { size: 24, opacity: 40 });
+tc("reception-date-day", "03", 448, Y(2832), 70, 60, { size: 40 });
+tc("reception-bar-2", "|", 504, Y(2850), 20, 24, { size: 24, opacity: 40 });
+tc("reception-month", "THÁNG 01", 556, Y(2853), 110, 18, { size: 16 });
+tc("reception-year", "2026", 450, Y(2912), 80, 36, { size: 24 });
+tc("reception-lunar", "(TỨC NGÀY 15 THÁNG 11 NĂM ẤT TỴ)", 450, Y(2968), 420, 20, { size: 14, color: MUTED, letterSpacing: 3.5 });
+tc("arrival-label", "ĐÓN KHÁCH", 400, Y(3025), 110, 14, { size: 12, color: MUTED, letterSpacing: 0.6 });
+tc("arrival-time", "17:30", 400, Y(3044), 70, 28, { size: 20 });
+tc("banquet-label", "KHAI TIỆC", 507, Y(3025), 100, 14, { size: 12, color: MUTED, letterSpacing: 0.6 });
+tc("banquet-time", "18:00", 507, Y(3044), 70, 28, { size: 20 });
+shape("calendar-card", [269, Y(3104), 362, 306], "#7c6a60", { borderRadius: 10 }, "rectangle", [8, 2810, 359, 306]);
+add("Calendar", "wedding-calendar", [269, Y(3104), 362, 380], {
+  date: "2026-01-03", color: LIGHT, weekColor: LIGHT, markColor: "#ffffff", markTextColor: "#333333",
+  markShape: "Tim đầy", markWeight: "700", markSize: 12, font: bodyFont, titleFont: scriptFont, size: 13, titleSize: 24,
+  titleWeight: "400", titleSpacing: 0.6, titleGap: 0, weekSize: 11, weekWeight: "400", weekGap: 0,
+  dayWeight: "400", padding: 16, lines: false, innerFrame: false, showTitle: true,
+  eventButton: "Thêm vào lịch", eventTitle: "Đám cưới Nguyễn Hoàng Nam & Trần Thảo Vy", eventTime: "18:00", eventGap: 40,
   eventPlace: "Trung Tâm Hội Nghị White Palace, TP. Hồ Chí Minh",
-}, { background: "#f6eadd", borderWidth: 1, borderColor: "#bca995", borderRadius: 4 }, 0, [26, 2710, 323, 328]);
-add("Button", "rsvp-button", [330, 3550, 240, 48], { label: "XÁC NHẬN THAM DỰ", href: "", action: "", payload: {}, fill: dark, textColor: "#fffaf5", shape: "rounded", size: 15, font: bodyFont });
+}, {}, 0, [26, 2710, 323, 360]);
+add("Button", "rsvp-button", [349, Y(3489), 202, 36], { label: "XÁC NHẬN THAM DỰ", href: "", action: "", payload: {}, fill: "#7c6a60", textColor: LIGHT, shape: "pill", size: 14, font: bodyFont });
 
-// Venue/map section, followed by an editable dress-code block.
-shape("venue-panel", [0, 3681, 900, 594], "#fffaf5", { opacity: 96 }, "rectangle", [0, 3165, 375, 515]);
-art("venue-paper-texture", "paper", [170, 3681, 560, 530], { opacity: 48, fit: "cover", phone: [8, 3165, 359, 485] });
-art("venue-house-background", "house-background", [-100, 3622, 1120, 620], { opacity: 8, phone: [-40, 3050, 455, 420] });
-art("venue-flower", "flower2-decoration", [680, 3750, 190, 435], { float: true, flipX: true, phone: [286, 3120, 82, 198] });
-heading("venue-heading", "TIỆC CƯỚI SẼ TỔ CHỨC TẠI", 3713, 600, 28);
-text("venue-name", "Trung Tâm Hội Nghị White Palace", [190, 3760, 520, 38], { size: 22, color: dark });
-text("venue-address", "194 Hoàng Văn Thụ, Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh", [170, 3800, 560, 44], { size: 16 });
-add("Map", "wedding-map", [210, 3860, 480, 340], {
+// Địa điểm: bản đồ bo 15, nút Chỉ đường, dress code.
+art("venue-house-background", "house-background", [-156, Y(3518), 1212, 1195], { opacity: 8, phone: [-40, 3050, 455, 420] });
+tc("venue-heading", "TIỆC CƯỚI SẼ TỔ CHỨC TẠI", 450, Y(3612), 320, 17, { size: 16, font: titleFont, bold: true, letterSpacing: 0.5 });
+tc("venue-address", "Trung Tâm Hội Nghị White Palace,\n194 Hoàng Văn Thụ, Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh", 450, Y(3644), 460, 39, { size: 14, color: MUTED });
+add("Map", "wedding-map", [170, Y(3699), 560, 440], {
   name: "Trung Tâm Hội Nghị White Palace", address: "194 Hoàng Văn Thụ, Phường 9, Quận Phú Nhuận, TP. Hồ Chí Minh",
-  heading: "", button: "Chỉ đường", color: dark, innerFrame: true, padding: 12, zoom: 15,
-}, { borderColor: "#c8b7a8", borderRadius: 4 }, 0, [20, 3200, 335, 240]);
-add("DressCode", "dress-code", [280, 4360, 340, 185], {
-  heading: "DRESS CODE", subtitle: "Trang phục dự tiệc", headingColor: dark, subtitleColor: ink,
-  swatchShape: "circle", swatchSize: 46, swatchGap: 20, colors: ["#8d9d70", "#e7e8e9", "#e8dec6"],
-}, {}, 0, [18, 3660, 339, 185]);
+  heading: "", divider: false, showText: false, button: "Chỉ đường", color: MUTED, innerFrame: false, padding: 0, zoom: 15,
+}, { borderWidth: 0, borderRadius: 15 }, 0, [20, 3200, 335, 300]);
+add("DressCode", "dress-code", [280, Y(4223), 340, 125], {
+  heading: "DRESS CODE", subtitle: "Trang phục dự tiệc", headingColor: ink, subtitleColor: MUTED,
+  swatchShape: "circle", swatchSize: 48, swatchGap: 24, colors: ["#001a08", "#e1bc7c", "#3b5d3b", "#f5e6c8"],
+}, {}, 0, [18, 3660, 339, 150]);
+art("schedule-flower", "flower2-decoration", [653, Y(4341), 193, 367], { float: true, flipX: true, phone: [296, 3730, 77, 195] });
 
-// Five-row schedule with individual editable icons and labels.
-shape("schedule-panel", [170, 4513, 560, 410], "#fffaf5", { borderRadius: 2, shadow: { x: 0, y: 8, blur: 20, spread: 0, color: dark, opacity: 10 } }, "rectangle", [8, 3880, 359, 330]);
-art("schedule-paper", "paper", [170, 4513, 560, 410], { opacity: 48, fit: "cover", phone: [8, 3880, 359, 330] });
-art("schedule-flower", "flower2-decoration", [695, 4447, 195, 370], { float: true, flipX: true, phone: [296, 3730, 77, 195] });
-heading("schedule-heading", "LỊCH TRÌNH NGÀY CƯỚI", 4549, 600, 28);
-shape("schedule-line", [340, 4620, 1, 260], "#b9a99c");
+// Lịch trình: bốn mốc giờ canh phải đến x=410, biểu tượng bên trái, nhãn bên phải đường dọc có chấm.
+panel("schedule", [170, Y(4409), 560, 405], 10, "schedule");
+tc("schedule-heading", "LỊCH TRÌNH NGÀY CƯỚI", 450, Y(4449), 300, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
+shape("schedule-line", [450, Y(4503), 1, 262], "#7c6a60", { opacity: 40 }, "rectangle", [187, 3730, 1, 230]);
 const schedule = [
-  ["17:00", "Đón khách", "gate"], ["18:00", "Khai tiệc", "water"],
-  ["18:30", "Nghi thức cưới", "gate"], ["19:00", "Cắt bánh & nâng ly", "cake"], ["20:30", "Kết thúc tiệc", "water"],
+  ["17:00", "Đón khách", "", 4491, 4495, 4498], ["18:00", "Khai tiệc", "gate", 4558, 4560, 4564],
+  ["18:30", "Nghi thức cưới", "cake", 4623, 4626, 4629], ["19:00", "Cắt bánh & nâng ly", "water", 4689, 4691, 4694], ["20:30", "Kết thúc tiệc", "", 4752, 4757, 4760],
 ] as const;
-schedule.forEach(([time, label, icon], i) => {
-  const y = 4605 + i * 54;
-  art(`schedule-icon-${i + 1}`, icon, [240, y, 38, 42], { phone: [55, Math.round((y - 4500) * 0.9), 24, 28] });
-  text(`schedule-time-${i + 1}`, time, [360, y + 4, 120, 34], { size: 20, color: dark });
-  text(`schedule-label-${i + 1}`, label, [495, y + 4, 230, 34], { size: 18, align: "left" });
+schedule.forEach(([time, label, icon, ty, ly, dot], i) => {
+  text(`schedule-time-${i + 1}`, time, [220, Y(ty), 190, 25], { size: 17, align: "right", letterSpacing: 0.4, phone: [30, Math.round(Y(ty) * 0.86), 130, 25] });
+  text(`schedule-label-${i + 1}`, label, [490, Y(ly), 220, 22], { size: 15, color: MUTED, align: "left", phone: [200, Math.round(Y(ly) * 0.86), 160, 22] });
+  shape(`schedule-dot-${i + 1}`, [445, Y(dot), 10, 10], "#7c6a60", {}, "ellipse", [182, Math.round(Y(dot) * 0.86), 10, 10]);
+  if (icon) art(`schedule-icon-${i + 1}`, icon, [303, Y(ty - 6), 36, 36], { phone: [128, Math.round(Y(ty) * 0.86), 24, 24] });
 });
 
-// Guestbook: native form plus 10 compact sample entries; the published form can grow without reserved blank space.
-art("guestbook-leaf-background", "leaf-background", [-170, 4804, 1000, 1129], { opacity: 9, phone: [-60, 4240, 485, 670] });
-art("guestbook-paper-note", "paper-note", [125, 5019, 650, 478], { opacity: 96, fit: "cover", phone: [10, 4315, 355, 330] });
-heading("guestbook-heading", "SỔ LƯU BÚT", 5082, 500, 29);
+// Sổ lưu bút: giấy ghi chú, ô nhập và 10 lời chúc mẫu (thẻ trắng 55%, viền nâu 33%, bo 8).
+art("guestbook-leaf-background", "leaf-background", [-429, Y(4700), 1003, 1129], { opacity: 10, phone: [-60, 4240, 485, 670] });
+art("guestbook-paper-note", "paper-note", [125, Y(4915), 650, 478], { opacity: 95, fit: "cover", phone: [10, 4315, 355, 330] });
+tc("guestbook-heading", "SỔ LƯU BÚT", 450, Y(4982), 200, 22, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
 const wishes = formPresets.find(({ id }) => id === "wishes")!;
-add("Form", "guestbook-form", [190, 5140, 520, 330], {
+add("Form", "guestbook-form", [266, Y(5030), 368, 260], {
   ...wishes.props, formId: "demo-minimalism-nau-wishes", heading: "", intro: "", button: "GỬI LỜI CHÚC",
-  color: dark, fieldColor: dark, fieldBorderColor: "#9a8177", font: bodyFont, padding: 12, compact: true,
+  color: ink, fieldColor: ink, fieldBorderColor: ink, font: titleFont, padding: 0, compact: true,
   previewSampleCount: 0,
 }, { borderWidth: 0, borderRadius: 0 }, 0, [14, 4430, 347, 310]);
 const sampleWishes = [
   ["Mỹ Linh", "Chúc hai bạn trăm năm hạnh phúc!"],
-  ["Minh Anh", "Chúc hai bạn luôn yêu thương và đồng hành bên nhau."],
-  ["Gia đình cô Hoa", "Chúc mừng ngày trọng đại của hai con."],
-  ["Tuấn Anh", "Chúc đôi uyên ương viên mãn, sớm đón tin vui."],
-  ["Khánh Vy", "Chúc tình yêu của hai bạn luôn đong đầy."],
-  ["Hoài Nam", "Mừng ngày vui, chúc hai bạn bền lâu."],
-  ["Phương Anh", "Chúc hai bạn mãi nắm tay nhau."],
-  ["Thu Hà", "Một ngày thật đẹp và một đời thật vui nhé!"],
-  ["Bảo Ngọc", "Chúc gia đình nhỏ luôn tràn ngập tiếng cười."],
-  ["Quốc Hưng", "Chúc hai bạn hạnh phúc dài lâu."],
+  ["Trọng Nhân", "Chúc hai bạn luôn yêu thương và đồng hành bên nhau."],
+  ["Phương Vy", "Chúc mừng ngày trọng đại của hai bạn."],
+  ["Hải Đăng", "Chúc đôi uyên ương viên mãn, sớm đón tin vui."],
+  ["Ngọc Diệp", "Chúc tình yêu của hai bạn luôn đong đầy."],
+  ["Đức Thịnh", "Mừng ngày vui, chúc hai bạn bền lâu."],
+  ["Lan Anh", "Chúc hai bạn mãi nắm tay nhau."],
+  ["Quốc Bảo", "Một ngày thật đẹp và một đời thật vui nhé!"],
+  ["Thu Hà", "Chúc gia đình nhỏ luôn tràn ngập tiếng cười."],
+  ["Minh Tuấn", "Chúc hai bạn hạnh phúc dài lâu."],
 ] as const;
 sampleWishes.forEach(([name, message], i) => {
-  const y = 5530 + i * 100;
-  shape(`wish-card-${i + 1}`, [145, y, 610, 82], "#fffaf5", { borderWidth: 1, borderColor: "#d7c7bc", borderRadius: 8, opacity: 92 });
-  text(`wish-name-${i + 1}`, name, [165, y + 9, 300, 24], { size: 17, color: dark, bold: true, align: "left" });
-  text(`wish-date-${i + 1}`, "03/01/2026", [535, y + 9, 195, 22], { size: 13, align: "right" });
-  text(`wish-message-${i + 1}`, message, [165, y + 37, 555, 34], { size: 16, align: "left" });
+  const y = Y(5436 + i * 96.7);
+  shape(`wish-card-${i + 1}`, [150, y, 592, 85], "#ffffff", { borderWidth: 1, borderColor: "#c8bfba", borderRadius: 8, opacity: 55 });
+  text(`wish-name-${i + 1}`, name, [167, y + 14, 300, 20], { size: 14, color: ink, bold: true, align: "left", phone: [24, Math.round(y * 0.86) + 10, 200, 20] });
+  text(`wish-date-${i + 1}`, "7:20:27 14/7/2026", [607, y + 17, 118, 16], { size: 12, color: ink, align: "right", phone: [200, Math.round(y * 0.86) + 12, 150, 16] });
+  text(`wish-message-${i + 1}`, message, [167, y + 42, 558, 23], { size: 14, color: ink, align: "left", phone: [24, Math.round(y * 0.86) + 36, 327, 23] });
 });
 
 // Gift section. Every decorative present remains its own node and can be moved or removed.
-art("gift-house-background", "house-background", [-170, 6559, 1210, 600], { opacity: 8, phone: [-45, 5660, 465, 320] });
-heading("gift-heading", "HỘP QUÀ MỪNG", 6559, 520, 29);
+art("gift-house-background", "house-background", [-179, Y(6455), 1257, 1239], { opacity: 8, phone: [-45, 5660, 465, 320] });
+tc("gift-heading", "HỘP QUÀ MỪNG", 450, Y(6455), 240, 30, { size: 20, font: titleFont, bold: true, letterSpacing: 0.6 });
 // Hộp quà: số đo đọc từ nút "Nhấn để mở" (260x280, trái x=320, trên y=6605). Hộp chính và bảy hộp nhỏ tách riêng,
 // rê chuột cả nhóm "qua" (hộp nảy lên, hộp nhỏ bay lên rồi hiện lại, pháo giấy), bóng thở và bốn ngôi sao chớp lệch pha 0 / 0,6 / 1,2 / 1,7s.
 const GIFT_LEFT = 320;
@@ -218,7 +246,7 @@ GIFT_MINIS.slice(4).forEach(([id, asset, cx, cy, w, h, rotation, phone, extra]) 
   star.props = { ...star.props, alt: "Ngôi sao" };
 });
 text("gift-open-hint", "Nhấn để mở", [GIFT_LEFT + 95 - 35, GIFT_TOP + 264, 139, 15], { size: 12, color: ink, font: "system-ui, 'Gotham', sans-serif", phone: [118, 5985, 140, 18] });
-text("thank-you", "Sự hiện diện của quý khách là niềm vui của gia đình chúng tôi!", [110, 7040, 680, 34], { size: 15, color: ink });
+tc("thank-you", "Sự hiện diện của quý khách là niềm vui của gia đình chúng tôi!", 450, Y(6821), 520, 20, { size: 13 });
 
 const pageData: PageData = {
   ...emptyPage(),
