@@ -152,7 +152,27 @@ function invitation(): FreeNode[] {
 
   // Hộp quà mừng (6010-6498) + chân trang.
   nodes.push(heading("gift-title", "HỘP QUÀ MỪNG", 6060, 340, 220));
-  nodes.push(put("Decoration", "wedding-gift", { x: 360, y: 6150, w: 180, h: 185 }, { src: GIFT_BOX, alt: "Hộp quà mừng", fit: "contain", motion: true, motionTarget: "" }));
+  // Hộp quà Song Hỷ Đỏ theo số đo nút gốc 260x280: hộp song_hy_red, bảy vật nhỏ (bay lên khi rê chuột), bốn ngôi sao ✦ #fbbf24 chớp 2s lệch pha, pháo giấy bắn ra từ mép trên hộp.
+  const ox = 320;
+  const oy = 6082;
+  const giftDir = "/demo/song-hy-do/gift";
+  const FLY: Record<string, [number, number, number, number]> = { "gift-mini-1": [55, -14, 1.6, 0], "gift-mini-2": [60, 14, 1.8, 0.15], "gift-mini-3": [65, -10, 1.4, 0.3], "gift-mini-4": [70, 12, 1.7, 0.45], "gift-mini-5": [80, -8, 1.9, 0.1], "gift-mini-6": [75, 10, 1.3, 0.35], "gift-mini-7": [72, 14, 1.7, 0.2] };
+  const mini = (n: number, file: string, left: number, top: number, w: number, h: number, rotation: number) => {
+    const [rise, sway, time, delay] = FLY[`gift-mini-${n}`]!;
+    nodes.push(put("Decoration", `gift-mini-${n}`, { x: ox + left, y: oy + top, w, h, rotation }, { src: `${giftDir}/${file}`, alt: "Hộp quà nhỏ", fit: "contain", motion: false, floatMotion: true, motionTarget: "", hoverEffect: "Bay lên rồi hiện lại", hoverGroup: "qua", hoverRise: rise, hoverSway: sway, hoverTime: time, hoverDelay: delay }));
+  };
+  mini(1, "florence_brown.webp", 5, 34, 44, 44, -22);
+  mini(2, "crystal_floral_red.webp", 191, 26, 51, 56, 20);
+  mini(3, "desert_bloom_brown.webp", 11, 146, 33, 33, -18);
+  mini(4, "song_hy_v2_red.webp", 209, 141, 29, 29, 14);
+  nodes.push(put("Decoration", "wedding-gift", { x: ox + 45, y: oy + 71, w: 170, h: 178 }, { src: `${giftDir}/song_hy_red.webp`, alt: "Hộp quà Song Hỷ Đỏ", fit: "contain", motion: false, floatMotion: true, motionTarget: "", hoverEffect: "Nảy lên", hoverGroup: "qua", hoverTime: 0.7 }));
+  mini(5, "minimalism_darkbrown.webp", 19, 198, 50, 50, 8);
+  mini(6, "dragon_phoenix_v4_red.webp", 54, 209, 30, 30, -10);
+  mini(7, "glass_garden_pink.webp", 143, 201, 49, 51, -14);
+  nodes.push(put("Decoration", "gift-confetti", { x: ox + 120, y: oy + 88, w: 20, h: 4 }, { src: "", alt: "", fit: "contain", motion: false, floatMotion: false, motionTarget: "", hoverEffect: "Pháo giấy", hoverGroup: "qua" }));
+  [[36, 22, 22, 0], [260 - 26 - 16, 50, 16, 0.6], [13, 90, 14, 1.2], [260 - 13 - 14, 73, 14, 1.7]].forEach(([left, top, size, delay], index) =>
+    nodes.push(put("Decoration", `gift-sparkle-${index + 1}`, { x: ox + left!, y: oy + top!, w: size!, h: size! }, { src: "/demo/song-hy-do/sparkle.svg", alt: "", fit: "contain", motion: false, floatMotion: false, motionTarget: "", idleEffect: "Chớp sáng", idleDelay: delay! })));
+  nodes.push(text("gift-hint", "Nhấn để mở", { x: ox + 80, y: oy + 258, w: 100, h: 18 }, 13, "#464646", serif));
   nodes.push(text("footer-thanks", "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!", { x: 150, y: 6510, w: 600, h: 24 }, 14, GREY, body));
   nodes.push(text("footer-brand", "♡ CardMaking", { x: 380, y: 6545, w: 140, h: 22 }, 13, GREY, body, { opacity: 70 }));
   return nodes;
@@ -169,10 +189,42 @@ function rsvpPage() {
   return { id: "rsvp", name: "Xác nhận tham dự", data, interactions: {}, popup: { width: 520, effect: "fade", backdropColor: "#17251e", backdropOpacity: 56 } };
 }
 
+// Popup quà mừng theo cửa sổ gốc 576x410: thanh đầu #800000 76px (Baskerville 24px trắng), nền #ecdfd6, hai cột QR (xem make-song-hy-xanh-pages.ts).
+function giftDetailsPage() {
+  const K = 960 / 576;
+  const n = (v: number) => Math.round(v * K);
+  const at = (left: number, top: number, w: number, h: number): Box => ({ x: n(left) - 30, y: n(top), w: n(w), h: n(h) });
+  const sans = "'Gotham', system-ui, sans-serif";
+  const mono = "ui-monospace, 'SF Mono', Menlo, monospace";
+  const list: FreeNode[] = [];
+  const label = (id: string, value: string, left: number, top: number, w: number, h: number, size: number, color: string, font: string, bold = false) =>
+    list.push(put("Text", id, at(left, top, w, h), { text: value, size: Math.round(size * K), color, font, bold, italic: false, underline: false, align: "center" }));
+  list.push(put("Shape", "gift-popup-header", at(0, 0, 576, 76), { shape: "rectangle", fill: MAROON, motionTarget: "" }));
+  label("gift-popup-title", "HỘP QUÀ MỪNG", 24, 24, 528, 36, 24, "#ffffff", "'Baskerville', 'Times New Roman', serif", true);
+  const columns = [
+    { key: "groom", left: 24, title: "Chú Rể - Gia Huy", bank: "Vietcombank", number: "0000000000", holder: "GIA HUY", qr: "/demo/song-hy-do/qr-groom.png" },
+    { key: "bride", left: 296, title: "Cô Dâu - Quỳnh Như", bank: "BIDV", number: "8084856145", holder: "QUỲNH NHƯ", qr: "/demo/song-hy-do/qr-bride.png" },
+  ];
+  for (const c of columns) {
+    const mid = c.left + 128;
+    label(`gift-popup-${c.key}-label`, c.title, mid - 128, 100, 256, 20, 12, MAROON, sans);
+    list.push(put("Shape", `gift-popup-${c.key}-qr-card`, at(mid - 80, 140, 160, 160), { shape: "rectangle", fill: "#ffffff", motionTarget: "" }, { borderRadius: n(12) }));
+    list.push(put("Image", `gift-popup-qr-${c.key}`, at(mid - 70, 150, 140, 140), { src: c.qr, alt: `Mã QR mừng cưới ${c.key === "groom" ? "chú rể" : "cô dâu"}`, fit: "contain" }));
+    label(`gift-popup-${c.key}-bank`, c.bank, mid - 128, 308, 256, 15, 10, MAROON, sans);
+    label(`gift-popup-${c.key}-number`, c.number, mid - 128, 325, 256, 15, 10, MAROON, mono);
+    label(`gift-popup-${c.key}-holder`, c.holder, mid - 128, 342, 256, 15, 10, MAROON, sans, true);
+    list.push(put("Shape", `gift-popup-${c.key}-save`, at(mid - 34, 363, 68, 23), { shape: "rectangle", fill: "#e3cdc4", motionTarget: "" }, { borderRadius: n(12) }));
+    label(`gift-popup-${c.key}-save-label`, "↓ Lưu QR", mid - 34, 367, 68, 15, 10, MAROON, sans);
+  }
+  const base = emptyPage();
+  const data = { ...base, root: { ...base.root, styles: { ...base.root.styles, background: "#ecdfd6", minHeight: n(410), phoneMinHeight: n(410) }, children: list } };
+  return { id: "gift-details", name: "Hộp quà mừng", data, interactions: {}, popup: { width: 641, effect: "fade", backdropColor: "#2a0000", backdropOpacity: 68 } };
+}
+
 art();
 const page = emptyPage();
 const nodes = invitation();
 const data = { ...page, root: { ...page.root, styles: { ...page.root.styles, background: "#ffffff", minHeight: PAGE_H, phoneMinHeight: 812 }, children: nodes } };
 const invitationPage = { id: "invitation", name: "Thiệp mời", data, interactions: { "rsvp-label": { type: "open-popup", targetPageId: "rsvp", transition: "fade", durationMs: 250 }, "wedding-gift": { type: "open-popup", targetPageId: "gift-details", transition: "fade", durationMs: 250 } } };
-writeFileSync(resolve(dir, "pages-do.json"), JSON.stringify({ invitation: invitationPage, rsvp: rsvpPage() }));
+writeFileSync(resolve(dir, "pages-do.json"), JSON.stringify({ invitation: invitationPage, rsvp: rsvpPage(), giftDetails: giftDetailsPage() }));
 console.log(`Đã ghi trang invitation với ${nodes.length} khối`);

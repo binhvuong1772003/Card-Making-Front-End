@@ -35,8 +35,12 @@ export interface FormViewProps {
   fields: Field[];
   publicList: PublicList;
   color: string;
+  fieldColor: string;
+  fieldBorderColor: string;
+  font: string;
   padding: number;
   compact: boolean;
+  previewSampleCount: number;
   mode: FormMode;
 }
 
@@ -68,14 +72,15 @@ const initialValues = (fields: readonly Field[]): Answers => {
 
 // Các khối dưới sổ lưu bút của mẫu Minimalism nằm ở toạ độ cố định (đã chừa đủ chỗ cho khung danh sách đầy). Biến `--cm-gb-slack` (px) trên trang là chỗ chừa chưa dùng:
 // không có lời chúc thì bằng cả khung, có hai lời chúc thì bằng phần còn lại; các khối bên dưới và chiều cao trang trừ đi đúng số đó nên không để trống.
+// Chỉ áp dụng cho trang có khối "gift-castle" (mẫu Minimalism): các mẫu khác dùng cùng mã khối (gift-title, wedding-gift, footer-*) ở toạ độ khác.
 const GUESTBOOK_FOLLOW = `
-[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="gift-background"],
-[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="gift-castle"]{top:calc(5660px - var(--cm-gb-slack,0px))!important}
-[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="gift-title"]{top:calc(5705px - var(--cm-gb-slack,0px))!important}
-[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="wedding-gift"]{top:calc(5740px - var(--cm-gb-slack,0px))!important}
-[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="footer-thanks"]{top:calc(6200px - var(--cm-gb-slack,0px))!important}
-[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]) [data-miditor-id="footer-brand"]{top:calc(6250px - var(--cm-gb-slack,0px))!important}
-[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]){min-height:calc(6276px - var(--cm-gb-slack,0px))!important}`;
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]):has([data-miditor-id="gift-castle"]) [data-miditor-id="gift-background"],
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]):has([data-miditor-id="gift-castle"]) [data-miditor-id="gift-castle"]{top:calc(5660px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]):has([data-miditor-id="gift-castle"]) [data-miditor-id="gift-title"]{top:calc(5705px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]):has([data-miditor-id="gift-castle"]) [data-miditor-id="wedding-gift"]{top:calc(5740px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]):has([data-miditor-id="gift-castle"]) [data-miditor-id="footer-thanks"]{top:calc(6200px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]):has([data-miditor-id="gift-castle"]) [data-miditor-id="footer-brand"]{top:calc(6250px - var(--cm-gb-slack,0px))!important}
+[data-miditor-type="Page"]:has([data-miditor-id="guestbook"]):has([data-miditor-id="gift-castle"]){min-height:calc(6276px - var(--cm-gb-slack,0px))!important}`;
 
 const FADE = `
 .cm-fv-in{animation:cm-fv-fade .18s ease}
@@ -95,6 +100,7 @@ const FADE = `
 .cm-fv-guestbook input,.cm-fv-guestbook textarea{font-size:14px!important}
 .cm-fv-guestbook input::placeholder,.cm-fv-guestbook textarea::placeholder{color:#9c7775;opacity:1}
 `;
+const COMPACT_PLACEHOLDER = `.cm-fv-compact input::placeholder,.cm-fv-compact textarea::placeholder{color:#9ca3af;opacity:1}`;
 
 interface PartProps {
   field: Field;
@@ -122,7 +128,8 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
       {field.required && " *"}
     </>
   );
-  const placeholder = `Nhập ${field.id === "name" ? "tên" : field.label.toLocaleLowerCase()}${field.required ? "*" : ""}`;
+  const placeholderText = field.id === "name" ? "tên của bạn" : field.type === "longtext" ? "lời chúc của bạn" : field.label.toLocaleLowerCase();
+  const placeholder = `Nhập ${placeholderText}${field.required ? "*" : ""}`;
   const hint = field.hint ? <div style={{ fontSize: 13, marginTop: 2, textAlign: "left" }}>{field.hint}</div> : null;
   const problem = error ? (
     <div id={`${id}-error`} role="alert" style={{ color: "#b3261e", fontSize: 14, marginTop: 4, textAlign: "left" }}>
@@ -177,7 +184,7 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
             aria-required={field.required || undefined}
             aria-invalid={error ? true : undefined}
             aria-describedby={describedBy}
-            style={{ ...fieldStyle, minHeight: guestbook ? 110 : compact ? 110 : 120, resize: compact ? "none" : "vertical" }}
+            style={{ ...fieldStyle, minHeight: guestbook ? 106 : compact ? 122 : 120, resize: compact ? "none" : "vertical" }}
           />
           {text.length > MAX_LONG - 40 && (
             <div style={{ fontSize: 13, textAlign: "right", marginTop: 2 }}>
@@ -532,16 +539,16 @@ export function FormView(props: FormViewProps) {
   const fieldStyle: CSSProperties = {
     width: "100%",
     boxSizing: "border-box",
-    minHeight: guestbook ? 46 : compact ? 46 : 48,
-    border: `1px solid ${color}99`,
-    borderRadius: compact ? 9 : 8,
-    background: "transparent",
-    color,
+    minHeight: guestbook ? 46 : compact ? 50 : 48,
+    border: `1px solid ${props.fieldBorderColor}`,
+    borderRadius: 8,
+    background: compact ? "#ffffff" : "transparent",
+    color: props.fieldColor,
     padding: compact ? "10px 16px" : "10px 12px",
     font: "inherit",
-    fontSize: compact ? guestbook ? 16 : 14 : 16,
+    fontSize: 16,
     opacity: 1,
-    WebkitTextFillColor: color,
+    WebkitTextFillColor: props.fieldColor,
     outlineColor: color,
   };
   const visible = visibleFields(fields, values);
@@ -555,10 +562,10 @@ export function FormView(props: FormViewProps) {
         width: "100%",
         height: showList ? "auto" : "100%",
         boxSizing: "border-box",
-    padding: guestbook ? 16 : props.padding,
-        fontFamily: compact ? "'Times New Roman', serif" : "'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif",
+        padding: props.padding,
+        fontFamily: props.font,
         fontSize: 16,
-        fontWeight: 400,
+        fontWeight: compact ? 300 : 400,
         lineHeight: 1.5,
         color,
         display: "flex",
@@ -569,9 +576,9 @@ export function FormView(props: FormViewProps) {
         textAlign: "center",
         pointerEvents: live ? "auto" : "none",
       }}
-      className={guestbook ? "cm-fv-guestbook" : undefined}
+      className={`${guestbook ? "cm-fv-guestbook " : ""}${compact ? "cm-fv-compact" : ""}`.trim() || undefined}
     >
-      <style>{FADE}{guestbook ? GUESTBOOK_FOLLOW : ""}</style>
+      <style>{FADE}{guestbook ? GUESTBOOK_FOLLOW : ""}{compact ? COMPACT_PLACEHOLDER : ""}</style>
       {props.heading.trim() && <div style={{ fontSize: 14, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>{props.heading}</div>}
 
       {live && closed ? (
@@ -593,7 +600,7 @@ export function FormView(props: FormViewProps) {
           </button>
         </>
       ) : (
-        <form onSubmit={onSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: guestbook ? 16 : compact ? 14 : 12 }}>
+        <form onSubmit={onSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: guestbook ? 16 : compact ? 16 : 12 }}>
           {!guestbook && props.intro.trim() && <div style={{ fontSize: 16, lineHeight: 1.6, whiteSpace: "pre-wrap" }}>{props.intro}</div>}
 
           {visible.map((field) => (
@@ -623,29 +630,48 @@ export function FormView(props: FormViewProps) {
             <input id={`${uid}-website`} type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(event) => setWebsite(event.target.value)} />
           </div>
 
-          <button
-            type="submit"
-            disabled={!live || sending}
-            style={{
-              minHeight: guestbook ? 40 : compact ? 40 : 48,
-              width: guestbook ? 150 : compact ? 150 : "100%",
-              alignSelf: compact ? "flex-end" : undefined,
-              border: 0,
-              borderRadius: 9999,
-              background: color,
-              color: "#fff",
-              font: "inherit",
-              fontSize: compact ? 14 : 16,
-              fontWeight: 600,
-              WebkitTextFillColor: "#fff",
-              padding: "10px 16px",
-              textTransform: compact ? "uppercase" : undefined,
-              cursor: sending ? "default" : "pointer",
-              opacity: sending ? 0.7 : 1,
-            }}
-          >
-            {sending ? "Đang gửi…" : props.button.trim() || "Gửi"}
-          </button>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: compact ? "space-between" : "flex-end", gap: 12, marginTop: compact ? 6 : 0 }}>
+            {compact && (
+              <button
+                type="button"
+                aria-label="Gợi ý lời chúc"
+                title="Gợi ý lời chúc"
+                onClick={() => {
+                  const wish = fields.find((field) => field.type === "longtext");
+                  if (wish) set(wish.id, "Chúc hai bạn trăm năm hạnh phúc, luôn yêu thương và đồng hành cùng nhau!");
+                }}
+                style={{ width: 36, height: 32, border: 0, borderRadius: 8, background: "#eef0ef", color: "#444", display: "grid", placeItems: "center", cursor: "pointer" }}
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m4 20 11-11 3 3L7 23H4z" />
+                  <path d="m15 6 1-3 1 3 3 1-3 1-1 3-1-3-3-1zM20 14l.6 1.8L22.5 16l-1.9.6L20 18.5l-.6-1.9-1.9-.6 1.9-.2z" />
+                </svg>
+              </button>
+            )}
+            <button
+              type="submit"
+              disabled={!live || sending}
+              style={{
+                minHeight: guestbook ? 36 : 48,
+                width: guestbook ? 152 : compact ? 166 : "100%",
+                border: 0,
+                borderRadius: guestbook ? 10 : 9999,
+                background: color,
+                color: "#fff",
+                font: "inherit",
+                fontSize: guestbook ? 14 : 16,
+                fontWeight: 600,
+                WebkitTextFillColor: "#fff",
+                padding: "10px 16px",
+                textTransform: compact ? "uppercase" : undefined,
+                cursor: sending ? "default" : "pointer",
+                opacity: sending ? 0.7 : 1,
+                flexShrink: 0,
+              }}
+            >
+              {sending ? "Đang gửi…" : props.button.trim() || "Gửi"}
+            </button>
+          </div>
 
           {notice && (
             <div role={failed ? "alert" : "status"} style={{ color: failed ? "#b3261e" : color, fontSize: 13, lineHeight: 1.5 }}>
@@ -660,7 +686,7 @@ export function FormView(props: FormViewProps) {
         <div ref={guestbook ? setListEl : undefined} style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "left", marginTop: guestbook ? 110 : 32, ...(guestbook ? { maxHeight: GUESTBOOK_LIST_MAX, overflowY: "auto", overscrollBehavior: "contain" } : {}) }}>
           {!live ? (
             <>
-              {SAMPLES.slice(0, PAGE).map((entry) => (
+              {SAMPLES.slice(0, Math.min(PAGE, props.previewSampleCount)).map((entry) => (
                 <div key={entry.id} style={{ padding: "18px 22px", border: `1px solid ${color}44`, borderRadius: 12, background: "rgba(255,252,247,.72)", boxShadow: "0 2px 8px rgba(62,30,24,.04)" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12 }}>
                     <div style={{ fontSize: 16, fontWeight: 700 }}>{entry.name}</div>

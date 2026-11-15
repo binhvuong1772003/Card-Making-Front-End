@@ -54,6 +54,7 @@ const renderAlbum: Renderer = ({ props, metadata }) => (
     lightbox={props.lightbox !== false}
     radius={number(props.radius, 16, 0, 48)}
     dotColor={typeof props.dotColor === "string" ? props.dotColor : albumBlock.defaultProps.dotColor as string}
+    startAt={number(props.startAt, 1, 1, 30)}
     mode={modeOf(metadata)}
   />
 );
@@ -159,8 +160,10 @@ const renderForm: Renderer = ({ id, props, metadata, theme }) => (
     color={paint(props.color, "#511419", theme)}
     fieldColor={paint(props.fieldColor, "#666666", theme)}
     fieldBorderColor={paint(props.fieldBorderColor, "#d1d5db", theme)}
+    font={text(props.font, "'Be Vietnam Pro', system-ui, sans-serif")}
     padding={number(props.padding, 16, 0, 40)}
     compact={props.compact === true}
+    previewSampleCount={Math.round(number(props.previewSampleCount, 2, 0, 10))}
     mode={modeOf(metadata)}
   />
 );
@@ -187,10 +190,12 @@ const renderDecoration: Renderer = ({ id, props, metadata, theme }) => {
     src={isImageUrl(props.src) ? props.src : ""}
     alt={text(props.alt, "")}
     fit={text(props.fit, "contain")}
+    flipX={props.flipX === true}
     motion={props.motion === true}
     motionStyle={props.motionStyle === "Cặp bao lì xì" ? "pair" : props.motionStyle === "Bao lì xì" ? "envelope" : "box"}
     floatMotion={props.floatMotion === true}
     idle={DECORATION_IDLE_EFFECTS.includes(props.idleEffect as never) ? props.idleEffect as (typeof DECORATION_IDLE_EFFECTS)[number] : "Không"}
+    idleDelay={number(props.idleDelay, 0, 0, 5)}
     shineRadius={number(props.shineRadius, 24, 0, 200)}
     hoverEffect={DECORATION_HOVER_EFFECTS.includes(props.hoverEffect as never) ? props.hoverEffect as (typeof DECORATION_HOVER_EFFECTS)[number] : "Không"}
     hoverGroup={hoverGroupId(props.hoverGroup) || hoverGroupId(id)}

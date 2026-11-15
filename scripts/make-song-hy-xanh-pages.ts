@@ -224,7 +224,12 @@ function invitation() {
     ["gift-mini-7", "/demo/song-hy-xanh/gift/mini/crystal_floral_red.webp", 462, 6229, 50, 56, -14],
   ].forEach(([id, src, x, y, w, h, rotation]) => nodes.push(put("Decoration", id as string, { x: x as number, y: y as number, w: w as number, h: h as number, rotation: rotation as number }, { src: src as string, alt: "Hộp quà nhỏ", fit: "contain", motion: false, floatMotion: true, motionTarget: "", ...giftFly(id as string) })));
   [[357, 6046, 20, 37], [540, 6075, 14, 27], [335, 6121, 8, 12], [558, 6104, 8, 12]].forEach(([x, y, w, h], index) =>
-    nodes.push(image(`gift-sparkle-${index + 1}`, star, { x, y, w, h }, "Ngôi sao Song Hỷ", { opacity: 90 })));
+    {
+      const sparkle = image(`gift-sparkle-${index + 1}`, star, { x, y, w, h }, "Ngôi sao Song Hỷ", { opacity: 90 });
+      // Chớp sáng 2s (mờ -> sáng -> mờ), bốn ngôi sao lệch pha 0 / 0,6 / 1,2 / 1,7s như trang mẫu.
+      sparkle.props = { ...sparkle.props, idleEffect: "Chớp sáng", idleDelay: [0, 0.6, 1.2, 1.7][index]! };
+      nodes.push(sparkle);
+    });
   nodes.push(text("gift-open-hint", "Nhấn để mở", { x: 380, y: 6290, w: 140, h: 20 }, 12, "#464646"));
   nodes.push(text("footer-thanks", "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!", { x: 170, y: 6370, w: 560, h: 56 }, 20, MUTED));
   nodes.push(text("footer-brand", "♡ chungdoi.com", { x: 390, y: 6464, w: 120, h: 18 }, 12, MUTED));

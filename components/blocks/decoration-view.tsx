@@ -2,8 +2,6 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 
-const GIFT_STARS = [{ left: "20%", top: "7%" }, { left: "77%", top: "20%" }, { left: "13%", top: "43%" }, { left: "75%", top: "76%" }];
-
 // Số đo từ trang mẫu: lấp lánh 2s, bóng 3s (co ngang 0,9, độ mờ 0,3 <-> 0,18), gợi ý 2s. Hộp nhấp nhô 3s, lên xuống 5px, nằm ở card-player.module.css.
 const GIFT_CSS = `
 @keyframes cm-gift-sparkle { 0%, 100% { scale: .4; opacity: 0; } 50% { scale: 1.15; opacity: 1; } }
@@ -21,12 +19,15 @@ const GIFT_CSS = `
 @keyframes cm-shine-sweep { 0% { left: -100%; } 50%, 100% { left: 100%; } }
 @media (prefers-reduced-motion: reduce) { [data-decoration-idle] { animation: none !important; } [data-decoration-idle] span { animation: none !important; } [data-decoration-idle="Ánh sáng quét"] span { left: 38% !important; transform: none !important; opacity: .75 !important; } [data-gift-shadow], [data-gift-hint], [data-decoration-motion] svg, [data-decoration-motion="pair"] img, [data-decoration-float] { animation: none !important; } [data-gift-hint] { opacity: 1; } }`;
 
-function DecorationBase({ src, alt, fit, motion, motionStyle = "box", floatMotion = false, opening = false, idle = "Không", shineRadius = 24, tintColor = "" }: { src: string; alt: string; fit: string; motion: boolean; motionStyle?: "box" | "envelope" | "pair"; floatMotion?: boolean; opening?: boolean; idle?: "Không" | "Đập" | "Thở nhẹ" | "Ánh sáng quét"; shineRadius?: number; tintColor?: string }) {
+function DecorationBase({ src, alt, fit, flipX = false, motion, motionStyle = "box", floatMotion = false, opening = false, idle = "Không", idleDelay = 0, shineRadius = 24, tintColor = "" }: { src: string; alt: string; fit: string; flipX?: boolean; motion: boolean; motionStyle?: "box" | "envelope" | "pair"; floatMotion?: boolean; opening?: boolean; idle?: "Không" | "Đập" | "Thở nhẹ" | "Ánh sáng quét" | "Chớp sáng"; idleDelay?: number; shineRadius?: number; tintColor?: string }) {
   const [hovered, setHovered] = useState(false);
   const imageRef = useRef<HTMLDivElement>(null);
-  const artwork = (style: CSSProperties) => tintColor && /^#[0-9a-f]{6}$/i.test(tintColor)
-    ? <span role={alt ? "img" : undefined} aria-label={alt || undefined} aria-hidden={!alt || undefined} style={{ ...style, background: tintColor, maskImage: `url(${JSON.stringify(src)})`, maskSize: fit === "cover" ? "cover" : "contain", maskRepeat: "no-repeat", maskPosition: "center" }} />
-    : <img src={src} alt={alt} draggable={false} style={style} />;
+  const artwork = (style: CSSProperties) => {
+    const imageStyle = { ...style, ...(flipX ? { transform: `${style.transform ?? ""} scaleX(-1)`.trim() } : {}) };
+    return tintColor && /^#[0-9a-f]{6}$/i.test(tintColor)
+      ? <span role={alt ? "img" : undefined} aria-label={alt || undefined} aria-hidden={!alt || undefined} style={{ ...imageStyle, background: tintColor, maskImage: `url(${JSON.stringify(src)})`, maskSize: fit === "cover" ? "cover" : "contain", maskRepeat: "no-repeat", maskPosition: "center" }} />
+      : <img src={src} alt={alt} draggable={false} style={imageStyle} />;
+  };
   useEffect(() => {
     if (!opening || !motion || window.matchMedia("(prefers-reduced-motion: reduce)").matches || !imageRef.current?.animate) return;
     const animation = imageRef.current.animate([
@@ -39,11 +40,11 @@ function DecorationBase({ src, alt, fit, motion, motionStyle = "box", floatMotio
   }, [motion, opening]);
 
   // Nhịp tim: hai nhịp phình (1,16 rồi 1,1) trong 1,3s rồi nghỉ, kèm quầng bóng đập theo. Vệt sáng: 32/140 bề rộng nút, chạy nửa đầu của 3s (ease-in-out, trắng 40%) rồi nghỉ (số đo từ nút Mở thiệp của trang mẫu).
-  if (idle !== "Không" && !motion) return <div data-decoration-idle={idle} style={{ position: "relative", width: "100%", height: "100%", overflow: idle === "Ánh sáng quét" ? "hidden" : undefined, borderRadius: idle === "Ánh sáng quét" ? shineRadius : undefined, animation: idle === "Thở nhẹ" ? "cm-soft-pulse 2s ease-in-out infinite" : undefined, pointerEvents: "none" }}>
+  if (idle !== "Không" && !motion) return <div data-decoration-idle={idle} style={{ position: "relative", width: "100%", height: "100%", overflow: idle === "Ánh sáng quét" ? "hidden" : undefined, borderRadius: idle === "Ánh sáng quét" ? shineRadius : undefined, animation: idle === "Thở nhẹ" ? "cm-soft-pulse 2s ease-in-out infinite" : idle === "Chớp sáng" ? `cm-gift-sparkle 2s ease-in-out ${idleDelay}s infinite` : undefined, pointerEvents: "none" }}>
     <style>{GIFT_CSS}</style>
     {idle === "Đập"
       ? src ? artwork({ display: "block", width: "100%", height: "100%", objectFit: fit === "cover" ? "cover" : "contain", transformOrigin: "50% 50%", animation: "cm-heartbeat 1.3s ease-in-out infinite, cm-heartbeat-glow 1.3s ease-in-out infinite" }) : null
-      : idle === "Thở nhẹ"
+      : idle === "Thở nhẹ" || idle === "Chớp sáng"
         ? src ? artwork({ display: "block", width: "100%", height: "100%", objectFit: fit === "cover" ? "cover" : "contain" }) : null
         : <>
         {src ? artwork({ display: "block", width: "100%", height: "100%", objectFit: fit === "cover" ? "cover" : "contain" }) : null}
@@ -89,15 +90,10 @@ function DecorationBase({ src, alt, fit, motion, motionStyle = "box", floatMotio
     {motion ? <>
       {motionStyle === "box" && <span aria-hidden="true" data-gift-shadow="" style={{ position: "absolute", left: "20%", right: "20%", bottom: "9%", height: "5%", borderRadius: "50%", background: "rgb(33 47 29)", opacity: 0.3, animation: "cm-gift-shadow 3s linear infinite" }} />}
       <div data-gift-bob="" style={{ position: "absolute", inset: 0 }}>
-        {motionStyle === "box" && <img src="/demo/hoa-moc-xanh/gift-mini-orbit.webp" alt="" aria-hidden="true" draggable={false} style={{
-          position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", zIndex: 1,
-        }} />}
         {artwork({
           position: "absolute", left: motionStyle === "box" ? "20%" : 0, top: motionStyle === "box" ? "16%" : 0, width: motionStyle === "box" ? "60%" : "100%", height: motionStyle === "box" ? "72%" : "88%", zIndex: 2,
           objectFit: fit === "cover" ? "cover" : "contain",
         })}
-        {/* Lấp lánh: mỗi ngôi sao 2s (phóng 0,4 -> 1,15 -> 0,4, độ mờ 0 -> 1 -> 0), lệch pha nhau 0,5s. */}
-        {motionStyle === "box" && GIFT_STARS.map((star, index) => <svg key={index} aria-hidden="true" viewBox="0 0 24 24" style={{ position: "absolute", left: star.left, top: star.top, width: 18, height: 18, fill: "#71814f", filter: "drop-shadow(0 1px 1px #fff8)", zIndex: 3, animation: `cm-gift-sparkle 2s linear ${index * 0.5}s infinite` }}><path d="M12 0c1.6 6.1 3.9 8.4 10 10-6.1 1.6-8.4 3.9-10 10C10.4 13.9 8.1 11.6 2 10 8.1 8.4 10.4 6.1 12 0Z" /></svg>)}
       </div>
       {/* Dòng gợi ý nhịp 2s, độ mờ 0,45 <-> 1. */}
       <span data-gift-hint="" style={{ position: "absolute", left: 0, right: 0, bottom: motionStyle === "envelope" ? "8%" : "1%", zIndex: 4, textAlign: "center", color: motionStyle === "envelope" ? "#511419" : "#354821", font: "600 13px/1.2 Georgia, serif", animation: "cm-gift-hint 2s linear infinite" }}>Nhấn để mở</span>
