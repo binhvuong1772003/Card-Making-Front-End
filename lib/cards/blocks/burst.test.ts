@@ -5,10 +5,10 @@ const config = readBurstConfig({});
 
 describe("readBurstConfig", () => {
   it("defaults to the reference page: 32 glyphs 囍, 420px, 0.5s, green", () => {
-    expect(config).toEqual({ char: "囍", count: 32, spread: 420, delay: 0.5, palette: "Xanh lá" });
+    expect(config).toEqual({ char: "囍", shape: "Chữ", count: 32, spread: 420, delay: 0.5, palette: "Xanh lá" });
   });
   it("clamps numbers, keeps two characters at most and falls back on unknown palettes", () => {
-    expect(readBurstConfig({ count: 999, spread: 1, delay: -4, char: "♥✦★", palette: "Cầu vồng" })).toEqual({ char: "♥✦", count: BURST_LIMITS.count.max, spread: BURST_LIMITS.spread.min, delay: 0, palette: "Xanh lá" });
+    expect(readBurstConfig({ count: 999, spread: 1, delay: -4, char: "♥✦★", palette: "Cầu vồng" })).toEqual({ char: "♥✦", shape: "Chữ", count: BURST_LIMITS.count.max, spread: BURST_LIMITS.spread.min, delay: 0, palette: "Xanh lá" });
     expect(readBurstConfig({ char: "" }).char).toBe("囍");
   });
 });
@@ -42,5 +42,17 @@ describe("burstParticles", () => {
   it("uses the chosen palette", () => {
     const red = burstParticles({ ...config, palette: "Đỏ vàng" }, 1);
     expect(red.every((p) => (BURST_PALETTES["Đỏ vàng"] as readonly string[]).includes(p.color))).toBe(true);
+  });
+});
+
+describe("leaf burst", () => {
+  it("reads the Lá shape and the four leaf greens of Hoa Mộc Xanh", () => {
+    const config = readBurstConfig({ shape: "Lá", palette: "Lá xanh" });
+    expect(config).toMatchObject({ shape: "Lá", palette: "Lá xanh" });
+    expect(new Set(burstParticles(config, 1).map((particle) => particle.color))).toEqual(new Set(["#6b8040", "#8bc34a", "#a5c862", "#c8dfa0"]));
+  });
+
+  it("falls back to glyphs on an unknown shape", () => {
+    expect(readBurstConfig({ shape: "Rồng" }).shape).toBe("Chữ");
   });
 });

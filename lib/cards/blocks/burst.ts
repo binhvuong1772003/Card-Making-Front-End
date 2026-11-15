@@ -9,6 +9,8 @@ export const BURST_PALETTES = {
   "Vàng kim": ["#b98b43", "#d1b77b", "#f1d98c", "#fff0b8"],
   "Hồng phấn": ["#d4537e", "#ed93b1", "#f4c0d1", "#fbeaf0"],
   "Đỏ rượu": ["#a8323b", "#ece4d8", "#c9a24a", "#7a1f26"],
+  // Bốn màu lá của trang Hoa Mộc Xanh (đọc từ 32 hạt pháo của trang mẫu).
+  "Lá xanh": ["#6b8040", "#8bc34a", "#a5c862", "#c8dfa0"],
 } as const;
 export type BurstPalette = keyof typeof BURST_PALETTES;
 export const BURST_PALETTE_NAMES = Object.keys(BURST_PALETTES) as BurstPalette[];
@@ -22,7 +24,11 @@ export const BURST_LIMITS = {
 export const BURST_DURATION = 1.4;
 export const BURST_JITTER = 0.15;
 
-export type BurstConfig = { char: string; count: number; spread: number; delay: number; palette: BurstPalette };
+export const BURST_SHAPES = ["Chữ", "Lá"] as const;
+export type BurstShape = (typeof BURST_SHAPES)[number];
+// Chiếc lá của trang Hoa Mộc Xanh (viewBox 24x24); hạt hình Lá vẽ bằng path này thay cho ký tự.
+export const BURST_LEAF_PATH = "M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z";
+export type BurstConfig = { char: string; shape: BurstShape; count: number; spread: number; delay: number; palette: BurstPalette };
 
 export type BurstParticle = { dx: number; dy: number; rotStart: number; rotEnd: number; size: number; color: string; delay: number };
 
@@ -65,6 +71,7 @@ export function readBurstConfig(props: Record<string, unknown>): BurstConfig {
   const char = typeof props.char === "string" ? [...props.char].slice(0, BURST_LIMITS.chars).join("") : "";
   return {
     char: char || "囍",
+    shape: BURST_SHAPES.includes(props.shape as BurstShape) ? props.shape as BurstShape : "Chữ",
     count: Math.round(clamp(props.count, 32, BURST_LIMITS.count.min, BURST_LIMITS.count.max)),
     spread: clamp(props.spread, 420, BURST_LIMITS.spread.min, BURST_LIMITS.spread.max),
     delay: clamp(props.delay, 0.5, BURST_LIMITS.delay.min, BURST_LIMITS.delay.max),
@@ -80,8 +87,9 @@ export const burstBlock: ComponentDef = {
   size: { w: 96, h: 40 },
   hidden: true,
   canContain: false,
-  defaultProps: { char: "囍", count: 32, spread: 420, delay: 0.5, palette: "Xanh lá" },
+  defaultProps: { char: "囍", shape: "Chữ", count: 32, spread: 420, delay: 0.5, palette: "Xanh lá" },
   fields: {
+    shape: { type: "select", label: "Hình hạt", options: BURST_SHAPES, group: "Pháo", help: "Chữ: bắn ký tự. Lá: bắn những chiếc lá." },
     char: { type: "text", label: "Chữ", maxLength: BURST_LIMITS.chars, group: "Pháo", help: "Ký tự bắn ra, ví dụ 囍, ♥ hoặc ✦." },
     count: { type: "number", label: "Số hạt", min: BURST_LIMITS.count.min, max: BURST_LIMITS.count.max, group: "Pháo" },
     palette: { type: "select", label: "Màu", options: BURST_PALETTE_NAMES, group: "Pháo" },

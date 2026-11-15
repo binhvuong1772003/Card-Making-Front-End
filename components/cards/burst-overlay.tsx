@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, type CSSProperties } from "react";
-import { BURST_DURATION, BURST_JITTER, burstParticles, type BurstConfig } from "@/lib/cards/blocks/burst";
+import { BURST_DURATION, BURST_JITTER, BURST_LEAF_PATH, burstParticles, type BurstConfig } from "@/lib/cards/blocks/burst";
 
 // Lớp phủ pháo: cố định phủ cả màn hình, độc lập với trang nên vẫn bay tiếp khi thiệp chuyển sang trang kế.
 // Keyframe `particle-burst` lấy nguyên từ trang mẫu.
@@ -23,7 +23,7 @@ export function BurstOverlay({ config, seed, onDone }: { config: BurstConfig; se
         "--dx": `${particle.dx.toFixed(1)}px`, "--dy": `${particle.dy.toFixed(1)}px`,
         "--rot-start": `${particle.rotStart.toFixed(1)}deg`, "--rot-end": `${particle.rotEnd.toFixed(1)}deg`,
         animation: `cm-burst ${BURST_DURATION}s cubic-bezier(.25, .46, .45, .94) ${(config.delay + particle.delay).toFixed(3)}s 1 normal forwards`,
-      } as CSSProperties}>{config.char}</div>)}
+      } as CSSProperties}>{config.shape === "Lá" ? <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style={{ display: "block" }}><path d={BURST_LEAF_PATH} /></svg> : config.char}</div>)}
     </div>
   );
 }

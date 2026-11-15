@@ -91,7 +91,7 @@ function put(type: string, id: string, box: { x: number | Axis; y: number | Axis
 function buildCover(t: Theme) {
   writeAssets(t);
   // Bìa hoa (Minimalism): cả tấm thẻ bay lên khỏi màn hình trong 0,8s (đo: envelope-away); các bìa khác mờ dần từ 0,9s.
-  const FADE = t.flowers && !t.leafCover ? OPEN("Bay lên rồi biến mất", 0.8, 0.25) : OPEN("Mờ dần", 0.7, 0.9);
+  const FADE = t.flowers || t.leafCover ? OPEN("Bay lên rồi biến mất", 0.8, 0.25) : OPEN("Mờ dần", 0.7, 0.9);
   const decoration = (id: string, file: string, box: Parameters<typeof put>[2], open: Open | undefined, styles: NodeStyles = {}) =>
     put("Decoration", id, box, { src: `/demo/song-hy/${file}`, alt: "", fit: "contain", motion: false, motionTarget: "" }, open, styles);
   // Trái tim con dấu Hoa Mộc Xanh lấy nguyên path 24x24 của trang gốc (28px trong vòng 56px).
@@ -112,7 +112,10 @@ function buildCover(t: Theme) {
     decoration("open-motif-right", `xi-${t.key}.svg`, { x: 250, y: 170, w: 410, h: 410, rotation: 162 }, OPEN("Phóng ra rồi mờ dần", 1.3), { opacity: 0 }),
   ];
   // Hai bản sao hoa góc đứng yên, ẩn sẵn, rồi phóng to và nhoè khi mở (gốc: dragon-fly-forward 1,2s); hoa trong thẻ vẫn bay lên cùng thẻ.
-  const flowerClones = t.flowers && !t.leafCover ? [
+  const flowerClones = t.leafCover ? [
+    put("Decoration", "open-flower-left", { x: -269, y: -109, w: 300, h: 300 }, { src: "/demo/hoa-moc-xanh/cover-flower.webp", alt: "", fit: "contain", motion: false, motionTarget: "" }, OPEN("Phóng to rồi nhoè", 1.2), { opacity: 0 }),
+    put("Decoration", "open-flower-right", { x: 268.5, y: 119.5, w: 300, h: 300, rotation: 160 }, { src: "/demo/hoa-moc-xanh/cover-flower.webp", alt: "", fit: "contain", motion: false, motionTarget: "" }, OPEN("Phóng to rồi nhoè", 1.2), { opacity: 0 }),
+  ] : t.flowers ? [
     decoration("open-flower-left", "hoa-do-ruou.svg", { x: -264.3, y: -78.4, w: 117.2, h: 280, rotation: 25 }, OPEN("Phóng to rồi nhoè", 1.2), { opacity: 0 }),
     decoration("open-flower-right", "hoa-do-ruou.svg", { x: 264.3, y: -77, w: 117.2, h: 280, rotation: -25 }, OPEN("Phóng to rồi nhoè", 1.2), { opacity: 0, flipX: true }),
   ] : [];
@@ -158,7 +161,7 @@ function buildCover(t: Theme) {
     decoration("open-button", `button-${t.key}.svg`, { x: 0, y: 154, w: 180, h: 88 }, FADE),
     ...(t.flowers || t.leafCover || t.key === "xanh" ? [(() => { const shine = decoration("open-button-shine", "", { x: 0, y: 154, w: 140, h: 48 }, FADE); shine.props = { ...shine.props, src: "", idleEffect: "Ánh sáng quét", shineRadius: 24 }; return shine; })()] : []),
     text("open-label", "Mở thiệp", { x: 0, y: 154, w: 140, h: 48 }, 18, t.buttonText, lora, { motionTarget: "cover" }),
-    put("Burst", "open-burst", { x: 0, y: 235, w: 96, h: 40 }, { char: t.burstChar, count: 32, spread: 420, delay: 0.5, palette: t.palette }, undefined),
+    put("Burst", "open-burst", { x: 0, y: 235, w: 96, h: 40 }, { char: t.burstChar, ...(t.leafCover ? { shape: "Lá" } : {}), count: 32, spread: 420, delay: 0.5, palette: t.leafCover ? "Lá xanh" : t.palette }, undefined),
   ];
   const page = emptyPage();
   const data = { ...page, root: { ...page.root, styles: { ...page.root.styles, background: t.gradient[1], minHeight: 900, phoneMinHeight: 812 }, children: nodes } };
