@@ -64,7 +64,7 @@ decoration("hero-floral-band", "floral-band", [0, 536, 900, 150], [0, 380, 375, 
 image("groom-portrait", "groom", [225, 270, 235, 352], [47.5, 170, 155, 233], { borderWidth: 5, borderColor: "#b28e72" }, -17, "cover");
 text("groom-role", "Trưởng Nam", [476, 410, 190, 21], [214.5, 258, 150, 20], 14, 11, { color: muted, align: "left", letterSpacing: 2 });
 text("groom-name", "Minh Quân", [476, 434, 205, 48], [214.5, 280, 160, 38], 32, 25, { font: "'Playfair Display', serif", align: "left" });
-image("bride-portrait", "bride", [423, 590, 235, 352], [162, 375, 155, 233], { borderWidth: 5, borderColor: "#b28e72" }, 13, "cover");
+image("bride-portrait", "bride", [435.5, 590, 235, 352], [162, 375, 155, 233], { borderWidth: 5, borderColor: "#b28e72" }, 13, "cover");
 text("bride-role", "Út Nữ", [315, 730, 120, 21], [82.5, 463, 125, 20], 14, 11, { color: muted, align: "right", letterSpacing: 2 });
 text("bride-name", "Thu Hà", [315, 754, 125, 48], [82.5, 485, 140, 38], 32, 25, { font: "'Playfair Display', serif", align: "right" });
 
@@ -101,10 +101,17 @@ block("wedding-album", "Album", [170, 2279, 560, 600], [10, 2055, 355, 390], { i
 heading("party-heading", "THÔNG TIN TIỆC CƯỚI", 2927, 2640);
 text("party-invite", "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:", [120, 2995, 720, 36], [20, 2715, 335, 40], 26, 20);
 text("party-time", "18:00", [280, 3050, 400, 45], [90, 2765, 195, 40], 32, 25, { bold: true });
-text("party-date", "CHỦ NHẬT  |  24  |  THÁNG 05\n2026", [190, 3120, 580, 90], [20, 2815, 335, 65], 29, 22);
+text("party-day", "CHỦ NHẬT", [296, 3131, 89, 16], [20, 2798, 95, 24], 16, 12, { align: "right" });
+text("party-day-divider-left", "|", [396, 3127, 14, 28], [116, 2798, 10, 24], 28, 14);
+text("party-date-day", "24", [434, 3110, 40, 40], [130, 2785, 60, 50], 40, 30);
+text("party-day-divider-right", "|", [498, 3127, 14, 28], [194, 2798, 10, 24], 28, 14);
+text("party-month", "THÁNG 05", [524, 3131, 80, 16], [207, 2798, 150, 24], 16, 12, { align: "left" });
+text("party-year", "2026", [426, 3190, 48, 24], [130, 2830, 115, 30], 24, 20);
 text("party-lunar", "(TỨC NGÀY 8 THÁNG 4 NĂM BÍNH NGỌ)", [180, 3230, 600, 30], [20, 2880, 335, 30], 18, 13, { color: muted });
-text("party-arrival", "ĐÓN KHÁCH\n17:30", [285, 3300, 150, 70], [40, 2920, 120, 55], 18, 14, { bold: true });
-text("party-banquet", "KHAI TIỆC\n18:00", [525, 3300, 150, 70], [215, 2920, 120, 55], 18, 14, { bold: true });
+text("party-arrival-label", "ĐÓN KHÁCH", [359, 3303, 82, 12], [40, 2920, 120, 18], 12, 12);
+text("party-arrival-time", "17:30", [377, 3322, 46, 20], [40, 2940, 120, 28], 20, 18);
+text("party-banquet-label", "KHAI TIỆC", [473, 3303, 69, 12], [215, 2920, 120, 18], 12, 12);
+text("party-banquet-time", "18:00", [484, 3322, 46, 20], [215, 2940, 120, 28], 20, 18);
 block("wedding-calendar", "Calendar", [275, 3390, 410, 345], [30, 2990, 315, 320], { date: "2026-05-24", color: green, weekColor: muted, markColor: green, font: serif, titleFont: serif, size: 18, padding: 12, eventButton: "Thêm vào lịch", eventTitle: "Đám cưới Trần Minh Quân & Nguyễn Thu Hà", eventTime: "18:00", eventPlace: "Tiệc Cưới Hoàng Gia, Ngõ 74 P. Nguyễn Thị Định, Nhân Chính, Thanh Xuân, Hà Nội" });
 
 block("rsvp-button", "Button", [340, 3742, 280, 50], [70, 3325, 235, 46], { label: "XÁC NHẬN THAM DỰ", href: "", action: "", payload: {}, fill: green, textColor: "#ffffff", shape: "rounded", size: 16, font: serif });
@@ -173,7 +180,7 @@ const MEASURED: Record<string, Measured> = {
   "ceremony-day-divider-left": [396, 2023, 14, 28, 300, 0], "ceremony-day-divider-right": [498, 2023, 14, 28, 300, 0], "ceremony-day": [284, 2028, 88, 16, 300, 0], "ceremony-month": [536, 2028, 79, 16, 300, 0],
   "ceremony-year": [426, 2087, 48, 24, 300, 0], "ceremony-lunar": [257, 2143, 386, 14, 300, 3.5],
   "album-heading": [371, 2224, 158, 24, 700, 1], "party-heading": [304, 2932, 291, 24, 700, 1], "party-invite": [287, 2995, 326, 20, 400, 0, { font: SANS }], "party-time": [416, 3045, 68, 30, 300, 0],
-  "party-lunar": [257, 3246, 386, 14, 300, 3.5], "venue-heading": [258, 3870, 383, 26, 700, 1], "venue-address": [200, 3921, 500, 16, 300, 0.4],
+  "party-lunar": [257, 3246, 386, 14, 300, 3.5], "party-day": [296, 3131, 89, 16, 600, 0], "party-month": [524, 3131, 80, 16, 600, 0], "party-date-day": [434, 3110, 40, 40, 600, 0], "party-day-divider-left": [396, 3127, 14, 28, 300, 0], "party-day-divider-right": [498, 3127, 14, 28, 300, 0], "party-year": [426, 3190, 48, 24, 300, 0], "party-arrival-label": [359, 3303, 82, 12, 300, 0.6], "party-arrival-time": [377, 3322, 46, 20, 600, 0], "party-banquet-label": [473, 3303, 69, 12, 300, 0.6], "party-banquet-time": [484, 3322, 46, 20, 600, 0], "venue-heading": [258, 3870, 383, 26, 700, 1], "venue-address": [200, 3921, 500, 16, 300, 0.4],
   "dress-heading": [369, 4570, 163, 24, 700, 1], "dress-note": [388, 4608, 124, 16, 300, 0], "timeline-heading": [294, 4798, 312, 24, 700, 1], "wishes-heading": [372, 5263, 156, 24, 700, 1],
   "gift-heading": [347, 6283, 206, 24, 700, 1], "gift-instruction": [415, 6599, 69, 12, 500, 0, { font: SANS }], "thank-you": [196, 6671, 508, 18, 300, 0], "footer-brand": [403, 6731, 94, 12, 300, 0, { font: SANS }],
   ...Object.fromEntries([0, 1, 2, 3, 4].flatMap((i) => [[`timeline-time-${i}`, [220, 4863 + 68 * i, 190, 17, 300, 0.425]], [`timeline-label-${i}`, [490, [4865, 4933, 5001, 5070, 5138][i]!, 200, 19, 500, 0]]])),
