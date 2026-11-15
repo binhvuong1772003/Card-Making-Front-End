@@ -10,7 +10,7 @@ export function DecorativeAssets() {
   const queryClient = useQueryClient();
   const [file, setFile] = useState<File | null>(null);
   const [name, setName] = useState("");
-  const [category, setCategory] = useState("Hoa & lá");
+  const [category, setCategory] = useState("Hoa lá");
   const [tags, setTags] = useState("");
   const [tintable, setTintable] = useState(false);
   const assets = useInfiniteQuery({ queryKey: ["catalog", "decorations"], initialPageParam: undefined as string | undefined, queryFn: ({ pageParam, signal }) => catalogApi.decorations({ first: 24, after: pageParam }, signal), getNextPageParam: (last) => last.pageInfo.hasNextPage ? last.pageInfo.endCursor ?? undefined : undefined });

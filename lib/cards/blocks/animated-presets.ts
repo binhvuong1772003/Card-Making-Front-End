@@ -2,8 +2,8 @@ import type { JsonValue } from "@miditor/core";
 
 // Mẫu "động" của tab Trang trí: mỗi mẫu là một khối đã chỉnh sẵn thông số và hiệu ứng (bấm hoặc kéo vào trang là có).
 // Chia ba nhóm theo việc: nền chuyển động, chữ Hỷ, quà mừng. Dữ liệu thuần, không có React.
-export type AnimatedGroup = "Nền động" | "Song Hỷ" | "Nút & con dấu" | "Quà mừng";
-export const ANIMATED_GROUPS: readonly AnimatedGroup[] = ["Nền động", "Song Hỷ", "Nút & con dấu", "Quà mừng"];
+export type AnimatedGroup = "Nền động" | "Song Hỷ" | "Nút & dấu" | "Hộp quà";
+export const ANIMATED_GROUPS: readonly AnimatedGroup[] = ["Nền động", "Song Hỷ", "Nút & dấu", "Hộp quà"];
 
 export type AnimatedPreset = {
   id: string;
@@ -49,8 +49,8 @@ export const animatedPresets: readonly AnimatedPreset[] = [
     props: { char: "囍", count: 32, spread: 420, delay: 0.5, palette: "Xanh lá" } },
   { id: "xi-ring", group: "Song Hỷ", name: "Gợn sóng xanh", hint: "Vòng sáng lan ra khi mở thiệp", keywords: ["gợn sóng", "vòng", "con dấu", "mở thiệp", "bìa"], type: "Decoration", size: { w: 56, h: 56 }, stage: DARK_GREEN,
     props: { src: "/demo/song-hy/ring-xanh.svg", alt: "", fit: "contain", motion: false, motionTarget: "", openEffect: "Gợn sóng lan ra", openTime: 0.6, openDelay: 0 } },
-  { id: "xi-seal", group: "Song Hỷ", name: "Con dấu Hỷ xanh", hint: "Thu nhỏ biến mất khi mở thiệp", keywords: ["hỷ", "con dấu", "logo", "囍", "mở thiệp", "bìa"], type: "Decoration", size: { w: 56, h: 56 }, stage: DARK_GREEN,
-    props: { src: "/demo/song-hy/seal-xanh.svg", alt: "", fit: "contain", motion: false, motionTarget: "", openEffect: "Thu nhỏ rồi biến mất", openTime: 0.6, openDelay: 0 } },
+  { id: "xi-seal", group: "Song Hỷ", name: "Con dấu Hỷ xanh", hint: "Huy hiệu Song Hỷ nhịp nhẹ, thu nhỏ khi mở thiệp", keywords: ["hỷ", "con dấu", "logo", "囍", "mở thiệp", "bìa"], type: "Decoration", size: { w: 56, h: 56 }, stage: DARK_GREEN,
+    props: { src: "/demo/song-hy/seal-xanh.svg", alt: "", fit: "contain", motion: false, motionTarget: "", idleEffect: "Thở nhẹ", openEffect: "Thu nhỏ rồi biến mất", openTime: 0.6, openDelay: 0 } },
 
   { id: "xi-burst-red", group: "Song Hỷ", name: "Chữ Hỷ phóng ra đỏ", hint: "Phóng gấp 3 rồi mờ khi mở thiệp", keywords: ["hỷ", "song hỷ", "囍", "mở thiệp", "bìa", "đỏ"], type: "Decoration", size: { w: 410, h: 410 }, stage: "#4a0000",
     props: { src: "/demo/song-hy/xi-do.svg", alt: "", fit: "contain", motion: false, motionTarget: "", openEffect: "Phóng ra rồi mờ dần", openTime: 1.3, openDelay: 0 } },
@@ -58,11 +58,11 @@ export const animatedPresets: readonly AnimatedPreset[] = [
     props: { src: "/demo/song-hy/seal-do.svg", alt: "", fit: "contain", motion: false, motionTarget: "", openEffect: "Thu nhỏ rồi biến mất", openTime: 0.6, openDelay: 0 } },
   { id: "xi-ring-red", group: "Song Hỷ", name: "Gợn sóng đỏ", hint: "Vòng sáng lan ra khi mở thiệp", keywords: ["gợn sóng", "vòng", "con dấu", "mở thiệp", "bìa", "đỏ"], type: "Decoration", size: { w: 56, h: 56 }, stage: "#4a0000",
     props: { src: "/demo/song-hy/ring-do.svg", alt: "", fit: "contain", motion: false, motionTarget: "", openEffect: "Gợn sóng lan ra", openTime: 0.6, openDelay: 0 } },
-  { id: "seal-heart-beat", group: "Nút & con dấu", name: "Con dấu tim đập", hint: "Nhịp tim, thu nhỏ biến mất khi mở thiệp", keywords: ["tim", "trái tim", "đập", "con dấu", "logo", "mở thiệp", "bìa", "minimalism"], type: "Decoration", size: { w: 56, h: 56 }, stage: "#511419",
+  { id: "seal-heart-beat", group: "Nút & dấu", name: "Con dấu tim đập", hint: "Nhịp tim, thu nhỏ biến mất khi mở thiệp", keywords: ["tim", "trái tim", "đập", "con dấu", "logo", "mở thiệp", "bìa", "minimalism"], type: "Decoration", size: { w: 56, h: 56 }, stage: "#511419",
     props: { src: "/demo/song-hy/seal-mdd.svg", alt: "", fit: "contain", motion: false, motionTarget: "", idleEffect: "Đập", openEffect: "Thu nhỏ rồi biến mất", openTime: 0.6, openDelay: 0 } },
-  { id: "button-shine", group: "Nút & con dấu", name: "Vệt sáng quét", hint: "Đặt lên nút: vệt sáng chạy ngang mỗi 3 giây", keywords: ["sáng", "vệt sáng", "bóng", "nút", "shine", "mở thiệp", "bìa"], type: "Decoration", size: { w: 140, h: 48 }, stage: "#511419",
+  { id: "button-shine", group: "Nút & dấu", name: "Vệt sáng quét", hint: "Đặt lên nút: vệt sáng chạy ngang mỗi 3 giây", keywords: ["sáng", "vệt sáng", "bóng", "nút", "shine", "mở thiệp", "bìa"], type: "Decoration", size: { w: 140, h: 48 }, stage: "#511419",
     props: { src: "", alt: "", fit: "contain", motion: false, motionTarget: "", idleEffect: "Ánh sáng quét", shineRadius: 24 } },
-  { id: "gift-box", group: "Quà mừng", name: "Hộp quà mừng", hint: "Lấp lánh, bóng thở, “Nhấn để mở”", keywords: ["quà", "hộp quà", "mừng cưới", "phong bì"], type: "Decoration", size: { w: 180, h: 185 }, stage: SOFT,
+  { id: "gift-box", group: "Hộp quà", name: "Hộp quà mừng", hint: "Lấp lánh, bóng thở, “Nhấn để mở”", keywords: ["quà", "hộp quà", "mừng cưới", "phong bì"], type: "Decoration", size: { w: 180, h: 185 }, stage: SOFT,
     props: { src: GIFT_BOX, alt: "Hộp quà mừng", fit: "contain", motion: true, motionTarget: "" } },
 ];
 

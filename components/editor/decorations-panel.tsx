@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { catalogApi, type CatalogDecoration, type CatalogPage } from "@/lib/cards/catalog-api";
 import { AnimatedDecorations } from "@/components/editor/animated-decorations";
 
-const CATEGORIES = ["Hoa & lá", "Biểu tượng", "Điểm nhấn", "Đường viền", "Nền & họa tiết"] as const;
+const CATEGORIES = ["Hoa lá", "Viền & nền", "Biểu tượng", "Phong bì & quà"] as const;
 const PAGE_SIZE = 2;
 const PREVIEW_LIMIT = 6;
 const TINTS = [

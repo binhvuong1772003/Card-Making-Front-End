@@ -22,7 +22,7 @@ describe("the animated presets", () => {
     const groupOf = (id: string) => animatedPresets.find((preset) => preset.id === id)?.group;
     expect(groupOf("particles-heart")).toBe("Nền động");
     expect(groupOf("xi-burst")).toBe("Song Hỷ");
-    expect(groupOf("gift-box")).toBe("Quà mừng");
+    expect(groupOf("gift-box")).toBe("Hộp quà");
   });
 
   it("give the Hỷ an effect for the opening of the card", () => {
