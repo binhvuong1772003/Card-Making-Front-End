@@ -17,6 +17,7 @@ export interface AlbumViewProps {
   lightbox: boolean;
   radius: number;
   dotColor: string;
+  startAt: number;
   mode: AlbumMode;
 }
 
@@ -52,11 +53,11 @@ const arrowButton = (side: "left" | "right"): CSSProperties => ({
   cursor: "pointer",
 });
 
-export function AlbumView({ images, autoplay, interval, lightbox, radius, dotColor, mode }: AlbumViewProps) {
+export function AlbumView({ images, autoplay, interval, lightbox, radius, dotColor, startAt, mode }: AlbumViewProps) {
   const live = mode === "live";
   const pictures = albumPictures(images, live, 7);
   const count = pictures.length;
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(() => Math.max(0, Math.min(count - 1, Math.round(startAt) - 1)));
   const [open, setOpen] = useState(false);
   const reduced = useSyncExternalStore(subscribeReducedMotion, reducedMotionNow, () => false);
   const swipe = useRef<{ x: number; moved: boolean } | null>(null);
@@ -129,6 +130,10 @@ export function AlbumView({ images, autoplay, interval, lightbox, radius, dotCol
                   left: "50%",
                   top: "50%",
                   height: "92%",
+                  // Ảnh ngang không rộng quá 102,5% khối (574px trên khối 560px của trang mẫu); phần thừa cắt đều hai bên.
+                  maxWidth: "102.5%",
+                  display: "flex",
+                  justifyContent: "center",
                   overflow: "hidden",
                   borderRadius: radius,
                   cursor: "pointer",
@@ -140,7 +145,7 @@ export function AlbumView({ images, autoplay, interval, lightbox, radius, dotCol
                   boxShadow: `${middle ? "0 0 0 2px rgba(255,255,255,0.3), " : ""}0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)`,
                 }}
               >
-                <AlbumImage src={src} index={index} style={{ display: "block", height: "100%", width: "auto", maxWidth: "none", userSelect: "none" }} />
+                <AlbumImage src={src} index={index} style={{ display: "block", height: "100%", width: "auto", maxWidth: "none", flexShrink: 0, userSelect: "none" }} />
               </div>
             );
           })}

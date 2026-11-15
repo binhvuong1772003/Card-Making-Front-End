@@ -542,9 +542,9 @@ export function FormView(props: FormViewProps) {
     minHeight: guestbook ? 46 : compact ? 50 : 48,
     border: `1px solid ${props.fieldBorderColor}`,
     borderRadius: 8,
-    background: compact ? "#ffffff" : "transparent",
+    background: compact ? (props.fieldBorderColor === color && guestbook ? `${color}0a` : "#ffffff") : "transparent",
     color: props.fieldColor,
-    padding: compact ? "10px 16px" : "10px 12px",
+    padding: guestbook ? "12px 16px" : compact ? "10px 16px" : "10px 12px",
     font: "inherit",
     fontSize: 16,
     opacity: 1,
@@ -640,7 +640,7 @@ export function FormView(props: FormViewProps) {
                   const wish = fields.find((field) => field.type === "longtext");
                   if (wish) set(wish.id, "Chúc hai bạn trăm năm hạnh phúc, luôn yêu thương và đồng hành cùng nhau!");
                 }}
-                style={{ width: 36, height: 32, border: 0, borderRadius: 8, background: "#eef0ef", color: "#444", display: "grid", placeItems: "center", cursor: "pointer" }}
+                style={{ width: 36, height: 32, border: 0, borderRadius: 8, background: props.fieldBorderColor === color ? `${color}1a` : "#eef0ef", color: props.fieldBorderColor === color ? color : "#444", display: "grid", placeItems: "center", cursor: "pointer" }}
               >
                 <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m4 20 11-11 3 3L7 23H4z" />
@@ -662,7 +662,7 @@ export function FormView(props: FormViewProps) {
                 fontSize: guestbook ? 14 : 16,
                 fontWeight: 600,
                 WebkitTextFillColor: "#fff",
-                padding: "10px 16px",
+                padding: guestbook ? "8px 24px" : "10px 16px",
                 textTransform: compact ? "uppercase" : undefined,
                 cursor: sending ? "default" : "pointer",
                 opacity: sending ? 0.7 : 1,

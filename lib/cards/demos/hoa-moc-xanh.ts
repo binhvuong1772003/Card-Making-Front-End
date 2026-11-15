@@ -96,7 +96,7 @@ text("ceremony-year", "2026", [380, 2025, 140, 40], [130, 1800, 115, 30], 24, 20
 text("ceremony-lunar", "(TỨC NGÀY 8 THÁNG 4 NĂM BÍNH NGỌ)", [257, 2081, 386, 22], [25, 1840, 325, 22], 14, 11);
 
 heading("album-heading", "ALBUM ẢNH", 2219, 1955);
-block("wedding-album", "Album", [170, 2279, 560, 600], [10, 2055, 355, 390], { images: Array.from({ length: 8 }, (_, i) => `${assets}/photo-${i + 1}.webp`), autoplay: false, interval: 1.1, startAt: 1, lightbox: true, radius: 16, dotColor: muted });
+block("wedding-album", "Album", [170, 2279, 560, 552], [10, 2055, 355, 390], { images: Array.from({ length: 8 }, (_, i) => `${assets}/photo-${i + 1}.webp`), autoplay: false, interval: 1.1, startAt: 1, lightbox: true, radius: 16, dotColor: muted });
 
 heading("party-heading", "THÔNG TIN TIỆC CƯỚI", 2927, 2640);
 text("party-invite", "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:", [120, 2995, 720, 36], [20, 2715, 335, 40], 26, 20);
@@ -119,7 +119,8 @@ block("rsvp-button", "Button", [340, 3742, 280, 50], [70, 3325, 235, 46], { labe
 
 heading("venue-heading", "TIỆC CƯỚI SẼ TỔ CHỨC TẠI", 3822, 3390);
 text("venue-address", "Tiệc Cưới Hoàng Gia, Ngõ 74 P. Nguyễn Thị Định, Nhân Chính, Thanh Xuân, Hà Nội", [100, 3890, 760, 60], [20, 3395, 335, 70], 20, 15);
-block("wedding-map", "Map", [155, 3970, 650, 500], [20, 3470, 335, 435], { name: "Tiệc Cưới Hoàng Gia", address: "Tiệc Cưới Hoàng Gia, Ngõ 74 P. Nguyễn Thị Định, Nhân Chính, Thanh Xuân, Hà Nội", heading: "", button: "Xem đường đi", color: green, padding: 20, innerFrame: false }, { borderColor: "#c6ceb9", borderRadius: 4 });
+// Bản đồ theo DOM gốc: không khung, bản đồ 560x380 bo 15 ở x=170, nút Chỉ đường 143x40 cách bản đồ 20px; địa chỉ là đoạn chữ riêng phía trên.
+block("wedding-map", "Map", [170, 4013, 560, 440], [20, 3470, 335, 435], { name: "Tiệc Cưới Hoàng Gia", address: "Tiệc Cưới Hoàng Gia, Ngõ 74 P. Nguyễn Thị Định, Nhân Chính, Thanh Xuân, Hà Nội", showText: false, heading: "", divider: false, button: "Chỉ đường", color: green, padding: 0, innerFrame: false }, { borderWidth: 0, borderRadius: 0 });
 
 heading("dress-heading", "DRESS CODE", 4565, 4020);
 text("dress-note", "Trang phục dự tiệc", [170, 4610, 620, 45], [30, 4090, 315, 45], 24, 18);
@@ -128,19 +129,20 @@ for (const [i, color] of ["#224327", "#4a6b4f", "#c2e3c7"].entries()) {
 }
 
 heading("timeline-heading", "LỊCH TRÌNH NGÀY CƯỚI", 4793, 4380);
-block("timeline-line", "Shape", [479, 4870, 2, 300], [186, 4490, 2, 400], { shape: "rectangle", fill: "#c0caaa" });
+// Trục và chấm đo từ DOM: trục 1px ở x=450 từ tâm chấm đầu (4875) tới tâm chấm cuối, chấm 10px cách nhau 68px ngang hàng chữ.
+block("timeline-line", "Shape", [450, 4875, 1, 272], [186, 4490, 2, 400], { shape: "rectangle", fill: "#c0caaa" });
 const schedule = [["17:30", "Đón khách"], ["18:30", "Khai tiệc"], ["18:45", "Rót rượu, cắt bánh"], ["19:00", "Phục vụ món chính"], ["21:00", "Kết thúc tiệc"]];
 schedule.forEach(([time, label], i) => {
   const y = 4860 + i * 60;
   const py = 4480 + i * 65;
-  block(`timeline-dot-${i}`, "Shape", [473, y + 17, 14, 14], [181, py + 16, 12, 12], { shape: "ellipse", fill: green });
+  block(`timeline-dot-${i}`, "Shape", [445, 4870 + 68 * i, 10, 10], [181, py + 16, 12, 12], { shape: "ellipse", fill: green });
   text(`timeline-time-${i}`, time!, [225, y, 210, 55], [30, py, 130, 50], 35, 18, { align: "right" });
   text(`timeline-label-${i}`, label!, [525, y, 310, 55], [211, py, 150, 60], 27, 18, { align: "left" });
 });
 
 heading("wishes-heading", "SỔ LƯU BÚT", 5258, 5790);
 const wishes = formPresets.find((preset) => preset.id === "wishes")!;
-block("wedding-wishes", "Form", [150, 5318, 600, 277], [20, 5870, 335, 340], { ...wishes.props, formId: "demo-hoa-moc-xanh-wishes", heading: "", intro: "", button: "GỬI LỜI CHÚC", color: green, padding: 24, font: serif, compact: true, previewSampleCount: 0 }, { borderColor: "#d6ddce", borderRadius: 8, background: "#f8f9f5", shadow: { x: 0, y: 2, blur: 8, spread: 0, color: "#26321d", opacity: 8 } });
+block("wedding-wishes", "Form", [150, 5318, 600, 277], [20, 5870, 335, 340], { ...wishes.props, formId: "demo-hoa-moc-xanh-wishes", heading: "", intro: "", button: "GỬI LỜI CHÚC", color: green, fieldBorderColor: green, fieldColor: green, padding: 24, font: serif, compact: true, previewSampleCount: 0 }, { borderWidth: 1, borderColor: "#cbd0bd", borderRadius: 8, background: "#f9f5f0" });
 
 const comments = [
   ["Bạn Hoàng dev", "23:44:27 6/4/2026", "Chúc 2 bạn mãi yêu nhau, đầu bạc răng long"],
@@ -160,9 +162,32 @@ comments.forEach(([name, date, message], index) => {
 });
 
 heading("gift-heading", "HỘP QUÀ MỪNG", 6300, 6520);
-decoration("gift-mini-orbit", "gift-mini-orbit", [334, 6390, 232, 245], [96, 6600, 183, 190], {}, 0, true);
-block("wedding-gift", "Decoration", [365, 6425, 170, 220], [111, 6630, 153, 175], { src: `${assets}/gift.webp`, alt: "Hộp quà mừng cưới", fit: "contain", motion: true, motionStyle: "Hộp quà", floatMotion: true });
-text("gift-instruction", "Nhấn để mở", [300, 6665, 300, 30], [80, 6805, 215, 28], 18, 15, { bold: true });
+// Hộp quà theo nút gốc 260x280 tại (320, 6335): hộp boho_floral_green, bảy vật nhỏ bay lên khi rê chuột, bốn ngôi sao ✦ chớp 2s lệch pha, pháo giấy, dòng "Nhấn để mở". Ảnh tải từ trang gốc.
+{
+  const ox = 320;
+  const oy = 6335;
+  const pox = 96;
+  const poy = 6600;
+  const FLY: Record<string, [number, number, number, number]> = { "gift-mini-1": [55, -14, 1.6, 0], "gift-mini-2": [60, 14, 1.8, 0.15], "gift-mini-3": [65, -10, 1.4, 0.3], "gift-mini-4": [70, 12, 1.7, 0.45], "gift-mini-5": [80, -8, 1.9, 0.1], "gift-mini-6": [75, 10, 1.3, 0.35], "gift-mini-7": [72, 14, 1.7, 0.2] };
+  const part = (id: string, left: number, top: number, w: number, h: number, props: Record<string, JsonValue>, rotation = 0) =>
+    block(id, "Decoration", [ox + left, oy + top, w, h], [pox + left * 0.7, poy + top * 0.7, w * 0.7, h * 0.7], { fit: "contain", motion: false, motionTarget: "", alt: "", ...props }, {}, rotation);
+  const mini = (n: number, file: string, left: number, top: number, w: number, h: number, rotation: number) => {
+    const [rise, sway, time, delay] = FLY[`gift-mini-${n}`]!;
+    part(`gift-mini-${n}`, left, top, w, h, { src: `${assets}/gift2/${file}`, floatMotion: true, hoverEffect: "Bay lên rồi hiện lại", hoverGroup: "qua", hoverRise: rise, hoverSway: sway, hoverTime: time, hoverDelay: delay }, rotation);
+  };
+  mini(1, "porcelain_brown.webp", 5, 39, 44, 44, -22);
+  mini(2, "silk_flora_brown.webp", 192, 30, 49, 50, 20);
+  mini(3, "floral_fiesta_yellow.webp", 10, 150, 33, 34, -18);
+  mini(4, "glass_garden_blue.webp", 209, 145, 29, 29, 14);
+  part("wedding-gift", 45, 81, 170, 172, { src: `${assets}/gift2/boho_floral_green.webp`, alt: "Hộp quà mừng cưới", floatMotion: true, hoverEffect: "Nảy lên", hoverGroup: "qua", hoverTime: 0.7 });
+  mini(5, "chateau_blue.webp", 19, 203, 50, 51, 8);
+  mini(6, "baroque_gold.webp", 54, 214, 30, 31, -10);
+  mini(7, "royal_v2_purple.webp", 144, 205, 49, 49, -14);
+  part("gift-confetti", 120, 98, 20, 4, { src: "", hoverEffect: "Pháo giấy", hoverGroup: "qua" });
+  ([[39, 27, 22, 0], [225, 57, 16, 0.6], [236, 73, 14, 1.2], [13, 89, 14, 1.7]] as const).forEach(([left, top, size, delay], index) =>
+    part(`gift-sparkle-${index + 1}`, left, top, size, size, { src: `${assets}/sparkle.svg`, idleEffect: "Chớp sáng", idleDelay: delay }));
+  text("gift-hint", "Nhấn để mở", [415, 6599, 69, 15], [140, 6800, 100, 20], 12, 12);
+}
 text("thank-you", "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!", [150, 6740, 660, 50], [20, 6850, 335, 50], 20, 15);
 text("footer-brand", "♡ CardMaking", [300, 6796, 300, 24], [20, 6902, 335, 22], 14, 12, { color: muted });
 
@@ -183,7 +208,7 @@ const MEASURED: Record<string, Measured> = {
   "album-heading": [371, 2224, 158, 24, 700, 1], "party-heading": [304, 2932, 291, 24, 700, 1], "party-invite": [287, 2995, 326, 20, 400, 0, { font: SANS }], "party-time": [416, 3045, 68, 30, 300, 0],
   "party-lunar": [257, 3246, 386, 14, 300, 3.5], "party-day": [296, 3131, 89, 16, 600, 0], "party-month": [524, 3131, 80, 16, 600, 0], "party-date-day": [434, 3110, 40, 40, 600, 0], "party-day-divider-left": [396, 3127, 14, 28, 300, 0], "party-day-divider-right": [498, 3127, 14, 28, 300, 0], "party-year": [426, 3190, 48, 24, 300, 0], "party-arrival-label": [359, 3303, 82, 12, 300, 0.6], "party-arrival-time": [377, 3322, 46, 20, 600, 0], "party-banquet-label": [473, 3303, 69, 12, 300, 0.6], "party-banquet-time": [484, 3322, 46, 20, 600, 0], "venue-heading": [258, 3870, 383, 26, 700, 1], "venue-address": [200, 3921, 500, 16, 300, 0.4],
   "dress-heading": [369, 4570, 163, 24, 700, 1], "dress-note": [388, 4608, 124, 16, 300, 0], "timeline-heading": [294, 4798, 312, 24, 700, 1], "wishes-heading": [372, 5263, 156, 24, 700, 1],
-  "gift-heading": [347, 6283, 206, 24, 700, 1], "gift-instruction": [415, 6599, 69, 12, 500, 0, { font: SANS }], "thank-you": [196, 6671, 508, 18, 300, 0], "footer-brand": [403, 6731, 94, 12, 300, 0, { font: SANS }],
+  "gift-heading": [347, 6283, 206, 24, 700, 1], "gift-hint": [415, 6599, 69, 12, 500, 0, { font: SANS }], "thank-you": [100, 6671, 700, 18, 300, 0], "footer-brand": [403, 6731, 94, 12, 300, 0, { font: SANS }],
   ...Object.fromEntries([0, 1, 2, 3, 4].flatMap((i) => [[`timeline-time-${i}`, [220, 4863 + 68 * i, 190, 17, 300, 0.425]], [`timeline-label-${i}`, [490, [4865, 4933, 5001, 5070, 5138][i]!, 200, 19, 500, 0]]])),
   ...Object.fromEntries([[5644, 0], [5741, 1], [5837, 2], [5934, 3], [6031, 4], [6128, 5]].flatMap(([y, i]) => [[`wish-${i! + 1}-name`, [167, y!, 360, 14, 600, 0]], [`wish-${i! + 1}-date`, [631, y!, 94, 12, 300, 0]], [`wish-${i! + 1}-message`, [167, y! + 28, 558, 14, 300, 0]]])),
 };
