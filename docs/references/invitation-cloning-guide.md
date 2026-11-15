@@ -146,6 +146,43 @@ Sau mỗi lần đổi vị trí hoặc kiểu chữ, render lại route demo v�
 
 Thực hiện một lượt đối chiếu desktop/mobile theo cùng viewport/zoom/trạng thái với nguồn, ghi sai khác và sửa cùng đợt; sau đó xác nhận phần đã sửa. Kiểm tra bìa, mở thiệp, hover, popup, form và phần cuối trang. Không dùng phần trăm “giống” khi chưa có đối chiếu; nói rõ phần đã kiểm tra và phần còn thiếu.
 
+## 9. Hành vi toàn trang và cách đo thứ không nằm trong một element
+
+Không phải hiệu ứng nào cũng gắn vào một khối nhìn thấy. Khi người dùng nói "chỗ nào cũng có bàn tay" hay "bấm là tự lướt", đó là hành vi của cả trang:
+
+- **Con trỏ:** lấy mẫu bằng `getComputedStyle(document.elementFromPoint(x, y)).cursor` ở vài điểm trên trang (chữ, ảnh, chỗ trống), không chỉ trên nút. Nguồn Song Hỷ Xanh trả `pointer` ở mọi điểm sau bìa.
+- **Tự lướt:** thử bằng sự kiện thật: bấm một chỗ trống, đọc `scrollY` mỗi 0,5 giây (nguồn chạy khoảng 50px/giây), bấm lại để biết có dừng không, rồi gửi `wheel` để biết cuộn tay có dừng không. Chú ý trạng thái trước đó: một lần bấm của lượt đo trước có thể còn đang chạy, nên đo "đứng yên" trước rồi mới bấm.
+- **Tìm mã nguồn không thấy gì cũng là một kết luận:** quét các tệp JS đã tải (`performance.getEntriesByType('resource')`) theo từ khoá; nếu không có, tính năng có thể chỉ hiện ở khổ điện thoại hoặc ở trang khác. Hỏi người dùng nó nằm ở đâu thay vì đoán, vì công cụ trình duyệt ở đây không thu được cửa sổ về cỡ điện thoại.
+- **Khổ máy tính của nguồn:** cột nội dung cố định (Song Hỷ Xanh: 900px, giấy kem, hai bên nền trắng phẳng), không phải khung bo góc có bóng. Trang xem trước phải trông như vậy; kiểm tra bằng `getBoundingClientRect` của cột trên viewport rộng.
+
+## 10. Lấy ảnh và các bẫy kỹ thuật hay gặp
+
+**Lấy ảnh bị chặn tải trực tiếp (403).** `curl` bị Cloudflare chặn dù có Referer. Cách đã chạy: trong chính trang nguồn, `fetch` ảnh thành `Blob`, tạo thẻ `<a download>` bằng `URL.createObjectURL` rồi bấm, tệp rơi vào thư mục Tải xuống, sau đó chuyển vào dự án. Báo trước tên tệp, nguồn và dung lượng. Không đẩy dữ liệu từ trang nguồn sang máy chủ cục bộ (bị chặn, đúng chủ ý); không dán base64 qua kết quả công cụ (bị cắt ở khoảng 2000 ký tự). Sau khi lưu, mở ảnh ra xem kích thước thật và vùng trong suốt trước khi dựng.
+
+**Đọc CSS của nguồn.** Chọn luật theo `selectorText` chứa `:hover`, đọc `x.style.animation`; keyframes lấy từ `CSSKeyframesRule`. Kết quả dài bị cắt nên đọc từng nhóm nhỏ. In ra có `url(...)` hay chuỗi giống cookie sẽ bị chặn: thay bằng `url()` trước khi in. Với mỗi hiệu ứng ghi cả thuộc tính nó dùng (`transform`, `translate`, `rotate`, `scale` là bốn thuộc tính riêng, chúng cộng dồn lên nhau) vì dựng sai thuộc tính sẽ lệch hướng hoặc chồng nhau.
+
+**Dựng hai lớp từ một ảnh.** Nhiều mẫu vẽ cùng một ảnh hai lần (bao lì xì: lớp sau lật ngang, thu nhỏ, nghiêng khác). Tìm ảnh đơn trước; ảnh cặp đã phẳng không tách lại được. Trong editor dùng một khối có hai lớp bên trong thay vì hai khối, để người dùng kéo một lần và hiệu ứng rê chuột chạy đồng bộ.
+
+**Hiệu ứng rê chuột chung cho nhiều khối.** Nguồn đặt `:hover` trên cả nút nhóm. Bản dựng: các khối cùng "Nhóm rê chuột" dùng bộ chọn `body:has([data-cm-hg="nhóm"]:hover)`. Tên nhóm chỉ giữ chữ thường, số, gạch nối.
+
+**Bẫy khi dựng trong CardMaking:**
+
+- Mỗi khối được Miditor bọc trong một phần tử có `all: revert`, nên `cursor: pointer` thường bị đè: dùng `!important`.
+- `<style>` có nhiều phần tử con (`{A}{B}`) hiển thị rỗng khi render ở máy chủ (React 19): gộp thành một chuỗi template.
+- CSS khai báo theo ID khối phải được dựng từ danh sách ID đã lọc bằng `/^[\w-]+$/`.
+- Bìa toàn màn hình nằm ở tầng `z-index: 100`: thanh điều hướng và hộp thoại của trang xem trước phải cao hơn (đã đặt 120 và 200).
+- Lỗi đỏ trong console của trình duyệt có thể là lỗi cũ lúc máy chủ dev đang nạp lại; tải lại trang rồi đọc console với `pattern` trước khi kết luận trang đang hỏng, và kiểm bằng `curl` mã trả về của vài đường dẫn.
+- Đổi định nghĩa khối thì chạy `npm run blocks:export` và commit cả hai repo; thêm thuộc tính mới mà quên bước này làm `definitions.test.ts` đỏ.
+
+## 11. Thành phần và Trang trí: quy tắc tổ chức để người dùng tìm được
+
+Rút từ lần dọn ngày 14/11/2026 (tham khảo tab Thành phần của Canva): một tab, một ô tìm chung, kệ theo **loại**, chủ đề là chip lọc.
+
+- Chia kệ theo loại (Hoa lá, Viền & nền, Biểu tượng, Phong bì & quà...), không theo mẫu. Tên mẫu (Song Hỷ, Minimalism) là từ khoá hoặc chip, không phải kệ.
+- Mỗi tab tối đa khoảng 5 kệ. Hai nơi chứa cùng một thứ (Hạt trôi ở hai tab) là lỗi bố cục; một món chỉ nằm một chỗ.
+- Tên kệ ngắn, một hai chữ. Hình do phát hành sẵn nên đổi tên nhóm ở cả mã lẫn danh mục trên cơ sở dữ liệu cùng lúc, và sửa script nạp để lần nạp sau không trả lại tên cũ.
+- Khi clone một mẫu mới có vật trang trí động (hộp quà, bao lì xì, con dấu), thêm nó thành mẫu động trong tab Trang trí để người dùng kéo một lần là đủ hiệu ứng.
+
 ## Mẫu ghi nhận cho một section mới
 
 ```text
