@@ -6,7 +6,7 @@ import type { ComponentDef, NodeStyles } from "@miditor/core";
 // (`npm run blocks:export`), không chép tay. Mỗi kiểu lịch là một loại khối riêng (Miditor có một ô cho mỗi loại trong thư viện), cùng nhóm
 // "Lịch" và cùng cách vẽ, chỉ khác thiết lập mặc định. Thêm kiểu mới: thêm một mục vào `calendarDefinitions` và một dòng vào
 // `lib/cards/blocks/index.tsx`. Ba lựa chọn thì Miditor vẽ thành một hàng nút đủ chữ; nhiều hơn là ô thả xuống hẹp (nhãn phải ngắn).
-export const MARK_SHAPES = ["Tròn", "Tim", "Vuông", "Vòng", "Sao"] as const;
+export const MARK_SHAPES = ["Tròn", "Tim", "Vuông", "Vòng", "Sao", "Tim đầy"] as const;
 export type MarkShape = (typeof MARK_SHAPES)[number];
 
 // Thuộc tính đã bỏ khỏi khối lịch (trước đây là khung riêng, nay là nhóm Nền, Viền của Miditor). Thiệp đã lưu có thể còn giữ chúng: CMBE bỏ chúng
@@ -42,6 +42,8 @@ const base: ComponentDef = {
     weekWeight: "600",
     weekGap: 0,
     dayWeight: "400",
+    markWeight: "600",
+    markSize: 0,
     eventGap: 0,
     padding: 0,
     font: "",
@@ -76,6 +78,8 @@ const base: ComponentDef = {
     weekWeight: { type: "select", label: "Độ đậm thứ", options: ["300", "400", "500", "600", "700"], group: "Chữ" },
     weekGap: { type: "number", label: "Cách hàng thứ", min: 0, max: 80, unit: "px", group: "Chữ", help: "Khoảng dưới hàng thứ; 0 thì tính theo Cỡ." },
     dayWeight: { type: "select", label: "Độ đậm số ngày", options: ["300", "400", "500", "600", "700"], group: "Chữ" },
+    markWeight: { type: "select", label: "Độ đậm ngày chọn", options: ["400", "500", "600", "700"], group: "Hình đánh dấu" },
+    markSize: { type: "number", label: "Cỡ số ngày chọn", min: 0, max: 40, unit: "px", group: "Hình đánh dấu", help: "0 thì bằng Cỡ." },
     eventGap: { type: "number", label: "Cách nút", min: 0, max: 160, unit: "px", group: "Thêm vào lịch", help: "Khoảng giữa lịch và nút; 0 thì tính theo Cỡ." },
     padding: { type: "number", label: "Đệm", min: 0, max: 32, unit: "px", group: "Chữ", help: "Khoảng đệm giữa mép khối và lịch." },
     eventButton: { type: "text", label: "Chữ nút", maxLength: 40, group: "Thêm vào lịch", help: "Nút cho khách thêm ngày này vào Google Calendar hoặc tải tệp .ics. Để trống thì ẩn nút." },

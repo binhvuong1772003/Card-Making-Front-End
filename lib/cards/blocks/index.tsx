@@ -108,6 +108,8 @@ const renderCalendar: Renderer = ({ props, metadata, theme }) => (
     weekGap={number(props.weekGap, 0, 0, 80)}
     dayWeight={fontWeightOf(props.dayWeight, 400)}
     eventGap={number(props.eventGap, 0, 0, 160)}
+    markWeight={fontWeightOf(props.markWeight, 600)}
+    markSize={number(props.markSize, 0, 0, 40)}
     font={stackOf(props.font)}
     titleFont={stackOf(props.titleFont)}
     innerFrame={props.innerFrame === true}

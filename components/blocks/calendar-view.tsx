@@ -28,6 +28,8 @@ export interface CalendarViewProps {
   weekGap: number;
   dayWeight: number;
   eventGap: number;
+  markWeight: number;
+  markSize: number;
   innerFrame: boolean;
   padding: number;
   /** Trong editor, ngày sai hoặc trống hiện lời nhắc; ở trang thật thì không hiện gì. */
@@ -46,10 +48,20 @@ export interface CalendarViewProps {
 // Phosphor "heart" và "star" (đặc, MIT).
 const HEART = "M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z";
 
+// Trái tim đặc của lịch Hoa Mộc Xanh, đọc nguyên path từ trang mẫu (viewBox 24x22, hiển thị 30x28).
+const HEART_SOLID = "M12 21C12 21 1.5 13.5 1.5 7.5C1.5 4.46 3.96 2 7 2C8.76 2 10.35 2.81 11.4 4.09L12 4.8L12.6 4.09C13.65 2.81 15.24 2 17 2C20.04 2 22.5 4.46 22.5 7.5C22.5 13.5 12 21 12 21Z";
+
 const STAR = "M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.4,16.4,0,0,1,31,85.4l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z";
 
 function Mark({ shape, color }: { shape: MarkShape; color: string }) {
   const box: CSSProperties = { position: "absolute", height: "92%", aspectRatio: "1 / 1", maxWidth: "100%" };
+  if (shape === "Tim đầy") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 24 22" fill={color} style={{ position: "absolute", height: 28, maxHeight: "100%", aspectRatio: "24 / 22" }}>
+        <path d={HEART_SOLID} />
+      </svg>
+    );
+  }
   if (shape === "Tim" || shape === "Sao") {
     return (
       <svg aria-hidden="true" viewBox="0 0 256 256" fill={color} style={{ ...box, height: "100%" }}>
@@ -62,7 +74,7 @@ function Mark({ shape, color }: { shape: MarkShape; color: string }) {
 }
 
 export function CalendarView(props: CalendarViewProps) {
-  const { date, sundayFirst, showTitle, lines, innerFrame, markShape, markColor, markTextColor, color, weekColor, size, font, titleFont, padding, editing, live, eventButton, titleSize, titleWeight, titleSpacing, titleGap, weekSize, weekWeight, weekGap, dayWeight, eventGap } = props;
+  const { date, sundayFirst, showTitle, lines, innerFrame, markShape, markColor, markTextColor, color, weekColor, size, font, titleFont, padding, editing, live, eventButton, titleSize, titleWeight, titleSpacing, titleGap, weekSize, weekWeight, weekGap, dayWeight, eventGap, markWeight, markSize } = props;
   const whole = monthGrid(date, sundayFirst);
   if (!whole) {
     if (!editing) return null;
@@ -122,10 +134,10 @@ export function CalendarView(props: CalendarViewProps) {
                 alignItems: "center",
                 justifyContent: "center",
                 minHeight: 0,
-                fontSize: size,
+                fontSize: marked && markSize ? markSize : size,
                 fontVariantNumeric: "tabular-nums",
                 color: marked ? markTextColor : color,
-                fontWeight: marked ? 600 : dayWeight,
+                fontWeight: marked ? markWeight : dayWeight,
                 ...(lines ? { boxShadow: `inset -1px -1px 0 ${line}` } : {}),
               }}
             >

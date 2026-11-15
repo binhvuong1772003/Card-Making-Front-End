@@ -58,7 +58,7 @@ describe("the Calendar kinds", () => {
   });
 
   it("offers five mark shapes", () => {
-    expect(MARK_SHAPES).toEqual(["Tròn", "Tim", "Vuông", "Vòng", "Sao"]);
+    expect(MARK_SHAPES).toEqual(["Tròn", "Tim", "Vuông", "Vòng", "Sao", "Tim đầy"]);
   });
 });
 
