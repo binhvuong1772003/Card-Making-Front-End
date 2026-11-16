@@ -1,0 +1,4203 @@
+{
+  "source": "https://chungdoi.com/vi/mau-thiep/vuon-xuan-xanh/demo?open=1",
+  "desktopSize": [
+    900,
+    7430.125
+  ],
+  "phoneSize": [
+    375,
+    6583.125
+  ],
+  "columnStyles": {
+    "background": "#ffffff",
+    "borderWidth": 0,
+    "borderRadius": 0
+  },
+  "nodes": [
+    {
+      "id": "b38-001",
+      "type": "Decoration",
+      "name": "Chất liệu / hoa văn nguồn",
+      "rect": [
+        -1050.0,
+        -49.0,
+        3000,
+        2800
+      ],
+      "phone": [
+        -612.5,
+        -50.0,
+        1600,
+        2184
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/background-3.png",
+        "alt": "Chất liệu / hoa văn nguồn",
+        "fit": "cover",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 70.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-002",
+      "type": "Decoration",
+      "name": "Chất liệu / hoa văn nguồn",
+      "rect": [
+        -1050.0,
+        4629.125,
+        3000.0,
+        2800.0
+      ],
+      "phone": [
+        -612.5,
+        4399.125,
+        1600.0,
+        2184.0
+      ],
+      "rotation": 180.0,
+      "phoneRotation": 180.0,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/background-4.png",
+        "alt": "Chất liệu / hoa văn nguồn",
+        "fit": "cover",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 70.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-003",
+      "type": "Decoration",
+      "name": "Chất liệu / hoa văn nguồn",
+      "rect": [
+        -414.0004,
+        743.8123,
+        2880.0009,
+        1400.0004
+      ],
+      "phone": [
+        -292.5002,
+        658.3124,
+        1600.0005,
+        1092.0003
+      ],
+      "rotation": -139.00002,
+      "phoneRotation": -139.00002,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/background-5.png",
+        "alt": "Chất liệu / hoa văn nguồn",
+        "fit": "cover",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 20.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-004",
+      "type": "Text",
+      "name": "Văn An",
+      "rect": [
+        375.8906,
+        309.5,
+        148.2031,
+        105
+      ],
+      "phone": [
+        113.3906,
+        227.0,
+        148.2031,
+        75
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Văn An",
+        "font": "'Reference Pinyon Script', 'Great Vibes', cursive",
+        "size": 50.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 105.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Văn An",
+        "font": "'Reference Pinyon Script', 'Great Vibes', cursive",
+        "size": 50.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 75.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-005",
+      "type": "Text",
+      "name": "&",
+      "rect": [
+        73.0,
+        418.5,
+        754,
+        75
+      ],
+      "phone": [
+        40,
+        306.0,
+        295,
+        56
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "&",
+        "font": "'Reference Ms Madi', cursive",
+        "size": 50.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 75.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "&",
+        "font": "'Reference Ms Madi', cursive",
+        "size": 37.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 56.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-006",
+      "type": "Text",
+      "name": "Mỹ Ngọc",
+      "rect": [
+        361.8906,
+        493.5,
+        176.2031,
+        105
+      ],
+      "phone": [
+        99.3906,
+        362.0,
+        176.2031,
+        75
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Mỹ Ngọc",
+        "font": "'Reference Pinyon Script', 'Great Vibes', cursive",
+        "size": 50.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 105.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Mỹ Ngọc",
+        "font": "'Reference Pinyon Script', 'Great Vibes', cursive",
+        "size": 50.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 75.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-007",
+      "type": "Text",
+      "name": "Album Ảnh",
+      "rect": [
+        365.5469,
+        811.0,
+        168.9062,
+        39.0
+      ],
+      "phone": [
+        122.5312,
+        567.5,
+        129.9219,
+        30.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "ALBUM ẢNH",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 26.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 39.0,
+        "letterSpacing": 1.3,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "ALBUM ẢNH",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-008",
+      "type": "Text",
+      "name": "THÔNG TIN LỄ CƯỚI",
+      "rect": [
+        337.875,
+        1489.5,
+        224.2344,
+        30.0
+      ],
+      "phone": [
+        75.375,
+        1041.5,
+        224.2344,
+        30.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "THÔNG TIN LỄ CƯỚI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "THÔNG TIN LỄ CƯỚI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-009",
+      "type": "Text",
+      "name": "Ông Bà",
+      "rect": [
+        218.6094,
+        1600.0,
+        63.7812,
+        27.0
+      ],
+      "phone": [
+        80.9375,
+        1135.5,
+        49.6094,
+        21.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Ông Bà",
+        "font": "ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
+        "size": 18.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 27.0,
+        "letterSpacing": 0.9,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Ông Bà",
+        "font": "ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 21.0,
+        "letterSpacing": 0.7,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-010",
+      "type": "Text",
+      "name": "Nguyễn Văn Hải",
+      "rect": [
+        199.2344,
+        1632.75,
+        102.5312,
+        19.5
+      ],
+      "phone": [
+        55.875,
+        1162.75,
+        99.7344,
+        19.5
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Nguyễn Văn Hải",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 19.5,
+        "letterSpacing": 0.9,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Nguyễn Văn Hải",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 19.5,
+        "letterSpacing": 0.7,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-011",
+      "type": "Text",
+      "name": "Nguyễn Phương Thúy",
+      "rect": [
+        182.75,
+        1658.25,
+        135.5,
+        19.5
+      ],
+      "phone": [
+        39.7969,
+        1188.25,
+        131.9062,
+        19.5
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Nguyễn Phương Thúy",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 19.5,
+        "letterSpacing": 0.9,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Nguyễn Phương Thúy",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 19.5,
+        "letterSpacing": 0.7,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-012",
+      "type": "Text",
+      "name": "8/3 Đường Lê Văn Việt, Phường Hiệp Phú, Quận 9, TP.HCM",
+      "rect": [
+        95.7031,
+        1688.0,
+        309.5938,
+        54
+      ],
+      "phone": [
+        35.7812,
+        1218.0,
+        139.9375,
+        49.5
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "8/3 Đường Lê Văn Việt, Phường Hiệp Phú, Quận 9, TP.HCM",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 18.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 27.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "8/3 Đường Lê Văn Việt, Phường Hiệp Phú, Quận 9, TP.HCM",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 11.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.5,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-013",
+      "type": "Text",
+      "name": "Ông Bà",
+      "rect": [
+        617.6094,
+        1600.0,
+        63.7812,
+        27.0
+      ],
+      "phone": [
+        244.4375,
+        1135.5,
+        49.6094,
+        21.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Ông Bà",
+        "font": "ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
+        "size": 18.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 27.0,
+        "letterSpacing": 0.9,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Ông Bà",
+        "font": "ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 21.0,
+        "letterSpacing": 0.7,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-014",
+      "type": "Text",
+      "name": "Lê Văn Tài",
+      "rect": [
+        614.5312,
+        1632.75,
+        69.9375,
+        19.5
+      ],
+      "phone": [
+        235.2812,
+        1162.75,
+        67.9375,
+        19.5
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Lê Văn Tài",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 19.5,
+        "letterSpacing": 0.9,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Lê Văn Tài",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 19.5,
+        "letterSpacing": 0.7,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-015",
+      "type": "Text",
+      "name": "Trương Hoài Phương",
+      "rect": [
+        582.9062,
+        1658.25,
+        133.1719,
+        19.5
+      ],
+      "phone": [
+        204.4531,
+        1188.25,
+        129.5781,
+        19.5
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Trương Hoài Phương",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 19.5,
+        "letterSpacing": 0.9,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Trương Hoài Phương",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 19.5,
+        "letterSpacing": 0.7,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-016",
+      "type": "Text",
+      "name": "Số 11, Hẻm 20 Phan Văn Trị, Phường 10, Bình Thạnh, TP.HCM",
+      "rect": [
+        494.7031,
+        1688.0,
+        309.5938,
+        54
+      ],
+      "phone": [
+        199.2812,
+        1218.0,
+        139.9375,
+        49.5
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Số 11, Hẻm 20 Phan Văn Trị, Phường 10, Bình Thạnh, TP.HCM",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 18.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 27.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Số 11, Hẻm 20 Phan Văn Trị, Phường 10, Bình Thạnh, TP.HCM",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 11.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.5,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-017",
+      "type": "Text",
+      "name": "TRÂN TRỌNG BÁO TIN\nLỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
+      "rect": [
+        266.0156,
+        1822.0,
+        367.9531,
+        60
+      ],
+      "phone": [
+        40.3125,
+        1331.5,
+        294.3594,
+        48
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "TRÂN TRỌNG BÁO TIN\nLỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
+        "font": "ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
+        "size": 20.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "TRÂN TRỌNG BÁO TIN\nLỄ THÀNH HÔN CỦA CON CHÚNG TÔI",
+        "font": "ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-018",
+      "type": "Text",
+      "name": "Nguyễn Văn An",
+      "rect": [
+        135.5938,
+        1962.0,
+        628.7969,
+        100
+      ],
+      "phone": [
+        59.9062,
+        1443.5,
+        255.1875,
+        80
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Nguyễn Văn An",
+        "font": "'Reference Pinyon Script', 'Great Vibes', cursive",
+        "size": 40.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 100.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Nguyễn Văn An",
+        "font": "'Reference Pinyon Script', 'Great Vibes', cursive",
+        "size": 40.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 50.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-019",
+      "type": "Text",
+      "name": "ÚT NAM",
+      "rect": [
+        418.5156,
+        2078.0,
+        62.9531,
+        16.0
+      ],
+      "phone": [
+        156.0156,
+        1535.5,
+        62.9531,
+        16.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "ÚT NAM",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 2.4,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "ÚT NAM",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 2.4,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-020",
+      "type": "Text",
+      "name": "&",
+      "rect": [
+        436.3125,
+        2110.0,
+        27.375,
+        72
+      ],
+      "phone": [
+        177.5156,
+        1563.5,
+        19.9531,
+        52.5
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "&",
+        "font": "'Reference Ms Madi', cursive",
+        "size": 48.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 72.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "&",
+        "font": "'Reference Ms Madi', cursive",
+        "size": 35.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 52.5,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-021",
+      "type": "Text",
+      "name": "Lê Mỹ Ngọc",
+      "rect": [
+        135.5938,
+        2198.0,
+        628.7969,
+        100
+      ],
+      "phone": [
+        59.9062,
+        1628.0,
+        255.1875,
+        80
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Lê Mỹ Ngọc",
+        "font": "'Reference Pinyon Script', 'Great Vibes', cursive",
+        "size": 40.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 100.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Lê Mỹ Ngọc",
+        "font": "'Reference Pinyon Script', 'Great Vibes', cursive",
+        "size": 40.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 50.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-022",
+      "type": "Text",
+      "name": "ÚT NỮ",
+      "rect": [
+        424.1094,
+        2314.0,
+        51.7812,
+        16.0
+      ],
+      "phone": [
+        161.6094,
+        1720.0,
+        51.7812,
+        16.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "ÚT NỮ",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 2.4,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "ÚT NỮ",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 2.4,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-023",
+      "type": "Text",
+      "name": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA",
+      "rect": [
+        266.9688,
+        2410.0,
+        366.0469,
+        60
+      ],
+      "phone": [
+        41.0781,
+        1800.0,
+        292.8438,
+        48
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI\nTƯ GIA",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-024",
+      "type": "Text",
+      "name": "VÀO LÚC",
+      "rect": [
+        408.8281,
+        2478.0,
+        82.3125,
+        27
+      ],
+      "phone": [
+        150.9062,
+        1856.0,
+        73.1719,
+        24
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "VÀO LÚC",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 18.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 27.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "VÀO LÚC",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-025",
+      "type": "Text",
+      "name": "09:00",
+      "rect": [
+        416.25,
+        2533.0,
+        67.5,
+        45
+      ],
+      "phone": [
+        165,
+        1904.0,
+        45,
+        30
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "09:00",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 30.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 45.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "09:00",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-026",
+      "type": "Text",
+      "name": "CHỦ NHẬT",
+      "rect": [
+        296.6562,
+        2616.0,
+        87.5156,
+        24.0
+      ],
+      "phone": [
+        59.9844,
+        1963.5,
+        65.6406,
+        18.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "CHỦ NHẬT",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "phoneProps": {
+        "text": "CHỦ NHẬT",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 18.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-027",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        408.1719,
+        2612.0,
+        2,
+        32
+      ],
+      "phone": [
+        149.625,
+        1960.5,
+        2,
+        24
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-028",
+      "type": "Text",
+      "name": "08",
+      "rect": [
+        434.1719,
+        2598.0,
+        40,
+        60
+      ],
+      "phone": [
+        175.625,
+        1950.0,
+        30,
+        45
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "08",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 40.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 60.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "08",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 30.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 45.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-029",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        498.1719,
+        2612.0,
+        2,
+        32
+      ],
+      "phone": [
+        229.625,
+        1960.5,
+        2,
+        24
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-030",
+      "type": "Text",
+      "name": "THÁNG 06",
+      "rect": [
+        524.1719,
+        2616.0,
+        79.1719,
+        24.0
+      ],
+      "phone": [
+        255.625,
+        1963.5,
+        59.3906,
+        18.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "THÁNG 06",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "THÁNG 06",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 18.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-031",
+      "type": "Text",
+      "name": "2025",
+      "rect": [
+        426.0,
+        2678.0,
+        48,
+        36
+      ],
+      "phone": [
+        169.5,
+        2011.0,
+        36,
+        27
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "2025",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 24.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 36.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "2025",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 18.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 27.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-032",
+      "type": "Text",
+      "name": "(Tức ngày 13 tháng 5 năm Ất Tỵ)",
+      "rect": [
+        272.0469,
+        2734.0,
+        355.9062,
+        20
+      ],
+      "phone": [
+        34.9531,
+        2054.0,
+        305.0781,
+        16
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "(TỨC NGÀY 13 THÁNG 5 NĂM ẤT TỴ)",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 20.0,
+        "letterSpacing": 3.5,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "(TỨC NGÀY 13 THÁNG 5 NĂM ẤT TỴ)",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 3.0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-033",
+      "type": "Text",
+      "name": "THÔNG TIN TIỆC CƯỚI",
+      "rect": [
+        325.2188,
+        2833.5,
+        249.5625,
+        30.0
+      ],
+      "phone": [
+        62.7188,
+        2133.5,
+        249.5625,
+        30.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "THÔNG TIN TIỆC CƯỚI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "THÔNG TIN TIỆC CƯỚI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-034",
+      "type": "Text",
+      "name": "Tiệc cưới sẽ diễn ra vào lúc:",
+      "rect": [
+        272.8281,
+        2944.0,
+        354.3438,
+        30
+      ],
+      "phone": [
+        45.75,
+        2228.0,
+        283.4844,
+        24
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0.8,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-035",
+      "type": "Text",
+      "name": "10:30",
+      "rect": [
+        416.25,
+        2994.0,
+        67.5,
+        45
+      ],
+      "phone": [
+        165,
+        2268.0,
+        45,
+        30
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "10:30",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 30.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 45.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "10:30",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-036",
+      "type": "Text",
+      "name": "THỨ HAI",
+      "rect": [
+        304.9688,
+        3077.0,
+        70.875,
+        24.0
+      ],
+      "phone": [
+        66.2188,
+        2327.5,
+        53.1562,
+        18.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "THỨ HAI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "phoneProps": {
+        "text": "THỨ HAI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 18.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-037",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        399.8438,
+        3073.0,
+        2,
+        32
+      ],
+      "phone": [
+        143.375,
+        2324.5,
+        2,
+        24
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-038",
+      "type": "Text",
+      "name": "08",
+      "rect": [
+        425.8438,
+        3059.0,
+        40,
+        60
+      ],
+      "phone": [
+        169.375,
+        2314.0,
+        30,
+        45
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "08",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 40.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 60.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "08",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 30.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 45.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-039",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        489.8438,
+        3073.0,
+        2,
+        32
+      ],
+      "phone": [
+        223.375,
+        2324.5,
+        2,
+        24
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-040",
+      "type": "Text",
+      "name": "THÁNG 06",
+      "rect": [
+        515.8438,
+        3077.0,
+        79.1719,
+        24.0
+      ],
+      "phone": [
+        249.375,
+        2327.5,
+        59.3906,
+        18.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "THÁNG 06",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "THÁNG 06",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 18.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-041",
+      "type": "Text",
+      "name": "2026",
+      "rect": [
+        426.0,
+        3139.0,
+        48,
+        36
+      ],
+      "phone": [
+        169.5,
+        2375.0,
+        36,
+        27
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "2026",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 24.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 36.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "2026",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 18.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 27.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-042",
+      "type": "Text",
+      "name": "(Tức ngày 23 tháng 4 năm Bính Ngọ)",
+      "rect": [
+        252.0,
+        3195.0,
+        396,
+        20
+      ],
+      "phone": [
+        28,
+        2418.0,
+        319,
+        32
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "(TỨC NGÀY 23 THÁNG 4 NĂM BÍNH NGỌ)",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 20.0,
+        "letterSpacing": 3.5,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "(TỨC NGÀY 23 THÁNG 4 NĂM BÍNH NGỌ)",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 3.0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-043",
+      "type": "Text",
+      "name": "Khai tiệc",
+      "rect": [
+        415.7344,
+        3251.0,
+        68.5312,
+        16.0
+      ],
+      "phone": [
+        153.2344,
+        2482.0,
+        68.5312,
+        16.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "KHAI TIỆC",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 0.6,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "KHAI TIỆC",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 0.6,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-044",
+      "type": "Text",
+      "name": "10:30",
+      "rect": [
+        427.5,
+        3271.0,
+        45,
+        28
+      ],
+      "phone": [
+        167.25,
+        2502.0,
+        40.5,
+        28
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "10:30",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 28.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "10:30",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 18.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 28.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-045",
+      "type": "Text",
+      "name": "Tiệc cưới sẽ tổ chức tại",
+      "rect": [
+        253.8906,
+        3851.5,
+        392.2031,
+        39
+      ],
+      "phone": [
+        40,
+        3007.5,
+        295,
+        60
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "TIỆC CƯỚI SẼ TỔ CHỨC TẠI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 26.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 39.0,
+        "letterSpacing": 1.3,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "TIỆC CƯỚI SẼ TỔ CHỨC TẠI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-046",
+      "type": "Text",
+      "name": "GEM Center  - 8 Nguyễn Bỉnh Khiêm, Đa Kao, Quận 1, TP.HCM",
+      "rect": [
+        223.375,
+        3902.5,
+        453.25,
+        24
+      ],
+      "phone": [
+        40,
+        3079.5,
+        295,
+        40
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "GEM Center  - 8 Nguyễn Bỉnh Khiêm, Đa Kao, Quận 1, TP.HCM",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0.4,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "GEM Center  - 8 Nguyễn Bỉnh Khiêm, Đa Kao, Quận 1, TP.HCM",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 20.0,
+        "letterSpacing": 0.35,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-047",
+      "type": "Text",
+      "name": "DRESS CODE",
+      "rect": [
+        381.25,
+        4523.0,
+        137.4844,
+        30.0
+      ],
+      "phone": [
+        118.75,
+        3576.0,
+        137.4844,
+        30.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "DRESS CODE",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "DRESS CODE",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-048",
+      "type": "Text",
+      "name": "Trang phục dự tiệc",
+      "rect": [
+        387.9062,
+        4557.5,
+        124.1719,
+        24.0
+      ],
+      "phone": [
+        133.1562,
+        3610.5,
+        108.6562,
+        20.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Trang phục dự tiệc",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Trang phục dự tiệc",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 20.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 70.0
+      }
+    },
+    {
+      "id": "b38-049",
+      "type": "Text",
+      "name": "LỊCH TRÌNH NGÀY CƯỚI",
+      "rect": [
+        318.25,
+        4745.0,
+        263.5,
+        30.0
+      ],
+      "phone": [
+        55.75,
+        3770.0,
+        263.5,
+        30.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "LỊCH TRÌNH NGÀY CƯỚI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "LỊCH TRÌNH NGÀY CƯỚI",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-050",
+      "type": "Text",
+      "name": "17:30",
+      "rect": [
+        220.0,
+        4808.875,
+        190,
+        25.375
+      ],
+      "phone": [
+        32,
+        3825.1875,
+        123.5,
+        24
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "17:30",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0.425,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "phoneProps": {
+        "text": "17:30",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 22.0,
+        "letterSpacing": 0.4,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-051",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        449.5,
+        4821.5625,
+        1,
+        54.0625
+      ],
+      "phone": [
+        187.0,
+        3837.1875,
+        1,
+        44.6875
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 40.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-052",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.0,
+        4816.5625,
+        10,
+        10
+      ],
+      "phone": [
+        182.5,
+        3832.1875,
+        10,
+        10
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "ellipse",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 500
+      }
+    },
+    {
+      "id": "b38-053",
+      "type": "Text",
+      "name": "Đón khách",
+      "rect": [
+        490.0,
+        4809.4375,
+        84.5,
+        26.125
+      ],
+      "phone": [
+        219.5,
+        3826.3125,
+        75.6094,
+        23.375
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Đón khách",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 19.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 26.125,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "Đón khách",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-054",
+      "type": "Text",
+      "name": "18:30",
+      "rect": [
+        220.0,
+        4877.0,
+        190,
+        25.375
+      ],
+      "phone": [
+        32,
+        3882.5625,
+        123.5,
+        24
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "18:30",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0.425,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "phoneProps": {
+        "text": "18:30",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 22.0,
+        "letterSpacing": 0.4,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-055",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        449.5,
+        4835.625,
+        1,
+        108.125
+      ],
+      "phone": [
+        187.0,
+        3849.875,
+        1,
+        89.375
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 40.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-056",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.0,
+        4884.6875,
+        10,
+        10
+      ],
+      "phone": [
+        182.5,
+        3889.5625,
+        10,
+        10
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "ellipse",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 500
+      }
+    },
+    {
+      "id": "b38-057",
+      "type": "Text",
+      "name": "Khai tiệc",
+      "rect": [
+        490.0,
+        4877.5625,
+        70.0625,
+        26.125
+      ],
+      "phone": [
+        219.5,
+        3883.6875,
+        62.6875,
+        23.375
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Khai tiệc",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 19.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 26.125,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "Khai tiệc",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-058",
+      "type": "Text",
+      "name": "18:45",
+      "rect": [
+        220.0,
+        4945.125,
+        190,
+        25.375
+      ],
+      "phone": [
+        32,
+        3951.625,
+        123.5,
+        24
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "18:45",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0.425,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "phoneProps": {
+        "text": "18:45",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 22.0,
+        "letterSpacing": 0.4,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-059",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        449.5,
+        4903.75,
+        1,
+        108.125
+      ],
+      "phone": [
+        187.0,
+        3907.25,
+        1,
+        112.75
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 40.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-060",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.0,
+        4952.8125,
+        10,
+        10
+      ],
+      "phone": [
+        182.5,
+        3958.625,
+        10,
+        10
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "ellipse",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 500
+      }
+    },
+    {
+      "id": "b38-061",
+      "type": "Text",
+      "name": "Rót rượu, cắt bánh",
+      "rect": [
+        490.0,
+        4945.6875,
+        149.0312,
+        26.125
+      ],
+      "phone": [
+        219.5,
+        3943.25,
+        94.2031,
+        42.375
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Rót rượu, cắt bánh",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 19.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 26.125,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "Rót rượu, cắt bánh",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-062",
+      "type": "Text",
+      "name": "19:00",
+      "rect": [
+        220.0,
+        5013.25,
+        190,
+        25.375
+      ],
+      "phone": [
+        32,
+        4032.375,
+        123.5,
+        24
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "19:00",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0.425,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "phoneProps": {
+        "text": "19:00",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 22.0,
+        "letterSpacing": 0.4,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-063",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        449.5,
+        4971.875,
+        1,
+        108.125
+      ],
+      "phone": [
+        187.0,
+        3988.0,
+        1,
+        112.75
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 40.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-064",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.0,
+        5020.9375,
+        10,
+        10
+      ],
+      "phone": [
+        182.5,
+        4039.375,
+        10,
+        10
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "ellipse",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 500
+      }
+    },
+    {
+      "id": "b38-065",
+      "type": "Text",
+      "name": "Phục vụ món chính",
+      "rect": [
+        490.0,
+        5013.8125,
+        149.4375,
+        26.125
+      ],
+      "phone": [
+        219.5,
+        4024.0,
+        91.0469,
+        42.375
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Phục vụ món chính",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 19.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 26.125,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "Phục vụ món chính",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-066",
+      "type": "Text",
+      "name": "21:00",
+      "rect": [
+        220.0,
+        5081.375,
+        190,
+        25.375
+      ],
+      "phone": [
+        32,
+        4101.4375,
+        123.5,
+        24
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "21:00",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0.425,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "phoneProps": {
+        "text": "21:00",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 22.0,
+        "letterSpacing": 0.4,
+        "color": "#5d6a57",
+        "align": "right"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-067",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        449.5,
+        5040.0,
+        1,
+        54.0625
+      ],
+      "phone": [
+        187.0,
+        4068.75,
+        1,
+        44.6875
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 40.0,
+        "borderRadius": 0.0
+      }
+    },
+    {
+      "id": "b38-068",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.0,
+        5089.0625,
+        10,
+        10
+      ],
+      "phone": [
+        182.5,
+        4108.4375,
+        10,
+        10
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "ellipse",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0,
+        "borderRadius": 500
+      }
+    },
+    {
+      "id": "b38-069",
+      "type": "Text",
+      "name": "Kết thúc tiệc",
+      "rect": [
+        490.0,
+        5081.9375,
+        98.5625,
+        26.125
+      ],
+      "phone": [
+        219.5,
+        4102.5625,
+        88.1875,
+        23.375
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Kết thúc tiệc",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 19.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 26.125,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "Kết thúc tiệc",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 17.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 23.375,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-070",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        150.0,
+        5156.125,
+        600,
+        1622.75
+      ],
+      "phone": [
+        16.0,
+        4166.125,
+        343,
+        1831.5
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#697a62"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 15.0,
+        "borderRadius": 16.0
+      }
+    },
+    {
+      "id": "b38-071",
+      "type": "Text",
+      "name": "Sổ lưu bút",
+      "rect": [
+        383.2969,
+        5203.625,
+        133.3906,
+        30.0
+      ],
+      "phone": [
+        120.7969,
+        4205.625,
+        133.3906,
+        30.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "SỔ LƯU BÚT",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "SỔ LƯU BÚT",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-072",
+      "type": "Text",
+      "name": "Hộp Quà Mừng",
+      "rect": [
+        335.3906,
+        6810.875,
+        229.2188,
+        39
+      ],
+      "phone": [
+        99.3281,
+        6029.625,
+        176.3281,
+        30
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "HỘP QUÀ MỪNG",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 26.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 39.0,
+        "letterSpacing": 1.3,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "HỘP QUÀ MỪNG",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 20.0,
+        "fontWeight": "400",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 30.0,
+        "letterSpacing": 1.0,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-073",
+      "type": "Text",
+      "name": "✦",
+      "rect": [
+        356.3004,
+        6888.0952,
+        17.6335,
+        33.3408
+      ],
+      "phone": [
+        99.0405,
+        6107.7529,
+        7.1535,
+        13.5254
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "✦",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 22.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 33.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "✦",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 22.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 33.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 81.3783
+      }
+    },
+    {
+      "id": "b38-074",
+      "type": "Text",
+      "name": "✦",
+      "rect": [
+        541.2582,
+        6916.1626,
+        12.7961,
+        24.2061
+      ],
+      "phone": [
+        280.0921,
+        6128.436,
+        10.1284,
+        19.1592
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "✦",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "✦",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 16.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 24.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 81.1421
+      }
+    },
+    {
+      "id": "b38-075",
+      "type": "Text",
+      "name": "✦",
+      "rect": [
+        336.2522,
+        6961.6162,
+        4.605,
+        8.7051
+      ],
+      "phone": [
+        69.7821,
+        6163.8618,
+        12.5453,
+        23.7139
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "✦",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 21.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "✦",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 21.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 1.9349
+      }
+    },
+    {
+      "id": "b38-076",
+      "type": "Text",
+      "name": "✦",
+      "rect": [
+        557.8346,
+        6942.3467,
+        7.2214,
+        13.6504
+      ],
+      "phone": [
+        295.459,
+        6152.3315,
+        6.9725,
+        13.1802
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "✦",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 21.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "✦",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 21.0,
+        "letterSpacing": 0,
+        "color": "#697a62",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 33.3373
+      }
+    },
+    {
+      "id": "b38-077",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        444.5,
+        6956.125,
+        11,
+        5.5
+      ],
+      "phone": [
+        182.0,
+        6165.875,
+        11,
+        5.5
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#ec4899"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 0.0,
+        "borderRadius": 2.0
+      }
+    },
+    {
+      "id": "b38-078",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.0,
+        6953.875,
+        10,
+        10
+      ],
+      "phone": [
+        182.5,
+        6163.625,
+        10,
+        10
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#697a62"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 0.0,
+        "borderRadius": 50.0
+      }
+    },
+    {
+      "id": "b38-079",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        444.5,
+        6956.125,
+        11,
+        5.5
+      ],
+      "phone": [
+        182.0,
+        6165.875,
+        11,
+        5.5
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#22c55e"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 0.0,
+        "borderRadius": 2.0
+      }
+    },
+    {
+      "id": "b38-080",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.5,
+        6954.375,
+        9,
+        9
+      ],
+      "phone": [
+        183.0,
+        6164.125,
+        9,
+        9
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#3b82f6"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 0.0,
+        "borderRadius": 50.0
+      }
+    },
+    {
+      "id": "b38-081",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        444.0,
+        6955.875,
+        12,
+        6
+      ],
+      "phone": [
+        181.5,
+        6165.625,
+        12,
+        6
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#a855f7"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 0.0,
+        "borderRadius": 2.0
+      }
+    },
+    {
+      "id": "b38-082",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.0,
+        6956.375,
+        10,
+        5
+      ],
+      "phone": [
+        182.5,
+        6166.125,
+        10,
+        5
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#5d6a57"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 0.0,
+        "borderRadius": 2.0
+      }
+    },
+    {
+      "id": "b38-083",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        445.5,
+        6954.375,
+        9,
+        9
+      ],
+      "phone": [
+        183.0,
+        6164.125,
+        9,
+        9
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#f97316"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 0.0,
+        "borderRadius": 50.0
+      }
+    },
+    {
+      "id": "b38-084",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        381.195,
+        7113.6562,
+        137.61,
+        12.0
+      ],
+      "phone": [
+        121.5386,
+        6321.4316,
+        131.9227,
+        12.0
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#000000"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 11.0,
+        "borderRadius": 50.0
+      }
+    },
+    {
+      "id": "b38-085",
+      "type": "Decoration",
+      "name": "double_phoenix_green.webp",
+      "rect": [
+        330.0,
+        6907.6562,
+        34.0,
+        0.0
+      ],
+      "phone": [
+        67.5,
+        6115.4314,
+        34.0,
+        0.0
+      ],
+      "rotation": -22.00002,
+      "phoneRotation": -22.00002,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/fd8f10daeaf6-fd8f10daeaf6-double_phoenix_green.webp",
+        "alt": "double_phoenix_green.webp",
+        "fit": "contain",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-086",
+      "type": "Decoration",
+      "name": "crystal_floral_green.webp",
+      "rect": [
+        518.0,
+        6899.6562,
+        38.0,
+        0.0
+      ],
+      "phone": [
+        255.5,
+        6107.4314,
+        38.0,
+        0.0
+      ],
+      "rotation": 19.99998,
+      "phoneRotation": 19.99998,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/05fb1473fa55-crystal_floral_green.webp",
+        "alt": "crystal_floral_green.webp",
+        "fit": "contain",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-087",
+      "type": "Decoration",
+      "name": "glass_garden_light_green.webp",
+      "rect": [
+        334.0,
+        7017.6562,
+        26.0,
+        0.0
+      ],
+      "phone": [
+        71.5,
+        6225.4314,
+        26.0,
+        0.0
+      ],
+      "rotation": -17.99999,
+      "phoneRotation": -17.99999,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/64a081ed350e-glass_garden_light_green.webp",
+        "alt": "glass_garden_light_green.webp",
+        "fit": "contain",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-088",
+      "type": "Decoration",
+      "name": "song_hy_red.webp",
+      "rect": [
+        532.0,
+        7011.656,
+        24.0,
+        0.0
+      ],
+      "phone": [
+        269.5,
+        6219.4314,
+        24.0,
+        0.0
+      ],
+      "rotation": 14.0,
+      "phoneRotation": 14.0,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/e28d119a96aa-e28d119a96aa-song_hy_red.webp",
+        "alt": "song_hy_red.webp",
+        "fit": "contain",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-089",
+      "type": "Decoration",
+      "name": "spring_garden_green.webp",
+      "rect": [
+        365.0,
+        7117.6562,
+        170,
+        0
+      ],
+      "phone": [
+        102.5,
+        6325.4316,
+        170,
+        0
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/dfe34fdbe99f-spring_garden_green.webp",
+        "alt": "spring_garden_green.webp",
+        "fit": "contain",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-090",
+      "type": "Decoration",
+      "name": "minimalism_purple.webp",
+      "rect": [
+        342.0,
+        7069.6562,
+        44.0,
+        0.0
+      ],
+      "phone": [
+        79.5,
+        6277.4314,
+        44.0,
+        0.0
+      ],
+      "rotation": 7.99999,
+      "phoneRotation": 7.99999,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/e65ea2db9130-e65ea2db9130-minimalism_purple.webp",
+        "alt": "minimalism_purple.webp",
+        "fit": "contain",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-091",
+      "type": "Decoration",
+      "name": "spring_garden_red.webp",
+      "rect": [
+        376.0,
+        7079.6562,
+        26.0,
+        0.0
+      ],
+      "phone": [
+        113.5,
+        6287.4314,
+        26.0,
+        0.0
+      ],
+      "rotation": -9.99999,
+      "phoneRotation": -9.99999,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/4f17fbb87b65-spring_garden_red.webp",
+        "alt": "spring_garden_red.webp",
+        "fit": "contain",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-092",
+      "type": "Decoration",
+      "name": "crystal_floral_blue.webp",
+      "rect": [
+        468.0,
+        7073.6562,
+        40.0,
+        0.0
+      ],
+      "phone": [
+        205.5,
+        6281.4316,
+        40.0,
+        0.0
+      ],
+      "rotation": -14.0,
+      "phoneRotation": -14.0,
+      "props": {
+        "src": "/demo/vuon-xuan-xanh/source-assets/c58ea774af56-c58ea774af56-crystal_floral_blue.webp",
+        "alt": "crystal_floral_blue.webp",
+        "fit": "contain",
+        "motion": false,
+        "floatMotion": false
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-093",
+      "type": "Text",
+      "name": "Nhấn để mở",
+      "rect": [
+        415.2578,
+        7129.375,
+        69.4844,
+        16.0
+      ],
+      "phone": [
+        152.7578,
+        6339.125,
+        69.4844,
+        16.0
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Nhấn để mở",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 12.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Nhấn để mở",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 12.0,
+        "fontWeight": "500",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 89.7581
+      }
+    },
+    {
+      "id": "b38-094",
+      "type": "Shape",
+      "name": "Nền / đường phân cách",
+      "rect": [
+        162.8281,
+        7265.875,
+        574.3438,
+        71.25
+      ],
+      "phone": [
+        40.0,
+        6443.625,
+        295,
+        79.5
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "shape": "rectangle",
+        "fill": "#bdcdc1"
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 20.0,
+        "borderRadius": 16.0
+      }
+    },
+    {
+      "id": "b38-095",
+      "type": "Text",
+      "name": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình ch",
+      "rect": [
+        195.8281,
+        7286.875,
+        508.3438,
+        29.25
+      ],
+      "phone": [
+        65,
+        6460.625,
+        245,
+        45.5
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 18.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 29.25,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "phoneProps": {
+        "text": "Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "size": 14.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 22.75,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "center"
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-096",
+      "type": "Text",
+      "name": "♡ chungdoi.com",
+      "rect": [
+        402.7656,
+        7405.125,
+        94.4531,
+        16
+      ],
+      "phone": [
+        140.2656,
+        6559.125,
+        94.4531,
+        16
+      ],
+      "rotation": 0,
+      "phoneRotation": 0,
+      "props": {
+        "text": "♡ chungdoi.com",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "phoneProps": {
+        "text": "♡ chungdoi.com",
+        "font": "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "size": 12.0,
+        "fontWeight": "300",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "lineHeight": 16.0,
+        "letterSpacing": 0,
+        "color": "#5d6a57",
+        "align": "left"
+      },
+      "styles": {
+        "opacity": 50.0
+      }
+    },
+    {
+      "id": "b38-097",
+      "type": "Album",
+      "name": "Album 12 ảnh – thứ tự DOM",
+      "rect": [
+        150.0,
+        874.0,
+        600,
+        552
+      ],
+      "phone": [
+        40.0,
+        622.0,
+        295,
+        372
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "images": [
+          "/demo/vuon-xuan-xanh/source-assets/8913d414eb40-8913d414eb406bb8de514b7db727233ec28f3076138919b63dd84ab6c92cde25.webp",
+          "/demo/vuon-xuan-xanh/source-assets/81ab5d3c48c0-81ab5d3c48c0d5f188640e738ac66984cae937c8108f51e44c7ade81fce81049.webp",
+          "/demo/vuon-xuan-xanh/source-assets/64cf9019062d-64cf9019062d9e2454cc490f6cde3d334ac58aba2c3da484e56e9265c9919a4d.webp",
+          "/demo/vuon-xuan-xanh/source-assets/8e4d4ff8ee6c-8e4d4ff8ee6c0aac03bdc3ed2163b39a305936ff5af419c9996078ab43d3dd8f.webp",
+          "/demo/vuon-xuan-xanh/source-assets/bb6f06f89389-bb6f06f89389f61de343949fef2af354c69947ec8c3ed84d5cbe5699c4844dbb.webp",
+          "/demo/vuon-xuan-xanh/source-assets/c414835ba5f9-c414835ba5f95a34ebf0730b5a06db8d21630e3025bfd416c8c628a43f5ba704.webp",
+          "/demo/vuon-xuan-xanh/source-assets/208bd1646525-208bd1646525d47bffe8d72e59de19752c4b146cc6c67494c0cc91de777545d3.webp",
+          "/demo/vuon-xuan-xanh/source-assets/5b172de98387-5b172de9838710261ce4393ef2f13cb9f04ddf799bb5158192b11ad1b6d34c70.webp",
+          "/demo/vuon-xuan-xanh/source-assets/27b058681306-27b0586813066d49c0b655b2e56191f0bf02d45082485b4ee441352201a89c89.webp",
+          "/demo/vuon-xuan-xanh/source-assets/d77b3305f9ab-d77b3305f9ab358fe84a8dd88209d25f373dde24d8c1682564d7278834d40580.webp",
+          "/demo/vuon-xuan-xanh/source-assets/dc8b7fe63a78-dc8b7fe63a78379f2633fbd9ce6cb9be751b5da1af86810f10afe700b5061e16.webp",
+          "/demo/vuon-xuan-xanh/source-assets/27ff008d1a95-27ff008d1a9553373dd1aab6bd4ff08ef8d65c26b82278d9873c68439e0bc49d.webp"
+        ],
+        "autoplay": false,
+        "interval": 2,
+        "lightbox": true,
+        "radius": 16,
+        "dotColor": "#cdcdcd",
+        "startAt": 1,
+        "spread": 150.0
+      },
+      "phoneProps": {
+        "spread": 0
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-098",
+      "type": "Calendar",
+      "name": "Lịch ngày cưới",
+      "rect": [
+        274.0,
+        3327.0,
+        352,
+        324.5
+      ],
+      "phone": [
+        39.5,
+        2554.0,
+        296,
+        297.5
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "date": "2026-06-08",
+        "sundayFirst": false,
+        "weekOnly": false,
+        "showTitle": true,
+        "lines": false,
+        "innerFrame": false,
+        "markShape": "Tim đầy",
+        "markColor": "#5d6a57",
+        "markTextColor": "#ffffff",
+        "color": "#5d6a57",
+        "weekColor": "#5d6a57",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "titleFont": "Baskerville, 'Times New Roman', serif",
+        "size": 13.0,
+        "titleSize": 14.0,
+        "titleWeight": "600",
+        "titleSpacing": 0.35,
+        "weekSize": 11,
+        "weekWeight": "500",
+        "dayWeight": "300",
+        "markWeight": "700",
+        "markSize": 12,
+        "eventButton": "Thêm vào lịch",
+        "eventStyle": "Liên kết",
+        "eventColor": "#5d6a57",
+        "eventTitle": "Đám cưới Nguyễn Văn An & Lê Mỹ Ngọc",
+        "eventTime": "10:30",
+        "eventPlace": "GEM Center  - 8 Nguyễn Bỉnh Khiêm, Đa Kao, Quận 1, TP.HCM"
+      },
+      "phoneProps": {
+        "size": 12.0,
+        "titleSize": 13.0
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-099",
+      "type": "Button",
+      "name": "RSVP – chờ popup",
+      "rect": [
+        332.5156,
+        3699.5,
+        234.9688,
+        40
+      ],
+      "phone": [
+        81.7031,
+        2883.5,
+        211.5938,
+        36
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "label": "XÁC NHẬN THAM DỰ",
+        "fill": "#5d6a57",
+        "textColor": "#ffffff",
+        "shape": "rounded",
+        "size": 16.0,
+        "font": "Baskerville, 'Times New Roman', serif",
+        "href": "",
+        "action": "",
+        "payload": {}
+      },
+      "phoneProps": {
+        "size": 14.0
+      },
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-100",
+      "type": "Map",
+      "name": "Bản đồ địa điểm",
+      "rect": [
+        170.0,
+        3971.5,
+        560,
+        440.0
+      ],
+      "phone": [
+        40.0,
+        3156.5,
+        295,
+        332.0
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "name": "GEM Center  - 8 Nguyễn Bỉnh Khiêm",
+        "address": "GEM Center  - 8 Nguyễn Bỉnh Khiêm, Đa Kao, Quận 1, TP.HCM",
+        "showText": false,
+        "heading": "",
+        "divider": false,
+        "innerFrame": false,
+        "padding": 0,
+        "button": "Chỉ đường",
+        "color": "#697a62",
+        "zoom": 15
+      },
+      "phoneProps": {},
+      "styles": {
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-101",
+      "type": "DressCode",
+      "name": "Mẫu màu trang phục",
+      "rect": [
+        354.0,
+        4601.5,
+        192,
+        48
+      ],
+      "phone": [
+        111.5,
+        3650.5,
+        152,
+        40
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "heading": "",
+        "subtitle": "",
+        "headingColor": "#ffffff",
+        "subtitleColor": "#ffffff",
+        "swatchShape": "circle",
+        "swatchSize": 48,
+        "swatchGap": 24.0,
+        "colors": [
+          "#3a332c",
+          "#b9a48a",
+          "#f6f1e8"
+        ]
+      },
+      "phoneProps": {},
+      "styles": {
+        "opacity": 100.0
+      }
+    },
+    {
+      "id": "b38-102",
+      "type": "Form",
+      "name": "Sổ lưu bút – biểu mẫu thật",
+      "rect": [
+        190.0,
+        5258.125,
+        520,
+        1520.75
+      ],
+      "phone": [
+        40.0,
+        4260.125,
+        295,
+        1737.5
+      ],
+      "rotation": 0.0,
+      "phoneRotation": 0.0,
+      "props": {
+        "formId": "b38-wishes",
+        "heading": "",
+        "intro": "",
+        "button": "GỬI LỜI CHÚC",
+        "color": "#5d6a57",
+        "fieldColor": "#5d6a57",
+        "fieldBorderColor": "#bdcdc1",
+        "font": "Baskerville, 'Times New Roman', serif",
+        "padding": 0,
+        "compact": true,
+        "previewSampleCount": 10
+      },
+      "phoneProps": {},
+      "styles": {
+        "borderWidth": 0,
+        "borderRadius": 0,
+        "opacity": 100.0
+      }
+    }
+  ]
+}
