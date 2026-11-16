@@ -1,0 +1,146 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-4.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "0.4"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-6.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 50%",
+      "mixBlendMode": "color-dodge",
+      "opacity": "0.25"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-8.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 30%",
+      "mixBlendMode": "normal",
+      "opacity": "0.4"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[4]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-26.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 10%",
+      "mixBlendMode": "color-dodge",
+      "opacity": "0.25"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[6]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-76.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 40%",
+      "mixBlendMode": "color-dodge",
+      "opacity": "0.25"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[8]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-121.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 60%",
+      "mixBlendMode": "color-dodge",
+      "opacity": "0.25"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[9]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-224.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 70%",
+      "mixBlendMode": "color-dodge",
+      "opacity": "0.25"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[10]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-238.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 75%",
+      "mixBlendMode": "color-dodge",
+      "opacity": "0.25"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[12]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-287.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 80%",
+      "mixBlendMode": "color-dodge",
+      "opacity": "0.25"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[13]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-366.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 85%",
+      "mixBlendMode": "color-dodge",
+      "opacity": "0.25"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[13]/div[2]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-368.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "0.4"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[14]/div[1]",
+    "local": "/demo/song-long-do/source-assets/background-402.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/double-dragon.webp\")",
+    "recipe": {
+      "size": "500px auto",
+      "position": "0% 75%",
+      "mixBlendMode": "normal",
+      "opacity": "0.4"
+    }
+  }
+]
