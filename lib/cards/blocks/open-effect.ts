@@ -9,7 +9,7 @@ export const OPEN_LIMITS = { time: { min: 0.2, max: 3 }, delay: { min: 0, max: 3
 export const OPEN_DEFAULTS = { openEffect: "Giữ nguyên", openTime: 1, openDelay: 0 } as const;
 
 // Chỉ các khối vẽ ở trang bìa mang ô này.
-export const OPEN_EFFECT_TYPES = ["Shape", "Text", "Decoration", "Image", "Particles", "CardPanel"] as const;
+export const OPEN_EFFECT_TYPES = ["Shape", "Text", "GuestText", "Decoration", "Image", "Particles", "CardPanel"] as const;
 
 const openFields = {
   openEffect: { type: "select", label: "Hiệu ứng", options: OPEN_EFFECTS, group: "Khi mở thiệp", help: "Chạy khi khách bấm nút mở thiệp, rồi thiệp chuyển sang trang kế." },
