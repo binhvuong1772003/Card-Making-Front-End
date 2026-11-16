@@ -1,0 +1,332 @@
+{
+  "isPageData": true,
+  "validationIssues": [],
+  "contentOnly": true,
+  "missingAssets": [],
+  "nodeCount": 111,
+  "unsupportedPhoneOverrides": [
+    {
+      "id": "vkx-002",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-003",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-004",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-009",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-010",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-011",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-012",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-013",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-015",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-016",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-017",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-018",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-019",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-020",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-022",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-023",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-025",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-026",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-027",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-028",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-029",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-030",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-031",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-032",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-033",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-034",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-034",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "vkx-035",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-037",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-038",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-038",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "vkx-039",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-040",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-042",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-044",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-045",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-046",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-046",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "vkx-051",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-052",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-053",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-054",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-056",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-057",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-057",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "vkx-060",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-061",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-061",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "vkx-065",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-066",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-066",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "vkx-070",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-071",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-071",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "vkx-075",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-076",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-076",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "vkx-079",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-080",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-081",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-103",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "vkx-106",
+      "type": "Album",
+      "key": "spread"
+    },
+    {
+      "id": "vkx-107",
+      "type": "Calendar",
+      "key": "size"
+    },
+    {
+      "id": "vkx-107",
+      "type": "Calendar",
+      "key": "titleSize"
+    }
+  ],
+  "visualStatus": "working draft; source/local comparison recorded, not approved",
+  "catalogStatus": "not uploaded or verified",
+  "snapshotStatus": "not created"
+}

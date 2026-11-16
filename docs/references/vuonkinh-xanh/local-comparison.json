@@ -1,0 +1,4036 @@
+{
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "columnSize": [
+      900,
+      6179.015625
+    ],
+    "measuredNodes": 111,
+    "imagesNotYetLoadedAtCapture": [
+      "/demo/vuonkinh-xanh/source-assets/6e918cd65d96-6e918cd65d963190e68ffa9300b416d654ccf0d15d1f236a5932730435866235.webp",
+      "/demo/vuonkinh-xanh/source-assets/4a00750c469b-4a00750c469bcce1f8523743e943574d1dff4325918757262de17d7db764011e.webp",
+      "/demo/vuonkinh-xanh/source-assets/0ad45951b134-0ad45951b1346de59ca31c95b950c3e5c34f97a243077c6a2cd918af975ec1d4.webp",
+      "/demo/vuonkinh-xanh/source-assets/12d1e6394524-12d1e639452406c72325847b1416404d287d079cc33a404aa8179a7f7b18412b.webp",
+      "/demo/vuonkinh-xanh/source-assets/0e5349132b5c-0e5349132b5cf7a52ab09c1fd5f40429a1fabd54de9ef74e5f1e3cd50b9eaa76.webp",
+      "/demo/vuonkinh-xanh/source-assets/b01b08ca2557-b01b08ca2557e09e9ab16fe8eb12da44dd6c2bc0a12402b7c2d952efe00fc351.webp",
+      "/demo/vuonkinh-xanh/source-assets/5fec97ef5bf7-5fec97ef5bf76b03591efe99976eea4bd2a0141179a97c1c98032436984d9506.webp",
+      "/demo/vuonkinh-xanh/source-assets/924347c7d7f8-924347c7d7f87ffedcc680373a1eac2e22c8a5eded9289a43a54bfd8fd7fb57b.webp",
+      "/demo/vuonkinh-xanh/source-assets/d9b76210bf2b-d9b76210bf2b7f051d15077c7a64a3f470a9002aff4a3468c4485b0eaeee4a83.webp"
+    ],
+    "nodeDiffs": [
+      {
+        "id": "vkx-001",
+        "type": "Shape",
+        "sourceLayout": [
+          325.0,
+          89.0,
+          250,
+          384.9219
+        ],
+        "localBBox": [
+          325.0,
+          89,
+          250,
+          384.921875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-002",
+        "type": "Text",
+        "sourceLayout": [
+          346.0,
+          211.4531,
+          208,
+          38
+        ],
+        "localBBox": [
+          346.0,
+          211.4375,
+          208,
+          38
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-003",
+        "type": "Text",
+        "sourceLayout": [
+          437.9375,
+          265.4531,
+          24.1094,
+          32
+        ],
+        "localBBox": [
+          437.9375,
+          265.4375,
+          24.109375,
+          32
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-004",
+        "type": "Text",
+        "sourceLayout": [
+          346.0,
+          313.4531,
+          208,
+          38
+        ],
+        "localBBox": [
+          346.0,
+          313.4375,
+          208,
+          38
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-005",
+        "type": "Decoration",
+        "sourceLayout": [
+          281.25,
+          333.1422,
+          337.5,
+          260.7031
+        ],
+        "localBBox": [
+          281.25,
+          333.140625,
+          337.5,
+          260.6875
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-006",
+        "type": "Decoration",
+        "sourceLayout": [
+          693.0,
+          546.0469,
+          244.0,
+          256.0
+        ],
+        "localBBox": [
+          662.7889404296876,
+          517.693603515625,
+          304.422119140625,
+          312.70654296875
+        ],
+        "maxGeometryDelta": 60.422,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-007",
+        "type": "Shape",
+        "sourceLayout": [
+          27.0,
+          623.9219,
+          846,
+          5544.0938
+        ],
+        "localBBox": [
+          27.0,
+          623.921875,
+          846,
+          5544.09375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-008",
+        "type": "Decoration",
+        "sourceLayout": [
+          -73.1483,
+          1144.1283,
+          387.9998,
+          484.9998
+        ],
+        "localBBox": [
+          -84.22613525390625,
+          1135.3514404296875,
+          410.1553955078125,
+          502.531494140625
+        ],
+        "maxGeometryDelta": 22.156,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-009",
+        "type": "Text",
+        "sourceLayout": [
+          316.7188,
+          664.9219,
+          266.5625,
+          39.0
+        ],
+        "localBBox": [
+          316.71875,
+          664.921875,
+          266.5625,
+          39
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-010",
+        "type": "Text",
+        "sourceLayout": [
+          216.6562,
+          731.4219,
+          44.1875,
+          21.0
+        ],
+        "localBBox": [
+          216.640625,
+          731.421875,
+          44.1875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-011",
+        "type": "Text",
+        "sourceLayout": [
+          192.625,
+          756.1719,
+          92.25,
+          16.5
+        ],
+        "localBBox": [
+          192.625,
+          756.171875,
+          92.25,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-012",
+        "type": "Text",
+        "sourceLayout": [
+          204.25,
+          776.6719,
+          68.9844,
+          16.5
+        ],
+        "localBBox": [
+          204.25,
+          776.671875,
+          68.984375,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-013",
+        "type": "Text",
+        "sourceLayout": [
+          192.375,
+          801.9219,
+          92.75,
+          16.5
+        ],
+        "localBBox": [
+          192.375,
+          801.921875,
+          92.75,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-014",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          735.1719,
+          1,
+          80
+        ],
+        "localBBox": [
+          449.5,
+          735.171875,
+          1,
+          80
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-015",
+        "type": "Text",
+        "sourceLayout": [
+          639.1562,
+          731.4219,
+          44.1875,
+          21.0
+        ],
+        "localBBox": [
+          639.140625,
+          731.421875,
+          44.1875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-016",
+        "type": "Text",
+        "sourceLayout": [
+          622.9688,
+          756.1719,
+          76.5625,
+          16.5
+        ],
+        "localBBox": [
+          622.96875,
+          756.171875,
+          76.5625,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-017",
+        "type": "Text",
+        "sourceLayout": [
+          616.625,
+          776.6719,
+          89.2344,
+          16.5
+        ],
+        "localBBox": [
+          616.625,
+          776.671875,
+          89.234375,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-018",
+        "type": "Text",
+        "sourceLayout": [
+          576.4375,
+          801.9219,
+          169.625,
+          16.5
+        ],
+        "localBBox": [
+          576.4375,
+          801.921875,
+          169.625,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-019",
+        "type": "Text",
+        "sourceLayout": [
+          260.2031,
+          846.4219,
+          379.5938,
+          60
+        ],
+        "localBBox": [
+          260.1875,
+          846.421875,
+          379.59375,
+          60
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-020",
+        "type": "Text",
+        "sourceLayout": [
+          138.0,
+          934.4219,
+          624,
+          80
+        ],
+        "localBBox": [
+          138.0,
+          934.421875,
+          624,
+          80
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-021",
+        "type": "Text",
+        "sourceLayout": [
+          411.1719,
+          1029.7552,
+          77.6562,
+          13.3333
+        ],
+        "localBBox": [
+          411.171875,
+          1029.75,
+          77.640625,
+          13.328125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-022",
+        "type": "Text",
+        "sourceLayout": [
+          438.5938,
+          1059.75,
+          22.8125,
+          40
+        ],
+        "localBBox": [
+          438.59375,
+          1059.75,
+          22.8125,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-023",
+        "type": "Text",
+        "sourceLayout": [
+          138.0,
+          1115.75,
+          624,
+          80
+        ],
+        "localBBox": [
+          138.0,
+          1115.75,
+          624,
+          80
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-024",
+        "type": "Text",
+        "sourceLayout": [
+          432.4062,
+          1211.0834,
+          35.1875,
+          13.3333
+        ],
+        "localBBox": [
+          432.390625,
+          1211.078125,
+          35.1875,
+          13.328125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-025",
+        "type": "Text",
+        "sourceLayout": [
+          266.9688,
+          1253.0781,
+          366.0469,
+          60
+        ],
+        "localBBox": [
+          266.96875,
+          1253.078125,
+          366.046875,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-026",
+        "type": "Text",
+        "sourceLayout": [
+          408.8281,
+          1321.0781,
+          82.3125,
+          27
+        ],
+        "localBBox": [
+          408.8125,
+          1321.078125,
+          82.3125,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-027",
+        "type": "Text",
+        "sourceLayout": [
+          416.25,
+          1376.0781,
+          67.5,
+          45
+        ],
+        "localBBox": [
+          416.25,
+          1376.078125,
+          67.5,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-028",
+        "type": "Text",
+        "sourceLayout": [
+          284.3594,
+          1459.0781,
+          87.5156,
+          24.0
+        ],
+        "localBBox": [
+          284.359375,
+          1459.078125,
+          87.5,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-029",
+        "type": "Text",
+        "sourceLayout": [
+          395.875,
+          1457.0781,
+          14.2969,
+          28
+        ],
+        "localBBox": [
+          395.875,
+          1457.078125,
+          14.296875,
+          28
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-030",
+        "type": "Text",
+        "sourceLayout": [
+          434.1719,
+          1441.0781,
+          40,
+          60
+        ],
+        "localBBox": [
+          434.171875,
+          1441.078125,
+          40,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-031",
+        "type": "Text",
+        "sourceLayout": [
+          498.1719,
+          1457.0781,
+          14.2969,
+          28
+        ],
+        "localBBox": [
+          498.171875,
+          1457.078125,
+          14.296875,
+          28
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-032",
+        "type": "Text",
+        "sourceLayout": [
+          536.4688,
+          1459.0781,
+          79.1719,
+          24.0
+        ],
+        "localBBox": [
+          536.46875,
+          1459.078125,
+          79.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-033",
+        "type": "Text",
+        "sourceLayout": [
+          426.0,
+          1521.0781,
+          48,
+          36
+        ],
+        "localBBox": [
+          426.0,
+          1521.078125,
+          48,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-034",
+        "type": "Text",
+        "sourceLayout": [
+          252.0,
+          1577.0781,
+          396,
+          20
+        ],
+        "localBBox": [
+          252.0,
+          1577.078125,
+          396,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-035",
+        "type": "Text",
+        "sourceLayout": [
+          369.4688,
+          1625.0781,
+          161.0625,
+          39.0
+        ],
+        "localBBox": [
+          369.46875,
+          1625.078125,
+          161.0625,
+          39
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-036",
+        "type": "Decoration",
+        "sourceLayout": [
+          568.2735,
+          2742.1439,
+          387.9998,
+          484.9998
+        ],
+        "localBBox": [
+          557.1801147460938,
+          2733.366943359375,
+          410.15533447265625,
+          502.53173828125
+        ],
+        "maxGeometryDelta": 22.156,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-037",
+        "type": "Text",
+        "sourceLayout": [
+          302.5,
+          2288.0781,
+          294.9844,
+          39.0
+        ],
+        "localBBox": [
+          302.5,
+          2288.078125,
+          294.984375,
+          39
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-038",
+        "type": "Text",
+        "sourceLayout": [
+          270.9688,
+          2343.0781,
+          358.0625,
+          30
+        ],
+        "localBBox": [
+          270.96875,
+          2343.078125,
+          358.0625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-039",
+        "type": "Text",
+        "sourceLayout": [
+          416.25,
+          2393.0781,
+          67.5,
+          45
+        ],
+        "localBBox": [
+          416.25,
+          2393.078125,
+          67.5,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-040",
+        "type": "Text",
+        "sourceLayout": [
+          297.6562,
+          2476.0781,
+          87.5156,
+          24.0
+        ],
+        "localBBox": [
+          297.640625,
+          2476.078125,
+          87.5,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-041",
+        "type": "Shape",
+        "sourceLayout": [
+          409.1719,
+          2472.0781,
+          1,
+          32
+        ],
+        "localBBox": [
+          409.171875,
+          2472.078125,
+          1,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-042",
+        "type": "Text",
+        "sourceLayout": [
+          434.1719,
+          2458.0781,
+          40,
+          60
+        ],
+        "localBBox": [
+          434.171875,
+          2458.078125,
+          40,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-043",
+        "type": "Shape",
+        "sourceLayout": [
+          498.1719,
+          2472.0781,
+          1,
+          32
+        ],
+        "localBBox": [
+          498.171875,
+          2472.078125,
+          1,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-044",
+        "type": "Text",
+        "sourceLayout": [
+          523.1719,
+          2476.0781,
+          79.1719,
+          24.0
+        ],
+        "localBBox": [
+          523.171875,
+          2476.078125,
+          79.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-045",
+        "type": "Text",
+        "sourceLayout": [
+          426.0,
+          2538.0781,
+          48,
+          36
+        ],
+        "localBBox": [
+          426.0,
+          2538.078125,
+          48,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-046",
+        "type": "Text",
+        "sourceLayout": [
+          252.0,
+          2594.0781,
+          396,
+          20
+        ],
+        "localBBox": [
+          252.0,
+          2594.078125,
+          396,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-047",
+        "type": "Text",
+        "sourceLayout": [
+          358.8438,
+          2650.0781,
+          81.7812,
+          16.0
+        ],
+        "localBBox": [
+          358.84375,
+          2650.078125,
+          81.765625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-048",
+        "type": "Text",
+        "sourceLayout": [
+          377.2344,
+          2670.0781,
+          45,
+          28
+        ],
+        "localBBox": [
+          377.234375,
+          2670.078125,
+          45,
+          28
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-049",
+        "type": "Text",
+        "sourceLayout": [
+          472.625,
+          2650.0781,
+          68.5312,
+          16.0
+        ],
+        "localBBox": [
+          472.625,
+          2650.078125,
+          68.515625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-050",
+        "type": "Text",
+        "sourceLayout": [
+          484.3906,
+          2670.0781,
+          45,
+          28
+        ],
+        "localBBox": [
+          484.375,
+          2670.078125,
+          45,
+          28
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-051",
+        "type": "Text",
+        "sourceLayout": [
+          270.4844,
+          3234.5781,
+          359.0312,
+          39.0
+        ],
+        "localBBox": [
+          270.484375,
+          3234.578125,
+          359.015625,
+          39
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-052",
+        "type": "Text",
+        "sourceLayout": [
+          255.4844,
+          3273.5781,
+          389.0312,
+          20
+        ],
+        "localBBox": [
+          255.484375,
+          3273.578125,
+          389.015625,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-053",
+        "type": "Text",
+        "sourceLayout": [
+          367.2812,
+          3761.5781,
+          165.4375,
+          39.0
+        ],
+        "localBBox": [
+          367.265625,
+          3761.578125,
+          165.4375,
+          39
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-054",
+        "type": "Text",
+        "sourceLayout": [
+          389.7344,
+          3804.0781,
+          120.5156,
+          24.0
+        ],
+        "localBBox": [
+          389.734375,
+          3804.078125,
+          120.5,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-055",
+        "type": "Decoration",
+        "sourceLayout": [
+          -90.1562,
+          4413.7344,
+          354.4688,
+          0
+        ],
+        "localBBox": [
+          -90.140625,
+          4413.734375,
+          354.46875,
+          0
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-056",
+        "type": "Text",
+        "sourceLayout": [
+          291.9219,
+          3980.5781,
+          316.1406,
+          39.0
+        ],
+        "localBBox": [
+          291.921875,
+          3980.578125,
+          316.125,
+          39
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-057",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4048.9531,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4048.953125,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-058",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4061.6406,
+          1,
+          54.0625
+        ],
+        "localBBox": [
+          449.5,
+          4061.640625,
+          1,
+          54.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-059",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4056.6406,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4056.640625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-060",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4049.0156,
+          82.8438,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4049.015625,
+          82.84375,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-061",
+        "type": "Text",
+        "sourceLayout": [
+          369.1406,
+          4119.0781,
+          40.8594,
+          23.375
+        ],
+        "localBBox": [
+          369.125,
+          4119.078125,
+          40.859375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-062",
+        "type": "Decoration",
+        "sourceLayout": [
+          313.1406,
+          4110.7656,
+          36,
+          40
+        ],
+        "localBBox": [
+          313.125,
+          4110.765625,
+          36,
+          40
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-063",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4075.7031,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4075.703125,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-064",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4124.7656,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4124.765625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-065",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4117.1406,
+          69.1094,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4117.140625,
+          69.109375,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-066",
+        "type": "Text",
+        "sourceLayout": [
+          369.1406,
+          4187.2031,
+          40.8594,
+          23.375
+        ],
+        "localBBox": [
+          369.125,
+          4187.203125,
+          40.859375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-067",
+        "type": "Decoration",
+        "sourceLayout": [
+          313.1406,
+          4178.8906,
+          36,
+          40
+        ],
+        "localBBox": [
+          313.125,
+          4178.890625,
+          36,
+          40
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-068",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4143.8281,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4143.828125,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-069",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4192.8906,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4192.890625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-070",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4185.2656,
+          141.7031,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4185.265625,
+          141.6875,
+          26.125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-071",
+        "type": "Text",
+        "sourceLayout": [
+          369.1406,
+          4255.3281,
+          40.8594,
+          23.375
+        ],
+        "localBBox": [
+          369.125,
+          4255.328125,
+          40.859375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-072",
+        "type": "Decoration",
+        "sourceLayout": [
+          313.1406,
+          4247.0156,
+          36,
+          40
+        ],
+        "localBBox": [
+          313.125,
+          4247.015625,
+          36,
+          40
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-073",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4211.9531,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4211.953125,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-074",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4261.0156,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4261.015625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-075",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4253.3906,
+          147.25,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4253.390625,
+          147.25,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-076",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4321.4531,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4321.453125,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-077",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4280.0781,
+          1,
+          54.0625
+        ],
+        "localBBox": [
+          449.5,
+          4280.078125,
+          1,
+          54.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-078",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4329.1406,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4329.140625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-079",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4321.5156,
+          97.0781,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4321.515625,
+          97.0625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-080",
+        "type": "Text",
+        "sourceLayout": [
+          371.0156,
+          4392.2031,
+          157.9688,
+          39.0
+        ],
+        "localBBox": [
+          371.0,
+          4392.203125,
+          157.96875,
+          39
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-081",
+        "type": "Text",
+        "sourceLayout": [
+          345.0469,
+          5376.7031,
+          209.9062,
+          39
+        ],
+        "localBBox": [
+          345.046875,
+          5376.703125,
+          209.890625,
+          39
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-082",
+        "type": "Text",
+        "sourceLayout": [
+          356.0467,
+          5453.4434,
+          18.1409,
+          34.3008
+        ],
+        "localBBox": [
+          356.03125,
+          5453.4375,
+          18.140625,
+          34.296875
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-083",
+        "type": "Text",
+        "sourceLayout": [
+          544.9499,
+          5488.9741,
+          5.4127,
+          10.2393
+        ],
+        "localBBox": [
+          544.9375,
+          5488.96875,
+          5.40625,
+          10.234375
+        ],
+        "maxGeometryDelta": 0.012,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-084",
+        "type": "Text",
+        "sourceLayout": [
+          334.4883,
+          5524.1104,
+          8.1328,
+          15.373
+        ],
+        "localBBox": [
+          334.484375,
+          5524.109375,
+          8.125,
+          15.359375
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-085",
+        "type": "Text",
+        "sourceLayout": [
+          555.0663,
+          5502.9419,
+          12.7581,
+          24.1162
+        ],
+        "localBBox": [
+          555.0625,
+          5502.9375,
+          12.75,
+          24.109375
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-086",
+        "type": "Shape",
+        "sourceLayout": [
+          444.5,
+          5521.9531,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          444.5,
+          5521.953125,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-087",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5519.7031,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          5519.703125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-088",
+        "type": "Shape",
+        "sourceLayout": [
+          444.5,
+          5521.9531,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          444.5,
+          5521.953125,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-089",
+        "type": "Shape",
+        "sourceLayout": [
+          445.5,
+          5520.2031,
+          9,
+          9
+        ],
+        "localBBox": [
+          445.5,
+          5520.203125,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-090",
+        "type": "Shape",
+        "sourceLayout": [
+          444.0,
+          5521.7031,
+          12,
+          6
+        ],
+        "localBBox": [
+          444.0,
+          5521.703125,
+          12,
+          6
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-091",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5522.2031,
+          10,
+          5
+        ],
+        "localBBox": [
+          445.0,
+          5522.203125,
+          10,
+          5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-092",
+        "type": "Shape",
+        "sourceLayout": [
+          445.5,
+          5520.2031,
+          9,
+          9
+        ],
+        "localBBox": [
+          445.5,
+          5520.203125,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-093",
+        "type": "Shape",
+        "sourceLayout": [
+          384.8494,
+          5676.9468,
+          130.3013,
+          12.0
+        ],
+        "localBBox": [
+          384.84375,
+          5676.9375,
+          130.296875,
+          12
+        ],
+        "maxGeometryDelta": 0.009,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-094",
+        "type": "Decoration",
+        "sourceLayout": [
+          330.0,
+          5470.9465,
+          34.0,
+          0.0
+        ],
+        "localBBox": [
+          331.2379150390625,
+          5464.5693359375,
+          31.524169921875,
+          12.736328125
+        ],
+        "maxGeometryDelta": 12.736,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-095",
+        "type": "Decoration",
+        "sourceLayout": [
+          518.0,
+          5462.9465,
+          38.0,
+          0.0
+        ],
+        "localBBox": [
+          519.1458129882812,
+          5456.43896484375,
+          35.7083740234375,
+          12.9970703125
+        ],
+        "maxGeometryDelta": 12.997,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-096",
+        "type": "Decoration",
+        "sourceLayout": [
+          334.0,
+          5580.9465,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          334.63623046875,
+          5576.92041015625,
+          24.7275390625,
+          8.0341796875
+        ],
+        "maxGeometryDelta": 8.034,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-097",
+        "type": "Decoration",
+        "sourceLayout": [
+          532.0,
+          5574.9465,
+          24.0,
+          0.0
+        ],
+        "localBBox": [
+          532.3564453125,
+          5572.03466796875,
+          23.287109375,
+          5.8056640625
+        ],
+        "maxGeometryDelta": 5.806,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-098",
+        "type": "Decoration",
+        "sourceLayout": [
+          365.0,
+          5680.9468,
+          170,
+          0
+        ],
+        "localBBox": [
+          365.0,
+          5680.9375,
+          170,
+          0
+        ],
+        "maxGeometryDelta": 0.009,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-099",
+        "type": "Decoration",
+        "sourceLayout": [
+          342.0,
+          5632.9465,
+          44.0,
+          0.0
+        ],
+        "localBBox": [
+          342.214111328125,
+          5629.87548828125,
+          43.57177734375,
+          6.1240234375
+        ],
+        "maxGeometryDelta": 6.124,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-100",
+        "type": "Decoration",
+        "sourceLayout": [
+          376.0,
+          5642.9465,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          376.197509765625,
+          5640.68017578125,
+          25.60498046875,
+          4.5146484375
+        ],
+        "maxGeometryDelta": 4.515,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-101",
+        "type": "Decoration",
+        "sourceLayout": [
+          468.0,
+          5636.9468,
+          40.0,
+          0.0
+        ],
+        "localBBox": [
+          468.5941162109375,
+          5632.09912109375,
+          38.811767578125,
+          9.6767578125
+        ],
+        "maxGeometryDelta": 9.677,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-102",
+        "type": "Text",
+        "sourceLayout": [
+          415.2578,
+          5695.2031,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          415.25,
+          5695.203125,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-103",
+        "type": "Text",
+        "sourceLayout": [
+          224.0625,
+          5747.7031,
+          451.8594,
+          24
+        ],
+        "localBBox": [
+          224.0625,
+          5747.703125,
+          451.859375,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-104",
+        "type": "Text",
+        "sourceLayout": [
+          402.7656,
+          5795.7031,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          402.75,
+          5795.703125,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-105",
+        "type": "Decoration",
+        "sourceLayout": [
+          -183.0,
+          6167.0156,
+          1266,
+          0
+        ],
+        "localBBox": [
+          -183.0,
+          6167.015625,
+          1266,
+          0
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-106",
+        "type": "Album",
+        "sourceLayout": [
+          60.0,
+          1708.0781,
+          780,
+          552
+        ],
+        "localBBox": [
+          60.0,
+          1708.078125,
+          780,
+          552
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-107",
+        "type": "Calendar",
+        "sourceLayout": [
+          279.0,
+          2767.0781,
+          342,
+          367.5000249999998
+        ],
+        "localBBox": [
+          279.0,
+          2767.078125,
+          342,
+          367.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-108",
+        "type": "Button",
+        "sourceLayout": [
+          341.1406,
+          3166.5781,
+          217.7188,
+          40
+        ],
+        "localBBox": [
+          341.125,
+          3166.578125,
+          217.71875,
+          40
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-109",
+        "type": "Map",
+        "sourceLayout": [
+          210.0,
+          3317.5781,
+          480,
+          360.0000249999998
+        ],
+        "localBBox": [
+          210.0,
+          3317.578125,
+          480,
+          360
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-110",
+        "type": "DressCode",
+        "sourceLayout": [
+          354.0,
+          3848.5781,
+          192,
+          48
+        ],
+        "localBBox": [
+          354.0,
+          3848.578125,
+          192,
+          48
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-111",
+        "type": "Form",
+        "sourceLayout": [
+          150.0,
+          4455.2031,
+          600,
+          885.5000250000003
+        ],
+        "localBBox": [
+          150.0,
+          4455.203125,
+          600,
+          885.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      }
+    ]
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "columnSize": [
+      375,
+      5426.09375
+    ],
+    "measuredNodes": 111,
+    "imagesNotYetLoadedAtCapture": [],
+    "nodeDiffs": [
+      {
+        "id": "vkx-001",
+        "type": "Shape",
+        "sourceLayout": [
+          71.25,
+          64.0,
+          232.5,
+          357.9844
+        ],
+        "localBBox": [
+          71.25,
+          64,
+          232.5,
+          357.984375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-002",
+        "type": "Text",
+        "sourceLayout": [
+          92.25,
+          190.4219,
+          190.5,
+          28.8594
+        ],
+        "localBBox": [
+          92.25,
+          190.421875,
+          190.5,
+          28.859375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-003",
+        "type": "Text",
+        "sourceLayout": [
+          178.6875,
+          231.2812,
+          17.625,
+          23.4062
+        ],
+        "localBBox": [
+          178.6875,
+          231.265625,
+          17.625,
+          23.390625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-004",
+        "type": "Text",
+        "sourceLayout": [
+          92.25,
+          266.6875,
+          190.5,
+          28.8594
+        ],
+        "localBBox": [
+          92.25,
+          266.6875,
+          190.5,
+          28.859375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-005",
+        "type": "Decoration",
+        "sourceLayout": [
+          30.5625,
+          291.0597,
+          313.875,
+          242.4531
+        ],
+        "localBBox": [
+          30.5625,
+          291.046875,
+          313.875,
+          242.4375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-006",
+        "type": "Decoration",
+        "sourceLayout": [
+          247.0625,
+          474.0312,
+          144.0,
+          151.0
+        ],
+        "localBBox": [
+          229.24417114257812,
+          457.281005859375,
+          179.63665771484375,
+          184.46923828125
+        ],
+        "maxGeometryDelta": 35.637,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-007",
+        "type": "Shape",
+        "sourceLayout": [
+          24.0,
+          531.9844,
+          327,
+          4884.1094
+        ],
+        "localBBox": [
+          24,
+          531.984375,
+          327,
+          4884.109375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-008",
+        "type": "Decoration",
+        "sourceLayout": [
+          -14.25,
+          1231.9735,
+          149.9999,
+          186.9999
+        ],
+        "localBBox": [
+          -18.523775100708008,
+          1228.576904296875,
+          158.53192138671875,
+          193.76806640625
+        ],
+        "maxGeometryDelta": 8.532,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-009",
+        "type": "Text",
+        "sourceLayout": [
+          84.9688,
+          562.9844,
+          205.0469,
+          30.0
+        ],
+        "localBBox": [
+          84.96875,
+          562.984375,
+          205.046875,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-010",
+        "type": "Text",
+        "sourceLayout": [
+          89.0625,
+          612.9844,
+          37.875,
+          18.0
+        ],
+        "localBBox": [
+          89.0625,
+          612.984375,
+          37.875,
+          18
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-011",
+        "type": "Text",
+        "sourceLayout": [
+          66.0625,
+          634.9844,
+          83.875,
+          15.0
+        ],
+        "localBBox": [
+          66.0625,
+          634.984375,
+          83.875,
+          15
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-012",
+        "type": "Text",
+        "sourceLayout": [
+          76.6406,
+          653.9844,
+          62.7031,
+          15.0
+        ],
+        "localBBox": [
+          76.625,
+          653.984375,
+          62.6875,
+          15
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-013",
+        "type": "Text",
+        "sourceLayout": [
+          69.3438,
+          676.9844,
+          77.2969,
+          13.75
+        ],
+        "localBBox": [
+          69.34375,
+          676.984375,
+          77.296875,
+          13.75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-014",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          628.7344,
+          1,
+          60
+        ],
+        "localBBox": [
+          187,
+          628.734375,
+          1,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-015",
+        "type": "Text",
+        "sourceLayout": [
+          248.0625,
+          612.9844,
+          37.875,
+          18.0
+        ],
+        "localBBox": [
+          248.0625,
+          612.984375,
+          37.875,
+          18
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-016",
+        "type": "Text",
+        "sourceLayout": [
+          232.1875,
+          634.9844,
+          69.6094,
+          15.0
+        ],
+        "localBBox": [
+          232.1875,
+          634.984375,
+          69.609375,
+          15
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-017",
+        "type": "Text",
+        "sourceLayout": [
+          226.4375,
+          653.9844,
+          81.125,
+          15.0
+        ],
+        "localBBox": [
+          226.4375,
+          653.984375,
+          81.125,
+          15
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-018",
+        "type": "Text",
+        "sourceLayout": [
+          200,
+          676.9844,
+          134,
+          27.5
+        ],
+        "localBBox": [
+          200,
+          676.984375,
+          134,
+          27.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-019",
+        "type": "Text",
+        "sourceLayout": [
+          41,
+          724.4844,
+          293,
+          72
+        ],
+        "localBBox": [
+          41,
+          724.484375,
+          293,
+          72
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-020",
+        "type": "Text",
+        "sourceLayout": [
+          70.2969,
+          816.4844,
+          234.3906,
+          80
+        ],
+        "localBBox": [
+          70.296875,
+          816.484375,
+          234.375,
+          80
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-021",
+        "type": "Text",
+        "sourceLayout": [
+          148.6719,
+          907.8177,
+          77.6562,
+          13.3333
+        ],
+        "localBBox": [
+          148.671875,
+          907.8125,
+          77.640625,
+          13.328125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-022",
+        "type": "Text",
+        "sourceLayout": [
+          178.9375,
+          933.8125,
+          17.1094,
+          30
+        ],
+        "localBBox": [
+          178.9375,
+          933.8125,
+          17.109375,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-023",
+        "type": "Text",
+        "sourceLayout": [
+          70.2969,
+          975.8125,
+          234.3906,
+          80
+        ],
+        "localBBox": [
+          70.296875,
+          975.8125,
+          234.375,
+          80
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-024",
+        "type": "Text",
+        "sourceLayout": [
+          169.9062,
+          1067.1459,
+          35.1875,
+          13.3333
+        ],
+        "localBBox": [
+          169.890625,
+          1067.140625,
+          35.1875,
+          13.328125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-025",
+        "type": "Text",
+        "sourceLayout": [
+          41.0781,
+          1101.1406,
+          292.8438,
+          48
+        ],
+        "localBBox": [
+          41.0625,
+          1101.140625,
+          292.84375,
+          48
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-026",
+        "type": "Text",
+        "sourceLayout": [
+          150.9062,
+          1157.1406,
+          73.1719,
+          24
+        ],
+        "localBBox": [
+          150.890625,
+          1157.140625,
+          73.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-027",
+        "type": "Text",
+        "sourceLayout": [
+          165,
+          1205.1406,
+          45,
+          30
+        ],
+        "localBBox": [
+          165,
+          1205.140625,
+          45,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-028",
+        "type": "Text",
+        "sourceLayout": [
+          51.7656,
+          1264.6406,
+          65.6406,
+          18.0
+        ],
+        "localBBox": [
+          51.75,
+          1264.640625,
+          65.625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-029",
+        "type": "Text",
+        "sourceLayout": [
+          141.4062,
+          1263.6406,
+          10.2188,
+          20
+        ],
+        "localBBox": [
+          141.390625,
+          1263.640625,
+          10.21875,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-030",
+        "type": "Text",
+        "sourceLayout": [
+          175.625,
+          1251.1406,
+          30,
+          45
+        ],
+        "localBBox": [
+          175.625,
+          1251.140625,
+          30,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-031",
+        "type": "Text",
+        "sourceLayout": [
+          229.625,
+          1263.6406,
+          10.2188,
+          20
+        ],
+        "localBBox": [
+          229.625,
+          1263.640625,
+          10.21875,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-032",
+        "type": "Text",
+        "sourceLayout": [
+          263.8438,
+          1264.6406,
+          59.3906,
+          18.0
+        ],
+        "localBBox": [
+          263.84375,
+          1264.640625,
+          59.375,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-033",
+        "type": "Text",
+        "sourceLayout": [
+          169.5,
+          1312.1406,
+          36,
+          27
+        ],
+        "localBBox": [
+          169.5,
+          1312.140625,
+          36,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-034",
+        "type": "Text",
+        "sourceLayout": [
+          41,
+          1355.1406,
+          293,
+          32
+        ],
+        "localBBox": [
+          41,
+          1355.140625,
+          293,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-035",
+        "type": "Text",
+        "sourceLayout": [
+          125.5469,
+          1407.1406,
+          123.8906,
+          30.0
+        ],
+        "localBBox": [
+          125.546875,
+          1407.140625,
+          123.875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-036",
+        "type": "Decoration",
+        "sourceLayout": [
+          232.75,
+          2269.0517,
+          149.9999,
+          186.9999
+        ],
+        "localBBox": [
+          228.47622680664065,
+          2265.655029296875,
+          158.53192138671875,
+          193.76806640625
+        ],
+        "maxGeometryDelta": 8.532,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-037",
+        "type": "Text",
+        "sourceLayout": [
+          74.0469,
+          1873.1406,
+          226.9062,
+          30.0
+        ],
+        "localBBox": [
+          74.046875,
+          1873.140625,
+          226.890625,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-038",
+        "type": "Text",
+        "sourceLayout": [
+          44.2656,
+          1919.1406,
+          286.4531,
+          24
+        ],
+        "localBBox": [
+          44.25,
+          1919.140625,
+          286.4375,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-039",
+        "type": "Text",
+        "sourceLayout": [
+          165,
+          1959.1406,
+          45,
+          30
+        ],
+        "localBBox": [
+          165,
+          1959.140625,
+          45,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-040",
+        "type": "Text",
+        "sourceLayout": [
+          60.9844,
+          2018.6406,
+          65.6406,
+          18.0
+        ],
+        "localBBox": [
+          60.984375,
+          2018.640625,
+          65.625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-041",
+        "type": "Shape",
+        "sourceLayout": [
+          150.625,
+          2015.6406,
+          1,
+          24
+        ],
+        "localBBox": [
+          150.625,
+          2015.640625,
+          1,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-042",
+        "type": "Text",
+        "sourceLayout": [
+          175.625,
+          2005.1406,
+          30,
+          45
+        ],
+        "localBBox": [
+          175.625,
+          2005.140625,
+          30,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-043",
+        "type": "Shape",
+        "sourceLayout": [
+          229.625,
+          2015.6406,
+          1,
+          24
+        ],
+        "localBBox": [
+          229.625,
+          2015.640625,
+          1,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-044",
+        "type": "Text",
+        "sourceLayout": [
+          254.625,
+          2018.6406,
+          59.3906,
+          18.0
+        ],
+        "localBBox": [
+          254.625,
+          2018.640625,
+          59.375,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-045",
+        "type": "Text",
+        "sourceLayout": [
+          169.5,
+          2066.1406,
+          36,
+          27
+        ],
+        "localBBox": [
+          169.5,
+          2066.140625,
+          36,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-046",
+        "type": "Text",
+        "sourceLayout": [
+          41,
+          2109.1406,
+          293,
+          32
+        ],
+        "localBBox": [
+          41,
+          2109.140625,
+          293,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-047",
+        "type": "Text",
+        "sourceLayout": [
+          96.3438,
+          2173.1406,
+          81.7812,
+          16.0
+        ],
+        "localBBox": [
+          96.34375,
+          2173.140625,
+          81.765625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-048",
+        "type": "Text",
+        "sourceLayout": [
+          116.9844,
+          2193.1406,
+          40.5,
+          28
+        ],
+        "localBBox": [
+          116.984375,
+          2193.140625,
+          40.5,
+          28
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-049",
+        "type": "Text",
+        "sourceLayout": [
+          210.125,
+          2173.1406,
+          68.5312,
+          16.0
+        ],
+        "localBBox": [
+          210.125,
+          2173.140625,
+          68.515625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-050",
+        "type": "Text",
+        "sourceLayout": [
+          224.1406,
+          2193.1406,
+          40.5,
+          28
+        ],
+        "localBBox": [
+          224.125,
+          2193.140625,
+          40.5,
+          28
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-051",
+        "type": "Text",
+        "sourceLayout": [
+          49.4062,
+          2686.6406,
+          276.1719,
+          30.0
+        ],
+        "localBBox": [
+          49.390625,
+          2686.640625,
+          276.171875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-052",
+        "type": "Text",
+        "sourceLayout": [
+          49,
+          2716.6406,
+          277,
+          36
+        ],
+        "localBBox": [
+          49,
+          2716.640625,
+          277,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-053",
+        "type": "Text",
+        "sourceLayout": [
+          123.8594,
+          3132.6406,
+          127.2656,
+          30.0
+        ],
+        "localBBox": [
+          123.859375,
+          3132.640625,
+          127.25,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-054",
+        "type": "Text",
+        "sourceLayout": [
+          134.7656,
+          3166.1406,
+          105.4531,
+          20.0
+        ],
+        "localBBox": [
+          134.75,
+          3166.140625,
+          105.4375,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-055",
+        "type": "Decoration",
+        "sourceLayout": [
+          -20.5,
+          3729.4062,
+          136.5,
+          0
+        ],
+        "localBBox": [
+          -20.5,
+          3729.40625,
+          136.5,
+          0
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-056",
+        "type": "Text",
+        "sourceLayout": [
+          65.9062,
+          3314.6406,
+          243.1875,
+          30.0
+        ],
+        "localBBox": [
+          65.890625,
+          3314.640625,
+          243.1875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-057",
+        "type": "Text",
+        "sourceLayout": [
+          41,
+          3365.3281,
+          114.5,
+          24
+        ],
+        "localBBox": [
+          41,
+          3365.328125,
+          114.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-058",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3377.3281,
+          1,
+          44.6875
+        ],
+        "localBBox": [
+          187,
+          3377.328125,
+          1,
+          44.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-059",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3372.3281,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3372.328125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-060",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3366.4531,
+          74.125,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3366.453125,
+          74.125,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-061",
+        "type": "Text",
+        "sourceLayout": [
+          117.0469,
+          3424.7031,
+          38.4531,
+          22
+        ],
+        "localBBox": [
+          117.046875,
+          3424.703125,
+          38.4375,
+          22
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-062",
+        "type": "Decoration",
+        "sourceLayout": [
+          61.0469,
+          3415.7031,
+          36,
+          40
+        ],
+        "localBBox": [
+          61.046875,
+          3415.703125,
+          36,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-063",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3390.0156,
+          1,
+          89.375
+        ],
+        "localBBox": [
+          187,
+          3390.015625,
+          1,
+          89.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-064",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3429.7031,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3429.703125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-065",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3423.8281,
+          61.8438,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3423.828125,
+          61.84375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-066",
+        "type": "Text",
+        "sourceLayout": [
+          117.0469,
+          3493.7656,
+          38.4531,
+          22
+        ],
+        "localBBox": [
+          117.046875,
+          3493.765625,
+          38.4375,
+          22
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-067",
+        "type": "Decoration",
+        "sourceLayout": [
+          61.0469,
+          3484.7656,
+          36,
+          40
+        ],
+        "localBBox": [
+          61.046875,
+          3484.765625,
+          36,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-068",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3447.3906,
+          1,
+          112.75
+        ],
+        "localBBox": [
+          187,
+          3447.390625,
+          1,
+          112.75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-069",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3498.7656,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3498.765625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-070",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3483.3906,
+          89.5,
+          42.375
+        ],
+        "localBBox": [
+          219.5,
+          3483.390625,
+          89.5,
+          42.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-071",
+        "type": "Text",
+        "sourceLayout": [
+          117.0469,
+          3574.5156,
+          38.4531,
+          22
+        ],
+        "localBBox": [
+          117.046875,
+          3574.515625,
+          38.4375,
+          22
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-072",
+        "type": "Decoration",
+        "sourceLayout": [
+          61.0469,
+          3565.5156,
+          36,
+          40
+        ],
+        "localBBox": [
+          61.046875,
+          3565.515625,
+          36,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-073",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3528.1406,
+          1,
+          112.75
+        ],
+        "localBBox": [
+          187,
+          3528.140625,
+          1,
+          112.75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-074",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3579.5156,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3579.515625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-075",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3564.1406,
+          89.7344,
+          42.375
+        ],
+        "localBBox": [
+          219.5,
+          3564.140625,
+          89.734375,
+          42.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-076",
+        "type": "Text",
+        "sourceLayout": [
+          41,
+          3641.5781,
+          114.5,
+          24
+        ],
+        "localBBox": [
+          41,
+          3641.578125,
+          114.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-077",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3608.8906,
+          1,
+          44.6875
+        ],
+        "localBBox": [
+          187,
+          3608.890625,
+          1,
+          44.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-078",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3648.5781,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3648.578125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-079",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3642.7031,
+          86.8594,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3642.703125,
+          86.859375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-080",
+        "type": "Text",
+        "sourceLayout": [
+          126.7344,
+          3702.2656,
+          121.5156,
+          30.0
+        ],
+        "localBBox": [
+          126.734375,
+          3702.265625,
+          121.5,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-081",
+        "type": "Text",
+        "sourceLayout": [
+          106.7656,
+          4851.7656,
+          161.4688,
+          30
+        ],
+        "localBBox": [
+          106.75,
+          4851.765625,
+          161.46875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-082",
+        "type": "Text",
+        "sourceLayout": [
+          92.7107,
+          4917.9253,
+          19.813,
+          37.4619
+        ],
+        "localBBox": [
+          92.703125,
+          4917.921875,
+          19.8125,
+          37.453125
+        ],
+        "maxGeometryDelta": 0.009,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-083",
+        "type": "Text",
+        "sourceLayout": [
+          280.2399,
+          4950.8564,
+          9.8328,
+          18.5996
+        ],
+        "localBBox": [
+          280.234375,
+          4950.84375,
+          9.828125,
+          18.59375
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-084",
+        "type": "Text",
+        "sourceLayout": [
+          73.7506,
+          4993.5039,
+          4.6081,
+          8.7109
+        ],
+        "localBBox": [
+          73.75,
+          4993.5,
+          4.59375,
+          8.703125
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-085",
+        "type": "Text",
+        "sourceLayout": [
+          293.94,
+          4971.6011,
+          10.0106,
+          18.9229
+        ],
+        "localBBox": [
+          293.9375,
+          4971.59375,
+          10,
+          18.921875
+        ],
+        "maxGeometryDelta": 0.011,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-086",
+        "type": "Shape",
+        "sourceLayout": [
+          182.0,
+          4988.0156,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          182,
+          4988.015625,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-087",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          4985.7656,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          4985.765625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-088",
+        "type": "Shape",
+        "sourceLayout": [
+          182.0,
+          4988.0156,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          182,
+          4988.015625,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-089",
+        "type": "Shape",
+        "sourceLayout": [
+          183.0,
+          4986.2656,
+          9,
+          9
+        ],
+        "localBBox": [
+          183,
+          4986.265625,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-090",
+        "type": "Shape",
+        "sourceLayout": [
+          181.5,
+          4987.7656,
+          12,
+          6
+        ],
+        "localBBox": [
+          181.5,
+          4987.765625,
+          12,
+          6
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-091",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          4988.2656,
+          10,
+          5
+        ],
+        "localBBox": [
+          182.5,
+          4988.265625,
+          10,
+          5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-092",
+        "type": "Shape",
+        "sourceLayout": [
+          183.0,
+          4986.2656,
+          9,
+          9
+        ],
+        "localBBox": [
+          183,
+          4986.265625,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-093",
+        "type": "Shape",
+        "sourceLayout": [
+          120.3105,
+          5144.4248,
+          134.3791,
+          12.0
+        ],
+        "localBBox": [
+          120.296875,
+          5144.421875,
+          134.375,
+          12
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-094",
+        "type": "Decoration",
+        "sourceLayout": [
+          67.5,
+          4938.425,
+          34.0,
+          0.0
+        ],
+        "localBBox": [
+          68.73787689208984,
+          4932.0537109375,
+          31.524246215820312,
+          12.736328125
+        ],
+        "maxGeometryDelta": 12.736,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-095",
+        "type": "Decoration",
+        "sourceLayout": [
+          255.5,
+          4930.425,
+          38.0,
+          0.0
+        ],
+        "localBBox": [
+          256.6458435058594,
+          4923.92333984375,
+          35.70831298828125,
+          12.9970703125
+        ],
+        "maxGeometryDelta": 12.997,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-096",
+        "type": "Decoration",
+        "sourceLayout": [
+          71.5,
+          5048.425,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          72.13626861572266,
+          5044.40478515625,
+          24.727462768554688,
+          8.0341796875
+        ],
+        "maxGeometryDelta": 8.034,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-097",
+        "type": "Decoration",
+        "sourceLayout": [
+          269.5,
+          5042.425,
+          24.0,
+          0.0
+        ],
+        "localBBox": [
+          269.8564453125,
+          5039.51904296875,
+          23.287109375,
+          5.8056640625
+        ],
+        "maxGeometryDelta": 5.806,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-098",
+        "type": "Decoration",
+        "sourceLayout": [
+          102.5,
+          5148.4248,
+          170,
+          0
+        ],
+        "localBBox": [
+          102.5,
+          5148.421875,
+          170,
+          0
+        ],
+        "maxGeometryDelta": 0.003,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-099",
+        "type": "Decoration",
+        "sourceLayout": [
+          79.5,
+          5100.425,
+          44.0,
+          0.0
+        ],
+        "localBBox": [
+          79.71410369873047,
+          5097.35986328125,
+          43.57179260253906,
+          6.1240234375
+        ],
+        "maxGeometryDelta": 6.124,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-100",
+        "type": "Decoration",
+        "sourceLayout": [
+          113.5,
+          5110.425,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          113.69750213623048,
+          5108.16455078125,
+          25.605003356933594,
+          4.5146484375
+        ],
+        "maxGeometryDelta": 4.515,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-101",
+        "type": "Decoration",
+        "sourceLayout": [
+          205.5,
+          5104.425,
+          40.0,
+          0.0
+        ],
+        "localBBox": [
+          206.09408569335935,
+          5099.58349609375,
+          38.81182861328125,
+          9.6767578125
+        ],
+        "maxGeometryDelta": 9.677,
+        "rotatedBBox": true
+      },
+      {
+        "id": "vkx-102",
+        "type": "Text",
+        "sourceLayout": [
+          152.7578,
+          5161.2656,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          152.75,
+          5161.265625,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-103",
+        "type": "Text",
+        "sourceLayout": [
+          49,
+          5205.7656,
+          277,
+          40
+        ],
+        "localBBox": [
+          49,
+          5205.765625,
+          277,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-104",
+        "type": "Text",
+        "sourceLayout": [
+          140.2656,
+          5261.7656,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          140.25,
+          5261.765625,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-105",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          5415.0938,
+          487.5,
+          0
+        ],
+        "localBBox": [
+          -56.25,
+          5415.09375,
+          487.5,
+          0
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-106",
+        "type": "Album",
+        "sourceLayout": [
+          41.0,
+          1481.1406,
+          293,
+          372
+        ],
+        "localBBox": [
+          41,
+          1481.140625,
+          293,
+          372
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-107",
+        "type": "Calendar",
+        "sourceLayout": [
+          62.0,
+          2274.1406,
+          251,
+          332.5000249999998
+        ],
+        "localBBox": [
+          62,
+          2274.140625,
+          251,
+          332.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-108",
+        "type": "Button",
+        "sourceLayout": [
+          89.2344,
+          2630.6406,
+          196.5156,
+          36
+        ],
+        "localBBox": [
+          89.234375,
+          2630.640625,
+          196.5,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-109",
+        "type": "Map",
+        "sourceLayout": [
+          49.0,
+          2772.6406,
+          277,
+          292.0000249999998
+        ],
+        "localBBox": [
+          49,
+          2772.640625,
+          277,
+          292
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-110",
+        "type": "DressCode",
+        "sourceLayout": [
+          111.5,
+          3206.6406,
+          152,
+          40
+        ],
+        "localBBox": [
+          111.5,
+          3206.640625,
+          152,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "vkx-111",
+        "type": "Form",
+        "sourceLayout": [
+          49.0,
+          3756.2656,
+          277,
+          1067.5000249999998
+        ],
+        "localBBox": [
+          49,
+          3756.265625,
+          277,
+          800
+        ],
+        "maxGeometryDelta": 267.5,
+        "rotatedBBox": false
+      }
+    ]
+  }
+}
