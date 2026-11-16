@@ -1,0 +1,3414 @@
+{
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "columnSize": [
+      900,
+      6282.3125
+    ],
+    "measuredNodes": 94,
+    "imagesNotYetLoadedAtCapture": [],
+    "nodeDiffs": [
+      {
+        "id": "spd-001",
+        "type": "Decoration",
+        "sourceLayout": [
+          1.0,
+          1.0,
+          898,
+          6280.3125
+        ],
+        "localBBox": [
+          1.0,
+          1,
+          898,
+          6280.3125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-002",
+        "type": "Decoration",
+        "sourceLayout": [
+          -310.8125,
+          1234.0,
+          760.8125,
+          1594
+        ],
+        "localBBox": [
+          -310.8125,
+          1234,
+          760.8125,
+          1594
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-003",
+        "type": "Decoration",
+        "sourceLayout": [
+          450.0,
+          2134.0,
+          760.8125,
+          1594
+        ],
+        "localBBox": [
+          450.0,
+          2134,
+          760.8125,
+          1594
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-004",
+        "type": "Decoration",
+        "sourceLayout": [
+          450.0,
+          1297.2,
+          643.5469,
+          731
+        ],
+        "localBBox": [
+          450.0,
+          1297.1875,
+          643.546875,
+          731
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-005",
+        "type": "Decoration",
+        "sourceLayout": [
+          -540.4062,
+          3010.3999,
+          990.4062,
+          1125
+        ],
+        "localBBox": [
+          -540.390625,
+          3010.390625,
+          990.390625,
+          1125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-006",
+        "type": "Text",
+        "sourceLayout": [
+          88.0,
+          65.0,
+          851,
+          57.7188
+        ],
+        "localBBox": [
+          88.0,
+          65,
+          851,
+          57.71875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-007",
+        "type": "Text",
+        "sourceLayout": [
+          123.0,
+          132.7188,
+          816,
+          57.7188
+        ],
+        "localBBox": [
+          123.0,
+          132.71875,
+          816,
+          57.71875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-008",
+        "type": "Shape",
+        "sourceLayout": [
+          1.0,
+          466.4375,
+          898,
+          206
+        ],
+        "localBBox": [
+          1.0,
+          466.4375,
+          898,
+          206
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-009",
+        "type": "Decoration",
+        "sourceLayout": [
+          -168.0,
+          202.6375,
+          431,
+          900
+        ],
+        "localBBox": [
+          -168.0,
+          202.625,
+          431,
+          900
+        ],
+        "maxGeometryDelta": 0.012,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-010",
+        "type": "Decoration",
+        "sourceLayout": [
+          304.5,
+          320.9375,
+          291,
+          291
+        ],
+        "localBBox": [
+          304.5,
+          320.9375,
+          291,
+          291
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-011",
+        "type": "Decoration",
+        "sourceLayout": [
+          595.5,
+          17.2375,
+          291,
+          600
+        ],
+        "localBBox": [
+          595.5,
+          17.234375,
+          291,
+          600
+        ],
+        "maxGeometryDelta": 0.003,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-012",
+        "type": "Decoration",
+        "sourceLayout": [
+          539.0,
+          697.6375,
+          360,
+          408.9062
+        ],
+        "localBBox": [
+          539.0,
+          697.625,
+          360,
+          408.890625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-013",
+        "type": "Text",
+        "sourceLayout": [
+          316.7656,
+          1030.4375,
+          266.4531,
+          36.0
+        ],
+        "localBBox": [
+          316.75,
+          1030.4375,
+          266.4375,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-014",
+        "type": "Text",
+        "sourceLayout": [
+          193.5625,
+          1097.6875,
+          47.3438,
+          22.5
+        ],
+        "localBBox": [
+          193.5625,
+          1097.6875,
+          47.34375,
+          22.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-015",
+        "type": "Text",
+        "sourceLayout": [
+          172.0,
+          1124.1875,
+          90.4844,
+          22.5
+        ],
+        "localBBox": [
+          172.0,
+          1124.1875,
+          90.484375,
+          22.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-016",
+        "type": "Text",
+        "sourceLayout": [
+          144.6406,
+          1150.6875,
+          145.1875,
+          22.5
+        ],
+        "localBBox": [
+          144.625,
+          1150.6875,
+          145.1875,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-017",
+        "type": "Text",
+        "sourceLayout": [
+          115.1562,
+          1181.9375,
+          204.1719,
+          16.25
+        ],
+        "localBBox": [
+          115.140625,
+          1181.9375,
+          204.171875,
+          16.25
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-018",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          1118.3125,
+          1,
+          60
+        ],
+        "localBBox": [
+          449.5,
+          1118.3125,
+          1,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-019",
+        "type": "Text",
+        "sourceLayout": [
+          659.0781,
+          1097.6875,
+          47.3438,
+          22.5
+        ],
+        "localBBox": [
+          659.078125,
+          1097.6875,
+          47.34375,
+          22.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-020",
+        "type": "Text",
+        "sourceLayout": [
+          630.3906,
+          1124.1875,
+          104.7031,
+          22.5
+        ],
+        "localBBox": [
+          630.390625,
+          1124.1875,
+          104.6875,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-021",
+        "type": "Text",
+        "sourceLayout": [
+          633.625,
+          1150.6875,
+          98.2344,
+          22.5
+        ],
+        "localBBox": [
+          633.625,
+          1150.6875,
+          98.234375,
+          22.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-022",
+        "type": "Text",
+        "sourceLayout": [
+          564.6719,
+          1181.9375,
+          236.1562,
+          16.25
+        ],
+        "localBBox": [
+          564.671875,
+          1181.9375,
+          236.140625,
+          16.25
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-023",
+        "type": "Text",
+        "sourceLayout": [
+          17.0,
+          1230.1875,
+          866,
+          100
+        ],
+        "localBBox": [
+          17.0,
+          1230.1875,
+          866,
+          100
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-024",
+        "type": "Text",
+        "sourceLayout": [
+          421.9375,
+          1337.9375,
+          56.1094,
+          19.5
+        ],
+        "localBBox": [
+          421.9375,
+          1337.9375,
+          56.109375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-025",
+        "type": "Text",
+        "sourceLayout": [
+          431.8438,
+          1365.6875,
+          36.2969,
+          72
+        ],
+        "localBBox": [
+          431.84375,
+          1365.6875,
+          36.296875,
+          72
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-026",
+        "type": "Text",
+        "sourceLayout": [
+          17.0,
+          1445.6875,
+          866,
+          100
+        ],
+        "localBBox": [
+          17.0,
+          1445.6875,
+          866,
+          100
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-027",
+        "type": "Text",
+        "sourceLayout": [
+          415.8906,
+          1553.4375,
+          68.2031,
+          19.5
+        ],
+        "localBBox": [
+          415.875,
+          1553.4375,
+          68.1875,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-028",
+        "type": "Text",
+        "sourceLayout": [
+          266.9688,
+          1608.1875,
+          366.0469,
+          53
+        ],
+        "localBBox": [
+          266.96875,
+          1608.1875,
+          366.046875,
+          53
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-029",
+        "type": "Text",
+        "sourceLayout": [
+          396.9375,
+          1677.1875,
+          106.0938,
+          22.5
+        ],
+        "localBBox": [
+          396.9375,
+          1677.1875,
+          106.09375,
+          22.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-030",
+        "type": "Text",
+        "sourceLayout": [
+          317.7812,
+          1728.1875,
+          82.0469,
+          22.5
+        ],
+        "localBBox": [
+          317.765625,
+          1728.1875,
+          82.046875,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-031",
+        "type": "Text",
+        "sourceLayout": [
+          411.8281,
+          1729.6875,
+          7.1562,
+          21
+        ],
+        "localBBox": [
+          411.8125,
+          1729.6875,
+          7.140625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-032",
+        "type": "Text",
+        "sourceLayout": [
+          430.9844,
+          1711.6875,
+          38,
+          57
+        ],
+        "localBBox": [
+          430.984375,
+          1711.6875,
+          38,
+          57
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-033",
+        "type": "Text",
+        "sourceLayout": [
+          480.9844,
+          1729.6875,
+          7.1562,
+          21
+        ],
+        "localBBox": [
+          480.984375,
+          1729.6875,
+          7.140625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-034",
+        "type": "Text",
+        "sourceLayout": [
+          500.1406,
+          1728.1875,
+          74.2344,
+          22.5
+        ],
+        "localBBox": [
+          500.125,
+          1728.1875,
+          74.234375,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-035",
+        "type": "Text",
+        "sourceLayout": [
+          427.9844,
+          1780.6875,
+          44,
+          33
+        ],
+        "localBBox": [
+          427.984375,
+          1780.6875,
+          44,
+          33
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-036",
+        "type": "Text",
+        "sourceLayout": [
+          343.9531,
+          1825.6875,
+          212.0781,
+          21
+        ],
+        "localBBox": [
+          343.9375,
+          1825.6875,
+          212.0625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-037",
+        "type": "Text",
+        "sourceLayout": [
+          370.2656,
+          1910.6875,
+          159.4688,
+          36.0
+        ],
+        "localBBox": [
+          370.25,
+          1910.6875,
+          159.46875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-038",
+        "type": "Text",
+        "sourceLayout": [
+          302.4531,
+          2574.6875,
+          295.0938,
+          36.0
+        ],
+        "localBBox": [
+          302.4375,
+          2574.6875,
+          295.09375,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-039",
+        "type": "Text",
+        "sourceLayout": [
+          287.3281,
+          2642.6875,
+          325.3438,
+          30
+        ],
+        "localBBox": [
+          287.3125,
+          2642.6875,
+          325.34375,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-040",
+        "type": "Text",
+        "sourceLayout": [
+          427.1875,
+          2696.6875,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          427.1875,
+          2696.6875,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-041",
+        "type": "Text",
+        "sourceLayout": [
+          295.2656,
+          2762.1875,
+          110.8594,
+          30.0
+        ],
+        "localBBox": [
+          295.25,
+          2762.1875,
+          110.859375,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-042",
+        "type": "Text",
+        "sourceLayout": [
+          418.125,
+          2767.1875,
+          7.2969,
+          21
+        ],
+        "localBBox": [
+          418.125,
+          2767.1875,
+          7.296875,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-043",
+        "type": "Text",
+        "sourceLayout": [
+          437.4219,
+          2750.6875,
+          36,
+          54
+        ],
+        "localBBox": [
+          437.421875,
+          2750.6875,
+          36,
+          54
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-044",
+        "type": "Text",
+        "sourceLayout": [
+          485.4219,
+          2767.1875,
+          7.2969,
+          21
+        ],
+        "localBBox": [
+          485.421875,
+          2767.1875,
+          7.296875,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-045",
+        "type": "Text",
+        "sourceLayout": [
+          504.7188,
+          2762.1875,
+          100,
+          30.0
+        ],
+        "localBBox": [
+          504.71875,
+          2762.1875,
+          100,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-046",
+        "type": "Text",
+        "sourceLayout": [
+          334.4688,
+          2828.6875,
+          231.0625,
+          21
+        ],
+        "localBBox": [
+          334.46875,
+          2828.6875,
+          231.0625,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-047",
+        "type": "Text",
+        "sourceLayout": [
+          365.0938,
+          2888.9375,
+          74.9688,
+          16.5
+        ],
+        "localBBox": [
+          365.09375,
+          2888.9375,
+          74.96875,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-048",
+        "type": "Text",
+        "sourceLayout": [
+          379.7656,
+          2910.1875,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          379.75,
+          2910.1875,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-049",
+        "type": "Text",
+        "sourceLayout": [
+          472.0625,
+          2888.9375,
+          62.8281,
+          16.5
+        ],
+        "localBBox": [
+          472.0625,
+          2888.9375,
+          62.8125,
+          16.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-050",
+        "type": "Text",
+        "sourceLayout": [
+          480.6562,
+          2910.1875,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          480.640625,
+          2910.1875,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-051",
+        "type": "Text",
+        "sourceLayout": [
+          269.8906,
+          3460.6875,
+          360.2188,
+          36
+        ],
+        "localBBox": [
+          269.875,
+          3460.6875,
+          360.21875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-052",
+        "type": "Text",
+        "sourceLayout": [
+          182.9219,
+          3512.6875,
+          534.1562,
+          24
+        ],
+        "localBBox": [
+          182.921875,
+          3512.6875,
+          534.140625,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-053",
+        "type": "Text",
+        "sourceLayout": [
+          367.6406,
+          4113.6875,
+          164.7188,
+          36.0
+        ],
+        "localBBox": [
+          367.625,
+          4113.6875,
+          164.71875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-054",
+        "type": "Text",
+        "sourceLayout": [
+          387.9062,
+          4153.6875,
+          124.1719,
+          24.0
+        ],
+        "localBBox": [
+          387.890625,
+          4153.6875,
+          124.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-055",
+        "type": "Text",
+        "sourceLayout": [
+          292.0938,
+          4341.6875,
+          315.8125,
+          36.0
+        ],
+        "localBBox": [
+          292.09375,
+          4341.6875,
+          315.8125,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-056",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4411.0625,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4411.0625,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-057",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4423.75,
+          1,
+          54.0625
+        ],
+        "localBBox": [
+          449.5,
+          4423.75,
+          1,
+          54.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-058",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4418.75,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4418.75,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-059",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4411.625,
+          84.5,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4411.625,
+          84.5,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-060",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4479.1875,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4479.1875,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-061",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4437.8125,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4437.8125,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-062",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4486.875,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4486.875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-063",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4479.75,
+          70.0625,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4479.75,
+          70.0625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-064",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4547.3125,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4547.3125,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-065",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4505.9375,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4505.9375,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-066",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4555.0,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4555,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-067",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4547.875,
+          149.0312,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4547.875,
+          149.015625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-068",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4615.4375,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4615.4375,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-069",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4574.0625,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4574.0625,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-070",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4623.125,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4623.125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-071",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4616.0,
+          149.4375,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4616,
+          149.4375,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-072",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4683.5625,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4683.5625,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-073",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4642.1875,
+          1,
+          54.0625
+        ],
+        "localBBox": [
+          449.5,
+          4642.1875,
+          1,
+          54.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-074",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4691.25,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4691.25,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-075",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4684.125,
+          98.5625,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4684.125,
+          98.5625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-076",
+        "type": "Text",
+        "sourceLayout": [
+          402.8438,
+          4805.8125,
+          94.3125,
+          36.0
+        ],
+        "localBBox": [
+          402.84375,
+          4805.8125,
+          94.3125,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-077",
+        "type": "Text",
+        "sourceLayout": [
+          345.9062,
+          5693.3125,
+          208.1719,
+          36
+        ],
+        "localBBox": [
+          345.890625,
+          5693.3125,
+          208.171875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-078",
+        "type": "Text",
+        "sourceLayout": [
+          354.6732,
+          5766.1006,
+          17.2317,
+          32.5957
+        ],
+        "localBBox": [
+          354.671875,
+          5766.09375,
+          17.21875,
+          32.59375
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-079",
+        "type": "Text",
+        "sourceLayout": [
+          546.3957,
+          5801.8169,
+          5.1461,
+          9.7256
+        ],
+        "localBBox": [
+          546.390625,
+          5801.8125,
+          5.140625,
+          9.71875
+        ],
+        "maxGeometryDelta": 0.007,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-080",
+        "type": "Text",
+        "sourceLayout": [
+          333.913,
+          5869.3584,
+          7.7208,
+          14.5957
+        ],
+        "localBBox": [
+          333.90625,
+          5869.34375,
+          7.71875,
+          14.59375
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-081",
+        "type": "Text",
+        "sourceLayout": [
+          556.1705,
+          5829.5049,
+          12.1121,
+          22.8965
+        ],
+        "localBBox": [
+          556.15625,
+          5829.5,
+          12.109375,
+          22.890625
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-082",
+        "type": "Shape",
+        "sourceLayout": [
+          393.4534,
+          6049.3125,
+          113.1088,
+          11.0
+        ],
+        "localBBox": [
+          393.453125,
+          6049.3125,
+          113.09375,
+          11
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-083",
+        "type": "Decoration",
+        "sourceLayout": [
+          440.4701,
+          5808.5451,
+          152.0001,
+          220.0001
+        ],
+        "localBBox": [
+          414.5882568359375,
+          5792.609375,
+          203.76092529296875,
+          251.84375
+        ],
+        "maxGeometryDelta": 51.761,
+        "rotatedBBox": true
+      },
+      {
+        "id": "spd-084",
+        "type": "Decoration",
+        "sourceLayout": [
+          306.4436,
+          5774.4082,
+          190.0,
+          275.0
+        ],
+        "localBBox": [
+          284.004150390625,
+          5759.99853515625,
+          234.86669921875,
+          303.8154296875
+        ],
+        "maxGeometryDelta": 44.867,
+        "rotatedBBox": true
+      },
+      {
+        "id": "spd-085",
+        "type": "Text",
+        "sourceLayout": [
+          415.2578,
+          6085.8125,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          415.25,
+          6085.8125,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-086",
+        "type": "Shape",
+        "sourceLayout": [
+          1.0,
+          6166.3125,
+          898,
+          75
+        ],
+        "localBBox": [
+          1.0,
+          6166.3125,
+          898,
+          75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-087",
+        "type": "Text",
+        "sourceLayout": [
+          195.8281,
+          6190.3125,
+          508.3438,
+          27
+        ],
+        "localBBox": [
+          195.8125,
+          6190.3125,
+          508.34375,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-088",
+        "type": "Text",
+        "sourceLayout": [
+          402.7656,
+          6253.3125,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          402.75,
+          6253.3125,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-089",
+        "type": "Album",
+        "sourceLayout": [
+          175.0,
+          1970.6875,
+          550,
+          540
+        ],
+        "localBBox": [
+          175.0,
+          1970.6875,
+          550,
+          540
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-090",
+        "type": "Calendar",
+        "sourceLayout": [
+          274.0,
+          2972.1875,
+          352,
+          320.5
+        ],
+        "localBBox": [
+          274.0,
+          2972.1875,
+          352,
+          320.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-091",
+        "type": "Button",
+        "sourceLayout": [
+          340.5156,
+          3316.6875,
+          218.9688,
+          40
+        ],
+        "localBBox": [
+          340.5,
+          3316.6875,
+          218.96875,
+          40
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-092",
+        "type": "Map",
+        "sourceLayout": [
+          150.0,
+          3581.6875,
+          600,
+          420.0
+        ],
+        "localBBox": [
+          150.0,
+          3581.6875,
+          600,
+          420
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-093",
+        "type": "DressCode",
+        "sourceLayout": [
+          354.0,
+          4197.6875,
+          192,
+          48
+        ],
+        "localBBox": [
+          354.0,
+          4197.6875,
+          192,
+          48
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-094",
+        "type": "Form",
+        "sourceLayout": [
+          150.0,
+          4890.3125,
+          600,
+          771.0
+        ],
+        "localBBox": [
+          150.0,
+          4890.3125,
+          600,
+          771
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      }
+    ]
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "columnSize": [
+      375,
+      5123.28125
+    ],
+    "measuredNodes": 94,
+    "imagesNotYetLoadedAtCapture": [],
+    "nodeDiffs": [
+      {
+        "id": "spd-001",
+        "type": "Decoration",
+        "sourceLayout": [
+          0.0,
+          0.0,
+          375,
+          5123.2812
+        ],
+        "localBBox": [
+          0,
+          0,
+          375,
+          5123.28125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-002",
+        "type": "Decoration",
+        "sourceLayout": [
+          -218.2031,
+          837.25,
+          405.7031,
+          850
+        ],
+        "localBBox": [
+          -218.1875,
+          837.25,
+          405.6875,
+          850
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-003",
+        "type": "Decoration",
+        "sourceLayout": [
+          187.5,
+          2037.25,
+          405.7031,
+          850
+        ],
+        "localBBox": [
+          187.5,
+          2037.25,
+          405.6875,
+          850
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-004",
+        "type": "Decoration",
+        "sourceLayout": [
+          187.5,
+          1102.15,
+          343.3281,
+          390
+        ],
+        "localBBox": [
+          187.5,
+          1102.140625,
+          343.3125,
+          390
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-005",
+        "type": "Decoration",
+        "sourceLayout": [
+          -340.7188,
+          1817.05,
+          528.2188,
+          600
+        ],
+        "localBBox": [
+          -340.71875,
+          1817.046875,
+          528.21875,
+          600
+        ],
+        "maxGeometryDelta": 0.003,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-006",
+        "type": "Text",
+        "sourceLayout": [
+          39,
+          48.0,
+          336,
+          39.9531
+        ],
+        "localBBox": [
+          39,
+          48,
+          336,
+          39.9375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-007",
+        "type": "Text",
+        "sourceLayout": [
+          74,
+          97.9531,
+          301,
+          39.9531
+        ],
+        "localBBox": [
+          74,
+          97.9375,
+          301,
+          39.9375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-008",
+        "type": "Shape",
+        "sourceLayout": [
+          0.0,
+          291.9062,
+          375,
+          110
+        ],
+        "localBBox": [
+          0,
+          291.890625,
+          375,
+          110
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-009",
+        "type": "Decoration",
+        "sourceLayout": [
+          -90.0,
+          139.5562,
+          230,
+          480
+        ],
+        "localBBox": [
+          -90,
+          139.546875,
+          230,
+          480
+        ],
+        "maxGeometryDelta": 0.009,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-010",
+        "type": "Decoration",
+        "sourceLayout": [
+          110.0,
+          214.4062,
+          155,
+          155
+        ],
+        "localBBox": [
+          110,
+          214.390625,
+          155,
+          155
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-011",
+        "type": "Decoration",
+        "sourceLayout": [
+          265.0,
+          64.2563,
+          155,
+          320
+        ],
+        "localBBox": [
+          265,
+          64.25,
+          155,
+          320
+        ],
+        "maxGeometryDelta": 0.006,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-012",
+        "type": "Decoration",
+        "sourceLayout": [
+          183.0,
+          432.8062,
+          192,
+          218.0781
+        ],
+        "localBBox": [
+          183,
+          432.796875,
+          192,
+          218.0625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-013",
+        "type": "Text",
+        "sourceLayout": [
+          76.4688,
+          677.9062,
+          222.0469,
+          30.0
+        ],
+        "localBBox": [
+          76.46875,
+          677.890625,
+          222.046875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-014",
+        "type": "Text",
+        "sourceLayout": [
+          77.4062,
+          731.4062,
+          44.1875,
+          21.0
+        ],
+        "localBBox": [
+          77.390625,
+          731.390625,
+          44.1875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-015",
+        "type": "Text",
+        "sourceLayout": [
+          57.2656,
+          756.4062,
+          84.4531,
+          21.0
+        ],
+        "localBBox": [
+          57.25,
+          756.390625,
+          84.4375,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-016",
+        "type": "Text",
+        "sourceLayout": [
+          31.7344,
+          781.4062,
+          135.5156,
+          21.0
+        ],
+        "localBBox": [
+          31.734375,
+          781.390625,
+          135.5,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-017",
+        "type": "Text",
+        "sourceLayout": [
+          24,
+          810.9062,
+          151,
+          30
+        ],
+        "localBBox": [
+          24,
+          810.890625,
+          151,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-018",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          756.4062,
+          1,
+          60
+        ],
+        "localBBox": [
+          187,
+          756.390625,
+          1,
+          60
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-019",
+        "type": "Text",
+        "sourceLayout": [
+          253.4062,
+          731.4062,
+          44.1875,
+          21.0
+        ],
+        "localBBox": [
+          253.390625,
+          731.390625,
+          44.1875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-020",
+        "type": "Text",
+        "sourceLayout": [
+          226.6406,
+          756.4062,
+          97.7188,
+          21.0
+        ],
+        "localBBox": [
+          226.625,
+          756.390625,
+          97.71875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-021",
+        "type": "Text",
+        "sourceLayout": [
+          229.6562,
+          781.4062,
+          91.6875,
+          21.0
+        ],
+        "localBBox": [
+          229.640625,
+          781.390625,
+          91.6875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-022",
+        "type": "Text",
+        "sourceLayout": [
+          200,
+          810.9062,
+          151,
+          30
+        ],
+        "localBBox": [
+          200,
+          810.890625,
+          151,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-023",
+        "type": "Text",
+        "sourceLayout": [
+          24,
+          864.9062,
+          327,
+          50
+        ],
+        "localBBox": [
+          24,
+          864.890625,
+          327,
+          50
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-024",
+        "type": "Text",
+        "sourceLayout": [
+          161.6094,
+          922.9062,
+          51.7812,
+          18.0
+        ],
+        "localBBox": [
+          161.609375,
+          922.890625,
+          51.765625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-025",
+        "type": "Text",
+        "sourceLayout": [
+          174.2656,
+          948.9062,
+          26.4688,
+          52.5
+        ],
+        "localBBox": [
+          174.25,
+          948.890625,
+          26.46875,
+          52.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-026",
+        "type": "Text",
+        "sourceLayout": [
+          24,
+          1009.4062,
+          327,
+          50
+        ],
+        "localBBox": [
+          24,
+          1009.390625,
+          327,
+          50
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-027",
+        "type": "Text",
+        "sourceLayout": [
+          156.0156,
+          1067.4062,
+          62.9531,
+          18.0
+        ],
+        "localBBox": [
+          156,
+          1067.40625,
+          62.9375,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-028",
+        "type": "Text",
+        "sourceLayout": [
+          41.0781,
+          1112.4062,
+          292.8438,
+          42
+        ],
+        "localBBox": [
+          41.0625,
+          1112.40625,
+          292.84375,
+          42
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-029",
+        "type": "Text",
+        "sourceLayout": [
+          137.9844,
+          1169.4062,
+          99.0312,
+          21
+        ],
+        "localBBox": [
+          137.984375,
+          1169.40625,
+          99.015625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-030",
+        "type": "Text",
+        "sourceLayout": [
+          107.3594,
+          1207.4062,
+          40.9844,
+          37
+        ],
+        "localBBox": [
+          107.359375,
+          1207.40625,
+          40.984375,
+          37
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-031",
+        "type": "Text",
+        "sourceLayout": [
+          156.3438,
+          1215.9062,
+          7.1562,
+          21
+        ],
+        "localBBox": [
+          156.34375,
+          1215.90625,
+          7.140625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-032",
+        "type": "Text",
+        "sourceLayout": [
+          171.5,
+          1202.4062,
+          32,
+          48
+        ],
+        "localBBox": [
+          171.5,
+          1202.40625,
+          32,
+          48
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-033",
+        "type": "Text",
+        "sourceLayout": [
+          211.5,
+          1215.9062,
+          7.1562,
+          21
+        ],
+        "localBBox": [
+          211.5,
+          1215.90625,
+          7.140625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-034",
+        "type": "Text",
+        "sourceLayout": [
+          226.6562,
+          1215.4062,
+          69.2812,
+          21.0
+        ],
+        "localBBox": [
+          226.640625,
+          1215.40625,
+          69.265625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-035",
+        "type": "Text",
+        "sourceLayout": [
+          167.5,
+          1262.4062,
+          40,
+          30
+        ],
+        "localBBox": [
+          167.5,
+          1262.40625,
+          40,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-036",
+        "type": "Text",
+        "sourceLayout": [
+          89.0312,
+          1304.4062,
+          196.9375,
+          19.5
+        ],
+        "localBBox": [
+          89.015625,
+          1304.40625,
+          196.9375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-037",
+        "type": "Text",
+        "sourceLayout": [
+          121.0469,
+          1371.9062,
+          132.8906,
+          30.0
+        ],
+        "localBBox": [
+          121.046875,
+          1371.90625,
+          132.875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-038",
+        "type": "Text",
+        "sourceLayout": [
+          64.5469,
+          1833.9062,
+          245.9062,
+          30.0
+        ],
+        "localBBox": [
+          64.546875,
+          1833.90625,
+          245.890625,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-039",
+        "type": "Text",
+        "sourceLayout": [
+          57.3594,
+          1887.9062,
+          260.2812,
+          24
+        ],
+        "localBBox": [
+          57.359375,
+          1887.90625,
+          260.265625,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-040",
+        "type": "Text",
+        "sourceLayout": [
+          166.9688,
+          1927.9062,
+          41.0625,
+          27
+        ],
+        "localBBox": [
+          166.96875,
+          1927.90625,
+          41.0625,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-041",
+        "type": "Text",
+        "sourceLayout": [
+          54.3125,
+          1979.4062,
+          99.7656,
+          27.0
+        ],
+        "localBBox": [
+          54.3125,
+          1979.40625,
+          99.75,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-042",
+        "type": "Text",
+        "sourceLayout": [
+          162.0781,
+          1982.9062,
+          7.2969,
+          21
+        ],
+        "localBBox": [
+          162.0625,
+          1982.90625,
+          7.296875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-043",
+        "type": "Text",
+        "sourceLayout": [
+          177.375,
+          1970.9062,
+          30,
+          45
+        ],
+        "localBBox": [
+          177.375,
+          1970.90625,
+          30,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-044",
+        "type": "Text",
+        "sourceLayout": [
+          215.375,
+          1982.9062,
+          7.2969,
+          21
+        ],
+        "localBBox": [
+          215.375,
+          1982.90625,
+          7.296875,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-045",
+        "type": "Text",
+        "sourceLayout": [
+          230.6719,
+          1979.4062,
+          90,
+          27.0
+        ],
+        "localBBox": [
+          230.671875,
+          1979.40625,
+          90,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-046",
+        "type": "Text",
+        "sourceLayout": [
+          79.1406,
+          2031.9062,
+          216.7188,
+          19.5
+        ],
+        "localBBox": [
+          79.125,
+          2031.90625,
+          216.71875,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-047",
+        "type": "Text",
+        "sourceLayout": [
+          102.5938,
+          2082.6562,
+          74.9688,
+          16.5
+        ],
+        "localBBox": [
+          102.59375,
+          2082.65625,
+          74.96875,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-048",
+        "type": "Text",
+        "sourceLayout": [
+          119.5469,
+          2103.9062,
+          41.0625,
+          27
+        ],
+        "localBBox": [
+          119.546875,
+          2103.90625,
+          41.0625,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-049",
+        "type": "Text",
+        "sourceLayout": [
+          209.5625,
+          2082.6562,
+          62.8281,
+          16.5
+        ],
+        "localBBox": [
+          209.5625,
+          2082.65625,
+          62.8125,
+          16.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-050",
+        "type": "Text",
+        "sourceLayout": [
+          220.4375,
+          2103.9062,
+          41.0625,
+          27
+        ],
+        "localBBox": [
+          220.4375,
+          2103.90625,
+          41.0625,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-051",
+        "type": "Text",
+        "sourceLayout": [
+          37.4062,
+          2584.4062,
+          300.1719,
+          30
+        ],
+        "localBBox": [
+          37.390625,
+          2584.40625,
+          300.171875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-052",
+        "type": "Text",
+        "sourceLayout": [
+          24,
+          2630.4062,
+          327,
+          40
+        ],
+        "localBBox": [
+          24,
+          2630.40625,
+          327,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-053",
+        "type": "Text",
+        "sourceLayout": [
+          118.8594,
+          3107.4062,
+          137.2656,
+          30.0
+        ],
+        "localBBox": [
+          118.859375,
+          3107.40625,
+          137.25,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-054",
+        "type": "Text",
+        "sourceLayout": [
+          133.1562,
+          3141.4062,
+          108.6562,
+          20.0
+        ],
+        "localBBox": [
+          133.140625,
+          3141.40625,
+          108.640625,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-055",
+        "type": "Text",
+        "sourceLayout": [
+          55.9062,
+          3301.4062,
+          263.1875,
+          30.0
+        ],
+        "localBBox": [
+          55.890625,
+          3301.40625,
+          263.1875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-056",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3356.0938,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3356.09375,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-057",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3368.0938,
+          1,
+          44.6875
+        ],
+        "localBBox": [
+          187,
+          3368.09375,
+          1,
+          44.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-058",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3363.0938,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3363.09375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-059",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3357.2188,
+          75.6094,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3357.21875,
+          75.609375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-060",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3413.4688,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3413.46875,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-061",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3380.7812,
+          1,
+          89.375
+        ],
+        "localBBox": [
+          187,
+          3380.78125,
+          1,
+          89.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-062",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3420.4688,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3420.46875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-063",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3414.5938,
+          62.6875,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3414.59375,
+          62.6875,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-064",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3470.8438,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3470.84375,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-065",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3438.1562,
+          1,
+          89.375
+        ],
+        "localBBox": [
+          187,
+          3438.15625,
+          1,
+          89.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-066",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3477.8438,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3477.84375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-067",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3471.9688,
+          133.3438,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3471.96875,
+          133.34375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-068",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3528.2188,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3528.21875,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-069",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3495.5312,
+          1,
+          89.375
+        ],
+        "localBBox": [
+          187,
+          3495.53125,
+          1,
+          89.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-070",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3535.2188,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3535.21875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-071",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3529.3438,
+          133.7031,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3529.34375,
+          133.6875,
+          23.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-072",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3585.5938,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3585.59375,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-073",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3552.9062,
+          1,
+          44.6875
+        ],
+        "localBBox": [
+          187,
+          3552.90625,
+          1,
+          44.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-074",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3592.5938,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3592.59375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-075",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3586.7188,
+          88.1875,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3586.71875,
+          88.1875,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-076",
+        "type": "Text",
+        "sourceLayout": [
+          144.2656,
+          3689.7812,
+          86.4531,
+          33.0
+        ],
+        "localBBox": [
+          144.25,
+          3689.78125,
+          86.4375,
+          33
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-077",
+        "type": "Text",
+        "sourceLayout": [
+          100.7656,
+          4566.2812,
+          173.4688,
+          30
+        ],
+        "localBBox": [
+          100.75,
+          4566.28125,
+          173.46875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-078",
+        "type": "Text",
+        "sourceLayout": [
+          91.2866,
+          4631.3921,
+          19.005,
+          35.9502
+        ],
+        "localBBox": [
+          91.28125,
+          4631.390625,
+          19,
+          35.9375
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-079",
+        "type": "Text",
+        "sourceLayout": [
+          282.1827,
+          4665.5483,
+          8.5721,
+          16.2002
+        ],
+        "localBBox": [
+          282.171875,
+          4665.546875,
+          8.5625,
+          16.1875
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-080",
+        "type": "Text",
+        "sourceLayout": [
+          72.985,
+          4739.2988,
+          4.5768,
+          8.6523
+        ],
+        "localBBox": [
+          72.984375,
+          4739.296875,
+          4.5625,
+          8.640625
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-081",
+        "type": "Text",
+        "sourceLayout": [
+          294.6721,
+          4698.3672,
+          10.109,
+          19.1094
+        ],
+        "localBBox": [
+          294.671875,
+          4698.359375,
+          10.09375,
+          19.109375
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-082",
+        "type": "Shape",
+        "sourceLayout": [
+          129.5076,
+          4916.2812,
+          116.0004,
+          11.0
+        ],
+        "localBBox": [
+          129.5,
+          4916.28125,
+          116,
+          11
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-083",
+        "type": "Decoration",
+        "sourceLayout": [
+          177.9701,
+          4676.625,
+          152.0001,
+          220.0001
+        ],
+        "localBBox": [
+          152.08828735351562,
+          4660.703125,
+          203.76092529296875,
+          251.84375
+        ],
+        "maxGeometryDelta": 51.761,
+        "rotatedBBox": true
+      },
+      {
+        "id": "spd-084",
+        "type": "Decoration",
+        "sourceLayout": [
+          43.9436,
+          4642.9961,
+          190.0,
+          275.0
+        ],
+        "localBBox": [
+          21.504138946533203,
+          4628.57666015625,
+          234.86671447753903,
+          303.8154296875
+        ],
+        "maxGeometryDelta": 44.867,
+        "rotatedBBox": true
+      },
+      {
+        "id": "spd-085",
+        "type": "Text",
+        "sourceLayout": [
+          152.7578,
+          4952.7812,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          152.75,
+          4952.78125,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-086",
+        "type": "Shape",
+        "sourceLayout": [
+          0.0,
+          5017.2812,
+          375,
+          66
+        ],
+        "localBBox": [
+          0,
+          5017.28125,
+          375,
+          66
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-087",
+        "type": "Text",
+        "sourceLayout": [
+          18.0469,
+          5041.2812,
+          338.8906,
+          18
+        ],
+        "localBBox": [
+          18.046875,
+          5041.28125,
+          338.875,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-088",
+        "type": "Text",
+        "sourceLayout": [
+          140.2656,
+          5095.2812,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          140.25,
+          5095.28125,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-089",
+        "type": "Album",
+        "sourceLayout": [
+          27.5,
+          1425.9062,
+          320,
+          360
+        ],
+        "localBBox": [
+          27.5,
+          1425.90625,
+          320,
+          360
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-090",
+        "type": "Calendar",
+        "sourceLayout": [
+          39.5,
+          2154.9062,
+          296,
+          289.5000500000001
+        ],
+        "localBBox": [
+          39.5,
+          2154.90625,
+          296,
+          289.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-091",
+        "type": "Button",
+        "sourceLayout": [
+          89.7031,
+          2468.4062,
+          195.5938,
+          36
+        ],
+        "localBBox": [
+          89.6875,
+          2468.40625,
+          195.59375,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-092",
+        "type": "Map",
+        "sourceLayout": [
+          24.0,
+          2707.4062,
+          327,
+          312.0000500000001
+        ],
+        "localBBox": [
+          24,
+          2707.40625,
+          327,
+          312
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-093",
+        "type": "DressCode",
+        "sourceLayout": [
+          111.5,
+          3181.4062,
+          152,
+          40
+        ],
+        "localBBox": [
+          111.5,
+          3181.40625,
+          152,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "spd-094",
+        "type": "Form",
+        "sourceLayout": [
+          16.0,
+          3771.2812,
+          343,
+          763.0000500000001
+        ],
+        "localBBox": [
+          16,
+          3771.28125,
+          343,
+          778
+        ],
+        "maxGeometryDelta": 15.0,
+        "rotatedBBox": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "isPageData": true,
+  "validationIssues": [],
+  "contentOnly": true,
+  "missingAssets": [],
+  "nodeCount": 94,
+  "unsupportedPhoneOverrides": [
+    {
+      "id": "spd-006",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-007",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-013",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-013",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-014",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-015",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-016",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-017",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-019",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-020",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-021",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-022",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-023",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-024",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-024",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-025",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-026",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-027",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-027",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-028",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-029",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-030",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-032",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-034",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-035",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-036",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-037",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-037",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-038",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-038",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-039",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-040",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-041",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-043",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-045",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-046",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-048",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-050",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-051",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-051",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-052",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-053",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-053",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-054",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-055",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-055",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-056",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-056",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-059",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-060",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-060",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-063",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-064",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-064",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-067",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-068",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-068",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-071",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-072",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-072",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-075",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-076",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-077",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-077",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "spd-087",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "spd-089",
+      "type": "Album",
+      "key": "spread"
+    },
+    {
+      "id": "spd-090",
+      "type": "Calendar",
+      "key": "size"
+    },
+    {
+      "id": "spd-090",
+      "type": "Calendar",
+      "key": "titleSize"
+    }
+  ],
+  "visualStatus": "working draft; source/local comparison recorded, not approved",
+  "catalogStatus": "not uploaded or verified",
+  "snapshotStatus": "not created"
+}
