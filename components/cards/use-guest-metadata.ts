@@ -2,7 +2,7 @@
 
 import type { JsonValue } from "@miditor/core";
 import { useEffect, useState } from "react";
-import { fetchPublicGuest, guestCodeFromSearch, recordGuestOpen, type PublicGuest } from "@/lib/cards/guests/guest";
+import { fetchPublicGuest, guestCodeFromSearch, recordGuestOpen, withGuestMetadata, type PublicGuest } from "@/lib/cards/guests/guest";
 
 /**
  * Trang công khai (metadata có `slug` và `mode: "live"`) mở bằng link khách `?g=<mã>`: nạp tên và lời chào của khách rồi thêm `guest` và
@@ -40,6 +40,5 @@ export function useGuestMetadata(metadata: JsonValue | undefined): JsonValue | u
     };
   }, [slug]);
 
-  if (!guest || !metadata || typeof metadata !== "object" || Array.isArray(metadata)) return metadata;
-  return { ...metadata, guestCode: guest.code, guest: { name: guest.data.name, greeting: guest.data.greeting, inviteMessage: guest.data.inviteMessage } };
+  return guest ? (withGuestMetadata(metadata, guest.code, guest.data) as JsonValue | undefined) : metadata;
 }

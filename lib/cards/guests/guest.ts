@@ -30,3 +30,9 @@ export async function recordGuestOpen(slug: string, code: string, fetchImpl: typ
     // Chỉ là thống kê.
   }
 }
+
+/** Thêm khách vào metadata của trang công khai (mã khách cho Form, tên và lời chào cho khối Khách mời); metadata không phải object thì giữ nguyên. */
+export function withGuestMetadata<T>(metadata: T, code: string, guest: PublicGuest): T | (Record<string, unknown> & { guestCode: string; guest: PublicGuest }) {
+  if (!metadata || typeof metadata !== "object" || Array.isArray(metadata)) return metadata;
+  return { ...(metadata as Record<string, unknown>), guestCode: code, guest: { name: guest.name, greeting: guest.greeting, inviteMessage: guest.inviteMessage } };
+}
