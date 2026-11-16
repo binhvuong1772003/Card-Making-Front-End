@@ -6,6 +6,7 @@ import { photoFrameDefinitions } from "./photo-frame";
 import { formBlock } from "./form";
 import { textDefinition } from "./text-effects";
 import { dressCodeBlock } from "./dress-code";
+import { countdownBlock } from "./countdown";
 import { decorationBlock } from "./decoration";
 import { particlesBlock } from "./particles";
 import { burstBlock } from "./burst";
@@ -28,6 +29,7 @@ const raw: Record<string, ComponentDef> = {
   },
   Text: textDefinition,
   DressCode: dressCodeBlock,
+  Countdown: countdownBlock,
   Decoration: decorationBlock,
   Image: builtInRegistry.Image!,
   Particles: particlesBlock,
