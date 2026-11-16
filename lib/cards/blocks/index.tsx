@@ -183,6 +183,7 @@ const renderForm: Renderer = ({ id, props, metadata, theme }) => (
     padding={number(props.padding, 16, 0, 40)}
     compact={props.compact === true}
     previewSampleCount={Math.round(number(props.previewSampleCount, 2, 0, 10))}
+    listMax={Math.round(number(props.listMax, 420, 120, 1600))}
     mode={modeOf(metadata)}
   />
 );

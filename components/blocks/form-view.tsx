@@ -41,18 +41,27 @@ export interface FormViewProps {
   padding: number;
   compact: boolean;
   previewSampleCount: number;
+  /** Chiều cao tối đa của danh sách lời chúc (px); quá thì cuộn trong khung. */
+  listMax: number;
   mode: FormMode;
 }
 
 // Hai lời mẫu cho bản xem thử, kèm giờ viết sẵn: bản xem thử có thể được dựng phía server, tính giờ máy ở đó sẽ lệch với trình duyệt.
 const SAMPLES = [
-  { id: "mau-1", name: "Minh Anh", text: "Chúc hai bạn trăm năm hạnh phúc, sớm có tin vui!", time: "01/01 09:00" },
-  { id: "mau-2", name: "Gia đình cô Hoa", text: "Chúc mừng ngày trọng đại của hai con.", time: "01/01 10:30" },
+  { id: "mau-1", name: "Anh Ba ngoài Hà Nội", text: "Chúc hai bạn giữ được sự kiên nhẫn dành cho nhau.", time: "24/7 02:00" },
+  { id: "mau-2", name: "Gia đình thông gia", text: "Mừng hạnh phúc trăm năm, vạn sự như ý.", time: "25/7 03:00" },
+  { id: "mau-3", name: "Thầy cô trường cũ", text: "Nhà mới, chuyện mới, mong toàn chuyện lành.", time: "26/7 04:00" },
+  { id: "mau-4", name: "Bạn bè đại học", text: "Chúc hai em luôn nhìn nhau như hôm nay.", time: "27/7 05:00" },
+  { id: "mau-5", name: "Gia đình bác Hoàng", text: "Cảm ơn bữa tiệc thật chu đáo. Chúc mừng hai bạn.", time: "28/7 06:00" },
+  { id: "mau-6", name: "Gia đình cô Lan", text: "Chúc hai bạn mỗi năm lại thương nhau hơn một chút.", time: "29/7 07:00" },
+  { id: "mau-7", name: "Cô Bảy", text: "Mong tổ ấm của hai em luôn ngập nắng.", time: "30/7 08:00" },
+  { id: "mau-8", name: "Chú Tư", text: "Chúc mừng hai bạn, xứng đôi vừa lứa.", time: "31/7 09:00" },
+  { id: "mau-9", name: "Minh Anh", text: "Chúc hai bạn trăm năm hạnh phúc, sớm có tin vui!", time: "01/8 09:00" },
+  { id: "mau-10", name: "Gia đình cô Hoa", text: "Chúc mừng ngày trọng đại của hai con.", time: "01/8 10:30" },
 ];
 
 const PAGE = 10;
 // Sổ lưu bút: khung danh sách cao tối đa 420px; phần chưa dùng đến (`--cm-gb-slack`) kéo các khối bên dưới lên, xem CSS bên dưới.
-const GUESTBOOK_LIST_MAX = 420;
 const STORAGE_PREFIX = "cmfe-form:";
 
 const pad = (value: number) => String(value).padStart(2, "0");
@@ -420,13 +429,13 @@ export function FormView(props: FormViewProps) {
   useEffect(() => {
     const page = rootRef.current?.closest<HTMLElement>('[data-miditor-type="Page"]');
     if (!trackSlack || !page) return;
-    const set = (used: number) => page.style.setProperty("--cm-gb-slack", `${Math.max(0, GUESTBOOK_LIST_MAX - Math.min(GUESTBOOK_LIST_MAX, used))}px`);
+    const set = (used: number) => page.style.setProperty("--cm-gb-slack", `${Math.max(0, props.listMax - Math.min(props.listMax, used))}px`);
     if (!listEl) { set(0); return () => page.style.removeProperty("--cm-gb-slack"); }
     set(listEl.offsetHeight);
     const watcher = typeof ResizeObserver === "undefined" ? undefined : new ResizeObserver(() => set(listEl.offsetHeight));
     watcher?.observe(listEl);
     return () => { watcher?.disconnect(); page.style.removeProperty("--cm-gb-slack"); };
-  }, [trackSlack, listEl]);
+  }, [trackSlack, listEl, props.listMax]);
   const [closed, setClosed] = useState(false);
   const [done, setDone] = useState(false);
   const [pending, setPending] = useState(false);
@@ -683,7 +692,7 @@ export function FormView(props: FormViewProps) {
       )}
 
       {showList && (!live || loading || entries.length > 0) && (
-        <div ref={guestbook ? setListEl : undefined} style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "left", marginTop: guestbook ? 110 : 32, ...(guestbook ? { maxHeight: GUESTBOOK_LIST_MAX, overflowY: "auto", overscrollBehavior: "contain" } : {}) }}>
+        <div ref={guestbook ? setListEl : undefined} style={{ display: "flex", flexDirection: "column", gap: 12, textAlign: "left", marginTop: guestbook ? 110 : 32, ...(guestbook ? { maxHeight: props.listMax, overflowY: "auto", overscrollBehavior: "contain" } : {}) }}>
           {!live ? (
             <>
               {SAMPLES.slice(0, Math.min(PAGE, props.previewSampleCount)).map((entry) => (
