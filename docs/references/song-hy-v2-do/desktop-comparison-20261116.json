@@ -1,0 +1,5430 @@
+{
+  "sourceViewport": [
+    1440,
+    1000
+  ],
+  "localViewport": [
+    1440,
+    1000
+  ],
+  "column": [
+    262.5,
+    0,
+    900,
+    7685.375
+  ],
+  "rows": [
+    {
+      "nodeId": "shv2-001",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]",
+      "role": "Shape",
+      "sourceRect": [
+        400.5,
+        -14,
+        625,
+        951
+      ],
+      "expectedLocalRect": [
+        138.0,
+        -14,
+        625,
+        951
+      ],
+      "actualLocalRect": [
+        138.0,
+        -14,
+        625,
+        951
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-002",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[2]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        345.5,
+        -40,
+        736,
+        824
+      ],
+      "expectedLocalRect": [
+        83.0,
+        -40,
+        736,
+        824
+      ],
+      "actualLocalRect": [
+        83.0,
+        -40,
+        736,
+        824
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-003",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[3]/div[1]/p[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        530.5625,
+        108,
+        51.875,
+        18
+      ],
+      "expectedLocalRect": [
+        268.0625,
+        106.0,
+        51.875,
+        22.0
+      ],
+      "actualLocalRect": [
+        268.0625,
+        106,
+        51.875,
+        22
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, ChungDoiIndic, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "22px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-004",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[3]/div[1]/div[1]/p[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        479.234375,
+        139,
+        154.53125,
+        29
+      ],
+      "expectedLocalRect": [
+        216.7344,
+        135.0,
+        154.5312,
+        37.0
+      ],
+      "actualLocalRect": [
+        216.734375,
+        135,
+        154.515625,
+        37
+      ],
+      "geometryDelta": [
+        -0.0,
+        0.0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Fraunces, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "24px",
+        "fontWeight": "300",
+        "lineHeight": "37px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Fraunces Soft\", \"Times New Roman\", serif",
+        "size": "24px",
+        "weight": "300",
+        "line": "36px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-005",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[3]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        690.5,
+        130,
+        44,
+        42
+      ],
+      "expectedLocalRect": [
+        428.0,
+        130,
+        44,
+        42
+      ],
+      "actualLocalRect": [
+        428.0,
+        130,
+        44,
+        42
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-006",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[3]/div[2]/p[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        842.265625,
+        108,
+        52.46875,
+        18
+      ],
+      "expectedLocalRect": [
+        579.7656,
+        106.0,
+        52.4688,
+        22.0
+      ],
+      "actualLocalRect": [
+        579.765625,
+        106,
+        52.46875,
+        22
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0001,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, ChungDoiIndic, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "22px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-007",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[3]/div[2]/div[1]/p[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        802.03125,
+        139,
+        132.921875,
+        29
+      ],
+      "expectedLocalRect": [
+        539.5312,
+        135.0,
+        132.9219,
+        37.0
+      ],
+      "actualLocalRect": [
+        539.515625,
+        135,
+        132.921875,
+        37
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Fraunces, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "24px",
+        "fontWeight": "300",
+        "lineHeight": "37px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Fraunces Soft\", \"Times New Roman\", serif",
+        "size": "24px",
+        "weight": "300",
+        "line": "36px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-008",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[4]/svg[1]",
+      "role": "PhotoFrame",
+      "sourceRect": [
+        494.15625,
+        206,
+        436.734375,
+        717
+      ],
+      "expectedLocalRect": [
+        231.6562,
+        206,
+        436.7344,
+        717
+      ],
+      "actualLocalRect": [
+        231.640625,
+        206,
+        436.734375,
+        717
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-009",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[5]/div[1]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        222.5234375,
+        481,
+        979.984375,
+        992
+      ],
+      "expectedLocalRect": [
+        -39.9766,
+        481,
+        979.9844,
+        992
+      ],
+      "actualLocalRect": [
+        -39.96875,
+        481,
+        979.984375,
+        992
+      ],
+      "geometryDelta": [
+        0.0078,
+        0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-010",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[5]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        899.5,
+        791,
+        222,
+        211
+      ],
+      "expectedLocalRect": [
+        637.0,
+        791,
+        222,
+        211
+      ],
+      "actualLocalRect": [
+        637.0,
+        791,
+        222,
+        211
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-011",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[5]/img[2]",
+      "role": "Decoration",
+      "sourceRect": [
+        303.5,
+        791,
+        222,
+        211
+      ],
+      "expectedLocalRect": [
+        41.0,
+        791,
+        222,
+        211
+      ],
+      "actualLocalRect": [
+        41.0,
+        791,
+        222,
+        211
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-012",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        439.734375,
+        987,
+        545.53125,
+        1197.5
+      ],
+      "expectedLocalRect": [
+        177.2344,
+        987,
+        545.5312,
+        1197.5
+      ],
+      "actualLocalRect": [
+        177.234375,
+        987,
+        545.515625,
+        1197.5
+      ],
+      "geometryDelta": [
+        -0.0,
+        0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-013",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        222.515625,
+        1742.5,
+        979.96875,
+        992
+      ],
+      "expectedLocalRect": [
+        -39.9844,
+        1742.5,
+        979.9688,
+        992
+      ],
+      "actualLocalRect": [
+        -39.984375,
+        1742.5,
+        979.96875,
+        992
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-014",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[2]/img[2]",
+      "role": "Decoration",
+      "sourceRect": [
+        683,
+        2047.5,
+        59,
+        54
+      ],
+      "expectedLocalRect": [
+        420.5,
+        2047.5,
+        59,
+        54
+      ],
+      "actualLocalRect": [
+        420.5,
+        2047.5,
+        59,
+        54
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-015",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/h2[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        569.5,
+        1060,
+        285.984375,
+        30
+      ],
+      "expectedLocalRect": [
+        307.0,
+        1054.75,
+        285.9844,
+        40.5
+      ],
+      "actualLocalRect": [
+        307.0,
+        1054.75,
+        285.984375,
+        40.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "700",
+        "lineHeight": "40.5px",
+        "letterSpacing": "0.54px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "27px",
+        "weight": "700",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-016",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        552.5,
+        1112.5,
+        50.5,
+        18
+      ],
+      "expectedLocalRect": [
+        290.0,
+        1109.5,
+        50.5,
+        24.0
+      ],
+      "actualLocalRect": [
+        290.0,
+        1109.5,
+        50.5,
+        24
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-017",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        539.765625,
+        1138.5,
+        75.96875,
+        17
+      ],
+      "expectedLocalRect": [
+        277.2656,
+        1135.75,
+        75.9688,
+        22.5
+      ],
+      "actualLocalRect": [
+        277.25,
+        1135.75,
+        75.96875,
+        22.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0001,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "22.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "15px",
+        "weight": "600",
+        "line": "22.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-018",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        536.328125,
+        1164,
+        82.84375,
+        17
+      ],
+      "expectedLocalRect": [
+        273.8281,
+        1161.25,
+        82.8438,
+        22.5
+      ],
+      "actualLocalRect": [
+        273.8125,
+        1161.25,
+        82.84375,
+        22.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0001,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "22.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "15px",
+        "weight": "600",
+        "line": "22.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-019",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        1114.5,
+        1,
+        68
+      ],
+      "expectedLocalRect": [
+        449.5,
+        1114.5,
+        1,
+        68
+      ],
+      "actualLocalRect": [
+        449.5,
+        1114.5,
+        1,
+        68
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-020",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[3]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        822,
+        1112.5,
+        50.5,
+        18
+      ],
+      "expectedLocalRect": [
+        559.5,
+        1109.5,
+        50.5,
+        24.0
+      ],
+      "actualLocalRect": [
+        559.5,
+        1109.5,
+        50.5,
+        24
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-021",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[3]/span[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        793.9375,
+        1138.5,
+        106.625,
+        17
+      ],
+      "expectedLocalRect": [
+        531.4375,
+        1135.75,
+        106.625,
+        22.5
+      ],
+      "actualLocalRect": [
+        531.4375,
+        1135.75,
+        106.625,
+        22.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "22.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "15px",
+        "weight": "600",
+        "line": "22.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-022",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[1]/div[3]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        787.625,
+        1164,
+        119.25,
+        17
+      ],
+      "expectedLocalRect": [
+        525.125,
+        1161.25,
+        119.25,
+        22.5
+      ],
+      "actualLocalRect": [
+        525.125,
+        1161.25,
+        119.25,
+        22.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "15px",
+        "fontWeight": "600",
+        "lineHeight": "22.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "15px",
+        "weight": "600",
+        "line": "22.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-023",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        462.5,
+        1206.5,
+        500,
+        60
+      ],
+      "expectedLocalRect": [
+        200.0,
+        1206.5,
+        500,
+        60
+      ],
+      "actualLocalRect": [
+        200.0,
+        1206.5,
+        500,
+        60
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "20px",
+        "fontWeight": "300",
+        "lineHeight": "30px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "20px",
+        "weight": "300",
+        "line": "30px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-024",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/h3[1]",
+      "role": "Text",
+      "sourceRect": [
+        462.5,
+        1282.5,
+        500,
+        100
+      ],
+      "expectedLocalRect": [
+        200.0,
+        1282.5,
+        500,
+        100
+      ],
+      "actualLocalRect": [
+        200.0,
+        1282.5,
+        500,
+        100
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Carattere, ChungDoiIndic, cursive",
+        "fontSize": "64px",
+        "fontWeight": "400",
+        "lineHeight": "100px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Carattere, cursive",
+        "size": "64px",
+        "weight": "400",
+        "line": "96px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-025",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/div[2]",
+      "role": "Text",
+      "sourceRect": [
+        698.8125,
+        1402.5,
+        27.375,
+        48
+      ],
+      "expectedLocalRect": [
+        436.3125,
+        1402.5,
+        27.375,
+        48
+      ],
+      "actualLocalRect": [
+        436.3125,
+        1402.5,
+        27.375,
+        48
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Ms Madi\", Carattere, ChungDoiIndic, cursive",
+        "fontSize": "48px",
+        "fontWeight": "300",
+        "lineHeight": "48px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Ms Madi Ampersand\", Carattere, cursive",
+        "size": "48px",
+        "weight": "300",
+        "line": "72px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-026",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[3]/h3[2]",
+      "role": "Text",
+      "sourceRect": [
+        462.5,
+        1460.5,
+        500,
+        100
+      ],
+      "expectedLocalRect": [
+        200.0,
+        1460.5,
+        500,
+        100
+      ],
+      "actualLocalRect": [
+        200.0,
+        1460.5,
+        500,
+        100
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Carattere, ChungDoiIndic, cursive",
+        "fontSize": "64px",
+        "fontWeight": "400",
+        "lineHeight": "100px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Carattere, cursive",
+        "size": "64px",
+        "weight": "400",
+        "line": "96px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-027",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        622.8125,
+        1593.5,
+        179.359375,
+        55.5
+      ],
+      "expectedLocalRect": [
+        360.3125,
+        1605.0,
+        179.3594,
+        55.5
+      ],
+      "actualLocalRect": [
+        360.3125,
+        1605,
+        179.359375,
+        55.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "20px",
+        "fontWeight": "300",
+        "lineHeight": "32.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "20px",
+        "weight": "300",
+        "line": "30px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-028",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        603,
+        1660.5,
+        111.109375,
+        24
+      ],
+      "expectedLocalRect": [
+        340.5,
+        1660.5,
+        111.1094,
+        24
+      ],
+      "actualLocalRect": [
+        340.5,
+        1660.5,
+        111.109375,
+        24
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-029",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[2]/span[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        755.8125,
+        1663.5,
+        66.1875,
+        17
+      ],
+      "expectedLocalRect": [
+        493.3125,
+        1660.0,
+        66.1875,
+        24.0
+      ],
+      "actualLocalRect": [
+        493.3125,
+        1660,
+        66.1875,
+        24
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-030",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        606.375,
+        1690.5,
+        78,
+        78
+      ],
+      "expectedLocalRect": [
+        343.875,
+        1690.5,
+        78,
+        78
+      ],
+      "actualLocalRect": [
+        343.875,
+        1690.5,
+        78,
+        78
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "78px",
+        "fontWeight": "300",
+        "lineHeight": "78px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "78px",
+        "weight": "300",
+        "line": "117px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-031",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[3]/div[1]",
+      "role": "Shape",
+      "sourceRect": [
+        696.375,
+        1698,
+        1,
+        63
+      ],
+      "expectedLocalRect": [
+        433.875,
+        1698,
+        1,
+        63
+      ],
+      "actualLocalRect": [
+        433.875,
+        1698,
+        1,
+        63
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-032",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[3]/div[2]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        709.375,
+        1703.5,
+        109.25,
+        25
+      ],
+      "expectedLocalRect": [
+        446.875,
+        1704.5,
+        109.25,
+        25
+      ],
+      "actualLocalRect": [
+        446.875,
+        1704.5,
+        109.25,
+        25
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "23px",
+        "fontWeight": "300",
+        "lineHeight": "23px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "23px",
+        "weight": "300",
+        "line": "34.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-033",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[3]/div[2]/span[2]",
+      "role": "Text",
+      "sourceRect": [
+        709.375,
+        1731.5,
+        46,
+        23
+      ],
+      "expectedLocalRect": [
+        446.875,
+        1731.5,
+        46,
+        23
+      ],
+      "actualLocalRect": [
+        446.875,
+        1731.5,
+        46,
+        23
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "23px",
+        "fontWeight": "300",
+        "lineHeight": "23px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "23px",
+        "weight": "300",
+        "line": "34.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-034",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[4]/div[4]",
+      "role": "Text",
+      "sourceRect": [
+        574.515625,
+        1774.5,
+        275.96875,
+        20
+      ],
+      "expectedLocalRect": [
+        312.0156,
+        1774.5,
+        275.9688,
+        20
+      ],
+      "actualLocalRect": [
+        312.0,
+        1774.5,
+        275.96875,
+        20
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "14px",
+        "fontWeight": "300",
+        "lineHeight": "20px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "14px",
+        "weight": "300",
+        "line": "21px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-035",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[5]/div[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        622.8125,
+        1817.5,
+        179.359375,
+        55.5
+      ],
+      "expectedLocalRect": [
+        360.3125,
+        1829.0,
+        179.3594,
+        55.5
+      ],
+      "actualLocalRect": [
+        360.3125,
+        1829,
+        179.359375,
+        55.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "20px",
+        "fontWeight": "300",
+        "lineHeight": "32.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "20px",
+        "weight": "300",
+        "line": "30px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-036",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[5]/div[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        603,
+        1884.5,
+        111.109375,
+        24
+      ],
+      "expectedLocalRect": [
+        340.5,
+        1884.5,
+        111.1094,
+        24
+      ],
+      "actualLocalRect": [
+        340.5,
+        1884.5,
+        111.109375,
+        24
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-037",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[5]/div[2]/span[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        755.8125,
+        1887.5,
+        66.1875,
+        17
+      ],
+      "expectedLocalRect": [
+        493.3125,
+        1884.0,
+        66.1875,
+        24.0
+      ],
+      "actualLocalRect": [
+        493.3125,
+        1884,
+        66.1875,
+        24
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-038",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[5]/div[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        606.375,
+        1914.5,
+        78,
+        78
+      ],
+      "expectedLocalRect": [
+        343.875,
+        1914.5,
+        78,
+        78
+      ],
+      "actualLocalRect": [
+        343.875,
+        1914.5,
+        78,
+        78
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "78px",
+        "fontWeight": "300",
+        "lineHeight": "78px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "78px",
+        "weight": "300",
+        "line": "117px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-039",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[5]/div[3]/div[1]",
+      "role": "Shape",
+      "sourceRect": [
+        696.375,
+        1922,
+        1,
+        63
+      ],
+      "expectedLocalRect": [
+        433.875,
+        1922,
+        1,
+        63
+      ],
+      "actualLocalRect": [
+        433.875,
+        1922,
+        1,
+        63
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-040",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[5]/div[3]/div[2]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        709.375,
+        1927.5,
+        109.25,
+        25
+      ],
+      "expectedLocalRect": [
+        446.875,
+        1928.5,
+        109.25,
+        25
+      ],
+      "actualLocalRect": [
+        446.875,
+        1928.5,
+        109.25,
+        25
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "23px",
+        "fontWeight": "300",
+        "lineHeight": "23px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "23px",
+        "weight": "300",
+        "line": "34.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-041",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[5]/div[3]/div[2]/span[2]",
+      "role": "Text",
+      "sourceRect": [
+        709.375,
+        1955.5,
+        46,
+        23
+      ],
+      "expectedLocalRect": [
+        446.875,
+        1955.5,
+        46,
+        23
+      ],
+      "actualLocalRect": [
+        446.875,
+        1955.5,
+        46,
+        23
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "23px",
+        "fontWeight": "300",
+        "lineHeight": "23px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "23px",
+        "weight": "300",
+        "line": "34.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-042",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[3]/div[5]/div[4]",
+      "role": "Text",
+      "sourceRect": [
+        574.515625,
+        1998.5,
+        275.96875,
+        20
+      ],
+      "expectedLocalRect": [
+        312.0156,
+        1998.5,
+        275.9688,
+        20
+      ],
+      "actualLocalRect": [
+        312.0,
+        1998.5,
+        275.96875,
+        20
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "14px",
+        "fontWeight": "300",
+        "lineHeight": "20px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "14px",
+        "weight": "300",
+        "line": "21px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-043",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[2]/div[1]/div[1]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        792.5,
+        2397.6591796875,
+        373,
+        423
+      ],
+      "expectedLocalRect": [
+        530.0,
+        2192.5002,
+        373,
+        423
+      ],
+      "actualLocalRect": [
+        530.0,
+        2192.5,
+        373,
+        423
+      ],
+      "geometryDelta": [
+        0.0,
+        -0.0002,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-044",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[2]/div[1]/div[1]/img[2]",
+      "role": "Decoration",
+      "sourceRect": [
+        259.5,
+        2679.73486328125,
+        373,
+        423
+      ],
+      "expectedLocalRect": [
+        -3.0,
+        2491.4999,
+        373,
+        423
+      ],
+      "actualLocalRect": [
+        -3.0,
+        2491.5,
+        373,
+        423
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0001,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-045",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[2]/div[1]/div[2]/h2[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        626.4375,
+        2255.5,
+        172.109375,
+        30
+      ],
+      "expectedLocalRect": [
+        363.9375,
+        2250.25,
+        172.1094,
+        40.5
+      ],
+      "actualLocalRect": [
+        363.9375,
+        2250.25,
+        172.109375,
+        40.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "700",
+        "lineHeight": "40.5px",
+        "letterSpacing": "0.54px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "27px",
+        "weight": "700",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-046",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        439.734375,
+        2883,
+        545.53125,
+        1238.5
+      ],
+      "expectedLocalRect": [
+        177.2344,
+        2883,
+        545.5312,
+        1238.5
+      ],
+      "actualLocalRect": [
+        177.234375,
+        2883,
+        545.515625,
+        1238.5
+      ],
+      "geometryDelta": [
+        -0.0,
+        0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-047",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[2]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        222.515625,
+        3658.5,
+        979.96875,
+        992
+      ],
+      "expectedLocalRect": [
+        -39.9844,
+        3658.5,
+        979.9688,
+        992
+      ],
+      "actualLocalRect": [
+        -39.984375,
+        3658.5,
+        979.96875,
+        992
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-048",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[2]/img[2]",
+      "role": "Decoration",
+      "sourceRect": [
+        683,
+        3928.5,
+        59,
+        54
+      ],
+      "expectedLocalRect": [
+        420.5,
+        3928.5,
+        59,
+        54
+      ],
+      "actualLocalRect": [
+        420.5,
+        3928.5,
+        59,
+        54
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-049",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/h2[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        554.203125,
+        2954,
+        316.59375,
+        30
+      ],
+      "expectedLocalRect": [
+        291.7031,
+        2948.75,
+        316.5938,
+        40.5
+      ],
+      "actualLocalRect": [
+        291.6875,
+        2948.75,
+        316.59375,
+        40.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "700",
+        "lineHeight": "40.5px",
+        "letterSpacing": "0.54px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "27px",
+        "weight": "700",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-050",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/h3[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        545.0625,
+        3027.5,
+        334.859375,
+        30
+      ],
+      "expectedLocalRect": [
+        282.5625,
+        3027.5,
+        334.8594,
+        30
+      ],
+      "actualLocalRect": [
+        282.5625,
+        3027.5,
+        334.859375,
+        30
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "lineHeight": "30px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "20px",
+        "weight": "600",
+        "line": "30px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-051",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        607,
+        3067.5,
+        45.625,
+        30
+      ],
+      "expectedLocalRect": [
+        344.5,
+        3067.5,
+        45.625,
+        30
+      ],
+      "actualLocalRect": [
+        344.5,
+        3067.5,
+        45.625,
+        30
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "lineHeight": "30px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "20px",
+        "weight": "600",
+        "line": "30px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-052",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[1]/span[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        726.78125,
+        3070.5,
+        91.21875,
+        23
+      ],
+      "expectedLocalRect": [
+        464.2812,
+        3067.0,
+        91.2188,
+        30.0
+      ],
+      "actualLocalRect": [
+        464.265625,
+        3067,
+        91.21875,
+        30
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0001,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "lineHeight": "30px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "20px",
+        "weight": "600",
+        "line": "30px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-053",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        606.375,
+        3107.5,
+        78,
+        78
+      ],
+      "expectedLocalRect": [
+        343.875,
+        3107.5,
+        78,
+        78
+      ],
+      "actualLocalRect": [
+        343.875,
+        3107.5,
+        78,
+        78
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "78px",
+        "fontWeight": "300",
+        "lineHeight": "78px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "78px",
+        "weight": "300",
+        "line": "117px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-054",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[2]/div[1]",
+      "role": "Shape",
+      "sourceRect": [
+        696.375,
+        3115,
+        1,
+        63
+      ],
+      "expectedLocalRect": [
+        433.875,
+        3115,
+        1,
+        63
+      ],
+      "actualLocalRect": [
+        433.875,
+        3115,
+        1,
+        63
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-055",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[2]/div[2]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        709.375,
+        3120.5,
+        109.25,
+        25
+      ],
+      "expectedLocalRect": [
+        446.875,
+        3121.5,
+        109.25,
+        25
+      ],
+      "actualLocalRect": [
+        446.875,
+        3121.5,
+        109.25,
+        25
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "23px",
+        "fontWeight": "300",
+        "lineHeight": "23px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "23px",
+        "weight": "300",
+        "line": "34.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-056",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[2]/div[2]/span[2]",
+      "role": "Text",
+      "sourceRect": [
+        709.375,
+        3148.5,
+        46,
+        23
+      ],
+      "expectedLocalRect": [
+        446.875,
+        3148.5,
+        46,
+        23
+      ],
+      "actualLocalRect": [
+        446.875,
+        3148.5,
+        46,
+        23
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "23px",
+        "fontWeight": "300",
+        "lineHeight": "23px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "23px",
+        "weight": "300",
+        "line": "34.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-057",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[3]",
+      "role": "Text",
+      "sourceRect": [
+        570.5,
+        3195.5,
+        284,
+        20
+      ],
+      "expectedLocalRect": [
+        308.0,
+        3195.5,
+        284,
+        20
+      ],
+      "actualLocalRect": [
+        308.0,
+        3195.5,
+        284,
+        20
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "14px",
+        "fontWeight": "300",
+        "lineHeight": "20px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "14px",
+        "weight": "300",
+        "line": "21px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-058",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[4]/div[1]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        630.6875,
+        3242.5,
+        70.015625,
+        13
+      ],
+      "expectedLocalRect": [
+        368.1875,
+        3240.75,
+        70.0156,
+        16.5
+      ],
+      "actualLocalRect": [
+        368.1875,
+        3240.75,
+        70,
+        16.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "11px",
+        "fontWeight": "300",
+        "lineHeight": "16.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "11px",
+        "weight": "300",
+        "line": "16.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-059",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[4]/div[1]/span[2]",
+      "role": "Text",
+      "sourceRect": [
+        634.890625,
+        3262,
+        61.59375,
+        40.5
+      ],
+      "expectedLocalRect": [
+        372.3906,
+        3262,
+        61.5938,
+        40.5
+      ],
+      "actualLocalRect": [
+        372.375,
+        3262,
+        61.59375,
+        40.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0,
+        -0.0001,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "600",
+        "lineHeight": "40.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "27px",
+        "weight": "600",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-060",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[4]/div[2]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        734.5625,
+        3242.5,
+        57.875,
+        13
+      ],
+      "expectedLocalRect": [
+        472.0625,
+        3240.75,
+        57.875,
+        16.5
+      ],
+      "actualLocalRect": [
+        472.0625,
+        3240.75,
+        57.875,
+        16.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "11px",
+        "fontWeight": "300",
+        "lineHeight": "16.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "11px",
+        "weight": "300",
+        "line": "16.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-061",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[4]/div[2]/span[2]",
+      "role": "Text",
+      "sourceRect": [
+        732.703125,
+        3262,
+        61.59375,
+        40.5
+      ],
+      "expectedLocalRect": [
+        470.2031,
+        3262,
+        61.5938,
+        40.5
+      ],
+      "actualLocalRect": [
+        470.1875,
+        3262,
+        61.59375,
+        40.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0,
+        -0.0001,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "600",
+        "lineHeight": "40.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "27px",
+        "weight": "600",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-062",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[5]/h2[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        581.171875,
+        3340.5,
+        262.640625,
+        40.5
+      ],
+      "expectedLocalRect": [
+        318.6719,
+        3340.5,
+        262.6406,
+        40.5
+      ],
+      "actualLocalRect": [
+        318.671875,
+        3340.5,
+        262.625,
+        40.5
+      ],
+      "geometryDelta": [
+        -0.0,
+        0.0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "Baskerville, \"Times New Roman\", ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "400",
+        "lineHeight": "40.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "27px",
+        "weight": "400",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-063",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[4]/div[1]/div[1]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        792.5,
+        4199.5460205078125,
+        373,
+        423
+      ],
+      "expectedLocalRect": [
+        530.0,
+        4102.5,
+        373,
+        423
+      ],
+      "actualLocalRect": [
+        530.0,
+        4102.5,
+        373,
+        423
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-064",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[4]/div[1]/div[1]/img[2]",
+      "role": "Decoration",
+      "sourceRect": [
+        259.5,
+        4545.7724609375,
+        373,
+        423
+      ],
+      "expectedLocalRect": [
+        -3.0,
+        4469.5,
+        373,
+        423
+      ],
+      "actualLocalRect": [
+        -3.0,
+        4469.5,
+        373,
+        423
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-065",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[4]/div[1]/div[2]/section[1]/div[1]/h3[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        541.03125,
+        4185.5,
+        342.9375,
+        36
+      ],
+      "expectedLocalRect": [
+        278.5312,
+        4185.5,
+        342.9375,
+        36
+      ],
+      "actualLocalRect": [
+        278.515625,
+        4185.5,
+        342.9375,
+        36
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "36px",
+        "letterSpacing": "0.48px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "24px",
+        "weight": "700",
+        "line": "36px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-066",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[4]/div[1]/div[2]/section[1]/div[1]/div[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        654.234375,
+        4233.5,
+        116.53125,
+        48
+      ],
+      "expectedLocalRect": [
+        391.7344,
+        4233.5,
+        116.5312,
+        48
+      ],
+      "actualLocalRect": [
+        391.734375,
+        4233.5,
+        116.515625,
+        48
+      ],
+      "geometryDelta": [
+        -0.0,
+        0.0,
+        -0.0156,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, ChungDoiIndic, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "size": "16px",
+        "weight": "300",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-067",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        439.734375,
+        5040,
+        545.53125,
+        789.5
+      ],
+      "expectedLocalRect": [
+        177.2344,
+        5040,
+        545.5312,
+        789.5
+      ],
+      "actualLocalRect": [
+        177.234375,
+        5040,
+        545.515625,
+        789.5
+      ],
+      "geometryDelta": [
+        -0.0,
+        0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-068",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/h2[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        542.953125,
+        5111,
+        339.09375,
+        30
+      ],
+      "expectedLocalRect": [
+        280.4531,
+        5105.75,
+        339.0938,
+        40.5
+      ],
+      "actualLocalRect": [
+        280.4375,
+        5105.75,
+        339.09375,
+        40.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "700",
+        "lineHeight": "40.5px",
+        "letterSpacing": "0.54px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "27px",
+        "weight": "700",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-069",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        483,
+        5159.625,
+        189.5,
+        26.75
+      ],
+      "expectedLocalRect": [
+        220.5,
+        5159.625,
+        189.5,
+        26.75
+      ],
+      "actualLocalRect": [
+        220.5,
+        5159.625,
+        189.5,
+        26.75
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-070",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[1]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5173,
+        1,
+        53.5
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5173,
+        1,
+        53.5
+      ],
+      "actualLocalRect": [
+        449.5,
+        5173,
+        1,
+        53.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-071",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[1]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5168,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5168,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5168,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-072",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[1]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5162.5,
+        156.4375,
+        20
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5159.0,
+        156.4375,
+        27.0
+      ],
+      "actualLocalRect": [
+        490.0,
+        5159,
+        156.4375,
+        27
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-073",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[2]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        483,
+        5226.625,
+        189.5,
+        26.75
+      ],
+      "expectedLocalRect": [
+        220.5,
+        5226.625,
+        189.5,
+        26.75
+      ],
+      "actualLocalRect": [
+        220.5,
+        5226.625,
+        189.5,
+        26.75
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-074",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[2]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5186.5,
+        1,
+        107
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5186.5,
+        1,
+        107
+      ],
+      "actualLocalRect": [
+        449.5,
+        5186.5,
+        1,
+        107
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-075",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[2]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5235,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5235,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5235,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-076",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[2]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5229.5,
+        61.5,
+        20
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5226.0,
+        61.5,
+        27.0
+      ],
+      "actualLocalRect": [
+        490.0,
+        5226,
+        61.5,
+        27
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-077",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        483,
+        5293.625,
+        189.5,
+        26.75
+      ],
+      "expectedLocalRect": [
+        220.5,
+        5293.625,
+        189.5,
+        26.75
+      ],
+      "actualLocalRect": [
+        220.5,
+        5293.625,
+        189.5,
+        26.75
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-078",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[3]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5253.5,
+        1,
+        107
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5253.5,
+        1,
+        107
+      ],
+      "actualLocalRect": [
+        449.5,
+        5253.5,
+        1,
+        107
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-079",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[3]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5302,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5302,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5302,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-080",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[3]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5296.5,
+        158.4375,
+        20
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5293.0,
+        158.4375,
+        27.0
+      ],
+      "actualLocalRect": [
+        490.0,
+        5293,
+        158.4375,
+        27
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-081",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[4]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        629.234375,
+        5362.625,
+        43.265625,
+        24.75
+      ],
+      "expectedLocalRect": [
+        366.7344,
+        5362.625,
+        43.2656,
+        24.75
+      ],
+      "actualLocalRect": [
+        366.734375,
+        5362.625,
+        43.25,
+        24.75
+      ],
+      "geometryDelta": [
+        -0.0,
+        0.0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-082",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[4]/span[1]/span[1]/span[1]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        549.234375,
+        5360,
+        44,
+        30
+      ],
+      "expectedLocalRect": [
+        286.7344,
+        5360,
+        44,
+        30
+      ],
+      "actualLocalRect": [
+        286.734375,
+        5360,
+        44,
+        30
+      ],
+      "geometryDelta": [
+        -0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-083",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[4]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5320.5,
+        1,
+        107
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5320.5,
+        1,
+        107
+      ],
+      "actualLocalRect": [
+        449.5,
+        5320.5,
+        1,
+        107
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-084",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[4]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5369,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5369,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5369,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-085",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[4]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5363.5,
+        78.484375,
+        20
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5360.0,
+        78.4844,
+        27.0
+      ],
+      "actualLocalRect": [
+        490.0,
+        5360,
+        78.484375,
+        27
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-086",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[5]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        629.234375,
+        5429.625,
+        43.265625,
+        24.75
+      ],
+      "expectedLocalRect": [
+        366.7344,
+        5429.625,
+        43.2656,
+        24.75
+      ],
+      "actualLocalRect": [
+        366.734375,
+        5429.625,
+        43.25,
+        24.75
+      ],
+      "geometryDelta": [
+        -0.0,
+        0.0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-087",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[5]/span[1]/span[1]/span[1]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        552.234375,
+        5420,
+        41,
+        44
+      ],
+      "expectedLocalRect": [
+        289.7344,
+        5420,
+        41,
+        44
+      ],
+      "actualLocalRect": [
+        289.734375,
+        5420,
+        41,
+        44
+      ],
+      "geometryDelta": [
+        -0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-088",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[5]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5387.5,
+        1,
+        107
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5387.5,
+        1,
+        107
+      ],
+      "actualLocalRect": [
+        449.5,
+        5387.5,
+        1,
+        107
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-089",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[5]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5436,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5436,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5436,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-090",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[5]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5430.5,
+        148.25,
+        20
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5427.0,
+        148.25,
+        27.0
+      ],
+      "actualLocalRect": [
+        490.0,
+        5427,
+        148.25,
+        27
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-091",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[6]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        629.234375,
+        5510.125,
+        43.265625,
+        24.75
+      ],
+      "expectedLocalRect": [
+        366.7344,
+        5510.125,
+        43.2656,
+        24.75
+      ],
+      "actualLocalRect": [
+        366.734375,
+        5510.125,
+        43.25,
+        24.75
+      ],
+      "geometryDelta": [
+        -0.0,
+        0.0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-092",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[6]/span[1]/span[1]/span[1]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        552.234375,
+        5500.5,
+        41,
+        44
+      ],
+      "expectedLocalRect": [
+        289.7344,
+        5500.5,
+        41,
+        44
+      ],
+      "actualLocalRect": [
+        289.734375,
+        5500.5,
+        41,
+        44
+      ],
+      "geometryDelta": [
+        -0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-093",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[6]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5454.5,
+        1,
+        134
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5454.5,
+        1,
+        134
+      ],
+      "actualLocalRect": [
+        449.5,
+        5454.5,
+        1,
+        134
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-094",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[6]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5516.5,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5516.5,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5516.5,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-095",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[6]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5497.5,
+        174.75,
+        47
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5507.5,
+        174.75,
+        47
+      ],
+      "actualLocalRect": [
+        490.0,
+        5507.5,
+        174.75,
+        47
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-096",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[7]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        483,
+        5588.625,
+        189.5,
+        26.75
+      ],
+      "expectedLocalRect": [
+        220.5,
+        5588.625,
+        189.5,
+        26.75
+      ],
+      "actualLocalRect": [
+        220.5,
+        5588.625,
+        189.5,
+        26.75
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-097",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[7]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5548.5,
+        1,
+        107
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5548.5,
+        1,
+        107
+      ],
+      "actualLocalRect": [
+        449.5,
+        5548.5,
+        1,
+        107
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-098",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[7]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5597,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5597,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5597,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-099",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[7]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5591.5,
+        65.484375,
+        20
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5588.0,
+        65.4844,
+        27.0
+      ],
+      "actualLocalRect": [
+        490.0,
+        5588,
+        65.484375,
+        27
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-100",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[8]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        483,
+        5669.125,
+        189.5,
+        26.75
+      ],
+      "expectedLocalRect": [
+        220.5,
+        5669.125,
+        189.5,
+        26.75
+      ],
+      "actualLocalRect": [
+        220.5,
+        5669.125,
+        189.5,
+        26.75
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-101",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[8]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5615.5,
+        1,
+        134
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5615.5,
+        1,
+        134
+      ],
+      "actualLocalRect": [
+        449.5,
+        5615.5,
+        1,
+        134
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-102",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[8]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5677.5,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5677.5,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5677.5,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-103",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[8]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5658.5,
+        185.203125,
+        47
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5668.5,
+        185.2031,
+        47
+      ],
+      "actualLocalRect": [
+        490.0,
+        5668.5,
+        185.1875,
+        47
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0156,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-104",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[9]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        483,
+        5749.625,
+        189.5,
+        26.75
+      ],
+      "expectedLocalRect": [
+        220.5,
+        5749.625,
+        189.5,
+        26.75
+      ],
+      "actualLocalRect": [
+        220.5,
+        5749.625,
+        189.5,
+        26.75
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24.75px",
+        "letterSpacing": "0.45px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-105",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[9]/span[2]/span[1]",
+      "role": "Shape",
+      "sourceRect": [
+        712,
+        5709.5,
+        1,
+        53.5
+      ],
+      "expectedLocalRect": [
+        449.5,
+        5709.5,
+        1,
+        53.5
+      ],
+      "actualLocalRect": [
+        449.5,
+        5709.5,
+        1,
+        53.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-106",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[9]/span[2]/span[2]",
+      "role": "Shape",
+      "sourceRect": [
+        707.5,
+        5758,
+        10,
+        10
+      ],
+      "expectedLocalRect": [
+        445.0,
+        5758,
+        10,
+        10
+      ],
+      "actualLocalRect": [
+        445.0,
+        5758,
+        10,
+        10
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-107",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[6]/div[1]/div[1]/div[2]/ol[1]/li[9]/span[3]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        752.5,
+        5752.5,
+        91.96875,
+        20
+      ],
+      "expectedLocalRect": [
+        490.0,
+        5749.0,
+        91.9688,
+        27.0
+      ],
+      "actualLocalRect": [
+        490.0,
+        5749,
+        91.96875,
+        27
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0001,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-108",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[7]/div[1]/div[1]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        792.5,
+        5757.093200683594,
+        373,
+        423
+      ],
+      "expectedLocalRect": [
+        530.0,
+        5753.49999,
+        373,
+        423
+      ],
+      "actualLocalRect": [
+        530.0,
+        5753.5,
+        373,
+        423
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-109",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[7]/div[1]/div[1]/img[2]",
+      "role": "Decoration",
+      "sourceRect": [
+        259.5,
+        6103.319641113281,
+        373,
+        423
+      ],
+      "expectedLocalRect": [
+        -3.0,
+        6120.5,
+        373,
+        423
+      ],
+      "actualLocalRect": [
+        -3.0,
+        6120.5,
+        373,
+        423
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-110",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[7]/div[1]/section[1]/div[1]/h2[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        627.78125,
+        5889.5,
+        169.4375,
+        30
+      ],
+      "expectedLocalRect": [
+        365.2812,
+        5884.25,
+        169.4375,
+        40.5
+      ],
+      "actualLocalRect": [
+        365.265625,
+        5884.25,
+        169.4375,
+        40.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "700",
+        "lineHeight": "40.5px",
+        "letterSpacing": "0.54px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "27px",
+        "weight": "700",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-111",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[8]/div[1]/div[1]/img[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        152.5,
+        7383.4375,
+        1121,
+        325
+      ],
+      "expectedLocalRect": [
+        -110.0,
+        7383.4375,
+        1121,
+        325
+      ],
+      "actualLocalRect": [
+        -110.0,
+        7383.4375,
+        1121,
+        325
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-112",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[8]/div[1]/div[2]/h2[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        600.265625,
+        7081.5,
+        224.46875,
+        40.5
+      ],
+      "expectedLocalRect": [
+        337.7656,
+        7081.5,
+        224.4688,
+        40.5
+      ],
+      "actualLocalRect": [
+        337.75,
+        7081.5,
+        224.46875,
+        40.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "700",
+        "lineHeight": "40.5px",
+        "letterSpacing": "0.54px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "27px",
+        "weight": "700",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-113",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/footer[1]/div[1]/div[1]/span[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        488.890625,
+        7581,
+        447.21875,
+        24.375
+      ],
+      "expectedLocalRect": [
+        226.3906,
+        7581,
+        447.2188,
+        24.375
+      ],
+      "actualLocalRect": [
+        226.375,
+        7581,
+        447.21875,
+        24.375
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0,
+        -0.0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, ChungDoiIndic, sans-serif",
+        "fontSize": "15px",
+        "fontWeight": "300",
+        "lineHeight": "24.375px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "size": "15px",
+        "weight": "300",
+        "line": "22.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-114",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/footer[1]/div[1]/div[1]/div[1]/a[1]",
+      "role": "Text",
+      "sourceRect": [
+        665.265625,
+        7644.375,
+        94.453125,
+        16
+      ],
+      "expectedLocalRect": [
+        402.7656,
+        7644.375,
+        94.4531,
+        16
+      ],
+      "actualLocalRect": [
+        402.75,
+        7644.375,
+        94.4375,
+        16
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0156,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "12px",
+        "fontWeight": "300",
+        "lineHeight": "16px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "size": "12px",
+        "weight": "300",
+        "line": "18px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-115",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]",
+      "role": "Album",
+      "sourceRect": [
+        431,
+        2309,
+        563,
+        520
+      ],
+      "expectedLocalRect": [
+        168.5,
+        2309,
+        563,
+        520
+      ],
+      "actualLocalRect": [
+        168.5,
+        2309,
+        563,
+        520
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-116",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[2]/div[6]/div[1]",
+      "role": "Calendar",
+      "sourceRect": [
+        557.5,
+        3467.5,
+        310,
+        281.5
+      ],
+      "expectedLocalRect": [
+        295.0,
+        3467.5,
+        310,
+        281.5
+      ],
+      "actualLocalRect": [
+        295.0,
+        3467.5,
+        310,
+        281.5
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "15px",
+        "fontWeight": "300",
+        "lineHeight": "22.5px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-117",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[1]/div[3]/div[3]/button[1]",
+      "role": "Button",
+      "sourceRect": [
+        602.3125,
+        3835.5,
+        220.359375,
+        40
+      ],
+      "expectedLocalRect": [
+        339.8125,
+        3835.5,
+        220.3594,
+        40
+      ],
+      "actualLocalRect": [
+        339.8125,
+        3835.5,
+        220.359375,
+        40
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        -0.0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "lineHeight": "24px",
+        "letterSpacing": "0.8px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "600",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-118",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[4]/div[1]/div[2]/section[1]/div[2]/iframe[1]",
+      "role": "Map",
+      "sourceRect": [
+        482.5,
+        4309.5,
+        460,
+        363
+      ],
+      "expectedLocalRect": [
+        220.0,
+        4309.5,
+        460,
+        363
+      ],
+      "actualLocalRect": [
+        220.0,
+        4309.5,
+        460,
+        363
+      ],
+      "geometryDelta": [
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-119",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[5]/div[1]/div[1]/div[2]",
+      "role": "DressCode",
+      "sourceRect": [
+        616.5,
+        4920,
+        192,
+        48
+      ],
+      "expectedLocalRect": [
+        354.0,
+        4920,
+        192,
+        48
+      ],
+      "actualLocalRect": [
+        354.0,
+        4920,
+        192,
+        48
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-120",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[5]/div[1]/div[1]/div[1]/h2[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        623.890625,
+        4849.5,
+        177.203125,
+        30
+      ],
+      "expectedLocalRect": [
+        361.3906,
+        4844.25,
+        177.2031,
+        40.5
+      ],
+      "actualLocalRect": [
+        361.375,
+        4844.25,
+        177.1875,
+        40.5
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "27px",
+        "fontWeight": "700",
+        "lineHeight": "40.5px",
+        "letterSpacing": "0.54px"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "27px",
+        "weight": "700",
+        "line": "40.5px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-121",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[5]/div[1]/div[1]/div[1]/p[1]/span[1]",
+      "role": "Text",
+      "sourceRect": [
+        644.703125,
+        4892,
+        135.578125,
+        20
+      ],
+      "expectedLocalRect": [
+        382.2031,
+        4888.5,
+        135.5781,
+        27.0
+      ],
+      "actualLocalRect": [
+        382.1875,
+        4888.5,
+        135.5625,
+        27
+      ],
+      "geometryDelta": [
+        -0.0156,
+        0.0,
+        -0.0156,
+        0.0
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Times New Roman\", Times, ChungDoiIndic, serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "27px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "\"Times New Roman\", Times, serif",
+        "size": "18px",
+        "weight": "300",
+        "line": "27px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-122",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[7]/div[1]/section[1]/form[1]",
+      "role": "Form",
+      "sourceRect": [
+        462.5,
+        5949,
+        500,
+        245.5
+      ],
+      "expectedLocalRect": [
+        200.0,
+        5949,
+        500,
+        245.5
+      ],
+      "actualLocalRect": [
+        200.0,
+        5949,
+        500,
+        570.78125
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        325.2812
+      ],
+      "sourceTypography": {
+        "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, ChungDoiIndic, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    },
+    {
+      "nodeId": "shv2-123",
+      "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[8]/div[1]/div[2]/button[1]",
+      "role": "Decoration",
+      "sourceRect": [
+        587.5,
+        7138,
+        250,
+        357
+      ],
+      "expectedLocalRect": [
+        325.0,
+        7138,
+        250,
+        357
+      ],
+      "actualLocalRect": [
+        325.0,
+        7138,
+        250,
+        357
+      ],
+      "geometryDelta": [
+        0.0,
+        0,
+        0,
+        0
+      ],
+      "sourceTypography": {
+        "fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "fontSize": "16px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "localTypography": {
+        "font": "Baskerville, \"Times New Roman\", serif",
+        "size": "16px",
+        "weight": "400",
+        "line": "24px",
+        "spacing": "normal"
+      },
+      "status": "measured comparison; typography/crop/paint order not approved"
+    }
+  ]
+}

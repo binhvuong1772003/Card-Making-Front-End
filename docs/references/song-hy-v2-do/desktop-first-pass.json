@@ -1,0 +1,65 @@
+{
+  "sourceUrl": "https://chungdoi.com/vi/mau-thiep/song-hy-v2-do/demo?open=1",
+  "title": "Trung Hiếu & Thanh Hà - Thiệp cưới online",
+  "browser": "Chrome extension, profile Chí Bình",
+  "viewport": [1440, 1000],
+  "status": "Partial live DOM measurements recovered from the interrupted session; not a complete build specification",
+  "coordinateSystem": "Rect values relative to the outer 900px column; column document origin [262.5, 0]. No Minimalism Nâu y offset applied.",
+  "column": {"documentRect": [262.5, 0, 900, 7685.38], "background": "#8c0000", "outerBackground": "#ffffff", "contentWidth": 898},
+  "sectionRects": {
+    "hero": [1, 1, 898, 1001],
+    "ceremony": [1, 987, 898, 1197.5],
+    "album": [1, 2215.5, 898, 680.5],
+    "reception": [1, 2883, 898, 1238.5],
+    "venue": [1, 4152.5, 898, 613],
+    "dressCode": [1, 4796.5, 898, 219.5],
+    "schedule": [1, 5040, 898, 789.5],
+    "guestbook": [1, 5844.5, 898, 1174],
+    "gifts": [1, 7049.5, 898, 477.5],
+    "footer": [1, 7558, 898, 126.4]
+  },
+  "hero": {
+    "paper": {"rect": [138, -14, 625, 951], "color": "#fff9e6"},
+    "backgroundEmblem": {"source": "/images/themes/song-hy-v2-red/double-happiness-bg.webp", "rect": [83, -40, 736, 824], "opacity": 0.07},
+    "emblem": {"source": "/images/themes/song-hy-v2-red/double-happiness.webp", "rect": [428, 130, 44, 42]},
+    "wave": {"source": "/images/themes/song-hy-v2-red/hero-shape.svg", "rect": [-39.98, 481, 979.98, 992]},
+    "lightEmblems": {"source": "/images/themes/song-hy-v2-red/double-happiness-light.webp", "rects": [[637, 791, 222, 211], [41, 791, 222, 211]], "opacity": 0.1},
+    "photo": {
+      "source": "https://assets.chungdoi.com/photo-library/design/c0c85699ec961efa2db8747663ff1a34ad9237b8f5c4bc9c18db8e5c33e16f76.webp",
+      "containerCss": "absolute left-[13.61%] top-[151px] w-[72.79%] md:top-[205px]; aspect-ratio:321/527",
+      "svgViewBox": [0, 0, 321, 527],
+      "outerClipRects": [[29.5, 1, 262, 525, 23.5, 25], [1, 28, 319, 471, 26.5, 22]],
+      "innerClipRects": [[31.5, 3, 258, 521, 21.5, 23], [3, 30, 315, 467, 24.5, 20]],
+      "preserveAspectRatio": "xMidYMid slice",
+      "borderColor": "#8c0000",
+      "editorReproducibility": "Not checked; do not flatten the photograph into Decoration"
+    }
+  },
+  "ceremony": {
+    "heading": {"text": "THÔNG TIN LỄ CƯỚI", "rect": [307, 1060, 286, 30], "font": "Times New Roman", "size": 27, "weight": 700, "lineHeight": 40.5, "letterSpacing": 0.54, "color": "#990000"},
+    "parents": ["Hồ Vân An", "Hồ Mỹ Linh", "Đặng Quốc Đạt", "Đặng Quỳnh Anh"],
+    "parentTypography": {"font": "Baskerville", "size": 15, "weight": 600, "lineHeight": 22.5, "color": "#990000"},
+    "groom": {"text": "Hồ Trung Hiếu", "rect": [200, 1282.5, 500, 100]},
+    "bride": {"text": "Đặng Thanh Hà", "rect": [200, 1460.5, 500, 100]},
+    "nameTypography": {"font": "Carattere", "size": 64, "weight": 400, "lineHeight": 100, "color": "#990000"},
+    "date": "2027-01-04",
+    "ceremonyTime": "17:30",
+    "banquetTime": "19:00",
+    "venue": "Sen Vang Palace, Phú Thọ"
+  },
+  "album": {"photoCount": 9, "nativeBlock": "Album", "spread": "Not measured; must be a pixel number, never boolean"},
+  "dressColors": ["#2f2a26", "#a08b74", "#f4efe7"],
+  "unverified": [
+    "Mobile 390x844; never derive source measurements by scaling desktop",
+    "Browser zoom, font files actually used per glyph, full transform chains and pseudo backgrounds",
+    "Album geometry, preset, first state, spread and clipping",
+    "All guestbook/form controls and live list heights for 0/1/10/>10 wishes",
+    "Local DOM comparison, editor reconstruction, catalog mapping, UNLISTED snapshot and save/reopen",
+    "Full source evidence for other four templates"
+  ],
+  "scope": "Static invitation content only. Cover, popup and motion belong to the agreed handoff. No source banking/QR data. No publish or seed performed.",
+  "invalidPriorEvidence": [
+    {"file": "../clone-handoffs/song-hy-v2-do-elements-measured.json", "actualUrl": "https://chungdoi.com/vi/mau-thiep/to-duyen-xanh/demo?open=1", "instruction": "Do not use as Song Hỷ V2 evidence"},
+    {"file": "../clone-handoffs/minimalism-nau-dam-elements-measured.json", "actualUrl": "https://chungdoi.com/vi/mau-thiep/to-duyen-do-dam/demo?open=1", "instruction": "Do not use as Minimalism Nâu Đậm evidence"}
+  ]
+}
