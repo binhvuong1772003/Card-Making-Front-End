@@ -43,6 +43,10 @@ export interface FormViewProps {
   previewSampleCount: number;
   /** Chiều cao tối đa của danh sách lời chúc (px); quá thì cuộn trong khung. */
   listMax: number;
+  /** Khách đang mở link riêng (từ metadata của trang công khai): tên điền sẵn vào ô tên, mã gửi kèm câu trả lời. */
+  guestName?: string;
+  guestCode?: string;
+  fillGuestName?: boolean;
   mode: FormMode;
 }
 
@@ -485,6 +489,13 @@ export function FormView(props: FormViewProps) {
     };
   }, [live, props.publicList.enabled, props.slug, props.blockId]);
 
+  // Điền sẵn tên khách vào ô tên (ô tên của sổ lưu bút, hoặc ô chữ ngắn đầu tiên) khi ô còn trống; khách sửa được.
+  const guestTarget = props.publicList.nameFieldId && fields.some((field) => field.id === props.publicList.nameFieldId) ? props.publicList.nameFieldId : fields.find((field) => field.type === "text")?.id;
+  useEffect(() => {
+    if (!live || props.fillGuestName === false || !props.guestName || !guestTarget) return;
+    setValues((current) => (current[guestTarget] ? current : { ...current, [guestTarget]: props.guestName }));
+  }, [live, props.fillGuestName, props.guestName, guestTarget]);
+
   const set = (id: string, value: unknown) => {
     const next = { ...values };
     if (value === undefined || value === "") delete next[id];
@@ -504,7 +515,7 @@ export function FormView(props: FormViewProps) {
 
     setSending(true);
     try {
-      const result = await submitForm({ slug: props.slug, blockId: props.blockId, answers: answerPayload(fields, values), website });
+      const result = await submitForm({ slug: props.slug, blockId: props.blockId, answers: answerPayload(fields, values), website, ...(props.guestCode ? { guestCode: props.guestCode } : {}) });
       // Lời vừa duyệt sẵn thì chèn ngay lên đầu sổ; lời chờ duyệt chưa có gì để chèn.
       if (result.status === "VISIBLE" && result.entry) setEntries((old) => [result.entry as FormEntry, ...old].slice(0, PAGE));
       setPending(result.status === "PENDING");

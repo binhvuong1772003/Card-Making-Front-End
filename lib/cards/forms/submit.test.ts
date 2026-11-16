@@ -22,6 +22,14 @@ describe("submitForm", () => {
     expect(JSON.parse(String(init?.body))).toEqual({ blockId: "b1", answers: { name: "An" }, website: "" });
   });
 
+  it("sends the guest code of a personal link, and leaves it out otherwise", async () => {
+    const fetchMock = vi.fn<typeof fetch>(async () => json(201, { id: "x", status: "VISIBLE", entry: null }));
+    await submitForm({ slug: "s", blockId: "b", answers: {}, guestCode: "ABCD2345" }, fetchMock as unknown as typeof fetch);
+    expect(JSON.parse(String(fetchMock.mock.calls[0]![1]?.body)).guestCode).toBe("ABCD2345");
+    await submitForm({ slug: "s", blockId: "b", answers: {} }, fetchMock as unknown as typeof fetch);
+    expect(JSON.parse(String(fetchMock.mock.calls[1]![1]?.body))).not.toHaveProperty("guestCode");
+  });
+
   it("sends what the caller typed in the honeypot", async () => {
     const fetchMock = vi.fn<typeof fetch>(async () => json(201, { id: "x", status: "VISIBLE", entry: null }));
     await submitForm({ slug: "s", blockId: "b", answers: {}, website: "spam" }, fetchMock as unknown as typeof fetch);

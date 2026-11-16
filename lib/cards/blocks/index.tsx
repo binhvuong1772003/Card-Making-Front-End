@@ -47,6 +47,16 @@ const slugOf = (metadata: unknown): string => {
   return typeof slug === "string" ? slug : "";
 };
 
+// Khách đang mở link riêng: `use-guest-metadata.ts` đặt `guest` và `guestCode` vào metadata của trang công khai.
+const guestOf = (metadata: unknown): { name: string } | undefined => {
+  const guest = metadata && typeof metadata === "object" ? (metadata as { guest?: { name?: unknown } }).guest : undefined;
+  return guest && typeof guest.name === "string" && guest.name ? { name: guest.name } : undefined;
+};
+const guestCodeOf = (metadata: unknown): string | undefined => {
+  const code = metadata && typeof metadata === "object" ? (metadata as { guestCode?: unknown }).guestCode : undefined;
+  return typeof code === "string" ? code : undefined;
+};
+
 const number = (value: unknown, fallback: number, min: number, max: number): number =>
   typeof value === "number" && Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : fallback;
 
@@ -186,6 +196,9 @@ const renderForm: Renderer = ({ id, props, metadata, theme }) => (
     compact={props.compact === true}
     previewSampleCount={Math.round(number(props.previewSampleCount, 2, 0, 10))}
     listMax={Math.round(number(props.listMax, 420, 120, 1600))}
+    guestName={guestOf(metadata)?.name}
+    guestCode={guestCodeOf(metadata)}
+    fillGuestName={props.fillGuestName !== false}
     mode={modeOf(metadata)}
   />
 );

@@ -47,6 +47,7 @@ export const formBlock: ComponentDef = {
     compact: false,
     previewSampleCount: 2,
     listMax: 420,
+    fillGuestName: true,
   },
   defaultStyles: { borderWidth: 1, borderColor: "#511419", borderRadius: 4 },
   fields: {
@@ -65,6 +66,7 @@ export const formBlock: ComponentDef = {
     font: { type: "font", label: "Phông chữ", group: "Giao diện" },
     padding: { type: "number", label: "Đệm", min: 0, max: 40, unit: "px", group: "Giao diện" },
     compact: { type: "boolean", label: "Bố cục gọn", group: "Giao diện" },
+    fillGuestName: { type: "boolean", label: "Điền sẵn tên khách mời", group: "Sổ công khai", help: "Khách mở link riêng thì ô tên (ô tên của sổ lưu bút, hoặc ô chữ ngắn đầu tiên) điền sẵn tên khách; khách vẫn sửa được." },
     listMax: { type: "number", label: "Cao tối đa của danh sách", min: 120, max: 1600, unit: "px", group: "Sổ công khai", help: "Danh sách lời chúc cao hơn mức này thì cuộn trong khung." },
     previewSampleCount: { type: "number", label: "Lời mẫu khi xem trước", min: 0, max: 10, group: "Sổ công khai", help: "Chỉ hiện trong bản xem trước; thiệp đã xuất bản hiển thị lời chúc thật." },
   },

@@ -33,6 +33,8 @@ export interface FormSubmission {
   answers: Answers;
   /** Ô ẩn chống thư rác: người thật không thấy nên luôn gửi rỗng. */
   website?: string;
+  /** Mã khách mời của link riêng (nếu có): CMBE gắn câu trả lời với khách đó. */
+  guestCode?: string;
 }
 
 export async function submitForm(input: FormSubmission, fetchImpl: typeof fetch = fetch): Promise<FormSubmitResult> {
@@ -40,7 +42,7 @@ export async function submitForm(input: FormSubmission, fetchImpl: typeof fetch 
     `/publications/${encodeURIComponent(input.slug)}/forms`,
     {
       method: "POST",
-      body: JSON.stringify({ blockId: input.blockId, answers: input.answers, website: input.website ?? "" }),
+      body: JSON.stringify({ blockId: input.blockId, answers: input.answers, website: input.website ?? "", ...(input.guestCode ? { guestCode: input.guestCode } : {}) }),
     },
     fetchImpl,
   );
