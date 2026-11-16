@@ -117,20 +117,24 @@ const CONFETTI = [
 const HOVER_CSS = `
 @keyframes cm-hover-pop { 0% { transform: translateY(0) scale(1) rotate(0deg); } 45% { transform: translateY(-14px) scale(1.08) rotate(-3deg); } 100% { transform: translateY(-8px) scale(1.05) rotate(0deg); } }
 @keyframes cm-hover-fly { 0% { translate: 0 0; opacity: 1; } 55% { translate: calc(var(--cm-hs) * .43) calc(var(--cm-hr) * -.51); opacity: 1; } 80% { translate: var(--cm-hs) calc(var(--cm-hr) * -1); opacity: 0; } 81% { translate: 0 0; opacity: 0; } 100% { translate: 0 0; opacity: 1; } }
+@keyframes cm-hover-wobble { 0% { transform: translateX(0) rotate(0deg); } 20% { transform: translateX(-9px) rotate(-6deg); } 40% { transform: translateX(6px) rotate(3.3deg); } 60% { transform: translateX(-2px) rotate(-1.4deg); } 80% { transform: translateX(1px) rotate(.6deg); } 100% { transform: translateX(0) rotate(0deg); } }
 @keyframes cm-hover-confetti { 0% { transform: translate(0, 0) rotate(0deg); opacity: 0; } 15% { opacity: 1; } 100% { transform: translate(var(--cm-cx), var(--cm-cy)) rotate(var(--cm-cr)); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { [data-cm-hv] , [data-cm-hv] * { animation: none !important; } }`;
 
-export function DecorationView({ hoverEffect = "Không", hoverGroup = "", hoverTime = 1.6, hoverDelay = 0, hoverRise = 55, hoverSway = 14, ...base }: Parameters<typeof DecorationBase>[0] & { hoverEffect?: "Không" | "Nảy lên" | "Bay lên rồi hiện lại" | "Pháo giấy"; hoverGroup?: string; hoverTime?: number; hoverDelay?: number; hoverRise?: number; hoverSway?: number }) {
+export function DecorationView({ hoverEffect = "Không", hoverGroup = "", hoverTime = 1.6, hoverDelay = 0, hoverRise = 55, hoverSway = 14, ...base }: Parameters<typeof DecorationBase>[0] & { hoverEffect?: "Không" | "Nảy lên" | "Lắc" | "Bay lên rồi hiện lại" | "Pháo giấy"; hoverGroup?: string; hoverTime?: number; hoverDelay?: number; hoverRise?: number; hoverSway?: number }) {
   if (hoverEffect === "Không") return <DecorationBase {...base} />;
   const group = hoverGroup.replace(/[^a-z0-9-]/g, "");
-  const trigger = `body:has([data-cm-hg="${group}"]:hover) [data-cm-hg="${group}"][data-cm-hv="${hoverEffect === "Nảy lên" ? "pop" : hoverEffect === "Pháo giấy" ? "confetti" : "fly"}"]`;
+  const hoverKey = hoverEffect === "Nảy lên" ? "pop" : hoverEffect === "Pháo giấy" ? "confetti" : hoverEffect === "Lắc" ? "wobble" : "fly";
+  const trigger = `body:has([data-cm-hg="${group}"]:hover) [data-cm-hg="${group}"][data-cm-hv="${hoverKey}"]`;
   const animation = hoverEffect === "Nảy lên"
     ? `cm-hover-pop ${hoverTime.toFixed(2)}s cubic-bezier(.34, 1.56, .64, 1) ${hoverDelay.toFixed(2)}s 1 normal forwards`
+    : hoverEffect === "Lắc"
+    ? `cm-hover-wobble ${hoverTime.toFixed(2)}s ease-in-out ${hoverDelay.toFixed(2)}s infinite`
     : `cm-hover-fly ${hoverTime.toFixed(2)}s ease-in-out ${hoverDelay.toFixed(2)}s infinite`;
   return (
     <div
       data-cm-hg={group}
-      data-cm-hv={hoverEffect === "Nảy lên" ? "pop" : hoverEffect === "Pháo giấy" ? "confetti" : "fly"}
+      data-cm-hv={hoverKey}
       style={{ position: "relative", width: "100%", height: "100%", transformOrigin: "50% 100%", ["--cm-hr" as string]: `${hoverRise}px`, ["--cm-hs" as string]: `${hoverSway}px`, willChange: "transform, translate, opacity" }}
     >
       <style>{`${HOVER_CSS}\n${hoverEffect === "Pháo giấy" ? `${trigger} > span { animation: var(--cm-ca); }` : `${trigger} { animation: ${animation}; }`}`}</style>

@@ -22,9 +22,9 @@ export function upgradeLegacyDecorations(node: TreeNode): TreeNode {
 export const DECORATION_IDLE_EFFECTS = ["Không", "Đập", "Thở nhẹ", "Ánh sáng quét", "Chớp sáng"] as const;
 export type DecorationIdleEffect = (typeof DECORATION_IDLE_EFFECTS)[number];
 
-// Hiệu ứng khi rê chuột (số đo từ hộp quà của trang mẫu): "Nảy lên" (hộp nhảy lên nghiêng 3 độ rồi lắng xuống, 0,7s), "Bay lên rồi hiện lại" (vật nhỏ bay lên mờ dần rồi hiện lại, lặp), "Pháo giấy" (8 mảnh giấy bắn lên từ mép trên khung, lặp).
+// Hiệu ứng khi rê chuột (số đo từ hộp quà của trang mẫu): "Nảy lên" (hộp nhảy lên nghiêng 3 độ rồi lắng xuống, 0,7s), "Bay lên rồi hiện lại" (vật nhỏ bay lên mờ dần rồi hiện lại, lặp), "Pháo giấy" (8 mảnh giấy bắn lên từ mép trên khung, lặp), "Lắc" (bao lì xì đung đưa ±6 độ và ±9px rồi tắt dần, chu kỳ 1,25s, lặp khi còn rê chuột).
 // Các khối cùng "Nhóm rê chuột" phản ứng cùng lúc khi rê vào bất kỳ khối nào trong nhóm.
-export const DECORATION_HOVER_EFFECTS = ["Không", "Nảy lên", "Bay lên rồi hiện lại", "Pháo giấy"] as const;
+export const DECORATION_HOVER_EFFECTS = ["Không", "Nảy lên", "Bay lên rồi hiện lại", "Pháo giấy", "Lắc"] as const;
 export type DecorationHoverEffect = (typeof DECORATION_HOVER_EFFECTS)[number];
 /** Tên nhóm chỉ giữ chữ thường, số và gạch nối để dùng an toàn trong bộ chọn CSS. */
 export function hoverGroupId(value: unknown): string {
@@ -56,7 +56,7 @@ export const decorationBlock: ComponentDef = {
     parallaxY: { type: "number", label: "Trôi theo cuộn dọc", min: -300, max: 300, unit: "‰", group: "Hiệu ứng", help: "Dương thì khối cuộn chậm hơn trang (hoa nền phía trên), âm thì nhanh hơn." },
     idleDelay: { type: "number", label: "Trễ hiệu ứng lặp", min: 0, max: 5, unit: "s", group: "Hiệu ứng", help: "Dùng cho Chớp sáng: so le nhịp giữa nhiều ngôi sao." },
     shineRadius: { type: "number", label: "Bo góc vệt sáng", min: 0, max: 200, unit: "px", group: "Hiệu ứng", help: "Vệt sáng chỉ hiện trong khung này; đặt bằng nửa chiều cao nút để bo tròn." },
-    hoverEffect: { type: "select", label: "Khi rê chuột", options: DECORATION_HOVER_EFFECTS, group: "Hiệu ứng", help: "Nảy lên: như hộp quà. Bay lên rồi hiện lại: dùng cho vật nhỏ quanh hộp. Pháo giấy: đặt khối ở mép trên hộp." },
+    hoverEffect: { type: "select", label: "Khi rê chuột", options: DECORATION_HOVER_EFFECTS, group: "Hiệu ứng", help: "Nảy lên: như hộp quà. Bay lên rồi hiện lại: dùng cho vật nhỏ quanh hộp. Pháo giấy: đặt khối ở mép trên hộp. Lắc: bao lì xì đung đưa tắt dần, lặp khi còn rê chuột." },
     hoverGroup: { type: "text", label: "Nhóm rê chuột", maxLength: 30, group: "Hiệu ứng", help: "Các khối cùng tên (chữ thường, số, gạch nối) phản ứng cùng lúc khi rê vào một khối. Để trống thì chỉ phản ứng khi rê vào chính nó." },
     hoverTime: { type: "number", label: "Thời gian rê", min: 0.3, max: 5, unit: "s", group: "Hiệu ứng" },
     hoverDelay: { type: "number", label: "Trễ khi rê", min: 0, max: 3, unit: "s", group: "Hiệu ứng" },
