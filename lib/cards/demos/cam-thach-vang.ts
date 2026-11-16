@@ -58,6 +58,9 @@ const GIFT_FIX: Record<string, [number, number, number, number]> = {
   "ctv-113": [330, 6553, 34, 34], "ctv-114": [518, 6544, 38, 40], "ctv-115": [334, 6662, 26, 27], "ctv-116": [532, 6656, 24, 25],
   "ctv-117": [365, 6589, 170, 174], "ctv-118": [342, 6715, 44, 47], "ctv-119": [376, 6724, 26, 28], "ctv-120": [468, 6718, 40, 42],
 };
+// Dòng cảm ơn cuối trang: gốc một dòng; phông thay thế rộng hơn nên mở rộng hộp.
+const thanks = column.children.find(child => child.id === "ctv-122") as FreeNode | undefined;
+if (thanks) { thanks.position = { mode: "free", x: { anchor: "start", offset: 170 }, y: thanks.position!.y }; thanks.size = { w: { kind: "px", v: 560 }, h: thanks.size!.h }; }
 for (const child of column.children as FreeNode[]) {
   const fix = GIFT_FIX[child.id];
   if (!fix) continue;
