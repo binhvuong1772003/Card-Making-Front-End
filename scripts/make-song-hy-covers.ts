@@ -19,8 +19,12 @@ type Theme = {
   // Bìa lá có hoa riêng (Minimalism Nâu): ảnh hoa, vị trí tâm so với tâm thẻ, độ mờ trong thẻ; màu lá rơi và bảng màu pháo.
   flower?: { src: string; w: number; h: number; lx: number; ly: number; rx: number; ry: number; rot: number; opL: number; opR: number; flipRight: boolean };
   leafColor?: string; burstPalette?: string;
+  // Song Hỷ V2: ảnh con dấu thay chữ 囍 vẽ bằng SVG, phông riêng cho dấu & và độ mờ chữ ngày.
+  sealImage?: string; ampFont?: string;
 };
 const themes: Theme[] = [
+  { key: "shv2", gradient: ["#420000", "#420000", "#420000"], card: "#8c0000", border: "#ffe8a4", borderAlpha: 0, cardAlpha: 1, cream: "#ffe8a4", ink: "#ffe8a4", dim: "#eed4c4", accent: "#fdcb9c", palette: "Đỏ vàng", name1: "Trung Hiếu", name2: "Thanh Hà", date: "4 tháng 1, 2027", nameFont: "'Carattere', cursive", ampFont: "'Ms Madi', cursive", sealKind: "glyph", sealMark: "#8c0000", sealImage: "/demo/song-hy-v2-do/source-assets/double-happiness-light.webp", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#ffe8a4", buttonText: "#8c0000", ruleKind: "fade", weight: 400,
+    flower: { src: "/demo/song-hy-v2-do/source-assets/double-happiness-light.webp", w: 402, h: 396, lx: -305, ly: -127, rx: 292, ry: 171, rot: 0, opL: 15, opR: 15, flipRight: false } },
   { key: "xanh", gradient: ["#0a1f0e", "#122418", "#1f3a25"], card: "#1f3a25", border: "#e8f0e4", borderAlpha: 0.15, cardAlpha: 1, cream: "#e8f0e4", ink: "#e8f0e4", dim: "#cad5c7", palette: "Xanh lá", name1: "Minh Anh", name2: "Thu Hà", date: "30 tháng 7, 2026", nameFont: serif, sealKind: "mask", sealMark: "#1f3a25", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#e8f0e4", buttonText: "#1f3a25", ruleKind: "solid", weight: 400 },
   { key: "do", gradient: ["#5a0000", "#400000", "#2a0000"], card: "#800000", border: "#ffeed2", borderAlpha: 0.15, cardAlpha: 1, cream: "#ffeed2", ink: "#ffeed2", dim: "#ecc9b2", palette: "Đỏ vàng", name1: "Gia Huy", name2: "Quỳnh Như", date: "14 tháng 6, 2026", nameFont: serif, sealKind: "glyph", sealMark: "#800000", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#ffeed2", buttonText: "#800000", ruleKind: "solid", weight: 400 },
   { key: "mdd", gradient: ["#6e1a20", "#511419", "#380a0e"], card: "#fffaf3", border: "#511419", borderAlpha: 0.15, cardAlpha: 0.96, cream: "#fffaf3", ink: "#511419", dim: "#825456", palette: "Đỏ rượu", name1: "Hoàng Long", name2: "Bảo Ngọc", date: "3 tháng 1, 2026", nameFont: viaoda, sealKind: "heart", sealFrom: "#511419", sealTo: "#330000", sealMark: "#f3e8de", particleShape: "Tim", particleChar: "♥", burstChar: "♥", flowers: true, button: "#511419", buttonText: "#f3e8de", ruleKind: "fade", weight: 300 },
@@ -55,7 +59,7 @@ function writeAssets(t: Theme) {
     ? `<g opacity=".8" transform="translate(${leftX.toFixed(2)} ${leftY.toFixed(2)}) rotate(25 ${cx.toFixed(2)} ${cy})">${image}</g>` +
       `<g opacity=".8" transform="translate(${rightX.toFixed(2)} ${rightY.toFixed(2)}) translate(${cx.toFixed(2)} ${cy}) rotate(-25) scale(-1 1) translate(${(-cx).toFixed(2)} ${-cy})">${image}</g>`
     : "";
-  const motifs = t.flowers || t.leafCover || t.key === "xanh" ? "" : `${glyph(50, 40, 410, -18, t.cream, 0.11)}${glyph(550, 380, 410, 162, t.cream, 0.11)}`;
+  const motifs = t.flowers || t.leafCover || t.flower || t.key === "xanh" ? "" : `${glyph(50, 40, 410, -18, t.cream, 0.11)}${glyph(550, 380, 410, 162, t.cream, 0.11)}`;
   // Thẻ 600x420: nền, viền mảnh và phần trang trí (hai chữ 囍 hoặc hoa) cắt theo thẻ, như trang mẫu.
   writeFileSync(resolve(dir, `card-${t.key}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420"><defs><clipPath id="c"><rect width="600" height="420" rx="8"/></clipPath></defs><rect x=".5" y=".5" width="599" height="419" rx="8" fill="${t.card}" fill-opacity="${t.cardAlpha}" stroke="${t.border}" stroke-opacity="${t.borderAlpha}"/><g clip-path="url(#c)">${motifs}${flowers}</g></svg>\n`);
   writeFileSync(resolve(dir, `xi-${t.key}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="52" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="${FONT}" fill="${t.cream}">囍</text></svg>\n`);
@@ -113,13 +117,13 @@ function buildCover(t: Theme) {
   const rule = (id: string, side: "left" | "right") => t.ruleKind === "fade"
     ? decoration(id, `rule-${t.key}-${side}.svg`, { x: side === "left" ? -37 : 37, y: 14, w: 40, h: 1 }, FADE)
     : put("Shape", id, { x: side === "left" ? -50 : 50, y: 13, w: 60, h: 1 }, { shape: "rectangle", fill: t.cream, motionTarget: "" }, FADE, { opacity: 40 });
-  const motifs = t.flowers || t.leafCover ? [] : [
+  const motifs = t.flowers || t.leafCover || t.flower ? [] : [
     decoration("open-motif-left", `xi-${t.key}.svg`, { x: -250, y: -170, w: 410, h: 410, rotation: -18 }, OPEN("Phóng ra rồi mờ dần", 1.3), { opacity: 0 }),
     decoration("open-motif-right", `xi-${t.key}.svg`, { x: 250, y: 170, w: 410, h: 410, rotation: 162 }, OPEN("Phóng ra rồi mờ dần", 1.3), { opacity: 0 }),
   ];
   // Hai bản sao hoa góc đứng yên, ẩn sẵn, rồi phóng to và nhoè khi mở (gốc: dragon-fly-forward 1,2s); hoa trong thẻ vẫn bay lên cùng thẻ.
   const fl = t.flower;
-  const flowerClones = fl ? [
+  const flowerClones = fl && !t.sealImage ? [
     put("Decoration", "open-flower-left", { x: fl.lx, y: fl.ly, w: fl.w, h: fl.h, rotation: fl.rot }, { src: fl.src, alt: "", fit: "contain", motion: false, motionTarget: "" }, OPEN("Phóng to rồi nhoè", 1.2), { opacity: 0 }),
     put("Decoration", "open-flower-right", { x: fl.rx, y: fl.ry, w: fl.w, h: fl.h, rotation: -fl.rot }, { src: fl.src, alt: "", fit: "contain", motion: false, motionTarget: "", flipX: fl.flipRight }, OPEN("Phóng to rồi nhoè", 1.2), { opacity: 0 }),
   ] : t.leafCover ? [
@@ -131,7 +135,7 @@ function buildCover(t: Theme) {
   ] : [];
   // Hoa trong thẻ là hai khối riêng đặt trong khối Thẻ thiệp (cắt ở mép thẻ, bo góc 8px); cả thẻ bay lên cùng nhau khi mở.
   const panel = (() => {
-    if (!t.flowers && !t.leafCover && t.key !== "xanh") return [] as FreeNode[];
+    if (!t.flowers && !t.leafCover && !t.flower && t.key !== "xanh") return [] as FreeNode[];
     const node = put("CardPanel", "open-card-panel", { x: 0, y: 0, w: 600, h: 420 }, {}, FADE, { borderRadius: 8 });
     delete (node.styles as Record<string, unknown>).background;
     delete (node.styles as Record<string, unknown>).borderWidth;
@@ -158,13 +162,13 @@ function buildCover(t: Theme) {
     decoration("open-card", `card-${t.key}.svg`, { x: 0, y: 0, w: 600, h: 420 }, FADE, { shadow: { x: 0, y: 25, blur: 60, spread: -12, color: "#000000", opacity: 45 } }),
     ...panel,
     ...flowerClones,
-    decoration("open-ring", `ring-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Gợn sóng lan ra", 0.6)),
+    decoration("open-ring", `ring-${t.key}.svg`, { x: 0, y: -160, w: t.sealImage ? 64 : 56, h: t.sealImage ? 64 : 56 }, OPEN("Gợn sóng lan ra", 0.6)),
     // Con dấu tim có quầng bóng mềm cùng màu (gốc: 0 5px 27px #511419 @.5); bo tròn để bóng không thành ô vuông.
-    beat(decoration("open-seal", `seal-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Thu nhỏ rồi biến mất", 0.5), t.sealKind === "heart"
+    beat(t.sealImage ? put("Decoration", "open-seal", { x: 0, y: -160, w: 52, h: 52 }, { src: t.sealImage, alt: "", fit: "contain", motion: false, motionTarget: "" }, OPEN("Thu nhỏ rồi biến mất", 0.5), { borderRadius: 26, shadow: { x: 0, y: 4, blur: 20, spread: 0, color: t.cream, opacity: 50 } }) : decoration("open-seal", `seal-${t.key}.svg`, { x: 0, y: -160, w: 56, h: 56 }, OPEN("Thu nhỏ rồi biến mất", 0.5), t.sealKind === "heart"
       ? { borderRadius: 28, shadow: { x: 0, y: 5, blur: 27, spread: 0, color: t.sealFrom ?? "#511419", opacity: 50 } }
       : t.sealKind === "mask" ? { borderRadius: 28, shadow: { x: 0, y: 4, blur: 20, spread: 0, color: "#e8f0e4", opacity: 50 } } : {})),
     text("open-name1", t.name1, { x: 0, y: -91, w: 500, h: 44 }, 36, t.ink, t.nameFont),
-    text("open-amp", "&", { x: 0, y: -60, w: 100, h: 26 }, 20, t.ink, baskerville),
+    text("open-amp", "&", { x: 0, y: -60, w: 100, h: 26 }, 20, t.ink, t.ampFont ?? baskerville),
     text("open-name2", t.name2, { x: 0, y: -26, w: 500, h: 44 }, 36, t.ink, t.nameFont),
     rule("open-rule-left", "left"),
     text("open-orn", "❦", { x: 0, y: 14, w: 40, h: 22 }, 14, t.accent ?? t.ink, baskerville),
@@ -172,7 +176,7 @@ function buildCover(t: Theme) {
     text("open-date", t.date, { x: 0, y: 46, w: 400, h: 30 }, 18, t.dim, lora),
     text("open-invite", "Thân Mời", { x: 0, y: 93, w: 300, h: 30 }, 18, t.dim, lora),
     decoration("open-button", `button-${t.key}.svg`, { x: 0, y: 154, w: 180, h: 88 }, FADE),
-    ...(t.flowers || t.leafCover || t.key === "xanh" ? [(() => { const shine = decoration("open-button-shine", "", { x: 0, y: 154, w: 140, h: 48 }, FADE); shine.props = { ...shine.props, src: "", idleEffect: "Ánh sáng quét", shineRadius: 24 }; return shine; })()] : []),
+    ...(t.flowers || t.leafCover || t.flower || t.key === "xanh" ? [(() => { const shine = decoration("open-button-shine", "", { x: 0, y: 154, w: 140, h: 48 }, FADE); shine.props = { ...shine.props, src: "", idleEffect: "Ánh sáng quét", shineRadius: 24 }; return shine; })()] : []),
     text("open-label", "Mở thiệp", { x: 0, y: 154, w: 140, h: 48 }, 18, t.buttonText, lora, { motionTarget: "cover" }),
     put("Burst", "open-burst", { x: 0, y: 235, w: 96, h: 40 }, { char: t.burstChar, ...(t.leafCover ? { shape: "Lá" } : {}), count: 32, spread: 420, delay: 0.5, palette: t.leafCover ? (t.burstPalette ?? "Lá xanh") : t.palette }, undefined),
   ];
