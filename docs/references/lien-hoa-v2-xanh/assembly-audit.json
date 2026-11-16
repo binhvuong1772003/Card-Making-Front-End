@@ -1,0 +1,21 @@
+{
+  "sourceViewport": [
+    1440,
+    1000
+  ],
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "nodes": 115,
+  "albumPhotos": 6,
+  "date": "2027-04-18",
+  "sourceSampleCount": 10,
+  "unmapped": [
+    {
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/header[1]/span[1]",
+      "issue": "Source font 460px exceeds editable Text maximum 400px; clamped and needs native scale control"
+    }
+  ],
+  "status": "working draft; no visual sign-off"
+}

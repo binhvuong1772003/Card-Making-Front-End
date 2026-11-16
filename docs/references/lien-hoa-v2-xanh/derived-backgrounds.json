@@ -1,0 +1,74 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/lien-hoa-v2-xanh/source-assets/background-3.png",
+    "bakedOpacity": true,
+    "source": "url(\"https://chungdoi.com/images/themes/lien-hoa-v2-green/paper-texture.webp\")",
+    "recipe": {
+      "size": "100% auto",
+      "position": "0% 0%",
+      "mixBlendMode": "multiply",
+      "opacity": "0.5"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/h2[1]",
+    "local": "/demo/lien-hoa-v2-xanh/source-assets/background-26.png",
+    "bakedOpacity": false,
+    "source": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22314.254%22%20height%3D%2253.2163%22%20viewBox%3D%220%200%20314.254%2053.2163%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M304.822%209.61606C304.793%204.85174%20301%201%20296.332%201H17.9225C13.254%201%209.46125%204.85174%209.43226%209.61606C4.76958%209.64568%201%2013.5211%201%2018.2914V34.925C1%2039.6952%204.76958%2043.5707%209.43226%2043.6003C9.46125%2048.3646%2013.254%2052.2163%2017.9225%2052.2163H296.332C301%2052.2163%20304.793%2048.3646%20304.822%2043.6003C309.485%2043.5707%20313.254%2039.6952%20313.254%2034.925V18.2914C313.254%2013.5211%20309.485%209.64568%20304.822%209.61606Z%22%20stroke%3D%22%235e813c%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%2F%3E%3C%2Fsvg%3E\")",
+    "recipe": {
+      "size": "100% 100%",
+      "position": "50% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/h2[1]",
+    "local": "/demo/lien-hoa-v2-xanh/source-assets/background-76.png",
+    "bakedOpacity": false,
+    "source": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22314.254%22%20height%3D%2253.2163%22%20viewBox%3D%220%200%20314.254%2053.2163%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M304.822%209.61606C304.793%204.85174%20301%201%20296.332%201H17.9225C13.254%201%209.46125%204.85174%209.43226%209.61606C4.76958%209.64568%201%2013.5211%201%2018.2914V34.925C1%2039.6952%204.76958%2043.5707%209.43226%2043.6003C9.46125%2048.3646%2013.254%2052.2163%2017.9225%2052.2163H296.332C301%2052.2163%20304.793%2048.3646%20304.822%2043.6003C309.485%2043.5707%20313.254%2039.6952%20313.254%2034.925V18.2914C313.254%2013.5211%20309.485%209.64568%20304.822%209.61606Z%22%20stroke%3D%22%235e813c%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%2F%3E%3C%2Fsvg%3E\")",
+    "recipe": {
+      "size": "100% 100%",
+      "position": "50% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[3]/div[1]/h2[1]",
+    "local": "/demo/lien-hoa-v2-xanh/source-assets/background-110.png",
+    "bakedOpacity": false,
+    "source": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22314.254%22%20height%3D%2253.2163%22%20viewBox%3D%220%200%20314.254%2053.2163%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M304.822%209.61606C304.793%204.85174%20301%201%20296.332%201H17.9225C13.254%201%209.46125%204.85174%209.43226%209.61606C4.76958%209.64568%201%2013.5211%201%2018.2914V34.925C1%2039.6952%204.76958%2043.5707%209.43226%2043.6003C9.46125%2048.3646%2013.254%2052.2163%2017.9225%2052.2163H296.332C301%2052.2163%20304.793%2048.3646%20304.822%2043.6003C309.485%2043.5707%20313.254%2039.6952%20313.254%2034.925V18.2914C313.254%2013.5211%20309.485%209.64568%20304.822%209.61606Z%22%20stroke%3D%22%235e813c%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%2F%3E%3C%2Fsvg%3E\")",
+    "recipe": {
+      "size": "100% 100%",
+      "position": "50% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/section[1]/div[1]/h3[1]",
+    "local": "/demo/lien-hoa-v2-xanh/source-assets/background-228.png",
+    "bakedOpacity": false,
+    "source": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22314.254%22%20height%3D%2253.2163%22%20viewBox%3D%220%200%20314.254%2053.2163%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M304.822%209.61606C304.793%204.85174%20301%201%20296.332%201H17.9225C13.254%201%209.46125%204.85174%209.43226%209.61606C4.76958%209.64568%201%2013.5211%201%2018.2914V34.925C1%2039.6952%204.76958%2043.5707%209.43226%2043.6003C9.46125%2048.3646%2013.254%2052.2163%2017.9225%2052.2163H296.332C301%2052.2163%20304.793%2048.3646%20304.822%2043.6003C309.485%2043.5707%20313.254%2039.6952%20313.254%2034.925V18.2914C313.254%2013.5211%20309.485%209.64568%20304.822%209.61606Z%22%20stroke%3D%22%235e813c%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%2F%3E%3C%2Fsvg%3E\")",
+    "recipe": {
+      "size": "100% 100%",
+      "position": "50% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[5]/div[1]/h2[1]",
+    "local": "/demo/lien-hoa-v2-xanh/source-assets/background-252.png",
+    "bakedOpacity": false,
+    "source": "url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22314.254%22%20height%3D%2253.2163%22%20viewBox%3D%220%200%20314.254%2053.2163%22%20preserveAspectRatio%3D%22none%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M304.822%209.61606C304.793%204.85174%20301%201%20296.332%201H17.9225C13.254%201%209.46125%204.85174%209.43226%209.61606C4.76958%209.64568%201%2013.5211%201%2018.2914V34.925C1%2039.6952%204.76958%2043.5707%209.43226%2043.6003C9.46125%2048.3646%2013.254%2052.2163%2017.9225%2052.2163H296.332C301%2052.2163%20304.793%2048.3646%20304.822%2043.6003C309.485%2043.5707%20313.254%2039.6952%20313.254%2034.925V18.2914C313.254%2013.5211%20309.485%209.64568%20304.822%209.61606Z%22%20stroke%3D%22%235e813c%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%2F%3E%3C%2Fsvg%3E\")",
+    "recipe": {
+      "size": "100% 100%",
+      "position": "50% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  }
+]
