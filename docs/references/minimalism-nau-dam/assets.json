@@ -1,0 +1,404 @@
+{
+  "template": "minimalism-nau-dam",
+  "source": "Browser asset bundle from the existing Chrome tab",
+  "assets": [
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/castle-background.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/castle-background.webp",
+      "file": "castle-background.webp",
+      "bytes": 264080,
+      "kind": "artwork",
+      "sha256": "07e00a895cafd4843c0230b1612510b903f1244fe774adf76391d764fb134b31",
+      "naturalSize": [
+        1254,
+        1045
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/goldenline2-decoration.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/goldenline2-decoration.webp",
+      "file": "goldenline2-decoration.webp",
+      "bytes": 11800,
+      "kind": "artwork",
+      "sha256": "6cb4de0cd698d8a9db3187dbe5c4c1791f82c2ccb5c72c7e5e7b8778c512ad2c",
+      "naturalSize": [
+        400,
+        117
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/envelope-background.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/envelope-background.webp",
+      "file": "envelope-background.webp",
+      "bytes": 123446,
+      "kind": "artwork",
+      "sha256": "23e8570559b1e65561572d581d39519addb74124a4dd01233dcfc8009289552a",
+      "naturalSize": [
+        851,
+        992
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/envelope-cover.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/envelope-cover.webp",
+      "file": "envelope-cover.webp",
+      "bytes": 59382,
+      "kind": "artwork",
+      "sha256": "80f313241b28b4b6efec3eae5dc0c0c8bf0d8f9901f3622fc3efac110deda13b",
+      "naturalSize": [
+        849,
+        563
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/flower8-decoration.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/flower8-decoration.webp",
+      "file": "flower8-decoration.webp",
+      "bytes": 101074,
+      "kind": "artwork",
+      "sha256": "0d275613c0733299bbacb9cd97ed10e5ad061af43266b524e1cbb325fd8b7dbe",
+      "naturalSize": [
+        423,
+        532
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/flower-decoration.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/flower-decoration.webp",
+      "file": "flower-decoration.webp",
+      "bytes": 300156,
+      "kind": "artwork",
+      "sha256": "c0159491b90062f0da408ff9a4d58bfdcd2179b6d706442597bf696ecd7d3572",
+      "naturalSize": [
+        822,
+        900
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/string-decoration.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/string-decoration.webp",
+      "file": "string-decoration.webp",
+      "bytes": 31254,
+      "kind": "artwork",
+      "sha256": "348e07970354e7e18570b419cb584734e322bf2428654848a32e8babef89a176",
+      "naturalSize": [
+        289,
+        417
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/flower2-decoration.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/flower2-decoration.webp",
+      "file": "flower2-decoration.webp",
+      "bytes": 279966,
+      "kind": "artwork",
+      "sha256": "381b8a49f2a03558978e0b96d58c9f0589f4b827f60a7a894147cf1055bbe556",
+      "naturalSize": [
+        710,
+        900
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/goldenline3-decoration.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/goldenline3-decoration.webp",
+      "file": "goldenline3-decoration.webp",
+      "bytes": 10714,
+      "kind": "artwork",
+      "sha256": "ce02c2b0ec91fffcf85d00a8da0ccb080ba640a28dfd8070073dd75331aee0b5",
+      "naturalSize": [
+        400,
+        85
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/paper.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/paper.webp",
+      "file": "paper.webp",
+      "bytes": 172958,
+      "kind": "artwork",
+      "sha256": "5c7a104b0bac35232d971383e1a9674b32928143b53b327c1afdcb422a457de0",
+      "naturalSize": [
+        1333,
+        2000
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/goldenline-decoration.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/goldenline-decoration.webp",
+      "file": "goldenline-decoration.webp",
+      "bytes": 7594,
+      "kind": "artwork",
+      "sha256": "b20306ef468b63366bc63d381cc03ac52542c701d81c848de7d4ccbe9fe6dae1",
+      "naturalSize": [
+        329,
+        88
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/flower3-decoration.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/flower3-decoration.webp",
+      "file": "flower3-decoration.webp",
+      "bytes": 349062,
+      "kind": "artwork",
+      "sha256": "2f8c7aa60ba69e7ef54364cbf20e6a537d4edaf705fa2bf869d5a5bccd58165f",
+      "naturalSize": [
+        900,
+        900
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/cake.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/cake.webp",
+      "file": "cake.webp",
+      "bytes": 51222,
+      "kind": "artwork",
+      "sha256": "3503b72ac7b276bbbb9e61e844914d11067e07a98ca21d9d5221e19ae4e134ec",
+      "naturalSize": [
+        400,
+        400
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/bird.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/bird.webp",
+      "file": "bird.webp",
+      "bytes": 62986,
+      "kind": "artwork",
+      "sha256": "887f4a0e5ce74df2f22890792ee41aef3f8adae4a758b5381f4b3aa921c90aee",
+      "naturalSize": [
+        400,
+        400
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/alcohol.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/alcohol.webp",
+      "file": "alcohol.webp",
+      "bytes": 50812,
+      "kind": "artwork",
+      "sha256": "38fd7c0ca22027f5a4afb38c3fe4956e6103d4b927b8e866974c362bf45e10f5",
+      "naturalSize": [
+        400,
+        400
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-brown/castle2-background.webp",
+      "local": "/demo/minimalism-nau-dam/source-assets/castle2-background.webp",
+      "file": "castle2-background.webp",
+      "bytes": 180756,
+      "kind": "artwork",
+      "sha256": "370a209db29633045b5d7a8d3305f7229e270c348c90c9be9af61db6c4fc712c",
+      "naturalSize": [
+        1000,
+        667
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/79dc077bef4e992fb165a6e36d82ce4cde0db0222ad6b66e419bd7850e02e730.webp",
+      "local": "/demo/minimalism-nau-dam/photo-1.webp",
+      "file": "photo-1.webp",
+      "bytes": 906976,
+      "kind": "album-photo",
+      "sha256": "79dc077bef4e992fb165a6e36d82ce4cde0db0222ad6b66e419bd7850e02e730",
+      "naturalSize": [
+        1296,
+        1945
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/a92a1025b101a2217a444cdc6aecf6718ff892783b908146cf28386912cf2435.webp",
+      "local": "/demo/minimalism-nau-dam/photo-2.webp",
+      "file": "photo-2.webp",
+      "bytes": 591002,
+      "kind": "album-photo",
+      "sha256": "a92a1025b101a2217a444cdc6aecf6718ff892783b908146cf28386912cf2435",
+      "naturalSize": [
+        1296,
+        1945
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/6033e6f7c6e24e8d9857bada2788cb635d54980d3ec23a7eb756ef1538eac281.webp",
+      "local": "/demo/minimalism-nau-dam/photo-3.webp",
+      "file": "photo-3.webp",
+      "bytes": 421258,
+      "kind": "album-photo",
+      "sha256": "6033e6f7c6e24e8d9857bada2788cb635d54980d3ec23a7eb756ef1538eac281",
+      "naturalSize": [
+        1945,
+        1296
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/4c6ec3c1661bf7e37a6676948335722ce695cd9dc85dd90baf67542a13328fef.webp",
+      "local": "/demo/minimalism-nau-dam/photo-4.webp",
+      "file": "photo-4.webp",
+      "bytes": 617210,
+      "kind": "album-photo",
+      "sha256": "4c6ec3c1661bf7e37a6676948335722ce695cd9dc85dd90baf67542a13328fef",
+      "naturalSize": [
+        1296,
+        1945
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/ef62d93bb58034c5db7c44b33989118e9877278736d0a89f1b381bc2d4d49bcf.webp",
+      "local": "/demo/minimalism-nau-dam/photo-5.webp",
+      "file": "photo-5.webp",
+      "bytes": 349248,
+      "kind": "album-photo",
+      "sha256": "ef62d93bb58034c5db7c44b33989118e9877278736d0a89f1b381bc2d4d49bcf",
+      "naturalSize": [
+        1296,
+        1945
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/5aff7301ce8bc21fcc7df0e39adcb23f0cee493320df61974d075274081ae475.webp",
+      "local": "/demo/minimalism-nau-dam/photo-6.webp",
+      "file": "photo-6.webp",
+      "bytes": 344592,
+      "kind": "album-photo",
+      "sha256": "5aff7301ce8bc21fcc7df0e39adcb23f0cee493320df61974d075274081ae475",
+      "naturalSize": [
+        1365,
+        1824
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/73401aa6f0c5d1b8ecb061cb3bd640a8e29d2373acf99ee452d76d3617560863.webp",
+      "local": "/demo/minimalism-nau-dam/photo-7.webp",
+      "file": "photo-7.webp",
+      "bytes": 215850,
+      "kind": "album-photo",
+      "sha256": "73401aa6f0c5d1b8ecb061cb3bd640a8e29d2373acf99ee452d76d3617560863",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/1fbc918ebb6e67dd496026c61ebc5ab1c9ca38dc95acb281e147ee43c8c1a2d2.webp",
+      "local": "/demo/minimalism-nau-dam/photo-8.webp",
+      "file": "photo-8.webp",
+      "bytes": 678480,
+      "kind": "album-photo",
+      "sha256": "1fbc918ebb6e67dd496026c61ebc5ab1c9ca38dc95acb281e147ee43c8c1a2d2",
+      "naturalSize": [
+        1945,
+        1296
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/4ac98aa3591c6777b5f73947b07c5b8bdfb2ddffca904142ffb929e81d0cbe5f.webp",
+      "local": "/demo/minimalism-nau-dam/photo-9.webp",
+      "file": "photo-9.webp",
+      "bytes": 438480,
+      "kind": "album-photo",
+      "sha256": "4ac98aa3591c6777b5f73947b07c5b8bdfb2ddffca904142ffb929e81d0cbe5f",
+      "naturalSize": [
+        1296,
+        1945
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/b14b7beed16c3cab8b6968dc0318a43e3c51479e85080eff895b62912938154a.webp",
+      "local": "/demo/minimalism-nau-dam/photo-10.webp",
+      "file": "photo-10.webp",
+      "bytes": 243702,
+      "kind": "album-photo",
+      "sha256": "b14b7beed16c3cab8b6968dc0318a43e3c51479e85080eff895b62912938154a",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    }
+  ],
+  "excluded": [
+    "QR images and site icon; music and popup assets are out of scope"
+  ],
+  "verification": {
+    "localFiles": "All listed files decode successfully; byte counts match the existing manifest.",
+    "sourceIdentity": "Source URL mapping retained from the earlier capture; not reverified against a live browser in this session.",
+    "catalog": "Cloudinary URL, publicId and MongoDB catalog ID not yet verified."
+  }
+}

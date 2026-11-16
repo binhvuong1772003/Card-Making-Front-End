@@ -25,6 +25,8 @@ export type GiftPopupSpec = {
   bankY: number; numberY: number; holderY: number; lineSize: number;
   save: { y: number; w: number; h: number; size: number };
   qrCardFill?: string;
+  /** Cỡ chữ và cao của tiêu đề (mặc định 27px / 41px). */
+  titleSize?: number; titleH?: number;
 };
 
 /** Popup "Hộp quà mừng": đầu màu, tiêu đề Times đậm hoa, mỗi cột có nhãn, thẻ QR, ngân hàng, số tài khoản, chủ tài khoản và nút Lưu QR. */
@@ -41,7 +43,8 @@ export function giftDetailsPage(spec: GiftPopupSpec): CardPage {
   const label = (id: string, value: string, left: number, top: number, w: number, h: number, size: number, color: string, font: string, bold = false, extra: Record<string, JsonValue> = {}) =>
     put("Text", id, left, top, w, h, { text: value, size: Math.round(size * K), color, font, bold, italic: false, underline: false, align: "center", ...extra });
   put("Shape", "gift-popup-header", 0, 0, 576, spec.headerH, { shape: "rectangle", fill: spec.headerFill, motionTarget: "" });
-  label("gift-popup-title", "HỘP QUÀ MỪNG", 24, 24, 528, 41, 27, spec.titleColor, "'Times New Roman', serif", true, { letterSpacing: 0.54 * K, textShadow: "Nhẹ" });
+  const titleSize = spec.titleSize ?? 27;
+  label("gift-popup-title", "HỘP QUÀ MỪNG", 24, 24, 528, spec.titleH ?? 41, titleSize, spec.titleColor, "'Times New Roman', serif", true, { letterSpacing: 0.02 * titleSize * K, textShadow: "Nhẹ" });
   const sans = "'Gotham', system-ui, sans-serif";
   const mono = "ui-monospace, 'SF Mono', Menlo, monospace";
   spec.columns.forEach((c, i) => {

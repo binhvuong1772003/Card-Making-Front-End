@@ -34,11 +34,12 @@ export type CountdownSpec = {
   rect: [number, number, number, number];
   phone: [number, number, number, number];
   size?: number;
+  bold?: boolean;
 };
 
 /** Dòng "N ngày G giờ P phút S giây" của khối Đếm ngược, đặt dưới tiêu đề "Cùng đếm ngược". */
 export function addCountdown(column: TreeNode, size: { w: number; h: number }, spec: CountdownSpec): void {
-  const node = newNode(registry, "Countdown", spec.id, size, { props: { date: spec.date, time: spec.time, color: spec.color, font: spec.font, size: spec.size ?? 27, bold: true, align: spec.align, layerName: "Đếm ngược" } }) as FreeNode;
+  const node = newNode(registry, "Countdown", spec.id, size, { props: { date: spec.date, time: spec.time, color: spec.color, font: spec.font, size: spec.size ?? 27, bold: spec.bold ?? true, align: spec.align, layerName: "Đếm ngược" } }) as FreeNode;
   node.position = { mode: "free", x: { anchor: "start", offset: spec.rect[0] }, y: { anchor: "start", offset: spec.rect[1] } };
   node.size = { w: px(spec.rect[2]), h: px(spec.rect[3]) };
   node.phone = { x: { anchor: "start", offset: spec.phone[0] }, y: { anchor: "start", offset: spec.phone[1] }, w: px(spec.phone[2]), h: px(spec.phone[3]), rotation: 0 };
