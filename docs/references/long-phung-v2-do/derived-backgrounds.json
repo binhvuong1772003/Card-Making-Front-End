@@ -1,0 +1,26 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[7]",
+    "local": "/demo/long-phung-v2-do/source-assets/background-30.png",
+    "bakedOpacity": false,
+    "source": "radial-gradient(circle at 0px 0px, rgb(104, 14, 14) 35px, rgba(0, 0, 0, 0) 35px), radial-gradient(circle at 100% 0px, rgb(104, 14, 14) 35px, rgba(0, 0, 0, 0) 35px), radial-gradient(circle at 0px 100%, rgb(104, 14, 14) 35px, rgba(0, 0, 0, 0) 35px), radial-gradient(circle at 100% 100%, rgb(104, 14, 14) 35px, rgba(0, 0, 0, 0) 35px), url(\"https://chungdoi.com/images/themes/longphung-v2-red/bg-frame.jpg\")",
+    "recipe": {
+      "size": "cover",
+      "position": "0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]",
+    "local": "/demo/long-phung-v2-do/source-assets/background-213.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/longphung-v2-red/rong-phuong.webp\")",
+    "recipe": {
+      "size": "100% auto",
+      "position": "50% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "0.06"
+    }
+  }
+]
