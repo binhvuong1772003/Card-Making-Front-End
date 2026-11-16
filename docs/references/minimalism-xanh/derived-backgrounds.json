@@ -1,0 +1,50 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/minimalism-xanh/source-assets/background-3.png",
+    "bakedOpacity": true,
+    "source": "url(\"https://chungdoi.com/images/themes/minimalism-green/paper.webp\")",
+    "recipe": {
+      "size": "100% auto",
+      "position": "0% 0%",
+      "mixBlendMode": "multiply",
+      "opacity": "0.5"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[1]/div[1]/div[2]",
+    "local": "/demo/minimalism-xanh/source-assets/background-25.png",
+    "bakedOpacity": true,
+    "source": "url(\"https://chungdoi.com/images/themes/minimalism-green/paper.webp\")",
+    "recipe": {
+      "size": "666.5px 1000px",
+      "position": "0% 0%",
+      "mixBlendMode": "multiply",
+      "opacity": "0.5"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[2]/div[1]/div[2]",
+    "local": "/demo/minimalism-xanh/source-assets/background-110.png",
+    "bakedOpacity": true,
+    "source": "url(\"https://chungdoi.com/images/themes/minimalism-green/paper.webp\")",
+    "recipe": {
+      "size": "666.5px 1000px",
+      "position": "0% 0%",
+      "mixBlendMode": "multiply",
+      "opacity": "0.5"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[3]/div[1]/div[2]",
+    "local": "/demo/minimalism-xanh/source-assets/background-257.png",
+    "bakedOpacity": true,
+    "source": "url(\"https://chungdoi.com/images/themes/minimalism-green/paper.webp\")",
+    "recipe": {
+      "size": "666.5px 1000px",
+      "position": "0% 0%",
+      "mixBlendMode": "multiply",
+      "opacity": "0.5"
+    }
+  }
+]
