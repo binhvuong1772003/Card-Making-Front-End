@@ -62,3 +62,77 @@ export function popupInteractions(rsvpId: string, giftIds: string[]): CardPage["
     ...Object.fromEntries(giftIds.map((id) => [id, { type: "open-popup", targetPageId: "gift-details", transition: "fade", durationMs: 250 } as const])),
   };
 }
+
+// --- Hoàn thiện cả mẫu từ một bản cấu hình (dùng cho các mẫu sau Song Hỷ V2 / Tơ Duyên / Nâu Đậm / Cẩm Thạch) ---
+
+import type { CardDocument } from "../document";
+import { giftDetailsPage, rsvpPage, type GiftPopupSpec } from "./gift-popups";
+
+const flyParams = [
+  [55, -14, 1.6, 0], [60, 14, 1.8, 0.15], [65, -10, 1.4, 0.3], [70, 12, 1.7, 0.45], [80, -8, 1.9, 0.1], [75, 10, 1.3, 0.35], [72, 14, 1.7, 0.2], [68, -12, 1.5, 0.25],
+] as const;
+
+export type GiftBoxConfig = {
+  main: string;
+  minis: string[];
+  /** x, y, rộng, cao thật (layout, chưa xoay) đo sau khi ảnh tải xong; bản đo đầu có ảnh quà cao 0px và y của ảnh chính là đáy hộp. */
+  fixes: Record<string, [number, number, number, number]>;
+  /** Điện thoại thấp hơn máy tính bấy nhiêu px. */
+  phoneDelta: number;
+};
+
+export type FinishConfig = {
+  content: CardDocument;
+  column: TreeNode;
+  size: { w: number; h: number };
+  cover: CardPage;
+  rsvp: { id: string; color: string; formId: string };
+  popup: GiftPopupSpec;
+  /** Id các khối bấm vào mở popup quà (bao, hộp, chữ "Nhấn để mở"). */
+  giftIds: string[];
+  sparkles?: { ids: string[]; src: string };
+  countdown?: CountdownSpec;
+  /** Hai bao lì xì: bao trước (id thứ hai) đung đưa khi rê chuột. */
+  envelopes?: { front: string };
+  giftBox?: GiftBoxConfig;
+  form?: { id: string; listMax: number };
+};
+
+/** Ghép bìa, popup, hiệu ứng quà, đếm ngược, sao chớp và tương tác thành tài liệu đầy đủ từ một bản nội dung đã đo. */
+export function finishTemplate(config: FinishConfig): CardDocument {
+  const { content, column, size } = config;
+  const invitation = content.pages[0]!;
+  const effects: Record<string, Record<string, JsonValue>> = {};
+
+  if (config.giftBox) {
+    const box = config.giftBox;
+    for (const child of column.children as FreeNode[]) {
+      const fix = box.fixes[child.id];
+      if (!fix) continue;
+      child.position = { mode: "free", x: { anchor: "start", offset: fix[0] }, y: { anchor: "start", offset: fix[1] } };
+      child.size = { w: px(fix[2]), h: px(fix[3]) };
+      const phoneX = (child.phone!.x as { offset: number }).offset;
+      child.phone = { x: { anchor: "start", offset: phoneX }, y: { anchor: "start", offset: fix[1] - box.phoneDelta }, w: px(fix[2]), h: px(fix[3]), rotation: child.phone!.rotation };
+    }
+    effects[box.main] = { hoverEffect: "Nảy lên", hoverGroup: "qua", hoverTime: 0.7 };
+    box.minis.forEach((id, index) => {
+      const [rise, sway, time, delay] = flyParams[index % flyParams.length]!;
+      effects[id] = { hoverEffect: "Bay lên rồi hiện lại", hoverGroup: "qua", hoverRise: rise, hoverSway: sway, hoverTime: time, hoverDelay: delay };
+    });
+  }
+  if (config.envelopes) effects[config.envelopes.front] = { hoverEffect: "Lắc", hoverGroup: "qua", hoverTime: 1.25 };
+  if (config.form) effects[config.form.id] = { listMax: config.form.listMax };
+  if (config.sparkles) sparklesToDecorations(column, config.sparkles.ids, config.sparkles.src, size);
+  if (config.countdown) addCountdown(column, size, config.countdown);
+  applyProps(invitation.data.root, effects);
+
+  return {
+    kind: "card", version: 1, startPageId: "cover",
+    pages: [
+      config.cover,
+      { ...invitation, interactions: popupInteractions(config.rsvp.id, config.giftIds) },
+      giftDetailsPage(config.popup),
+      rsvpPage(config.rsvp.color, config.rsvp.formId),
+    ],
+  };
+}

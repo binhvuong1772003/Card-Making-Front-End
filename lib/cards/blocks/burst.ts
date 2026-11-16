@@ -17,6 +17,20 @@ export const BURST_PALETTES = {
   "Hồng rượu": ["#913b51", "#e8c4ce", "#f3dfc3", "#931434"],
   // Màu hạt và pháo của bìa Tơ Duyên Xanh (xanh lụa và hai màu nhạt của sao quà).
   "Xanh lụa": ["#5e813c", "#d1db9c", "#a8c070", "#e3ecd2"],
+  // Bốn màu hạt của bìa Minimalism Xanh.
+  "Xanh rêu": ["#6b7b4f", "#a7bd8f", "#cdd9bd", "#87a172"],
+  // Bốn màu hạt của bìa Liên Hoa V2 Xanh.
+  "Liên hoa": ["#f2b8c6", "#a8c48a", "#5e813c", "#f7d9e0"],
+  // Hạt trắng của bìa Mai Lan Trắng.
+  "Trắng": ["#ffffff", "#f4f1e6", "#e9e5d3", "#ffffff"],
+  // Hạt cam vàng của bìa Long Phụng V3 Đỏ.
+  "Cam vàng": ["#ffd4a8", "#ff9b4a", "#ffbe89", "#ffffff"],
+  // Hạt hồng phấn của bìa Vườn Kính Hồng.
+  "Hồng phấn nhạt": ["#f7e3e8", "#eab8c2", "#f5d6dc", "#ffffff"],
+  // Hạt xanh nhạt của bìa Vườn Kính Xanh.
+  "Xanh nhạt": ["#c4d4b3", "#ffffff", "#e7eede", "#47613e"],
+  // Hạt và pháo đỏ son của bìa Long Phụng V2 và Song Phụng.
+  "Đỏ son": ["#c41e3a", "#b22222", "#d9534f", "#a31621"],
 } as const;
 export type BurstPalette = keyof typeof BURST_PALETTES;
 export const BURST_PALETTE_NAMES = Object.keys(BURST_PALETTES) as BurstPalette[];
