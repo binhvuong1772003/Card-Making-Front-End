@@ -1,7 +1,7 @@
-import { builtInRegistry, emptyPage, newNode, type FreeNode, type JsonValue, type NodeStyles, type PageData } from "@miditor/core";
+import { builtInRegistry, emptyPage, newNode, type FreeNode, type JsonValue, type NodeStyles } from "@miditor/core";
 import { cardDefinitions } from "../blocks/definitions";
 import { formPresets } from "../blocks/form-presets";
-import { nameLayers } from "../layers";
+import { giftDetailsPage as giftPopup, rsvpPage as rsvpPopup } from "./gift-popups";
 import type { CardDocument, CardPage } from "../document";
 import coverJson from "../../../public/demo/song-hy/cover-shv2.json";
 import measured from "./song-hy-v2-do.measured.json";
@@ -95,46 +95,12 @@ export const songHyV2DoContentDocument: CardDocument = {
   } }],
 };
 
-// Popup "Hộp quà mừng" (gốc: hộp 576x453, đầu #ffe8a4, thân #5a0000, một cột QR). Số tài khoản và QR là dữ liệu giả để thay.
-const POPUP_K = 960 / 576;
-function giftDetailsPage(): CardPage {
-  const n = (v: number) => Math.round(v * POPUP_K);
-  const cream = "#ffe8a4";
-  const list: FreeNode[] = [];
-  const put = (type: string, id: string, left: number, top: number, w: number, h: number, props: Record<string, JsonValue>, styles: NodeStyles = {}) => {
-    const node = newNode(registry, type, id, { w: 960, h: n(453) }, { props }) as FreeNode;
-    node.position = { mode: "free", x: { anchor: "start", offset: n(left) }, y: { anchor: "start", offset: n(top) } };
-    node.size = { w: { kind: "px", v: n(w) }, h: { kind: "px", v: n(h) } };
-    node.styles = { ...node.styles, ...styles };
-    list.push(node);
-  };
-  const label = (id: string, value: string, top: number, h: number, size: number, color: string, font: string, bold = false, extra: Record<string, JsonValue> = {}) =>
-    put("Text", id, 24, top, 528, h, { text: value, size: Math.round(size * POPUP_K), color, font, bold, italic: false, underline: false, align: "center", ...extra });
-  put("Shape", "gift-popup-header", 0, 0, 576, 81, { shape: "rectangle", fill: cream, motionTarget: "" });
-  label("gift-popup-title", "HỘP QUÀ MỪNG", 24, 41, 27, "#ffffff", "'Times New Roman', serif", true, { letterSpacing: 0.54 * POPUP_K, textShadow: "Nhẹ" });
-  label("gift-popup-label", "Chú Rể - Trung Hiếu", 105, 20, 14, cream, "'Gotham', system-ui, sans-serif");
-  put("Shape", "gift-popup-qr-card", 192, 137, 192, 192, { shape: "rectangle", fill: "#ffffff", motionTarget: "" }, { borderRadius: n(12) });
-  put("Image", "gift-popup-qr", 202, 147, 172, 172, { src: "/demo/song-hy-v2-do/qr-groom.png", alt: "Mã QR mừng cưới chú rể", fit: "contain" });
-  label("gift-popup-bank", "Vietcombank", 341, 16, 12, cream, "system-ui, sans-serif");
-  label("gift-popup-number", "0000000000", 359, 16, 12, cream, "ui-monospace, 'SF Mono', Menlo, monospace");
-  label("gift-popup-holder", "TRUNG HIẾU", 377, 16, 12, cream, "system-ui, sans-serif", true);
-  put("Shape", "gift-popup-save", 246, 401, 84, 28, { shape: "rectangle", fill: "#67130d", motionTarget: "" }, { borderRadius: n(14) });
-  label("gift-popup-save-label", "↓ Lưu QR", 408, 14, 12, cream, "system-ui, sans-serif");
-  const page = emptyPage();
-  const data: PageData = { ...page, root: nameLayers({ ...page.root, styles: { background: "#5a0000", minHeight: n(453), phoneMinHeight: n(453) }, children: list }) };
-  return { id: "gift-details", name: "Hộp quà mừng", data, interactions: {}, popup: { width: 641, effect: "fade", backdropColor: "#000000", backdropOpacity: 40 } };
-}
-
-// Popup "Xác nhận tham dự" (gốc: hộp trắng 448px, nút #920002): bộ câu hỏi dựng sẵn "Xác nhận tham dự".
-function rsvpPage(): CardPage {
-  const attendance = formPresets.find((preset) => preset.id === "attendance")!;
-  const form = newNode(registry, "Form", "rsvp-popup-form", { w: 600, h: 620 }, { props: { ...attendance.props, formId: "demo-song-hy-v2-do-rsvp", heading: "Xác nhận tham dự", intro: "Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng tôi. Xin xác nhận để chúng tôi chuẩn bị chu đáo nhất.", color: "#920002", padding: 20 } }) as FreeNode;
-  form.position = { mode: "free", x: { anchor: "start", offset: 28 }, y: { anchor: "start", offset: 86 } };
-  form.size = { w: { kind: "px", v: 544 }, h: { kind: "px", v: 490 } };
-  form.phone = { x: { anchor: "start", offset: 20 }, y: { anchor: "start", offset: 86 }, w: { kind: "px", v: 335 }, h: { kind: "px", v: 490 }, rotation: 0 };
-  const data: PageData = { ...emptyPage(), root: { ...emptyPage().root, styles: { background: "#ffffff", minHeight: 620, phoneMinHeight: 620 }, children: [form] } };
-  return { id: "rsvp", name: "Xác nhận tham dự", data, popup: { width: 448, effect: "fade", backdropColor: "#000000", backdropOpacity: 40 }, interactions: {} };
-}
+const giftDetailsPage = () => giftPopup({
+  height: 453, headerH: 81, headerFill: "#ffe8a4", titleColor: "#ffffff", bodyFill: "#5a0000", ink: "#ffe8a4", saveFill: "#67130d", centers: [288],
+  columns: [{ title: "Chú Rể - Trung Hiếu", bank: "Vietcombank", number: "0000000000", holder: "TRUNG HIẾU", qr: "/demo/song-hy-v2-do/qr-groom.png" }],
+  labelY: 105, labelSize: 14, qr: { y: 137, card: 192, image: 172 }, bankY: 341, numberY: 359, holderY: 377, lineSize: 12, save: { y: 401, w: 84, h: 28, size: 12 },
+});
+const rsvpPage = () => rsvpPopup("#920002", "demo-song-hy-v2-do-rsvp");
 
 // Quà mừng: bao trước nảy lên khi rê chuột, ba ngôi sao chớp lệch pha; bấm bao hoặc chữ "Nhấn để mở" mở popup.
 const GIFT_IDS = ["shv2-123", "shv2-124", "shv2-125", "shv2-126", "shv2-127", "shv2-128", "shv2-129"];

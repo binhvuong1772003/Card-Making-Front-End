@@ -1,0 +1,239 @@
+{
+  "template": "to-duyen-do-dam",
+  "source": "Browser asset bundle from the existing Chrome tab",
+  "assets": [
+    {
+      "source": "https://chungdoi.com/images/themes/silk-ribbon-darkred/line-decoration.webp",
+      "local": "/demo/to-duyen-do-dam/source-assets/line-decoration.webp",
+      "file": "line-decoration.webp",
+      "bytes": 95460,
+      "kind": "artwork",
+      "sha256": "b88bb22161878243dbaa44914abf61290daa687691be2d436f1bce8b6bb42eae",
+      "naturalSize": [
+        725,
+        2170
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/silk-ribbon-darkred/flower-decoration.webp",
+      "local": "/demo/to-duyen-do-dam/source-assets/flower-decoration.webp",
+      "file": "flower-decoration.webp",
+      "bytes": 57866,
+      "kind": "artwork",
+      "sha256": "10e477a5464273cbc2da33d4848ca18fc65a114af5c1c883abc43bfc33360d08",
+      "naturalSize": [
+        970,
+        1200
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/silk-ribbon-darkred/ribbon-decoration.webp",
+      "local": "/demo/to-duyen-do-dam/source-assets/ribbon-decoration.webp",
+      "file": "ribbon-decoration.webp",
+      "bytes": 63246,
+      "kind": "artwork",
+      "sha256": "015301e98019d4fa9e44f23b8b42bf1c7448928a3c8ab788b50c65217b9159cc",
+      "naturalSize": [
+        1600,
+        532
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/silk-ribbon-darkred/icon-ring.webp",
+      "local": "/demo/to-duyen-do-dam/source-assets/icon-ring.webp",
+      "file": "icon-ring.webp",
+      "bytes": 13702,
+      "kind": "artwork",
+      "sha256": "8133875017f6890d6a57cbae5bb102789f1a381cce1a9ed62573c8a923f7e30c",
+      "naturalSize": [
+        220,
+        146
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/silk-ribbon-darkred/icon-alcohol.webp",
+      "local": "/demo/to-duyen-do-dam/source-assets/icon-alcohol.webp",
+      "file": "icon-alcohol.webp",
+      "bytes": 20394,
+      "kind": "artwork",
+      "sha256": "1f4ba755d31add6e80815fe54355f73bf6c75f81335cff0fe5d6b15fabec5519",
+      "naturalSize": [
+        220,
+        206
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/silk-ribbon-darkred/icon-candle.webp",
+      "local": "/demo/to-duyen-do-dam/source-assets/icon-candle.webp",
+      "file": "icon-candle.webp",
+      "bytes": 12678,
+      "kind": "artwork",
+      "sha256": "fe29b5e157554032b483e93fcac2f17ca843ab456b23501253e956cd40e4864a",
+      "naturalSize": [
+        166,
+        220
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/84af6e39b24a59d5d77fb064f3130db82a8ec8548fc5aecab7eec60deb99716f.webp",
+      "local": "/demo/to-duyen-do-dam/photo-1.webp",
+      "file": "photo-1.webp",
+      "bytes": 258071,
+      "kind": "album-photo",
+      "sha256": "84af6e39b24a59d5d77fb064f3130db82a8ec8548fc5aecab7eec60deb99716f",
+      "naturalSize": [
+        1138,
+        1138
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/182963b1200ba7dd821d1f2e8183f4efbdb0dfe024e4353e788aa9f7918c882b.webp",
+      "local": "/demo/to-duyen-do-dam/photo-2.webp",
+      "file": "photo-2.webp",
+      "bytes": 243778,
+      "kind": "album-photo",
+      "sha256": "182963b1200ba7dd821d1f2e8183f4efbdb0dfe024e4353e788aa9f7918c882b",
+      "naturalSize": [
+        1365,
+        1365
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/89d84a5daf184eb2276b5e766554d80c60dd9fdd248806550287fc7b8d05d449.webp",
+      "local": "/demo/to-duyen-do-dam/photo-3.webp",
+      "file": "photo-3.webp",
+      "bytes": 313394,
+      "kind": "album-photo",
+      "sha256": "89d84a5daf184eb2276b5e766554d80c60dd9fdd248806550287fc7b8d05d449",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/8d7a15d97e682621e867ea720a233ec4df911fa1ac6374a7cdb56e849b10b9cf.webp",
+      "local": "/demo/to-duyen-do-dam/photo-4.webp",
+      "file": "photo-4.webp",
+      "bytes": 406254,
+      "kind": "album-photo",
+      "sha256": "8d7a15d97e682621e867ea720a233ec4df911fa1ac6374a7cdb56e849b10b9cf",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/34e882495d16ca0f997b9dc9cfbba5d84d2c74e80fb8111d819830c517b29e3b.webp",
+      "local": "/demo/to-duyen-do-dam/photo-5.webp",
+      "file": "photo-5.webp",
+      "bytes": 356578,
+      "kind": "album-photo",
+      "sha256": "34e882495d16ca0f997b9dc9cfbba5d84d2c74e80fb8111d819830c517b29e3b",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/f066a01f3814028777ce313c9d52a22870573a16261e45fad91ab5ed709c5a87.webp",
+      "local": "/demo/to-duyen-do-dam/photo-6.webp",
+      "file": "photo-6.webp",
+      "bytes": 284405,
+      "kind": "album-photo",
+      "sha256": "f066a01f3814028777ce313c9d52a22870573a16261e45fad91ab5ed709c5a87",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/57a236d5604b2d4502746e9ed7adf2458c14ea976e61476656c293ae435d1a4e.webp",
+      "local": "/demo/to-duyen-do-dam/photo-7.webp",
+      "file": "photo-7.webp",
+      "bytes": 426509,
+      "kind": "album-photo",
+      "sha256": "57a236d5604b2d4502746e9ed7adf2458c14ea976e61476656c293ae435d1a4e",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/0bededa1eb557356006ac023137da39d321374d4ecf4980d2ed52ace9f486907.webp",
+      "local": "/demo/to-duyen-do-dam/photo-8.webp",
+      "file": "photo-8.webp",
+      "bytes": 441864,
+      "kind": "album-photo",
+      "sha256": "0bededa1eb557356006ac023137da39d321374d4ecf4980d2ed52ace9f486907",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/36c4cdfc1dc4819224b1268e43c4b295667097cd44eab3172005838184ec5d72.webp",
+      "local": "/demo/to-duyen-do-dam/photo-9.webp",
+      "file": "photo-9.webp",
+      "bytes": 447063,
+      "kind": "album-photo",
+      "sha256": "36c4cdfc1dc4819224b1268e43c4b295667097cd44eab3172005838184ec5d72",
+      "naturalSize": [
+        1365,
+        2048
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    }
+  ],
+  "excluded": [
+    "QR images and site icon; music and popup assets are out of scope"
+  ],
+  "verification": {
+    "localFiles": "All listed files decode successfully; byte counts match the existing manifest.",
+    "sourceIdentity": "Source URL mapping retained from the earlier capture; not reverified against a live browser in this session.",
+    "catalog": "Cloudinary URL, publicId and MongoDB catalog ID not yet verified."
+  }
+}
