@@ -6,6 +6,8 @@ import { CalendarView } from "@/components/blocks/calendar-view";
 import { FormView } from "@/components/blocks/form-view";
 import { DressCodeView } from "@/components/blocks/dress-code-view";
 import { CountdownView } from "@/components/blocks/countdown-view";
+import { GuestTextView } from "@/components/blocks/guest-text-view";
+import { GUEST_ALIGNS, guestLine, guestTextBlock } from "./guest-text";
 import { COUNTDOWN_ALIGNS, countdownBlock, countdownTarget } from "./countdown";
 import { MapView } from "@/components/blocks/map-view";
 import { PhotoFrameView } from "@/components/blocks/photo-frame-view";
@@ -269,6 +271,17 @@ const renderCountdown: Renderer = ({ props, theme, metadata }) => (
     ticking={modeOf(metadata) !== "edit" && modeOf(metadata) !== "static"}
   />
 );
+const renderGuestText: Renderer = ({ props, theme, metadata }) => (
+  <GuestTextView
+    text={guestLine(props, metadata)}
+    size={number(props.size, 18, 8, 96)}
+    color={paint(props.color, guestTextBlock.defaultProps.color as string, theme)}
+    font={stackOf(props.font)}
+    bold={props.bold === true}
+    italic={props.italic === true}
+    align={pick(GUEST_ALIGNS, props.align, "center")}
+  />
+);
 const renderCardPanel: Renderer = ({ children }) => <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden", borderRadius: "inherit" }}>{children}</div>;
 
 const renderGradient: Renderer = ({ props, theme }) => <GradientView config={readGradient(props, (value, fallback) => paint(value, fallback, theme))} />;
@@ -287,6 +300,7 @@ export const cardRenderers = {
   Form: renderForm,
   DressCode: renderDressCode,
   Countdown: renderCountdown,
+  GuestText: renderGuestText,
   Decoration: renderDecoration,
   Particles: renderParticles,
   Burst: renderBurst,

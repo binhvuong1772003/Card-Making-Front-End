@@ -1,6 +1,7 @@
 "use client";
 
 import { useAutoScroll } from "./use-auto-scroll";
+import { useGuestMetadata } from "./use-guest-metadata";
 import { parallaxCss } from "@/lib/cards/blocks/parallax";
 import { textStyleCss } from "@/lib/cards/blocks/text-style";
 import type { JsonValue, TreeNode } from "@miditor/core";
@@ -88,7 +89,8 @@ export function CardPlayer(props: CardPlayerProps) {
   return <Player key={props.historyKey} {...props} />;
 }
 
-function Player({ document, mode, historyKey, device, metadata, immersive = false, embedded = false }: CardPlayerProps) {
+function Player({ document, mode, historyKey, device, metadata: metadataProp, immersive = false, embedded = false }: CardPlayerProps) {
+  const metadata = useGuestMetadata(metadataProp);
   const initialPage = getStartPage(document);
   const [currentPageId, setCurrentPageId] = useState(initialPage.id);
   const pageMap = useMemo(() => pageMapOf(document), [document]);
