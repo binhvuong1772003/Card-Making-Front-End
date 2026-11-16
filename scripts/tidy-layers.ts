@@ -36,7 +36,7 @@ const edit = <T>(file: string, apply: (json: T) => void) => {
   console.log("sắp lớp", file);
 };
 
-for (const key of ["xanh", "do", "mdd", "hmx", "mbn", "shv2", "tdd", "mnd", "tdx"]) edit<Page>(`song-hy/cover-${key}.json`, (cover) => tidyPage(cover, [
+for (const key of ["xanh", "do", "mdd", "hmx", "mbn", "shv2", "tdd", "mnd", "tdx", "ctv"]) edit<Page>(`song-hy/cover-${key}.json`, (cover) => tidyPage(cover, [
   { name: "Chữ trên thẻ", has: (id) => ["open-name1", "open-amp", "open-name2", "open-rule-left", "open-orn", "open-rule-right", "open-date", "open-invite"].includes(id) },
   { name: "Nút Mở thiệp", has: (id) => ["open-button", "open-button-shine", "open-label"].includes(id) },
   { name: "Con dấu", has: (id) => ["open-ring", "open-seal"].includes(id) },

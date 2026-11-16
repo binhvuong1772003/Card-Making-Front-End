@@ -7,6 +7,8 @@
 
 Tài liệu mô tả cách làm và tiêu chí hoàn thành. Các đoạn code hiện có chỉ là bằng chứng về bản dựng hiện tại, không tự chứng minh rằng mọi chi tiết đã giống nguồn hoặc đã có thao tác tương ứng trong editor.
 
+Điểm vào thực thi chung cho Claude và Codex: [skill clone-invitation](../../../.claude/skills/clone-invitation/SKILL.md). Đọc [các bài học từ diff Claude sửa Minimalism Nâu](../../../.claude/skills/clone-invitation/references/repair-lessons.md) trước khi dựng mẫu mới. Phạm vi mới nhất của người dùng quyết định trang cần làm: chỉ dựng nội dung thì không áp quy trình bìa/popup, mẫu đã yêu cầu bỏ qua thì không dựng/seed lại. Các số 900px, +104,5px hay cỡ popup ở các mục dưới là số của mẫu cụ thể, không phải mặc định chung.
+
 ## 1. Chốt cấu trúc trang và trạng thái trước khi dựng
 
 Lập sơ đồ từ trang nguồn: bìa ban đầu → thao tác mở → nội dung thiệp; RSVP và quà mừng có thể mở trang popup. Ghi lại từng trạng thái đứng yên, hover, đang mở và sau khi mở.
@@ -274,7 +276,9 @@ window.__all = window.__dump(-200, 7100);
 
 Bổ sung cho ảnh xoay hay lật: với mỗi `<img>` in thêm `offsetWidth x offsetHeight`, `rotate`, `scale` của nó và 3 cấp cha (xem mục 15 về `flipX`).
 
-Hai điều đã làm sai ở lần đầu và cần nhớ: (1) mọi y của bản đầu thiếu 104,5 và nhiều cỡ chữ to gấp rưỡi vì được ước lượng; (2) bản dựng bỏ sót hoa và lá cạnh panel, rồi đặt chúng sau panel.
+Hai điều đã làm sai ở lần đầu và cần nhớ: (1) mọi y của bản đầu thiếu 104,5 và nhiều cỡ chữ to gấp rưỡi vì được ước lượng; (2) bản dựng bỏ sót hoa và lá cạnh panel, sau khi bổ sung còn bị panel vẽ đè. Với mẫu này phải tạo các khối hoa phía trước panel trong thứ tự vẽ (sau node panel trong danh sách khối).
+
+Hàm dump trên chỉ là bản rút gọn của mẫu Nâu: không tự thu đủ weight/line-height/letter-spacing, kích thước trước transform, background/pseudo và transform tổ tiên. Bổ sung các trường đó theo bảng của skill trước khi coi dump là thông số dựng. Đổi root, origin, width và y range theo chính mẫu đang đo; không chép hệ tọa độ của Nâu sang mẫu khác.
 
 ## 17. Nền trang, cột 900px và chữ giãn (Minimalism Nâu)
 
@@ -282,3 +286,14 @@ Hai điều đã làm sai ở lần đầu và cần nhớ: (1) mọi y của b�
 - Quét nền CSS: duyệt mọi phần tử (cả `::before`, `::after`) lấy `backgroundImage`, `backgroundSize`, `opacity`; ảnh nền không nằm trong danh sách `<img>`.
 - Giãn chữ: `lib/cards/blocks/text-style.ts` + `TextStyle` trong `card-player.tsx`. Số đo của mẫu: ngày âm 3,5px; tiêu đề mục 0,5-0,6px; "THE WEDDING OF" 2,6px; nhãn nhỏ 1,4px.
 - Đo màu bằng ảnh chụp: `computer screenshot save_to_disk`, rồi `sharp(...).extract(...)` lấy trung bình; so cùng vùng giữa bản gốc và bản dựng ở cùng cỡ cửa sổ.
+
+## 18. Hoàn thiện một mẫu nội dung thành thiệp đủ bìa, popup, quà, đếm ngược (Song Hỷ V2, Tơ Duyên, Nâu Đậm, Cẩm Thạch)
+
+- **Đo sau khi trang tải xong.** Nguồn tải ảnh lười và cuộn mượt: `scrollTo` tức thì không tới đáy, ảnh quà còn `src` rỗng và cao 0px nên bản đo đầu của ba mẫu có ảnh quà cao 0 và y của ảnh chính là đáy hộp. Cuộn bằng bánh xe (`computer scroll`, 10 nấc mỗi lần, đợi vài giây) tới tận cuối rồi mới đo; so lại y một tiêu đề với bản đo cũ để chắc không lệch.
+- **Chụp màn hình sau cuộn cần đợi 3 giây** (nguồn cuộn mượt); ở bản dựng thì `scrollTo({behavior:"instant"})` rồi đợi 2 giây.
+- **Bìa** do `scripts/make-song-hy-covers.ts` sinh theo chủ đề (`npx tsx scripts/make-song-hy-covers.ts <khoá>`): gradient nền, thẻ 600x420, con dấu (tim hoặc ảnh), tên, ngày, nút, ảnh góc (`flower`: tâm so với tâm thẻ, độ mờ, `fit`; `rsrc/rw/rh` khi hai bên khác ảnh; `cardImage` cho nền vân đá). Chạy lại một chủ đề không đụng bìa khác, nhưng đừng chạy lại `mbn` sau khi đã `tidy-layers` (mất tên lớp).
+- **Popup** dùng `lib/cards/demos/gift-popups.ts` (hộp quà 576px một hoặc hai cột, RSVP 448px) với tọa độ đo từ chính popup: mở bằng `click()` lên chữ "Nhấn để mở" cùng bốn tổ tiên, lấy hộp rộng 576 làm gốc. Số tài khoản và QR là dữ liệu giả.
+- **Phần chung** ở `lib/cards/demos/finish.ts`: `sparklesToDecorations` (✦ của bản đo thành Decoration vì chỉ Decoration có hiệu ứng nhàn rỗi), `addCountdown`, `applyProps`, `popupInteractions`.
+- **Đếm ngược** là khối `Countdown` (giờ Việt Nam). Mốc thật suy ra từ chính nguồn: đọc dòng "N ngày G giờ P phút S giây" cùng một giây ở hai tab, rồi chỉnh giờ tới khi khớp (Nâu Đậm 18:30, Tơ Duyên 18:30, Cẩm Thạch 18:00).
+- **Sổ lưu bút**: khối Form có `listMax` (cao tối đa của danh sách). Đặt `listMax` ≈ cao hộp đo − 389 để danh sách không tràn xuống quà; `previewSampleCount` tối đa 10 lời mẫu.
+- Còn thiếu ở cả bốn mẫu: bìa và số đo điện thoại chưa đo riêng; popup RSVP dùng Form dựng sẵn nên khác hộp gốc; guestbook cuộn trong khung thay vì hiện hết.

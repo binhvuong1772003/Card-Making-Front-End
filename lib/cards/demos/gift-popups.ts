@@ -26,7 +26,9 @@ export type GiftPopupSpec = {
   save: { y: number; w: number; h: number; size: number };
   qrCardFill?: string;
   /** Cỡ chữ và cao của tiêu đề (mặc định 27px / 41px). */
-  titleSize?: number; titleH?: number;
+  titleSize?: number; titleH?: number; titleBold?: boolean;
+  /** Màu nhãn cột và chữ nút Lưu QR khi khác màu chữ chi tiết (mặc định cùng `ink`). */
+  accent?: string;
 };
 
 /** Popup "Hộp quà mừng": đầu màu, tiêu đề Times đậm hoa, mỗi cột có nhãn, thẻ QR, ngân hàng, số tài khoản, chủ tài khoản và nút Lưu QR. */
@@ -44,20 +46,20 @@ export function giftDetailsPage(spec: GiftPopupSpec): CardPage {
     put("Text", id, left, top, w, h, { text: value, size: Math.round(size * K), color, font, bold, italic: false, underline: false, align: "center", ...extra });
   put("Shape", "gift-popup-header", 0, 0, 576, spec.headerH, { shape: "rectangle", fill: spec.headerFill, motionTarget: "" });
   const titleSize = spec.titleSize ?? 27;
-  label("gift-popup-title", "HỘP QUÀ MỪNG", 24, 24, 528, spec.titleH ?? 41, titleSize, spec.titleColor, "'Times New Roman', serif", true, { letterSpacing: 0.02 * titleSize * K, textShadow: "Nhẹ" });
+  label("gift-popup-title", "HỘP QUÀ MỪNG", 24, 24, 528, spec.titleH ?? 41, titleSize, spec.titleColor, "'Times New Roman', serif", spec.titleBold ?? true, { letterSpacing: 0.02 * titleSize * K, textShadow: "Nhẹ" });
   const sans = "'Gotham', system-ui, sans-serif";
   const mono = "ui-monospace, 'SF Mono', Menlo, monospace";
   spec.columns.forEach((c, i) => {
     const mid = spec.centers[i]!;
     const key = i === 0 ? "groom" : "bride";
-    label(`gift-popup-${key}-label`, c.title, mid - 128, spec.labelY, 256, 20, spec.labelSize, spec.ink, sans);
+    label(`gift-popup-${key}-label`, c.title, mid - 128, spec.labelY, 256, 20, spec.labelSize, spec.accent ?? spec.ink, sans);
     put("Shape", `gift-popup-${key}-qr-card`, mid - spec.qr.card / 2, spec.qr.y, spec.qr.card, spec.qr.card, { shape: "rectangle", fill: spec.qrCardFill ?? "#ffffff", motionTarget: "" }, { borderRadius: n(12) });
     put("Image", `gift-popup-${key}-qr`, mid - spec.qr.image / 2, spec.qr.y + (spec.qr.card - spec.qr.image) / 2, spec.qr.image, spec.qr.image, { src: c.qr, alt: `Mã QR mừng cưới ${i === 0 ? "chú rể" : "cô dâu"}`, fit: "contain" });
     label(`gift-popup-${key}-bank`, c.bank, mid - 128, spec.bankY, 256, 16, spec.lineSize, spec.ink, "system-ui, sans-serif");
     label(`gift-popup-${key}-number`, c.number, mid - 128, spec.numberY, 256, 16, spec.lineSize, spec.ink, mono);
     label(`gift-popup-${key}-holder`, c.holder, mid - 128, spec.holderY, 256, 16, spec.lineSize, spec.ink, "system-ui, sans-serif", true);
     put("Shape", `gift-popup-${key}-save`, mid - spec.save.w / 2, spec.save.y, spec.save.w, spec.save.h, { shape: "rectangle", fill: spec.saveFill, motionTarget: "" }, { borderRadius: n(spec.save.h / 2) });
-    label(`gift-popup-${key}-save-label`, "↓ Lưu QR", mid - spec.save.w / 2, spec.save.y + (spec.save.h - spec.save.size - 2) / 2, spec.save.w, spec.save.size + 2, spec.save.size, spec.ink, "system-ui, sans-serif");
+    label(`gift-popup-${key}-save-label`, "↓ Lưu QR", mid - spec.save.w / 2, spec.save.y + (spec.save.h - spec.save.size - 2) / 2, spec.save.w, spec.save.size + 2, spec.save.size, spec.accent ?? spec.ink, "system-ui, sans-serif");
   });
   const page = emptyPage();
   const data: PageData = { ...page, root: nameLayers({ ...page.root, styles: { background: spec.bodyFill, minHeight: n(spec.height), phoneMinHeight: n(spec.height) }, children: list }) };

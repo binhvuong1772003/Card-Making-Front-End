@@ -17,12 +17,17 @@ type Theme = {
   name1: string; name2: string; date: string; nameFont: string; sealKind: "glyph" | "heart" | "mask"; sealFrom?: string; sealTo?: string; sealMark: string;
   particleShape: string; particleChar: string; burstChar: string; flowers?: boolean; leafCover?: boolean; accent?: string; button: string; buttonText: string; ruleKind: "solid" | "fade"; weight: number;
   // Bìa lá có hoa riêng (Minimalism Nâu): ảnh hoa, vị trí tâm so với tâm thẻ, độ mờ trong thẻ; màu lá rơi và bảng màu pháo.
-  flower?: { src: string; w: number; h: number; lx: number; ly: number; rx: number; ry: number; rot: number; opL: number; opR: number; flipRight: boolean; fit?: "contain" | "cover" };
+  flower?: { src: string; w: number; h: number; lx: number; ly: number; rx: number; ry: number; rot: number; opL: number; opR: number; flipRight: boolean; fit?: "contain" | "cover"; /* ảnh và cỡ riêng cho bên phải khi hai bên khác nhau */ rsrc?: string; rw?: number; rh?: number };
+  /** Ảnh nền phủ cả thẻ (ví dụ vân đá), vẽ dưới các ảnh trang trí. */
+  cardImage?: string;
   leafColor?: string; burstPalette?: string;
   // Song Hỷ V2: ảnh con dấu thay chữ 囍 vẽ bằng SVG, phông riêng cho dấu & và độ mờ chữ ngày.
   sealImage?: string; ampFont?: string;
 };
 const themes: Theme[] = [
+  { key: "ctv", gradient: ["#f3e6cf", "#d7b681", "#a78555"], card: "#fffdf8", border: "#a78555", borderAlpha: 0, cardAlpha: 1, cream: "#fffdf8", ink: "#a78555", dim: "#464645", accent: "#a78555", palette: "Vàng kim", name1: "Tuấn Kiệt", name2: "Thu Hà", nameFont: viaoda, ampFont: "'Beau Rivage', cursive", date: "14 tháng 2, 2027", sealKind: "heart", sealFrom: "#a78555", sealTo: "#896737", sealMark: "#fffdf8", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#a78555", buttonText: "#fffdf8", ruleKind: "fade", weight: 400,
+    cardImage: "/demo/cam-thach-vang/source-assets/marble.webp",
+    flower: { src: "/demo/cam-thach-vang/source-assets/leaf-1.webp", w: 190, h: 219, lx: -261, ly: -137.5, rx: 263.5, ry: 138, rot: 0, opL: 100, opR: 100, flipRight: false, fit: "contain", rsrc: "/demo/cam-thach-vang/source-assets/leaf-2.webp", rw: 183, rh: 216 } },
   { key: "tdx", gradient: ["#ffffff", "#f2f6ea", "#e3ecd2"], card: "#ffffff", border: "#5e813c", borderAlpha: 0, cardAlpha: 0.97, cream: "#fefbf4", ink: "#5e813c", dim: "#5f714d", accent: "#5e813c", palette: "Xanh lụa", name1: "Hoài Nam", name2: "Thanh Trúc", nameFont: "'Carattere', cursive", date: "19 tháng 12, 2026", sealKind: "heart", sealFrom: "#5e813c", sealTo: "#40631e", sealMark: "#fefbf4", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#5e813c", buttonText: "#fefbf4", ruleKind: "fade", weight: 400,
     flower: { src: "/demo/to-duyen-xanh/source-assets/flower-decoration.webp", w: 310, h: 310, lx: -291, ly: -111, rx: 291, ry: 111, rot: 0, opL: 100, opR: 100, flipRight: false, fit: "contain" } },
   { key: "mnd", gradient: ["#7d553e", "#593d2c", "#37261b"], card: "#f7f5ee", border: "#593d2c", borderAlpha: 0, cardAlpha: 0.96, cream: "#ece4d8", ink: "#593d2c", dim: "#857062", accent: "#593d2c", palette: "Nâu be", name1: "Xuân Trường", name2: "Diệu Linh", date: "17 tháng 11, 2027", nameFont: viaoda, sealKind: "heart", sealFrom: "#593d2c", sealTo: "#3b1f0e", sealMark: "#ece4d8", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#593d2c", buttonText: "#ece4d8", ruleKind: "fade", weight: 400,
@@ -147,8 +152,9 @@ function buildCover(t: Theme) {
     delete (node.styles as Record<string, unknown>).borderWidth;
     delete (node.styles as Record<string, unknown>).borderColor;
     node.children = fl ? [
+      ...(t.cardImage ? [put("Decoration", "open-card-image", { x: 0, y: 0, w: 600, h: 420 }, { src: t.cardImage, alt: "", fit: "cover", motion: false, motionTarget: "" }, FADE)] : []),
       put("Decoration", "open-card-flower-left", { x: fl.lx, y: fl.ly, w: fl.w, h: fl.h, rotation: fl.rot }, { src: fl.src, alt: "", fit: fl.fit ?? "contain", motion: false, motionTarget: "" }, FADE, { opacity: fl.opL }),
-      put("Decoration", "open-card-flower-right", { x: fl.rx, y: fl.ry, w: fl.w, h: fl.h, rotation: -fl.rot }, { src: fl.src, alt: "", fit: "contain", motion: false, motionTarget: "", flipX: fl.flipRight }, FADE, { opacity: fl.opR }),
+      put("Decoration", "open-card-flower-right", { x: fl.rx, y: fl.ry, w: fl.rw ?? fl.w, h: fl.rh ?? fl.h, rotation: -fl.rot }, { src: fl.rsrc ?? fl.src, alt: "", fit: "contain", motion: false, motionTarget: "", flipX: fl.flipRight }, FADE, { opacity: fl.opR }),
     ] : t.leafCover ? [
       put("Decoration", "open-card-flower-left", { x: -269, y: -109, w: 300, h: 300 }, { src: "/demo/hoa-moc-xanh/cover-flower.webp", alt: "", fit: "contain", motion: false, motionTarget: "" }, FADE, { opacity: 40 }),
       put("Decoration", "open-card-flower-right", { x: 268.5, y: 119.5, w: 300, h: 300, rotation: 160 }, { src: "/demo/hoa-moc-xanh/cover-flower.webp", alt: "", fit: "contain", motion: false, motionTarget: "" }, FADE, { opacity: 30 }),
