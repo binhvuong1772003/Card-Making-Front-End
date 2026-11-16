@@ -15,6 +15,8 @@ export const BURST_PALETTES = {
   "Nâu be": ["#c9a97e", "#917f77", "#b89b78", "#e6d6c4"],
   // Ba màu hạt bông tuyết của bìa Tơ Duyên Đỏ Đậm (đọc từ bìa mẫu) và đỏ rượu của con dấu.
   "Hồng rượu": ["#913b51", "#e8c4ce", "#f3dfc3", "#931434"],
+  // Màu hạt và pháo của bìa Tơ Duyên Xanh (xanh lụa và hai màu nhạt của sao quà).
+  "Xanh lụa": ["#5e813c", "#d1db9c", "#a8c070", "#e3ecd2"],
 } as const;
 export type BurstPalette = keyof typeof BURST_PALETTES;
 export const BURST_PALETTE_NAMES = Object.keys(BURST_PALETTES) as BurstPalette[];
