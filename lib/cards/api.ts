@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { apiFetch } from '@/lib/api';
 import { upgradePageDocument } from './forms/legacy';
 import { cardForm, responsesPage, type ResponseStatus, type ResponsesPage } from './forms/responses';
+import { guestRow, type GuestDraft, type GuestRow } from './guests/admin';
 import type { Occasion } from './occasions';
 
 const role = z.enum(['OWNER', 'EDITOR', 'VIEWER']);
@@ -67,6 +68,12 @@ const FORM_RESPONSES =
 const DELETE_RESPONSE = 'mutation($id: ID!) { deleteFormResponse(id: $id) }';
 const SET_RESPONSE_STATUS = 'mutation($id: ID!, $status: EntryStatus!) { setFormResponseStatus(id: $id, status: $status) { id } }';
 
+const GUEST_FIELDS = 'id name code greeting inviteMessage openCount firstOpenedAt lastOpenedAt responded createdAt';
+const CARD_GUESTS = `query($cardId: ID!, $search: String) { cardGuests(cardId: $cardId, search: $search) { ${GUEST_FIELDS} } }`;
+const ADD_GUESTS = `mutation($cardId: ID!, $entries: [GuestInput!]!) { addGuests(cardId: $cardId, entries: $entries) { ${GUEST_FIELDS} } }`;
+const UPDATE_GUEST = `mutation($id: ID!, $name: String, $greeting: String, $inviteMessage: String) { updateGuest(id: $id, name: $name, greeting: $greeting, inviteMessage: $inviteMessage) { ${GUEST_FIELDS} } }`;
+const DELETE_GUEST = 'mutation($id: ID!) { deleteGuest(id: $id) }';
+
 export const cardsApi = {
   // Danh sách của người đang gọi, mới sửa nhất lên đầu; lọc theo dịp và tìm trong tiêu đề (phía server). Tối đa 50 thiệp.
   list: async (options: { occasion?: Occasion; search?: string } = {}, signal?: AbortSignal): Promise<CardSummary[]> =>
@@ -109,6 +116,21 @@ export const cardsApi = {
 
   setResponseStatus: async (id: string, status: ResponseStatus): Promise<void> => {
     await apiFetch.graphql(SET_RESPONSE_STATUS, { id, status });
+  },
+
+  // Khách mời của thiệp (trang Khách mời): cũ nhất trước, `search` lọc theo tên phía server.
+  guests: async (cardId: string, search?: string, signal?: AbortSignal): Promise<GuestRow[]> =>
+    z.object({ cardGuests: z.array(guestRow) }).parse(await apiFetch.graphql(CARD_GUESTS, { cardId, search: search || undefined }, signal)).cardGuests,
+
+  addGuests: async (cardId: string, entries: GuestDraft[]): Promise<GuestRow[]> =>
+    z.object({ addGuests: z.array(guestRow) }).parse(await apiFetch.graphql(ADD_GUESTS, { cardId, entries })).addGuests,
+
+  // Chuỗi rỗng ở lời chào hoặc lời mời là xoá nó; bỏ trống (undefined) là giữ nguyên.
+  updateGuest: async (id: string, patch: { name?: string; greeting?: string; inviteMessage?: string }): Promise<GuestRow> =>
+    z.object({ updateGuest: guestRow }).parse(await apiFetch.graphql(UPDATE_GUEST, { id, ...patch })).updateGuest,
+
+  deleteGuest: async (id: string): Promise<void> => {
+    await apiFetch.graphql(DELETE_GUEST, { id });
   },
 
   create: async (title: string, occasion?: Occasion): Promise<string> =>

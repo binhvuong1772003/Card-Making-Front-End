@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { ArrowSquareOutIcon, ChatCircleTextIcon, CopyIcon, DotsThreeIcon, PencilSimpleIcon, TrashIcon } from "@phosphor-icons/react";
+import { ArrowSquareOutIcon, ChatCircleTextIcon, CopyIcon, DotsThreeIcon, PencilSimpleIcon, TrashIcon, UsersThreeIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
@@ -79,6 +79,11 @@ export function CardMenu({ card, triggerClassName }: { card: CardSummary; trigge
           {card.published && card.role !== "VIEWER" && (
             <DropdownMenuItem render={<Link href={`/cards/${card.id}/responses`} />}>
               <ChatCircleTextIcon /> Phản hồi
+            </DropdownMenuItem>
+          )}
+          {card.role !== "VIEWER" && (
+            <DropdownMenuItem render={<Link href={`/cards/${card.id}/guests`} />}>
+              <UsersThreeIcon /> Khách mời
             </DropdownMenuItem>
           )}
           {canRename && (

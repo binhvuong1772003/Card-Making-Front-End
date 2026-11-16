@@ -1,7 +1,7 @@
 "use client";
 
 import { useEditor } from "@miditor/editor";
-import { ChatCircleTextIcon } from "@phosphor-icons/react";
+import { ChatCircleTextIcon, UsersThreeIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { toast } from "sonner";
@@ -108,6 +108,12 @@ export function CardHeader({
           <Button variant="outline" render={<Link href={`/cards/${cardId}/responses`} />} className="h-9 gap-2 border-input px-4 text-[13px]">
             <ChatCircleTextIcon size={18} />
             Phản hồi
+          </Button>
+        )}
+        {canReadResponses && (
+          <Button variant="outline" render={<Link href={`/cards/${cardId}/guests`} />} className="h-9 gap-2 border-input px-4 text-[13px]">
+            <UsersThreeIcon size={18} />
+            Khách mời
           </Button>
         )}
         <Button variant="outline" onClick={preview} className="h-9 gap-2 border-input px-4 text-[13px]">
