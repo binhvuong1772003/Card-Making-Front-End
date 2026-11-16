@@ -56,8 +56,7 @@ const invitation = toDuyenXanhContentDocument.pages[0]!;
 sparklesToDecorations(column, ["tdx-093", "tdx-094", "tdx-095", "tdx-096"], "/demo/to-duyen-xanh/sparkle.svg", size);
 addCountdown(column, size, { id: "tdx-countdown", date: "2026-12-19", time: "18:30", color: "#1a3500", font: "Baskerville, 'Times New Roman', serif", align: "right", rect: [394, 3360, 351, 41], phone: [38, 2365, 300, 41] });
 applyProps(invitation.data.root, {
-  "tdx-098": { hoverEffect: "Nảy lên", hoverGroup: "qua", hoverTime: 0.7 },
-  "tdx-099": { hoverEffect: "Nảy lên", hoverGroup: "qua", hoverTime: 0.7 },
+  "tdx-099": { hoverEffect: "Lắc", hoverGroup: "qua", hoverTime: 1.25 },
   "tdx-110": { listMax: 1116 },
 });
 const GIFT_IDS = ["tdx-098", "tdx-099", "tdx-100"];
