@@ -48,16 +48,16 @@ export interface FormViewProps {
 
 // Hai lời mẫu cho bản xem thử, kèm giờ viết sẵn: bản xem thử có thể được dựng phía server, tính giờ máy ở đó sẽ lệch với trình duyệt.
 const SAMPLES = [
-  { id: "mau-1", name: "Anh Ba ngoài Hà Nội", text: "Chúc hai bạn giữ được sự kiên nhẫn dành cho nhau.", time: "24/7 02:00" },
-  { id: "mau-2", name: "Gia đình thông gia", text: "Mừng hạnh phúc trăm năm, vạn sự như ý.", time: "25/7 03:00" },
-  { id: "mau-3", name: "Thầy cô trường cũ", text: "Nhà mới, chuyện mới, mong toàn chuyện lành.", time: "26/7 04:00" },
-  { id: "mau-4", name: "Bạn bè đại học", text: "Chúc hai em luôn nhìn nhau như hôm nay.", time: "27/7 05:00" },
-  { id: "mau-5", name: "Gia đình bác Hoàng", text: "Cảm ơn bữa tiệc thật chu đáo. Chúc mừng hai bạn.", time: "28/7 06:00" },
-  { id: "mau-6", name: "Gia đình cô Lan", text: "Chúc hai bạn mỗi năm lại thương nhau hơn một chút.", time: "29/7 07:00" },
-  { id: "mau-7", name: "Cô Bảy", text: "Mong tổ ấm của hai em luôn ngập nắng.", time: "30/7 08:00" },
-  { id: "mau-8", name: "Chú Tư", text: "Chúc mừng hai bạn, xứng đôi vừa lứa.", time: "31/7 09:00" },
-  { id: "mau-9", name: "Minh Anh", text: "Chúc hai bạn trăm năm hạnh phúc, sớm có tin vui!", time: "01/8 09:00" },
-  { id: "mau-10", name: "Gia đình cô Hoa", text: "Chúc mừng ngày trọng đại của hai con.", time: "01/8 10:30" },
+  { id: "mau-1", name: "Cô Thúy", text: "Chúc hai con trăm năm hạnh phúc, nhà cửa đầm ấm tiếng cười.", time: "12/6 08:15" },
+  { id: "mau-2", name: "Nhóm bạn cấp ba", text: "Cuối cùng cũng tới ngày này! Cả hội chúc hai bạn mãi ngọt ngào.", time: "12/6 09:40" },
+  { id: "mau-3", name: "Anh Khoa", text: "Chúc em và chồng luôn đồng lòng, bình yên bên nhau mỗi ngày.", time: "12/6 11:05" },
+  { id: "mau-4", name: "Đồng nghiệp phòng kế hoạch", text: "Chúc hai bạn sớm có tổ ấm thật vui, thật nhiều tiếng cười.", time: "12/6 13:20" },
+  { id: "mau-5", name: "Dì Sáu", text: "Thương hai đứa lắm. Sống với nhau hiền hòa, có nhau là đủ.", time: "12/6 15:30" },
+  { id: "mau-6", name: "Bạn chung lớp đại học", text: "Mong hai bạn luôn nắm tay nhau qua mọi chặng đường sắp tới.", time: "12/6 17:45" },
+  { id: "mau-7", name: "Chị Mai", text: "Chúc em xinh đẹp nhất hôm nay và hạnh phúc suốt cả cuộc đời.", time: "12/6 19:10" },
+  { id: "mau-8", name: "Hàng xóm cũ", text: "Chúc mừng hai cháu, mong tin vui nối tiếp tin vui.", time: "12/6 20:25" },
+  { id: "mau-9", name: "Minh Anh", text: "Chúc hai bạn trăm năm hạnh phúc, sớm có tin vui!", time: "13/6 07:50" },
+  { id: "mau-10", name: "Gia đình cô Hoa", text: "Chúc mừng ngày trọng đại của hai con.", time: "13/6 10:30" },
 ];
 
 const PAGE = 10;
@@ -543,6 +543,8 @@ export function FormView(props: FormViewProps) {
 
   const color = props.color;
   const guestbook = props.publicList.enabled;
+  // Chữ sáng (trang nền tối): thẻ lời chúc dùng nền trong suốt cùng màu chữ thay vì nền kem.
+  const lightInk = /^#[0-9a-f]{6}$/i.test(color) && (0.299 * parseInt(color.slice(1, 3), 16) + 0.587 * parseInt(color.slice(3, 5), 16) + 0.114 * parseInt(color.slice(5, 7), 16)) > 150;
   const compact = props.compact || guestbook;
   const labelStyle: CSSProperties = { display: "block", fontSize: 16, fontWeight: 500, marginBottom: 6, textAlign: "left" };
   const fieldStyle: CSSProperties = {
@@ -696,7 +698,7 @@ export function FormView(props: FormViewProps) {
           {!live ? (
             <>
               {SAMPLES.slice(0, Math.min(PAGE, props.previewSampleCount)).map((entry) => (
-                <div key={entry.id} style={{ padding: "18px 22px", border: `1px solid ${color}44`, borderRadius: 12, background: "rgba(255,252,247,.72)", boxShadow: "0 2px 8px rgba(62,30,24,.04)" }}>
+                <div key={entry.id} style={{ padding: "18px 22px", border: `1px solid ${color}44`, borderRadius: 12, background: lightInk ? `${color}14` : "rgba(255,252,247,.72)", boxShadow: lightInk ? "none" : "0 2px 8px rgba(62,30,24,.04)" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12 }}>
                     <div style={{ fontSize: 16, fontWeight: 700 }}>{entry.name}</div>
                     <div style={{ fontSize: 13, opacity: 0.72, whiteSpace: "nowrap" }}>{entry.time}</div>
