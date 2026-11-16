@@ -54,7 +54,7 @@ export const toDuyenDoDamContentDocument: CardDocument = {
 const size = { w: width!, h: height! };
 const invitation = toDuyenDoDamContentDocument.pages[0]!;
 sparklesToDecorations(column, ["tddd-093", "tddd-094", "tddd-095", "tddd-096"], "/demo/to-duyen-do-dam/sparkle.svg", size);
-addCountdown(column, size, { id: "tddd-countdown", date: "2026-12-19", time: "17:30", color: "#460011", font: "Baskerville, 'Times New Roman', serif", align: "right", rect: [394, 3461, 351, 41], phone: [38, 2429, 300, 41] });
+addCountdown(column, size, { id: "tddd-countdown", date: "2026-12-19", time: "18:30", color: "#460011", font: "Baskerville, 'Times New Roman', serif", align: "right", rect: [394, 3461, 351, 41], phone: [38, 2429, 300, 41] });
 applyProps(invitation.data.root, {
   "tddd-110": { listMax: 837 },
   "tddd-098": { hoverEffect: "Nảy lên", hoverGroup: "qua", hoverTime: 0.7 },
