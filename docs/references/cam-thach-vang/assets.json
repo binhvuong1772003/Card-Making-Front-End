@@ -1,0 +1,194 @@
+{
+  "template": "cam-thach-vang",
+  "source": "Browser asset bundle from the existing Chrome tab",
+  "assets": [
+    {
+      "source": "https://chungdoi.com/images/themes/marble-yellow/leaf-2.webp",
+      "local": "/demo/cam-thach-vang/source-assets/leaf-2.webp",
+      "file": "leaf-2.webp",
+      "bytes": 234634,
+      "kind": "artwork",
+      "sha256": "8b55d01b57f57cb9fce669c43790a04201a4b98a442ac821a31775b43ccd47d3",
+      "naturalSize": [
+        860,
+        1363
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/marble-yellow/leaf-1.webp",
+      "local": "/demo/cam-thach-vang/source-assets/leaf-1.webp",
+      "file": "leaf-1.webp",
+      "bytes": 210600,
+      "kind": "artwork",
+      "sha256": "749dd75eeb23fbba186d06e3f395a0b8322d722a84531fdd903abb63e331f761",
+      "naturalSize": [
+        760,
+        1129
+      ],
+      "format": "webp",
+      "hasAlpha": true,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/marble-yellow/marble.webp",
+      "local": "/demo/cam-thach-vang/source-assets/marble.webp",
+      "file": "marble.webp",
+      "bytes": 27000,
+      "kind": "artwork",
+      "sha256": "389965dd97ebc3d7e35e0536b83d25a025db8f4ce3d79872d2777abf0ae02c96",
+      "naturalSize": [
+        683,
+        1200
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/53fe1ac6520c377e14384b2940cb1edca37668313fa366532c6b50c57cc5e6ba.webp",
+      "local": "/demo/cam-thach-vang/photo-1.webp",
+      "file": "photo-1.webp",
+      "bytes": 211502,
+      "kind": "album-photo",
+      "sha256": "53fe1ac6520c377e14384b2940cb1edca37668313fa366532c6b50c57cc5e6ba",
+      "naturalSize": [
+        1360,
+        1360
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/9428e6bdde0a685c2ad1fac40d343b5d50cd9c415610dfd0dec4d222f65b136c.webp",
+      "local": "/demo/cam-thach-vang/photo-2.webp",
+      "file": "photo-2.webp",
+      "bytes": 192602,
+      "kind": "album-photo",
+      "sha256": "9428e6bdde0a685c2ad1fac40d343b5d50cd9c415610dfd0dec4d222f65b136c",
+      "naturalSize": [
+        1360,
+        1360
+      ],
+      "format": "jpeg",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/5169823e2046899b26d9ce7cf2a452249052ea8c50ff314d84e8dfbedba45c71.webp",
+      "local": "/demo/cam-thach-vang/photo-3.webp",
+      "file": "photo-3.webp",
+      "bytes": 103436,
+      "kind": "album-photo",
+      "sha256": "5169823e2046899b26d9ce7cf2a452249052ea8c50ff314d84e8dfbedba45c71",
+      "naturalSize": [
+        1063,
+        1600
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/83b987b712c877f3ce3c72317fe74553eed8de3f7ac7dbf135660bd3902ef115.webp",
+      "local": "/demo/cam-thach-vang/photo-4.webp",
+      "file": "photo-4.webp",
+      "bytes": 149272,
+      "kind": "album-photo",
+      "sha256": "83b987b712c877f3ce3c72317fe74553eed8de3f7ac7dbf135660bd3902ef115",
+      "naturalSize": [
+        1063,
+        1600
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/12ff63fe762cd0c5ca2730ecfb046f7b393a92ff01eab8ee2a94e8eca5702ed5.webp",
+      "local": "/demo/cam-thach-vang/photo-5.webp",
+      "file": "photo-5.webp",
+      "bytes": 100012,
+      "kind": "album-photo",
+      "sha256": "12ff63fe762cd0c5ca2730ecfb046f7b393a92ff01eab8ee2a94e8eca5702ed5",
+      "naturalSize": [
+        1063,
+        1600
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/233f83fc04b7eab1e263c4a2a6f089d3bdaee9e544b9996acaffa59969291ed4.webp",
+      "local": "/demo/cam-thach-vang/photo-6.webp",
+      "file": "photo-6.webp",
+      "bytes": 112770,
+      "kind": "album-photo",
+      "sha256": "233f83fc04b7eab1e263c4a2a6f089d3bdaee9e544b9996acaffa59969291ed4",
+      "naturalSize": [
+        1063,
+        1600
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/709ef51371b16aeec07abc414f420341351d35af51bf69c818bde0ab0dd668bc.webp",
+      "local": "/demo/cam-thach-vang/photo-7.webp",
+      "file": "photo-7.webp",
+      "bytes": 129066,
+      "kind": "album-photo",
+      "sha256": "709ef51371b16aeec07abc414f420341351d35af51bf69c818bde0ab0dd668bc",
+      "naturalSize": [
+        1063,
+        1600
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/b45fdd26a285e8b31bddf294dc0f205ae152332de9ab6a26b91e5f169bde4bb4.webp",
+      "local": "/demo/cam-thach-vang/photo-8.webp",
+      "file": "photo-8.webp",
+      "bytes": 141234,
+      "kind": "album-photo",
+      "sha256": "b45fdd26a285e8b31bddf294dc0f205ae152332de9ab6a26b91e5f169bde4bb4",
+      "naturalSize": [
+        1063,
+        1600
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/fd3178ccf0efc276f3ecd58effa45b6aee5764defcdb64723b2d4d27973a3d67.webp",
+      "local": "/demo/cam-thach-vang/photo-9.webp",
+      "file": "photo-9.webp",
+      "bytes": 132218,
+      "kind": "album-photo",
+      "sha256": "fd3178ccf0efc276f3ecd58effa45b6aee5764defcdb64723b2d4d27973a3d67",
+      "naturalSize": [
+        1063,
+        1600
+      ],
+      "format": "webp",
+      "hasAlpha": false,
+      "localFileVerified": true
+    }
+  ],
+  "excluded": [
+    "QR images and site icon; music and popup assets are out of scope"
+  ],
+  "verification": {
+    "localFiles": "All listed files decode successfully; byte counts match the existing manifest.",
+    "sourceIdentity": "Source URL mapping retained from the earlier capture; not reverified against a live browser in this session.",
+    "catalog": "Cloudinary URL, publicId and MongoDB catalog ID not yet verified."
+  }
+}

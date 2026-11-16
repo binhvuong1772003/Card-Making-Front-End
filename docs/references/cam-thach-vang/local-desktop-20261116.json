@@ -1,0 +1,2127 @@
+{
+  "images": [
+    {
+      "alt": "leaf-2.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/leaf-2.webp"
+    },
+    {
+      "alt": "leaf-1.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/leaf-1.webp"
+    },
+    {
+      "alt": "53fe1ac6520c377e14384b2940cb1edca37668313fa366532c6b50c57cc5e6ba.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-1.webp"
+    },
+    {
+      "alt": "9428e6bdde0a685c2ad1fac40d343b5d50cd9c415610dfd0dec4d222f65b136c.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-2.webp"
+    },
+    {
+      "alt": "leaf-1.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/leaf-1.webp"
+    },
+    {
+      "alt": "leaf-2.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/leaf-2.webp"
+    },
+    {
+      "alt": "leaf-1.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/leaf-1.webp"
+    },
+    {
+      "alt": "leaf-2.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/leaf-2.webp"
+    },
+    {
+      "alt": "leaf-2.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/leaf-2.webp"
+    },
+    {
+      "alt": "medallion-candle.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/medallion-candle.webp"
+    },
+    {
+      "alt": "medallion-alcohol.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/medallion-alcohol.webp"
+    },
+    {
+      "alt": "medallion-birdcage.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/medallion-birdcage.webp"
+    },
+    {
+      "alt": "leaf-1.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/leaf-1.webp"
+    },
+    {
+      "alt": "porcelain_v2_red.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/porcelain_v2_red.webp"
+    },
+    {
+      "alt": "baroque_v2_darkblue.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/baroque_v2_darkblue.webp"
+    },
+    {
+      "alt": "hoa_kho_orange.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/hoa_kho_orange.webp"
+    },
+    {
+      "alt": "chateau_blue.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/chateau_blue.webp"
+    },
+    {
+      "alt": "marble_yellow.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/marble_yellow.webp"
+    },
+    {
+      "alt": "royal.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/royal.webp"
+    },
+    {
+      "alt": "elegant_leaf_green.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/elegant_leaf_green.webp"
+    },
+    {
+      "alt": "nhat_binh_red.webp",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/source-assets/nhat_binh_red.webp"
+    },
+    {
+      "alt": "",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-2.webp"
+    },
+    {
+      "alt": "",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-1.webp"
+    },
+    {
+      "alt": "",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-3.webp"
+    },
+    {
+      "alt": "",
+      "loaded": true,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-4.webp"
+    },
+    {
+      "alt": "",
+      "loaded": false,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-5.webp"
+    },
+    {
+      "alt": "",
+      "loaded": false,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-6.webp"
+    },
+    {
+      "alt": "",
+      "loaded": false,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-7.webp"
+    },
+    {
+      "alt": "",
+      "loaded": false,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-8.webp"
+    },
+    {
+      "alt": "",
+      "loaded": false,
+      "src": "http://localhost:3001/demo/cam-thach-vang/photo-9.webp"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "root",
+      "line": "24px",
+      "rect": [
+        232.5,
+        0,
+        960,
+        7114
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-column",
+      "line": "24px",
+      "rect": [
+        262.5,
+        0,
+        900,
+        7113.578125
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-001",
+      "line": "24px",
+      "rect": [
+        841.8125,
+        -41.671875,
+        403.1875,
+        639
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-002",
+      "line": "24px",
+      "rect": [
+        96.16220092773438,
+        907.953857421875,
+        417.6755676269531,
+        566.07666015625
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference EB Garamond\", \"Times New Roman\", serif",
+      "id": "ctv-003",
+      "line": "30px",
+      "rect": [
+        634.765625,
+        109.140625,
+        155.4375,
+        20
+      ],
+      "size": "20px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-004",
+      "line": "24px",
+      "rect": [
+        369.2703857421875,
+        323.92535400390625,
+        426.381103515625,
+        528.1961669921875
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-005",
+      "line": "24px",
+      "rect": [
+        376.757568359375,
+        331.41253662109375,
+        411.40673828125,
+        513.2218017578125
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-006",
+      "line": "24px",
+      "rect": [
+        670.2498779296875,
+        586.08447265625,
+        400.218994140625,
+        515.4560546875
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-007",
+      "line": "24px",
+      "rect": [
+        677.431640625,
+        593.2662353515625,
+        385.85546875,
+        501.092529296875
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-008",
+      "line": "24px",
+      "rect": [
+        488.71875,
+        897.953125,
+        48.4375,
+        17
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Viaoda Libre\", \"Reference EB Garamond\", cursive",
+      "id": "ctv-009",
+      "line": "40.5px",
+      "rect": [
+        446.765625,
+        922.953125,
+        132.3125,
+        35.09375
+      ],
+      "size": "27px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-010",
+      "line": "24px",
+      "rect": [
+        877.125,
+        434.6875,
+        49.3125,
+        17
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Viaoda Libre\", \"Reference EB Garamond\", cursive",
+      "id": "ctv-011",
+      "line": "40.5px",
+      "rect": [
+        853.078125,
+        459.6875,
+        97.421875,
+        35.09375
+      ],
+      "size": "27px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-012",
+      "line": "24px",
+      "rect": [
+        917.356689453125,
+        1486.2427978515625,
+        404.73974609375,
+        558.280029296875
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-013",
+      "line": "24px",
+      "rect": [
+        11.413177490234377,
+        1811.8616943359375,
+        546.892333984375,
+        718.0889892578125
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-014",
+      "line": "39px",
+      "rect": [
+        579.21875,
+        1372.40625,
+        266.5625,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "700"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-015",
+      "line": "24px",
+      "rect": [
+        488.640625,
+        1431.8125,
+        50.5,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Roboto\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "id": "ctv-016",
+      "line": "24px",
+      "rect": [
+        462.796875,
+        1458.3125,
+        102.234375,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Roboto\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "id": "ctv-017",
+      "line": "24px",
+      "rect": [
+        458.046875,
+        1485.3125,
+        111.734375,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-018",
+      "line": "19.5px",
+      "rect": [
+        424.71875,
+        1516.8125,
+        178.375,
+        35.75
+      ],
+      "size": "13px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-019",
+      "line": "24px",
+      "rect": [
+        712,
+        1458.1875,
+        1,
+        68
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-020",
+      "line": "24px",
+      "rect": [
+        885.828125,
+        1431.8125,
+        50.5,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Roboto\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "id": "ctv-021",
+      "line": "24px",
+      "rect": [
+        865.890625,
+        1458.3125,
+        90.375,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Roboto\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "id": "ctv-022",
+      "line": "24px",
+      "rect": [
+        871.34375,
+        1485.3125,
+        79.484375,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-023",
+      "line": "19.5px",
+      "rect": [
+        835.25,
+        1516.8125,
+        151.671875,
+        35.75
+      ],
+      "size": "13px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-024",
+      "line": "30px",
+      "rect": [
+        535.0625,
+        1593.375,
+        354.8125,
+        54
+      ],
+      "size": "20px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Viaoda Libre\", \"Reference EB Garamond\", cursive",
+      "id": "ctv-025",
+      "line": "66px",
+      "rect": [
+        414.359375,
+        1675.9375,
+        596.265625,
+        80
+      ],
+      "size": "44px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Beau Rivage\", \"Reference Viaoda Libre\", cursive",
+      "id": "ctv-026",
+      "line": "70.5px",
+      "rect": [
+        689.75,
+        1775.9375,
+        45.4375,
+        47
+      ],
+      "size": "47px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Viaoda Libre\", \"Reference EB Garamond\", cursive",
+      "id": "ctv-027",
+      "line": "66px",
+      "rect": [
+        414.359375,
+        1832.9375,
+        596.265625,
+        80
+      ],
+      "size": "44px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-028",
+      "line": "30px",
+      "rect": [
+        582.5625,
+        1955.578125,
+        259.8125,
+        56
+      ],
+      "size": "20px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-029",
+      "line": "24px",
+      "rect": [
+        597.5,
+        2021.578125,
+        111.109375,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-030",
+      "line": "24px",
+      "rect": [
+        745.265625,
+        2021.078125,
+        82.21875,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-031",
+      "line": "114px",
+      "rect": [
+        607.375,
+        2055.578125,
+        76,
+        76
+      ],
+      "size": "76px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-032",
+      "line": "24px",
+      "rect": [
+        695.375,
+        2062.578125,
+        1,
+        62
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-033",
+      "line": "34.5px",
+      "rect": [
+        708.375,
+        2056.328125,
+        109.25,
+        34.5
+      ],
+      "size": "23px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-034",
+      "line": "34.5px",
+      "rect": [
+        708.375,
+        2095.578125,
+        46,
+        34.5
+      ],
+      "size": "23px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-035",
+      "line": "24px",
+      "rect": [
+        563.859375,
+        2141.578125,
+        297.265625,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference EB Garamond\", \"Times New Roman\", serif",
+      "id": "ctv-036",
+      "line": "39px",
+      "rect": [
+        633.3125,
+        2230.375,
+        158.34375,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-037",
+      "line": "24px",
+      "rect": [
+        888.4220581054688,
+        2900.204345703125,
+        519.5309448242188,
+        617.34130859375
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-038",
+      "line": "24px",
+      "rect": [
+        11.413177490234377,
+        3171.36181640625,
+        546.892333984375,
+        718.0888671875
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-039",
+      "line": "39px",
+      "rect": [
+        565,
+        2884.796875,
+        294.984375,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "700"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-040",
+      "line": "30px",
+      "rect": [
+        548.5625,
+        2980.9375,
+        327.84375,
+        26
+      ],
+      "size": "20px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-041",
+      "line": "28.5px",
+      "rect": [
+        597.5,
+        3006.9375,
+        43.34375,
+        28.5
+      ],
+      "size": "19px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-042",
+      "line": "28.5px",
+      "rect": [
+        722.1875,
+        3006.6875,
+        105.3125,
+        28.5
+      ],
+      "size": "19px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-043",
+      "line": "114px",
+      "rect": [
+        607.375,
+        3035.4375,
+        76,
+        76
+      ],
+      "size": "76px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-044",
+      "line": "24px",
+      "rect": [
+        695.375,
+        3042.4375,
+        1,
+        62
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-045",
+      "line": "34.5px",
+      "rect": [
+        708.375,
+        3036.1875,
+        109.25,
+        34.5
+      ],
+      "size": "23px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Times New Roman\", Times, serif",
+      "id": "ctv-046",
+      "line": "34.5px",
+      "rect": [
+        708.375,
+        3075.4375,
+        46,
+        34.5
+      ],
+      "size": "23px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-047",
+      "line": "24px",
+      "rect": [
+        556.0625,
+        3111.4375,
+        312.8125,
+        24
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-048",
+      "line": "21px",
+      "rect": [
+        615.109375,
+        3150.9375,
+        89.109375,
+        21
+      ],
+      "size": "14px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-049",
+      "line": "39px",
+      "rect": [
+        630,
+        3172.4375,
+        59.3125,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-050",
+      "line": "21px",
+      "rect": [
+        736.21875,
+        3150.9375,
+        73.640625,
+        21
+      ],
+      "size": "14px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-051",
+      "line": "39px",
+      "rect": [
+        743.375,
+        3172.4375,
+        59.3125,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "Baskerville, \"Libre Baskerville\", \"Times New Roman\", serif",
+      "id": "ctv-052",
+      "line": "39px",
+      "rect": [
+        586.046875,
+        3227.4375,
+        252.890625,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference EB Garamond\", \"Times New Roman\", serif",
+      "id": "ctv-053",
+      "line": "34.5px",
+      "rect": [
+        561.5625,
+        3753.53125,
+        301.875,
+        34.5
+      ],
+      "size": "23px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-054",
+      "line": "22.5px",
+      "rect": [
+        561.5625,
+        3800.28125,
+        301.875,
+        41.25
+      ],
+      "size": "15px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference EB Garamond\", \"Times New Roman\", serif",
+      "id": "ctv-055",
+      "line": "39px",
+      "rect": [
+        633.5,
+        4407.953125,
+        157.9375,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference EB Garamond\", \"Times New Roman\", serif",
+      "id": "ctv-056",
+      "line": "25.5px",
+      "rect": [
+        651,
+        4450.703125,
+        122.9375,
+        25.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-057",
+      "line": "24px",
+      "rect": [
+        858.251220703125,
+        4503.125,
+        547.52880859375,
+        718.375
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference EB Garamond\", \"Times New Roman\", serif",
+      "id": "ctv-058",
+      "line": "39px",
+      "rect": [
+        558,
+        4639.375,
+        308.96875,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-059",
+      "line": "25.5px",
+      "rect": [
+        482.5,
+        4690.9375,
+        190,
+        25.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-060",
+      "line": "24px",
+      "rect": [
+        712,
+        4703.625,
+        1,
+        52.75
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-061",
+      "line": "24px",
+      "rect": [
+        707.5,
+        4698.625,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-062",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        4690.625,
+        161.25,
+        25.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-063",
+      "line": "25.5px",
+      "rect": [
+        482.5,
+        4756.4375,
+        190,
+        25.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-064",
+      "line": "24px",
+      "rect": [
+        712,
+        4716.375,
+        1,
+        105.5
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-065",
+      "line": "24px",
+      "rect": [
+        707.5,
+        4764.125,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-066",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        4756.125,
+        64.3125,
+        25.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-067",
+      "line": "25.5px",
+      "rect": [
+        482.5,
+        4821.9375,
+        190,
+        25.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-068",
+      "line": "24px",
+      "rect": [
+        712,
+        4781.875,
+        1,
+        105.5
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-069",
+      "line": "24px",
+      "rect": [
+        707.5,
+        4829.625,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-070",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        4821.625,
+        164.46875,
+        25.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-071",
+      "line": "25.5px",
+      "rect": [
+        627.8125,
+        4889.4375,
+        44.671875,
+        23.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-072",
+      "line": "24px",
+      "rect": [
+        518.8125,
+        4868.125,
+        53,
+        66
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-073",
+      "line": "24px",
+      "rect": [
+        712,
+        4847.375,
+        1,
+        105.5
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-074",
+      "line": "24px",
+      "rect": [
+        707.5,
+        4895.125,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-075",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        4887.125,
+        80.3125,
+        25.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-076",
+      "line": "25.5px",
+      "rect": [
+        627.8125,
+        4954.9375,
+        44.671875,
+        23.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-077",
+      "line": "24px",
+      "rect": [
+        518.8125,
+        4933.625,
+        53,
+        66
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-078",
+      "line": "24px",
+      "rect": [
+        712,
+        4912.875,
+        1,
+        105.5
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-079",
+      "line": "24px",
+      "rect": [
+        707.5,
+        4960.625,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-080",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        4952.625,
+        154.625,
+        25.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-081",
+      "line": "25.5px",
+      "rect": [
+        627.8125,
+        5033.1875,
+        44.671875,
+        23.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-082",
+      "line": "24px",
+      "rect": [
+        518.8125,
+        5011.875,
+        53,
+        66
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-083",
+      "line": "24px",
+      "rect": [
+        712,
+        4978.375,
+        1,
+        131
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-084",
+      "line": "24px",
+      "rect": [
+        707.5,
+        5038.875,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-085",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        5021.375,
+        180.625,
+        44.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-086",
+      "line": "25.5px",
+      "rect": [
+        482.5,
+        5109.4375,
+        190,
+        25.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-087",
+      "line": "24px",
+      "rect": [
+        712,
+        5069.375,
+        1,
+        105.5
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-088",
+      "line": "24px",
+      "rect": [
+        707.5,
+        5117.125,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-089",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        5109.125,
+        65.390625,
+        25.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-090",
+      "line": "25.5px",
+      "rect": [
+        482.5,
+        5187.6875,
+        190,
+        25.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-091",
+      "line": "24px",
+      "rect": [
+        712,
+        5134.875,
+        1,
+        131
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-092",
+      "line": "24px",
+      "rect": [
+        707.5,
+        5195.375,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-093",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        5177.875,
+        143.0625,
+        44.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-094",
+      "line": "25.5px",
+      "rect": [
+        482.5,
+        5265.9375,
+        190,
+        25.375
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-095",
+      "line": "24px",
+      "rect": [
+        712,
+        5225.875,
+        1,
+        52.75
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-096",
+      "line": "24px",
+      "rect": [
+        707.5,
+        5273.625,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-097",
+      "line": "25.5px",
+      "rect": [
+        752.5,
+        5265.625,
+        97.8125,
+        25.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-098",
+      "line": "24px",
+      "rect": [
+        25.093917846679688,
+        5525.4228515625,
+        519.5308837890625,
+        617.341796875
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference EB Garamond\", \"Times New Roman\", serif",
+      "id": "ctv-099",
+      "line": "39px",
+      "rect": [
+        637,
+        5337.796875,
+        151,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "\"Reference EB Garamond\", \"Times New Roman\", serif",
+      "id": "ctv-100",
+      "line": "39px",
+      "rect": [
+        609.546875,
+        6454.21875,
+        205.890625,
+        39
+      ],
+      "size": "26px",
+      "spacing": "normal",
+      "weight": "500"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "id": "ctv-101",
+      "line": "33px",
+      "rect": [
+        618.109375,
+        6530.125,
+        19,
+        35.9375
+      ],
+      "size": "22px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "id": "ctv-102",
+      "line": "24px",
+      "rect": [
+        804.4375,
+        6560.796875,
+        11.421875,
+        21.609375
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "id": "ctv-103",
+      "line": "21px",
+      "rect": [
+        598.828125,
+        6605.109375,
+        4.4375,
+        8.390625
+      ],
+      "size": "14px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "id": "ctv-104",
+      "line": "21px",
+      "rect": [
+        819.625,
+        6584.359375,
+        8.609375,
+        16.28125
+      ],
+      "size": "14px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-105",
+      "line": "24px",
+      "rect": [
+        707,
+        6599.46875,
+        11,
+        5.5
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-106",
+      "line": "24px",
+      "rect": [
+        707.5,
+        6597.21875,
+        10,
+        10
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-107",
+      "line": "24px",
+      "rect": [
+        707,
+        6599.46875,
+        11,
+        5.5
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-108",
+      "line": "24px",
+      "rect": [
+        708,
+        6597.71875,
+        9,
+        9
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-109",
+      "line": "24px",
+      "rect": [
+        706.5,
+        6599.21875,
+        12,
+        6
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-110",
+      "line": "24px",
+      "rect": [
+        707.5,
+        6599.71875,
+        10,
+        5
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-111",
+      "line": "24px",
+      "rect": [
+        708,
+        6597.71875,
+        9,
+        9
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-112",
+      "line": "24px",
+      "rect": [
+        644.515625,
+        6756.421875,
+        135.953125,
+        12
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-113",
+      "line": "24px",
+      "rect": [
+        593.7379150390625,
+        6544.0537109375,
+        31.524169921875,
+        12.736328125
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-114",
+      "line": "24px",
+      "rect": [
+        781.6458129882812,
+        6535.92333984375,
+        35.7083740234375,
+        12.9970703125
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-115",
+      "line": "24px",
+      "rect": [
+        597.13623046875,
+        6656.40478515625,
+        24.7275390625,
+        8.0341796875
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-116",
+      "line": "24px",
+      "rect": [
+        794.8564453125,
+        6651.51904296875,
+        23.287109375,
+        5.8056640625
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-117",
+      "line": "24px",
+      "rect": [
+        627.5,
+        6760.421875,
+        170,
+        0
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-118",
+      "line": "24px",
+      "rect": [
+        604.714111328125,
+        6709.35986328125,
+        43.57177734375,
+        6.1240234375
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-119",
+      "line": "24px",
+      "rect": [
+        638.697509765625,
+        6720.16455078125,
+        25.60498046875,
+        4.5146484375
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-120",
+      "line": "24px",
+      "rect": [
+        731.0941162109375,
+        6711.58349609375,
+        38.811767578125,
+        9.6767578125
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(30, 30, 30)",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "id": "ctv-121",
+      "line": "18px",
+      "rect": [
+        677.75,
+        6772.71875,
+        69.484375,
+        16
+      ],
+      "size": "12px",
+      "spacing": "normal",
+      "weight": "500"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "\"Reference Roboto\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "id": "ctv-122",
+      "line": "22.5px",
+      "rect": [
+        482.609375,
+        6868.140625,
+        459.75,
+        22.5
+      ],
+      "size": "15px",
+      "spacing": "normal",
+      "weight": "500"
+    },
+    {
+      "color": "rgb(167, 133, 85)",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "id": "ctv-123",
+      "line": "18px",
+      "rect": [
+        665.25,
+        6971.640625,
+        94.4375,
+        16
+      ],
+      "size": "12px",
+      "spacing": "normal",
+      "weight": "300"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-124",
+      "line": "24px",
+      "rect": [
+        432.5,
+        2285.875,
+        560,
+        552
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-125",
+      "line": "24px",
+      "rect": [
+        527.5,
+        3341.4375,
+        370,
+        285
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(255, 255, 255)",
+      "font": "\"Reference Ubuntu\", \"Reference Roboto\", system-ui, sans-serif",
+      "id": "ctv-126",
+      "line": "25.5px",
+      "rect": [
+        604.0625,
+        3673.359375,
+        216.859375,
+        33.5
+      ],
+      "size": "17px",
+      "spacing": "normal",
+      "weight": "600"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-127",
+      "line": "24px",
+      "rect": [
+        368.375,
+        3853.53125,
+        688.25,
+        460
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-128",
+      "line": "24px",
+      "rect": [
+        616.5,
+        4496.953125,
+        192,
+        48
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    },
+    {
+      "color": "rgb(27, 35, 48)",
+      "font": "Baskerville, \"Times New Roman\", serif",
+      "id": "ctv-129",
+      "line": "24px",
+      "rect": [
+        412.5,
+        5397.296875,
+        600,
+        978
+      ],
+      "size": "16px",
+      "spacing": "normal",
+      "weight": "400"
+    }
+  ],
+  "scrollHeight": 7114,
+  "url": "http://localhost:3001/demo/cam-thach-vang",
+  "viewport": [
+    1440,
+    1000
+  ]
+}
