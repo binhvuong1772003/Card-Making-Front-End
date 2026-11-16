@@ -1,0 +1,4170 @@
+{
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "columnSize": [
+      900,
+      6334.71875
+    ],
+    "measuredNodes": 115,
+    "imagesNotYetLoadedAtCapture": [],
+    "nodeDiffs": [
+      {
+        "id": "lp3d-001",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          -427.8875,
+          1167.3906,
+          1202.1875
+        ],
+        "localBBox": [
+          -133.6875,
+          -427.875,
+          1167.390625,
+          1202.1875
+        ],
+        "maxGeometryDelta": 0.012,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-002",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          854.3,
+          1167.3906,
+          1096.875
+        ],
+        "localBBox": [
+          -133.6875,
+          854.296875,
+          1167.390625,
+          1096.875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-003",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          2031.175,
+          1167.3906,
+          1202.1875
+        ],
+        "localBBox": [
+          -133.6875,
+          2031.171875,
+          1167.390625,
+          1202.1875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-004",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          3313.3625,
+          1167.3906,
+          1096.8748
+        ],
+        "localBBox": [
+          -133.6875,
+          3313.359375,
+          1167.390625,
+          1096.859375
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-005",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          4490.2373,
+          1167.3906,
+          1202.1875
+        ],
+        "localBBox": [
+          -133.6875,
+          4490.234375,
+          1167.390625,
+          1202.1875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-006",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          5772.4248,
+          1167.3906,
+          1096.875
+        ],
+        "localBBox": [
+          -133.6875,
+          5772.421875,
+          1167.390625,
+          1096.875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-007",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          6949.2998,
+          1167.3906,
+          1202.1875
+        ],
+        "localBBox": [
+          -133.6875,
+          6949.296875,
+          1167.390625,
+          1202.1875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-008",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          8231.4873,
+          1167.3906,
+          1096.875
+        ],
+        "localBBox": [
+          -133.6875,
+          8231.484375,
+          1167.390625,
+          1096.875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-009",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          9408.3623,
+          1167.3906,
+          1202.1875
+        ],
+        "localBBox": [
+          -133.6875,
+          9408.359375,
+          1167.390625,
+          1202.1875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-010",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          10690.5498,
+          1167.3906,
+          1096.875
+        ],
+        "localBBox": [
+          -133.6875,
+          10690.546875,
+          1167.390625,
+          1096.875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-011",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          11867.4248,
+          1167.3906,
+          1202.1875
+        ],
+        "localBBox": [
+          -133.6875,
+          11867.421875,
+          1167.390625,
+          1202.1875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-012",
+        "type": "Decoration",
+        "sourceLayout": [
+          -133.6953,
+          13149.6123,
+          1167.3906,
+          1096.875
+        ],
+        "localBBox": [
+          -133.6875,
+          13149.609375,
+          1167.390625,
+          1096.875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-013",
+        "type": "Text",
+        "sourceLayout": [
+          230.8906,
+          105.5,
+          155.2031,
+          33.0
+        ],
+        "localBBox": [
+          230.875,
+          105.5,
+          155.1875,
+          33
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-014",
+        "type": "Decoration",
+        "sourceLayout": [
+          409.0,
+          81.0,
+          82,
+          82
+        ],
+        "localBBox": [
+          409.0,
+          81,
+          82,
+          82
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-015",
+        "type": "Text",
+        "sourceLayout": [
+          515.7031,
+          105.5,
+          151.5938,
+          33.0
+        ],
+        "localBBox": [
+          515.703125,
+          105.5,
+          151.59375,
+          33
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-016",
+        "type": "Decoration",
+        "sourceLayout": [
+          192.0,
+          157.0,
+          128,
+          141.5312
+        ],
+        "localBBox": [
+          192.0,
+          157,
+          128,
+          141.515625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-017",
+        "type": "Decoration",
+        "sourceLayout": [
+          580.0,
+          157.0,
+          128,
+          141.5312
+        ],
+        "localBBox": [
+          580.0,
+          157,
+          128,
+          141.515625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-018",
+        "type": "PhotoFrame",
+        "sourceLayout": [
+          200.0,
+          199.0,
+          500,
+          729
+        ],
+        "localBBox": [
+          200.0,
+          199,
+          500,
+          729
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-019",
+        "type": "Text",
+        "sourceLayout": [
+          316.7656,
+          1010.0,
+          266.4531,
+          36.0
+        ],
+        "localBBox": [
+          316.75,
+          1010,
+          266.4375,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-020",
+        "type": "Text",
+        "sourceLayout": [
+          203.1562,
+          1095.5,
+          44.1875,
+          21.0
+        ],
+        "localBBox": [
+          203.140625,
+          1095.5,
+          44.1875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-021",
+        "type": "Text",
+        "sourceLayout": [
+          161.6406,
+          1120.25,
+          127.2188,
+          22.5
+        ],
+        "localBBox": [
+          161.625,
+          1120.25,
+          127.21875,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-022",
+        "type": "Text",
+        "sourceLayout": [
+          186.6562,
+          1146.75,
+          77.1875,
+          22.5
+        ],
+        "localBBox": [
+          186.640625,
+          1146.75,
+          77.1875,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-023",
+        "type": "Text",
+        "sourceLayout": [
+          137.9062,
+          1178.0,
+          174.6875,
+          15
+        ],
+        "localBBox": [
+          137.890625,
+          1178,
+          174.6875,
+          15
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-024",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          1119.5,
+          1,
+          50
+        ],
+        "localBBox": [
+          449.5,
+          1119.5,
+          1,
+          50
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-025",
+        "type": "Text",
+        "sourceLayout": [
+          652.6406,
+          1095.5,
+          44.1875,
+          21.0
+        ],
+        "localBBox": [
+          652.640625,
+          1095.5,
+          44.1875,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-026",
+        "type": "Text",
+        "sourceLayout": [
+          622.5312,
+          1120.25,
+          104.4062,
+          22.5
+        ],
+        "localBBox": [
+          622.515625,
+          1120.25,
+          104.390625,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-027",
+        "type": "Text",
+        "sourceLayout": [
+          624.0938,
+          1146.75,
+          101.2812,
+          22.5
+        ],
+        "localBBox": [
+          624.09375,
+          1146.75,
+          101.265625,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-028",
+        "type": "Text",
+        "sourceLayout": [
+          580.5,
+          1178.0,
+          188.4844,
+          15
+        ],
+        "localBBox": [
+          580.5,
+          1178,
+          188.484375,
+          15
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-029",
+        "type": "Text",
+        "sourceLayout": [
+          33.0,
+          1225.0,
+          834,
+          100
+        ],
+        "localBBox": [
+          33.0,
+          1225,
+          834,
+          100
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-030",
+        "type": "Text",
+        "sourceLayout": [
+          418.5156,
+          1333.0,
+          62.9531,
+          18.0
+        ],
+        "localBBox": [
+          418.5,
+          1333,
+          62.9375,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-031",
+        "type": "Text",
+        "sourceLayout": [
+          434.875,
+          1359.0,
+          30.25,
+          60
+        ],
+        "localBBox": [
+          434.875,
+          1359,
+          30.25,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-032",
+        "type": "Text",
+        "sourceLayout": [
+          33.0,
+          1427.0,
+          834,
+          100
+        ],
+        "localBBox": [
+          33.0,
+          1427,
+          834,
+          100
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-033",
+        "type": "Text",
+        "sourceLayout": [
+          400.4375,
+          1535.0,
+          99.1094,
+          18.0
+        ],
+        "localBBox": [
+          400.4375,
+          1535,
+          99.109375,
+          18
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-034",
+        "type": "Text",
+        "sourceLayout": [
+          266.9688,
+          1588.0,
+          366.0469,
+          53
+        ],
+        "localBBox": [
+          266.96875,
+          1588,
+          366.046875,
+          53
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-035",
+        "type": "Text",
+        "sourceLayout": [
+          400.4688,
+          1657.0,
+          99.0312,
+          21
+        ],
+        "localBBox": [
+          400.46875,
+          1657,
+          99.015625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-036",
+        "type": "Text",
+        "sourceLayout": [
+          330.4062,
+          1706.0,
+          76.5781,
+          21.0
+        ],
+        "localBBox": [
+          330.390625,
+          1706,
+          76.5625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-037",
+        "type": "Shape",
+        "sourceLayout": [
+          418.9844,
+          1707.0,
+          1,
+          20
+        ],
+        "localBBox": [
+          418.984375,
+          1707,
+          1,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-038",
+        "type": "Text",
+        "sourceLayout": [
+          431.9844,
+          1690.0,
+          36,
+          54
+        ],
+        "localBBox": [
+          431.984375,
+          1690,
+          36,
+          54
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-039",
+        "type": "Shape",
+        "sourceLayout": [
+          479.9844,
+          1707.0,
+          1,
+          20
+        ],
+        "localBBox": [
+          479.984375,
+          1707,
+          1,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-040",
+        "type": "Text",
+        "sourceLayout": [
+          492.9844,
+          1706.0,
+          69.2812,
+          21.0
+        ],
+        "localBBox": [
+          492.984375,
+          1706,
+          69.265625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-041",
+        "type": "Text",
+        "sourceLayout": [
+          429.9844,
+          1756.0,
+          40,
+          30
+        ],
+        "localBBox": [
+          429.984375,
+          1756,
+          40,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-042",
+        "type": "Text",
+        "sourceLayout": [
+          351.5156,
+          1798.0,
+          196.9375,
+          19.5
+        ],
+        "localBBox": [
+          351.5,
+          1798,
+          196.9375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-043",
+        "type": "Text",
+        "sourceLayout": [
+          370.2656,
+          1891.5,
+          159.4688,
+          36.0
+        ],
+        "localBBox": [
+          370.25,
+          1891.5,
+          159.46875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-044",
+        "type": "Text",
+        "sourceLayout": [
+          302.4531,
+          2555.5,
+          295.0938,
+          36.0
+        ],
+        "localBBox": [
+          302.4375,
+          2555.5,
+          295.09375,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-045",
+        "type": "Text",
+        "sourceLayout": [
+          287.3281,
+          2633.5,
+          325.3438,
+          30
+        ],
+        "localBBox": [
+          287.3125,
+          2633.5,
+          325.34375,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-046",
+        "type": "Text",
+        "sourceLayout": [
+          427.1875,
+          2679.5,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          427.1875,
+          2679.5,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-047",
+        "type": "Text",
+        "sourceLayout": [
+          328.8594,
+          2740.5,
+          82.0469,
+          22.5
+        ],
+        "localBBox": [
+          328.859375,
+          2740.5,
+          82.046875,
+          22.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-048",
+        "type": "Shape",
+        "sourceLayout": [
+          422.9062,
+          2742.5,
+          1,
+          20
+        ],
+        "localBBox": [
+          422.890625,
+          2742.5,
+          1,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-049",
+        "type": "Text",
+        "sourceLayout": [
+          435.9062,
+          2725.5,
+          36,
+          54
+        ],
+        "localBBox": [
+          435.890625,
+          2725.5,
+          36,
+          54
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-050",
+        "type": "Shape",
+        "sourceLayout": [
+          483.9062,
+          2742.5,
+          1,
+          20
+        ],
+        "localBBox": [
+          483.890625,
+          2742.5,
+          1,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-051",
+        "type": "Text",
+        "sourceLayout": [
+          496.9062,
+          2740.5,
+          74.2344,
+          22.5
+        ],
+        "localBBox": [
+          496.890625,
+          2740.5,
+          74.234375,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-052",
+        "type": "Text",
+        "sourceLayout": [
+          340.2656,
+          2795.5,
+          219.4531,
+          19.5
+        ],
+        "localBBox": [
+          340.25,
+          2795.5,
+          219.4375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-053",
+        "type": "Text",
+        "sourceLayout": [
+          365.0938,
+          2846.25,
+          74.9688,
+          16.5
+        ],
+        "localBBox": [
+          365.09375,
+          2846.25,
+          74.96875,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-054",
+        "type": "Text",
+        "sourceLayout": [
+          379.7656,
+          2867.5,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          379.75,
+          2867.5,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-055",
+        "type": "Text",
+        "sourceLayout": [
+          472.0625,
+          2846.25,
+          62.8281,
+          16.5
+        ],
+        "localBBox": [
+          472.0625,
+          2846.25,
+          62.8125,
+          16.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-056",
+        "type": "Text",
+        "sourceLayout": [
+          480.6562,
+          2867.5,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          480.640625,
+          2867.5,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-057",
+        "type": "Decoration",
+        "sourceLayout": [
+          240.0,
+          2921.5,
+          420,
+          321.5938
+        ],
+        "localBBox": [
+          240.0,
+          2921.5,
+          420,
+          321.59375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-058",
+        "type": "Text",
+        "sourceLayout": [
+          269.8906,
+          3435.0938,
+          360.2188,
+          36
+        ],
+        "localBBox": [
+          269.875,
+          3435.09375,
+          360.21875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-059",
+        "type": "Text",
+        "sourceLayout": [
+          288.5938,
+          3505.0938,
+          322.7969,
+          24
+        ],
+        "localBBox": [
+          288.59375,
+          3505.09375,
+          322.796875,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-060",
+        "type": "Text",
+        "sourceLayout": [
+          367.6406,
+          4121.0938,
+          164.7188,
+          36.0
+        ],
+        "localBBox": [
+          367.625,
+          4121.09375,
+          164.71875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-061",
+        "type": "Text",
+        "sourceLayout": [
+          387.9062,
+          4161.0938,
+          124.1719,
+          24.0
+        ],
+        "localBBox": [
+          387.890625,
+          4161.09375,
+          124.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-062",
+        "type": "Decoration",
+        "sourceLayout": [
+          225.5,
+          4467.0469,
+          90,
+          99.5156
+        ],
+        "localBBox": [
+          225.5,
+          4467.046875,
+          90,
+          99.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-063",
+        "type": "Decoration",
+        "sourceLayout": [
+          225.5,
+          4577.6406,
+          90,
+          99.5156
+        ],
+        "localBBox": [
+          225.5,
+          4577.640625,
+          90,
+          99.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-064",
+        "type": "Text",
+        "sourceLayout": [
+          292.0938,
+          4349.0938,
+          315.8125,
+          36.0
+        ],
+        "localBBox": [
+          292.09375,
+          4349.09375,
+          315.8125,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-065",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4418.4688,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4418.46875,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-066",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4431.1562,
+          1,
+          54.0625
+        ],
+        "localBBox": [
+          449.5,
+          4431.15625,
+          1,
+          54.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-067",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4426.1562,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4426.15625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-068",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4419.0312,
+          84.5,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4419.03125,
+          84.5,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-069",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4486.5938,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4486.59375,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-070",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4445.2188,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4445.21875,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-071",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4494.2812,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4494.28125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-072",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4487.1562,
+          70.0625,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4487.15625,
+          70.0625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-073",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4554.7188,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4554.71875,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-074",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4513.3438,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4513.34375,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-075",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4562.4062,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4562.40625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-076",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4555.2812,
+          149.0312,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4555.28125,
+          149.015625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-077",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4622.8438,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4622.84375,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-078",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4581.4688,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4581.46875,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-079",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4630.5312,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4630.53125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-080",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4623.4062,
+          149.4375,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4623.40625,
+          149.4375,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-081",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4690.9688,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220.0,
+          4690.96875,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-082",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4649.5938,
+          1,
+          54.0625
+        ],
+        "localBBox": [
+          449.5,
+          4649.59375,
+          1,
+          54.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-083",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4698.6562,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          4698.65625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-084",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4691.5312,
+          98.5625,
+          26.125
+        ],
+        "localBBox": [
+          490.0,
+          4691.53125,
+          98.5625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-085",
+        "type": "Text",
+        "sourceLayout": [
+          371.0938,
+          4813.7188,
+          157.8125,
+          36.0
+        ],
+        "localBBox": [
+          371.09375,
+          4813.71875,
+          157.8125,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-086",
+        "type": "Text",
+        "sourceLayout": [
+          345.9062,
+          5803.2188,
+          208.1719,
+          36
+        ],
+        "localBBox": [
+          345.890625,
+          5803.21875,
+          208.171875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-087",
+        "type": "Text",
+        "sourceLayout": [
+          355.9338,
+          5876.7456,
+          18.3667,
+          34.7275
+        ],
+        "localBBox": [
+          355.921875,
+          5876.734375,
+          18.359375,
+          34.71875
+        ],
+        "maxGeometryDelta": 0.012,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-088",
+        "type": "Text",
+        "sourceLayout": [
+          544.9066,
+          5912.408,
+          5.4994,
+          10.4028
+        ],
+        "localBBox": [
+          544.90625,
+          5912.40625,
+          5.484375,
+          10.390625
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-089",
+        "type": "Text",
+        "sourceLayout": [
+          334.5997,
+          5947.8364,
+          7.9099,
+          14.9521
+        ],
+        "localBBox": [
+          334.59375,
+          5947.828125,
+          7.90625,
+          14.9375
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-090",
+        "type": "Text",
+        "sourceLayout": [
+          555.0768,
+          5926.4771,
+          12.7371,
+          24.0771
+        ],
+        "localBBox": [
+          555.0625,
+          5926.46875,
+          12.734375,
+          24.0625
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-091",
+        "type": "Shape",
+        "sourceLayout": [
+          444.5,
+          5945.4688,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          444.5,
+          5945.46875,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-092",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5943.2188,
+          10,
+          10
+        ],
+        "localBBox": [
+          445.0,
+          5943.21875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-093",
+        "type": "Shape",
+        "sourceLayout": [
+          444.5,
+          5945.4688,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          444.5,
+          5945.46875,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-094",
+        "type": "Shape",
+        "sourceLayout": [
+          445.5,
+          5943.7188,
+          9,
+          9
+        ],
+        "localBBox": [
+          445.5,
+          5943.71875,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-095",
+        "type": "Shape",
+        "sourceLayout": [
+          444.0,
+          5945.2188,
+          12,
+          6
+        ],
+        "localBBox": [
+          444.0,
+          5945.21875,
+          12,
+          6
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-096",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5945.7188,
+          10,
+          5
+        ],
+        "localBBox": [
+          445.0,
+          5945.71875,
+          10,
+          5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-097",
+        "type": "Shape",
+        "sourceLayout": [
+          445.5,
+          5943.7188,
+          9,
+          9
+        ],
+        "localBBox": [
+          445.5,
+          5943.71875,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-098",
+        "type": "Shape",
+        "sourceLayout": [
+          384.7991,
+          6100.4971,
+          130.4018,
+          12.0
+        ],
+        "localBBox": [
+          384.796875,
+          6100.484375,
+          130.390625,
+          12
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-099",
+        "type": "Decoration",
+        "sourceLayout": [
+          330.0,
+          5894.4972,
+          34.0,
+          0.0
+        ],
+        "localBBox": [
+          331.2379150390625,
+          5888.1162109375,
+          31.524169921875,
+          12.736328125
+        ],
+        "maxGeometryDelta": 12.736,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-100",
+        "type": "Decoration",
+        "sourceLayout": [
+          518.0,
+          5886.4972,
+          38.0,
+          0.0
+        ],
+        "localBBox": [
+          519.1458129882812,
+          5879.98583984375,
+          35.7083740234375,
+          12.9970703125
+        ],
+        "maxGeometryDelta": 12.997,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-101",
+        "type": "Decoration",
+        "sourceLayout": [
+          334.0,
+          6004.4972,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          334.63623046875,
+          6000.46728515625,
+          24.7275390625,
+          8.0341796875
+        ],
+        "maxGeometryDelta": 8.034,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-102",
+        "type": "Decoration",
+        "sourceLayout": [
+          532.0,
+          5998.4971,
+          24.0,
+          0.0
+        ],
+        "localBBox": [
+          532.3564453125,
+          5995.58154296875,
+          23.287109375,
+          5.8056640625
+        ],
+        "maxGeometryDelta": 5.806,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-103",
+        "type": "Decoration",
+        "sourceLayout": [
+          365.0,
+          6104.4971,
+          170,
+          0
+        ],
+        "localBBox": [
+          365.0,
+          6104.484375,
+          170,
+          0
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-104",
+        "type": "Decoration",
+        "sourceLayout": [
+          342.0,
+          6056.4973,
+          44.0,
+          0.0
+        ],
+        "localBBox": [
+          342.214111328125,
+          6053.42236328125,
+          43.57177734375,
+          6.1240234375
+        ],
+        "maxGeometryDelta": 6.124,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-105",
+        "type": "Decoration",
+        "sourceLayout": [
+          376.0,
+          6066.4971,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          376.197509765625,
+          6064.22705078125,
+          25.60498046875,
+          4.5146484375
+        ],
+        "maxGeometryDelta": 4.515,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-106",
+        "type": "Decoration",
+        "sourceLayout": [
+          468.0,
+          6060.4971,
+          40.0,
+          0.0
+        ],
+        "localBBox": [
+          468.5941162109375,
+          6055.64599609375,
+          38.811767578125,
+          9.6767578125
+        ],
+        "maxGeometryDelta": 9.677,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-107",
+        "type": "Text",
+        "sourceLayout": [
+          415.2578,
+          6118.7188,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          415.25,
+          6118.71875,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-108",
+        "type": "Text",
+        "sourceLayout": [
+          238.1875,
+          6223.2188,
+          423.625,
+          22.5
+        ],
+        "localBBox": [
+          238.1875,
+          6223.21875,
+          423.625,
+          22.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-109",
+        "type": "Text",
+        "sourceLayout": [
+          402.7656,
+          6305.7188,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          402.75,
+          6305.71875,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-110",
+        "type": "Album",
+        "sourceLayout": [
+          175.0,
+          1969.5,
+          550,
+          552
+        ],
+        "localBBox": [
+          175.0,
+          1969.5,
+          550,
+          552
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-111",
+        "type": "Calendar",
+        "sourceLayout": [
+          295.0,
+          2949.0469,
+          310,
+          338.0468500000002
+        ],
+        "localBBox": [
+          295.0,
+          2949.046875,
+          310,
+          338.046875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-112",
+        "type": "Button",
+        "sourceLayout": [
+          335.5156,
+          3327.0938,
+          228.9688,
+          42
+        ],
+        "localBBox": [
+          335.5,
+          3327.09375,
+          228.96875,
+          42
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-113",
+        "type": "Map",
+        "sourceLayout": [
+          150.0,
+          3573.0938,
+          600,
+          419.9999499999999
+        ],
+        "localBBox": [
+          150.0,
+          3573.09375,
+          600,
+          419.984375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-114",
+        "type": "DressCode",
+        "sourceLayout": [
+          318.0,
+          4205.0938,
+          264,
+          48
+        ],
+        "localBBox": [
+          318.0,
+          4205.09375,
+          264,
+          48
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-115",
+        "type": "Form",
+        "sourceLayout": [
+          150.0,
+          4873.7188,
+          600,
+          897.4999500000004
+        ],
+        "localBBox": [
+          150.0,
+          4873.71875,
+          600,
+          897.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      }
+    ]
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "columnSize": [
+      375,
+      5455.53125
+    ],
+    "measuredNodes": 115,
+    "imagesNotYetLoadedAtCapture": [],
+    "nodeDiffs": [
+      {
+        "id": "lp3d-001",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          -87.59,
+          487.5,
+          502.0312
+        ],
+        "localBBox": [
+          -56.25,
+          -87.578125,
+          487.5,
+          502.015625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-002",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          444.4413,
+          487.5,
+          458.0469
+        ],
+        "localBBox": [
+          -56.25,
+          444.4375,
+          487.5,
+          458.046875
+        ],
+        "maxGeometryDelta": 0.004,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-003",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          932.4882,
+          487.5,
+          502.0312
+        ],
+        "localBBox": [
+          -56.25,
+          932.484375,
+          487.5,
+          502.015625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-004",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          1464.5194,
+          487.5,
+          458.0469
+        ],
+        "localBBox": [
+          -56.25,
+          1464.515625,
+          487.5,
+          458.046875
+        ],
+        "maxGeometryDelta": 0.004,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-005",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          1952.5663,
+          487.5,
+          502.0311
+        ],
+        "localBBox": [
+          -56.25,
+          1952.5625,
+          487.5,
+          502.015625
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-006",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          2484.5974,
+          487.5,
+          458.0469
+        ],
+        "localBBox": [
+          -56.25,
+          2484.59375,
+          487.5,
+          458.046875
+        ],
+        "maxGeometryDelta": 0.004,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-007",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          2972.6443,
+          487.5,
+          502.0312
+        ],
+        "localBBox": [
+          -56.25,
+          2972.640625,
+          487.5,
+          502.015625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-008",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          3504.6755,
+          487.5,
+          458.0469
+        ],
+        "localBBox": [
+          -56.25,
+          3504.671875,
+          487.5,
+          458.046875
+        ],
+        "maxGeometryDelta": 0.004,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-009",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          3992.7224,
+          487.5,
+          502.0315
+        ],
+        "localBBox": [
+          -56.25,
+          3992.71875,
+          487.5,
+          502.03125
+        ],
+        "maxGeometryDelta": 0.004,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-010",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          4524.7539,
+          487.5,
+          458.0469
+        ],
+        "localBBox": [
+          -56.25,
+          4524.75,
+          487.5,
+          458.046875
+        ],
+        "maxGeometryDelta": 0.004,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-011",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          5012.8008,
+          487.5,
+          502.0312
+        ],
+        "localBBox": [
+          -56.25,
+          5012.796875,
+          487.5,
+          502.015625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-012",
+        "type": "Decoration",
+        "sourceLayout": [
+          -56.25,
+          5544.832,
+          487.5,
+          458.0469
+        ],
+        "localBBox": [
+          -56.25,
+          5544.828125,
+          487.5,
+          458.046875
+        ],
+        "maxGeometryDelta": 0.004,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-013",
+        "type": "Text",
+        "sourceLayout": [
+          24,
+          50.5,
+          119.9219,
+          25.5
+        ],
+        "localBBox": [
+          24,
+          50.5,
+          119.921875,
+          25.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-014",
+        "type": "Decoration",
+        "sourceLayout": [
+          155.5,
+          32.0,
+          64,
+          64
+        ],
+        "localBBox": [
+          155.5,
+          32,
+          64,
+          64
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-015",
+        "type": "Text",
+        "sourceLayout": [
+          232.6719,
+          50.5,
+          117.1406,
+          25.5
+        ],
+        "localBBox": [
+          232.671875,
+          50.5,
+          117.125,
+          25.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-016",
+        "type": "Decoration",
+        "sourceLayout": [
+          -0.5,
+          96.0,
+          88,
+          97.2969
+        ],
+        "localBBox": [
+          -0.5,
+          96,
+          88,
+          97.296875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-017",
+        "type": "Decoration",
+        "sourceLayout": [
+          287.5,
+          96.0,
+          88,
+          97.2969
+        ],
+        "localBBox": [
+          287.5,
+          96,
+          88,
+          97.296875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-018",
+        "type": "PhotoFrame",
+        "sourceLayout": [
+          7.5,
+          124.0,
+          360,
+          525
+        ],
+        "localBBox": [
+          7.5,
+          124,
+          360,
+          525
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-019",
+        "type": "Text",
+        "sourceLayout": [
+          87.5781,
+          722.5,
+          199.8438,
+          27.0
+        ],
+        "localBBox": [
+          87.5625,
+          722.5,
+          199.84375,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-020",
+        "type": "Text",
+        "sourceLayout": [
+          76.9844,
+          791.75,
+          41.0312,
+          19.5
+        ],
+        "localBBox": [
+          76.984375,
+          791.75,
+          41.015625,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-021",
+        "type": "Text",
+        "sourceLayout": [
+          38.125,
+          815.0,
+          118.7344,
+          21.0
+        ],
+        "localBBox": [
+          38.125,
+          815,
+          118.734375,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-022",
+        "type": "Text",
+        "sourceLayout": [
+          61.4844,
+          840.0,
+          72.0312,
+          21.0
+        ],
+        "localBBox": [
+          61.484375,
+          840,
+          72.015625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-023",
+        "type": "Text",
+        "sourceLayout": [
+          20,
+          869.5,
+          155,
+          27.5
+        ],
+        "localBBox": [
+          20,
+          869.5,
+          155,
+          27.5
+        ],
+        "maxGeometryDelta": 0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-024",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          819.5,
+          1,
+          50
+        ],
+        "localBBox": [
+          187,
+          819.5,
+          1,
+          50
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-025",
+        "type": "Text",
+        "sourceLayout": [
+          256.9844,
+          791.75,
+          41.0312,
+          19.5
+        ],
+        "localBBox": [
+          256.984375,
+          791.75,
+          41.015625,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-026",
+        "type": "Text",
+        "sourceLayout": [
+          228.7812,
+          815.0,
+          97.4375,
+          21.0
+        ],
+        "localBBox": [
+          228.765625,
+          815,
+          97.4375,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-027",
+        "type": "Text",
+        "sourceLayout": [
+          230.2344,
+          840.0,
+          94.5312,
+          21.0
+        ],
+        "localBBox": [
+          230.234375,
+          840,
+          94.515625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-028",
+        "type": "Text",
+        "sourceLayout": [
+          200,
+          869.5,
+          155,
+          27.5
+        ],
+        "localBBox": [
+          200,
+          869.5,
+          155,
+          27.5
+        ],
+        "maxGeometryDelta": 0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-029",
+        "type": "Text",
+        "sourceLayout": [
+          20,
+          921.0,
+          335,
+          50
+        ],
+        "localBBox": [
+          20,
+          921,
+          335,
+          50
+        ],
+        "maxGeometryDelta": 0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-030",
+        "type": "Text",
+        "sourceLayout": [
+          158.6406,
+          978.25,
+          57.7031,
+          16.5
+        ],
+        "localBBox": [
+          158.625,
+          978.25,
+          57.6875,
+          16.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-031",
+        "type": "Text",
+        "sourceLayout": [
+          175.3906,
+          1003.5,
+          24.2031,
+          48
+        ],
+        "localBBox": [
+          175.375,
+          1003.5,
+          24.1875,
+          48
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-032",
+        "type": "Text",
+        "sourceLayout": [
+          20,
+          1059.5,
+          335,
+          50
+        ],
+        "localBBox": [
+          20,
+          1059.5,
+          335,
+          50
+        ],
+        "maxGeometryDelta": 0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-033",
+        "type": "Text",
+        "sourceLayout": [
+          142.0781,
+          1116.75,
+          90.8438,
+          16.5
+        ],
+        "localBBox": [
+          142.0625,
+          1116.75,
+          90.84375,
+          16.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-034",
+        "type": "Text",
+        "sourceLayout": [
+          41.0781,
+          1161.0,
+          292.8438,
+          42
+        ],
+        "localBBox": [
+          41.0625,
+          1161,
+          292.84375,
+          42
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-035",
+        "type": "Text",
+        "sourceLayout": [
+          141.5156,
+          1218.0,
+          91.9531,
+          19.5
+        ],
+        "localBBox": [
+          141.5,
+          1218,
+          91.9375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-036",
+        "type": "Text",
+        "sourceLayout": [
+          109.4375,
+          1254.5,
+          38.0625,
+          34.5
+        ],
+        "localBBox": [
+          109.4375,
+          1254.5,
+          38.0625,
+          34.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-037",
+        "type": "Shape",
+        "sourceLayout": [
+          159.5,
+          1262.0,
+          1,
+          20
+        ],
+        "localBBox": [
+          159.5,
+          1262,
+          1,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-038",
+        "type": "Text",
+        "sourceLayout": [
+          172.5,
+          1249.5,
+          30,
+          45
+        ],
+        "localBBox": [
+          172.5,
+          1249.5,
+          30,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-039",
+        "type": "Shape",
+        "sourceLayout": [
+          214.5,
+          1262.0,
+          1,
+          20
+        ],
+        "localBBox": [
+          214.5,
+          1262,
+          1,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-040",
+        "type": "Text",
+        "sourceLayout": [
+          227.5,
+          1262.0,
+          64.3281,
+          19.5
+        ],
+        "localBBox": [
+          227.5,
+          1262,
+          64.3125,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-041",
+        "type": "Text",
+        "sourceLayout": [
+          169.5,
+          1306.5,
+          36,
+          27
+        ],
+        "localBBox": [
+          169.5,
+          1306.5,
+          36,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-042",
+        "type": "Text",
+        "sourceLayout": [
+          96.5938,
+          1345.5,
+          181.7969,
+          18
+        ],
+        "localBBox": [
+          96.59375,
+          1345.5,
+          181.796875,
+          18
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-043",
+        "type": "Text",
+        "sourceLayout": [
+          127.6875,
+          1429.0,
+          119.6094,
+          27.0
+        ],
+        "localBBox": [
+          127.6875,
+          1429,
+          119.609375,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-044",
+        "type": "Text",
+        "sourceLayout": [
+          76.8281,
+          1904.0,
+          221.3281,
+          27.0
+        ],
+        "localBBox": [
+          76.8125,
+          1904,
+          221.3125,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-045",
+        "type": "Text",
+        "sourceLayout": [
+          57.3594,
+          1969.5,
+          260.2812,
+          24
+        ],
+        "localBBox": [
+          57.359375,
+          1969.5,
+          260.265625,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-046",
+        "type": "Text",
+        "sourceLayout": [
+          166.9688,
+          2009.5,
+          41.0625,
+          27
+        ],
+        "localBBox": [
+          166.96875,
+          2009.5,
+          41.0625,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-047",
+        "type": "Text",
+        "sourceLayout": [
+          74.5625,
+          2064.0,
+          76.5781,
+          21.0
+        ],
+        "localBBox": [
+          74.5625,
+          2064,
+          76.5625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-048",
+        "type": "Shape",
+        "sourceLayout": [
+          163.1406,
+          2065.0,
+          1,
+          20
+        ],
+        "localBBox": [
+          163.125,
+          2065,
+          1,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-049",
+        "type": "Text",
+        "sourceLayout": [
+          176.1406,
+          2052.5,
+          30,
+          45
+        ],
+        "localBBox": [
+          176.125,
+          2052.5,
+          30,
+          45
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-050",
+        "type": "Shape",
+        "sourceLayout": [
+          218.1406,
+          2065.0,
+          1,
+          20
+        ],
+        "localBBox": [
+          218.125,
+          2065,
+          1,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-051",
+        "type": "Text",
+        "sourceLayout": [
+          231.1406,
+          2064.0,
+          69.2812,
+          21.0
+        ],
+        "localBBox": [
+          231.125,
+          2064,
+          69.265625,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-052",
+        "type": "Text",
+        "sourceLayout": [
+          85.0156,
+          2113.5,
+          204.9531,
+          18
+        ],
+        "localBBox": [
+          85,
+          2113.5,
+          204.9375,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-053",
+        "type": "Text",
+        "sourceLayout": [
+          102.5938,
+          2162.75,
+          74.9688,
+          16.5
+        ],
+        "localBBox": [
+          102.59375,
+          2162.75,
+          74.96875,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-054",
+        "type": "Text",
+        "sourceLayout": [
+          119.5469,
+          2184.0,
+          41.0625,
+          27
+        ],
+        "localBBox": [
+          119.546875,
+          2184,
+          41.0625,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-055",
+        "type": "Text",
+        "sourceLayout": [
+          209.5625,
+          2162.75,
+          62.8281,
+          16.5
+        ],
+        "localBBox": [
+          209.5625,
+          2162.75,
+          62.8125,
+          16.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-056",
+        "type": "Text",
+        "sourceLayout": [
+          220.4375,
+          2184.0,
+          41.0625,
+          27
+        ],
+        "localBBox": [
+          220.4375,
+          2184,
+          41.0625,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-057",
+        "type": "Decoration",
+        "sourceLayout": [
+          7.5,
+          2235.0,
+          360,
+          275.6562
+        ],
+        "localBBox": [
+          7.5,
+          2235,
+          360,
+          275.640625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-058",
+        "type": "Text",
+        "sourceLayout": [
+          52.4219,
+          2694.6562,
+          270.1562,
+          27
+        ],
+        "localBBox": [
+          52.421875,
+          2694.65625,
+          270.140625,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-059",
+        "type": "Text",
+        "sourceLayout": [
+          46.2656,
+          2755.6562,
+          282.4531,
+          20
+        ],
+        "localBBox": [
+          46.25,
+          2755.65625,
+          282.4375,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-060",
+        "type": "Text",
+        "sourceLayout": [
+          125.7344,
+          3227.1562,
+          123.5312,
+          27.0
+        ],
+        "localBBox": [
+          125.734375,
+          3227.15625,
+          123.515625,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-061",
+        "type": "Text",
+        "sourceLayout": [
+          133.1719,
+          3258.6562,
+          108.6562,
+          20.0
+        ],
+        "localBBox": [
+          133.171875,
+          3258.65625,
+          108.640625,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-062",
+        "type": "Decoration",
+        "sourceLayout": [
+          30.0,
+          3516.5312,
+          72,
+          79.6094
+        ],
+        "localBBox": [
+          30,
+          3516.53125,
+          72,
+          79.609375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-063",
+        "type": "Decoration",
+        "sourceLayout": [
+          30.0,
+          3608.2969,
+          72,
+          79.6094
+        ],
+        "localBBox": [
+          30,
+          3608.296875,
+          72,
+          79.609375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-064",
+        "type": "Text",
+        "sourceLayout": [
+          69.0625,
+          3418.1562,
+          236.8594,
+          27.0
+        ],
+        "localBBox": [
+          69.0625,
+          3418.15625,
+          236.859375,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-065",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3470.3438,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3470.34375,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-066",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3482.3438,
+          1,
+          44.6875
+        ],
+        "localBBox": [
+          187,
+          3482.34375,
+          1,
+          44.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-067",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3477.3438,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3477.34375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-068",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3471.4688,
+          75.6094,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3471.46875,
+          75.609375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-069",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3527.7188,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3527.71875,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-070",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3495.0312,
+          1,
+          89.375
+        ],
+        "localBBox": [
+          187,
+          3495.03125,
+          1,
+          89.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-071",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3534.7188,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3534.71875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-072",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3528.8438,
+          62.6875,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3528.84375,
+          62.6875,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-073",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3585.0938,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3585.09375,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-074",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3552.4062,
+          1,
+          89.375
+        ],
+        "localBBox": [
+          187,
+          3552.40625,
+          1,
+          89.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-075",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3592.0938,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3592.09375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-076",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3586.2188,
+          133.3438,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3586.21875,
+          133.34375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-077",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3642.4688,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3642.46875,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-078",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3609.7812,
+          1,
+          89.375
+        ],
+        "localBBox": [
+          187,
+          3609.78125,
+          1,
+          89.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-079",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3649.4688,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3649.46875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-080",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3643.5938,
+          133.7031,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3643.59375,
+          133.6875,
+          23.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-081",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          3699.8438,
+          139.5,
+          24
+        ],
+        "localBBox": [
+          16,
+          3699.84375,
+          139.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-082",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3667.1562,
+          1,
+          44.6875
+        ],
+        "localBBox": [
+          187,
+          3667.15625,
+          1,
+          44.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-083",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3706.8438,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3706.84375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-084",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3700.9688,
+          88.1875,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3700.96875,
+          88.1875,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-085",
+        "type": "Text",
+        "sourceLayout": [
+          128.3125,
+          3804.0312,
+          118.3594,
+          27.0
+        ],
+        "localBBox": [
+          128.3125,
+          3804.03125,
+          118.359375,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-086",
+        "type": "Text",
+        "sourceLayout": [
+          109.4375,
+          4933.5312,
+          156.125,
+          27
+        ],
+        "localBBox": [
+          109.4375,
+          4933.53125,
+          156.125,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-087",
+        "type": "Text",
+        "sourceLayout": [
+          92.8133,
+          4996.8848,
+          19.6078,
+          37.0742
+        ],
+        "localBBox": [
+          92.8125,
+          4996.875,
+          19.59375,
+          37.0625
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-088",
+        "type": "Text",
+        "sourceLayout": [
+          279.9689,
+          5029.1094,
+          10.3746,
+          19.625
+        ],
+        "localBBox": [
+          279.96875,
+          5029.109375,
+          10.359375,
+          19.625
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-089",
+        "type": "Text",
+        "sourceLayout": [
+          73.7965,
+          5072.3564,
+          4.5163,
+          8.5371
+        ],
+        "localBBox": [
+          73.78125,
+          5072.34375,
+          4.515625,
+          8.53125
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-090",
+        "type": "Text",
+        "sourceLayout": [
+          294.1654,
+          5050.7927,
+          9.5598,
+          18.0708
+        ],
+        "localBBox": [
+          294.15625,
+          5050.78125,
+          9.546875,
+          18.0625
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-091",
+        "type": "Shape",
+        "sourceLayout": [
+          182.0,
+          5066.7812,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          182,
+          5066.78125,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-092",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          5064.5312,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          5064.53125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-093",
+        "type": "Shape",
+        "sourceLayout": [
+          182.0,
+          5066.7812,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          182,
+          5066.78125,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-094",
+        "type": "Shape",
+        "sourceLayout": [
+          183.0,
+          5065.0312,
+          9,
+          9
+        ],
+        "localBBox": [
+          183,
+          5065.03125,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-095",
+        "type": "Shape",
+        "sourceLayout": [
+          181.5,
+          5066.5312,
+          12,
+          6
+        ],
+        "localBBox": [
+          181.5,
+          5066.53125,
+          12,
+          6
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-096",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          5067.0312,
+          10,
+          5
+        ],
+        "localBBox": [
+          182.5,
+          5067.03125,
+          10,
+          5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-097",
+        "type": "Shape",
+        "sourceLayout": [
+          183.0,
+          5065.0312,
+          9,
+          9
+        ],
+        "localBBox": [
+          183,
+          5065.03125,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-098",
+        "type": "Shape",
+        "sourceLayout": [
+          120.0526,
+          5223.3696,
+          134.8949,
+          12.0
+        ],
+        "localBBox": [
+          120.046875,
+          5223.359375,
+          134.890625,
+          12
+        ],
+        "maxGeometryDelta": 0.01,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-099",
+        "type": "Decoration",
+        "sourceLayout": [
+          67.5,
+          5017.3698,
+          34.0,
+          0.0
+        ],
+        "localBBox": [
+          68.73787689208984,
+          5010.9912109375,
+          31.524246215820312,
+          12.736328125
+        ],
+        "maxGeometryDelta": 12.736,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-100",
+        "type": "Decoration",
+        "sourceLayout": [
+          255.5,
+          5009.3698,
+          38.0,
+          0.0
+        ],
+        "localBBox": [
+          256.6458435058594,
+          5002.86083984375,
+          35.70831298828125,
+          12.9970703125
+        ],
+        "maxGeometryDelta": 12.997,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-101",
+        "type": "Decoration",
+        "sourceLayout": [
+          71.5,
+          5127.3698,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          72.13626861572266,
+          5123.34228515625,
+          24.727462768554688,
+          8.0341796875
+        ],
+        "maxGeometryDelta": 8.034,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-102",
+        "type": "Decoration",
+        "sourceLayout": [
+          269.5,
+          5121.3698,
+          24.0,
+          0.0
+        ],
+        "localBBox": [
+          269.8564453125,
+          5118.45654296875,
+          23.287109375,
+          5.8056640625
+        ],
+        "maxGeometryDelta": 5.806,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-103",
+        "type": "Decoration",
+        "sourceLayout": [
+          102.5,
+          5227.3696,
+          170,
+          0
+        ],
+        "localBBox": [
+          102.5,
+          5227.359375,
+          170,
+          0
+        ],
+        "maxGeometryDelta": 0.01,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-104",
+        "type": "Decoration",
+        "sourceLayout": [
+          79.5,
+          5179.3698,
+          44.0,
+          0.0
+        ],
+        "localBBox": [
+          79.71410369873047,
+          5176.29736328125,
+          43.57179260253906,
+          6.1240234375
+        ],
+        "maxGeometryDelta": 6.124,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-105",
+        "type": "Decoration",
+        "sourceLayout": [
+          113.5,
+          5189.3698,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          113.69750213623048,
+          5187.10205078125,
+          25.605003356933594,
+          4.5146484375
+        ],
+        "maxGeometryDelta": 4.515,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-106",
+        "type": "Decoration",
+        "sourceLayout": [
+          205.5,
+          5183.3698,
+          40.0,
+          0.0
+        ],
+        "localBBox": [
+          206.09408569335935,
+          5178.52099609375,
+          38.81182861328125,
+          9.6767578125
+        ],
+        "maxGeometryDelta": 9.677,
+        "rotatedBBox": true
+      },
+      {
+        "id": "lp3d-107",
+        "type": "Text",
+        "sourceLayout": [
+          152.7578,
+          5240.0312,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          152.75,
+          5240.03125,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-108",
+        "type": "Text",
+        "sourceLayout": [
+          16,
+          5328.5312,
+          343,
+          39
+        ],
+        "localBBox": [
+          16,
+          5328.53125,
+          343,
+          39
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-109",
+        "type": "Text",
+        "sourceLayout": [
+          140.2656,
+          5427.5312,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          140.25,
+          5427.53125,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-110",
+        "type": "Album",
+        "sourceLayout": [
+          27.5,
+          1498.5,
+          320,
+          372
+        ],
+        "localBBox": [
+          27.5,
+          1498.5,
+          320,
+          372
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-111",
+        "type": "Calendar",
+        "sourceLayout": [
+          47.5,
+          2251.0781,
+          280,
+          303.5781499999998
+        ],
+        "localBBox": [
+          47.5,
+          2251.078125,
+          280,
+          303.5625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-112",
+        "type": "Button",
+        "sourceLayout": [
+          84.7031,
+          2590.6562,
+          205.5938,
+          38
+        ],
+        "localBBox": [
+          84.6875,
+          2590.65625,
+          205.59375,
+          38
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-113",
+        "type": "Map",
+        "sourceLayout": [
+          24.0,
+          2811.6562,
+          327,
+          312.0000500000001
+        ],
+        "localBBox": [
+          24,
+          2811.65625,
+          327,
+          312
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-114",
+        "type": "DressCode",
+        "sourceLayout": [
+          83.5,
+          3298.6562,
+          208,
+          40
+        ],
+        "localBBox": [
+          83.5,
+          3298.65625,
+          208,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "lp3d-115",
+        "type": "Form",
+        "sourceLayout": [
+          24.0,
+          3855.5312,
+          327,
+          1046.00005
+        ],
+        "localBBox": [
+          24,
+          3855.53125,
+          327,
+          800
+        ],
+        "maxGeometryDelta": 246.0,
+        "rotatedBBox": false
+      }
+    ]
+  }
+}
