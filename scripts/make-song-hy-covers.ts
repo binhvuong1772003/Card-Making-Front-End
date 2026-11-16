@@ -186,7 +186,8 @@ function buildCover(t: Theme) {
     text("open-orn", "❦", { x: 0, y: 14, w: 40, h: 22 }, 14, t.accent ?? t.ink, baskerville),
     rule("open-rule-right", "right"),
     text("open-date", t.date, { x: 0, y: 46, w: 400, h: 30 }, 18, t.dim, lora),
-    text("open-invite", "Thân Mời", { x: 0, y: 93, w: 300, h: 30 }, 18, t.dim, lora),
+    // Dòng "Thân mời": khối Khách mời, hiện "Thân mời <tên khách>" khi mở link riêng, còn link chung thì giữ chữ "Thân Mời".
+    put("GuestText", "open-invite", { x: 0, y: 93, w: 300, h: 30 }, { field: "Tên khách", prefix: "Thân mời", fallback: "Thân Mời", size: 18, color: t.dim, font: lora, bold: false, italic: false, align: "center" }, FADE),
     decoration("open-button", `button-${t.key}.svg`, { x: 0, y: 154, w: 180, h: 88 }, FADE),
     ...(t.flowers || t.leafCover || t.flower || t.key === "xanh" ? [(() => { const shine = decoration("open-button-shine", "", { x: 0, y: 154, w: 140, h: 48 }, FADE); shine.props = { ...shine.props, src: "", idleEffect: "Ánh sáng quét", shineRadius: 24 }; return shine; })()] : []),
     text("open-label", "Mở thiệp", { x: 0, y: 154, w: 140, h: 48 }, 18, t.buttonText, lora, { motionTarget: "cover" }),
