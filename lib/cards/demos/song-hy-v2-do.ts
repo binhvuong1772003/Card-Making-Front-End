@@ -39,6 +39,16 @@ column.children = measured.nodes.map(item => {
   return node;
 });
 
+// Đếm ngược: dòng "N ngày G giờ P phút S giây" dưới tiêu đề (gốc: Baskerville 27px đậm #2f0000, rộng 351, cách tiêu đề 49px). Mốc 04/01/2027 17:30.
+{
+  const heading = column.children.find(child => child.id === "shv2-062") as FreeNode;
+  const countdown = newNode(registry, "Countdown", "shv2-countdown", { w: width!, h: height! }, { props: { date: "2027-01-04", time: "17:30", color: "#2f0000", font: "Baskerville, 'Times New Roman', serif", size: 27, bold: true, align: "center", layerName: "Đếm ngược" } }) as FreeNode;
+  countdown.position = { mode: "free", x: { anchor: "start", offset: 274.5 }, y: { anchor: "start", offset: 3389 } };
+  countdown.size = { w: { kind: "px", v: 351 }, h: { kind: "px", v: 41 } };
+  countdown.phone = { x: { anchor: "start", offset: 20 }, y: { anchor: "start", offset: (heading.phone!.y as { offset: number }).offset + 49 }, w: { kind: "px", v: 335 }, h: { kind: "px", v: 41 }, rotation: 0 };
+  column.children.push(countdown);
+}
+
 // Sổ lưu bút: gốc có 8 lời chúc xếp dưới ô nhập (thẻ 492x85, bước 96,7px; điện thoại cao hơn vì lời xuống dòng).
 // Form chỉ giữ phần nhập; 8 thẻ dưới là dữ liệu mẫu bằng Shape/Text để người dùng xoá hoặc sửa, không phải danh sách thật.
 const WISHES: [string, string, string][] = [
