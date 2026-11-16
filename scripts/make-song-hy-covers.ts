@@ -33,6 +33,8 @@ type Theme = {
   extraLine?: { text: string; y: number; w: number; size: number; color: string };
 };
 const themes: Theme[] = [
+  { key: "ldx", gradient: ["#1e3a17", "#3a5a2c", "#5a8040"], card: "#ffffff", border: "#3a5a2c", borderAlpha: 0, cardAlpha: 0.98, cream: "#ffffff", ink: "#3a5a2c", dim: "#657e5a", accent: "#3a5a2c", palette: "Xanh rêu", name1: "Hoàng Long", name2: "Phương Linh", nameFont: "'Viaoda Libre', serif", ampFont: "'Alex Brush', cursive", date: "26 tháng 4, 2026", sealKind: "heart", sealFrom: "#3a5a2c", sealTo: "#2a4620", sealMark: "#ffffff", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#3a5a2c", buttonText: "#ffffff", ruleKind: "fade", weight: 400,
+    flower: { src: "/demo/lau-dai-xanh/source-assets/e5398620f9ba-hoanho2-1.webp", w: 502, h: 574, lx: -245, ly: 0, rx: 245, ry: 0, rot: 0, opL: 20, opR: 20, flipRight: false, fit: "contain", rsrc: "/demo/lau-dai-xanh/source-assets/541d4479b4f0-hoanho3-1.webp", rw: 399, rh: 498 } },
   { key: "hkd", gradient: ["#32060a", "#2c0507", "#260406"], card: "#5a0002", border: "#e1bc7c", borderAlpha: 0, cardAlpha: 1, cream: "#e1bc7c", ink: "#e1bc7c", dim: "#c4975f", accent: "#e1bc7c", palette: "Vàng kim", name1: "Hoài Nam", name2: "Ngọc Linh", nameFont: "'EB Garamond', serif", date: "30 tháng 5, 2026", sealKind: "heart", sealFrom: "#ecd09a", sealTo: "#d6ae6b", sealMark: "#5a0305", particleShape: "Chữ", particleChar: "✦", burstChar: "✦", button: "#e1bc7c", buttonText: "#3e0001", ruleKind: "fade", weight: 400, cardH: 508,
     guestChip: { y: 94, w: 234, h: 40, fill: "#e1bc7c", fillOpacity: 8, radius: 12, size: 16, color: "#e1bc7c", fallback: "Quý khách" },
     extraLine: { text: "Đến dự buổi tiệc chung vui cùng chúng em", y: 138, w: 400, size: 16, color: "#c4975f" },
