@@ -1,0 +1,5 @@
+/* Original font files observed in the invitation page. Separate ampersand
+   family avoids changing existing cards that use the complete Ms Madi font. */
+@font-face { font-family: 'Carattere'; src: url('./Carattere-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Fraunces Soft'; src: url('./Fraunces-Soft.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Ms Madi Ampersand'; src: url('./MsMadiAmpersand-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
