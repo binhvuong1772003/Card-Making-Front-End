@@ -34,6 +34,8 @@ export type CountdownSpec = {
   rect: [number, number, number, number];
   phone: [number, number, number, number];
   size?: number;
+  /** Cỡ chữ riêng trên điện thoại khi khác máy tính. */
+  phoneSize?: number;
   bold?: boolean;
 };
 
@@ -43,6 +45,7 @@ export function addCountdown(column: TreeNode, size: { w: number; h: number }, s
   node.position = { mode: "free", x: { anchor: "start", offset: spec.rect[0] }, y: { anchor: "start", offset: spec.rect[1] } };
   node.size = { w: px(spec.rect[2]), h: px(spec.rect[3]) };
   node.phone = { x: { anchor: "start", offset: spec.phone[0] }, y: { anchor: "start", offset: spec.phone[1] }, w: px(spec.phone[2]), h: px(spec.phone[3]), rotation: 0 };
+  if (spec.phoneSize) node.phoneProps = { size: spec.phoneSize };
   column.children.push(node);
 }
 

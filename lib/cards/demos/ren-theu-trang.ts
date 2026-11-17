@@ -56,7 +56,7 @@ export const renTheuTrangDocument: CardDocument = finishTemplate({
   giftIds: ["b31-120", "b31-121", "b31-122", "b31-123", "b31-124", "b31-125", "b31-126", "b31-127", "b31-128"],
   giftBox: { main: "b31-124", minis: ["b31-120", "b31-121", "b31-122", "b31-123", "b31-125", "b31-126", "b31-127"], phoneDelta: 2378, fixes: {"b31-120": [352, 7995, 28, 29], "b31-121": [505, 7988, 31, 34], "b31-122": [356, 8084, 21, 21], "b31-123": [517, 8079, 20, 20], "b31-124": [381, 8011, 139, 138], "b31-125": [362, 8127, 36, 38], "b31-126": [390, 8135, 21, 22], "b31-127": [464, 8130, 33, 34]} },
   sparkles: { ids: ["b31-108", "b31-109", "b31-110", "b31-111"], src: "/demo/ren-theu-trang/sparkle.svg" },
-  countdown: { id: "b31-countdown", date: "2027-06-12", time: "18:00", color: "#8f7964", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 22, rect: [300, 4311, 297, 33], phone: [38, 2461, 299, 33] },
+  countdown: { id: "b31-countdown", date: "2027-06-12", time: "18:00", color: "#8f7964", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 22, phoneSize: 17, rect: [300, 4311, 297, 33], phone: [68, 2454, 238, 26] },
   form: { id: "b31-136", listMax: 734 },
   popup: {
     height: 451, headerH: 79, headerFill: "#000000", titleColor: "#ffffff", bodyFill: "#ffffff", ink: "#000000", saveFill: "#ebebeb", centers: [288],

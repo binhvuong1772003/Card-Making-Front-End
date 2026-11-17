@@ -56,7 +56,7 @@ export const songHacDoDocument: CardDocument = finishTemplate({
   giftIds: ["b33-102", "b33-103", "b33-104"],
   envelopes: { front: "b33-103" },
   sparkles: { ids: ["b33-097", "b33-098", "b33-099", "b33-100"], src: "/demo/song-hac-do/sparkle.svg" },
-  countdown: { id: "b33-countdown", date: "2027-04-10", time: "18:30", color: "#001232", font: "Baskerville, 'Times New Roman', serif", align: "center", rect: [260, 3460, 378, 41], phone: [38, 2610, 299, 41] },
+  countdown: { id: "b33-countdown", date: "2027-04-10", time: "18:30", color: "#001232", font: "Baskerville, 'Times New Roman', serif", align: "center", phoneSize: 20, rect: [260, 3460, 378, 41], phone: [47, 2601, 280, 30] },
   form: { id: "b33-113", listMax: 884 },
   popup: {
     height: 408, headerH: 74, headerFill: "#ffe8a4", titleColor: "#5a0000", bodyFill: "#5a0000", ink: "#ffe8a4", accent: "#ffe8a4", saveFill: "#681310", centers: [152, 424],

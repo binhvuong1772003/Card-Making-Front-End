@@ -56,7 +56,7 @@ export const baroqueV2DoDamDocument: CardDocument = finishTemplate({
   giftIds: ["b39-097", "b39-098", "b39-099"],
   envelopes: { front: "b39-098" },
   sparkles: { ids: ["b39-092", "b39-093", "b39-094", "b39-095"], src: "/demo/baroque-v2-do-dam/sparkle.svg" },
-  countdown: { id: "b39-countdown", date: "2026-12-19", time: "18:00", color: "#ffefd6", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 20, bold: true, rect: [324, 3743, 250, 30], phone: [38, 2726, 299, 30] },
+  countdown: { id: "b39-countdown", date: "2026-12-19", time: "18:00", color: "#ffefd6", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 20, phoneSize: 18, bold: true, rect: [324, 3743, 250, 30], phone: [66, 2707, 243, 27] },
   form: { id: "b39-108", listMax: 848 },
   popup: {
     height: 410, headerH: 76, headerFill: "#ffdfaf", titleColor: "#511419", bodyFill: "#2b0303", ink: "#ffefd6", accent: "#ffefd6", saveFill: "#3c1511", centers: [152, 424],

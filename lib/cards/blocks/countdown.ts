@@ -57,7 +57,7 @@ export const countdownBlock: ComponentDef = {
     minuteLabel: { type: "text", label: "Chữ phút", maxLength: 12, group: "Nhãn" },
     secondLabel: { type: "text", label: "Chữ giây", maxLength: 12, group: "Nhãn" },
     doneText: { type: "text", label: "Chữ khi tới ngày", maxLength: 60, group: "Nhãn" },
-    size: { type: "number", label: "Cỡ chữ", min: 10, max: 96, unit: "px", group: "Chữ" },
+    size: { type: "number", label: "Cỡ chữ", min: 10, max: 96, unit: "px", group: "Chữ", perDevice: true },
     color: { type: "color", label: "Màu chữ", group: "Chữ" },
     font: builtInRegistry.Text!.fields.font ?? { type: "font", label: "Phông chữ", group: "Chữ" },
     bold: { type: "boolean", label: "Chữ đậm", group: "Chữ" },
