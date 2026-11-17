@@ -33,8 +33,13 @@ type Theme = {
   extras?: { src: string; x: number; y: number; w: number; h: number; opacity?: number; inCard?: boolean }[];
   guestChip?: { y: number; w: number; h: number; fill: string; fillOpacity: number; radius: number; size: number; color: string; fallback: string };
   extraLine?: { text: string; y: number; w: number; size: number; color: string };
+  extraLines?: { text: string; y: number; w: number; size: number; color: string }[];
 };
 const themes: Theme[] = [
+  { key: "chr", gradient: ["#fdeedc", "#fdeedd", "#fce8d2"], card: "#fff6ec", border: "#9e2a2b", borderAlpha: 0, cardAlpha: 1, cream: "#ffffff", ink: "#9e2a2b", dim: "#b65d5b", accent: "#c44d4d", palette: "Đỏ son", name1: "Ngọc Ánh", name2: "Thế Bảo", nameFont: "'Viaoda Libre', serif", date: "24 tháng 5, 2026", sealKind: "glyph", sealBg: "#ffffff", sealMark: "#9e2a2b", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#9e2a2b", buttonText: "#fef0e0", ruleKind: "fade", weight: 400, cardH: 551, inviteY: 50, buttonY: 220, inviteLabel: "Thân Mời / 誠摯邀請", openLabel: "Mở thiệp / 開啟喜帖",
+    guestChip: { y: 94, w: 110, h: 40, fill: "#9e2a2b", fillOpacity: 6, radius: 12, size: 16, color: "#9e2a2b", fallback: "Quý khách" },
+    extraLines: [{ text: "2026年5月24日", y: 5, w: 300, size: 15, color: "#b65d5b" }, { text: "đến dự buổi tiệc chung vui cùng gia đình", y: 139, w: 380, size: 16, color: "#b65d5b" }],
+    extras: [{ src: "/demo/chibi-red/source-assets/77866201c490-couple-main.webp", x: 0, y: 0, w: 250, h: 314, opacity: 5, inCard: true }, { src: "/demo/chibi-red/source-assets/d0c5b672f7a0-decorative-flowers.webp", x: 0, y: -99, w: 598, h: 351, opacity: 100, inCard: true }, { src: "/demo/chibi-red/source-assets/5e441d3e9adf-cherry-blossom.webp", x: -254, y: -199, w: 70, h: 61, opacity: 100, inCard: true }, { src: "/demo/chibi-red/source-assets/5e441d3e9adf-cherry-blossom.webp", x: 257, y: -198, w: 65, h: 57, opacity: 100, inCard: true }, { src: "/demo/chibi-red/source-assets/fad15430abbd-decorative-diamond.webp", x: 249, y: -227, w: 40, h: 46, opacity: 30, inCard: true }, { src: "/demo/chibi-red/source-assets/fad15430abbd-decorative-diamond.webp", x: -256, y: 225, w: 43, h: 46, opacity: 25, inCard: true }] },
   { key: "bvx", gradient: ["#122a13", "#0a1a0b", "#050e06"], card: "#122a13", border: "#ffdfaf", borderAlpha: 0, cardAlpha: 0.92, cream: "#ffdfaf", ink: "#ffdfaf", dim: "#e4cdb8", accent: "#ffdfaf", palette: "Cam vàng", name1: "Duy Khang", name2: "Mai Trâm", nameFont: "'Viaoda Libre', serif", ampFont: "'The Nautigal', cursive", date: "16 tháng 1, 2027", sealKind: "heart", sealFrom: "#ffe6bd", sealTo: "#f2c88c", sealMark: "#7a1020", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#ffdfaf", buttonText: "#511419", ruleKind: "fade", weight: 400,
     flower: { src: "/demo/baroque-v2-xanh-dam/source-assets/b6cff5ad29b5-flower3-decoration.webp", w: 160, h: 160, lx: -239, ly: -149, rx: 229, ry: 149, rot: 0, opL: 90, opR: 90, flipRight: false, fit: "contain", rsrc: "/demo/baroque-v2-xanh-dam/source-assets/bdc40242ddd2-flower4-decoration.webp", rw: 160, rh: 160 } },
   { key: "bll", gradient: ["#b29c68", "#8f8c85", "#517ba2"], card: "#f9f1e6", border: "#5e7e9b", borderAlpha: 0, cardAlpha: 0.98, cream: "#ffffff", ink: "#5e7e9b", dim: "#867762", accent: "#5e7e9b", palette: "Xanh lụa", name1: "Quốc Đạt", name2: "Diệu Linh", nameFont: "'Viaoda Libre', serif", ampFont: "'Alex Brush', cursive", date: "19 tháng 7, 2027", sealKind: "heart", sealFrom: "#5e7e9b", sealTo: "#4a6a88", sealMark: "#ffffff", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#5e7e9b", buttonText: "#ffffff", ruleKind: "fade", weight: 400,
@@ -139,7 +144,7 @@ function writeAssets(t: Theme) {
     ? `<g opacity=".8" transform="translate(${leftX.toFixed(2)} ${leftY.toFixed(2)}) rotate(25 ${cx.toFixed(2)} ${cy})">${image}</g>` +
       `<g opacity=".8" transform="translate(${rightX.toFixed(2)} ${rightY.toFixed(2)}) translate(${cx.toFixed(2)} ${cy}) rotate(-25) scale(-1 1) translate(${(-cx).toFixed(2)} ${-cy})">${image}</g>`
     : "";
-  const motifs = t.flowers || t.leafCover || t.flower || t.key === "xanh" ? "" : `${glyph(50, 40, 410, -18, t.cream, 0.11)}${glyph(550, 380, 410, 162, t.cream, 0.11)}`;
+  const motifs = t.flowers || t.leafCover || t.flower || t.key === "xanh" || (t.extras ?? []).some((e) => e.inCard) ? "" : `${glyph(50, 40, 410, -18, t.cream, 0.11)}${glyph(550, 380, 410, 162, t.cream, 0.11)}`;
   // Thẻ 600x420: nền, viền mảnh và phần trang trí (hai chữ 囍 hoặc hoa) cắt theo thẻ, như trang mẫu.
   writeFileSync(resolve(dir, `card-${t.key}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 ${t.cardH ?? 420}"><defs><clipPath id="c"><rect width="600" height="${t.cardH ?? 420}" rx="8"/></clipPath></defs><rect x=".5" y=".5" width="599" height="${(t.cardH ?? 420) - 1}" rx="8" fill="${t.card}" fill-opacity="${t.cardAlpha}" stroke="${t.border}" stroke-opacity="${t.borderAlpha}"/><g clip-path="url(#c)">${motifs}${flowers}</g></svg>\n`);
   writeFileSync(resolve(dir, `xi-${t.key}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="52" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="${FONT}" fill="${t.cream}">囍</text></svg>\n`);
@@ -239,7 +244,7 @@ function buildCover(t: Theme) {
   const rule = (id: string, side: "left" | "right") => t.ruleKind === "fade"
     ? decoration(id, `rule-${t.key}-${side}.svg`, { x: side === "left" ? -37 : 37, y: 14 - D, w: 40, h: 1 }, FADE)
     : put("Shape", id, { x: side === "left" ? -50 : 50, y: 13 - D, w: 60, h: 1 }, { shape: "rectangle", fill: t.cream, motionTarget: "" }, FADE, { opacity: 40 });
-  const motifs = t.flowers || t.leafCover || t.flower ? [] : [
+  const motifs = t.flowers || t.leafCover || t.flower || (t.extras ?? []).some((e) => e.inCard) ? [] : [
     decoration("open-motif-left", `xi-${t.key}.svg`, { x: -250, y: -170, w: 410, h: 410, rotation: -18 }, OPEN("Phóng ra rồi mờ dần", 1.3), { opacity: 0 }),
     decoration("open-motif-right", `xi-${t.key}.svg`, { x: 250, y: 170, w: 410, h: 410, rotation: 162 }, OPEN("Phóng ra rồi mờ dần", 1.3), { opacity: 0 }),
   ];
@@ -257,13 +262,14 @@ function buildCover(t: Theme) {
   ] : [];
   // Hoa trong thẻ là hai khối riêng đặt trong khối Thẻ thiệp (cắt ở mép thẻ, bo góc 8px); cả thẻ bay lên cùng nhau khi mở.
   const panel = (() => {
-    if (!t.flowers && !t.leafCover && !t.flower && t.key !== "xanh") return [] as FreeNode[];
+    const customCard = (t.extras ?? []).some((e) => e.inCard);
+    if (!t.flowers && !t.leafCover && !t.flower && t.key !== "xanh" && !customCard) return [] as FreeNode[];
     const node = put("CardPanel", "open-card-panel", { x: 0, y: 0, w: 600, h: H }, {}, FADE, { borderRadius: 8 });
     delete (node.styles as Record<string, unknown>).background;
     delete (node.styles as Record<string, unknown>).borderWidth;
     delete (node.styles as Record<string, unknown>).borderColor;
     const inCardExtras = (t.extras ?? []).filter((e) => e.inCard).map((e, i) => put("Decoration", `open-extra-in-${i}`, { x: e.x, y: e.y, w: e.w, h: e.h }, { src: e.src, alt: "", fit: "contain", motion: false, motionTarget: "" }, FADE, { opacity: e.opacity ?? 100 }));
-    node.children = fl ? [
+    node.children = !fl && customCard ? inCardExtras : fl ? [
       ...inCardExtras,
       ...(t.cardImage ? [put("Decoration", "open-card-image", { x: 0, y: 0, w: 600, h: 420 }, { src: t.cardImage, alt: "", fit: "cover", motion: false, motionTarget: "" }, FADE)] : []),
       put("Decoration", "open-card-flower-left", { x: fl.lx, y: fl.ly, w: fl.w, h: fl.h, rotation: fl.rot }, { src: fl.src, alt: "", fit: fl.fit ?? "contain", motion: false, motionTarget: "" }, FADE, { opacity: fl.opL }),
@@ -306,6 +312,7 @@ function buildCover(t: Theme) {
       put("Shape", "open-guest-chip", { x: 0, y: t.guestChip.y, w: t.guestChip.w, h: t.guestChip.h }, { shape: "rectangle", fill: t.guestChip.fill, motionTarget: "" }, FADE, { opacity: t.guestChip.fillOpacity, borderRadius: t.guestChip.radius }),
       put("GuestText", "open-guest-name", { x: 0, y: t.guestChip.y, w: t.guestChip.w - 12, h: 32 }, { field: "Tên khách", prefix: "", fallback: t.guestChip.fallback, size: t.guestChip.size, color: t.guestChip.color, font: lora, bold: false, italic: false, align: "center" }, FADE),
     ] : []),
+    ...(t.extraLines ?? []).map((e, i) => text(`open-extra-more-${i}`, e.text, { x: 0, y: e.y, w: e.w, h: 24 }, e.size, e.color, lora)),
     ...(t.extraLine ? [text("open-extra-line", t.extraLine.text, { x: 0, y: t.extraLine.y, w: t.extraLine.w, h: 24 }, t.extraLine.size, t.extraLine.color, lora)] : []),
     decoration("open-button", `button-${t.key}.svg`, { x: 0, y: t.buttonY ?? 154 + D, w: 180, h: 88 }, FADE),
     ...(t.flowers || t.leafCover || t.flower || t.key === "xanh" ? [(() => { const shine = decoration("open-button-shine", "", { x: 0, y: t.buttonY ?? 154 + D, w: 140, h: 48 }, FADE); shine.props = { ...shine.props, src: "", idleEffect: "Ánh sáng quét", shineRadius: 24 }; return shine; })()] : []),
