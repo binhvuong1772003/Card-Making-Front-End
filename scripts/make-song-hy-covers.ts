@@ -36,6 +36,11 @@ type Theme = {
   extraLines?: { text: string; y: number; w: number; size: number; color: string }[];
 };
 const themes: Theme[] = [
+  { key: "spx", gradient: ["#19472d", "#122f1e", "#0c2216"], card: "#fff0e7", border: "#19472d", borderAlpha: 0, cardAlpha: 0.95, cream: "#19472d", ink: "#19472d", dim: "#476952", accent: "#19472d", palette: "Xanh rêu", name1: "Ngọc Ánh", name2: "Thế Bảo", nameFont: "'Playfair Display', serif", date: "17 tháng 5, 2026", sealKind: "glyph", sealBg: "#19472d", sealMark: "#fff0e7", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#19472d", buttonText: "#fff0e7", ruleKind: "fade", weight: 400, cardH: 508,
+    guestChip: { y: 94, w: 190, h: 40, fill: "#19472d", fillOpacity: 6, radius: 12, size: 20, color: "#19472d", fallback: "Quý khách" },
+    extraLine: { text: "Đến dự tiệc cùng gia đình", y: 138, w: 302, size: 16, color: "#476952" },
+    extras: [{ src: "/demo/song-phung-xanh/source-assets/aa6e3555dfaa-HOA.webp", x: -249, y: 192, w: 160, h: 182, opacity: 60, inCard: true }, { src: "/demo/song-phung-xanh/source-assets/aa6e3555dfaa-HOA.webp", x: 249, y: -193, w: 140, h: 159, opacity: 60, inCard: true }],
+    flower: { src: "/demo/song-phung-xanh/source-assets/a0c000cea3ff-Phuong.webp", w: 297, h: 494, lx: -239, ly: -42, rx: 239, ry: 132, rot: 0, opL: 90, opR: 90, flipRight: false, fit: "contain", rw: 259, rh: 480 } },
   { key: "nbd", gradient: ["#4a3428", "#352518", "#241a12"], card: "#f6ecd5", border: "#c32a29", borderAlpha: 0, cardAlpha: 1, cream: "#f4d58a", ink: "#c32a29", dim: "#674521", accent: "#542e08", palette: "Đỏ son", name1: "Thế Bảo", name2: "Ngọc Ánh", nameFont: "'Bungee', system-ui, sans-serif", date: "3 tháng 5, 2026", sealKind: "glyph", sealBg: "#c32a29", sealMark: "#f4d58a", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#c32a29", buttonText: "#f8f3e0", ruleKind: "fade", weight: 400, cardH: 498, inviteY: 44,
     guestChip: { y: 88, w: 220, h: 36, fill: "#542e08", fillOpacity: 6, radius: 12, size: 16, color: "#542e08", fallback: "Quý khách" },
     extraLine: { text: "Dự tiệc chung vui cùng gia đình", y: 133, w: 360, size: 16, color: "#674521" },
