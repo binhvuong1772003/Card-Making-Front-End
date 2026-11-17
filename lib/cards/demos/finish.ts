@@ -46,6 +46,18 @@ export function addCountdown(column: TreeNode, size: { w: number; h: number }, s
   node.size = { w: px(spec.rect[2]), h: px(spec.rect[3]) };
   node.phone = { x: { anchor: "start", offset: spec.phone[0] }, y: { anchor: "start", offset: spec.phone[1] }, w: px(spec.phone[2]), h: px(spec.phone[3]), rotation: 0 };
   if (spec.phoneSize) node.phoneProps = { size: spec.phoneSize };
+  // A content draft can already contain this timer. Finishing refines that
+  // timer rather than drawing it twice; measured/configured boxes can round
+  // differently by up to two pixels. Keep other events and locations intact.
+  column.children = column.children.filter(child => {
+    if (child.type !== "Countdown") return true;
+    if (child.id === spec.id) return false;
+    const old = child as FreeNode;
+    if (child.props.date !== spec.date || child.props.time !== spec.time || old.position.mode !== "free") return true;
+    if (old.position.x.anchor !== "start" || old.position.y.anchor !== "start" || old.size.w.kind !== "px" || old.size.h.kind !== "px") return true;
+    const rect = [old.position.x.offset, old.position.y.offset, old.size.w.v, old.size.h.v];
+    return rect.some((value, index) => Math.abs(value - spec.rect[index]!) > 2);
+  });
   column.children.push(node);
 }
 

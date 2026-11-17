@@ -19,15 +19,16 @@ export type CountdownViewProps = {
 };
 
 export function CountdownView({ target, showSeconds, labels, doneText, size, color, font, bold, align, ticking }: CountdownViewProps) {
-  const [now, setNow] = useState(() => Date.now());
+  // Keep prerender and the first hydration pass independent of the wall clock.
+  const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
-    if (!ticking) return;
     setNow(Date.now());
+    if (!ticking) return;
     const id = window.setInterval(() => setNow(Date.now()), 1000);
     return () => window.clearInterval(id);
   }, [ticking]);
 
-  const parts = target === undefined ? undefined : countdownParts(target, now);
+  const parts = target === undefined || now === null ? undefined : countdownParts(target, now);
   const line = !parts
     ? `0 ${labels.day} 0 ${labels.hour} 0 ${labels.minute}${showSeconds ? ` 0 ${labels.second}` : ""}`
     : parts.done
