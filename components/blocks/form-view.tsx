@@ -47,6 +47,7 @@ export interface FormViewProps {
   guestName?: string;
   guestCode?: string;
   fillGuestName?: boolean;
+  dialog?: boolean;
   mode: FormMode;
 }
 
@@ -129,10 +130,11 @@ interface PartProps {
   describedBy: string | undefined;
   compact: boolean;
   guestbook: boolean;
+  dialog?: boolean;
 }
 
 // Một câu hỏi, chọn cách vẽ theo loại ô. Tách khỏi view để phần gửi và sổ công khai đọc được liền mạch.
-function Question({ field, value, set, live, sending, uid, color, fieldStyle, labelStyle, error, describedBy, compact, guestbook }: PartProps) {
+function Question({ field, value, set, live, sending, uid, color, fieldStyle, labelStyle, error, describedBy, compact, guestbook, dialog }: PartProps) {
   const disabled = !live || sending;
   const id = `${uid}-${field.id}`;
   const label = (
@@ -211,6 +213,33 @@ function Question({ field, value, set, live, sending, uid, color, fieldStyle, la
     case "choice": {
       const options = field.options ?? [];
       // Tới bốn phương án thì mỗi phương án một viên thuốc bấm được; nhiều hơn thì danh sách chọn cho gọn.
+      if (dialog && options.length <= 4) {
+        return (
+          <fieldset style={{ border: 0, margin: 0, padding: 0 }}>
+            <legend style={{ ...labelStyle, padding: 0 }}>{label}</legend>
+            {hint}
+            <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 8 }}>
+              {options.map((option, index) => {
+                const picked = value === option;
+                const yes = index === 0;
+                return (
+                  <label
+                    key={option}
+                    style={{ display: "flex", alignItems: "center", gap: 12, minHeight: 44, boxSizing: "border-box", border: `1px solid ${picked ? color : "#e5e7eb"}`, borderRadius: 8, padding: "6px 12px", background: picked ? `${color}0f` : "#ffffff", cursor: disabled ? "default" : "pointer", fontSize: 14, fontWeight: 500, color: "#1f2937" }}
+                  >
+                    <input type="radio" name={id} value={option} checked={picked} onChange={() => set(option)} disabled={disabled} aria-describedby={describedBy} style={{ position: "absolute", opacity: 0, width: 1, height: 1 }} />
+                    <span aria-hidden="true" style={{ width: 28, height: 28, borderRadius: 9999, display: "grid", placeItems: "center", background: picked ? color : "#e5e7eb", color: picked ? "#ffffff" : "#6b7280", fontSize: 14, flexShrink: 0 }}>
+                      {yes ? "✓" : "✕"}
+                    </span>
+                    <span>{option}</span>
+                  </label>
+                );
+              })}
+            </div>
+            {problem}
+          </fieldset>
+        );
+      }
       if (options.length <= 4) {
         return (
           <fieldset style={{ border: 0, margin: 0, padding: 0 }}>
@@ -557,20 +586,21 @@ export function FormView(props: FormViewProps) {
   // Chữ sáng (trang nền tối): thẻ lời chúc dùng nền trong suốt cùng màu chữ thay vì nền kem.
   const lightInk = /^#[0-9a-f]{6}$/i.test(color) && (0.299 * parseInt(color.slice(1, 3), 16) + 0.587 * parseInt(color.slice(3, 5), 16) + 0.114 * parseInt(color.slice(5, 7), 16)) > 150;
   const compact = props.compact || guestbook;
-  const labelStyle: CSSProperties = { display: "block", fontSize: 16, fontWeight: 500, marginBottom: 6, textAlign: "left" };
+  const dialog = props.dialog === true;
+  const labelStyle: CSSProperties = { display: "block", fontSize: dialog ? 14 : 16, fontWeight: 500, marginBottom: 6, textAlign: "left", ...(dialog ? { color: "#1f2937" } : {}) };
   const fieldStyle: CSSProperties = {
     width: "100%",
     boxSizing: "border-box",
-    minHeight: guestbook ? 46 : compact ? 50 : 48,
-    border: `1px solid ${props.fieldBorderColor}`,
+    minHeight: dialog ? 40 : guestbook ? 46 : compact ? 50 : 48,
+    border: `1px solid ${dialog ? "#e5e7eb" : props.fieldBorderColor}`,
     borderRadius: 8,
     background: compact ? (props.fieldBorderColor === color && guestbook ? `${color}0a` : "#ffffff") : "transparent",
-    color: props.fieldColor,
-    padding: guestbook ? "12px 16px" : compact ? "10px 16px" : "10px 12px",
+    color: dialog ? "#1f2937" : props.fieldColor,
+    padding: dialog ? "8px 12px" : guestbook ? "12px 16px" : compact ? "10px 16px" : "10px 12px",
     font: "inherit",
-    fontSize: 16,
+    fontSize: dialog ? 14 : 16,
     opacity: 1,
-    WebkitTextFillColor: props.fieldColor,
+    WebkitTextFillColor: dialog ? "#1f2937" : props.fieldColor,
     outlineColor: color,
   };
   const visible = visibleFields(fields, values);
@@ -595,13 +625,13 @@ export function FormView(props: FormViewProps) {
         gap: compact ? 14 : 10,
         overflowY: showList ? "visible" : compact ? "hidden" : "auto",
         overscrollBehavior: "contain",
-        textAlign: "center",
+        textAlign: dialog ? "left" : "center",
         pointerEvents: live ? "auto" : "none",
       }}
       className={`${guestbook ? "cm-fv-guestbook " : ""}${compact ? "cm-fv-compact" : ""}`.trim() || undefined}
     >
       <style>{FADE}{guestbook ? GUESTBOOK_FOLLOW : ""}{compact ? COMPACT_PLACEHOLDER : ""}</style>
-      {props.heading.trim() && <div style={{ fontSize: 14, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>{props.heading}</div>}
+      {props.heading.trim() && <div style={dialog ? { fontSize: 20, fontWeight: 600, color: "#111827", lineHeight: 1.3 } : { fontSize: 14, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase" }}>{props.heading}</div>}
 
       {live && closed ? (
         <div role="status" style={{ fontSize: 15, lineHeight: 1.6, padding: "12px 0" }}>
@@ -623,7 +653,7 @@ export function FormView(props: FormViewProps) {
         </>
       ) : (
         <form onSubmit={onSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: guestbook ? 16 : compact ? 16 : 12 }}>
-          {!guestbook && props.intro.trim() && <div style={{ fontSize: 16, lineHeight: 1.6, whiteSpace: "pre-wrap" }}>{props.intro}</div>}
+          {!guestbook && props.intro.trim() && <div style={{ fontSize: dialog ? 13 : 16, lineHeight: dialog ? 1.5 : 1.6, whiteSpace: "pre-wrap", ...(dialog ? { color: "#6b7280" } : {}) }}>{props.intro}</div>}
 
           {visible.map((field) => (
             <div key={field.id} className="cm-fv-in">
@@ -641,6 +671,7 @@ export function FormView(props: FormViewProps) {
                 describedBy={errors[field.id] ? `${uid}-${field.id}-error` : undefined}
                 compact={compact}
                 guestbook={guestbook}
+                dialog={dialog}
               />
             </div>
           ))}
@@ -674,10 +705,10 @@ export function FormView(props: FormViewProps) {
               type="submit"
               disabled={!live || sending}
               style={{
-                minHeight: guestbook ? 36 : 48,
+                minHeight: guestbook ? 36 : dialog ? 44 : 48,
                 width: guestbook ? 152 : compact ? 166 : "100%",
                 border: 0,
-                borderRadius: guestbook ? 10 : 9999,
+                borderRadius: guestbook ? 10 : dialog ? 8 : 9999,
                 background: color,
                 color: "#fff",
                 font: "inherit",

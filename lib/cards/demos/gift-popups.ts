@@ -74,11 +74,11 @@ export function rsvpPage(color: string, formId: string): CardPage {
   const form = newNode(registry, "Form", "rsvp-popup-form", { w: 600, h: 620 }, { props: { ...attendance.props, formId, fields: [
     { id: "name", type: "text", label: "Tên của bạn", required: true },
     { id: "attending", type: "choice", label: "Bạn sẽ đến chứ?", required: true, options: ["Tôi sẽ đến", "Rất tiếc, tôi không thể đến"] },
-  ] as unknown as JsonValue, heading: "Xác nhận tham dự", intro: "Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng tôi. Xin xác nhận để chúng tôi chuẩn bị chu đáo nhất.", color, padding: 20 } }) as FreeNode;
-  form.position = { mode: "free", x: { anchor: "start", offset: 28 }, y: { anchor: "start", offset: 24 } };
-  form.size = { w: { kind: "px", v: 544 }, h: { kind: "px", v: 440 } };
+  ] as unknown as JsonValue, heading: "Xác nhận tham dự", intro: "Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng tôi. Xin xác nhận để chúng tôi chuẩn bị chu đáo nhất.", button: "Gửi xác nhận", color, padding: 0, dialog: true } }) as FreeNode;
+  form.position = { mode: "free", x: { anchor: "start", offset: 32 }, y: { anchor: "start", offset: 24 } };
+  form.size = { w: { kind: "px", v: 544 }, h: { kind: "px", v: 420 } };
   form.styles = { ...form.styles, borderWidth: 0 };
   form.phone = { x: { anchor: "start", offset: 20 }, y: { anchor: "start", offset: 86 }, w: { kind: "px", v: 335 }, h: { kind: "px", v: 490 }, rotation: 0 };
-  const data: PageData = { ...emptyPage(), root: { ...emptyPage().root, styles: { background: "#ffffff", minHeight: 480, phoneMinHeight: 480 }, children: [form] } };
+  const data: PageData = { ...emptyPage(), root: { ...emptyPage().root, styles: { background: "#ffffff", minHeight: 460, phoneMinHeight: 460 }, children: [form] } };
   return { id: "rsvp", name: "Xác nhận tham dự", data, popup: { width: 448, effect: "fade", backdropColor: "#000000", backdropOpacity: 40 }, interactions: {} };
 }

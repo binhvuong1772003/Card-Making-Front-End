@@ -199,6 +199,7 @@ const renderForm: Renderer = ({ id, props, metadata, theme }) => (
     guestName={guestOf(metadata)?.name}
     guestCode={guestCodeOf(metadata)}
     fillGuestName={props.fillGuestName !== false}
+    dialog={props.dialog === true}
     mode={modeOf(metadata)}
   />
 );
