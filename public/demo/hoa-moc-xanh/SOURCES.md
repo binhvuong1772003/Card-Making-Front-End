@@ -1,9 +1,13 @@
-# Local reference study
+# Hoa Mộc Xanh — local reference assets
 
-Reference: https://chungdoi.com/vi/mau-thiep/hoa-moc-xanh/demo
+Reference DOM: `https://chungdoi.com/vi/mau-thiep/hoa-moc-xanh/demo`
 
-The photos and botanical artwork in this folder are reference assets from that demo, used for this local layout study. Names and event details in the generated document are fictional. Replace these reference assets with owned or licensed images before distributing this as a template.
+XPath notes: `docs/references/hoa-moc-xanh-elements.md`.
 
-- `photo-1.webp` through `photo-8.webp`, `groom.webp`, `bride.webp`: public sample photos from `https://assets.chungdoi.com/photo-library/design/`.
-- `flowers.webp`, `floral-band.webp`: illustrations from `https://chungdoi.com/images/themes/boho-floral-green/`.
-- `gift.webp`: `https://chungdoi.com/images/giftbox/boho_floral_green.webp`.
+- `photo-1.webp` through `photo-8.webp`, `groom.webp`, `bride.webp`: sample photos from the page's public photo library URLs under `https://assets.chungdoi.com/photo-library/design/`.
+- `flowers.webp`, `floral-band.webp`: botanical artwork from `/images/themes/boho-floral-green/`.
+- `gift.webp`: main gift art from `/images/giftbox/boho_floral_green.webp`.
+- `gift-mini-orbit.webp`: a local composite used as one editable decoration. The source page has seven individual mini gift images; the originals are listed in the element notes and are not yet present individually in this folder or the asset catalog.
+- `qr-minh-hoa.svg`: local nonfunctional illustration. It contains no real payment destination.
+
+Event values in the local page are sample values. No account/QR data from the source page is copied.
