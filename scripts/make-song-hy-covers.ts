@@ -168,6 +168,46 @@ function put(type: string, id: string, box: { x: number | Axis; y: number | Axis
   return node;
 }
 
+
+// Điện thoại: thẻ dọc 310 x (cao + 23) như trang mẫu (đo trên Song Hạc): chữ giữ chỗ, phần dưới dịch lên 12,5px, con dấu 11,5px,
+// hoa góc thu 0,75 lần, đẩy ra góc theo chiều dọc; tên cỡ 30.
+function addPhone(nodes: FreeNode[], H: number): void {
+  const PW = 310;
+  const PH = H + 23;
+  const kx = PW / 600;
+  const half = PH / 2;
+  const off = (n: FreeNode, key: "x" | "y") => ((n.position as { x: Axis; y: Axis })[key] as { offset?: number }).offset ?? 0;
+  const set = (n: FreeNode, x: number, y: number, w: number, h: number) => {
+    n.phone = { x: center(x), y: center(y), w: { kind: "px", v: w }, h: { kind: "px", v: h }, rotation: n.rotation };
+  };
+  const wpx = (n: FreeNode) => (n.size.w as { v: number }).v;
+  const hpx = (n: FreeNode) => (n.size.h as { v: number }).v;
+  const art = (n: FreeNode) => {
+    const y = off(n, "y") * 1.35;
+    const limit = half - 20;
+    set(n, off(n, "x") * kx, Math.max(-limit, Math.min(limit, y)), wpx(n) * 0.75, hpx(n) * 0.75);
+  };
+  const walk = (list: FreeNode[]) => {
+    for (const n of list) {
+      const id = n.id;
+      if (id === "open-bg" || id === "open-particles" || id === "open-burst" || id.startsWith("open-motif") || id === "open-flower-left" || id === "open-flower-right") continue;
+      if (id === "open-card" || id === "open-card-panel" || id === "open-card-image") {
+        set(n, 0, 0, PW, PH);
+        if (id === "open-card") n.props = { ...n.props, fit: "cover" };
+        if (id === "open-card") n.styles = { ...n.styles, borderRadius: 8 };
+        if (id === "open-card-image") n.props = { ...n.props, fit: "cover" };
+      } else if (id.startsWith("open-card-flower") || id.startsWith("open-card-chu-hy")) art(n);
+      else if (id === "open-ring" || id === "open-seal") set(n, 0, off(n, "y") - 11.5, wpx(n), hpx(n));
+      else if (id === "open-name1" || id === "open-name2" || id === "open-amp") {
+        set(n, 0, off(n, "y"), id === "open-amp" ? wpx(n) : 262, hpx(n));
+        if (id !== "open-amp") n.phoneProps = { size: 30 };
+      } else set(n, 0, off(n, "y") - 12.5, wpx(n), hpx(n));
+      if (n.children.length) walk(n.children as FreeNode[]);
+    }
+  };
+  walk(nodes);
+}
+
 function buildCover(t: Theme) {
   writeAssets(t);
   const H = t.cardH ?? 420;
@@ -259,6 +299,7 @@ function buildCover(t: Theme) {
     text("open-label", t.openLabel ?? "Mở thiệp", { x: 0, y: t.buttonY ?? 154 + D, w: 140, h: 48 }, t.openLabel && t.openLabel.length > 12 ? 13 : 18, t.buttonText, lora, { motionTarget: "cover" }),
     put("Burst", "open-burst", { x: 0, y: 235 + D, w: 96, h: 40 }, { char: t.burstChar, ...(t.leafCover ? { shape: "Lá" } : {}), count: 32, spread: 420, delay: 0.5, palette: t.leafCover ? (t.burstPalette ?? "Lá xanh") : t.palette }, undefined),
   ];
+  addPhone(nodes, H);
   const page = emptyPage();
   const data = { ...page, root: { ...page.root, styles: { ...page.root.styles, background: t.gradient[1], minHeight: 900, phoneMinHeight: 812 }, children: nodes } };
   const cover = { id: "cover", name: "Bìa", layout: "full", data, interactions: { "open-label": { type: "go-to-page", targetPageId: "invitation", transition: "fade", durationMs: 450 } } };
