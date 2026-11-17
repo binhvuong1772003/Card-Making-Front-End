@@ -180,7 +180,7 @@ function writeAssets(t: Theme) {
     ? `<g opacity=".8" transform="translate(${leftX.toFixed(2)} ${leftY.toFixed(2)}) rotate(25 ${cx.toFixed(2)} ${cy})">${image}</g>` +
       `<g opacity=".8" transform="translate(${rightX.toFixed(2)} ${rightY.toFixed(2)}) translate(${cx.toFixed(2)} ${cy}) rotate(-25) scale(-1 1) translate(${(-cx).toFixed(2)} ${-cy})">${image}</g>`
     : "";
-  const motifs = t.flowers || t.leafCover || t.flower || t.key === "xanh" || (t.extras ?? []).some((e) => e.inCard) ? "" : `${glyph(50, 40, 410, -18, t.cream, 0.11)}${glyph(550, 380, 410, 162, t.cream, 0.11)}`;
+  const motifs = t.flowers || t.leafCover || t.flower || t.key === "xanh" || (t.extras ?? []).length > 0 ? "" : `${glyph(50, 40, 410, -18, t.cream, 0.11)}${glyph(550, 380, 410, 162, t.cream, 0.11)}`;
   // Thẻ 600x420: nền, viền mảnh và phần trang trí (hai chữ 囍 hoặc hoa) cắt theo thẻ, như trang mẫu.
   writeFileSync(resolve(dir, `card-${t.key}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 ${t.cardH ?? 420}"><defs><clipPath id="c"><rect width="600" height="${t.cardH ?? 420}" rx="8"/></clipPath></defs><rect x=".5" y=".5" width="599" height="${(t.cardH ?? 420) - 1}" rx="8" fill="${t.card}" fill-opacity="${t.cardAlpha}" stroke="${t.border}" stroke-opacity="${t.borderAlpha}"/><g clip-path="url(#c)">${motifs}${flowers}</g></svg>\n`);
   writeFileSync(resolve(dir, `xi-${t.key}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="52" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="${FONT}" fill="${t.cream}">囍</text></svg>\n`);
@@ -280,7 +280,7 @@ function buildCover(t: Theme) {
   const rule = (id: string, side: "left" | "right") => t.ruleKind === "fade"
     ? decoration(id, `rule-${t.key}-${side}.svg`, { x: side === "left" ? -37 : 37, y: 14 - D, w: 40, h: 1 }, FADE)
     : put("Shape", id, { x: side === "left" ? -50 : 50, y: 13 - D, w: 60, h: 1 }, { shape: "rectangle", fill: t.cream, motionTarget: "" }, FADE, { opacity: 40 });
-  const motifs = t.flowers || t.leafCover || t.flower || (t.extras ?? []).some((e) => e.inCard) ? [] : [
+  const motifs = t.flowers || t.leafCover || t.flower || (t.extras ?? []).length > 0 ? [] : [
     decoration("open-motif-left", `xi-${t.key}.svg`, { x: -250, y: -170, w: 410, h: 410, rotation: -18 }, OPEN("Phóng ra rồi mờ dần", 1.3), { opacity: 0 }),
     decoration("open-motif-right", `xi-${t.key}.svg`, { x: 250, y: 170, w: 410, h: 410, rotation: 162 }, OPEN("Phóng ra rồi mờ dần", 1.3), { opacity: 0 }),
   ];
