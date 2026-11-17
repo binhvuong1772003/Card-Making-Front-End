@@ -36,6 +36,9 @@ type Theme = {
   extraLines?: { text: string; y: number; w: number; size: number; color: string }[];
 };
 const themes: Theme[] = [
+  { key: "vxl", gradient: ["#f0f7fa", "#e8f2f6", "#dfedf2"], card: "#ffffff", border: "#486c7d", borderAlpha: 0, cardAlpha: 0.95, cream: "#ffffff", ink: "#486c7d", dim: "#7f98a4", accent: "#3a5666", palette: "Xanh nhạt", name1: "Ngọc Linh", name2: "Hoài Nam", nameFont: "'Pinyon Script', cursive", date: "14 tháng 6, 2026", sealKind: "heart", sealFrom: "#486c7d", sealTo: "#3a5666", sealMark: "#ffffff", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#486c7d", buttonText: "#ffffff", ruleKind: "fade", weight: 400, cardH: 443, inviteY: 104, inviteLabel: "Thân Mời / 초대합니다", openLabel: "Mở thiệp / 열기",
+    extraLine: { text: "2026년 6월 14일", y: 59, w: 300, size: 15, color: "#7f98a4" },
+    extras: [{ src: "/demo/vuon-xuan-lam/source-assets/0f9b2d972040-button.webp", x: 0, y: 0, w: 598, h: 762, opacity: 60, inCard: true }] },
   { key: "lpl", gradient: ["#040e16", "#020810", "#010408"], card: "#0a202f", border: "#e9ce9e", borderAlpha: 0, cardAlpha: 1, cream: "#e9ce9e", ink: "#e9ce9e", dim: "#bcab88", accent: "#e9ce9e", palette: "Vàng kim", name1: "Hoài Nam", name2: "Ngọc Linh", nameFont: "'Pinyon Script', cursive", date: "14 tháng 6, 2026", sealKind: "glyph", sealBg: "#e9ce9e", sealMark: "#0a202f", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#e9ce9e", buttonText: "#030a11", ruleKind: "fade", weight: 400,
     extras: [{ src: "/demo/long-phung-lam/source-assets/c266a3071e84-c266a3071e84-bg-main.webp", x: 0, y: 0, w: 350, h: 432, opacity: 30, inCard: true }],
     flower: { src: "/demo/long-phung-lam/source-assets/97450be414b2-97450be414b2-rong.webp", w: 280, h: 560, lx: -249, ly: 51, rx: 249, ry: 50, rot: 0, opL: 30, opR: 30, flipRight: false, fit: "contain", rsrc: "/demo/long-phung-lam/source-assets/6cbc8db31d05-6cbc8db31d05-phuong.webp", rw: 280, rh: 598 } },
