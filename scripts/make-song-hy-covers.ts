@@ -36,6 +36,8 @@ type Theme = {
   extraLines?: { text: string; y: number; w: number; size: number; color: string }[];
 };
 const themes: Theme[] = [
+  { key: "ldl", gradient: ["#0c2147", "#123467", "#1a4080"], card: "#ffffff", border: "#123467", borderAlpha: 0, cardAlpha: 0.98, cream: "#ffffff", ink: "#123467", dim: "#466088", accent: "#123467", palette: "Xanh lụa", name1: "Gia Huy", name2: "Tiểu Vy", nameFont: "'Viaoda Libre', serif", ampFont: "'Alex Brush', cursive", date: "26 tháng 4, 2026", sealKind: "heart", sealFrom: "#123467", sealTo: "#0c2147", sealMark: "#ffffff", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#123467", buttonText: "#ffffff", ruleKind: "fade", weight: 400,
+    flower: { src: "/demo/lau-dai-lam/source-assets/c0379277afbc-hoa.webp", w: 465, h: 531, lx: -245, ly: 0, rx: 245, ry: 0, rot: 0, opL: 18, opR: 18, flipRight: true, fit: "contain" } },
   { key: "hrt", gradient: ["#fbfaf6", "#a9aa92", "#5c5f3e"], card: "#fcfbf6", border: "#5c5f3e", borderAlpha: 0, cardAlpha: 0.97, cream: "#ffffff", ink: "#5c5f3e", dim: "#a98a5a", accent: "#a78555", palette: "Trắng", name1: "Hoàng Nam", name2: "Thanh Hà", nameFont: "'Beau Rivage', cursive", date: "8 tháng 5, 2027", sealKind: "heart", sealFrom: "#5c5f3e", sealTo: "#44472c", sealMark: "#ffffff", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#5c5f3e", buttonText: "#ffffff", ruleKind: "fade", weight: 400,
     extras: [{ src: "/demo/hoa-rum-trang/source-assets/fcff7a137909-template-background.webp", x: 0, y: 0, w: 598, h: 418, opacity: 40, inCard: true }],
     flower: { src: "/demo/hoa-rum-trang/source-assets/ae4d832ada83-rum-background.webp", w: 388, h: 432, lx: -295, ly: -92, rx: 295, ry: 58, rot: 0, opL: 30, opR: 30, flipRight: false, fit: "contain" } },
