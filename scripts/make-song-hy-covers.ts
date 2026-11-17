@@ -29,6 +29,8 @@ type Theme = {
   inviteY?: number; buttonY?: number; inviteLabel?: string; openLabel?: string;
   /** Nền con dấu chữ 囍 (mặc định `cream`): dùng khi con dấu tối, chữ sáng. */
   sealBg?: string;
+  /** Hình trang trí thêm: trong thẻ (cắt theo thẻ, dưới hoa góc) hoặc ngoài thẻ (đè lên mép thẻ, không cắt). */
+  extras?: { src: string; x: number; y: number; w: number; h: number; opacity?: number; inCard?: boolean }[];
   guestChip?: { y: number; w: number; h: number; fill: string; fillOpacity: number; radius: number; size: number; color: string; fallback: string };
   extraLine?: { text: string; y: number; w: number; size: number; color: string };
 };
@@ -37,6 +39,7 @@ const themes: Theme[] = [
     extraLine: { text: "2026년 4월 18일", y: 59, w: 300, size: 15, color: "#d0bd85" },
     flower: { src: "/demo/song-long-xanh/source-assets/ebd1dc156a23-ebd1dc156a23-double-dragon.webp", w: 462, h: 500, lx: -249, ly: -99, rx: 259, ry: 98, rot: 0, opL: 30, opR: 30, flipRight: false, fit: "cover", rsrc: "/demo/song-long-xanh/source-assets/ebd1dc156a23-ebd1dc156a23-double-dragon.webp", rw: 462, rh: 500 } },
   { key: "lpx", gradient: ["#080e07", "#050905", "#020402"], card: "#162614", border: "#e9ce9e", borderAlpha: 0, cardAlpha: 1, cream: "#e9ce9e", ink: "#e9ce9e", dim: "#bfac82", accent: "#e9ce9e", palette: "Vàng kim", name1: "Hoài Nam", name2: "Ngọc Linh", nameFont: "'Pinyon Script', cursive", date: "July 5, 2026", sealKind: "glyph", sealBg: "#e9ce9e", sealMark: "#162614", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#e9ce9e", buttonText: "#0a0f09", ruleKind: "fade", weight: 400, inviteLabel: "Cordially Invites", openLabel: "Open",
+    extras: [{ src: "/demo/long-phung-xanh/source-assets/c266a3071e84-c266a3071e84-bg-main.webp", x: 0, y: 0, w: 350, h: 432, opacity: 30, inCard: true }],
     flower: { src: "/demo/long-phung-xanh/source-assets/97450be414b2-97450be414b2-rong.webp", w: 280, h: 560, lx: -249, ly: 51, rx: 249, ry: 50, rot: 0, opL: 30, opR: 30, flipRight: false, fit: "contain", rsrc: "/demo/long-phung-xanh/source-assets/6cbc8db31d05-6cbc8db31d05-phuong.webp", rw: 280, rh: 598 } },
   { key: "vxx", gradient: ["#f0f4ef", "#e8ede6", "#dfe5dd"], card: "#ffffff", border: "#5d6a57", borderAlpha: 0, cardAlpha: 0.95, cream: "#ffffff", ink: "#5d6a57", dim: "#8e9789", accent: "#697a62", palette: "Xanh rêu", name1: "Văn An", name2: "Mỹ Ngọc", nameFont: "'Pinyon Script', cursive", date: "8 tháng 6, 2026", sealKind: "heart", sealFrom: "#5d6a57", sealTo: "#4a5645", sealMark: "#ffffff", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#5d6a57", buttonText: "#ffffff", ruleKind: "fade", weight: 400,
     flower: { src: "/demo/vuon-xuan-xanh/source-assets/fdc781d27b69-flower_paralax.webp", w: 598, h: 562, lx: -140, ly: 68, rx: 140, ry: -129, rot: 0, opL: 70, opR: 70, flipRight: false, fit: "contain", rsrc: "/demo/vuon-xuan-xanh/source-assets/8573ad3d21cc-flower_top.webp", rw: 598, rh: 440 } },
@@ -51,6 +54,7 @@ const themes: Theme[] = [
     extraLine: { text: "Đến dự buổi tiệc chung vui cùng chúng em", y: 138, w: 400, size: 16, color: "#c4975f" },
     flower: { src: "/demo/hoang-kim-do/source-assets/eb23c4fe47f6-flower.webp", w: 478, h: 289, lx: 0, ly: -253, rx: 0, ry: 253, rot: 0, opL: 20, opR: 20, flipRight: false, fit: "contain" } },
   { key: "shd", gradient: ["#780002", "#610102", "#280000"], card: "#97110e", border: "#ffe8a4", borderAlpha: 0, cardAlpha: 1, cream: "#ffe8a4", ink: "#ffe8a4", dim: "#e8cec9", accent: "#ffe8a4", palette: "Vàng kim", name1: "Quang Duy", name2: "Hà Linh", nameFont: "'Carattere', cursive", ampFont: "'Ms Madi', cursive", date: "10 tháng 4, 2027", sealKind: "glyph", sealBg: "#7a0809", sealMark: "#ffe8a4", sealImage: "/demo/song-hac-do/source-assets/23e079ccc0d8-double-happiness.webp", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#ffe8a4", buttonText: "#920002", ruleKind: "fade", weight: 400,
+    extras: [{ src: "/demo/song-hac-do/source-assets/ec496fb33b86-cloud1-decoration.webp", x: 225, y: -208, w: 232, h: 77 }, { src: "/demo/song-hac-do/source-assets/e81decaebcd1-cloud2-decoration.webp", x: -282, y: 177, w: 196, h: 120 }],
     flower: { src: "/demo/song-hac-do/source-assets/0feb21515575-bird-decoration.webp", w: 204, h: 208, lx: -242, ly: -77, rx: 266, ry: 91, rot: 0, opL: 100, opR: 100, flipRight: true, fit: "contain", rw: 152, rh: 155 } },
   { key: "bvd", gradient: ["#3a0808", "#2b0303", "#1e0202"], card: "#4a0b0e", border: "#ffdfaf", borderAlpha: 0, cardAlpha: 0.92, cream: "#ffdfaf", ink: "#ffdfaf", dim: "#e4cdb8", accent: "#ffdfaf", palette: "Cam vàng", name1: "Gia Bảo", name2: "Ngọc Diệp", nameFont: "'Viaoda Libre', serif", ampFont: "'The Nautigal', cursive", date: "19 tháng 12, 2026", sealKind: "heart", sealFrom: "#ffe6bd", sealTo: "#f2c88c", sealMark: "#7a1020", particleShape: "Chữ", particleChar: "✲", burstChar: "✲", button: "#ffdfaf", buttonText: "#511419", ruleKind: "fade", weight: 400,
     flower: { src: "/demo/baroque-v2-do-dam/source-assets/ddc26f5b2132-flower3-decoration.webp", w: 160, h: 160, lx: -239, ly: -149, rx: 229, ry: 149, rot: 0, opL: 90, opR: 90, flipRight: false, fit: "contain", rsrc: "/demo/baroque-v2-do-dam/source-assets/84408b524ca2-flower4-decoration.webp", rw: 160, rh: 160 } },
@@ -73,6 +77,7 @@ const themes: Theme[] = [
   { key: "spd", gradient: ["#f8f4ec", "#f2ece0", "#ebe3d3"], card: "#fff0e7", border: "#710001", borderAlpha: 0, cardAlpha: 0.95, cream: "#710001", ink: "#710001", dim: "#8d302f", accent: "#710001", palette: "Đỏ son", name1: "Ngọc Ánh", name2: "Thế Bảo", nameFont: "'Playfair Display', serif", date: "3 tháng 5, 2026", sealKind: "glyph", sealBg: "#710001", sealMark: "#fff0e7", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#710001", buttonText: "#fff0e7", ruleKind: "fade", weight: 400, cardH: 508,
     guestChip: { y: 94, w: 190, h: 40, fill: "#710001", fillOpacity: 6, radius: 12, size: 20, color: "#710001", fallback: "Quý khách" },
     extraLine: { text: "đến dự buổi tiệc chung vui cùng gia đình", y: 138, w: 302, size: 16, color: "#8d302f" },
+    extras: [{ src: "/demo/song-phung-do/source-assets/88a21f9a4378-HOA.webp", x: -249, y: 192, w: 160, h: 182, opacity: 60, inCard: true }, { src: "/demo/song-phung-do/source-assets/88a21f9a4378-HOA.webp", x: 249, y: -193, w: 140, h: 159, opacity: 60, inCard: true }],
     flower: { src: "/demo/song-phung-do/source-assets/f49b2efd66b4-Phuong.webp", w: 297, h: 494, lx: -238.5, ly: -42, rx: 238.5, ry: 132, rot: 0, opL: 90, opR: 90, flipRight: false, fit: "contain", rw: 259, rh: 480 } },
   { key: "lp2d", gradient: ["#f6f2ea", "#f0ebe0", "#e9e2d3"], card: "#680d0e", border: "#e9ce9e", borderAlpha: 0, cardAlpha: 1, cream: "#e9ce9e", ink: "#e9ce9e", dim: "#cfa781", accent: "#e9ce9e", palette: "Đỏ son", name1: "Trung Hiếu", name2: "Minh Nguyệt", nameFont: "'EB Garamond', serif", date: "24 tháng 5, 2026", sealKind: "glyph", sealMark: "#680d0e", particleShape: "Chữ", particleChar: "囍", burstChar: "囍", button: "#e9ce9e", buttonText: "#4a0808", ruleKind: "fade", weight: 400, cardH: 508,
     guestChip: { y: 94, w: 122, h: 48, fill: "#e9ce9e", fillOpacity: 15, radius: 12, size: 20, color: "#e9ce9e", fallback: "Quý khách" },
@@ -196,7 +201,7 @@ function addPhone(nodes: FreeNode[], H: number): void {
         if (id === "open-card") n.props = { ...n.props, fit: "cover" };
         if (id === "open-card") n.styles = { ...n.styles, borderRadius: 8 };
         if (id === "open-card-image") n.props = { ...n.props, fit: "cover" };
-      } else if (id.startsWith("open-card-flower") || id.startsWith("open-card-chu-hy")) art(n);
+      } else if (id.startsWith("open-card-flower") || id.startsWith("open-card-chu-hy") || id.startsWith("open-extra")) art(n);
       else if (id === "open-ring" || id === "open-seal") set(n, 0, off(n, "y") - 11.5, wpx(n), hpx(n));
       else if (id === "open-name1" || id === "open-name2" || id === "open-amp") {
         set(n, 0, off(n, "y"), id === "open-amp" ? wpx(n) : 262, hpx(n));
@@ -252,7 +257,9 @@ function buildCover(t: Theme) {
     delete (node.styles as Record<string, unknown>).background;
     delete (node.styles as Record<string, unknown>).borderWidth;
     delete (node.styles as Record<string, unknown>).borderColor;
+    const inCardExtras = (t.extras ?? []).filter((e) => e.inCard).map((e, i) => put("Decoration", `open-extra-in-${i}`, { x: e.x, y: e.y, w: e.w, h: e.h }, { src: e.src, alt: "", fit: "contain", motion: false, motionTarget: "" }, FADE, { opacity: e.opacity ?? 100 }));
     node.children = fl ? [
+      ...inCardExtras,
       ...(t.cardImage ? [put("Decoration", "open-card-image", { x: 0, y: 0, w: 600, h: 420 }, { src: t.cardImage, alt: "", fit: "cover", motion: false, motionTarget: "" }, FADE)] : []),
       put("Decoration", "open-card-flower-left", { x: fl.lx, y: fl.ly, w: fl.w, h: fl.h, rotation: fl.rot }, { src: fl.src, alt: "", fit: fl.fit ?? "contain", motion: false, motionTarget: "" }, FADE, { opacity: fl.opL }),
       put("Decoration", "open-card-flower-right", { x: fl.rx, y: fl.ry, w: fl.rw ?? fl.w, h: fl.rh ?? fl.h, rotation: -fl.rot }, { src: fl.rsrc ?? fl.src, alt: "", fit: "contain", motion: false, motionTarget: "", flipX: fl.flipRight }, FADE, { opacity: fl.opR }),
@@ -274,6 +281,7 @@ function buildCover(t: Theme) {
     ...motifs,
     decoration("open-card", `card-${t.key}.svg`, { x: 0, y: 0, w: 600, h: H }, FADE, { shadow: { x: 0, y: 25, blur: 60, spread: -12, color: "#000000", opacity: 45 } }),
     ...panel,
+    ...(t.extras ?? []).filter((e) => !e.inCard).map((e, i) => put("Decoration", `open-extra-out-${i}`, { x: e.x, y: e.y, w: e.w, h: e.h }, { src: e.src, alt: "", fit: "contain", motion: false, motionTarget: "" }, FADE, { opacity: e.opacity ?? 100 })),
     ...flowerClones,
     decoration("open-ring", `ring-${t.key}.svg`, { x: 0, y: -160 - D, w: t.sealImage ? 64 : 56, h: t.sealImage ? 64 : 56 }, OPEN("Gợn sóng lan ra", 0.6)),
     // Con dấu tim có quầng bóng mềm cùng màu (gốc: 0 5px 27px #511419 @.5); bo tròn để bóng không thành ô vuông.
