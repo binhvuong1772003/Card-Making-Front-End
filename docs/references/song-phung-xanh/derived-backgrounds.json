@@ -1,0 +1,14 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/song-phung-xanh/source-assets/background-3.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/songphung-green/NENGIAY.jpg\")",
+    "recipe": {
+      "size": "100% auto",
+      "position": "50% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "0.3"
+    }
+  }
+]

@@ -1,0 +1,258 @@
+{
+  "assets": [
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/c21d21a8be1e85ea7545498eae71e234047d09650e45bdee58b8617f1b794d11.webp",
+      "local": "/demo/baroque-lam/source-assets/c21d21a8be1e-c21d21a8be1e-c21d21a8be1e85ea7545498eae71e234047d09650e45bdee58b8617f1b794d11.webp",
+      "sha256": "c21d21a8be1e85ea7545498eae71e234047d09650e45bdee58b8617f1b794d11",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/cbf029ed13a63710b491f34444378e0c721ac904a355bc33434f1d6187270bba.webp",
+      "local": "/demo/baroque-lam/source-assets/cbf029ed13a6-cbf029ed13a6-cbf029ed13a63710b491f34444378e0c721ac904a355bc33434f1d6187270bba.webp",
+      "sha256": "cbf029ed13a63710b491f34444378e0c721ac904a355bc33434f1d6187270bba",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/f134c07ce29c9494a15999324657f573638565e804ae94132601f9c2bf4f7fd6.webp",
+      "local": "/demo/baroque-lam/source-assets/f134c07ce29c-f134c07ce29c-f134c07ce29c9494a15999324657f573638565e804ae94132601f9c2bf4f7fd6.webp",
+      "sha256": "f134c07ce29c9494a15999324657f573638565e804ae94132601f9c2bf4f7fd6",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b2905ee505d254b1d41d94e8b.webp",
+      "local": "/demo/baroque-lam/source-assets/5d4773b0a56d-5d4773b0a56d-5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b2905ee505d254b1d41d94e8b.webp",
+      "sha256": "5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b2905ee505d254b1d41d94e8b",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/30e1cba2f33b019b3105ad50d759595573135b43a73ae9e4c4a49a83595f58c4.webp",
+      "local": "/demo/baroque-lam/source-assets/30e1cba2f33b-30e1cba2f33b-30e1cba2f33b019b3105ad50d759595573135b43a73ae9e4c4a49a83595f58c4.webp",
+      "sha256": "30e1cba2f33b019b3105ad50d759595573135b43a73ae9e4c4a49a83595f58c4",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Pattaya-Regular.woff",
+      "local": "/fonts/source-invitations/batch-five/b970f0099e32-b970f0099e32-b970f0099e32-Pattaya-Regular.woff",
+      "sha256": "b970f0099e324b0c94f460cecfb97fec581ac6e95db29cafe722685dd84bfa3e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-latin.woff2",
+      "local": "/fonts/source-invitations/batch-five/1404ca348bd7-1404ca348bd7-1404ca348bd7-Roboto-latin.woff2",
+      "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-five/0b60bbe04e9c-0b60bbe04e9c-0b60bbe04e9c-Roboto-vietnamese.woff2",
+      "sha256": "0b60bbe04e9c479444b31270a72179f53e400beee57b7dd176c08e5e2e716831",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/MsMadiAmpersand-Regular.woff2",
+      "local": "/fonts/source-invitations/batch-five/0cdb56fb9860-0cdb56fb9860-0cdb56fb9860-0cdb56fb9860-MsMadiAmpersand-Regular.woff2",
+      "sha256": "0cdb56fb9860c471026cdc31649328765c79bab4cdf72260c4c9c8e92c0b35e2",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/TheNautigal-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/00e79428e371-00e79428e371-00e79428e371-TheNautigal-Regular.ttf",
+      "sha256": "00e79428e3715ee28f9919be8c3bb4f468197b99ae419ae750b19f3a379b4222",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Uchen-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/4618b0f8c278-4618b0f8c278-4618b0f8c278-4618b0f8c278-Uchen-Regular.ttf",
+      "sha256": "4618b0f8c278d044e948c98fe98dda4a68e9e508886c7750710074e7a68094ce",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/NotoSerif-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/4d8e67614246-4d8e67614246-4d8e67614246-4d8e67614246-NotoSerif-Regular.ttf",
+      "sha256": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ViaodaLibre-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/adb53ede2510-adb53ede2510-adb53ede2510-ViaodaLibre-Regular.ttf",
+      "sha256": "adb53ede25107c5ed4c45f993fd014a21ef82ac82b2327a564fe8e994e228942",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlayfairDisplay-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-five/c40f2293766a-c40f2293766a-c40f2293766a-PlayfairDisplay-Variable.ttf",
+      "sha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/EBGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-five/ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-EBGaramond-Variable.ttf",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-vietnamese.9e2672d1.woff2",
+      "local": "/fonts/source-invitations/batch-five/9e2672d100bc-9e2672d100bc-9e2672d100bc-9e2672d100bc-montserrat-vietnamese.9e2672d1.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin.6438d7b8.woff2",
+      "local": "/fonts/source-invitations/batch-five/6438d7b8ea9c-6438d7b8ea9c-6438d7b8ea9c-montserrat-latin.6438d7b8.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/AlexBrush-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/df702038d8e2-df702038d8e2-df702038d8e2-AlexBrush-Regular.ttf",
+      "sha256": "df702038d8e27797230c77959c139eeea38cac0caf53e19ea5b513d3b0d3362d",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ClickerScript-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/0221d4376fc0-0221d4376fc0-0221d4376fc0-ClickerScript-Regular.ttf",
+      "sha256": "0221d4376fc0a25795a32d7e309798b6693b56f65c5851f92529043b230a9117",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/CormorantGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-five/b20b7d9626dd-b20b7d9626dd-b20b7d9626dd-CormorantGaramond-Variable.ttf",
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/icon-v2.png",
+      "local": "/demo/baroque-lam/source-assets/5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-icon-v2.png",
+      "sha256": "5ca6f5c031f913c820a52fd18d2ab510b4f41387315e19b9bed586456dfbddb2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/gold5-decoration.webp",
+      "local": "/demo/baroque-lam/source-assets/837b5d986c9f-gold5-decoration.webp",
+      "sha256": "837b5d986c9f242bc121bb5e299637c2bf141c70378d5a70cbdc5735ec2e470b",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/frame-decoration.webp",
+      "local": "/demo/baroque-lam/source-assets/963e58ead55f-frame-decoration.webp",
+      "sha256": "963e58ead55f970089d4e21ac32303728c54c89b83a47fef1a820417a84ea3d5",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/bg-pattern.webp",
+      "local": "/demo/baroque-lam/source-assets/c86501b7aed1-bg-pattern.webp",
+      "sha256": "c86501b7aed1c14ea470ef3004de8ccecdf73acd2e2aba9c226c95f85fe4bbf9",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/goldline-decoration.webp",
+      "local": "/demo/baroque-lam/source-assets/89d0ea6f2594-goldline-decoration.webp",
+      "sha256": "89d0ea6f25948ce64883f764be9f9243bafa64d8a2582c6b707adb63b58155c1",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/line-decoration.webp",
+      "local": "/demo/baroque-lam/source-assets/d22320fb66df-line-decoration.webp",
+      "sha256": "d22320fb66df2aa60a290eeb016a3a868adb3551cc9008a490726154aa53e05f",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/goldline2-decoration.webp",
+      "local": "/demo/baroque-lam/source-assets/a163a735d665-goldline2-decoration.webp",
+      "sha256": "a163a735d665b39799801e05f45eaef4701582ca5a78d8e91d94b6a035a13df4",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/pillars-decoration.webp",
+      "local": "/demo/baroque-lam/source-assets/6fe3a0120a78-pillars-decoration.webp",
+      "sha256": "6fe3a0120a78b8c58511b62015de4746204442c66ec0512947f5676e30356e08",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/calendar-frame.webp",
+      "local": "/demo/baroque-lam/source-assets/78968cd6b9e3-calendar-frame.webp",
+      "sha256": "78968cd6b9e3f75838c21518418cd695d17f758e1add7e4b3c47edd353ead430",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/gold4-decoration.webp",
+      "local": "/demo/baroque-lam/source-assets/331697f6eb3f-gold4-decoration.webp",
+      "sha256": "331697f6eb3f6ef8fdab90d75c4af7e0a26594fa7ebb6e9aa41a926ce7d911f7",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/medallion-ring.webp",
+      "local": "/demo/baroque-lam/source-assets/a0a510b93c38-medallion-ring.webp",
+      "sha256": "a0a510b93c3825003e1f5d994b4593d04040386321b20a502b3378e59729905f",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/medallion-bird.webp",
+      "local": "/demo/baroque-lam/source-assets/44b77c3e666c-medallion-bird.webp",
+      "sha256": "44b77c3e666cdd44960f6d2cee0bc7a5c331977d0361d009494022e4fe821683",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/medallion-cake.webp",
+      "local": "/demo/baroque-lam/source-assets/3e04195f9f34-medallion-cake.webp",
+      "sha256": "3e04195f9f34cc946b440cd27978cfeabc7e83ea8438ae0ed097b68954f38c9a",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/hoa_kho_v2_blue.webp",
+      "local": "/demo/baroque-lam/source-assets/98a9e5ae8342-98a9e5ae8342-98a9e5ae8342-hoa_kho_v2_blue.webp",
+      "sha256": "98a9e5ae8342aef0fd4e24ecc9bad648b613514232600cf1239ba1ea8d4b0463",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/minimalism_brown.webp",
+      "local": "/demo/baroque-lam/source-assets/068d1ed98f8e-068d1ed98f8e-068d1ed98f8e-minimalism_brown.webp",
+      "sha256": "068d1ed98f8ee813cceab39ec8554d2015cc676cfb57472c100a9519f3e111fd",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/boho_floral_brown.webp",
+      "local": "/demo/baroque-lam/source-assets/ffc295cf42fe-ffc295cf42fe-boho_floral_brown.webp",
+      "sha256": "ffc295cf42fef8d6207b879258ed1f11868cd97a120fc7a8832e13fb8b13ba18",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/brocade_flower_red.webp",
+      "local": "/demo/baroque-lam/source-assets/b5845c9eb2ba-b5845c9eb2ba-brocade_flower_red.webp",
+      "sha256": "b5845c9eb2babae37b706d5872b15a4f40dbb8989d896bf0c40b13f7ac3768ec",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/baroque_blue.webp",
+      "local": "/demo/baroque-lam/source-assets/bf17b44b4c5c-baroque_blue.webp",
+      "sha256": "bf17b44b4c5c6881a41a2145ba4a2449a5560bbd536c4e8da4bcbcc02e886303",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/double_dragon_green.webp",
+      "local": "/demo/baroque-lam/source-assets/b39a201fd604-b39a201fd604-double_dragon_green.webp",
+      "sha256": "b39a201fd60450c734e22c0123dacf7642ca564174f7c1c70889a0ae379b2338",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/santorini_blue.webp",
+      "local": "/demo/baroque-lam/source-assets/4dd1c109ba32-4dd1c109ba32-4dd1c109ba32-santorini_blue.webp",
+      "sha256": "4dd1c109ba323866ee6062c9999d718d4160585fcb009ab9800d20d3b34f0c78",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/lien_hoa_v2_green.webp",
+      "local": "/demo/baroque-lam/source-assets/b27e4f1b8a7e-b27e4f1b8a7e-lien_hoa_v2_green.webp",
+      "sha256": "b27e4f1b8a7ee439a9771e9c1e9ad03a5b5bd9912c6ffacf017c1d8f48233ac6",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/baroque-blue/gold6-decoration.webp",
+      "local": "/demo/baroque-lam/source-assets/c128e526341d-gold6-decoration.webp",
+      "sha256": "c128e526341d7bf2f415dde5343b46223c638036758cdb2c4ebf1bc63c1dd646",
+      "kind": "image"
+    }
+  ],
+  "failures": [],
+  "missing": []
+}

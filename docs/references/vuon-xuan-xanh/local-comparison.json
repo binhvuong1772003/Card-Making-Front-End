@@ -1,0 +1,3710 @@
+{
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "columnSize": [
+      900,
+      7430.125
+    ],
+    "nodes": [
+      {
+        "id": "b38-001",
+        "type": "Decoration",
+        "sourceLayout": [
+          -1050.0,
+          -49.0,
+          3000,
+          2800
+        ],
+        "localBBox": [
+          -1050,
+          -49,
+          3000,
+          2800
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-002",
+        "type": "Decoration",
+        "sourceLayout": [
+          -1050.0,
+          4629.125,
+          3000.0,
+          2800.0
+        ],
+        "localBBox": [
+          -1050,
+          4629.125,
+          3000,
+          2800
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-003",
+        "type": "Decoration",
+        "sourceLayout": [
+          -414.0004,
+          743.8123,
+          2880.0009,
+          1400.0004
+        ],
+        "localBBox": [
+          -520.0231323242188,
+          -29.22483253479004,
+          3092.04638671875,
+          2946.04345703125
+        ],
+        "maxGeometryDelta": 1546.043,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-004",
+        "type": "Text",
+        "sourceLayout": [
+          375.8906,
+          309.5,
+          148.2031,
+          105
+        ],
+        "localBBox": [
+          375.875,
+          309.5,
+          148.1875,
+          105
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-005",
+        "type": "Text",
+        "sourceLayout": [
+          73.0,
+          418.5,
+          754,
+          75
+        ],
+        "localBBox": [
+          73,
+          418.5,
+          754,
+          75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-006",
+        "type": "Text",
+        "sourceLayout": [
+          361.8906,
+          493.5,
+          176.2031,
+          105
+        ],
+        "localBBox": [
+          361.875,
+          493.5,
+          176.1875,
+          105
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-007",
+        "type": "Text",
+        "sourceLayout": [
+          365.5469,
+          811.0,
+          168.9062,
+          39.0
+        ],
+        "localBBox": [
+          365.546875,
+          811,
+          168.890625,
+          39
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-008",
+        "type": "Text",
+        "sourceLayout": [
+          337.875,
+          1489.5,
+          224.2344,
+          30.0
+        ],
+        "localBBox": [
+          337.875,
+          1489.5,
+          224.234375,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-009",
+        "type": "Text",
+        "sourceLayout": [
+          218.6094,
+          1600.0,
+          63.7812,
+          27.0
+        ],
+        "localBBox": [
+          218.609375,
+          1600,
+          63.765625,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-010",
+        "type": "Text",
+        "sourceLayout": [
+          199.2344,
+          1632.75,
+          102.5312,
+          19.5
+        ],
+        "localBBox": [
+          199.234375,
+          1632.75,
+          102.515625,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-011",
+        "type": "Text",
+        "sourceLayout": [
+          182.75,
+          1658.25,
+          135.5,
+          19.5
+        ],
+        "localBBox": [
+          182.75,
+          1658.25,
+          135.5,
+          19.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-012",
+        "type": "Text",
+        "sourceLayout": [
+          95.7031,
+          1688.0,
+          309.5938,
+          54
+        ],
+        "localBBox": [
+          95.6875,
+          1688,
+          309.59375,
+          54
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-013",
+        "type": "Text",
+        "sourceLayout": [
+          617.6094,
+          1600.0,
+          63.7812,
+          27.0
+        ],
+        "localBBox": [
+          617.609375,
+          1600,
+          63.765625,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-014",
+        "type": "Text",
+        "sourceLayout": [
+          614.5312,
+          1632.75,
+          69.9375,
+          19.5
+        ],
+        "localBBox": [
+          614.515625,
+          1632.75,
+          69.9375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-015",
+        "type": "Text",
+        "sourceLayout": [
+          582.9062,
+          1658.25,
+          133.1719,
+          19.5
+        ],
+        "localBBox": [
+          582.890625,
+          1658.25,
+          133.171875,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-016",
+        "type": "Text",
+        "sourceLayout": [
+          494.7031,
+          1688.0,
+          309.5938,
+          54
+        ],
+        "localBBox": [
+          494.6875,
+          1688,
+          309.59375,
+          54
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-017",
+        "type": "Text",
+        "sourceLayout": [
+          266.0156,
+          1822.0,
+          367.9531,
+          60
+        ],
+        "localBBox": [
+          266,
+          1822,
+          367.9375,
+          60
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-018",
+        "type": "Text",
+        "sourceLayout": [
+          135.5938,
+          1962.0,
+          628.7969,
+          100
+        ],
+        "localBBox": [
+          135.59375,
+          1962,
+          628.796875,
+          100
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-019",
+        "type": "Text",
+        "sourceLayout": [
+          418.5156,
+          2078.0,
+          62.9531,
+          16.0
+        ],
+        "localBBox": [
+          418.5,
+          2078,
+          62.9375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-020",
+        "type": "Text",
+        "sourceLayout": [
+          436.3125,
+          2110.0,
+          27.375,
+          72
+        ],
+        "localBBox": [
+          436.3125,
+          2110,
+          27.375,
+          72
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-021",
+        "type": "Text",
+        "sourceLayout": [
+          135.5938,
+          2198.0,
+          628.7969,
+          100
+        ],
+        "localBBox": [
+          135.59375,
+          2198,
+          628.796875,
+          100
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-022",
+        "type": "Text",
+        "sourceLayout": [
+          424.1094,
+          2314.0,
+          51.7812,
+          16.0
+        ],
+        "localBBox": [
+          424.109375,
+          2314,
+          51.765625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-023",
+        "type": "Text",
+        "sourceLayout": [
+          266.9688,
+          2410.0,
+          366.0469,
+          60
+        ],
+        "localBBox": [
+          266.96875,
+          2410,
+          366.046875,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-024",
+        "type": "Text",
+        "sourceLayout": [
+          408.8281,
+          2478.0,
+          82.3125,
+          27
+        ],
+        "localBBox": [
+          408.8125,
+          2478,
+          82.3125,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-025",
+        "type": "Text",
+        "sourceLayout": [
+          416.25,
+          2533.0,
+          67.5,
+          45
+        ],
+        "localBBox": [
+          416.25,
+          2533,
+          67.5,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-026",
+        "type": "Text",
+        "sourceLayout": [
+          296.6562,
+          2616.0,
+          87.5156,
+          24.0
+        ],
+        "localBBox": [
+          296.640625,
+          2616,
+          87.5,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-027",
+        "type": "Shape",
+        "sourceLayout": [
+          408.1719,
+          2612.0,
+          2,
+          32
+        ],
+        "localBBox": [
+          408.171875,
+          2612,
+          2,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-028",
+        "type": "Text",
+        "sourceLayout": [
+          434.1719,
+          2598.0,
+          40,
+          60
+        ],
+        "localBBox": [
+          434.171875,
+          2598,
+          40,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-029",
+        "type": "Shape",
+        "sourceLayout": [
+          498.1719,
+          2612.0,
+          2,
+          32
+        ],
+        "localBBox": [
+          498.171875,
+          2612,
+          2,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-030",
+        "type": "Text",
+        "sourceLayout": [
+          524.1719,
+          2616.0,
+          79.1719,
+          24.0
+        ],
+        "localBBox": [
+          524.171875,
+          2616,
+          79.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-031",
+        "type": "Text",
+        "sourceLayout": [
+          426.0,
+          2678.0,
+          48,
+          36
+        ],
+        "localBBox": [
+          426,
+          2678,
+          48,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-032",
+        "type": "Text",
+        "sourceLayout": [
+          272.0469,
+          2734.0,
+          355.9062,
+          20
+        ],
+        "localBBox": [
+          272.046875,
+          2734,
+          355.890625,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-033",
+        "type": "Text",
+        "sourceLayout": [
+          325.2188,
+          2833.5,
+          249.5625,
+          30.0
+        ],
+        "localBBox": [
+          325.21875,
+          2833.5,
+          249.5625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-034",
+        "type": "Text",
+        "sourceLayout": [
+          272.8281,
+          2944.0,
+          354.3438,
+          30
+        ],
+        "localBBox": [
+          272.8125,
+          2944,
+          354.34375,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-035",
+        "type": "Text",
+        "sourceLayout": [
+          416.25,
+          2994.0,
+          67.5,
+          45
+        ],
+        "localBBox": [
+          416.25,
+          2994,
+          67.5,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-036",
+        "type": "Text",
+        "sourceLayout": [
+          304.9688,
+          3077.0,
+          70.875,
+          24.0
+        ],
+        "localBBox": [
+          304.96875,
+          3077,
+          70.875,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-037",
+        "type": "Shape",
+        "sourceLayout": [
+          399.8438,
+          3073.0,
+          2,
+          32
+        ],
+        "localBBox": [
+          399.84375,
+          3073,
+          2,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-038",
+        "type": "Text",
+        "sourceLayout": [
+          425.8438,
+          3059.0,
+          40,
+          60
+        ],
+        "localBBox": [
+          425.84375,
+          3059,
+          40,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-039",
+        "type": "Shape",
+        "sourceLayout": [
+          489.8438,
+          3073.0,
+          2,
+          32
+        ],
+        "localBBox": [
+          489.84375,
+          3073,
+          2,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-040",
+        "type": "Text",
+        "sourceLayout": [
+          515.8438,
+          3077.0,
+          79.1719,
+          24.0
+        ],
+        "localBBox": [
+          515.84375,
+          3077,
+          79.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-041",
+        "type": "Text",
+        "sourceLayout": [
+          426.0,
+          3139.0,
+          48,
+          36
+        ],
+        "localBBox": [
+          426,
+          3139,
+          48,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-042",
+        "type": "Text",
+        "sourceLayout": [
+          252.0,
+          3195.0,
+          396,
+          20
+        ],
+        "localBBox": [
+          252,
+          3195,
+          396,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-043",
+        "type": "Text",
+        "sourceLayout": [
+          415.7344,
+          3251.0,
+          68.5312,
+          16.0
+        ],
+        "localBBox": [
+          415.734375,
+          3251,
+          68.515625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-044",
+        "type": "Text",
+        "sourceLayout": [
+          427.5,
+          3271.0,
+          45,
+          28
+        ],
+        "localBBox": [
+          427.5,
+          3271,
+          45,
+          28
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-045",
+        "type": "Text",
+        "sourceLayout": [
+          253.8906,
+          3851.5,
+          392.2031,
+          39
+        ],
+        "localBBox": [
+          253.875,
+          3851.5,
+          392.1875,
+          39
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-046",
+        "type": "Text",
+        "sourceLayout": [
+          223.375,
+          3902.5,
+          453.25,
+          24
+        ],
+        "localBBox": [
+          223.375,
+          3902.5,
+          453.25,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-047",
+        "type": "Text",
+        "sourceLayout": [
+          381.25,
+          4523.0,
+          137.4844,
+          30.0
+        ],
+        "localBBox": [
+          381.25,
+          4523,
+          137.484375,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-048",
+        "type": "Text",
+        "sourceLayout": [
+          387.9062,
+          4557.5,
+          124.1719,
+          24.0
+        ],
+        "localBBox": [
+          387.890625,
+          4557.5,
+          124.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-049",
+        "type": "Text",
+        "sourceLayout": [
+          318.25,
+          4745.0,
+          263.5,
+          30.0
+        ],
+        "localBBox": [
+          318.25,
+          4745,
+          263.5,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-050",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4808.875,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220,
+          4808.875,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-051",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4821.5625,
+          1,
+          54.0625
+        ],
+        "localBBox": [
+          449.5,
+          4821.5625,
+          1,
+          54.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-052",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4816.5625,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          4816.5625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-053",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4809.4375,
+          84.5,
+          26.125
+        ],
+        "localBBox": [
+          490,
+          4809.4375,
+          84.5,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-054",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4877.0,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220,
+          4877,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-055",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4835.625,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4835.625,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-056",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4884.6875,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          4884.6875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-057",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4877.5625,
+          70.0625,
+          26.125
+        ],
+        "localBBox": [
+          490,
+          4877.5625,
+          70.0625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-058",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          4945.125,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220,
+          4945.125,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-059",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4903.75,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4903.75,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-060",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          4952.8125,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          4952.8125,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-061",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          4945.6875,
+          149.0312,
+          26.125
+        ],
+        "localBBox": [
+          490,
+          4945.6875,
+          149.015625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-062",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          5013.25,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220,
+          5013.25,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-063",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          4971.875,
+          1,
+          108.125
+        ],
+        "localBBox": [
+          449.5,
+          4971.875,
+          1,
+          108.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-064",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5020.9375,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          5020.9375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-065",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          5013.8125,
+          149.4375,
+          26.125
+        ],
+        "localBBox": [
+          490,
+          5013.8125,
+          149.4375,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-066",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          5081.375,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220,
+          5081.375,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-067",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          5040.0,
+          1,
+          54.0625
+        ],
+        "localBBox": [
+          449.5,
+          5040,
+          1,
+          54.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-068",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5089.0625,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          5089.0625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-069",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          5081.9375,
+          98.5625,
+          26.125
+        ],
+        "localBBox": [
+          490,
+          5081.9375,
+          98.5625,
+          26.125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-070",
+        "type": "Shape",
+        "sourceLayout": [
+          150.0,
+          5156.125,
+          600,
+          1622.75
+        ],
+        "localBBox": [
+          150,
+          5156.125,
+          600,
+          1622.75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-071",
+        "type": "Text",
+        "sourceLayout": [
+          383.2969,
+          5203.625,
+          133.3906,
+          30.0
+        ],
+        "localBBox": [
+          383.296875,
+          5203.625,
+          133.375,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-072",
+        "type": "Text",
+        "sourceLayout": [
+          335.3906,
+          6810.875,
+          229.2188,
+          39
+        ],
+        "localBBox": [
+          335.375,
+          6810.875,
+          229.21875,
+          39
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-073",
+        "type": "Text",
+        "sourceLayout": [
+          356.3004,
+          6888.0952,
+          17.6335,
+          33.3408
+        ],
+        "localBBox": [
+          356.296875,
+          6888.09375,
+          17.625,
+          33.328125
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-074",
+        "type": "Text",
+        "sourceLayout": [
+          541.2582,
+          6916.1626,
+          12.7961,
+          24.2061
+        ],
+        "localBBox": [
+          541.25,
+          6916.15625,
+          12.78125,
+          24.203125
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-075",
+        "type": "Text",
+        "sourceLayout": [
+          336.2522,
+          6961.6162,
+          4.605,
+          8.7051
+        ],
+        "localBBox": [
+          336.25,
+          6961.609375,
+          4.59375,
+          8.703125
+        ],
+        "maxGeometryDelta": 0.011,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-076",
+        "type": "Text",
+        "sourceLayout": [
+          557.8346,
+          6942.3467,
+          7.2214,
+          13.6504
+        ],
+        "localBBox": [
+          557.828125,
+          6942.34375,
+          7.21875,
+          13.640625
+        ],
+        "maxGeometryDelta": 0.01,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-077",
+        "type": "Shape",
+        "sourceLayout": [
+          444.5,
+          6956.125,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          444.5,
+          6956.125,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-078",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          6953.875,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          6953.875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-079",
+        "type": "Shape",
+        "sourceLayout": [
+          444.5,
+          6956.125,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          444.5,
+          6956.125,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-080",
+        "type": "Shape",
+        "sourceLayout": [
+          445.5,
+          6954.375,
+          9,
+          9
+        ],
+        "localBBox": [
+          445.5,
+          6954.375,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-081",
+        "type": "Shape",
+        "sourceLayout": [
+          444.0,
+          6955.875,
+          12,
+          6
+        ],
+        "localBBox": [
+          444,
+          6955.875,
+          12,
+          6
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-082",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          6956.375,
+          10,
+          5
+        ],
+        "localBBox": [
+          445,
+          6956.375,
+          10,
+          5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-083",
+        "type": "Shape",
+        "sourceLayout": [
+          445.5,
+          6954.375,
+          9,
+          9
+        ],
+        "localBBox": [
+          445.5,
+          6954.375,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-084",
+        "type": "Shape",
+        "sourceLayout": [
+          381.195,
+          7113.6562,
+          137.61,
+          12.0
+        ],
+        "localBBox": [
+          381.1875,
+          7113.65625,
+          137.609375,
+          12
+        ],
+        "maxGeometryDelta": 0.007,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-085",
+        "type": "Decoration",
+        "sourceLayout": [
+          330.0,
+          6907.6562,
+          34.0,
+          0.0
+        ],
+        "localBBox": [
+          331.2379150390625,
+          6901.2880859375,
+          31.524169921875,
+          12.736328125
+        ],
+        "maxGeometryDelta": 12.736,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-086",
+        "type": "Decoration",
+        "sourceLayout": [
+          518.0,
+          6899.6562,
+          38.0,
+          0.0
+        ],
+        "localBBox": [
+          519.1458129882812,
+          6893.15771484375,
+          35.7083740234375,
+          12.9970703125
+        ],
+        "maxGeometryDelta": 12.997,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-087",
+        "type": "Decoration",
+        "sourceLayout": [
+          334.0,
+          7017.6562,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          334.63623046875,
+          7013.63916015625,
+          24.7275390625,
+          8.0341796875
+        ],
+        "maxGeometryDelta": 8.034,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-088",
+        "type": "Decoration",
+        "sourceLayout": [
+          532.0,
+          7011.656,
+          24.0,
+          0.0
+        ],
+        "localBBox": [
+          532.3564453125,
+          7008.73779296875,
+          23.287109375,
+          5.8056640625
+        ],
+        "maxGeometryDelta": 5.806,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-089",
+        "type": "Decoration",
+        "sourceLayout": [
+          365.0,
+          7117.6562,
+          170,
+          0
+        ],
+        "localBBox": [
+          365,
+          7117.65625,
+          170,
+          0
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-090",
+        "type": "Decoration",
+        "sourceLayout": [
+          342.0,
+          7069.6562,
+          44.0,
+          0.0
+        ],
+        "localBBox": [
+          342.214111328125,
+          7066.59423828125,
+          43.57177734375,
+          6.1240234375
+        ],
+        "maxGeometryDelta": 6.124,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-091",
+        "type": "Decoration",
+        "sourceLayout": [
+          376.0,
+          7079.6562,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          376.197509765625,
+          7077.39892578125,
+          25.60498046875,
+          4.5146484375
+        ],
+        "maxGeometryDelta": 4.515,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-092",
+        "type": "Decoration",
+        "sourceLayout": [
+          468.0,
+          7073.6562,
+          40.0,
+          0.0
+        ],
+        "localBBox": [
+          468.5941162109375,
+          7068.81787109375,
+          38.811767578125,
+          9.6767578125
+        ],
+        "maxGeometryDelta": 9.677,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-093",
+        "type": "Text",
+        "sourceLayout": [
+          415.2578,
+          7129.375,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          415.25,
+          7129.375,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-094",
+        "type": "Shape",
+        "sourceLayout": [
+          162.8281,
+          7265.875,
+          574.3438,
+          71.25
+        ],
+        "localBBox": [
+          162.8125,
+          7265.875,
+          574.34375,
+          71.25
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-095",
+        "type": "Text",
+        "sourceLayout": [
+          195.8281,
+          7286.875,
+          508.3438,
+          29.25
+        ],
+        "localBBox": [
+          195.8125,
+          7286.875,
+          508.34375,
+          29.25
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-096",
+        "type": "Text",
+        "sourceLayout": [
+          402.7656,
+          7405.125,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          402.75,
+          7405.125,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-097",
+        "type": "Album",
+        "sourceLayout": [
+          150.0,
+          874.0,
+          600,
+          552
+        ],
+        "localBBox": [
+          150,
+          874,
+          600,
+          552
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-098",
+        "type": "Calendar",
+        "sourceLayout": [
+          274.0,
+          3327.0,
+          352,
+          324.5
+        ],
+        "localBBox": [
+          274,
+          3327,
+          352,
+          324.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-099",
+        "type": "Button",
+        "sourceLayout": [
+          332.5156,
+          3699.5,
+          234.9688,
+          40
+        ],
+        "localBBox": [
+          332.5,
+          3699.5,
+          234.96875,
+          40
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-100",
+        "type": "Map",
+        "sourceLayout": [
+          170.0,
+          3971.5,
+          560,
+          440.0
+        ],
+        "localBBox": [
+          170,
+          3971.5,
+          560,
+          440
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-101",
+        "type": "DressCode",
+        "sourceLayout": [
+          354.0,
+          4601.5,
+          192,
+          48
+        ],
+        "localBBox": [
+          354,
+          4601.5,
+          192,
+          48
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-102",
+        "type": "Form",
+        "sourceLayout": [
+          190.0,
+          5258.125,
+          520,
+          1520.75
+        ],
+        "localBBox": [
+          190,
+          5258.125,
+          520,
+          1520.75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      }
+    ],
+    "brokenImages": [],
+    "pendingImages": [
+      "/demo/vuon-xuan-xanh/source-assets/c414835ba5f9-c414835ba5f95a34ebf0730b5a06db8d21630e3025bfd416c8c628a43f5ba704.webp",
+      "/demo/vuon-xuan-xanh/source-assets/208bd1646525-208bd1646525d47bffe8d72e59de19752c4b146cc6c67494c0cc91de777545d3.webp",
+      "/demo/vuon-xuan-xanh/source-assets/5b172de98387-5b172de9838710261ce4393ef2f13cb9f04ddf799bb5158192b11ad1b6d34c70.webp",
+      "/demo/vuon-xuan-xanh/source-assets/27b058681306-27b0586813066d49c0b655b2e56191f0bf02d45082485b4ee441352201a89c89.webp",
+      "/demo/vuon-xuan-xanh/source-assets/d77b3305f9ab-d77b3305f9ab358fe84a8dd88209d25f373dde24d8c1682564d7278834d40580.webp",
+      "/demo/vuon-xuan-xanh/source-assets/dc8b7fe63a78-dc8b7fe63a78379f2633fbd9ce6cb9be751b5da1af86810f10afe700b5061e16.webp",
+      "/demo/vuon-xuan-xanh/source-assets/27ff008d1a95-27ff008d1a9553373dd1aab6bd4ff08ef8d65c26b82278d9873c68439e0bc49d.webp"
+    ]
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "columnSize": [
+      375,
+      6583.125
+    ],
+    "nodes": [
+      {
+        "id": "b38-001",
+        "type": "Decoration",
+        "sourceLayout": [
+          -612.5,
+          -50.0,
+          1600,
+          2184
+        ],
+        "localBBox": [
+          -612.5,
+          -50,
+          1600,
+          2184
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-002",
+        "type": "Decoration",
+        "sourceLayout": [
+          -612.5,
+          4399.125,
+          1600.0,
+          2184.0
+        ],
+        "localBBox": [
+          -612.5,
+          4399.125,
+          1600,
+          2184
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-003",
+        "type": "Decoration",
+        "sourceLayout": [
+          -292.5002,
+          658.3124,
+          1600.0005,
+          1092.0003
+        ],
+        "localBBox": [
+          -454.4758911132813,
+          267.37823486328125,
+          1923.951904296875,
+          1873.83740234375
+        ],
+        "maxGeometryDelta": 781.837,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-004",
+        "type": "Text",
+        "sourceLayout": [
+          113.3906,
+          227.0,
+          148.2031,
+          75
+        ],
+        "localBBox": [
+          113.375,
+          227,
+          148.1875,
+          75
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-005",
+        "type": "Text",
+        "sourceLayout": [
+          40,
+          306.0,
+          295,
+          56
+        ],
+        "localBBox": [
+          40.0,
+          306,
+          295,
+          56
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-006",
+        "type": "Text",
+        "sourceLayout": [
+          99.3906,
+          362.0,
+          176.2031,
+          75
+        ],
+        "localBBox": [
+          99.375,
+          362,
+          176.1875,
+          75
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-007",
+        "type": "Text",
+        "sourceLayout": [
+          122.5312,
+          567.5,
+          129.9219,
+          30.0
+        ],
+        "localBBox": [
+          122.515625,
+          567.5,
+          129.921875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-008",
+        "type": "Text",
+        "sourceLayout": [
+          75.375,
+          1041.5,
+          224.2344,
+          30.0
+        ],
+        "localBBox": [
+          75.375,
+          1041.5,
+          224.234375,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-009",
+        "type": "Text",
+        "sourceLayout": [
+          80.9375,
+          1135.5,
+          49.6094,
+          21.0
+        ],
+        "localBBox": [
+          80.9375,
+          1135.5,
+          49.609375,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-010",
+        "type": "Text",
+        "sourceLayout": [
+          55.875,
+          1162.75,
+          99.7344,
+          19.5
+        ],
+        "localBBox": [
+          55.875,
+          1162.75,
+          99.734375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-011",
+        "type": "Text",
+        "sourceLayout": [
+          39.7969,
+          1188.25,
+          131.9062,
+          19.5
+        ],
+        "localBBox": [
+          39.796875,
+          1188.25,
+          131.890625,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-012",
+        "type": "Text",
+        "sourceLayout": [
+          35.7812,
+          1218.0,
+          139.9375,
+          49.5
+        ],
+        "localBBox": [
+          35.765625,
+          1218,
+          139.9375,
+          49.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-013",
+        "type": "Text",
+        "sourceLayout": [
+          244.4375,
+          1135.5,
+          49.6094,
+          21.0
+        ],
+        "localBBox": [
+          244.4375,
+          1135.5,
+          49.609375,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-014",
+        "type": "Text",
+        "sourceLayout": [
+          235.2812,
+          1162.75,
+          67.9375,
+          19.5
+        ],
+        "localBBox": [
+          235.265625,
+          1162.75,
+          67.9375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-015",
+        "type": "Text",
+        "sourceLayout": [
+          204.4531,
+          1188.25,
+          129.5781,
+          19.5
+        ],
+        "localBBox": [
+          204.4375,
+          1188.25,
+          129.5625,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-016",
+        "type": "Text",
+        "sourceLayout": [
+          199.2812,
+          1218.0,
+          139.9375,
+          49.5
+        ],
+        "localBBox": [
+          199.265625,
+          1218,
+          139.9375,
+          49.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-017",
+        "type": "Text",
+        "sourceLayout": [
+          40.3125,
+          1331.5,
+          294.3594,
+          48
+        ],
+        "localBBox": [
+          40.3125,
+          1331.5,
+          294.359375,
+          48
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-018",
+        "type": "Text",
+        "sourceLayout": [
+          59.9062,
+          1443.5,
+          255.1875,
+          80
+        ],
+        "localBBox": [
+          59.890625,
+          1443.5,
+          255.1875,
+          80
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-019",
+        "type": "Text",
+        "sourceLayout": [
+          156.0156,
+          1535.5,
+          62.9531,
+          16.0
+        ],
+        "localBBox": [
+          156.0,
+          1535.5,
+          62.9375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-020",
+        "type": "Text",
+        "sourceLayout": [
+          177.5156,
+          1563.5,
+          19.9531,
+          52.5
+        ],
+        "localBBox": [
+          177.5,
+          1563.5,
+          19.9375,
+          52.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-021",
+        "type": "Text",
+        "sourceLayout": [
+          59.9062,
+          1628.0,
+          255.1875,
+          80
+        ],
+        "localBBox": [
+          59.890625,
+          1628,
+          255.1875,
+          80
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-022",
+        "type": "Text",
+        "sourceLayout": [
+          161.6094,
+          1720.0,
+          51.7812,
+          16.0
+        ],
+        "localBBox": [
+          161.609375,
+          1720,
+          51.765625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-023",
+        "type": "Text",
+        "sourceLayout": [
+          41.0781,
+          1800.0,
+          292.8438,
+          48
+        ],
+        "localBBox": [
+          41.0625,
+          1800,
+          292.84375,
+          48
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-024",
+        "type": "Text",
+        "sourceLayout": [
+          150.9062,
+          1856.0,
+          73.1719,
+          24
+        ],
+        "localBBox": [
+          150.890625,
+          1856,
+          73.171875,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-025",
+        "type": "Text",
+        "sourceLayout": [
+          165,
+          1904.0,
+          45,
+          30
+        ],
+        "localBBox": [
+          165.0,
+          1904,
+          45,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-026",
+        "type": "Text",
+        "sourceLayout": [
+          59.9844,
+          1963.5,
+          65.6406,
+          18.0
+        ],
+        "localBBox": [
+          59.984375,
+          1963.5,
+          65.625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-027",
+        "type": "Shape",
+        "sourceLayout": [
+          149.625,
+          1960.5,
+          2,
+          24
+        ],
+        "localBBox": [
+          149.625,
+          1960.5,
+          2,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-028",
+        "type": "Text",
+        "sourceLayout": [
+          175.625,
+          1950.0,
+          30,
+          45
+        ],
+        "localBBox": [
+          175.625,
+          1950,
+          30,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-029",
+        "type": "Shape",
+        "sourceLayout": [
+          229.625,
+          1960.5,
+          2,
+          24
+        ],
+        "localBBox": [
+          229.625,
+          1960.5,
+          2,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-030",
+        "type": "Text",
+        "sourceLayout": [
+          255.625,
+          1963.5,
+          59.3906,
+          18.0
+        ],
+        "localBBox": [
+          255.625,
+          1963.5,
+          59.375,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-031",
+        "type": "Text",
+        "sourceLayout": [
+          169.5,
+          2011.0,
+          36,
+          27
+        ],
+        "localBBox": [
+          169.5,
+          2011,
+          36,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-032",
+        "type": "Text",
+        "sourceLayout": [
+          34.9531,
+          2054.0,
+          305.0781,
+          16
+        ],
+        "localBBox": [
+          34.9375,
+          2054,
+          305.0625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-033",
+        "type": "Text",
+        "sourceLayout": [
+          62.7188,
+          2133.5,
+          249.5625,
+          30.0
+        ],
+        "localBBox": [
+          62.71875,
+          2133.5,
+          249.5625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-034",
+        "type": "Text",
+        "sourceLayout": [
+          45.75,
+          2228.0,
+          283.4844,
+          24
+        ],
+        "localBBox": [
+          45.75,
+          2228,
+          283.484375,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-035",
+        "type": "Text",
+        "sourceLayout": [
+          165,
+          2268.0,
+          45,
+          30
+        ],
+        "localBBox": [
+          165.0,
+          2268,
+          45,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-036",
+        "type": "Text",
+        "sourceLayout": [
+          66.2188,
+          2327.5,
+          53.1562,
+          18.0
+        ],
+        "localBBox": [
+          66.21875,
+          2327.5,
+          53.140625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-037",
+        "type": "Shape",
+        "sourceLayout": [
+          143.375,
+          2324.5,
+          2,
+          24
+        ],
+        "localBBox": [
+          143.375,
+          2324.5,
+          2,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-038",
+        "type": "Text",
+        "sourceLayout": [
+          169.375,
+          2314.0,
+          30,
+          45
+        ],
+        "localBBox": [
+          169.375,
+          2314,
+          30,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-039",
+        "type": "Shape",
+        "sourceLayout": [
+          223.375,
+          2324.5,
+          2,
+          24
+        ],
+        "localBBox": [
+          223.375,
+          2324.5,
+          2,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-040",
+        "type": "Text",
+        "sourceLayout": [
+          249.375,
+          2327.5,
+          59.3906,
+          18.0
+        ],
+        "localBBox": [
+          249.375,
+          2327.5,
+          59.375,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-041",
+        "type": "Text",
+        "sourceLayout": [
+          169.5,
+          2375.0,
+          36,
+          27
+        ],
+        "localBBox": [
+          169.5,
+          2375,
+          36,
+          27
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-042",
+        "type": "Text",
+        "sourceLayout": [
+          28,
+          2418.0,
+          319,
+          32
+        ],
+        "localBBox": [
+          28.0,
+          2418,
+          319,
+          32
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-043",
+        "type": "Text",
+        "sourceLayout": [
+          153.2344,
+          2482.0,
+          68.5312,
+          16.0
+        ],
+        "localBBox": [
+          153.234375,
+          2482,
+          68.515625,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-044",
+        "type": "Text",
+        "sourceLayout": [
+          167.25,
+          2502.0,
+          40.5,
+          28
+        ],
+        "localBBox": [
+          167.25,
+          2502,
+          40.5,
+          28
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-045",
+        "type": "Text",
+        "sourceLayout": [
+          40,
+          3007.5,
+          295,
+          60
+        ],
+        "localBBox": [
+          40.0,
+          3007.5,
+          295,
+          60
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-046",
+        "type": "Text",
+        "sourceLayout": [
+          40,
+          3079.5,
+          295,
+          40
+        ],
+        "localBBox": [
+          40.0,
+          3079.5,
+          295,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-047",
+        "type": "Text",
+        "sourceLayout": [
+          118.75,
+          3576.0,
+          137.4844,
+          30.0
+        ],
+        "localBBox": [
+          118.75,
+          3576,
+          137.484375,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-048",
+        "type": "Text",
+        "sourceLayout": [
+          133.1562,
+          3610.5,
+          108.6562,
+          20.0
+        ],
+        "localBBox": [
+          133.140625,
+          3610.5,
+          108.640625,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-049",
+        "type": "Text",
+        "sourceLayout": [
+          55.75,
+          3770.0,
+          263.5,
+          30.0
+        ],
+        "localBBox": [
+          55.75,
+          3770,
+          263.5,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-050",
+        "type": "Text",
+        "sourceLayout": [
+          32,
+          3825.1875,
+          123.5,
+          24
+        ],
+        "localBBox": [
+          32.0,
+          3825.1875,
+          123.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-051",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3837.1875,
+          1,
+          44.6875
+        ],
+        "localBBox": [
+          187.0,
+          3837.1875,
+          1,
+          44.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-052",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3832.1875,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3832.1875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-053",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3826.3125,
+          75.6094,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3826.3125,
+          75.609375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-054",
+        "type": "Text",
+        "sourceLayout": [
+          32,
+          3882.5625,
+          123.5,
+          24
+        ],
+        "localBBox": [
+          32.0,
+          3882.5625,
+          123.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-055",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3849.875,
+          1,
+          89.375
+        ],
+        "localBBox": [
+          187.0,
+          3849.875,
+          1,
+          89.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-056",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3889.5625,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3889.5625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-057",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3883.6875,
+          62.6875,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          3883.6875,
+          62.6875,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-058",
+        "type": "Text",
+        "sourceLayout": [
+          32,
+          3951.625,
+          123.5,
+          24
+        ],
+        "localBBox": [
+          32.0,
+          3951.625,
+          123.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-059",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3907.25,
+          1,
+          112.75
+        ],
+        "localBBox": [
+          187.0,
+          3907.25,
+          1,
+          112.75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-060",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3958.625,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3958.625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-061",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3943.25,
+          94.2031,
+          42.375
+        ],
+        "localBBox": [
+          219.5,
+          3943.25,
+          94.1875,
+          42.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-062",
+        "type": "Text",
+        "sourceLayout": [
+          32,
+          4032.375,
+          123.5,
+          24
+        ],
+        "localBBox": [
+          32.0,
+          4032.375,
+          123.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-063",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3988.0,
+          1,
+          112.75
+        ],
+        "localBBox": [
+          187.0,
+          3988,
+          1,
+          112.75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-064",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          4039.375,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          4039.375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-065",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          4024.0,
+          91.0469,
+          42.375
+        ],
+        "localBBox": [
+          219.5,
+          4024,
+          91.046875,
+          42.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-066",
+        "type": "Text",
+        "sourceLayout": [
+          32,
+          4101.4375,
+          123.5,
+          24
+        ],
+        "localBBox": [
+          32.0,
+          4101.4375,
+          123.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-067",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          4068.75,
+          1,
+          44.6875
+        ],
+        "localBBox": [
+          187.0,
+          4068.75,
+          1,
+          44.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-068",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          4108.4375,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          4108.4375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-069",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          4102.5625,
+          88.1875,
+          23.375
+        ],
+        "localBBox": [
+          219.5,
+          4102.5625,
+          88.1875,
+          23.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-070",
+        "type": "Shape",
+        "sourceLayout": [
+          16.0,
+          4166.125,
+          343,
+          1831.5
+        ],
+        "localBBox": [
+          16.0,
+          4166.125,
+          343,
+          1831.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-071",
+        "type": "Text",
+        "sourceLayout": [
+          120.7969,
+          4205.625,
+          133.3906,
+          30.0
+        ],
+        "localBBox": [
+          120.796875,
+          4205.625,
+          133.375,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-072",
+        "type": "Text",
+        "sourceLayout": [
+          99.3281,
+          6029.625,
+          176.3281,
+          30
+        ],
+        "localBBox": [
+          99.3125,
+          6029.625,
+          176.3125,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-073",
+        "type": "Text",
+        "sourceLayout": [
+          99.0405,
+          6107.7529,
+          7.1535,
+          13.5254
+        ],
+        "localBBox": [
+          99.03125,
+          6107.75,
+          7.140625,
+          13.515625
+        ],
+        "maxGeometryDelta": 0.013,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-074",
+        "type": "Text",
+        "sourceLayout": [
+          280.0921,
+          6128.436,
+          10.1284,
+          19.1592
+        ],
+        "localBBox": [
+          280.078125,
+          6128.421875,
+          10.125,
+          19.15625
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-075",
+        "type": "Text",
+        "sourceLayout": [
+          69.7821,
+          6163.8618,
+          12.5453,
+          23.7139
+        ],
+        "localBBox": [
+          69.78125,
+          6163.859375,
+          12.53125,
+          23.703125
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-076",
+        "type": "Text",
+        "sourceLayout": [
+          295.459,
+          6152.3315,
+          6.9725,
+          13.1802
+        ],
+        "localBBox": [
+          295.453125,
+          6152.328125,
+          6.96875,
+          13.171875
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-077",
+        "type": "Shape",
+        "sourceLayout": [
+          182.0,
+          6165.875,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          182.0,
+          6165.875,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-078",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          6163.625,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          6163.625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-079",
+        "type": "Shape",
+        "sourceLayout": [
+          182.0,
+          6165.875,
+          11,
+          5.5
+        ],
+        "localBBox": [
+          182.0,
+          6165.875,
+          11,
+          5.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-080",
+        "type": "Shape",
+        "sourceLayout": [
+          183.0,
+          6164.125,
+          9,
+          9
+        ],
+        "localBBox": [
+          183.0,
+          6164.125,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-081",
+        "type": "Shape",
+        "sourceLayout": [
+          181.5,
+          6165.625,
+          12,
+          6
+        ],
+        "localBBox": [
+          181.5,
+          6165.625,
+          12,
+          6
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-082",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          6166.125,
+          10,
+          5
+        ],
+        "localBBox": [
+          182.5,
+          6166.125,
+          10,
+          5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-083",
+        "type": "Shape",
+        "sourceLayout": [
+          183.0,
+          6164.125,
+          9,
+          9
+        ],
+        "localBBox": [
+          183.0,
+          6164.125,
+          9,
+          9
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-084",
+        "type": "Shape",
+        "sourceLayout": [
+          121.5386,
+          6321.4316,
+          131.9227,
+          12.0
+        ],
+        "localBBox": [
+          121.53125,
+          6321.421875,
+          131.921875,
+          12
+        ],
+        "maxGeometryDelta": 0.01,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-085",
+        "type": "Decoration",
+        "sourceLayout": [
+          67.5,
+          6115.4314,
+          34.0,
+          0.0
+        ],
+        "localBBox": [
+          68.73787689208984,
+          6109.0537109375,
+          31.524246215820312,
+          12.736328125
+        ],
+        "maxGeometryDelta": 12.736,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-086",
+        "type": "Decoration",
+        "sourceLayout": [
+          255.5,
+          6107.4314,
+          38.0,
+          0.0
+        ],
+        "localBBox": [
+          256.6458435058594,
+          6100.92333984375,
+          35.70831298828125,
+          12.9970703125
+        ],
+        "maxGeometryDelta": 12.997,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-087",
+        "type": "Decoration",
+        "sourceLayout": [
+          71.5,
+          6225.4314,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          72.13626861572266,
+          6221.40478515625,
+          24.727462768554688,
+          8.0341796875
+        ],
+        "maxGeometryDelta": 8.034,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-088",
+        "type": "Decoration",
+        "sourceLayout": [
+          269.5,
+          6219.4314,
+          24.0,
+          0.0
+        ],
+        "localBBox": [
+          269.8564453125,
+          6216.51904296875,
+          23.287109375,
+          5.8056640625
+        ],
+        "maxGeometryDelta": 5.806,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-089",
+        "type": "Decoration",
+        "sourceLayout": [
+          102.5,
+          6325.4316,
+          170,
+          0
+        ],
+        "localBBox": [
+          102.5,
+          6325.421875,
+          170,
+          0
+        ],
+        "maxGeometryDelta": 0.01,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-090",
+        "type": "Decoration",
+        "sourceLayout": [
+          79.5,
+          6277.4314,
+          44.0,
+          0.0
+        ],
+        "localBBox": [
+          79.71410369873047,
+          6274.35986328125,
+          43.57178497314453,
+          6.1240234375
+        ],
+        "maxGeometryDelta": 6.124,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-091",
+        "type": "Decoration",
+        "sourceLayout": [
+          113.5,
+          6287.4314,
+          26.0,
+          0.0
+        ],
+        "localBBox": [
+          113.69750213623048,
+          6285.16455078125,
+          25.605003356933594,
+          4.5146484375
+        ],
+        "maxGeometryDelta": 4.515,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-092",
+        "type": "Decoration",
+        "sourceLayout": [
+          205.5,
+          6281.4316,
+          40.0,
+          0.0
+        ],
+        "localBBox": [
+          206.09408569335935,
+          6276.58349609375,
+          38.81182861328125,
+          9.6767578125
+        ],
+        "maxGeometryDelta": 9.677,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b38-093",
+        "type": "Text",
+        "sourceLayout": [
+          152.7578,
+          6339.125,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          152.75,
+          6339.125,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-094",
+        "type": "Shape",
+        "sourceLayout": [
+          40.0,
+          6443.625,
+          295,
+          79.5
+        ],
+        "localBBox": [
+          40.0,
+          6443.625,
+          295,
+          79.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-095",
+        "type": "Text",
+        "sourceLayout": [
+          65,
+          6460.625,
+          245,
+          45.5
+        ],
+        "localBBox": [
+          65.0,
+          6460.625,
+          245,
+          45.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-096",
+        "type": "Text",
+        "sourceLayout": [
+          140.2656,
+          6559.125,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          140.25,
+          6559.125,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-097",
+        "type": "Album",
+        "sourceLayout": [
+          40.0,
+          622.0,
+          295,
+          372
+        ],
+        "localBBox": [
+          40.0,
+          622,
+          295,
+          372
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-098",
+        "type": "Calendar",
+        "sourceLayout": [
+          39.5,
+          2554.0,
+          296,
+          297.5
+        ],
+        "localBBox": [
+          39.5,
+          2554,
+          296,
+          297.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-099",
+        "type": "Button",
+        "sourceLayout": [
+          81.7031,
+          2883.5,
+          211.5938,
+          36
+        ],
+        "localBBox": [
+          81.6875,
+          2883.5,
+          211.59375,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-100",
+        "type": "Map",
+        "sourceLayout": [
+          40.0,
+          3156.5,
+          295,
+          332.0
+        ],
+        "localBBox": [
+          40.0,
+          3156.5,
+          295,
+          332
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-101",
+        "type": "DressCode",
+        "sourceLayout": [
+          111.5,
+          3650.5,
+          152,
+          40
+        ],
+        "localBBox": [
+          111.5,
+          3650.5,
+          152,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b38-102",
+        "type": "Form",
+        "sourceLayout": [
+          40.0,
+          4260.125,
+          295,
+          1737.5
+        ],
+        "localBBox": [
+          40.0,
+          4260.125,
+          295,
+          800
+        ],
+        "maxGeometryDelta": 937.5,
+        "rotatedBBox": false
+      }
+    ],
+    "brokenImages": [],
+    "pendingImages": []
+  }
+}

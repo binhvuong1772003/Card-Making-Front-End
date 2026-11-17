@@ -1,0 +1,306 @@
+{
+  "assets": [
+    {
+      "source": "https://chungdoi.com/fonts/Pattaya-Regular.woff",
+      "local": "/fonts/source-invitations/batch-five/b970f0099e32-b970f0099e32-b970f0099e32-Pattaya-Regular.woff",
+      "sha256": "b970f0099e324b0c94f460cecfb97fec581ac6e95db29cafe722685dd84bfa3e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-latin.woff2",
+      "local": "/fonts/source-invitations/batch-five/1404ca348bd7-1404ca348bd7-1404ca348bd7-Roboto-latin.woff2",
+      "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-five/0b60bbe04e9c-0b60bbe04e9c-0b60bbe04e9c-Roboto-vietnamese.woff2",
+      "sha256": "0b60bbe04e9c479444b31270a72179f53e400beee57b7dd176c08e5e2e716831",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PinyonScript-latin.woff2",
+      "local": "/fonts/source-invitations/batch-five/4bf65668f8b1-4bf65668f8b1-4bf65668f8b1-4bf65668f8b1-PinyonScript-latin.woff2",
+      "sha256": "4bf65668f8b1772d7cecbef85ea6f8c126913b8a307607a8d44e5f2c8f371150",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PinyonScript-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-five/4f985a9fcea6-4f985a9fcea6-4f985a9fcea6-4f985a9fcea6-PinyonScript-vietnamese.woff2",
+      "sha256": "4f985a9fcea66c140f4766cbe07003027c8589e0248c7f5859ca6e7d435f8d91",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/MsMadiAmpersand-Regular.woff2",
+      "local": "/fonts/source-invitations/batch-five/0cdb56fb9860-0cdb56fb9860-0cdb56fb9860-0cdb56fb9860-MsMadiAmpersand-Regular.woff2",
+      "sha256": "0cdb56fb9860c471026cdc31649328765c79bab4cdf72260c4c9c8e92c0b35e2",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/TheNautigal-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/00e79428e371-00e79428e371-00e79428e371-TheNautigal-Regular.ttf",
+      "sha256": "00e79428e3715ee28f9919be8c3bb4f468197b99ae419ae750b19f3a379b4222",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/TheNautigal-Bold.ttf",
+      "local": "/fonts/source-invitations/batch-five/8d0e845f0948-8d0e845f0948-8d0e845f0948-TheNautigal-Bold.ttf",
+      "sha256": "8d0e845f094889e133b7819d4658ebae24b42c38a33c7b5068953a650bced22e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Carattere-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/2ee075b50a75-2ee075b50a75-2ee075b50a75-2ee075b50a75-Carattere-Regular.ttf",
+      "sha256": "2ee075b50a75aeaea0d976d916b535fbcd423a684e97fe8536fd8f9efe905ae6",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Whisper-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/f1f415a0de88-f1f415a0de88-f1f415a0de88-f1f415a0de88-Whisper-Regular.ttf",
+      "sha256": "f1f415a0de888897ab638fe6a0547406ecc469901d26afd06af619ddb4c623ec",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Uchen-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/4618b0f8c278-4618b0f8c278-4618b0f8c278-4618b0f8c278-Uchen-Regular.ttf",
+      "sha256": "4618b0f8c278d044e948c98fe98dda4a68e9e508886c7750710074e7a68094ce",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/NotoSerif-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/4d8e67614246-4d8e67614246-4d8e67614246-4d8e67614246-NotoSerif-Regular.ttf",
+      "sha256": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ViaodaLibre-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/adb53ede2510-adb53ede2510-adb53ede2510-ViaodaLibre-Regular.ttf",
+      "sha256": "adb53ede25107c5ed4c45f993fd014a21ef82ac82b2327a564fe8e994e228942",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/AlexBrush-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/df702038d8e2-df702038d8e2-df702038d8e2-AlexBrush-Regular.ttf",
+      "sha256": "df702038d8e27797230c77959c139eeea38cac0caf53e19ea5b513d3b0d3362d",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/CormorantGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-five/b20b7d9626dd-b20b7d9626dd-b20b7d9626dd-CormorantGaramond-Variable.ttf",
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlayfairDisplay-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-five/c40f2293766a-c40f2293766a-c40f2293766a-PlayfairDisplay-Variable.ttf",
+      "sha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/EBGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-five/ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-EBGaramond-Variable.ttf",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlusJakartaSans-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-five/5c913fc1b1f8-5c913fc1b1f8-PlusJakartaSans-vietnamese.woff2",
+      "sha256": "5c913fc1b1f86f4b475e5df45a796aa480d1f7f0891ed6f1a5991d6d1be887c3",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlusJakartaSans-latin.woff2",
+      "local": "/fonts/source-invitations/batch-five/cd8db90cd950-cd8db90cd950-PlusJakartaSans-latin.woff2",
+      "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Fraunces-Soft.woff2",
+      "local": "/fonts/source-invitations/batch-five/eb681ac8bc61-eb681ac8bc61-Fraunces-Soft.woff2",
+      "sha256": "eb681ac8bc61ece314d3942524ef97bfbef87c68d880c7d4ec5e9441ec1b4111",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ClickerScript-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/0221d4376fc0-0221d4376fc0-0221d4376fc0-ClickerScript-Regular.ttf",
+      "sha256": "0221d4376fc0a25795a32d7e309798b6693b56f65c5851f92529043b230a9117",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-vietnamese.9e2672d1.woff2",
+      "local": "/fonts/source-invitations/batch-five/9e2672d100bc-9e2672d100bc-9e2672d100bc-9e2672d100bc-montserrat-vietnamese.9e2672d1.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin-ext.920711de.woff2",
+      "local": "/fonts/source-invitations/batch-five/920711de9ae9-920711de9ae9-920711de9ae9-920711de9ae9-montserrat-latin-ext.920711de.woff2",
+      "sha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin.6438d7b8.woff2",
+      "local": "/fonts/source-invitations/batch-five/6438d7b8ea9c-6438d7b8ea9c-6438d7b8ea9c-montserrat-latin.6438d7b8.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/playfair-display-latin.5d91eb5d.woff2",
+      "local": "/fonts/source-invitations/batch-five/5d91eb5d522a-5d91eb5d522a-5d91eb5d522a-playfair-display-latin.5d91eb5d.woff2",
+      "sha256": "5d91eb5d522a03081946c44c8ca17c902230dfed5f0f9b5014262135d47b15b2",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/icon-v2.png",
+      "local": "/demo/hoa-moc-nau/source-assets/5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-icon-v2.png",
+      "sha256": "5ca6f5c031f913c820a52fd18d2ab510b4f41387315e19b9bed586456dfbddb2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/boho-floral-brown/flower_top.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/da16027dcd25-flower_top.webp",
+      "sha256": "da16027dcd25603d4da3be1b5a33c93c7fdc04d9b69c2c21ef37752e123f42c7",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/boho-floral-brown/flower_bottom.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/88c0ebb0a635-flower_bottom.webp",
+      "sha256": "88c0ebb0a635c2c3eb795c91e53f77504e668cb402c9cfb3af7cb8d2e0a3474e",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/boho-floral-brown/decoration_bar.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/e3ad13476b56-decoration_bar.webp",
+      "sha256": "e3ad13476b56992a761f359ed12b04e264ce704fce1c6850caef17ee2466e0ae",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/9c1c61b16fa1ff694846b781f371bc3b437a49a092300a1778bdd9ed56ff81d9.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/9c1c61b16fa1-9c1c61b16fa1ff694846b781f371bc3b437a49a092300a1778bdd9ed56ff81d9.webp",
+      "sha256": "9c1c61b16fa1ff694846b781f371bc3b437a49a092300a1778bdd9ed56ff81d9",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/454f856986dc4e94052eee2148f9c0006732d70700ff963c796fc737dfc84839.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/454f856986dc-454f856986dc4e94052eee2148f9c0006732d70700ff963c796fc737dfc84839.webp",
+      "sha256": "454f856986dc4e94052eee2148f9c0006732d70700ff963c796fc737dfc84839",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/boho-floral-brown/flower_mid.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/6d7270116aed-flower_mid.webp",
+      "sha256": "6d7270116aed8a11fd74032f6296820fdbaaee06e7d935cf98023b2d522460fc",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/boho-floral-brown/fixed_flower_2.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/22d6d8494d4c-fixed_flower_2.webp",
+      "sha256": "22d6d8494d4c0bb6340145c4d232ed5f2b54e584c4d4d723febc39c7100c0019",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/boho-floral-brown/fixed_flower.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/2320ad873090-fixed_flower.webp",
+      "sha256": "2320ad8730903c1846db2bd3d4af2ffa518c14ee2e0da9dcc8520ff6fb38108e",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/2e908b38ac8ab90f23135996c5ebea3dd4e606b3d083af762944a2f8651104b0.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/2e908b38ac8a-2e908b38ac8ab90f23135996c5ebea3dd4e606b3d083af762944a2f8651104b0.webp",
+      "sha256": "2e908b38ac8ab90f23135996c5ebea3dd4e606b3d083af762944a2f8651104b0",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/ab456240b5a4c17b74751d8b4d16350a7e364a6d220660d8a7e4e79dac0e85d3.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/ab456240b5a4-ab456240b5a4c17b74751d8b4d16350a7e364a6d220660d8a7e4e79dac0e85d3.webp",
+      "sha256": "ab456240b5a4c17b74751d8b4d16350a7e364a6d220660d8a7e4e79dac0e85d3",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/89b589d467e27d6bc25176781bea6ca13ee3318a4b5ed7409a25a186c60b0d97.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/89b589d467e2-89b589d467e27d6bc25176781bea6ca13ee3318a4b5ed7409a25a186c60b0d97.webp",
+      "sha256": "89b589d467e27d6bc25176781bea6ca13ee3318a4b5ed7409a25a186c60b0d97",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/336ce24b0315c3da67f82a3e82be1dd9d391033e33cbccec5bb4ee1e22d1dab7.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/336ce24b0315-336ce24b0315c3da67f82a3e82be1dd9d391033e33cbccec5bb4ee1e22d1dab7.webp",
+      "sha256": "336ce24b0315c3da67f82a3e82be1dd9d391033e33cbccec5bb4ee1e22d1dab7",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/1014679f4b68597d1ce79ab5cc96c0a7b039c53106cd1ac8fbf369976f5e998c.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/1014679f4b68-1014679f4b68597d1ce79ab5cc96c0a7b039c53106cd1ac8fbf369976f5e998c.webp",
+      "sha256": "1014679f4b68597d1ce79ab5cc96c0a7b039c53106cd1ac8fbf369976f5e998c",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/ca978bec665f3192386cad2b9edf9fdf3605e4f4f9195d29fba8dc09d0a4ee9f.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/ca978bec665f-ca978bec665f3192386cad2b9edf9fdf3605e4f4f9195d29fba8dc09d0a4ee9f.webp",
+      "sha256": "ca978bec665f3192386cad2b9edf9fdf3605e4f4f9195d29fba8dc09d0a4ee9f",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/8f9192b73a1393c7cac97c9b56b7f1771f063f1fa2c0c52e61f91faccffe7e39.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/8f9192b73a13-8f9192b73a1393c7cac97c9b56b7f1771f063f1fa2c0c52e61f91faccffe7e39.webp",
+      "sha256": "8f9192b73a1393c7cac97c9b56b7f1771f063f1fa2c0c52e61f91faccffe7e39",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/80de7aca11dc36b635946d59e3897fcfd1fd46d3c929ca47e12e144da830d92d.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/80de7aca11dc-80de7aca11dc36b635946d59e3897fcfd1fd46d3c929ca47e12e144da830d92d.webp",
+      "sha256": "80de7aca11dc36b635946d59e3897fcfd1fd46d3c929ca47e12e144da830d92d",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/mandap_darkred.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/a2e299877cc5-a2e299877cc5-mandap_darkred.webp",
+      "sha256": "a2e299877cc5721550d359eb2c12a5903f4af8be04453f04900ab4ee3872a4e8",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/dried_flower_v2_green.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/afa9a2cfe7c5-afa9a2cfe7c5-dried_flower_v2_green.webp",
+      "sha256": "afa9a2cfe7c5017c7ac76caff71e1b4ae94e55f5029a09c60863fe31cc149d94",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/baroque_v2_darkred.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/8644192298bf-8644192298bf-8644192298bf-baroque_v2_darkred.webp",
+      "sha256": "8644192298bf8ac46d83e2ca239e14734c7db551297e3824fb6af06c0cb26cde",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/marble_yellow.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/dd89e073d8be-dd89e073d8be-dd89e073d8be-marble_yellow.webp",
+      "sha256": "dd89e073d8beab1ae13889e1b585b582e3eb5c626fec0de86b72a60bb2a98b5d",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/boho_floral_brown.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/0df654f59144-boho_floral_brown.webp",
+      "sha256": "0df654f59144785895b625cff77a87fdce33efe06d39cec1184aaa07d99f95d5",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/qasr_gold.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/7c7ff4e0758d-qasr_gold.webp",
+      "sha256": "7c7ff4e0758d91fb4d958032a02df6ef6092568cc4574bbd82e5568a815b74a2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/crystal_floral_green.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/05fb1473fa55-05fb1473fa55-crystal_floral_green.webp",
+      "sha256": "05fb1473fa55ae65b4d0d81bd2467a5593c287ae3d3a8820ed38bb3ef386e091",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/crystal_floral_red.webp",
+      "local": "/demo/hoa-moc-nau/source-assets/6b8a6b02b295-6b8a6b02b295-crystal_floral_red.webp",
+      "sha256": "6b8a6b02b29542dc85dea127fac6eeb3666aca86662c257dbbf8d6e3b8658cfb",
+      "kind": "image"
+    }
+  ],
+  "failures": [],
+  "missing": []
+}

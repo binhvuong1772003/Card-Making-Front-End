@@ -1,0 +1,170 @@
+{
+  "assets": [
+    {
+      "source": "https://chungdoi.com/fonts/Pattaya-Regular.woff",
+      "local": "/fonts/source-invitations/batch-five/b970f0099e32-b970f0099e32-b970f0099e32-Pattaya-Regular.woff",
+      "sha256": "b970f0099e324b0c94f460cecfb97fec581ac6e95db29cafe722685dd84bfa3e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-vietnamese.9e2672d1.woff2",
+      "local": "/fonts/source-invitations/batch-five/9e2672d100bc-9e2672d100bc-9e2672d100bc-9e2672d100bc-montserrat-vietnamese.9e2672d1.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin-ext.920711de.woff2",
+      "local": "/fonts/source-invitations/batch-five/920711de9ae9-920711de9ae9-920711de9ae9-920711de9ae9-montserrat-latin-ext.920711de.woff2",
+      "sha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin.6438d7b8.woff2",
+      "local": "/fonts/source-invitations/batch-five/6438d7b8ea9c-6438d7b8ea9c-6438d7b8ea9c-montserrat-latin.6438d7b8.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/TheNautigal-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-five/00e79428e371-00e79428e371-00e79428e371-TheNautigal-Regular.ttf",
+      "sha256": "00e79428e3715ee28f9919be8c3bb4f468197b99ae419ae750b19f3a379b4222",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/EBGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-five/ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-EBGaramond-Variable.ttf",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/icon-v2.png",
+      "local": "/demo/hoa-lua-nau/source-assets/5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-icon-v2.png",
+      "sha256": "5ca6f5c031f913c820a52fd18d2ab510b4f41387315e19b9bed586456dfbddb2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/silkflora-brown/top-flower.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/9cb37f68b005-top-flower.webp",
+      "sha256": "9cb37f68b005ce5108bb69c26629f5f67ed59a221bea7db02ee61e336ccabd27",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/64800f3f832e884987e517a301959a0869d4d071494140de54cb80f94809ca8e.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/64800f3f832e-64800f3f832e884987e517a301959a0869d4d071494140de54cb80f94809ca8e.webp",
+      "sha256": "64800f3f832e884987e517a301959a0869d4d071494140de54cb80f94809ca8e",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/8e3d14c7d00ace41954e487d3c8b331e1e386d03b722c9200ed1d11d95230796.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/8e3d14c7d00a-8e3d14c7d00ace41954e487d3c8b331e1e386d03b722c9200ed1d11d95230796.webp",
+      "sha256": "8e3d14c7d00ace41954e487d3c8b331e1e386d03b722c9200ed1d11d95230796",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/73fa6f286d598db02cf326c1fc3bcaec786b2452f086bd95f48a5d895c9b5337.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/73fa6f286d59-73fa6f286d598db02cf326c1fc3bcaec786b2452f086bd95f48a5d895c9b5337.webp",
+      "sha256": "73fa6f286d598db02cf326c1fc3bcaec786b2452f086bd95f48a5d895c9b5337",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/52c9fad6c76f10fcd85cb120d6279e01a6bb0b440f822f497c59845bdc07e904.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/52c9fad6c76f-52c9fad6c76f10fcd85cb120d6279e01a6bb0b440f822f497c59845bdc07e904.webp",
+      "sha256": "52c9fad6c76f10fcd85cb120d6279e01a6bb0b440f822f497c59845bdc07e904",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/ad4b104d25ff341abca425dbea644e03345b10a346ee787825eea9fd4ce0f812.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/ad4b104d25ff-ad4b104d25ff341abca425dbea644e03345b10a346ee787825eea9fd4ce0f812.webp",
+      "sha256": "ad4b104d25ff341abca425dbea644e03345b10a346ee787825eea9fd4ce0f812",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/f894d1bb04ff51b414c7a870468e60a4dd4317615acce52b291e6df2b9dbd8df.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/f894d1bb04ff-f894d1bb04ff51b414c7a870468e60a4dd4317615acce52b291e6df2b9dbd8df.webp",
+      "sha256": "f894d1bb04ff51b414c7a870468e60a4dd4317615acce52b291e6df2b9dbd8df",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/7b176840a100f70b6faa892c063697fc88da623411684f9722cfa8807513b362.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/7b176840a100-7b176840a100f70b6faa892c063697fc88da623411684f9722cfa8807513b362.webp",
+      "sha256": "7b176840a100f70b6faa892c063697fc88da623411684f9722cfa8807513b362",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/669edb07a72f89a70778adf39cbe5c78ae222f92b335731363a0180f2bf908e3.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/669edb07a72f-669edb07a72f89a70778adf39cbe5c78ae222f92b335731363a0180f2bf908e3.webp",
+      "sha256": "669edb07a72f89a70778adf39cbe5c78ae222f92b335731363a0180f2bf908e3",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/095a5458c96ee6f614916970af0bee3521f1acc8278fbfaff988069498eedb99.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/095a5458c96e-095a5458c96ee6f614916970af0bee3521f1acc8278fbfaff988069498eedb99.webp",
+      "sha256": "095a5458c96ee6f614916970af0bee3521f1acc8278fbfaff988069498eedb99",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/silkflora-brown/middle.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/cac06d3bbd17-middle.webp",
+      "sha256": "cac06d3bbd17ec87efdca1fe5aa5a704bc0d9599914ff1c53824bbc6746d86d9",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/minimalism_brown.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/068d1ed98f8e-068d1ed98f8e-068d1ed98f8e-minimalism_brown.webp",
+      "sha256": "068d1ed98f8ee813cceab39ec8554d2015cc676cfb57472c100a9519f3e111fd",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/silk_ribbon_pink.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/45ca50bccc06-45ca50bccc06-silk_ribbon_pink.webp",
+      "sha256": "45ca50bccc067f2d9df2e8e303b3072f488425f911ca124c05c64a26ade8c5ba",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/hoa_kho_orange.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/84f1fc2ae4b5-84f1fc2ae4b5-84f1fc2ae4b5-hoa_kho_orange.webp",
+      "sha256": "84f1fc2ae4b537d49fb32b9cec852218473a7100a8cf6fc480226d03584b9ecb",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/chateau_blue.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/a7b20341c374-a7b20341c374-a7b20341c374-chateau_blue.webp",
+      "sha256": "a7b20341c3748a0607b938ffb65bc9e0ac24ca66d3576987f20023eef677c290",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/silk_flora_brown.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/6caacc43aa7d-silk_flora_brown.webp",
+      "sha256": "6caacc43aa7d7df550066f8ba9cd881c3164105478b610049533cdfd2429f96b",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/hoa_dai_pink.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/bf0276ea5cf8-hoa_dai_pink.webp",
+      "sha256": "bf0276ea5cf83cf907816226c50d6f0ae40d44b3c7f366c85f85b13bb7eebcea",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/royal_v2_purple.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/ca3b6093cf6a-ca3b6093cf6a-royal_v2_purple.webp",
+      "sha256": "ca3b6093cf6a7b8c2fb2e1370eb682cf31e3834515d362eb05d7436869579d7b",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/mahal_gold.webp",
+      "local": "/demo/hoa-lua-nau/source-assets/b69503e779b3-mahal_gold.webp",
+      "sha256": "b69503e779b3077f4fa6feff71fb7ac1093e9f8c67ce7065aef109fcc8cad7d6",
+      "kind": "image"
+    }
+  ],
+  "failures": [
+    {
+      "contentType": "text/html",
+      "id": "35658db9ab2e9920",
+      "name": "a",
+      "reason": "Asset response type text/html is not valid for image",
+      "url": "https://chungdoi.com/g9df/a?v=3&t=l&pid=444917564&rv=6bd1&tag_exp=115616986~115938465~115938469~117776795~118897920~118897930~119860443~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034&u=AAAAAIAKAAAAAACAAAAAAAAY&ut=BgAI&h=Ag&gtm=45E92e6bd1v9236198995za204zd9236198995xf4&ccid=236198995&cid=GTM-MZ9J458G&l=L2490.S2.Y17.B4.E739.I2227.TC3.HTC0.F2292.C2~gtm.init_consent.S1.V0.E13~gtm.init.S0.V0.E13.TS5googtag.TI6.TE1.TS5googtag.TI13.TE0~gtm.dom.S0.E9~gtm.js.S0.V0.E53.TS5gclidw.TI10.TE0~*.S0.V0.E28~*.S0.V0.E21~*.S0.V0.E19~*.S0.V0.E18~gtm.load.S0.V0.E2"
+    }
+  ],
+  "missing": []
+}

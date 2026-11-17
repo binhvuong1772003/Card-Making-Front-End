@@ -1,0 +1,104 @@
+{
+  "templates": [
+    {
+      "href": "/vi/mau-thiep/long-phung-v3-do",
+      "order": 11,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/dragon_phoenix_v3_red.e041b5dd.webp",
+      "title": "Long Phụng V3 - Đỏ",
+      "slug": "long-phung-v3-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/long-phung-v3-do/demo?open=1",
+      "export": "longPhungV3DoContentDocument",
+      "prefix": "lp3d"
+    },
+    {
+      "href": "/vi/mau-thiep/minimalism-xanh",
+      "order": 12,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/minimalism_green.18f0f6fd.webp",
+      "title": "Minimalism - Xanh",
+      "slug": "minimalism-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/minimalism-xanh/demo?open=1",
+      "export": "minimalismXanhContentDocument",
+      "prefix": "mgreen"
+    },
+    {
+      "href": "/vi/mau-thiep/long-phung-do",
+      "order": 13,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/dragon_phoenix_red.ed0480da.webp",
+      "title": "Long Phụng - Đỏ",
+      "slug": "long-phung-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/long-phung-do/demo?open=1",
+      "export": "longPhungDoContentDocument",
+      "prefix": "lpd"
+    },
+    {
+      "href": "/vi/mau-thiep/song-long-do",
+      "order": 14,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/double_dragon_red.e3dd75ad.webp",
+      "title": "Song Long - Đỏ",
+      "slug": "song-long-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/song-long-do/demo?open=1",
+      "export": "songLongDoContentDocument",
+      "prefix": "sld"
+    },
+    {
+      "href": "/vi/mau-thiep/mai-lan-trang",
+      "order": 15,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/jasmine_white.16e1ed7f.webp",
+      "title": "Mai Lan - Trắng",
+      "slug": "mai-lan-trang",
+      "demo": "https://chungdoi.com/vi/mau-thiep/mai-lan-trang/demo?open=1",
+      "export": "maiLanTrangContentDocument",
+      "prefix": "mlt"
+    },
+    {
+      "href": "/vi/mau-thiep/lien-hoa-v2-xanh",
+      "order": 16,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/lien_hoa_v2_green.19afaa39.webp",
+      "title": "Liên Hoa V2 - Xanh",
+      "slug": "lien-hoa-v2-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/lien-hoa-v2-xanh/demo?open=1",
+      "export": "lienHoaV2XanhContentDocument",
+      "prefix": "lh2x"
+    },
+    {
+      "href": "/vi/mau-thiep/long-phung-v2-do",
+      "order": 17,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/dragon_phoenix_v2_red.d2e68638.webp",
+      "title": "Long Phụng V2 - Đỏ",
+      "slug": "long-phung-v2-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/long-phung-v2-do/demo?open=1",
+      "export": "longPhungV2DoContentDocument",
+      "prefix": "lp2d"
+    },
+    {
+      "href": "/vi/mau-thiep/vuonkinh-hong",
+      "order": 18,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/glass_garden_pink.e2c3377f.webp",
+      "title": "Vườn Kính - Hồng",
+      "slug": "vuonkinh-hong",
+      "demo": "https://chungdoi.com/vi/mau-thiep/vuonkinh-hong/demo?open=1",
+      "export": "vuonkinhHongContentDocument",
+      "prefix": "vkh"
+    },
+    {
+      "href": "/vi/mau-thiep/vuonkinh-xanh",
+      "order": 19,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/glass_garden_green.aacdf716.webp",
+      "title": "Vườn Kính - Xanh",
+      "slug": "vuonkinh-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/vuonkinh-xanh/demo?open=1",
+      "export": "vuonkinhXanhContentDocument",
+      "prefix": "vkx"
+    },
+    {
+      "href": "/vi/mau-thiep/song-phung-do",
+      "order": 20,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/double_phoenix_red.3bfb98ec.webp",
+      "title": "Song Phụng - Đỏ",
+      "slug": "song-phung-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/song-phung-do/demo?open=1",
+      "export": "songPhungDoContentDocument",
+      "prefix": "spd"
+    }
+  ]
+}

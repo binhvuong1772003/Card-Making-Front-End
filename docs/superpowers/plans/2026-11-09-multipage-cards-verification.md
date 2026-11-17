@@ -2,6 +2,8 @@
 
 Date: 2026-11-09. Implementation uses Luna subagents for backend, Miditor, editor UI, runtime, independent review and browser QA; root owns integration.
 
+> This report records the initial multipage implementation. The history integration has since been redesigned using existing custom fields; see [Neutral Editor Boundary](2026-11-09-neutral-editor.md) and its verification report for current checks.
+
 ## Delivered
 
 - App-owned versioned CardDocument with 1–50 equal design pages, independent desktop/phone layouts and selected start page.

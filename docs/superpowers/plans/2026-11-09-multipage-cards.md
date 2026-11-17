@@ -13,6 +13,8 @@
 
 **Execution status:** Completed 2026-11-09 with Luna-first subagents; see [verification](2026-11-09-multipage-cards-verification.md). Changes are committed separately by feature in FE, BE and Miditor. No actual remote save/publication was performed.
 
+> **Superseded history integration:** The checkpoint API and external interaction snapshot mechanism below are historical. Use [Neutral Editor Boundary](2026-11-09-neutral-editor.md): app-only custom field, native history, unchanged saved schema. Do not reintroduce checkpoint into Miditor.
+
 ## Global Constraints
 
 - 1–50 trang; tên sau khi trim dài 1–80 ký tự; page ID khớp `^[A-Za-z0-9_-]{1,40}$`; tổng document tối đa 800 KiB.

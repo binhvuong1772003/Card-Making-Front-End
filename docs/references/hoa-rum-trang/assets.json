@@ -1,0 +1,204 @@
+{
+  "assets": [
+    {
+      "source": "https://chungdoi.com/fonts/Pattaya-Regular.woff",
+      "local": "/fonts/source-invitations/batch-four/b970f0099e32-b970f0099e32-Pattaya-Regular.woff",
+      "sha256": "b970f0099e324b0c94f460cecfb97fec581ac6e95db29cafe722685dd84bfa3e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/EBGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-EBGaramond-Variable.ttf",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ClickerScript-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/0221d4376fc0-0221d4376fc0-ClickerScript-Regular.ttf",
+      "sha256": "0221d4376fc0a25795a32d7e309798b6693b56f65c5851f92529043b230a9117",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-latin.woff2",
+      "local": "/fonts/source-invitations/batch-four/1404ca348bd7-1404ca348bd7-Roboto-latin.woff2",
+      "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ViaodaLibre-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/adb53ede2510-adb53ede2510-ViaodaLibre-Regular.ttf",
+      "sha256": "adb53ede25107c5ed4c45f993fd014a21ef82ac82b2327a564fe8e994e228942",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-four/0b60bbe04e9c-0b60bbe04e9c-Roboto-vietnamese.woff2",
+      "sha256": "0b60bbe04e9c479444b31270a72179f53e400beee57b7dd176c08e5e2e716831",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/NotoSerif-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/4d8e67614246-4d8e67614246-4d8e67614246-NotoSerif-Regular.ttf",
+      "sha256": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin.6438d7b8.woff2",
+      "local": "/fonts/source-invitations/batch-four/6438d7b8ea9c-6438d7b8ea9c-montserrat-latin.6438d7b8.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-vietnamese.9e2672d1.woff2",
+      "local": "/fonts/source-invitations/batch-four/9e2672d100bc-9e2672d100bc-9e2672d100bc-montserrat-vietnamese.9e2672d1.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/CormorantGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/b20b7d9626dd-b20b7d9626dd-CormorantGaramond-Variable.ttf",
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/icon-v2.png",
+      "local": "/demo/hoa-rum-trang/source-assets/5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-icon-v2.png",
+      "sha256": "5ca6f5c031f913c820a52fd18d2ab510b4f41387315e19b9bed586456dfbddb2",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/2da21468b5df4593edd6d0c98ff7e59e97be6e4feca3d70b770896bea42af60e.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/2da21468b5df-2da21468b5df4593edd6d0c98ff7e59e97be6e4feca3d70b770896bea42af60e.webp",
+      "sha256": "2da21468b5df4593edd6d0c98ff7e59e97be6e4feca3d70b770896bea42af60e",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/a39e91a16c1ccee48614263d66329da4e9f74161dcdcf1663e0a5817b600145d.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/a39e91a16c1c-a39e91a16c1ccee48614263d66329da4e9f74161dcdcf1663e0a5817b600145d.webp",
+      "sha256": "a39e91a16c1ccee48614263d66329da4e9f74161dcdcf1663e0a5817b600145d",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/3408b63d4775347efaefa803aca17296e0ff2e42af093be24a5a3c3b278aa503.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/3408b63d4775-3408b63d4775347efaefa803aca17296e0ff2e42af093be24a5a3c3b278aa503.webp",
+      "sha256": "3408b63d4775347efaefa803aca17296e0ff2e42af093be24a5a3c3b278aa503",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/f4c75ef657dc3e39b46e8d0d9c2650e138a3fb65959c3340b77bf60e62f85260.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/f4c75ef657dc-f4c75ef657dc3e39b46e8d0d9c2650e138a3fb65959c3340b77bf60e62f85260.webp",
+      "sha256": "f4c75ef657dc3e39b46e8d0d9c2650e138a3fb65959c3340b77bf60e62f85260",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/3ac0ac20c552fca45de09834feb7b8c48afe27269e1ce611a1c8b46feba4d0ed.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/3ac0ac20c552-3ac0ac20c552fca45de09834feb7b8c48afe27269e1ce611a1c8b46feba4d0ed.webp",
+      "sha256": "3ac0ac20c552fca45de09834feb7b8c48afe27269e1ce611a1c8b46feba4d0ed",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/8b3363a0ed3668f96ac8b94740aeed2db547a4f9b5c7781080b8c58e83f06d3c.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/8b3363a0ed36-8b3363a0ed3668f96ac8b94740aeed2db547a4f9b5c7781080b8c58e83f06d3c.webp",
+      "sha256": "8b3363a0ed3668f96ac8b94740aeed2db547a4f9b5c7781080b8c58e83f06d3c",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/calla-lily-white/letter.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/953efa2c4009-letter.webp",
+      "sha256": "953efa2c40094ab66255f6c2234f387e5a20550123071874dcca6fd9918a6283",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/70a06c14cf04d06cde7b67ea63d85a426e76c746d71428981dda02b68204ff57.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/70a06c14cf04-70a06c14cf04d06cde7b67ea63d85a426e76c746d71428981dda02b68204ff57.webp",
+      "sha256": "70a06c14cf04d06cde7b67ea63d85a426e76c746d71428981dda02b68204ff57",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/calla-lily-white/cake.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/b196776fc1ae-cake.webp",
+      "sha256": "b196776fc1ae8bc40afb39ae6e08c737c989eca58750bdb7dafd072c4ad7c4d4",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/calla-lily-white/ring.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/f17bac61b9f5-ring.webp",
+      "sha256": "f17bac61b9f556d0792d500716938e1772659bb083ff1aa897d72645a2cdbba7",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/calla-lily-white/template-background.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/fcff7a137909-template-background.webp",
+      "sha256": "fcff7a1379098e14d29596706772f9aed0227e6b30ead2f049f9991983f36ba0",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/BeauRivage-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/6a407ad2418a-BeauRivage-Regular.ttf",
+      "sha256": "6a407ad2418a5e29ceb447de49fb11e614615de4943292e3862347fa010e7bba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Ubuntu-Light.ttf",
+      "local": "/fonts/source-invitations/batch-four/a5d3ef89f219-Ubuntu-Light.ttf",
+      "sha256": "a5d3ef89f219e90e1f22616adf2bd4a86c8ddd37aff58cd223482c44e3a92eef",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlusJakartaSans-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-four/5c913fc1b1f8-PlusJakartaSans-vietnamese.woff2",
+      "sha256": "5c913fc1b1f86f4b475e5df45a796aa480d1f7f0891ed6f1a5991d6d1be887c3",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Ubuntu-Medium.ttf",
+      "local": "/fonts/source-invitations/batch-four/3cd952b8b525-Ubuntu-Medium.ttf",
+      "sha256": "3cd952b8b52581e48a8fa95b31c8829c2baa41b635042a69587d57f98092961e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlusJakartaSans-latin.woff2",
+      "local": "/fonts/source-invitations/batch-four/cd8db90cd950-PlusJakartaSans-latin.woff2",
+      "sha256": "cd8db90cd950e26bc8761f65d323588bd5cd112d326d6d322bc7c8ea86771215",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/calla-lily-white/rum-background.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/ae4d832ada83-rum-background.webp",
+      "sha256": "ae4d832ada831f569d953024621818b1062c28e2dc0fa4038075e6a67e6799b3",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/calla-lily-white/flower-background.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/5a55e3d17a26-flower-background.webp",
+      "sha256": "5a55e3d17a262e7b1cf5c222489d8b28843aa77b34417f5af64a4e592e15e730",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/calla-lily-white/leaf-background.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/e4f81b5f6067-leaf-background.webp",
+      "sha256": "e4f81b5f6067f3b465563f36e603a8d19e7d4df3d0581b80b70ac042dedfe63b",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/calla-lily-white/flower1-background.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/697f2016e048-flower1-background.webp",
+      "sha256": "697f2016e048884b997d2292239288cae1bf15e42a12e0e58adcae84ba1988b6",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-latin-ext.woff2",
+      "local": "/fonts/source-invitations/batch-four/cedb374b05a3-Roboto-latin-ext.woff2",
+      "sha256": "cedb374b05a35034cf96db185db4eeb8f8ce49e1a56197673702ff11b5533d6e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/images/envelope/calla_lily_white.webp",
+      "local": "/demo/hoa-rum-trang/source-assets/266fdee1bcf3-calla_lily_white.webp",
+      "sha256": "266fdee1bcf3c39b48b3ed1b155ba05ab86632800c25986ba9c3b54c69430d41",
+      "kind": "image"
+    }
+  ],
+  "failures": [],
+  "missing": []
+}

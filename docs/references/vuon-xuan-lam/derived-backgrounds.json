@@ -1,0 +1,38 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/vuon-xuan-lam/source-assets/background-3.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20blue/top.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "50% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]",
+    "local": "/demo/vuon-xuan-lam/source-assets/background-4.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20blue/mid.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "50% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[3]",
+    "local": "/demo/vuon-xuan-lam/source-assets/background-5.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20blue/button.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "50% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  }
+]

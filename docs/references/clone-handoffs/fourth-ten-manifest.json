@@ -1,0 +1,143 @@
+{
+  "source": "https://chungdoi.com/vi/mau-thiep",
+  "excluded": [
+    "anh-dao-hong",
+    "baroque-v2-do-dam",
+    "cam-thach-vang",
+    "finish",
+    "gift-popups",
+    "hoa-moc-xanh",
+    "hoa-moc-xanh.test",
+    "hoang-kim-do",
+    "lau-dai-xanh",
+    "lien-hoa-v2-xanh",
+    "long-phung-do",
+    "long-phung-v2-do",
+    "long-phung-v3-do",
+    "long-phung-xanh",
+    "mai-lan-trang",
+    "minimalism-do",
+    "minimalism-do-dam",
+    "minimalism-nau",
+    "minimalism-nau-dam",
+    "minimalism-xanh",
+    "next-ten",
+    "remaining-content",
+    "ren-theu-trang",
+    "song-hac-do",
+    "song-hy-do",
+    "song-hy-v2-do",
+    "song-hy-xanh",
+    "song-long-do",
+    "song-long-xanh",
+    "song-phung-do",
+    "third-ten",
+    "to-duyen-do-dam",
+    "to-duyen-xanh",
+    "vuon-xuan-xanh",
+    "vuonkinh-hong",
+    "vuonkinh-xanh"
+  ],
+  "templates": [
+    {
+      "href": "/vi/mau-thiep/chibi-red",
+      "order": 28,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/chibi_red.9b0b4a62.webp",
+      "title": "Chibi - Đỏ",
+      "slug": "chibi-red",
+      "demo": "https://chungdoi.com/vi/mau-thiep/chibi-red/demo?open=1",
+      "export": "chibiRedContentDocument",
+      "prefix": "b41"
+    },
+    {
+      "href": "/vi/mau-thiep/hoa-rum-trang",
+      "order": 31,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/calla_lily_white.c3051d1d.webp",
+      "title": "Hoa Rum - Trắng",
+      "slug": "hoa-rum-trang",
+      "demo": "https://chungdoi.com/vi/mau-thiep/hoa-rum-trang/demo?open=1",
+      "export": "hoaRumTrangContentDocument",
+      "prefix": "b42"
+    },
+    {
+      "href": "/vi/mau-thiep/thanh-diep-xanh",
+      "order": 32,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/elegant_leaf_green.14803fcc.webp",
+      "title": "Thanh Diệp - Xanh",
+      "slug": "thanh-diep-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/thanh-diep-xanh/demo?open=1",
+      "export": "thanhDiepXanhContentDocument",
+      "prefix": "b43"
+    },
+    {
+      "href": "/vi/mau-thiep/vuon-xuan-do",
+      "order": 34,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/spring_garden_red.5d0604e5.webp",
+      "title": "Vườn Xuân - Đỏ",
+      "slug": "vuon-xuan-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/vuon-xuan-do/demo?open=1",
+      "export": "vuonXuanDoContentDocument",
+      "prefix": "b44"
+    },
+    {
+      "href": "/vi/mau-thiep/minimalism-lam-dam",
+      "order": 35,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/minimalism_darkblue.4cb70355.webp",
+      "title": "Minimalism - Lam Đậm",
+      "slug": "minimalism-lam-dam",
+      "demo": "https://chungdoi.com/vi/mau-thiep/minimalism-lam-dam/demo?open=1",
+      "export": "minimalismLamDamContentDocument",
+      "prefix": "b45"
+    },
+    {
+      "href": "/vi/mau-thiep/hoa-moc-hong",
+      "order": 36,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/boho_floral_pink.964362f5.webp",
+      "title": "Hoa Mộc - Hồng",
+      "slug": "hoa-moc-hong",
+      "demo": "https://chungdoi.com/vi/mau-thiep/hoa-moc-hong/demo?open=1",
+      "export": "hoaMocHongContentDocument",
+      "prefix": "b46"
+    },
+    {
+      "href": "/vi/mau-thiep/song-phung-xanh",
+      "order": 37,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/double_phoenix_green.815225f7.webp",
+      "title": "Song Phụng - Xanh",
+      "slug": "song-phung-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/song-phung-xanh/demo?open=1",
+      "export": "songPhungXanhContentDocument",
+      "prefix": "b47"
+    },
+    {
+      "href": "/vi/mau-thiep/lau-dai-lam",
+      "order": 38,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/chateau_blue.cc9f22c8.webp",
+      "title": "Lâu Đài - Lam",
+      "slug": "lau-dai-lam",
+      "demo": "https://chungdoi.com/vi/mau-thiep/lau-dai-lam/demo?open=1",
+      "export": "lauDaiLamContentDocument",
+      "prefix": "b48"
+    },
+    {
+      "href": "/vi/mau-thiep/to-duyen-hong",
+      "order": 39,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/silk_ribbon_pink.db790df6.webp",
+      "title": "Tơ Duyên - Hồng",
+      "slug": "to-duyen-hong",
+      "demo": "https://chungdoi.com/vi/mau-thiep/to-duyen-hong/demo?open=1",
+      "export": "toDuyenHongContentDocument",
+      "prefix": "b49"
+    },
+    {
+      "href": "/vi/mau-thiep/nhat-binh-do",
+      "order": 40,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/nhat_binh_red.793a8042.webp",
+      "title": "Nhật Bình - Đỏ",
+      "slug": "nhat-binh-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/nhat-binh-do/demo?open=1",
+      "export": "nhatBinhDoContentDocument",
+      "prefix": "b410"
+    }
+  ]
+}

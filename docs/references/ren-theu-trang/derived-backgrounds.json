@@ -1,0 +1,38 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]",
+    "local": "/demo/ren-theu-trang/source-assets/background-2.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/applique-lace-white/satin-background.webp\")",
+    "recipe": {
+      "size": "100% auto",
+      "position": "50% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[2]",
+    "local": "/demo/ren-theu-trang/source-assets/background-24.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/applique-lace-white/lace2.webp\")",
+    "recipe": {
+      "size": "100% 318.386px",
+      "position": "50% 1px",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[2]",
+    "local": "/demo/ren-theu-trang/source-assets/background-115.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/applique-lace-white/lace2.webp\")",
+    "recipe": {
+      "size": "100% 316.364px",
+      "position": "50% 1px",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  }
+]

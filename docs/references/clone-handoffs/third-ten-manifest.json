@@ -1,0 +1,128 @@
+{
+  "source": "https://chungdoi.com/vi/mau-thiep",
+  "excluded": [
+    "cam-thach-vang",
+    "hoa-moc-xanh",
+    "lien-hoa-v2-xanh",
+    "long-phung-do",
+    "long-phung-v2-do",
+    "long-phung-v3-do",
+    "mai-lan-trang",
+    "minimalism-do-dam",
+    "minimalism-nau",
+    "minimalism-nau-dam",
+    "minimalism-xanh",
+    "next-ten",
+    "song-hy-do",
+    "song-hy-v2-do",
+    "song-hy-xanh",
+    "song-long-do",
+    "song-phung-do",
+    "to-duyen-do-dam",
+    "to-duyen-xanh",
+    "vuonkinh-hong",
+    "vuonkinh-xanh"
+  ],
+  "templates": [
+    {
+      "href": "/vi/mau-thiep/ren-theu-trang",
+      "order": 21,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/applique_lace_white.4c8cc4dc.webp",
+      "title": "Ren Thêu - Trắng",
+      "slug": "ren-theu-trang",
+      "demo": "https://chungdoi.com/vi/mau-thiep/ren-theu-trang/demo?open=1",
+      "export": "renTheuTrangContentDocument",
+      "prefix": "b31"
+    },
+    {
+      "href": "/vi/mau-thiep/lau-dai-xanh",
+      "order": 22,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/chateau_green.5073169e.webp",
+      "title": "Lâu Đài - Xanh",
+      "slug": "lau-dai-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/lau-dai-xanh/demo?open=1",
+      "export": "lauDaiXanhContentDocument",
+      "prefix": "b32"
+    },
+    {
+      "href": "/vi/mau-thiep/song-hac-do",
+      "order": 23,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/song_hac_red.6bba531a.webp",
+      "title": "Song Hạc - Đỏ",
+      "slug": "song-hac-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/song-hac-do/demo?open=1",
+      "export": "songHacDoContentDocument",
+      "prefix": "b33"
+    },
+    {
+      "href": "/vi/mau-thiep/minimalism-do",
+      "order": 24,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/minimalism_red.d31b2e39.webp",
+      "title": "Minimalism - Đỏ",
+      "slug": "minimalism-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/minimalism-do/demo?open=1",
+      "export": "minimalismDoContentDocument",
+      "prefix": "b34"
+    },
+    {
+      "href": "/vi/mau-thiep/long-phung-xanh",
+      "order": 25,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/dragon_phoenix_green.93d16f47.webp",
+      "title": "Long Phụng - Xanh",
+      "slug": "long-phung-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/long-phung-xanh/demo?open=1",
+      "export": "longPhungXanhContentDocument",
+      "prefix": "b35"
+    },
+    {
+      "href": "/vi/mau-thiep/anh-dao-hong",
+      "order": 26,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/cherry_blossom_pink.23b01e1b.webp",
+      "title": "Anh Đào - Hồng",
+      "slug": "anh-dao-hong",
+      "demo": "https://chungdoi.com/vi/mau-thiep/anh-dao-hong/demo?open=1",
+      "export": "anhDaoHongContentDocument",
+      "prefix": "b36"
+    },
+    {
+      "href": "/vi/mau-thiep/hoang-kim-do",
+      "order": 27,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/royal_red.fa9bcdab.webp",
+      "title": "Hoàng Kim - Đỏ",
+      "slug": "hoang-kim-do",
+      "demo": "https://chungdoi.com/vi/mau-thiep/hoang-kim-do/demo?open=1",
+      "export": "hoangKimDoContentDocument",
+      "prefix": "b37"
+    },
+    {
+      "href": "/vi/mau-thiep/vuon-xuan-xanh",
+      "order": 28,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/spring_garden_green.3734bfda.webp",
+      "title": "Vườn Xuân - Xanh",
+      "slug": "vuon-xuan-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/vuon-xuan-xanh/demo?open=1",
+      "export": "vuonXuanXanhContentDocument",
+      "prefix": "b38"
+    },
+    {
+      "href": "/vi/mau-thiep/baroque-v2-do-dam",
+      "order": 29,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/baroque_v2_darkred.fb78df9c.webp",
+      "title": "Baroque V2 - Đỏ Đậm",
+      "slug": "baroque-v2-do-dam",
+      "demo": "https://chungdoi.com/vi/mau-thiep/baroque-v2-do-dam/demo?open=1",
+      "export": "baroqueV2DoDamContentDocument",
+      "prefix": "b39"
+    },
+    {
+      "href": "/vi/mau-thiep/song-long-xanh",
+      "order": 30,
+      "preview": "https://assets.chungdoi.com/template-previews/vi/listing/double_dragon_green.4f7b14c5.webp",
+      "title": "Song Long - Xanh",
+      "slug": "song-long-xanh",
+      "demo": "https://chungdoi.com/vi/mau-thiep/song-long-xanh/demo?open=1",
+      "export": "songLongXanhContentDocument",
+      "prefix": "b310"
+    }
+  ]
+}

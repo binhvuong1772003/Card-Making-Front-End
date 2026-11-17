@@ -1,0 +1,14 @@
+{
+  "routeExport": "hoaLuaNauDocument",
+  "startPageId": "cover",
+  "pages": [
+    "cover",
+    "invitation",
+    "gift-details",
+    "rsvp"
+  ],
+  "sourceCountdowns": 1,
+  "actualCountdowns": 1,
+  "possibleDuplicateCountdown": false,
+  "validation": []
+}

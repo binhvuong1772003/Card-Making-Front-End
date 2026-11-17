@@ -1,0 +1,9 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[1]/div[5]/div[1]/p[1]",
+    "sample": "59 ngày 18 giờ 53 phút 25 giây",
+    "capturedAt": "2026-11-17T16:06:35.459Z",
+    "inferredVietnamTarget": "2027-01-16 18:00",
+    "method": "visible remaining duration + browser capture timestamp, rounded to nearest minute; Vietnam UTC+7"
+  }
+]

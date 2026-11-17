@@ -1,0 +1,26 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/long-phung-xanh/source-assets/background-3.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/red-v1/bg-main.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "50% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "0.4"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]",
+    "local": "/demo/long-phung-xanh/source-assets/background-4.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/red-v1/bg-main.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "50% 100%",
+      "mixBlendMode": "normal",
+      "opacity": "0.4"
+    }
+  }
+]

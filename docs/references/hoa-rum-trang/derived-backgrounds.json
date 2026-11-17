@@ -1,0 +1,14 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/hoa-rum-trang/source-assets/background-3.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/calla-lily-white/template-background.webp\")",
+    "recipe": {
+      "size": "600px 800px",
+      "position": "0% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "0.4"
+    }
+  }
+]

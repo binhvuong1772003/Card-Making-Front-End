@@ -1,0 +1,198 @@
+{
+  "scope": "Static invitation content, five-template handoff",
+  "browserStatus": "Browser extension tool unavailable in this session; Chrome DevTools MCP is excluded by user instruction.",
+  "liveSourceInspected": false,
+  "templates": [
+    {
+      "slug": "song-hy-v2-do",
+      "assets": 20,
+      "artworks": 11,
+      "evidence": [
+        {
+          "file": "clone-handoffs/song-hy-v2-do-elements-measured.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/to-duyen-xanh/demo?open=1",
+          "usableForThisTemplate": false,
+          "reason": "Rejected: this file contains to-duyen-xanh, not song-hy-v2-do.",
+          "viewport": [
+            1039,
+            1323
+          ],
+          "sections": 7
+        },
+        {
+          "file": "clone-handoffs/song-hy-v2-do-measured-dom.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/song-hy-v2-do/demo?open=1",
+          "usableForThisTemplate": true,
+          "reason": "Correct source URL; partial capture only.",
+          "viewport": null,
+          "sections": 10
+        },
+        {
+          "file": "song-hy-v2-do/desktop-first-pass.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/song-hy-v2-do/demo?open=1",
+          "usableForThisTemplate": true,
+          "reason": "Partial source measurements recovered from the real Chrome session.",
+          "viewport": [
+            1440,
+            1000
+          ]
+        }
+      ],
+      "contentReadyForHandoff": false,
+      "missing": [
+        "Complete element typography and actual font loading",
+        "Untransformed image layout size and ancestor transform chains",
+        "Full background/pseudo/paint-order inventory",
+        "Separate mobile capture at 390x844",
+        "Local document and source/local DOM comparison",
+        "Editor catalog reconstruction and save/reopen",
+        "Verified Cloudinary/catalog mapping and UNLISTED snapshot"
+      ]
+    },
+    {
+      "slug": "to-duyen-do-dam",
+      "assets": 15,
+      "artworks": 6,
+      "evidence": [
+        {
+          "file": "clone-handoffs/to-duyen-do-dam-dom.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/to-duyen-do-dam/demo?open=1",
+          "usableForThisTemplate": true,
+          "reason": "Correct source URL; partial capture only.",
+          "viewport": [
+            1039,
+            1323
+          ],
+          "sections": 7
+        },
+        {
+          "file": "clone-handoffs/to-duyen-do-dam-elements-measured.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/to-duyen-do-dam/demo?open=1",
+          "usableForThisTemplate": true,
+          "reason": "Correct source URL; partial capture only.",
+          "viewport": [
+            1039,
+            1323
+          ],
+          "sections": 7
+        }
+      ],
+      "contentReadyForHandoff": false,
+      "missing": [
+        "Complete element typography and actual font loading",
+        "Untransformed image layout size and ancestor transform chains",
+        "Full background/pseudo/paint-order inventory",
+        "Separate mobile capture at 390x844",
+        "Local document and source/local DOM comparison",
+        "Editor catalog reconstruction and save/reopen",
+        "Verified Cloudinary/catalog mapping and UNLISTED snapshot"
+      ]
+    },
+    {
+      "slug": "minimalism-nau-dam",
+      "assets": 26,
+      "artworks": 16,
+      "evidence": [
+        {
+          "file": "clone-handoffs/minimalism-nau-dam-dom.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/minimalism-nau-dam/demo?open=1",
+          "usableForThisTemplate": true,
+          "reason": "Correct source URL; partial capture only.",
+          "viewport": [
+            1039,
+            1323
+          ],
+          "sections": 6
+        },
+        {
+          "file": "clone-handoffs/minimalism-nau-dam-elements-measured.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/to-duyen-do-dam/demo?open=1",
+          "usableForThisTemplate": false,
+          "reason": "Rejected: this file contains to-duyen-do-dam, not minimalism-nau-dam.",
+          "viewport": [
+            1039,
+            1323
+          ],
+          "sections": 7
+        }
+      ],
+      "contentReadyForHandoff": false,
+      "missing": [
+        "Complete element typography and actual font loading",
+        "Untransformed image layout size and ancestor transform chains",
+        "Full background/pseudo/paint-order inventory",
+        "Separate mobile capture at 390x844",
+        "Local document and source/local DOM comparison",
+        "Editor catalog reconstruction and save/reopen",
+        "Verified Cloudinary/catalog mapping and UNLISTED snapshot"
+      ]
+    },
+    {
+      "slug": "cam-thach-vang",
+      "assets": 12,
+      "artworks": 3,
+      "evidence": [
+        {
+          "file": "clone-handoffs/cam-thach-vang-dom.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/cam-thach-vang/demo?open=1",
+          "usableForThisTemplate": true,
+          "reason": "Correct source URL; partial capture only.",
+          "viewport": [
+            1039,
+            1323
+          ],
+          "sections": 9
+        }
+      ],
+      "contentReadyForHandoff": false,
+      "missing": [
+        "Complete element typography and actual font loading",
+        "Untransformed image layout size and ancestor transform chains",
+        "Full background/pseudo/paint-order inventory",
+        "Separate mobile capture at 390x844",
+        "Local document and source/local DOM comparison",
+        "Editor catalog reconstruction and save/reopen",
+        "Verified Cloudinary/catalog mapping and UNLISTED snapshot"
+      ]
+    },
+    {
+      "slug": "to-duyen-xanh",
+      "assets": 15,
+      "artworks": 6,
+      "evidence": [
+        {
+          "file": "clone-handoffs/to-duyen-xanh-dom.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/to-duyen-xanh/demo?open=1",
+          "usableForThisTemplate": true,
+          "reason": "Correct source URL; partial capture only.",
+          "viewport": [
+            1039,
+            1323
+          ],
+          "sections": 7
+        },
+        {
+          "file": "clone-handoffs/to-duyen-xanh-elements-measured.json",
+          "sourceUrl": "https://chungdoi.com/vi/mau-thiep/to-duyen-xanh/demo?open=1",
+          "usableForThisTemplate": true,
+          "reason": "Correct source URL; partial capture only.",
+          "viewport": [
+            1039,
+            1323
+          ],
+          "sections": 7
+        }
+      ],
+      "contentReadyForHandoff": false,
+      "missing": [
+        "Complete element typography and actual font loading",
+        "Untransformed image layout size and ancestor transform chains",
+        "Full background/pseudo/paint-order inventory",
+        "Separate mobile capture at 390x844",
+        "Local document and source/local DOM comparison",
+        "Editor catalog reconstruction and save/reopen",
+        "Verified Cloudinary/catalog mapping and UNLISTED snapshot"
+      ]
+    }
+  ]
+}

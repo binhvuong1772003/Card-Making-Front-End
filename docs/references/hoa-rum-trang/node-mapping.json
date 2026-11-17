@@ -1,0 +1,567 @@
+[
+  {
+    "nodeId": "b42-001",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-002",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/header[1]/div[1]/div[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-003",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/header[1]/div[1]/div[2]/p[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-004",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/header[1]/div[1]/div[2]/div[1]/div[1]/p[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-005",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/header[1]/div[1]/div[2]/div[1]/p[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-006",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/header[1]/div[1]/div[2]/div[1]/div[2]/p[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-007",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-008",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[1]/img[2]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-009",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/h2[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-010",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[1]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-011",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[1]/span[2]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-012",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[1]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-013",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-014",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-015",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[3]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-016",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[3]/span[2]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-017",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[3]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-018",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[3]/div[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-019",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[2]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-020",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[3]/h3[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-021",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[3]/div[2]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-022",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[3]/h3[2]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-023",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[4]/div[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-024",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[4]/div[2]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-025",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[4]/div[2]/span[2]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-026",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[4]/div[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-027",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[4]/div[3]/div[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-028",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[4]/div[3]/div[2]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-029",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[4]/div[3]/div[2]/span[2]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-030",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/div[4]/div[4]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-031",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/h2[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-032",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-033",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[1]/img[2]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-034",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/h2[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-035",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/h3[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-036",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-037",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[1]/span[2]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-038",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[2]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-039",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[2]/div[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-040",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[2]/div[2]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-041",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[2]/div[2]/span[2]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-042",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[3]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-043",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[4]/h2[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-044",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[5]/div[1]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-045",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[5]/div[1]/span[2]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-046",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[5]/div[2]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-047",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[5]/div[2]/span[2]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-048",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[3]/div[1]/div[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-049",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[3]/div[1]/section[1]/div[1]/h3[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-050",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[3]/div[1]/section[1]/div[1]/div[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-051",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[1]/h2[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-052",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[1]/p[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-053",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-054",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/h2[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-055",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-056",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[1]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-057",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[1]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-058",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[1]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-059",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[2]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-060",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[2]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-061",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[2]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-062",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[2]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-063",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-064",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[3]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-065",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[3]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-066",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[3]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-067",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[4]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-068",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[4]/span[1]/span[1]/span[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-069",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[4]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-070",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[4]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-071",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[4]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-072",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[5]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-073",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[5]/span[1]/span[1]/span[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-074",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[5]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-075",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[5]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-076",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[5]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-077",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[6]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-078",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[6]/span[1]/span[1]/span[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-079",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[6]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-080",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[6]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-081",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[6]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-082",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[7]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-083",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[7]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-084",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[7]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-085",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[7]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-086",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[8]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-087",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[8]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-088",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[8]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-089",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[8]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-090",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[9]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-091",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[9]/span[2]/span[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-092",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[9]/span[2]/span[2]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-093",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[4]/div[1]/div[2]/ol[1]/li[9]/span[3]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-094",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[5]/div[1]/div[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-095",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[5]/div[1]/section[1]/div[1]/h2[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-096",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/h2[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-097",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/button[1]/div[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-098",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/button[1]/div[1]/span[2]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-099",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/button[1]/div[1]/span[3]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-100",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/button[1]/div[1]/span[4]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-101",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/button[1]/div[1]/div[1]/div[1]",
+    "role": "Shape"
+  },
+  {
+    "nodeId": "b42-102",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/button[1]/div[1]/div[1]/img[1]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-103",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/button[1]/div[1]/div[1]/img[2]",
+    "role": "Decoration"
+  },
+  {
+    "nodeId": "b42-104",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[6]/div[1]/div[1]/button[1]/p[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-105",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/footer[1]/span[1]/span[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-106",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[3]/a[1]",
+    "role": "Text"
+  },
+  {
+    "nodeId": "b42-107",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[4]/div[1]/p[1]",
+    "role": "Countdown"
+  },
+  {
+    "nodeId": "b42-108",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[1]",
+    "role": "Album"
+  },
+  {
+    "nodeId": "b42-109",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[1]/div[6]/div[1]",
+    "role": "Calendar"
+  },
+  {
+    "nodeId": "b42-110",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[2]/div[1]/div[2]/div[2]/button[1]",
+    "role": "Button"
+  },
+  {
+    "nodeId": "b42-111",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[3]/div[1]/section[1]/div[2]/iframe[1]",
+    "role": "Map"
+  },
+  {
+    "nodeId": "b42-112",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[2]/div[2]",
+    "role": "DressCode"
+  },
+  {
+    "nodeId": "b42-113",
+    "sourceXPath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/section[5]/div[1]/section[1]/form[1]",
+    "role": "Form"
+  }
+]

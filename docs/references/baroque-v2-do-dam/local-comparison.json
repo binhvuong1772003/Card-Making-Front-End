@@ -1,0 +1,3918 @@
+{
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "columnSize": [
+      900,
+      7677.375
+    ],
+    "nodes": [
+      {
+        "id": "b39-001",
+        "type": "Decoration",
+        "sourceLayout": [
+          1.0,
+          1.0,
+          898,
+          7675.375
+        ],
+        "localBBox": [
+          1,
+          1,
+          898,
+          7675.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-002",
+        "type": "Text",
+        "sourceLayout": [
+          379.7344,
+          103.0,
+          140.5156,
+          22.5
+        ],
+        "localBBox": [
+          379.734375,
+          103,
+          140.5,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-003",
+        "type": "PhotoFrame",
+        "sourceLayout": [
+          206.5938,
+          275.6406,
+          478.7344,
+          779.9531
+        ],
+        "localBBox": [
+          206.59375,
+          275.625,
+          478.734375,
+          779.953125
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-004",
+        "type": "Decoration",
+        "sourceLayout": [
+          -52.875,
+          163.5,
+          1005.75,
+          1019.5625
+        ],
+        "localBBox": [
+          -52.875,
+          163.5,
+          1005.75,
+          1019.5625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-005",
+        "type": "Text",
+        "sourceLayout": [
+          410.2891,
+          1211.6825,
+          79.4219,
+          118
+        ],
+        "localBBox": [
+          410.28125,
+          1211.671875,
+          79.421875,
+          118
+        ],
+        "maxGeometryDelta": 0.011,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-006",
+        "type": "Text",
+        "sourceLayout": [
+          364.25,
+          1235.0625,
+          171.5,
+          45
+        ],
+        "localBBox": [
+          364.25,
+          1235.0625,
+          171.5,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-007",
+        "type": "Text",
+        "sourceLayout": [
+          332.7031,
+          1299.0625,
+          234.5938,
+          45
+        ],
+        "localBBox": [
+          332.6875,
+          1299.0625,
+          234.59375,
+          45
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-008",
+        "type": "Decoration",
+        "sourceLayout": [
+          240.0,
+          1408.0625,
+          420,
+          75
+        ],
+        "localBBox": [
+          240,
+          1408.0625,
+          420,
+          75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-009",
+        "type": "Decoration",
+        "sourceLayout": [
+          -169.6094,
+          1485.7344,
+          287.3594,
+          825.3438
+        ],
+        "localBBox": [
+          -169.609375,
+          1485.734375,
+          287.359375,
+          825.34375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-010",
+        "type": "Decoration",
+        "sourceLayout": [
+          782.25,
+          1485.7344,
+          287.3594,
+          825.3438
+        ],
+        "localBBox": [
+          782.25,
+          1485.734375,
+          287.359375,
+          825.34375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-011",
+        "type": "Text",
+        "sourceLayout": [
+          326.9688,
+          1539.0625,
+          246.0469,
+          36.0
+        ],
+        "localBBox": [
+          326.96875,
+          1539.0625,
+          246.046875,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-012",
+        "type": "Text",
+        "sourceLayout": [
+          303.6406,
+          1606.5625,
+          44.1875,
+          21.0
+        ],
+        "localBBox": [
+          303.625,
+          1606.5625,
+          44.1875,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-013",
+        "type": "Text",
+        "sourceLayout": [
+          283.7812,
+          1632.0625,
+          83.9062,
+          18.0
+        ],
+        "localBBox": [
+          283.765625,
+          1632.0625,
+          83.890625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-014",
+        "type": "Text",
+        "sourceLayout": [
+          266.6875,
+          1654.0625,
+          118.0781,
+          18.0
+        ],
+        "localBBox": [
+          266.6875,
+          1654.0625,
+          118.0625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-015",
+        "type": "Text",
+        "sourceLayout": [
+          222.0,
+          1680.0625,
+          207.4688,
+          30
+        ],
+        "localBBox": [
+          222,
+          1680.0625,
+          207.46875,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-016",
+        "type": "Decoration",
+        "sourceLayout": [
+          443.4688,
+          1607.0625,
+          13.0625,
+          104
+        ],
+        "localBBox": [
+          443.46875,
+          1607.0625,
+          13.0625,
+          104
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-017",
+        "type": "Text",
+        "sourceLayout": [
+          552.1719,
+          1606.5625,
+          44.1875,
+          21.0
+        ],
+        "localBBox": [
+          552.171875,
+          1606.5625,
+          44.1875,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-018",
+        "type": "Text",
+        "sourceLayout": [
+          527.6562,
+          1632.0625,
+          93.2188,
+          18.0
+        ],
+        "localBBox": [
+          527.640625,
+          1632.0625,
+          93.21875,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-019",
+        "type": "Text",
+        "sourceLayout": [
+          522.125,
+          1654.0625,
+          104.2812,
+          18.0
+        ],
+        "localBBox": [
+          522.125,
+          1654.0625,
+          104.265625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-020",
+        "type": "Text",
+        "sourceLayout": [
+          470.5312,
+          1680.0625,
+          207.4688,
+          30
+        ],
+        "localBBox": [
+          470.515625,
+          1680.0625,
+          207.46875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-021",
+        "type": "Text",
+        "sourceLayout": [
+          260.2031,
+          1743.0625,
+          379.5938,
+          60
+        ],
+        "localBBox": [
+          260.1875,
+          1743.0625,
+          379.59375,
+          60
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-022",
+        "type": "Decoration",
+        "sourceLayout": [
+          360.0,
+          1813.0625,
+          180,
+          28.7969
+        ],
+        "localBBox": [
+          360,
+          1813.0625,
+          180,
+          28.796875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-023",
+        "type": "Text",
+        "sourceLayout": [
+          267.5938,
+          1873.8594,
+          364.7969,
+          80
+        ],
+        "localBBox": [
+          267.59375,
+          1873.859375,
+          364.796875,
+          80
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-024",
+        "type": "Text",
+        "sourceLayout": [
+          398.375,
+          1966.8594,
+          103.25,
+          23
+        ],
+        "localBBox": [
+          398.375,
+          1966.859375,
+          103.25,
+          23
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-025",
+        "type": "Text",
+        "sourceLayout": [
+          440.0156,
+          2003.8594,
+          19.9531,
+          35
+        ],
+        "localBBox": [
+          440,
+          2003.859375,
+          19.9375,
+          35
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-026",
+        "type": "Text",
+        "sourceLayout": [
+          267.5938,
+          2054.8594,
+          364.7969,
+          80
+        ],
+        "localBBox": [
+          267.59375,
+          2054.859375,
+          364.796875,
+          80
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-027",
+        "type": "Text",
+        "sourceLayout": [
+          424.6562,
+          2147.8594,
+          50.6875,
+          23
+        ],
+        "localBBox": [
+          424.640625,
+          2147.859375,
+          50.6875,
+          23
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-028",
+        "type": "Text",
+        "sourceLayout": [
+          266.9688,
+          2203.8594,
+          366.0469,
+          53
+        ],
+        "localBBox": [
+          266.96875,
+          2203.859375,
+          366.046875,
+          53
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-029",
+        "type": "Text",
+        "sourceLayout": [
+          362.5781,
+          2266.8594,
+          97.2344,
+          21
+        ],
+        "localBBox": [
+          362.5625,
+          2266.859375,
+          97.234375,
+          21
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-030",
+        "type": "Text",
+        "sourceLayout": [
+          474.8125,
+          2266.8594,
+          62.5938,
+          21.0
+        ],
+        "localBBox": [
+          474.8125,
+          2266.859375,
+          62.59375,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-031",
+        "type": "Decoration",
+        "sourceLayout": [
+          324.25,
+          2293.8594,
+          38.3594,
+          91
+        ],
+        "localBBox": [
+          324.25,
+          2293.859375,
+          38.359375,
+          91
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-032",
+        "type": "Text",
+        "sourceLayout": [
+          371.6094,
+          2310.8594,
+          57,
+          57
+        ],
+        "localBBox": [
+          371.609375,
+          2310.859375,
+          57,
+          57
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-033",
+        "type": "Shape",
+        "sourceLayout": [
+          437.6094,
+          2316.3594,
+          1,
+          46
+        ],
+        "localBBox": [
+          437.609375,
+          2316.359375,
+          1,
+          46
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-034",
+        "type": "Text",
+        "sourceLayout": [
+          447.6094,
+          2311.6094,
+          80.75,
+          25.5
+        ],
+        "localBBox": [
+          447.609375,
+          2311.609375,
+          80.75,
+          25.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-035",
+        "type": "Text",
+        "sourceLayout": [
+          447.6094,
+          2341.3594,
+          34,
+          25.5
+        ],
+        "localBBox": [
+          447.609375,
+          2341.359375,
+          34,
+          25.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-036",
+        "type": "Decoration",
+        "sourceLayout": [
+          537.3594,
+          2293.8594,
+          38.3594,
+          91
+        ],
+        "localBBox": [
+          537.359375,
+          2293.859375,
+          38.359375,
+          91
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-037",
+        "type": "Text",
+        "sourceLayout": [
+          282.875,
+          2390.8594,
+          334.2344,
+          20
+        ],
+        "localBBox": [
+          282.875,
+          2390.859375,
+          334.234375,
+          20
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-038",
+        "type": "Decoration",
+        "sourceLayout": [
+          240.0,
+          2442.8594,
+          420,
+          75
+        ],
+        "localBBox": [
+          240,
+          2442.859375,
+          420,
+          75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-039",
+        "type": "Text",
+        "sourceLayout": [
+          375.6562,
+          2566.8594,
+          148.6719,
+          36.0
+        ],
+        "localBBox": [
+          375.640625,
+          2566.859375,
+          148.671875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-040",
+        "type": "Decoration",
+        "sourceLayout": [
+          -115.7344,
+          3187.8594,
+          415.7656,
+          415.7656
+        ],
+        "localBBox": [
+          -115.734375,
+          3187.859375,
+          415.75,
+          415.75
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-041",
+        "type": "Decoration",
+        "sourceLayout": [
+          599.9688,
+          3187.8594,
+          415.7656,
+          415.7656
+        ],
+        "localBBox": [
+          599.96875,
+          3187.859375,
+          415.75,
+          415.75
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-042",
+        "type": "Decoration",
+        "sourceLayout": [
+          -84.2969,
+          3768.5156,
+          365.4844,
+          367.6406
+        ],
+        "localBBox": [
+          -84.296875,
+          3768.515625,
+          365.484375,
+          367.625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-043",
+        "type": "Decoration",
+        "sourceLayout": [
+          618.8125,
+          3768.5156,
+          365.4844,
+          367.6406
+        ],
+        "localBBox": [
+          618.8125,
+          3768.515625,
+          365.484375,
+          367.625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-044",
+        "type": "Text",
+        "sourceLayout": [
+          313.8438,
+          3292.8594,
+          272.2969,
+          36.0
+        ],
+        "localBBox": [
+          313.84375,
+          3292.859375,
+          272.296875,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-045",
+        "type": "Decoration",
+        "sourceLayout": [
+          360.0,
+          3338.8594,
+          180,
+          28.7969
+        ],
+        "localBBox": [
+          360,
+          3338.859375,
+          180,
+          28.796875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-046",
+        "type": "Text",
+        "sourceLayout": [
+          282.5625,
+          3389.6562,
+          334.8594,
+          30
+        ],
+        "localBBox": [
+          282.5625,
+          3389.65625,
+          334.859375,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-047",
+        "type": "Text",
+        "sourceLayout": [
+          384.9375,
+          3429.6562,
+          34.2188,
+          22.5
+        ],
+        "localBBox": [
+          384.9375,
+          3429.65625,
+          34.21875,
+          22.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-048",
+        "type": "Text",
+        "sourceLayout": [
+          444.1562,
+          3428.9062,
+          70.9062,
+          22.5
+        ],
+        "localBBox": [
+          444.140625,
+          3428.90625,
+          70.890625,
+          22.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-049",
+        "type": "Decoration",
+        "sourceLayout": [
+          324.2656,
+          3462.1562,
+          38.3594,
+          91
+        ],
+        "localBBox": [
+          324.25,
+          3462.15625,
+          38.359375,
+          91
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-050",
+        "type": "Text",
+        "sourceLayout": [
+          371.625,
+          3479.1562,
+          57,
+          57
+        ],
+        "localBBox": [
+          371.625,
+          3479.15625,
+          57,
+          57
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-051",
+        "type": "Shape",
+        "sourceLayout": [
+          437.625,
+          3484.6562,
+          1,
+          46
+        ],
+        "localBBox": [
+          437.625,
+          3484.65625,
+          1,
+          46
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-052",
+        "type": "Text",
+        "sourceLayout": [
+          447.625,
+          3479.9062,
+          80.75,
+          25.5
+        ],
+        "localBBox": [
+          447.625,
+          3479.90625,
+          80.75,
+          25.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-053",
+        "type": "Text",
+        "sourceLayout": [
+          447.625,
+          3509.6562,
+          34,
+          25.5
+        ],
+        "localBBox": [
+          447.625,
+          3509.65625,
+          34,
+          25.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-054",
+        "type": "Decoration",
+        "sourceLayout": [
+          537.375,
+          3462.1562,
+          38.3594,
+          91
+        ],
+        "localBBox": [
+          537.375,
+          3462.15625,
+          38.359375,
+          91
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-055",
+        "type": "Text",
+        "sourceLayout": [
+          275.6562,
+          3563.1562,
+          348.6875,
+          20
+        ],
+        "localBBox": [
+          275.640625,
+          3563.15625,
+          348.6875,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-056",
+        "type": "Text",
+        "sourceLayout": [
+          358.4219,
+          3608.9062,
+          82.75,
+          19.5
+        ],
+        "localBBox": [
+          358.421875,
+          3608.90625,
+          82.75,
+          19.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-057",
+        "type": "Text",
+        "sourceLayout": [
+          376.9844,
+          3632.6562,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          376.984375,
+          3632.65625,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-058",
+        "type": "Text",
+        "sourceLayout": [
+          473.1719,
+          3608.9062,
+          68.3906,
+          19.5
+        ],
+        "localBBox": [
+          473.171875,
+          3608.90625,
+          68.375,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-059",
+        "type": "Text",
+        "sourceLayout": [
+          484.5469,
+          3632.6562,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          484.546875,
+          3632.65625,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-060",
+        "type": "Text",
+        "sourceLayout": [
+          352.7188,
+          3688.1562,
+          194.5469,
+          30.0
+        ],
+        "localBBox": [
+          352.71875,
+          3688.15625,
+          194.546875,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-061",
+        "type": "Text",
+        "sourceLayout": [
+          339.5312,
+          4236.1562,
+          220.9375,
+          24.0
+        ],
+        "localBBox": [
+          339.515625,
+          4236.15625,
+          220.9375,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-062",
+        "type": "Text",
+        "sourceLayout": [
+          241.4375,
+          4275.6562,
+          417.1094,
+          38.75
+        ],
+        "localBBox": [
+          241.4375,
+          4275.65625,
+          417.109375,
+          38.75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-063",
+        "type": "Text",
+        "sourceLayout": [
+          373.6406,
+          4848.1562,
+          152.7188,
+          36.0
+        ],
+        "localBBox": [
+          373.625,
+          4848.15625,
+          152.71875,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-064",
+        "type": "Text",
+        "sourceLayout": [
+          389.7344,
+          4887.6562,
+          120.5156,
+          24.0
+        ],
+        "localBBox": [
+          389.734375,
+          4887.65625,
+          120.5,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-065",
+        "type": "Text",
+        "sourceLayout": [
+          304.0938,
+          5066.1562,
+          291.8125,
+          36.0
+        ],
+        "localBBox": [
+          304.09375,
+          5066.15625,
+          291.8125,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-066",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          5115.1562,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220,
+          5115.15625,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-067",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          5127.8438,
+          1,
+          52.6875
+        ],
+        "localBBox": [
+          449.5,
+          5127.84375,
+          1,
+          52.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-068",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5122.8438,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          5122.84375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-069",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          5118.2188,
+          65.4062,
+          20.625
+        ],
+        "localBBox": [
+          490,
+          5118.21875,
+          65.390625,
+          20.625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-070",
+        "type": "Text",
+        "sourceLayout": [
+          369.1406,
+          5182.5312,
+          40.8594,
+          23.375
+        ],
+        "localBBox": [
+          369.125,
+          5182.53125,
+          40.859375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-071",
+        "type": "Decoration",
+        "sourceLayout": [
+          301.1406,
+          5174.2188,
+          38,
+          40
+        ],
+        "localBBox": [
+          301.125,
+          5174.21875,
+          38,
+          40
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-072",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          5140.5312,
+          1,
+          105.375
+        ],
+        "localBBox": [
+          449.5,
+          5140.53125,
+          1,
+          105.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-073",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5188.2188,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          5188.21875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-074",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          5183.5938,
+          54.5625,
+          20.625
+        ],
+        "localBBox": [
+          490,
+          5183.59375,
+          54.5625,
+          20.625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-075",
+        "type": "Text",
+        "sourceLayout": [
+          369.1406,
+          5247.9062,
+          40.8594,
+          23.375
+        ],
+        "localBBox": [
+          369.125,
+          5247.90625,
+          40.859375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-076",
+        "type": "Decoration",
+        "sourceLayout": [
+          308.1406,
+          5237.5938,
+          31,
+          44
+        ],
+        "localBBox": [
+          308.125,
+          5237.59375,
+          31,
+          44
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-077",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          5205.9062,
+          1,
+          105.375
+        ],
+        "localBBox": [
+          449.5,
+          5205.90625,
+          1,
+          105.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-078",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5253.5938,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          5253.59375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-079",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          5248.9688,
+          111.875,
+          20.625
+        ],
+        "localBBox": [
+          490,
+          5248.96875,
+          111.875,
+          20.625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-080",
+        "type": "Text",
+        "sourceLayout": [
+          369.1406,
+          5313.2812,
+          40.8594,
+          23.375
+        ],
+        "localBBox": [
+          369.125,
+          5313.28125,
+          40.859375,
+          23.375
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-081",
+        "type": "Decoration",
+        "sourceLayout": [
+          301.1406,
+          5302.9688,
+          38,
+          44
+        ],
+        "localBBox": [
+          301.125,
+          5302.96875,
+          38,
+          44
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-082",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          5271.2812,
+          1,
+          105.375
+        ],
+        "localBBox": [
+          449.5,
+          5271.28125,
+          1,
+          105.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-083",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5318.9688,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          5318.96875,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-084",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          5314.3438,
+          116.25,
+          20.625
+        ],
+        "localBBox": [
+          490,
+          5314.34375,
+          116.25,
+          20.625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-085",
+        "type": "Text",
+        "sourceLayout": [
+          220.0,
+          5376.6562,
+          190,
+          25.375
+        ],
+        "localBBox": [
+          220,
+          5376.65625,
+          190,
+          25.375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-086",
+        "type": "Shape",
+        "sourceLayout": [
+          449.5,
+          5336.6562,
+          1,
+          52.6875
+        ],
+        "localBBox": [
+          449.5,
+          5336.65625,
+          1,
+          52.6875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-087",
+        "type": "Shape",
+        "sourceLayout": [
+          445.0,
+          5384.3438,
+          10,
+          10
+        ],
+        "localBBox": [
+          445,
+          5384.34375,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-088",
+        "type": "Text",
+        "sourceLayout": [
+          490.0,
+          5379.7188,
+          76.6406,
+          20.625
+        ],
+        "localBBox": [
+          490,
+          5379.71875,
+          76.625,
+          20.625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-089",
+        "type": "Decoration",
+        "sourceLayout": [
+          240.0,
+          5450.0312,
+          420,
+          75
+        ],
+        "localBBox": [
+          240,
+          5450.03125,
+          420,
+          75
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-090",
+        "type": "Text",
+        "sourceLayout": [
+          377.0938,
+          5555.0312,
+          145.8125,
+          36.0
+        ],
+        "localBBox": [
+          377.09375,
+          5555.03125,
+          145.8125,
+          36
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-091",
+        "type": "Text",
+        "sourceLayout": [
+          353.1094,
+          6914.2812,
+          193.7656,
+          36
+        ],
+        "localBBox": [
+          353.109375,
+          6914.28125,
+          193.75,
+          36
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-092",
+        "type": "Text",
+        "sourceLayout": [
+          369.4929,
+          6982.187,
+          14.483,
+          27.376
+        ],
+        "localBBox": [
+          369.484375,
+          6982.171875,
+          14.46875,
+          27.375
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-093",
+        "type": "Text",
+        "sourceLayout": [
+          529.3321,
+          7007.6724,
+          8.2265,
+          15.5615
+        ],
+        "localBBox": [
+          529.328125,
+          7007.671875,
+          8.21875,
+          15.546875
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-094",
+        "type": "Text",
+        "sourceLayout": [
+          353.79,
+          7068.5742,
+          3.3419,
+          6.3203
+        ],
+        "localBBox": [
+          353.78125,
+          7068.5625,
+          3.328125,
+          6.3125
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-095",
+        "type": "Text",
+        "sourceLayout": [
+          541.1512,
+          7036.6245,
+          6.7756,
+          12.8135
+        ],
+        "localBBox": [
+          541.140625,
+          7036.609375,
+          6.765625,
+          12.8125
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-096",
+        "type": "Shape",
+        "sourceLayout": [
+          403.4263,
+          7200.2812,
+          93.1473,
+          11.0
+        ],
+        "localBBox": [
+          403.421875,
+          7200.28125,
+          93.140625,
+          11
+        ],
+        "maxGeometryDelta": 0.007,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-097",
+        "type": "Decoration",
+        "sourceLayout": [
+          441.2231,
+          7023.426,
+          120.0,
+          164.0001
+        ],
+        "localBBox": [
+          422.0400390625,
+          7010.68701171875,
+          158.357421875,
+          189.4697265625
+        ],
+        "maxGeometryDelta": 38.357,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b39-098",
+        "type": "Decoration",
+        "sourceLayout": [
+          337.5489,
+          6997.4512,
+          150.0,
+          205.0
+        ],
+        "localBBox": [
+          320.8873291015625,
+          6985.97119140625,
+          183.319091796875,
+          227.9326171875
+        ],
+        "maxGeometryDelta": 33.319,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b39-099",
+        "type": "Text",
+        "sourceLayout": [
+          415.2578,
+          7236.7812,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          415.25,
+          7236.78125,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-100",
+        "type": "Text",
+        "sourceLayout": [
+          255.7812,
+          7315.2812,
+          388.4219,
+          19.5
+        ],
+        "localBBox": [
+          255.765625,
+          7315.28125,
+          388.421875,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-101",
+        "type": "Text",
+        "sourceLayout": [
+          402.7656,
+          7364.7812,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          402.75,
+          7364.78125,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-102",
+        "type": "Decoration",
+        "sourceLayout": [
+          -254.4688,
+          7469.7812,
+          1408.9531,
+          251.5938
+        ],
+        "localBBox": [
+          -254.46875,
+          7469.78125,
+          1408.953125,
+          251.59375
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-103",
+        "type": "Album",
+        "sourceLayout": [
+          170.0,
+          2622.8594,
+          560,
+          540
+        ],
+        "localBBox": [
+          170,
+          2622.859375,
+          560,
+          540
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-104",
+        "type": "Calendar",
+        "sourceLayout": [
+          278.0,
+          3782.6562,
+          344,
+          322.5000500000001
+        ],
+        "localBBox": [
+          278,
+          3782.65625,
+          344,
+          322.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-105",
+        "type": "Button",
+        "sourceLayout": [
+          356.3281,
+          4175.1562,
+          187.3281,
+          31.5
+        ],
+        "localBBox": [
+          356.3125,
+          4175.15625,
+          187.3125,
+          31.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-106",
+        "type": "Map",
+        "sourceLayout": [
+          170.0,
+          4330.1562,
+          560,
+          440.00004999999965
+        ],
+        "localBBox": [
+          170,
+          4330.15625,
+          560,
+          440
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-107",
+        "type": "DressCode",
+        "sourceLayout": [
+          354.0,
+          4932.1562,
+          192,
+          48
+        ],
+        "localBBox": [
+          354,
+          4932.15625,
+          192,
+          48
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-108",
+        "type": "Form",
+        "sourceLayout": [
+          260.0,
+          5615.0312,
+          380,
+          1237.2500499999996
+        ],
+        "localBBox": [
+          260,
+          5615.03125,
+          380,
+          1237.25
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      }
+    ],
+    "brokenImages": [],
+    "pendingImages": []
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "columnSize": [
+      375,
+      6426.578125
+    ],
+    "nodes": [
+      {
+        "id": "b39-001",
+        "type": "Decoration",
+        "sourceLayout": [
+          0.0,
+          0.0,
+          375,
+          6426.5781
+        ],
+        "localBBox": [
+          0.0,
+          0,
+          375,
+          6426.578125
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-002",
+        "type": "Text",
+        "sourceLayout": [
+          126.6094,
+          81.0,
+          121.7812,
+          19.5
+        ],
+        "localBBox": [
+          126.609375,
+          81,
+          121.765625,
+          19.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-003",
+        "type": "PhotoFrame",
+        "sourceLayout": [
+          72.6875,
+          183.3906,
+          225.7969,
+          367.875
+        ],
+        "localBBox": [
+          72.6875,
+          183.375,
+          225.796875,
+          367.875
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-004",
+        "type": "Decoration",
+        "sourceLayout": [
+          -49.6875,
+          130.5,
+          474.375,
+          480.8906
+        ],
+        "localBBox": [
+          -49.6875,
+          130.5,
+          474.375,
+          480.875
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-005",
+        "type": "Text",
+        "sourceLayout": [
+          153.8438,
+          641.8906,
+          67.3125,
+          100
+        ],
+        "localBBox": [
+          153.84375,
+          641.890625,
+          67.3125,
+          100
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-006",
+        "type": "Text",
+        "sourceLayout": [
+          101.75,
+          653.3906,
+          171.5,
+          45
+        ],
+        "localBBox": [
+          101.75,
+          653.390625,
+          171.5,
+          45
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-007",
+        "type": "Text",
+        "sourceLayout": [
+          70.2031,
+          717.3906,
+          234.5938,
+          45
+        ],
+        "localBBox": [
+          70.1875,
+          717.390625,
+          234.59375,
+          45
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-008",
+        "type": "Decoration",
+        "sourceLayout": [
+          47.8125,
+          812.3906,
+          279.375,
+          49.875
+        ],
+        "localBBox": [
+          47.8125,
+          812.390625,
+          279.375,
+          49.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-009",
+        "type": "Decoration",
+        "sourceLayout": [
+          -71.25,
+          1093.8281,
+          120,
+          344.6562
+        ],
+        "localBBox": [
+          -71.25,
+          1093.828125,
+          120,
+          344.640625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-010",
+        "type": "Decoration",
+        "sourceLayout": [
+          326.25,
+          1093.8281,
+          120,
+          344.6562
+        ],
+        "localBBox": [
+          326.25,
+          1093.828125,
+          120,
+          344.640625
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-011",
+        "type": "Text",
+        "sourceLayout": [
+          84.9688,
+          908.2656,
+          205.0469,
+          30.0
+        ],
+        "localBBox": [
+          84.96875,
+          908.265625,
+          205.046875,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-012",
+        "type": "Text",
+        "sourceLayout": [
+          77.4219,
+          962.2656,
+          37.875,
+          18.0
+        ],
+        "localBBox": [
+          77.421875,
+          962.265625,
+          37.875,
+          18
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-013",
+        "type": "Text",
+        "sourceLayout": [
+          54.4062,
+          983.2656,
+          83.9062,
+          18.0
+        ],
+        "localBBox": [
+          54.390625,
+          983.265625,
+          83.890625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-014",
+        "type": "Text",
+        "sourceLayout": [
+          37.3125,
+          1004.2656,
+          118.0781,
+          18.0
+        ],
+        "localBBox": [
+          37.3125,
+          1004.265625,
+          118.0625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-015",
+        "type": "Text",
+        "sourceLayout": [
+          24.5,
+          1029.2656,
+          143.7188,
+          37.5
+        ],
+        "localBBox": [
+          24.5,
+          1029.265625,
+          143.71875,
+          37.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-016",
+        "type": "Decoration",
+        "sourceLayout": [
+          182.2188,
+          972.5156,
+          10.5469,
+          84
+        ],
+        "localBBox": [
+          182.21875,
+          972.515625,
+          10.546875,
+          84
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-017",
+        "type": "Text",
+        "sourceLayout": [
+          259.6875,
+          962.2656,
+          37.875,
+          18.0
+        ],
+        "localBBox": [
+          259.6875,
+          962.265625,
+          37.875,
+          18
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-018",
+        "type": "Text",
+        "sourceLayout": [
+          232.0156,
+          983.2656,
+          93.2188,
+          18.0
+        ],
+        "localBBox": [
+          232.0,
+          983.265625,
+          93.21875,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-019",
+        "type": "Text",
+        "sourceLayout": [
+          226.4844,
+          1004.2656,
+          104.2812,
+          18.0
+        ],
+        "localBBox": [
+          226.484375,
+          1004.265625,
+          104.265625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-020",
+        "type": "Text",
+        "sourceLayout": [
+          206.7656,
+          1029.2656,
+          143.7344,
+          25
+        ],
+        "localBBox": [
+          206.75,
+          1029.265625,
+          143.734375,
+          25
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-021",
+        "type": "Text",
+        "sourceLayout": [
+          35.6562,
+          1090.7656,
+          303.6719,
+          48
+        ],
+        "localBBox": [
+          35.640625,
+          1090.765625,
+          303.671875,
+          48
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-022",
+        "type": "Decoration",
+        "sourceLayout": [
+          116.0,
+          1148.7656,
+          143,
+          22.875
+        ],
+        "localBBox": [
+          116.0,
+          1148.765625,
+          143,
+          22.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-023",
+        "type": "Text",
+        "sourceLayout": [
+          57.0938,
+          1195.6406,
+          260.7969,
+          80
+        ],
+        "localBBox": [
+          57.09375,
+          1195.640625,
+          260.796875,
+          80
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-024",
+        "type": "Text",
+        "sourceLayout": [
+          144.4844,
+          1285.6406,
+          86.0312,
+          18
+        ],
+        "localBBox": [
+          144.484375,
+          1285.640625,
+          86.015625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-025",
+        "type": "Text",
+        "sourceLayout": [
+          177.5156,
+          1314.6406,
+          19.9531,
+          35
+        ],
+        "localBBox": [
+          177.5,
+          1314.640625,
+          19.9375,
+          35
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-026",
+        "type": "Text",
+        "sourceLayout": [
+          57.0938,
+          1361.6406,
+          260.7969,
+          80
+        ],
+        "localBBox": [
+          57.09375,
+          1361.640625,
+          260.796875,
+          80
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-027",
+        "type": "Text",
+        "sourceLayout": [
+          166.375,
+          1451.6406,
+          42.2344,
+          18
+        ],
+        "localBBox": [
+          166.375,
+          1451.640625,
+          42.234375,
+          18
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-028",
+        "type": "Text",
+        "sourceLayout": [
+          41.0781,
+          1495.6406,
+          292.8438,
+          42
+        ],
+        "localBBox": [
+          41.0625,
+          1495.640625,
+          292.84375,
+          42
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-029",
+        "type": "Text",
+        "sourceLayout": [
+          111.5,
+          1546.6406,
+          83.3438,
+          18
+        ],
+        "localBBox": [
+          111.5,
+          1546.640625,
+          83.34375,
+          18
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-030",
+        "type": "Text",
+        "sourceLayout": [
+          209.8438,
+          1546.6406,
+          53.6562,
+          18.0
+        ],
+        "localBBox": [
+          209.84375,
+          1546.640625,
+          53.640625,
+          18
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-031",
+        "type": "Decoration",
+        "sourceLayout": [
+          69.5938,
+          1570.6406,
+          35.4062,
+          84
+        ],
+        "localBBox": [
+          69.59375,
+          1570.640625,
+          35.390625,
+          84
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-032",
+        "type": "Text",
+        "sourceLayout": [
+          114,
+          1586.6406,
+          52,
+          52
+        ],
+        "localBBox": [
+          114.0,
+          1586.640625,
+          52,
+          52
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-033",
+        "type": "Shape",
+        "sourceLayout": [
+          175.0,
+          1589.6406,
+          1,
+          46
+        ],
+        "localBBox": [
+          175.0,
+          1589.640625,
+          1,
+          46
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-034",
+        "type": "Text",
+        "sourceLayout": [
+          185,
+          1586.1406,
+          76,
+          24.0
+        ],
+        "localBBox": [
+          185.0,
+          1586.140625,
+          76,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-035",
+        "type": "Text",
+        "sourceLayout": [
+          185,
+          1614.6406,
+          32,
+          24
+        ],
+        "localBBox": [
+          185.0,
+          1614.640625,
+          32,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-036",
+        "type": "Decoration",
+        "sourceLayout": [
+          270.0,
+          1570.6406,
+          35.4062,
+          84
+        ],
+        "localBBox": [
+          270.0,
+          1570.640625,
+          35.390625,
+          84
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-037",
+        "type": "Text",
+        "sourceLayout": [
+          44.25,
+          1660.6406,
+          286.4844,
+          16
+        ],
+        "localBBox": [
+          44.25,
+          1660.640625,
+          286.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-038",
+        "type": "Decoration",
+        "sourceLayout": [
+          47.8125,
+          1700.6406,
+          279.375,
+          49.875
+        ],
+        "localBBox": [
+          47.8125,
+          1700.640625,
+          279.375,
+          49.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-039",
+        "type": "Text",
+        "sourceLayout": [
+          125.5469,
+          1792.5156,
+          123.8906,
+          30.0
+        ],
+        "localBBox": [
+          125.546875,
+          1792.515625,
+          123.875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-040",
+        "type": "Decoration",
+        "sourceLayout": [
+          -48.75,
+          2220.5156,
+          173.625,
+          173.625
+        ],
+        "localBBox": [
+          -48.75,
+          2220.515625,
+          173.625,
+          173.625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-041",
+        "type": "Decoration",
+        "sourceLayout": [
+          250.125,
+          2220.5156,
+          173.625,
+          173.625
+        ],
+        "localBBox": [
+          250.125,
+          2220.515625,
+          173.625,
+          173.625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-042",
+        "type": "Decoration",
+        "sourceLayout": [
+          -35.625,
+          2935.375,
+          152.625,
+          153.5156
+        ],
+        "localBBox": [
+          -35.625,
+          2935.375,
+          152.625,
+          153.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-043",
+        "type": "Decoration",
+        "sourceLayout": [
+          258.0,
+          2935.375,
+          152.625,
+          153.5156
+        ],
+        "localBBox": [
+          258.0,
+          2935.375,
+          152.625,
+          153.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-044",
+        "type": "Text",
+        "sourceLayout": [
+          74.0469,
+          2309.5156,
+          226.9062,
+          30.0
+        ],
+        "localBBox": [
+          74.046875,
+          2309.515625,
+          226.890625,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-045",
+        "type": "Decoration",
+        "sourceLayout": [
+          116.0,
+          2349.5156,
+          143,
+          22.875
+        ],
+        "localBBox": [
+          116.0,
+          2349.515625,
+          143,
+          22.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-046",
+        "type": "Text",
+        "sourceLayout": [
+          53.5469,
+          2394.3906,
+          267.8906,
+          24
+        ],
+        "localBBox": [
+          53.546875,
+          2394.390625,
+          267.875,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-047",
+        "type": "Text",
+        "sourceLayout": [
+          125.9375,
+          2428.3906,
+          31.9375,
+          21
+        ],
+        "localBBox": [
+          125.9375,
+          2428.390625,
+          31.9375,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-048",
+        "type": "Text",
+        "sourceLayout": [
+          182.875,
+          2427.8906,
+          66.1719,
+          21.0
+        ],
+        "localBBox": [
+          182.875,
+          2427.890625,
+          66.171875,
+          21
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-049",
+        "type": "Decoration",
+        "sourceLayout": [
+          69.5938,
+          2459.3906,
+          35.4062,
+          84
+        ],
+        "localBBox": [
+          69.59375,
+          2459.390625,
+          35.390625,
+          84
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-050",
+        "type": "Text",
+        "sourceLayout": [
+          114,
+          2475.3906,
+          52,
+          52
+        ],
+        "localBBox": [
+          114.0,
+          2475.390625,
+          52,
+          52
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-051",
+        "type": "Shape",
+        "sourceLayout": [
+          175.0,
+          2478.3906,
+          1,
+          46
+        ],
+        "localBBox": [
+          175.0,
+          2478.390625,
+          1,
+          46
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-052",
+        "type": "Text",
+        "sourceLayout": [
+          185,
+          2474.8906,
+          76,
+          24.0
+        ],
+        "localBBox": [
+          185.0,
+          2474.890625,
+          76,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-053",
+        "type": "Text",
+        "sourceLayout": [
+          185,
+          2503.3906,
+          32,
+          24
+        ],
+        "localBBox": [
+          185.0,
+          2503.390625,
+          32,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-054",
+        "type": "Decoration",
+        "sourceLayout": [
+          270.0,
+          2459.3906,
+          35.4062,
+          84
+        ],
+        "localBBox": [
+          270.0,
+          2459.390625,
+          35.390625,
+          84
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-055",
+        "type": "Text",
+        "sourceLayout": [
+          38.0469,
+          2553.3906,
+          298.8906,
+          16
+        ],
+        "localBBox": [
+          38.046875,
+          2553.390625,
+          298.875,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-056",
+        "type": "Text",
+        "sourceLayout": [
+          107.5469,
+          2594.6406,
+          70.0156,
+          16.5
+        ],
+        "localBBox": [
+          107.546875,
+          2594.640625,
+          70,
+          16.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-057",
+        "type": "Text",
+        "sourceLayout": [
+          119.7344,
+          2615.8906,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          119.734375,
+          2615.890625,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-058",
+        "type": "Text",
+        "sourceLayout": [
+          209.5625,
+          2594.6406,
+          57.875,
+          16.5
+        ],
+        "localBBox": [
+          209.5625,
+          2594.640625,
+          57.875,
+          16.5
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-059",
+        "type": "Text",
+        "sourceLayout": [
+          215.6875,
+          2615.8906,
+          45.625,
+          30
+        ],
+        "localBBox": [
+          215.6875,
+          2615.890625,
+          45.625,
+          30
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-060",
+        "type": "Text",
+        "sourceLayout": [
+          99.9531,
+          2671.3906,
+          175.0938,
+          27.0
+        ],
+        "localBBox": [
+          99.9375,
+          2671.390625,
+          175.09375,
+          27
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-061",
+        "type": "Text",
+        "sourceLayout": [
+          77.0312,
+          3174.8906,
+          220.9375,
+          24.0
+        ],
+        "localBBox": [
+          77.015625,
+          3174.890625,
+          220.9375,
+          24
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-062",
+        "type": "Text",
+        "sourceLayout": [
+          67.2344,
+          3213.3906,
+          240.5312,
+          53
+        ],
+        "localBBox": [
+          67.234375,
+          3213.390625,
+          240.515625,
+          53
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-063",
+        "type": "Text",
+        "sourceLayout": [
+          123.8594,
+          3664.8906,
+          127.2656,
+          30.0
+        ],
+        "localBBox": [
+          123.859375,
+          3664.890625,
+          127.25,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-064",
+        "type": "Text",
+        "sourceLayout": [
+          134.7656,
+          3698.3906,
+          105.4531,
+          20.0
+        ],
+        "localBBox": [
+          134.75,
+          3698.390625,
+          105.4375,
+          20
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-065",
+        "type": "Text",
+        "sourceLayout": [
+          65.9062,
+          3849.8906,
+          243.1875,
+          30.0
+        ],
+        "localBBox": [
+          65.890625,
+          3849.890625,
+          243.1875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-066",
+        "type": "Text",
+        "sourceLayout": [
+          24,
+          3892.8906,
+          131.5,
+          24
+        ],
+        "localBBox": [
+          24.0,
+          3892.890625,
+          131.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-067",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3904.8906,
+          1,
+          44
+        ],
+        "localBBox": [
+          187.0,
+          3904.890625,
+          1,
+          44
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-068",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3899.8906,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3899.890625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-069",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3896.5156,
+          56.6875,
+          17.875
+        ],
+        "localBBox": [
+          219.5,
+          3896.515625,
+          56.6875,
+          17.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-070",
+        "type": "Text",
+        "sourceLayout": [
+          117.0469,
+          3950.8906,
+          38.4531,
+          22
+        ],
+        "localBBox": [
+          117.046875,
+          3950.890625,
+          38.4375,
+          22
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-071",
+        "type": "Decoration",
+        "sourceLayout": [
+          49.0469,
+          3941.8906,
+          38,
+          40
+        ],
+        "localBBox": [
+          49.046875,
+          3941.890625,
+          38,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-072",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3916.8906,
+          1,
+          88
+        ],
+        "localBBox": [
+          187.0,
+          3916.890625,
+          1,
+          88
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-073",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          3955.8906,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          3955.890625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-074",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          3952.5156,
+          47.2969,
+          17.875
+        ],
+        "localBBox": [
+          219.5,
+          3952.515625,
+          47.296875,
+          17.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-075",
+        "type": "Text",
+        "sourceLayout": [
+          117.0469,
+          4006.8906,
+          38.4531,
+          22
+        ],
+        "localBBox": [
+          117.046875,
+          4006.890625,
+          38.4375,
+          22
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-076",
+        "type": "Decoration",
+        "sourceLayout": [
+          56.0469,
+          3995.8906,
+          31,
+          44
+        ],
+        "localBBox": [
+          56.046875,
+          3995.890625,
+          31,
+          44
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-077",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          3972.8906,
+          1,
+          88
+        ],
+        "localBBox": [
+          187.0,
+          3972.890625,
+          1,
+          88
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-078",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          4011.8906,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          4011.890625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-079",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          4008.5156,
+          96.9688,
+          17.875
+        ],
+        "localBBox": [
+          219.5,
+          4008.515625,
+          96.96875,
+          17.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-080",
+        "type": "Text",
+        "sourceLayout": [
+          117.0469,
+          4062.8906,
+          38.4531,
+          22
+        ],
+        "localBBox": [
+          117.046875,
+          4062.890625,
+          38.4375,
+          22
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-081",
+        "type": "Decoration",
+        "sourceLayout": [
+          49.0469,
+          4051.8906,
+          38,
+          44
+        ],
+        "localBBox": [
+          49.046875,
+          4051.890625,
+          38,
+          44
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-082",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          4028.8906,
+          1,
+          88
+        ],
+        "localBBox": [
+          187.0,
+          4028.890625,
+          1,
+          88
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-083",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          4067.8906,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          4067.890625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-084",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          4064.5156,
+          100.75,
+          17.875
+        ],
+        "localBBox": [
+          219.5,
+          4064.515625,
+          100.75,
+          17.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-085",
+        "type": "Text",
+        "sourceLayout": [
+          24,
+          4116.8906,
+          131.5,
+          24
+        ],
+        "localBBox": [
+          24.0,
+          4116.890625,
+          131.5,
+          24
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-086",
+        "type": "Shape",
+        "sourceLayout": [
+          187.0,
+          4084.8906,
+          1,
+          44
+        ],
+        "localBBox": [
+          187.0,
+          4084.890625,
+          1,
+          44
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-087",
+        "type": "Shape",
+        "sourceLayout": [
+          182.5,
+          4123.8906,
+          10,
+          10
+        ],
+        "localBBox": [
+          182.5,
+          4123.890625,
+          10,
+          10
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-088",
+        "type": "Text",
+        "sourceLayout": [
+          219.5,
+          4120.5156,
+          66.4219,
+          17.875
+        ],
+        "localBBox": [
+          219.5,
+          4120.515625,
+          66.421875,
+          17.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-089",
+        "type": "Decoration",
+        "sourceLayout": [
+          47.8125,
+          4180.8906,
+          279.375,
+          49.875
+        ],
+        "localBBox": [
+          47.8125,
+          4180.890625,
+          279.375,
+          49.875
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-090",
+        "type": "Text",
+        "sourceLayout": [
+          126.7344,
+          4253.7656,
+          121.5156,
+          30.0
+        ],
+        "localBBox": [
+          126.734375,
+          4253.765625,
+          121.5,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-091",
+        "type": "Text",
+        "sourceLayout": [
+          106.7656,
+          5827.5156,
+          161.4688,
+          30
+        ],
+        "localBBox": [
+          106.75,
+          5827.515625,
+          161.46875,
+          30
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-092",
+        "type": "Text",
+        "sourceLayout": [
+          106.9929,
+          5889.4214,
+          14.483,
+          27.376
+        ],
+        "localBBox": [
+          106.984375,
+          5889.40625,
+          14.46875,
+          27.375
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-093",
+        "type": "Text",
+        "sourceLayout": [
+          266.8321,
+          5914.9067,
+          8.2265,
+          15.5615
+        ],
+        "localBBox": [
+          266.828125,
+          5914.90625,
+          8.21875,
+          15.546875
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-094",
+        "type": "Text",
+        "sourceLayout": [
+          91.29,
+          5975.8086,
+          3.3419,
+          6.3203
+        ],
+        "localBBox": [
+          91.28125,
+          5975.796875,
+          3.328125,
+          6.3125
+        ],
+        "maxGeometryDelta": 0.014,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-095",
+        "type": "Text",
+        "sourceLayout": [
+          278.6513,
+          5943.8589,
+          6.7755,
+          12.8135
+        ],
+        "localBBox": [
+          278.640625,
+          5943.84375,
+          6.765625,
+          12.8125
+        ],
+        "maxGeometryDelta": 0.015,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-096",
+        "type": "Shape",
+        "sourceLayout": [
+          140.9263,
+          6107.5156,
+          93.1473,
+          11.0
+        ],
+        "localBBox": [
+          140.921875,
+          6107.515625,
+          93.140625,
+          11
+        ],
+        "maxGeometryDelta": 0.007,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-097",
+        "type": "Decoration",
+        "sourceLayout": [
+          178.7231,
+          5930.6604,
+          120.0,
+          164.0001
+        ],
+        "localBBox": [
+          159.5400390625,
+          5917.92138671875,
+          158.357421875,
+          189.4697265625
+        ],
+        "maxGeometryDelta": 38.357,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b39-098",
+        "type": "Decoration",
+        "sourceLayout": [
+          75.0489,
+          5904.6855,
+          150.0,
+          205.0
+        ],
+        "localBBox": [
+          58.387359619140625,
+          5893.20556640625,
+          183.31903076171875,
+          227.9326171875
+        ],
+        "maxGeometryDelta": 33.319,
+        "rotatedBBox": true
+      },
+      {
+        "id": "b39-099",
+        "type": "Text",
+        "sourceLayout": [
+          152.7578,
+          6144.0156,
+          69.4844,
+          16.0
+        ],
+        "localBBox": [
+          152.75,
+          6144.015625,
+          69.484375,
+          16
+        ],
+        "maxGeometryDelta": 0.008,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-100",
+        "type": "Text",
+        "sourceLayout": [
+          24,
+          6215.5156,
+          327,
+          33
+        ],
+        "localBBox": [
+          24.0,
+          6215.515625,
+          327,
+          33
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-101",
+        "type": "Text",
+        "sourceLayout": [
+          140.2656,
+          6271.5156,
+          94.4531,
+          16
+        ],
+        "localBBox": [
+          140.25,
+          6271.515625,
+          94.4375,
+          16
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-102",
+        "type": "Decoration",
+        "sourceLayout": [
+          -106.6719,
+          6366.5156,
+          588.3594,
+          105.0625
+        ],
+        "localBBox": [
+          -106.671875,
+          6366.515625,
+          588.359375,
+          105.0625
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-103",
+        "type": "Album",
+        "sourceLayout": [
+          24.0,
+          1842.5156,
+          327,
+          360
+        ],
+        "localBBox": [
+          24.0,
+          1842.515625,
+          327,
+          360
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-104",
+        "type": "Calendar",
+        "sourceLayout": [
+          45.5,
+          2759.8906,
+          284,
+          298.0000249999998
+        ],
+        "localBBox": [
+          45.5,
+          2759.890625,
+          284,
+          298
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-105",
+        "type": "Button",
+        "sourceLayout": [
+          93.8281,
+          3120.8906,
+          187.3281,
+          31.5
+        ],
+        "localBBox": [
+          93.8125,
+          3120.890625,
+          187.3125,
+          31.5
+        ],
+        "maxGeometryDelta": 0.016,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-106",
+        "type": "Map",
+        "sourceLayout": [
+          24.0,
+          3281.8906,
+          327,
+          320.0000249999998
+        ],
+        "localBBox": [
+          24.0,
+          3281.890625,
+          327,
+          320
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-107",
+        "type": "DressCode",
+        "sourceLayout": [
+          111.5,
+          3738.8906,
+          152,
+          40
+        ],
+        "localBBox": [
+          111.5,
+          3738.890625,
+          152,
+          40
+        ],
+        "maxGeometryDelta": 0.0,
+        "rotatedBBox": false
+      },
+      {
+        "id": "b39-108",
+        "type": "Form",
+        "sourceLayout": [
+          63.5,
+          4307.7656,
+          248,
+          1464.7500250000003
+        ],
+        "localBBox": [
+          63.5,
+          4307.765625,
+          248,
+          778
+        ],
+        "maxGeometryDelta": 686.75,
+        "rotatedBBox": false
+      }
+    ],
+    "brokenImages": [],
+    "pendingImages": []
+  }
+}

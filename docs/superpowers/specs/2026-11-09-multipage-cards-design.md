@@ -2,6 +2,8 @@
 
 Ngày: 2026-11-09. Trạng thái: đã triển khai; bằng chứng kiểm tra trong ../plans/2026-11-09-multipage-cards-verification.md.
 
+> Lịch sử tương tác hiện dùng custom field riêng của CardMaking và Undo/Redo chuẩn của Miditor. Cơ chế checkpoint/snapshot liên kết bên ngoài đã được thay bằng [thiết kế giữ Miditor trung lập](../plans/2026-11-09-neutral-editor.md); định dạng lưu bên dưới giữ nguyên.
+
 ## Trải nghiệm người dùng
 
 Một thiệp có nhiều trang ngang hàng. Người dùng có thể dùng trang đầu làm phong bì, lời chào, ảnh hoặc bất kỳ nội dung nào; hệ thống không gán vai trò bìa cố định. Mỗi trang tiếp tục hỗ trợ bố cục máy tính và điện thoại, chiều dài riêng, các khối hiện có và kéo thả hiện tại. Một thiệp một trang dài vẫn hoạt động. Trang mới bắt đầu với minHeight 640 px trên máy tính và phoneMinHeight 812 px; người dùng tiếp tục chỉnh chiều cao riêng.

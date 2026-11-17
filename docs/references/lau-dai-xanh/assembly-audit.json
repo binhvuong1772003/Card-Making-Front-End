@@ -1,0 +1,21 @@
+{
+  "sourceViewport": [
+    1440,
+    1000
+  ],
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "nodes": 129,
+  "albumPhotos": 5,
+  "date": "2026-04-26",
+  "sourceSampleCount": 6,
+  "unmapped": [
+    {
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/section[2]/div[1]/div[4]/div[2]/div[1]/div[1]",
+      "issue": "Source asymmetric grid has unequal cells; native AlbumGrid uses equal cells"
+    }
+  ],
+  "status": "working draft; no visual sign-off"
+}

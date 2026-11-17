@@ -1,0 +1,417 @@
+{
+  "isPageData": true,
+  "validationIssues": [],
+  "contentOnly": true,
+  "missingAssets": [],
+  "nodeCount": 138,
+  "unsupportedPhoneOverrides": [
+    {
+      "id": "b43-004",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-004",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-007",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-007",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-008",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-011",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-011",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-012",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-022",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-023",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-024",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-026",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-027",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-028",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-029",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-030",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-031",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-033",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-034",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-036",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-037",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-038",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-039",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-040",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-041",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-042",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-043",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-044",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-045",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-046",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-047",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-048",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-048",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-050",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-051",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-052",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-053",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-054",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-056",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-058",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-059",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-060",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-061",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-061",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-069",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-069",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-070",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-070",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-071",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-071",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-073",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-074",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-077",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-077",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-080",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-081",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-082",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-082",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-085",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-086",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-087",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-087",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-090",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-091",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-092",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-092",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-095",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-096",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-097",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-097",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-100",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-101",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-106",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-106",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-107",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-107",
+      "type": "Text",
+      "key": "letterSpacing"
+    },
+    {
+      "id": "b43-130",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-131",
+      "type": "Text",
+      "key": "lineHeight"
+    },
+    {
+      "id": "b43-133",
+      "type": "Album",
+      "key": "spread"
+    },
+    {
+      "id": "b43-134",
+      "type": "Calendar",
+      "key": "size"
+    },
+    {
+      "id": "b43-134",
+      "type": "Calendar",
+      "key": "titleSize"
+    }
+  ],
+  "visualStatus": "working draft; source/local comparison recorded, not approved",
+  "catalogStatus": "not uploaded or verified",
+  "snapshotStatus": "not created"
+}

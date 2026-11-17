@@ -1,0 +1,14 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/baroque-lam/source-assets/background-3.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/baroque-blue/bg-pattern.webp\")",
+    "recipe": {
+      "size": "900px 900px",
+      "position": "0% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "0.5"
+    }
+  }
+]

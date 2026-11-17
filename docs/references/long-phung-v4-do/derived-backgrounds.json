@@ -1,0 +1,14 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/long-phung-v4-do/source-assets/background-3.png",
+    "bakedOpacity": true,
+    "source": "url(\"https://chungdoi.com/images/themes/longphung-v4-red/bg-texture.webp\")",
+    "recipe": {
+      "size": "154.8% auto",
+      "position": "0% 0%",
+      "mixBlendMode": "multiply",
+      "opacity": "0.4"
+    }
+  }
+]

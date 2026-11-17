@@ -1,0 +1,288 @@
+{
+  "assets": [
+    {
+      "source": "https://chungdoi.com/fonts/Pattaya-Regular.woff",
+      "local": "/fonts/source-invitations/batch-four/b970f0099e32-b970f0099e32-Pattaya-Regular.woff",
+      "sha256": "b970f0099e324b0c94f460cecfb97fec581ac6e95db29cafe722685dd84bfa3e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-latin.woff2",
+      "local": "/fonts/source-invitations/batch-four/1404ca348bd7-1404ca348bd7-Roboto-latin.woff2",
+      "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-four/0b60bbe04e9c-0b60bbe04e9c-Roboto-vietnamese.woff2",
+      "sha256": "0b60bbe04e9c479444b31270a72179f53e400beee57b7dd176c08e5e2e716831",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PinyonScript-latin.woff2",
+      "local": "/fonts/source-invitations/batch-four/4bf65668f8b1-4bf65668f8b1-4bf65668f8b1-PinyonScript-latin.woff2",
+      "sha256": "4bf65668f8b1772d7cecbef85ea6f8c126913b8a307607a8d44e5f2c8f371150",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PinyonScript-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-four/4f985a9fcea6-4f985a9fcea6-4f985a9fcea6-PinyonScript-vietnamese.woff2",
+      "sha256": "4f985a9fcea66c140f4766cbe07003027c8589e0248c7f5859ca6e7d435f8d91",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/MsMadiAmpersand-Regular.woff2",
+      "local": "/fonts/source-invitations/batch-four/0cdb56fb9860-0cdb56fb9860-0cdb56fb9860-MsMadiAmpersand-Regular.woff2",
+      "sha256": "0cdb56fb9860c471026cdc31649328765c79bab4cdf72260c4c9c8e92c0b35e2",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/NotoSerif-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/4d8e67614246-4d8e67614246-4d8e67614246-NotoSerif-Regular.ttf",
+      "sha256": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ViaodaLibre-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/adb53ede2510-adb53ede2510-ViaodaLibre-Regular.ttf",
+      "sha256": "adb53ede25107c5ed4c45f993fd014a21ef82ac82b2327a564fe8e994e228942",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/CormorantGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/b20b7d9626dd-b20b7d9626dd-CormorantGaramond-Variable.ttf",
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/EBGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-EBGaramond-Variable.ttf",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ClickerScript-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/0221d4376fc0-0221d4376fc0-ClickerScript-Regular.ttf",
+      "sha256": "0221d4376fc0a25795a32d7e309798b6693b56f65c5851f92529043b230a9117",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-vietnamese.9e2672d1.woff2",
+      "local": "/fonts/source-invitations/batch-four/9e2672d100bc-9e2672d100bc-9e2672d100bc-montserrat-vietnamese.9e2672d1.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin-ext.920711de.woff2",
+      "local": "/fonts/source-invitations/batch-four/920711de9ae9-920711de9ae9-920711de9ae9-montserrat-latin-ext.920711de.woff2",
+      "sha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin.6438d7b8.woff2",
+      "local": "/fonts/source-invitations/batch-four/6438d7b8ea9c-6438d7b8ea9c-montserrat-latin.6438d7b8.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlayfairDisplay-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/c40f2293766a-c40f2293766a-PlayfairDisplay-Variable.ttf",
+      "sha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/TheNautigal-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/00e79428e371-00e79428e371-TheNautigal-Regular.ttf",
+      "sha256": "00e79428e3715ee28f9919be8c3bb4f468197b99ae419ae750b19f3a379b4222",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Uchen-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/4618b0f8c278-4618b0f8c278-4618b0f8c278-Uchen-Regular.ttf",
+      "sha256": "4618b0f8c278d044e948c98fe98dda4a68e9e508886c7750710074e7a68094ce",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/icon-v2.png",
+      "local": "/demo/minimalism-lam-dam/source-assets/5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-icon-v2.png",
+      "sha256": "5ca6f5c031f913c820a52fd18d2ab510b4f41387315e19b9bed586456dfbddb2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/castle-background.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/b5aaf2f2c825-castle-background.webp",
+      "sha256": "b5aaf2f2c8252ac474c749ccc742f2961394f60a6f0ce1820fb80b92d9441167",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/goldenline2-decoration.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/6cb4de0cd698-goldenline2-decoration.webp",
+      "sha256": "6cb4de0cd698d8a9db3187dbe5c4c1791f82c2ccb5c72c7e5e7b8778c512ad2c",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/flower-background.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/6d72ce6d2459-flower-background.webp",
+      "sha256": "6d72ce6d2459c2556356199fa8f7580b3f80c770790d1465c0ad5a141a124bdc",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/envelope-background.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/d21903d92afb-envelope-background.webp",
+      "sha256": "d21903d92afbce0f91845ac961465900695cada1a982b334e078fb3b88eb4e2a",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/34fed54954345d6204597be3ed7a5f9202f6fe56ff7f6611dd11018be7a6b2d8.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/34fed5495434-34fed54954345d6204597be3ed7a5f9202f6fe56ff7f6611dd11018be7a6b2d8.webp",
+      "sha256": "34fed54954345d6204597be3ed7a5f9202f6fe56ff7f6611dd11018be7a6b2d8",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/73c40b3b4cce5b6cc9441ca1a6f447a64f45838d8d30c6ad4ad1b81dcf7343b7.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/73c40b3b4cce-73c40b3b4cce5b6cc9441ca1a6f447a64f45838d8d30c6ad4ad1b81dcf7343b7.webp",
+      "sha256": "73c40b3b4cce5b6cc9441ca1a6f447a64f45838d8d30c6ad4ad1b81dcf7343b7",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/envelope-cover.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/ca3ac3a9da5b-envelope-cover.webp",
+      "sha256": "ca3ac3a9da5ba64c25006e6a6935cd6183ac58845a3364aa4b80e9fb499987a2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/paper.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/5c7a104b0bac-paper.webp",
+      "sha256": "5c7a104b0bac35232d971383e1a9674b32928143b53b327c1afdcb422a457de0",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/flower2-decoration.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/2e2df6b5be46-flower2-decoration.webp",
+      "sha256": "2e2df6b5be4683effba2973bb564cf2e4a86a2c7bd19e94209570770b1885229",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/flower3-decoration.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/905f6bc76c82-flower3-decoration.webp",
+      "sha256": "905f6bc76c828208dc49caf11532a3365899bf732a53b13e194f47128a3086cd",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/679e14b770363b513411801763067385f0d5428e25ff67749ed7ed5d0afc7bef.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/679e14b77036-679e14b770363b513411801763067385f0d5428e25ff67749ed7ed5d0afc7bef.webp",
+      "sha256": "679e14b770363b513411801763067385f0d5428e25ff67749ed7ed5d0afc7bef",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/0ba2f398e6e83f7abf530d0c3a463d4c0afa671b969f1235c33d3862dc2ea9d7.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/0ba2f398e6e8-0ba2f398e6e83f7abf530d0c3a463d4c0afa671b969f1235c33d3862dc2ea9d7.webp",
+      "sha256": "0ba2f398e6e83f7abf530d0c3a463d4c0afa671b969f1235c33d3862dc2ea9d7",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/eff0286ef76917b6fafd0b3596f6eb409f302152b56d1edc6d9374bab4f89186.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/eff0286ef769-eff0286ef76917b6fafd0b3596f6eb409f302152b56d1edc6d9374bab4f89186.webp",
+      "sha256": "eff0286ef76917b6fafd0b3596f6eb409f302152b56d1edc6d9374bab4f89186",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/f4b5bbe7532448dbd21c0d90716b82252ace4bf5d1e08b100d4f087ca16e46e7.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/f4b5bbe75324-f4b5bbe7532448dbd21c0d90716b82252ace4bf5d1e08b100d4f087ca16e46e7.webp",
+      "sha256": "f4b5bbe7532448dbd21c0d90716b82252ace4bf5d1e08b100d4f087ca16e46e7",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/d70dc5576fe531923cd9e95c82c304592f6d962ca78ce3eb39abf5801753818d.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/d70dc5576fe5-d70dc5576fe531923cd9e95c82c304592f6d962ca78ce3eb39abf5801753818d.webp",
+      "sha256": "d70dc5576fe531923cd9e95c82c304592f6d962ca78ce3eb39abf5801753818d",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/c90db843c8fee05cbdf4d1112d612296ceee5512f3b1a5373b7d76fe051ea68d.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/c90db843c8fe-c90db843c8fee05cbdf4d1112d612296ceee5512f3b1a5373b7d76fe051ea68d.webp",
+      "sha256": "c90db843c8fee05cbdf4d1112d612296ceee5512f3b1a5373b7d76fe051ea68d",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/51b5e15e2786bbe05ac380e5a5ebc4975c4f97dc1c249363ab0278f48b48de7e.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/51b5e15e2786-51b5e15e2786bbe05ac380e5a5ebc4975c4f97dc1c249363ab0278f48b48de7e.webp",
+      "sha256": "51b5e15e2786bbe05ac380e5a5ebc4975c4f97dc1c249363ab0278f48b48de7e",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/flower5-decoration.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/6eb671d94479-flower5-decoration.webp",
+      "sha256": "6eb671d94479d92f86a99df0e92c4189671101969fbc0482a0fa5ce6fde4482e",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/7b3ec81aa27463a5e4e8581ffabd3b459ba80185e30f585dda2ccca9b05bf398.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/7b3ec81aa274-7b3ec81aa27463a5e4e8581ffabd3b459ba80185e30f585dda2ccca9b05bf398.webp",
+      "sha256": "7b3ec81aa27463a5e4e8581ffabd3b459ba80185e30f585dda2ccca9b05bf398",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/flower4-decoration.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/171f49647e7f-flower4-decoration.webp",
+      "sha256": "171f49647e7f1b04a7c965d819dac3a8837458fb0ca4170413d3569916a73d52",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/9977d6c3162074aaca069f8119fd5b75f60ba0ae5dcd433efd9d8f94e9a82d84.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/9977d6c31620-9977d6c3162074aaca069f8119fd5b75f60ba0ae5dcd433efd9d8f94e9a82d84.webp",
+      "sha256": "9977d6c3162074aaca069f8119fd5b75f60ba0ae5dcd433efd9d8f94e9a82d84",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/flower6-decoration.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/13acb2d11b5a-flower6-decoration.webp",
+      "sha256": "13acb2d11b5a445d65b95a8d6b85a0f6c65d397b71f79811520b430f9b3bfe0f",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/castle-background-1.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/5bec9748b38d-castle-background-1.webp",
+      "sha256": "5bec9748b38d079bf0f3e6ab0ac8c62a4e8f6dd7ea23d510875e246769fa34be",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/church.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/80676b5fbef0-church.webp",
+      "sha256": "80676b5fbef0e269c8d5f163307c683d440d57f44f8099fa70925a8068ff2e3f",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/cook.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/6d975ecb7207-cook.webp",
+      "sha256": "6d975ecb720736ca486a67d2001c5de6ca3552113372bc2a1e05cba7a76d1472",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/castle2-background.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/fe69ce54e2a3-castle2-background.webp",
+      "sha256": "fe69ce54e2a39f06a5928653cb7ed94b70bf26fc43b7dae33a91b2c8f4e9f3ca",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/cake.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/5989a698d918-cake.webp",
+      "sha256": "5989a698d91821d452b8e81a2369263f3e8421946464d730bc917a2a67664407",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/minimalism-dark-blue/goldenline3-decoration.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/a15d7733c516-goldenline3-decoration.webp",
+      "sha256": "a15d7733c5166f438716e65090f5710a43ae51c4abede68e8c81e8b0bb00d7f3",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/envelope/minimalism_darkblue.webp",
+      "local": "/demo/minimalism-lam-dam/source-assets/2495d307aac8-minimalism_darkblue.webp",
+      "sha256": "2495d307aac8b324e0c9a8620a36f531415f2d72218bf674934d1980474551fa",
+      "kind": "image"
+    }
+  ],
+  "failures": [],
+  "missing": []
+}

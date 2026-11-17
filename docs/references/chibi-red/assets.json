@@ -1,0 +1,264 @@
+{
+  "assets": [
+    {
+      "source": "https://chungdoi.com/fonts/Pattaya-Regular.woff",
+      "local": "/fonts/source-invitations/batch-four/b970f0099e32-b970f0099e32-Pattaya-Regular.woff",
+      "sha256": "b970f0099e324b0c94f460cecfb97fec581ac6e95db29cafe722685dd84bfa3e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-vietnamese.9e2672d1.woff2",
+      "local": "/fonts/source-invitations/batch-four/9e2672d100bc-9e2672d100bc-9e2672d100bc-montserrat-vietnamese.9e2672d1.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin-ext.920711de.woff2",
+      "local": "/fonts/source-invitations/batch-four/920711de9ae9-920711de9ae9-920711de9ae9-montserrat-latin-ext.920711de.woff2",
+      "sha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin.6438d7b8.woff2",
+      "local": "/fonts/source-invitations/batch-four/6438d7b8ea9c-6438d7b8ea9c-montserrat-latin.6438d7b8.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-latin.woff2",
+      "local": "/fonts/source-invitations/batch-four/1404ca348bd7-1404ca348bd7-Roboto-latin.woff2",
+      "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ViaodaLibre-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/adb53ede2510-adb53ede2510-ViaodaLibre-Regular.ttf",
+      "sha256": "adb53ede25107c5ed4c45f993fd014a21ef82ac82b2327a564fe8e994e228942",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/MsMadiAmpersand-Regular.woff2",
+      "local": "/fonts/source-invitations/batch-four/0cdb56fb9860-0cdb56fb9860-0cdb56fb9860-MsMadiAmpersand-Regular.woff2",
+      "sha256": "0cdb56fb9860c471026cdc31649328765c79bab4cdf72260c4c9c8e92c0b35e2",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlayfairDisplay-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/c40f2293766a-c40f2293766a-PlayfairDisplay-Variable.ttf",
+      "sha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/playfair-display-latin.5d91eb5d.woff2",
+      "local": "/fonts/source-invitations/batch-four/5d91eb5d522a-5d91eb5d522a-playfair-display-latin.5d91eb5d.woff2",
+      "sha256": "5d91eb5d522a03081946c44c8ca17c902230dfed5f0f9b5014262135d47b15b2",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/EBGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-EBGaramond-Variable.ttf",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-four/0b60bbe04e9c-0b60bbe04e9c-Roboto-vietnamese.woff2",
+      "sha256": "0b60bbe04e9c479444b31270a72179f53e400beee57b7dd176c08e5e2e716831",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/playfair-display-vietnamese.8fa67d5f.woff2",
+      "local": "/fonts/source-invitations/batch-four/8fa67d5f0ab2-8fa67d5f0ab2-playfair-display-vietnamese.8fa67d5f.woff2",
+      "sha256": "8fa67d5f0ab2a1d0b924729a0411a069b384d7a236edd96a6767ef342a6d048f",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/playfair-display-latin-ext.56285678.woff2",
+      "local": "/fonts/source-invitations/batch-four/5628567856d6-5628567856d6-playfair-display-latin-ext.56285678.woff2",
+      "sha256": "5628567856d60d714e7a35bcac9e3de08b336d63b12138f61b970990a1ee9547",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/icon-v2.png",
+      "local": "/demo/chibi-red/source-assets/5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-icon-v2.png",
+      "sha256": "5ca6f5c031f913c820a52fd18d2ab510b4f41387315e19b9bed586456dfbddb2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/chateau_blue.webp",
+      "local": "/demo/chibi-red/source-assets/a7b20341c374-a7b20341c374-chateau_blue.webp",
+      "sha256": "a7b20341c3748a0607b938ffb65bc9e0ac24ca66d3576987f20023eef677c290",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/minimalism_purple.webp",
+      "local": "/demo/chibi-red/source-assets/e65ea2db9130-e65ea2db9130-e65ea2db9130-minimalism_purple.webp",
+      "sha256": "e65ea2db91309ff415a7051510a74ff1b497a45715390a090373e3f50e8a9617",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/boho_floral_pink.webp",
+      "local": "/demo/chibi-red/source-assets/866b008d7cbb-866b008d7cbb-866b008d7cbb-boho_floral_pink.webp",
+      "sha256": "866b008d7cbbb6d3677b559b0b20a5a9a0040dcc8fdfa15762e746c5f9d02dbf",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/marble_yellow.webp",
+      "local": "/demo/chibi-red/source-assets/dd89e073d8be-dd89e073d8be-marble_yellow.webp",
+      "sha256": "dd89e073d8beab1ae13889e1b585b582e3eb5c626fec0de86b72a60bb2a98b5d",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/royal_v2_green.webp",
+      "local": "/demo/chibi-red/source-assets/7f4a1d320f2d-7f4a1d320f2d-royal_v2_green.webp",
+      "sha256": "7f4a1d320f2d17c0a0e4fb02ca2ad31df7019aba1dbcf3130c7d3deefb77e7a0",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chibi_red/couple-main.webp",
+      "local": "/demo/chibi-red/source-assets/77866201c490-couple-main.webp",
+      "sha256": "77866201c49069348368715663667e7b15c5317de0482cbf921d5984d06af560",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chibi_red/double-happiness.webp",
+      "local": "/demo/chibi-red/source-assets/7c68ebf30e13-double-happiness.webp",
+      "sha256": "7c68ebf30e13cc6db7a094e3b6472a6fa16c51bc847007e7f3ef638340032337",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chibi_red/decorative-header.webp",
+      "local": "/demo/chibi-red/source-assets/101864f72d2d-decorative-header.webp",
+      "sha256": "101864f72d2d7c7d3725e943555e07581a95c5b1baba977b680c4322dce93cbc",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chibi_red/decorative-flowers.webp",
+      "local": "/demo/chibi-red/source-assets/d0c5b672f7a0-decorative-flowers.webp",
+      "sha256": "d0c5b672f7a08b24d1ac4d1baf76108fe6688fa2bb30e05f7a6689bb88939692",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chibi_red/cherry-blossom.webp",
+      "local": "/demo/chibi-red/source-assets/5e441d3e9adf-cherry-blossom.webp",
+      "sha256": "5e441d3e9adf56c9cd3de2f2b005e4549228ef856641ffa4b3f8e88978be7b4a",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/a4ff34f28245dd56d68dbeb1c98083fab5e603903f89984a8073a25088944363.webp",
+      "local": "/demo/chibi-red/source-assets/a4ff34f28245-a4ff34f28245dd56d68dbeb1c98083fab5e603903f89984a8073a25088944363.webp",
+      "sha256": "a4ff34f28245dd56d68dbeb1c98083fab5e603903f89984a8073a25088944363",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/b779896e150b38e807ad0f6d28107008d6249fbd0c31d61f96b8eac503d0de97.webp",
+      "local": "/demo/chibi-red/source-assets/b779896e150b-b779896e150b38e807ad0f6d28107008d6249fbd0c31d61f96b8eac503d0de97.webp",
+      "sha256": "b779896e150b38e807ad0f6d28107008d6249fbd0c31d61f96b8eac503d0de97",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/a3b7218405990166b37eba83ba9960ded1d875a12bba20e82fb76f5a55455ba5.webp",
+      "local": "/demo/chibi-red/source-assets/a3b721840599-a3b7218405990166b37eba83ba9960ded1d875a12bba20e82fb76f5a55455ba5.webp",
+      "sha256": "a3b7218405990166b37eba83ba9960ded1d875a12bba20e82fb76f5a55455ba5",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/e0c7d0646d5a03b5746148f99663c538d65caabfbfef7cafc1884f3f44f8fe85.webp",
+      "local": "/demo/chibi-red/source-assets/e0c7d0646d5a-e0c7d0646d5a03b5746148f99663c538d65caabfbfef7cafc1884f3f44f8fe85.webp",
+      "sha256": "e0c7d0646d5a03b5746148f99663c538d65caabfbfef7cafc1884f3f44f8fe85",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/f35be905529f66a76da9d5c7081a7eaa511c0deaef2629177e90b242ec5f91c8.webp",
+      "local": "/demo/chibi-red/source-assets/f35be905529f-f35be905529f66a76da9d5c7081a7eaa511c0deaef2629177e90b242ec5f91c8.webp",
+      "sha256": "f35be905529f66a76da9d5c7081a7eaa511c0deaef2629177e90b242ec5f91c8",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/14de455b827730598b4935d35054cb365e3fc20d2193945a203f0b90e8898dec.webp",
+      "local": "/demo/chibi-red/source-assets/14de455b8277-14de455b827730598b4935d35054cb365e3fc20d2193945a203f0b90e8898dec.webp",
+      "sha256": "14de455b827730598b4935d35054cb365e3fc20d2193945a203f0b90e8898dec",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/ad250afb44e63b676337f028989d76386ef358cf1b7c7b9d7323690ae19801e0.webp",
+      "local": "/demo/chibi-red/source-assets/ad250afb44e6-ad250afb44e63b676337f028989d76386ef358cf1b7c7b9d7323690ae19801e0.webp",
+      "sha256": "ad250afb44e63b676337f028989d76386ef358cf1b7c7b9d7323690ae19801e0",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/df783114acd16c236ecd5b43eb97f7e47181edd59505bcbd1cfba8ba35c00d18.webp",
+      "local": "/demo/chibi-red/source-assets/df783114acd1-df783114acd16c236ecd5b43eb97f7e47181edd59505bcbd1cfba8ba35c00d18.webp",
+      "sha256": "df783114acd16c236ecd5b43eb97f7e47181edd59505bcbd1cfba8ba35c00d18",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/7299932288a2ec6710a2cf41e39c88245ff5478a33cb981e8724d433dec6b3dc.webp",
+      "local": "/demo/chibi-red/source-assets/7299932288a2-7299932288a2ec6710a2cf41e39c88245ff5478a33cb981e8724d433dec6b3dc.webp",
+      "sha256": "7299932288a2ec6710a2cf41e39c88245ff5478a33cb981e8724d433dec6b3dc",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/ede67bcd65ff00e9bbedd89ecf14b078c25059ed5ba97736795c6c28796f294e.webp",
+      "local": "/demo/chibi-red/source-assets/ede67bcd65ff-ede67bcd65ff00e9bbedd89ecf14b078c25059ed5ba97736795c6c28796f294e.webp",
+      "sha256": "ede67bcd65ff00e9bbedd89ecf14b078c25059ed5ba97736795c6c28796f294e",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/6ce732ca77a287ce4e80e77ed1511121dda66e76883c44bcdf1e648be8c1aa2f.webp",
+      "local": "/demo/chibi-red/source-assets/6ce732ca77a2-6ce732ca77a287ce4e80e77ed1511121dda66e76883c44bcdf1e648be8c1aa2f.webp",
+      "sha256": "6ce732ca77a287ce4e80e77ed1511121dda66e76883c44bcdf1e648be8c1aa2f",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/3503aff623b64b8b65fdf37385f1f1ff24a18ac47d9ba0d58b2276efa448c26f.webp",
+      "local": "/demo/chibi-red/source-assets/3503aff623b6-3503aff623b64b8b65fdf37385f1f1ff24a18ac47d9ba0d58b2276efa448c26f.webp",
+      "sha256": "3503aff623b64b8b65fdf37385f1f1ff24a18ac47d9ba0d58b2276efa448c26f",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/6e65338c0ad5e69bd7c77a0d1f7b8eeee482df3261a8ab258a1fdc5fe65d6fec.webp",
+      "local": "/demo/chibi-red/source-assets/6e65338c0ad5-6e65338c0ad5e69bd7c77a0d1f7b8eeee482df3261a8ab258a1fdc5fe65d6fec.webp",
+      "sha256": "6e65338c0ad5e69bd7c77a0d1f7b8eeee482df3261a8ab258a1fdc5fe65d6fec",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chibi_red/decorative-dragon.webp",
+      "local": "/demo/chibi-red/source-assets/9ca15cfc4271-decorative-dragon.webp",
+      "sha256": "9ca15cfc427163ed8726f9b1c1004642c3cab23fd14b902bc13816289e24127b",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chibi_red/decorative-diamond.webp",
+      "local": "/demo/chibi-red/source-assets/fad15430abbd-decorative-diamond.webp",
+      "sha256": "fad15430abbd8827a1541c08514d0fce1e1eabc8783f55c511e26dc8d3a668af",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Babylonica-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/a8a01e869c74-Babylonica-Regular.ttf",
+      "sha256": "a8a01e869c748cb187c560706037d8764c3e0a67602dfff34043a82a3769635f",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/glass_garden_pink.webp",
+      "local": "/demo/chibi-red/source-assets/ecfd887db62b-glass_garden_pink.webp",
+      "sha256": "ecfd887db62b86934e5fce827e8f96d8ae36ecb61bbd96a857d6709a850feea4",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/lien_hoa_v2_green.webp",
+      "local": "/demo/chibi-red/source-assets/b27e4f1b8a7e-lien_hoa_v2_green.webp",
+      "sha256": "b27e4f1b8a7ee439a9771e9c1e9ad03a5b5bd9912c6ffacf017c1d8f48233ac6",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/chibi_red.webp",
+      "local": "/demo/chibi-red/source-assets/9311b67e94c4-chibi_red.webp",
+      "sha256": "9311b67e94c4cb54d84807275e0e07ed9e7b844275dc240d7677897fb9e14668",
+      "kind": "image"
+    }
+  ],
+  "failures": [],
+  "missing": []
+}

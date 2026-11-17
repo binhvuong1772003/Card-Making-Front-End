@@ -1,0 +1,41 @@
+{
+  "page": "https://chungdoi.com/vi/mau-thiep/song-long-do/demo",
+  "assets": [
+    {
+      "source": "https://chungdoi.com/images/themes/songlong-red/dragon_left.webp",
+      "local": "/demo/song-long-do/cover-assets/dragon_left.webp",
+      "sha256": "9a3710e7e51473bbcd00786a4a3157665b81fd5faad8bb763f077297da8753d4",
+      "bytes": 110198
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/songlong-red/dragon_right.webp",
+      "local": "/demo/song-long-do/cover-assets/dragon_right.webp",
+      "sha256": "1a320ae05e9cc4b2c4c5e6bfa84d5c96433c049499d4fc18cfdca335a6e3989e",
+      "bytes": 110304
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/songlong-red/cloud_small.webp",
+      "local": "/demo/song-long-do/cover-assets/cloud_small.webp",
+      "sha256": "932493a4e88c2bd87965051fe8989660e4cf47ef6ec74c6bb6620cd5a427fe15",
+      "bytes": 5850
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/songlong-red/cloud_big.webp",
+      "local": "/demo/song-long-do/cover-assets/cloud_big.webp",
+      "sha256": "2b66a2c0430b2abfee80808866d822fbf3cffb397abe2ae327fd4247bdfa6715",
+      "bytes": 8924
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/songlong-red/wave.webp",
+      "local": "/demo/song-long-do/cover-assets/wave.webp",
+      "sha256": "bce862e2fbb47fcc8c48b51169d7e0a442a8d2e51a88d7e79d3393e22626d1fd",
+      "bytes": 3286
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/songlong-red/chinese_happiness.webp",
+      "local": "/demo/song-long-do/cover-assets/chinese_happiness.webp",
+      "sha256": "d23bc0993b28db3de73f0a64bf9f785471d97e18134d0aa9caefd147f7e99e3f",
+      "bytes": 6236
+    }
+  ]
+}

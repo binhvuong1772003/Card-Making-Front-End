@@ -1,0 +1,186 @@
+{
+  "assets": [
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/4c6ec3c1661bf7e37a6676948335722ce695cd9dc85dd90baf67542a13328fef.webp",
+      "local": "/demo/hoang-kim-do/source-assets/4c6ec3c1661b-photo-4.webp",
+      "sha256": "4c6ec3c1661bf7e37a6676948335722ce695cd9dc85dd90baf67542a13328fef",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/4ac98aa3591c6777b5f73947b07c5b8bdfb2ddffca904142ffb929e81d0cbe5f.webp",
+      "local": "/demo/hoang-kim-do/source-assets/4ac98aa3591c-photo-9.webp",
+      "sha256": "4ac98aa3591c6777b5f73947b07c5b8bdfb2ddffca904142ffb929e81d0cbe5f",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/a92a1025b101a2217a444cdc6aecf6718ff892783b908146cf28386912cf2435.webp",
+      "local": "/demo/hoang-kim-do/source-assets/a92a1025b101-photo-2.webp",
+      "sha256": "a92a1025b101a2217a444cdc6aecf6718ff892783b908146cf28386912cf2435",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/6033e6f7c6e24e8d9857bada2788cb635d54980d3ec23a7eb756ef1538eac281.webp",
+      "local": "/demo/hoang-kim-do/source-assets/6033e6f7c6e2-photo-3.webp",
+      "sha256": "6033e6f7c6e24e8d9857bada2788cb635d54980d3ec23a7eb756ef1538eac281",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/79dc077bef4e992fb165a6e36d82ce4cde0db0222ad6b66e419bd7850e02e730.webp",
+      "local": "/demo/hoang-kim-do/source-assets/79dc077bef4e-photo-1.webp",
+      "sha256": "79dc077bef4e992fb165a6e36d82ce4cde0db0222ad6b66e419bd7850e02e730",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/ef62d93bb58034c5db7c44b33989118e9877278736d0a89f1b381bc2d4d49bcf.webp",
+      "local": "/demo/hoang-kim-do/source-assets/ef62d93bb580-photo-5.webp",
+      "sha256": "ef62d93bb58034c5db7c44b33989118e9877278736d0a89f1b381bc2d4d49bcf",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/5aff7301ce8bc21fcc7df0e39adcb23f0cee493320df61974d075274081ae475.webp",
+      "local": "/demo/hoang-kim-do/source-assets/5aff7301ce8b-photo-6.webp",
+      "sha256": "5aff7301ce8bc21fcc7df0e39adcb23f0cee493320df61974d075274081ae475",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/1fbc918ebb6e67dd496026c61ebc5ab1c9ca38dc95acb281e147ee43c8c1a2d2.webp",
+      "local": "/demo/hoang-kim-do/source-assets/1fbc918ebb6e-photo-8.webp",
+      "sha256": "1fbc918ebb6e67dd496026c61ebc5ab1c9ca38dc95acb281e147ee43c8c1a2d2",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/73401aa6f0c5d1b8ecb061cb3bd640a8e29d2373acf99ee452d76d3617560863.webp",
+      "local": "/demo/hoang-kim-do/source-assets/73401aa6f0c5-photo-7.webp",
+      "sha256": "73401aa6f0c5d1b8ecb061cb3bd640a8e29d2373acf99ee452d76d3617560863",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/b14b7beed16c3cab8b6968dc0318a43e3c51479e85080eff895b62912938154a.webp",
+      "local": "/demo/hoang-kim-do/source-assets/b14b7beed16c-photo-10.webp",
+      "sha256": "b14b7beed16c3cab8b6968dc0318a43e3c51479e85080eff895b62912938154a",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Pattaya-Regular.woff",
+      "local": "/fonts/source-invitations/batch-three/b970f0099e32-b970f0099e32-Pattaya-Regular.woff",
+      "sha256": "b970f0099e324b0c94f460cecfb97fec581ac6e95db29cafe722685dd84bfa3e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/TheNautigal-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-three/00e79428e371-00e79428e371-TheNautigal-Regular.ttf",
+      "sha256": "00e79428e3715ee28f9919be8c3bb4f468197b99ae419ae750b19f3a379b4222",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/EBGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-three/ef9512f92f6d-ef9512f92f6d-EBGaramond-Variable.ttf",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin.6438d7b8.woff2",
+      "local": "/fonts/source-invitations/batch-three/6438d7b8ea9c-6438d7b8ea9c-montserrat-latin.6438d7b8.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-vietnamese.9e2672d1.woff2",
+      "local": "/fonts/source-invitations/batch-three/9e2672d100bc-9e2672d100bc-montserrat-vietnamese.9e2672d1.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin-ext.920711de.woff2",
+      "local": "/fonts/source-invitations/batch-three/920711de9ae9-920711de9ae9-montserrat-latin-ext.920711de.woff2",
+      "sha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/icon-v2.png",
+      "local": "/demo/hoang-kim-do/source-assets/5ca6f5c031f9-5ca6f5c031f9-icon-v2.png",
+      "sha256": "5ca6f5c031f913c820a52fd18d2ab510b4f41387315e19b9bed586456dfbddb2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/royal-red/background.webp",
+      "local": "/demo/hoang-kim-do/source-assets/592d27a79e04-background.webp",
+      "sha256": "592d27a79e04043959c2814173acbb9f3d55366bed39a75839cfe5d5f1bc9493",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/royal-red/flower.webp",
+      "local": "/demo/hoang-kim-do/source-assets/eb23c4fe47f6-flower.webp",
+      "sha256": "eb23c4fe47f6c81a3d53b373d8c475738f9d46f8d4760004b0d0ff42cc8eeefe",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/royal-red/frame-corner-top-left.webp",
+      "local": "/demo/hoang-kim-do/source-assets/cc2c79a832fa-frame-corner-top-left.webp",
+      "sha256": "cc2c79a832fa43e9407bf84086a7ae5a1e44f73b9477caa365f81e2a938ebcfa",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/royal-red/frame-middle-horizontal.webp",
+      "local": "/demo/hoang-kim-do/source-assets/944d8adf4b87-frame-middle-horizontal.webp",
+      "sha256": "944d8adf4b8757da39a733fe24301a88419af3d3f4c83d270d52b9263b1f178d",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/royal-red/frame-middle-vertical.webp",
+      "local": "/demo/hoang-kim-do/source-assets/8d71148f02f3-frame-middle-vertical.webp",
+      "sha256": "8d71148f02f388dd30bc1dd61e5082fa47992b0ec24c0ce7791536e06e8dc502",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/crystal_floral_green.webp",
+      "local": "/demo/hoang-kim-do/source-assets/05fb1473fa55-crystal_floral_green.webp",
+      "sha256": "05fb1473fa55ae65b4d0d81bd2467a5593c287ae3d3a8820ed38bb3ef386e091",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/saraya_gold.webp",
+      "local": "/demo/hoang-kim-do/source-assets/be93c71ee5c2-be93c71ee5c2-saraya_gold.webp",
+      "sha256": "be93c71ee5c21823bf0c77f6ceb65dc0e6e185d9e0bead7e1c7a23125ae24143",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/mandap_darkred.webp",
+      "local": "/demo/hoang-kim-do/source-assets/a2e299877cc5-mandap_darkred.webp",
+      "sha256": "a2e299877cc5721550d359eb2c12a5903f4af8be04453f04900ab4ee3872a4e8",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/santorini_blue.webp",
+      "local": "/demo/hoang-kim-do/source-assets/4dd1c109ba32-santorini_blue.webp",
+      "sha256": "4dd1c109ba323866ee6062c9999d718d4160585fcb009ab9800d20d3b34f0c78",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/royal_red.webp",
+      "local": "/demo/hoang-kim-do/source-assets/bd35fb8951d9-royal_red.webp",
+      "sha256": "bd35fb8951d9b6a98c69d21c2facfe766901bbdb1a4eba17d1b989c2dda3af24",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/song_hy_green.webp",
+      "local": "/demo/hoang-kim-do/source-assets/dca55fe185e5-dca55fe185e5-song_hy_green.webp",
+      "sha256": "dca55fe185e58f6b6c720b2a9fa0f14cd5b6682ab9cfcb3b8109550f732d33d8",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/lien_hoa_pink.webp",
+      "local": "/demo/hoang-kim-do/source-assets/888c593b189f-888c593b189f-lien_hoa_pink.webp",
+      "sha256": "888c593b189f2ac7d415c930cd9f14b28e2c03189d9b0fb7d1d91209f1a42a0e",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/minimalism_darkbrown.webp",
+      "local": "/demo/hoang-kim-do/source-assets/f1f7328ce4c4-minimalism_darkbrown.webp",
+      "sha256": "f1f7328ce4c4c824b2ecb0be651003061271645fe1cdb9628f3898a0795d8822",
+      "kind": "image"
+    }
+  ],
+  "failures": [],
+  "missing": []
+}

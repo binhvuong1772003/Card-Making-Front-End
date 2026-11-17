@@ -1,0 +1,74 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/vuon-xuan-do/source-assets/background-3.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20red/top%20right.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "100% 0%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]",
+    "local": "/demo/vuon-xuan-do/source-assets/background-4.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20red/1%20left.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "0% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[3]",
+    "local": "/demo/vuon-xuan-do/source-assets/background-5.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20red/2%20right.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "100% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[4]",
+    "local": "/demo/vuon-xuan-do/source-assets/background-6.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20red/3%20left.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "0% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[5]",
+    "local": "/demo/vuon-xuan-do/source-assets/background-7.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20red/4%20right.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "100% 50%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  },
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[6]",
+    "local": "/demo/vuon-xuan-do/source-assets/background-8.png",
+    "bakedOpacity": false,
+    "source": "url(\"https://chungdoi.com/images/themes/vuon%20xuan%20red/button%20left.webp\")",
+    "recipe": {
+      "size": "contain",
+      "position": "0% 100%",
+      "mixBlendMode": "normal",
+      "opacity": "1"
+    }
+  }
+]

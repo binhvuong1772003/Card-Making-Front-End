@@ -1,0 +1,14 @@
+[
+  {
+    "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]",
+    "local": "/demo/minimalism-lam-dam/source-assets/background-3.png",
+    "bakedOpacity": true,
+    "source": "url(\"https://chungdoi.com/images/themes/minimalism-dark-blue/paper.webp\")",
+    "recipe": {
+      "size": "666px 1000px",
+      "position": "0% 0%",
+      "mixBlendMode": "multiply",
+      "opacity": "0.5"
+    }
+  }
+]

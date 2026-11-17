@@ -1,0 +1,288 @@
+{
+  "assets": [
+    {
+      "source": "https://chungdoi.com/fonts/Pattaya-Regular.woff",
+      "local": "/fonts/source-invitations/batch-four/b970f0099e32-b970f0099e32-Pattaya-Regular.woff",
+      "sha256": "b970f0099e324b0c94f460cecfb97fec581ac6e95db29cafe722685dd84bfa3e",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-latin.woff2",
+      "local": "/fonts/source-invitations/batch-four/1404ca348bd7-1404ca348bd7-Roboto-latin.woff2",
+      "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Roboto-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-four/0b60bbe04e9c-0b60bbe04e9c-Roboto-vietnamese.woff2",
+      "sha256": "0b60bbe04e9c479444b31270a72179f53e400beee57b7dd176c08e5e2e716831",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PinyonScript-latin.woff2",
+      "local": "/fonts/source-invitations/batch-four/4bf65668f8b1-4bf65668f8b1-4bf65668f8b1-PinyonScript-latin.woff2",
+      "sha256": "4bf65668f8b1772d7cecbef85ea6f8c126913b8a307607a8d44e5f2c8f371150",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PinyonScript-vietnamese.woff2",
+      "local": "/fonts/source-invitations/batch-four/4f985a9fcea6-4f985a9fcea6-4f985a9fcea6-PinyonScript-vietnamese.woff2",
+      "sha256": "4f985a9fcea66c140f4766cbe07003027c8589e0248c7f5859ca6e7d435f8d91",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/MsMadiAmpersand-Regular.woff2",
+      "local": "/fonts/source-invitations/batch-four/0cdb56fb9860-0cdb56fb9860-0cdb56fb9860-MsMadiAmpersand-Regular.woff2",
+      "sha256": "0cdb56fb9860c471026cdc31649328765c79bab4cdf72260c4c9c8e92c0b35e2",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/TheNautigal-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/00e79428e371-00e79428e371-TheNautigal-Regular.ttf",
+      "sha256": "00e79428e3715ee28f9919be8c3bb4f468197b99ae419ae750b19f3a379b4222",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/Uchen-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/4618b0f8c278-4618b0f8c278-4618b0f8c278-Uchen-Regular.ttf",
+      "sha256": "4618b0f8c278d044e948c98fe98dda4a68e9e508886c7750710074e7a68094ce",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/NotoSerif-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/4d8e67614246-4d8e67614246-4d8e67614246-NotoSerif-Regular.ttf",
+      "sha256": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ViaodaLibre-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/adb53ede2510-adb53ede2510-ViaodaLibre-Regular.ttf",
+      "sha256": "adb53ede25107c5ed4c45f993fd014a21ef82ac82b2327a564fe8e994e228942",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/CormorantGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/b20b7d9626dd-b20b7d9626dd-CormorantGaramond-Variable.ttf",
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/PlayfairDisplay-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/c40f2293766a-c40f2293766a-PlayfairDisplay-Variable.ttf",
+      "sha256": "c40f2293766a503bc70cce9e512ef844a4ccb7cbcde792fe2ea31d191917d8d6",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/EBGaramond-Variable.ttf",
+      "local": "/fonts/source-invitations/batch-four/ef9512f92f6d-ef9512f92f6d-ef9512f92f6d-EBGaramond-Variable.ttf",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/ClickerScript-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/0221d4376fc0-0221d4376fc0-ClickerScript-Regular.ttf",
+      "sha256": "0221d4376fc0a25795a32d7e309798b6693b56f65c5851f92529043b230a9117",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-vietnamese.9e2672d1.woff2",
+      "local": "/fonts/source-invitations/batch-four/9e2672d100bc-9e2672d100bc-9e2672d100bc-montserrat-vietnamese.9e2672d1.woff2",
+      "sha256": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin-ext.920711de.woff2",
+      "local": "/fonts/source-invitations/batch-four/920711de9ae9-920711de9ae9-920711de9ae9-montserrat-latin-ext.920711de.woff2",
+      "sha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/montserrat-latin.6438d7b8.woff2",
+      "local": "/fonts/source-invitations/batch-four/6438d7b8ea9c-6438d7b8ea9c-montserrat-latin.6438d7b8.woff2",
+      "sha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/playfair-display-vietnamese.8fa67d5f.woff2",
+      "local": "/fonts/source-invitations/batch-four/8fa67d5f0ab2-8fa67d5f0ab2-playfair-display-vietnamese.8fa67d5f.woff2",
+      "sha256": "8fa67d5f0ab2a1d0b924729a0411a069b384d7a236edd96a6767ef342a6d048f",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/google/playfair-display-latin.5d91eb5d.woff2",
+      "local": "/fonts/source-invitations/batch-four/5d91eb5d522a-5d91eb5d522a-playfair-display-latin.5d91eb5d.woff2",
+      "sha256": "5d91eb5d522a03081946c44c8ca17c902230dfed5f0f9b5014262135d47b15b2",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/fonts/AlexBrush-Regular.ttf",
+      "local": "/fonts/source-invitations/batch-four/df702038d8e2-df702038d8e2-AlexBrush-Regular.ttf",
+      "sha256": "df702038d8e27797230c77959c139eeea38cac0caf53e19ea5b513d3b0d3362d",
+      "kind": "font"
+    },
+    {
+      "source": "https://chungdoi.com/icon-v2.png",
+      "local": "/demo/lau-dai-lam/source-assets/5ca6f5c031f9-5ca6f5c031f9-5ca6f5c031f9-icon-v2.png",
+      "sha256": "5ca6f5c031f913c820a52fd18d2ab510b4f41387315e19b9bed586456dfbddb2",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/boho_floral_green.webp",
+      "local": "/demo/lau-dai-lam/source-assets/7cf3d5a02270-7cf3d5a02270-boho_floral_green.webp",
+      "sha256": "7cf3d5a0227011f53e501004e52c91298b176d591607008cfa6e5a3ac2561305",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/minimalism_brown.webp",
+      "local": "/demo/lau-dai-lam/source-assets/068d1ed98f8e-068d1ed98f8e-minimalism_brown.webp",
+      "sha256": "068d1ed98f8ee813cceab39ec8554d2015cc676cfb57472c100a9519f3e111fd",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/royal_red.webp",
+      "local": "/demo/lau-dai-lam/source-assets/da30497ccf45-da30497ccf45-royal_red.webp",
+      "sha256": "da30497ccf45a937d7987f6e1e0ebb5d09b8b2574b60d9dff3265f9351e377f8",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/hoa.webp",
+      "local": "/demo/lau-dai-lam/source-assets/c0379277afbc-hoa.webp",
+      "sha256": "c0379277afbc1f2a1b7b29d39ed9b3e4783f618aa7520ac2cb248bddc7bbfb83",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/cloud-3.webp",
+      "local": "/demo/lau-dai-lam/source-assets/775d9bed7d07-cloud-3.webp",
+      "sha256": "775d9bed7d07d762f038c3e681f75197b6b2d4c08a4854346ff0b9ebb4ff024d",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/asset-1.webp",
+      "local": "/demo/lau-dai-lam/source-assets/ab3e9ac877b5-asset-1.webp",
+      "sha256": "ab3e9ac877b571007b99813319645a7446708485acd86f414171e74ae2726ecf",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/asset-2.webp",
+      "local": "/demo/lau-dai-lam/source-assets/9d274ef1dbbd-asset-2.webp",
+      "sha256": "9d274ef1dbbddf13220894a4e80759c4e757615452c2ee9caa451b1ca6755ac9",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/cloud-2.webp",
+      "local": "/demo/lau-dai-lam/source-assets/b75d308d0c18-cloud-2.webp",
+      "sha256": "b75d308d0c181ce88823e905ddf310624023131020f919dad5cc80655b5464a3",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/cloud-1.webp",
+      "local": "/demo/lau-dai-lam/source-assets/7f9d90b975fd-cloud-1.webp",
+      "sha256": "7f9d90b975fd28b79b3014d059422d3e395a4ca5785a788626a8717a1a41c8a1",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/home.webp",
+      "local": "/demo/lau-dai-lam/source-assets/de58bcc0190e-home.webp",
+      "sha256": "de58bcc0190ec7e35fd6656810705bcb8e861de29c6f2bcb1775c5b127893b9e",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/f134c07ce29c9494a15999324657f573638565e804ae94132601f9c2bf4f7fd6.webp",
+      "local": "/demo/lau-dai-lam/source-assets/f134c07ce29c-f134c07ce29c9494a15999324657f573638565e804ae94132601f9c2bf4f7fd6.webp",
+      "sha256": "f134c07ce29c9494a15999324657f573638565e804ae94132601f9c2bf4f7fd6",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/cbf029ed13a63710b491f34444378e0c721ac904a355bc33434f1d6187270bba.webp",
+      "local": "/demo/lau-dai-lam/source-assets/cbf029ed13a6-cbf029ed13a63710b491f34444378e0c721ac904a355bc33434f1d6187270bba.webp",
+      "sha256": "cbf029ed13a63710b491f34444378e0c721ac904a355bc33434f1d6187270bba",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/30e1cba2f33b019b3105ad50d759595573135b43a73ae9e4c4a49a83595f58c4.webp",
+      "local": "/demo/lau-dai-lam/source-assets/30e1cba2f33b-30e1cba2f33b019b3105ad50d759595573135b43a73ae9e4c4a49a83595f58c4.webp",
+      "sha256": "30e1cba2f33b019b3105ad50d759595573135b43a73ae9e4c4a49a83595f58c4",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b2905ee505d254b1d41d94e8b.webp",
+      "local": "/demo/lau-dai-lam/source-assets/5d4773b0a56d-5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b2905ee505d254b1d41d94e8b.webp",
+      "sha256": "5d4773b0a56df2db9e66d3acc3fdaf9cbea3f85b2905ee505d254b1d41d94e8b",
+      "kind": "image"
+    },
+    {
+      "source": "https://assets.chungdoi.com/photo-library/design/c21d21a8be1e85ea7545498eae71e234047d09650e45bdee58b8617f1b794d11.webp",
+      "local": "/demo/lau-dai-lam/source-assets/c21d21a8be1e-c21d21a8be1e85ea7545498eae71e234047d09650e45bdee58b8617f1b794d11.webp",
+      "sha256": "c21d21a8be1e85ea7545498eae71e234047d09650e45bdee58b8617f1b794d11",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/hoa-ngang.webp",
+      "local": "/demo/lau-dai-lam/source-assets/b8681e69c69f-hoa-ngang.webp",
+      "sha256": "b8681e69c69f93381beab99ac3d026b2328fff27cb8f65db9d18f5cc2de2a756",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/frame-lich.webp",
+      "local": "/demo/lau-dai-lam/source-assets/8b1b5d5c2984-frame-lich.webp",
+      "sha256": "8b1b5d5c2984b47ba4e67c61740aa8aae97ed973aeaab6814c467d1f9b9080e4",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/ban-tiec.webp",
+      "local": "/demo/lau-dai-lam/source-assets/bf862dbad177-ban-tiec.webp",
+      "sha256": "bf862dbad1771de434b9d2bd402b3131f9e719b2eb1974622237c06200b81e8b",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/nen.webp",
+      "local": "/demo/lau-dai-lam/source-assets/a4b6fb84ae1a-nen.webp",
+      "sha256": "a4b6fb84ae1a1716997b27aa6ce8978c0a45c2e4ead40c9279477dbf01d549fb",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/crystal_floral_red.webp",
+      "local": "/demo/lau-dai-lam/source-assets/6b8a6b02b295-crystal_floral_red.webp",
+      "sha256": "6b8a6b02b29542dc85dea127fac6eeb3666aca86662c257dbbf8d6e3b8658cfb",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/glass_garden_green.webp",
+      "local": "/demo/lau-dai-lam/source-assets/f6217d609812-glass_garden_green.webp",
+      "sha256": "f6217d60981265b6bbe6105bea2922972cc5fc2e8dd762d5722d506bba711ded",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/hoa_kho_v2_blue.webp",
+      "local": "/demo/lau-dai-lam/source-assets/98a9e5ae8342-98a9e5ae8342-hoa_kho_v2_blue.webp",
+      "sha256": "98a9e5ae8342aef0fd4e24ecc9bad648b613514232600cf1239ba1ea8d4b0463",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/nhan.webp",
+      "local": "/demo/lau-dai-lam/source-assets/6420bee30d36-nhan.webp",
+      "sha256": "6420bee30d368f9d3488182d4746873387eaf52092f55ddd7e1fd9eb5ec80beb",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/chateau_blue.webp",
+      "local": "/demo/lau-dai-lam/source-assets/8dac1af03308-chateau_blue.webp",
+      "sha256": "8dac1af033083948016511835bc34105d0d7cb76d45afaf994718a2c67bd933d",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/giftbox/mini/qasr_green.webp",
+      "local": "/demo/lau-dai-lam/source-assets/6527e2b0d147-qasr_green.webp",
+      "sha256": "6527e2b0d147e1261a8e7391db50235cce48459f1c2199415cc86b4c033aa78f",
+      "kind": "image"
+    },
+    {
+      "source": "https://chungdoi.com/images/themes/chateau-blue/chim.webp",
+      "local": "/demo/lau-dai-lam/source-assets/2e4000198a81-chim.webp",
+      "sha256": "2e4000198a8188e8df58b0483f8a9ad48a862b11644e8555e539be344d9321ff",
+      "kind": "image"
+    }
+  ],
+  "failures": [],
+  "missing": []
+}

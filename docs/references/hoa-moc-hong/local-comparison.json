@@ -1,0 +1,14 @@
+{
+  "status": "pending",
+  "reason": "No listening FE dev server; sandbox denies server port binding. Source measurement is not local rendering evidence.",
+  "expectedViewports": {
+    "desktop": [
+      1440,
+      1000
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  }
+}
