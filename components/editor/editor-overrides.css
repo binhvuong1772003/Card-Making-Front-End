@@ -109,7 +109,22 @@
   font-size: 15px;
 }
 
+/* The reference invitation cover uses a mirrored floral pair and a lit burgundy open button. */
+[data-miditor-id="hero-card-flower-right"] { transform: scaleX(-1) !important; }
+[data-miditor-id="hero-card-heart-disc"] > [aria-hidden="true"] { filter: drop-shadow(0 6px 10px rgb(44 8 12 / 28%)); }
+[data-miditor-id="hero-card-open-button"] { background: none !important; box-shadow: none; overflow: hidden; border-radius: 9999px; }
+[data-miditor-id="hero-card-open-button"] > [aria-hidden="true"] {
+  background: linear-gradient(105deg, #55131a 0%, #7d222a 84%, #a94c4b 100%) !important;
+  box-shadow: 0 8px 14px rgb(44 8 12 / 28%);
+}
+[data-miditor-id="hero-card-open-button"]:hover { filter: brightness(1.12); }
+
 [class*="miditor-PropertiesPanel-module-fold"] {
   font-size: 12px;
   color: var(--miditor-muted);
+}
+
+/* CardMaking's navigation custom field occupies the full property row. */
+.card-editor div:has(> [role="group"] > [data-card-navigation]) {
+  grid-column: 1 / -1;
 }

@@ -5,16 +5,16 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useRef, useState } from "react";
 import { CardPlayer } from "@/components/cards/card-player";
-import { normalizeCardDocument, type CardDocument } from "@/lib/cards/document";
+import type { CardDocument } from "@/lib/cards/document";
 import { cardsApi } from "@/lib/cards/api";
 import { isApiError } from "@/lib/api";
-import { hoaMocXanhDemo } from "@/lib/cards/demos/hoa-moc-xanh";
+import { hoaMocXanhDemoDocument } from "@/lib/cards/demos/hoa-moc-xanh";
 import styles from "./wedding-demo.module.css";
 
 const WeddingDemoEditor = dynamic(() => import("./wedding-demo-editor"), { ssr: false, loading: () => <p className={styles.loading}>Đang mở trình biên tập…</p> });
 
 export function WeddingDemo() {
-  const [draft, setDraft] = useState<CardDocument>(() => normalizeCardDocument(hoaMocXanhDemo));
+  const [draft, setDraft] = useState<CardDocument>(hoaMocXanhDemoDocument);
   const [editing, setEditing] = useState(false);
   const [phone, setPhone] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -34,7 +34,7 @@ export function WeddingDemo() {
     setError("");
     setNeedsLogin(false);
     try {
-      draftId.current ??= await cardsApi.create("Hoa Mộc Xanh · Gia Huy & Ngọc Anh", "WEDDING");
+      draftId.current ??= await cardsApi.create("Hoa Mộc Xanh · Minh Quân & Thu Hà", "WEDDING");
       const card = await cardsApi.get(draftId.current);
       await cardsApi.save(card.id, card.revision, flush.current?.() ?? draft);
       router.push(`/cards/${card.id}`);
@@ -51,7 +51,7 @@ export function WeddingDemo() {
   return (
     <div className={styles.root}>
       <header className={styles.toolbar}>
-        <div className={styles.title}><strong>Hoa Mộc Xanh</strong><span>Bản dựng thử · Nội dung minh hoạ</span></div>
+        <div className={styles.title}><strong>Hoa Mộc Xanh</strong><span>Thiệp cưới mẫu · Có thể chỉnh sửa</span></div>
         <div className={styles.actions}>
           {!editing && <button type="button" aria-pressed={phone} onClick={() => setPhone(!phone)}>{phone ? "Khổ máy tính" : "Khổ điện thoại"}</button>}
           <button type="button" aria-pressed={editing} onClick={toggleEditing}>{editing ? "Xem thiệp" : "Chỉnh sửa"}</button>

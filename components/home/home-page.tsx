@@ -147,7 +147,7 @@ function Recent() {
 }
 
 // Một kệ thiệp công khai: tối đa 4 mẫu, ẩn hẳn khi chưa có mẫu nào.
-function Shelf({ title, category, href }: { title: string; category?: Occasion; href?: string }) {
+function Shelf({ title, category, href, previewOnClick = false }: { title: string; category?: Occasion; href?: string; previewOnClick?: boolean }) {
   const templates = useQuery({ queryKey: ["templates", { category, first: 4 }], queryFn: ({ signal }) => templatesApi.list({ category, first: 4 }, signal), staleTime: 30_000 });
   const nodes = templates.data?.nodes ?? [];
   if (nodes.length === 0) return null;
@@ -157,8 +157,8 @@ function Shelf({ title, category, href }: { title: string; category?: Occasion; 
         {title}
       </SectionTitle>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-x-6 gap-y-8">
-        {nodes.map((template) => (
-          <TemplateCard key={template.id} template={template} />
+          {nodes.map((template) => (
+            <TemplateCard key={template.id} template={template} previewOnClick={previewOnClick} />
         ))}
       </div>
     </section>
@@ -181,9 +181,9 @@ export function HomePage() {
       )}
       {total !== 0 && (
         <>
-          <Shelf title="Mới xuất bản" />
+          <Shelf title="Mới xuất bản" previewOnClick />
           {CATEGORIES.map(({ occasion }) => (
-            <Shelf key={occasion} title={OCCASION_LABEL[occasion]} category={occasion} href={`/kham-pha/${occasionSlug(occasion)}`} />
+            <Shelf key={occasion} title={OCCASION_LABEL[occasion]} category={occasion} href={`/kham-pha/${occasionSlug(occasion)}`} previewOnClick />
           ))}
         </>
       )}

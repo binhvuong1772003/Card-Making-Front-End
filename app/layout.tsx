@@ -22,6 +22,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={CARD_FONTS_HREF} />
+        <link rel="stylesheet" href="/fonts/source-invitations/fonts.css" />
+        <link rel="stylesheet" href="/fonts/source-invitations/reference-fonts.css" />
+        <link rel="stylesheet" href="/fonts/source-invitations/batch-two-fonts.css" />
+        <link rel="stylesheet" href="/fonts/source-invitations/batch-three-fonts.css" />
+        <link rel="stylesheet" href="/fonts/source-invitations/batch-four-fonts.css" />
+        <link rel="stylesheet" href="/fonts/source-invitations/batch-five-fonts.css" />
       </head>
       <body>
         <Providers>{children}</Providers>

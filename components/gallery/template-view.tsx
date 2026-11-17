@@ -36,7 +36,7 @@ export function TemplateView({ id }: { id: string }) {
         <section className="mx-auto flex w-full max-w-[1000px] flex-wrap gap-10 rounded-[28px] bg-background p-9 shadow-[0_4px_12px_rgba(42,34,36,0.08),0_32px_80px_rgba(42,34,36,0.12)]">
           <div className="mx-auto w-[340px] max-w-full flex-none">
             <div className="h-[600px] overflow-y-auto rounded-[28px] bg-white shadow-[0_0_0_8px_#F6EEF0,0_1px_2px_rgba(42,34,36,0.06)]">
-              <CardPlayer document={normalizeCardDocument(data.snapshot)} mode="preview" historyKey={`template:${data.id}`} device="phone" />
+              <CardPlayer document={normalizeCardDocument(data.snapshot)} mode="preview" historyKey={`template:${data.id}`} device="phone" embedded />
             </div>
             <p className="mt-5 text-center text-xs text-muted-foreground">Cuộn để xem cả trang</p>
           </div>

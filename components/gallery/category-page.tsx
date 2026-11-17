@@ -93,7 +93,7 @@ export function CategoryPage({ category }: { category: "WEDDING" | "BIRTHDAY" | 
           <>
             <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-x-6 gap-y-8">
               {nodes.map((template) => (
-                <TemplateCard key={template.id} template={template} />
+                <TemplateCard key={template.id} template={template} previewOnClick />
               ))}
             </div>
             <div className="flex flex-col items-center gap-2">
