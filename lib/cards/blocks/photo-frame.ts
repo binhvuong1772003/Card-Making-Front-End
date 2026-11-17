@@ -31,7 +31,9 @@ export function frameGeometry(value: unknown, geometryOverride?: unknown, maskPa
     const maskImage = `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="#fff" d="${maskPath}"/></svg>`)}")`;
     return { ...shapeGeometry("rectangle"), maskImage };
   }
-  return shapeGeometry(geometry ?? "rectangle");
+  const cut = shapeGeometry(geometry ?? "rectangle");
+  // A tall arch has a circular crown and straight sides, like a rounded-t-full photo.
+  return geometry === "arch" ? { ...cut, borderRadius: "9999px 9999px 0 0" } : cut;
 }
 
 export function upgradeLegacyPhotoFrames(node: TreeNode): TreeNode {

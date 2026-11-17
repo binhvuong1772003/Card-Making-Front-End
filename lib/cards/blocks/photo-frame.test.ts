@@ -52,7 +52,8 @@ describe("the Photo frame block", () => {
 
 describe("how a shape cuts the frame", () => {
   it("uses Miditor's own cut for its shapes, so a shape looks the same in both places", () => {
-    for (const shape of FRAME_SHAPES.filter((name) => name !== "heart")) expect(frameGeometry(shape), shape).toEqual(shapeGeometry(shape));
+    for (const shape of FRAME_SHAPES.filter((name) => name !== "heart" && name !== "arch")) expect(frameGeometry(shape), shape).toEqual(shapeGeometry(shape));
+    expect(frameGeometry("arch").borderRadius).toBe("9999px 9999px 0 0");
   });
 
   it("cuts the heart with a mask and keeps every key a shape writes", () => {

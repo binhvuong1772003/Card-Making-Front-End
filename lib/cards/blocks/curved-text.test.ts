@@ -6,10 +6,18 @@ import { CurvedText } from "./text-effects";
 import { CURVE_LIMITS, curvedTextBlock } from "./curved-text";
 
 describe("the Curved text block", () => {
-  it("is registered, hidden from the Miditor library and starts curved upwards", () => {
+  it("is available in the editor library and starts curved upwards", () => {
     expect(cardDefinitions.CurvedText).toBeDefined();
-    expect(cardDefinitions.CurvedText!.hidden).toBe(true);
+    expect(cardDefinitions.CurvedText!.hidden).toBe(false);
     expect(curvedTextBlock.defaultProps.amount).toBeGreaterThan(0);
+  });
+
+  it("fits a circular arc to its box without changing the legacy free curve", () => {
+    const html = renderToStaticMarkup(createElement(CurvedText, { value: "LOVE NEVER FAILS", amount: 90, size: 18, bold: false, italic: false, underline: false, circular: true, radius: 105, letterSpacing: 0.22 }));
+    expect(html).toContain('viewBox="0 0 286 143"');
+    expect(html).toContain(" A 150.15 150.15 ");
+    expect(html).toContain('letter-spacing="0.22em"');
+    expect(html).not.toContain(" Q ");
   });
 
   it("limits the bend and the size", () => {

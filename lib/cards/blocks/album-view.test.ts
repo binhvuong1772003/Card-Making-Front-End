@@ -7,7 +7,7 @@ import { albumPictures } from "@/components/blocks/album-image";
 
 const common = { radius: 8, lightbox: true };
 const variants = [
-  { name: "3D", draw: (mode: AlbumMode, images: string[]) => createElement(AlbumView, { ...common, mode, images, autoplay: true, interval: 1.5, dotColor: "#511419" }) },
+  { name: "3D", draw: (mode: AlbumMode, images: string[]) => createElement(AlbumView, { ...common, mode, images, autoplay: true, interval: 1.5, dotColor: "#511419", startAt: 1 }) },
   { name: "grid", draw: (mode: AlbumMode, images: string[]) => createElement(AlbumGridView, { ...common, mode, images, columns: 3, gap: 8 }) },
   { name: "strip", draw: (mode: AlbumMode, images: string[]) => createElement(AlbumStripView, { ...common, mode, images, gap: 10 }) },
   { name: "polaroid", draw: (mode: AlbumMode, images: string[]) => createElement(AlbumPolaroidView, { ...common, mode, images, columns: 2, tilt: 5, frameColor: "#ffffff" }) },

@@ -38,7 +38,8 @@ describe("slideLook", () => {
     expect(look.transform).toContain("scale(0.7)");
   });
 
-  it("hides anything further than three steps", () => {
-    expect(slideLook(4)).toMatchObject({ visible: false, opacity: 0 });
+  it("keeps the eighth coverflow slide visible at the far edge", () => {
+    expect(slideLook(4)).toMatchObject({ visible: true, opacity: 0.3, zIndex: 96 });
+    expect(slideLook(4).transform).toContain("translate3d(240%, 0, -600px) rotateY(180deg) scale(0.7)");
   });
 });

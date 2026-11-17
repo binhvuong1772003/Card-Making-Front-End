@@ -18,7 +18,7 @@ describe("the Photo frame view", () => {
 
   it("cuts both layers with the shape, so the ring follows it", () => {
     const out = html({ shape: "arch", frameWidth: 6, frameColor: "#7b1e2b" });
-    const arch = "border-radius:50% 50% 0 0 / 100% 100% 0 0";
+    const arch = "border-radius:9999px 9999px 0 0";
     expect(out.split(arch).length - 1).toBe(2);
     expect(out).toContain("background:#7b1e2b");
     expect(out).toContain("inset:6px");

@@ -21,7 +21,7 @@ export function textStyleCss(root: TreeNode): string {
         weight ? `font-weight: ${weight}` : "",
         shadow ? `text-shadow: 0 1px 3px ${color}66` : "",
       ].filter(Boolean);
-      if (decl.length) rules.push(`[data-miditor-id="${node.id}"] { ${decl.join("; ")} !important; }`);
+      if (decl.length) rules.push(`[data-miditor-id="${node.id}"] { ${decl.map(value => `${value} !important;`).join(" ")} }`);
     }
     node.children.forEach(visit);
   };

@@ -1,8 +1,8 @@
 // Dáng của từng ảnh trong coverflow, đo từ thiệp mẫu: ảnh cách ảnh giữa `offset` bước thì dịch ngang offset × 60% bề rộng của chính nó,
 // lùi sâu offset × 150 px, xoay offset × 45° quanh trục dọc, thu nhỏ còn 0,85 rồi 0,7, mờ dần 1 / 0,75 / 0,5 / 0,3.
-export const REACH = 3;
+export const REACH = 4;
 
-// Ảnh `index` cách ảnh đang chọn bao nhiêu bước, quấn vòng: với 7 ảnh là -3..3.
+// Ảnh `index` cách ảnh đang chọn bao nhiêu bước, quấn vòng: tám ảnh quanh coverflow nguồn có offset -3..4.
 export function offsetOf(index: number, current: number, count: number): number {
   const half = Math.floor(count / 2);
   return ((((index - current) % count) + count + half) % count) - half;
