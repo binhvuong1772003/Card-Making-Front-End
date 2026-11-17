@@ -56,7 +56,7 @@ export const longPhungV4DoDocument: CardDocument = finishTemplate({
   giftIds: ["b54-100", "b54-101", "b54-102"],
   envelopes: { front: "b54-101" },
   sparkles: { ids: ["b54-095", "b54-096", "b54-097", "b54-098"], src: "/demo/long-phung-v4-do/sparkle.svg" },
-  countdown: { id: "b54-countdown", date: "2027-03-13", time: "18:00", color: "#ffe8c4", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 26, phoneSize: 20, bold: true, rect: [273, 3287, 351, 39], phone: [47, 2387, 280, 30] },
+  countdown: { id: "b54-countdown", date: "2027-03-13", time: "18:00", color: "#ffe8c4", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 26, phoneSize: 20, bold: true, rect: [274.3, 3287.1, 351.4, 39], phone: [52.3, 2386.8, 270.3, 30] },
   form: { id: "b54-112", listMax: 1019 },
   popup: {"height": 413, "headerH": 79, "labelY": 103, "qr": {"y": 143, "card": 160, "image": 140}, "bankY": 311, "numberY": 328, "holderY": 345, "save": {"y": 366, "w": 68, "h": 23, "size": 10}, "centers": [152, 424], "headerFill": "#ffd390", "titleColor": "#ffffff", "bodyFill": "#5a0000", "ink": "#ffd390", "saveFill": "#681b0a", "labelSize": 12, "lineSize": 10, "titleSize": 26, "titleH": 39, "accent": "#ffd390", "columns": [{"title": "Chú Rể - Quốc Bảo", "bank": "Vietcombank", "number": "0000000000", "holder": "QUOC BAO", "qr": "/demo/long-phung-v4-do/qr-groom.png"}, {"title": "Cô Dâu - Khánh Vy", "bank": "VietinBank", "number": "0000000000", "holder": "KHANH VY", "qr": "/demo/long-phung-v4-do/qr-bride.png"}]},
 });

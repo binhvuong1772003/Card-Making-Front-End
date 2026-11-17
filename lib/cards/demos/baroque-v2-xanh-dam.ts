@@ -56,7 +56,7 @@ export const baroqueV2XanhDamDocument: CardDocument = finishTemplate({
   giftIds: ["b52-097", "b52-098", "b52-099"],
   envelopes: { front: "b52-098" },
   sparkles: { ids: ["b52-092", "b52-093", "b52-094", "b52-095"], src: "/demo/baroque-v2-xanh-dam/sparkle.svg" },
-  countdown: { id: "b52-countdown", date: "2027-01-16", time: "18:00", color: "#ffefd6", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 20, phoneSize: 18, bold: true, rect: [314, 3908, 270, 30], phone: [66, 2757, 243, 27] },
+  countdown: { id: "b52-countdown", date: "2027-01-16", time: "18:00", color: "#ffefd6", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 20, phoneSize: 18, bold: true, rect: [314.8, 3908.1, 270.3, 30], phone: [65.9, 2756.3, 243.3, 27] },
   form: { id: "b52-109", listMax: 848 },
   popup: {"height": 410, "headerH": 76, "labelY": 100, "qr": {"y": 140, "card": 160, "image": 140}, "bankY": 308, "numberY": 325, "holderY": 342, "save": {"y": 363, "w": 68, "h": 23, "size": 10}, "centers": [152, 424], "headerFill": "#ffdfaf", "titleColor": "#511419", "bodyFill": "#0a1a0b", "ink": "#ffefd6", "saveFill": "#1e2a18", "labelSize": 12, "lineSize": 10, "titleSize": 26, "titleH": 39, "accent": "#ffefd6", "columns": [{"title": "Chú Rể - Duy Khang", "bank": "VietinBank", "number": "0000000000", "holder": "DUY KHANG", "qr": "/demo/baroque-v2-xanh-dam/qr-groom.png"}, {"title": "Cô Dâu - Mai Trâm", "bank": "Vietcombank", "number": "0000000000", "holder": "MAI TRAM", "qr": "/demo/baroque-v2-xanh-dam/qr-bride.png"}]},
 });

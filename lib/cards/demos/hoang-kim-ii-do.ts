@@ -56,7 +56,7 @@ export const hoangKimIiDoDocument: CardDocument = finishTemplate({
   giftIds: ["b59-107", "b59-108", "b59-109"],
   envelopes: { front: "b59-108" },
   sparkles: { ids: ["b59-102", "b59-103", "b59-104", "b59-105"], src: "/demo/hoang-kim-ii-do/sparkle.svg" },
-  countdown: { id: "b59-countdown", date: "2027-10-16", time: "18:00", color: "#e5e4d0", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 20, phoneSize: 18, bold: true, rect: [309, 3589, 280, 30], phone: [47, 2670, 280, 30] },
+  countdown: { id: "b59-countdown", date: "2027-10-16", time: "18:00", color: "#e5e4d0", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 20, phoneSize: 16, bold: true, rect: [309.8, 3650.7, 280.3, 30], phone: [75.4, 2670.8, 224.2, 24] },
   form: { id: "b59-119", listMax: 698 },
   popup: {"height": 442, "headerH": 70, "labelY": 94, "qr": {"y": 125, "card": 192, "image": 168}, "bankY": 325, "numberY": 342, "holderY": 359, "save": {"y": 385, "w": 68, "h": 23, "size": 10}, "centers": [288], "headerFill": "#e5e4d0", "titleColor": "#3e0001", "bodyFill": "#3e0001", "ink": "#e5e4d0", "saveFill": "#4c1312", "labelSize": 12, "lineSize": 10, "titleSize": 26, "titleH": 39, "columns": [{"title": "Chú Rể - Duy Khang", "bank": "Vietcombank", "number": "0000000000", "holder": "DUY KHANG", "qr": "/demo/hoang-kim-ii-do/qr-groom.png"}]},
 });

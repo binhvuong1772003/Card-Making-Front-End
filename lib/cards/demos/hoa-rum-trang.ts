@@ -56,7 +56,7 @@ export const hoaRumTrangDocument: CardDocument = finishTemplate({
   giftIds: ["b42-102", "b42-103", "b42-104"],
   envelopes: { front: "b42-103" },
   sparkles: { ids: ["b42-097", "b42-098", "b42-099", "b42-100"], src: "/demo/hoa-rum-trang/sparkle.svg" },
-  countdown: { id: "b42-countdown", date: "2027-05-08", time: "17:30", color: "#a78555", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 24, phoneSize: 20, bold: true, rect: [287, 2969, 324, 36], phone: [50, 2152, 275, 30] },
+  countdown: { id: "b42-countdown", date: "2027-05-08", time: "17:30", color: "#a78555", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 24, phoneSize: 18, bold: true, rect: [281.8, 2968.5, 336.4, 36], phone: [61.4, 2152.2, 252.3, 27] },
   form: { id: "b42-113", listMax: 645 },
   popup: {"height": 452, "headerH": 79, "labelY": 103, "qr": {"y": 134, "card": 192, "image": 168}, "bankY": 334, "numberY": 351, "holderY": 368, "save": {"y": 394, "w": 68, "h": 23, "size": 10}, "centers": [288], "headerFill": "#5c5f3e", "titleColor": "#ffffff", "bodyFill": "#f4f3ee", "ink": "#5c5f3e", "saveFill": "#e8e7e0", "labelSize": 12, "lineSize": 10, "titleSize": 26, "titleH": 39, "columns": [{"title": "Chú Rể - Hoàng Nam", "bank": "Vietcombank", "number": "0000000000", "holder": "HOANG NAM", "qr": "/demo/hoa-rum-trang/qr-groom.png"}]},
 });

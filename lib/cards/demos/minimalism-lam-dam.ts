@@ -56,7 +56,7 @@ export const minimalismLamDamDocument: CardDocument = finishTemplate({
   giftIds: ["b45-106", "b45-107", "b45-108"],
   envelopes: { front: "b45-107" },
   sparkles: { ids: ["b45-101", "b45-102", "b45-103", "b45-104"], src: "/demo/minimalism-lam-dam/sparkle.svg" },
-  countdown: { id: "b45-countdown", date: "2026-12-19", time: "18:30", color: "#455d79", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 18, bold: false, phoneSize: 15, rect: [346, 3195, 207, 28], phone: [37, 2432, 300, 28] },
+  countdown: { id: "b45-countdown", date: "2026-12-19", time: "18:30", color: "#455d79", font: "Baskerville, 'Times New Roman', serif", align: "center", size: 18, bold: false, phoneSize: 13, rect: [342.2, 3195.4, 215.6, 28], phone: [103.6, 2438.7, 167.7, 20] },
   form: { id: "b45-118", listMax: 829 },
   popup: {"height": 404, "headerH": 70, "labelY": 94, "qr": {"y": 134, "card": 160, "image": 140}, "bankY": 302, "numberY": 319, "holderY": 336, "save": {"y": 357, "w": 68, "h": 23, "size": 10}, "centers": [152, 424], "headerFill": "#00224c", "titleColor": "#ece4d8", "bodyFill": "#f7f5ee", "ink": "#00224c", "saveFill": "#e3e1e0", "labelSize": 12, "lineSize": 10, "titleSize": 26, "titleH": 39, "columns": [{"title": "Chú Rể - Tuấn Kiệt", "bank": "Vietcombank", "number": "0000000000", "holder": "TUAN KIET", "qr": "/demo/minimalism-lam-dam/qr-groom.png"}, {"title": "Cô Dâu - Minh Anh", "bank": "Techcombank", "number": "0000000000", "holder": "MINH ANH", "qr": "/demo/minimalism-lam-dam/qr-bride.png"}]},
 });
