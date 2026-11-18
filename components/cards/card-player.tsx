@@ -446,7 +446,7 @@ function Player({ document, mode, historyKey, device, metadata: metadataProp, im
             backdropStyle={{ backgroundColor: `rgba(${red}, ${green}, ${blue}, ${popup.backdropOpacity / 100})`, zIndex: 110 }}
           >
             <DialogTitle className="sr-only">{popupPage.name}</DialogTitle>
-            <div className={styles.popupScroll}><div style={{ width: canvasWidth, zoom: pageScale, marginInline: "auto" }}><div className={styles.viewport} data-card-player="" data-auto-desktop="" data-auto-phone=""><div className={styles.stage}>{renderPage(popupPage, "popup", popupActions)}</div></div></div></div>
+            <div className={styles.popupScroll}><div style={{ width: canvasWidth, zoom: pageScale, marginInline: "auto" }}><div className={styles.viewport} data-card-player="" data-auto-desktop="" data-auto-phone={Number((popupPage.data.root.styles as Record<string, unknown> | undefined)?.phoneMinHeight ?? 812) >= 812 ? "" : undefined}><div className={styles.stage}>{renderPage(popupPage, "popup", popupActions)}</div></div></div></div>
           </DialogContent>;
         })()}
       </Dialog>
